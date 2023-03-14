@@ -4,11 +4,13 @@
       add or remove
     </h1>
     <ul>
-      <li v-for="index in items" @click="() => addItem(index)"> {{ index }}</li>
+      <li v-for="index in items" @click="() => addItem(index)"> ➕ {{ index }}</li>
     </ul>
-    <p v-for="(value, index) in itemsList" @click="() => removeItem(index)">
-      {{ value }}
-    </p>
+    <ul>
+      <li v-for="(value, index) in itemsList" @click="() => removeItem(index)">
+        ➖ {{ value }}
+      </li>
+    </ul>
 
   </div>
 </template>
@@ -36,3 +38,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  ul {
+    list-style: none;
+  }
+</style>
