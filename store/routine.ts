@@ -25,4 +25,7 @@ export const useRoutineStore = defineStore("mainRoutine", {
       this.$state.steps.splice(index, 1)
     }
   },
+  persist: {
+    storage: persistedState.localStorage,
+  },
 });

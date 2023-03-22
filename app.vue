@@ -1,14 +1,19 @@
 <template>
-  <div>
-    <List />
-  </div>
+  <section class="block">
+    <section class="main-steps-list">
+      <div class="container">
+        <header class="block">
+          <h2>
+            add or remove
+          </h2>
+        </header>
+        <List />
+      </div>
+    </section>
+  </section>
 </template>
 
 
 <style lang="scss">
-  html {
-    background: #000;
-    color: #FFF;
-    font-family: 'Inter var', 'Arial', 'Helvetica', sans-serif;
-  }
+  @import "@/style/main.scss";
 </style>
