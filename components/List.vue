@@ -4,10 +4,10 @@
       add or remove
     </h1>
     <ul>
-      <li v-for="index in items" @click="() => addItem(index)"> ➕ {{ index }}</li>
+      <li v-for="value in stepsOptions" @click="() => addStepAtTheBottom(value)"> ➕ {{ value }}</li>
     </ul>
     <ul>
-      <li v-for="(value, index) in itemsList" @click="() => removeItem(index)">
+      <li v-for="(value, index) in steps" @click="() => removeStep(index)">
         ➖ {{ value }}
       </li>
     </ul>
@@ -16,31 +16,26 @@
 </template>
   
   
-<script>
-export default {
-  data() {
+<script lang="ts">
+import { useRoutineStore } from '@/store/routine';
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  setup() {
+    const {steps, stepsOptions, addStepAtTheBottom, removeStep} = useRoutineStore();
     return {
-      items: [
-        'lol',
-        'lal',
-        'lel'
-      ],
-      itemsList: [],
+      steps,
+      stepsOptions,
+      addStepAtTheBottom,
+      removeStep,
     }
   },
-  methods: {
-    addItem(item) {
-      this.itemsList.push(item);
-    },
-    removeItem(index) {
-      this.itemsList.splice(index, 1)
-    }
-  }
-}
+})
+
 </script>
 
 <style lang="scss" scoped>
-  ul {
-    list-style: none;
-  }
+ul {
+  list-style: none;
+}
 </style>
