@@ -9,5 +9,6 @@
   html {
     background: #000;
     color: #FFF;
+    font-family: 'Inter var', 'Arial', 'Helvetica', sans-serif;
   }
 </style>
