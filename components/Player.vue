@@ -2,9 +2,15 @@
   <div class="player block">
     <div class="container">
       <div class="block">
-        <div class="player__action player__action--play" @click="play">▶️</div>
-        <div class="player__action player__action--pause" @click="pause">⏸️</div>
-        <div class="player__action player__action--stop" @click="stop">⏹️</div>
+        <div class="player__action player__action--play" :class="{ 'player__action--active': isPlaying }" @click="play">
+          ▶️
+        </div>
+        <div class="player__action player__action--pause" :class="{ 'player__action--active': isPaused }" @click="pause">
+          ⏸️
+        </div>
+        <div class="player__action player__action--stop" @click="stop">
+          ⏹️
+        </div>
       </div>
       <div class="player__now-playing block">
         {{ currentStep }}
@@ -25,11 +31,16 @@ export default {
       steps: [] as string[],
       currentIndex: -1 as number,
       intervalId: 0 as number,
+      isPlaying: false as boolean,
+      isPaused: false as boolean,
     };
   },
   methods: {
     play() {
-      this.currentIndex = 0;
+      this.isPlaying = true;
+      this.isPaused = false;
+      if (this.currentIndex < 0) this.currentIndex = 0;
+
       this.intervalId = setInterval(() => {
         this.currentIndex++;
         if (this.currentIndex >= this.currentRoutineOfSteps.length) this.stop();
@@ -37,10 +48,14 @@ export default {
     },
     stop() {
       this.currentIndex = -1;
+      this.isPlaying = false;
+      this.isPaused = false;
       clearInterval(this.intervalId);
     },
     pause() {
-
+      this.isPaused = true;
+      this.isPlaying = false;
+      clearInterval(this.intervalId);
     },
   },
   computed: {
@@ -66,6 +81,10 @@ export default {
     flex: 0;
     font-size: 3em;
     margin-right: 1em;
+
+    &--active {
+      background: #f00;
+    }
   }
 }
 </style>

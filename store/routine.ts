@@ -29,9 +29,6 @@ export const useRoutineStore = defineStore("mainRoutine", {
       if (index < 0 ) return;
       this.$state.steps.splice(index, 1)
     },
-    getRoutine() {
-      return this.$state.steps;
-    }
   },
   persist: {
     storage: persistedState.localStorage,
