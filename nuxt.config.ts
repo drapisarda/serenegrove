@@ -10,4 +10,17 @@ export default defineNuxtConfig({
     },
     storage: 'localStorage'
   },
+  css: [
+    'bulma',
+  ],
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: /^~(.*)$/,
+          replacement: 'node_modules/$1',
+        },
+      ],
+    },
+  }
 })

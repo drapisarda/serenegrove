@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.7",
+    "bulma": "^0.9.4",
     "pinia": "^2.0.33"
   }
 }
