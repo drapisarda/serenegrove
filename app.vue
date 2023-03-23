@@ -1,19 +1,15 @@
 <template>
   <section class="block">
     <section class="main-steps-list">
-      <div class="container">
-        <header class="block">
-          <h2>
-            add or remove
-          </h2>
-        </header>
-        <List />
-      </div>
+      <header class="block">
+      </header>
+      <Player />
+      <List />
     </section>
   </section>
 </template>
 
 
 <style lang="scss">
-  @import "@/style/main.scss";
+@import "@/style/main.scss";
 </style>
