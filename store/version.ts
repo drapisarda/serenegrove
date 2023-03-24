@@ -5,7 +5,7 @@ export const useVersionStore = defineStore("version", {
     version: '0.1' as string,
   }),
   actions: {
-    getVersion() {
+    getVersion(): string {
       return this.$state.version;
     }
   }

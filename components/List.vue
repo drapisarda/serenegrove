@@ -14,7 +14,7 @@
             >
               <header class="card-header">
                 <p class="card-header-title">
-                  {{ value }}
+                  {{ value.name }} - {{ value.duration/1000 }}s
                 </p>
                 <button class="card-header-icon" aria-label="add element">
                   ➕
@@ -35,7 +35,7 @@
             >
               <header class="card-header">
                 <p class="card-header-title">
-                  {{ value }}
+                  {{ value.name }} - {{ value.duration/1000 }}s
                 </p>
                 <button class="card-header-icon" aria-label="remove element">
                   ➖
@@ -51,7 +51,7 @@
   
   
 <script lang="ts">
-import { useRoutineStore } from "@/store/routine";
+import { useRoutineStore, Step } from "@/store/routine";
 import { defineComponent } from "vue";
 
 export default defineComponent({

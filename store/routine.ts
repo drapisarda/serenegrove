@@ -1,40 +1,47 @@
 import { defineStore } from "pinia";
 
-import {useVersionStore} from './version';
+import { useVersionStore } from "./version";
+
+export interface Step {
+  name: string,
+  duration: number,
+} 
 
 export const useRoutineStore = defineStore("mainRoutine", {
   state: () => ({
-    steps: [] as string[],
-    lastEdit: "",
-    version: useVersionStore().getVersion(),
+    steps: [],
+    lastEdit: 0 as number,
+    version: useVersionStore().getVersion() as string,
     stepsOptions: [
-      'breath',
-      'body scan',
-      'sounds',
-      'mantra',
-      'bell'
-    ],
+      { name: "breath", duration: 3000 },
+      { name: "body scan", duration: 5000 },
+      { name: "sounds", duration: 7000 },
+      { name: "mantra", duration: 5000 },
+      { name: "bell", duration: 3000 },
+    ] as Step[],
   }),
   actions: {
-    addStep(step: string, index: number) {
-      console.log('add to ' + this.$state.steps);
-      this.$state.steps.splice(index, 0, step);
+    addStep(step: Step, insertIndex: number) {
+      console.log("add to " + this.$state.steps);
+      this.$state.steps.splice(insertIndex, 0, step);
+      this.lastEdit = Date.now();
     },
-    addStepAtTheBottom(step: string) {
-      console.log('add at the bottom of ' + this.$state.steps);
+    addStepAtTheBottom(step: Step) {
+      console.log("add at the bottom of " + this.$state.steps);
       this.$state.steps.push(step);
+      this.lastEdit = Date.now();
     },
-    removeStep(index: number) {
-      console.log('remove from ' + this.$state.steps);
-      if (index < 0 ) return;
-      this.$state.steps.splice(index, 1)
+    removeStep(removeIndex: number) {
+      console.log("remove from " + this.$state.steps);
+      if (removeIndex < 0) return;
+      this.$state.steps.splice(removeIndex, 1);
+      this.lastEdit = Date.now();
     },
   },
   persist: {
     storage: persistedState.localStorage,
   },
 });
-
 
 /*
 

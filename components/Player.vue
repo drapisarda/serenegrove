@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="player__now-playing block">
-        {{ currentStep }}
+        <span v-if="currentStep">{{ currentStep }}</span>
         &nbsp;
       </div>
     </div>
@@ -22,50 +22,58 @@
 
 
 <script lang="ts">
-import { useRoutineStore } from "@/store/routine";
+import { useRoutineStore, Step } from "@/store/routine";
 
 export default {
   name: "Player",
   data() {
     return {
-      steps: [] as string[],
       currentIndex: -1 as number,
-      intervalId: 0 as number,
       isPlaying: false as boolean,
       isPaused: false as boolean,
     };
   },
   methods: {
+    wait(duration: number) { // will be replaced with media controlls
+      return new Promise(resolve => setTimeout(resolve, duration));
+    },    
+    async showNext() { // will be replaced with media controlls
+      this.currentIndex++;
+      if (this.currentIndex >= this.steps.length) {
+        this.stop();
+        return;
+      }
+
+      if (this.isPaused) return;
+
+      await this.wait(this.currentStep?.duration || 0)
+      this.showNext();
+    },
     play() {
       this.isPlaying = true;
       this.isPaused = false;
-      if (this.currentIndex < 0) this.currentIndex = 0;
-
-      this.intervalId = setInterval(() => {
-        this.currentIndex++;
-        if (this.currentIndex >= this.currentRoutineOfSteps.length) this.stop();
-      }, 5000);
+      this.showNext();
     },
     stop() {
       this.currentIndex = -1;
       this.isPlaying = false;
       this.isPaused = false;
-      clearInterval(this.intervalId);
     },
     pause() {
-      this.isPaused = true;
+      this.isPaused = this.isPlaying;
       this.isPlaying = false;
-      clearInterval(this.intervalId);
     },
   },
   computed: {
-    currentRoutineOfSteps(): string[] {
+    steps(): Step[] {
       return useRoutineStore().steps;
     },
-    currentStep(): string {
-      if (!this.intervalId) return "";
-      return this.currentRoutineOfSteps[this.currentIndex] || "";
+    currentStep(): Step | undefined {
+      return this.steps[this.currentIndex] || undefined;
     },
+    currentStepDuration(): number | undefined {
+      return this.currentStep?.duration;
+    }
   },
 };
 </script>
