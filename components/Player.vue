@@ -13,7 +13,10 @@
         </div>
       </div>
       <div class="player__now-playing block">
-        <span v-if="currentStep">{{ currentStep }}</span>
+        <span v-if="currentStep">
+          {{ currentStep }}
+          <audio controls :src="currentStep.file"></audio>
+        </span>
         &nbsp;
       </div>
     </div>
@@ -44,10 +47,8 @@ export default {
         return;
       }
 
-      if (this.isPaused) return;
-
       await this.wait(this.currentStep?.duration || 0)
-      this.showNext();
+      if (!this.isPaused) this.showNext();
     },
     play() {
       this.isPlaying = true;
@@ -73,7 +74,7 @@ export default {
     },
     currentStepDuration(): number | undefined {
       return this.currentStep?.duration;
-    }
+    },
   },
 };
 </script>
