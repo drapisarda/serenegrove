@@ -51,7 +51,7 @@
   
   
 <script lang="ts">
-import { useRoutineStore, Step } from "@/store/routine";
+import { useRoutineStore } from "@/store/routine";
 import { defineComponent } from "vue";
 
 export default defineComponent({

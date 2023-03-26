@@ -2,21 +2,19 @@
   <div class="player block">
     <div class="container">
       <div class="block">
-        <div class="player__action player__action--play" :class="{ 'player__action--active': isPlaying }" @click="play">
+        <!-- <div class="player__action player__action--play" :class="{ 'player__action--active': !pauseStatus }" @click="play"> -->
+        <div class="player__action player__action--play" @click="play">
           ▶️
         </div>
-        <div class="player__action player__action--pause" :class="{ 'player__action--active': isPaused }" @click="pause">
+        <!-- <div class="player__action player__action--pause" :class="{ 'player__action--active': pauseStatus }" @click="pause">
           ⏸️
-        </div>
+        </div> -->
         <div class="player__action player__action--stop" @click="stop">
           ⏹️
         </div>
       </div>
       <div class="player__now-playing block">
-        <span v-if="currentStep">
-          {{ currentStep }}
-          <audio controls :src="currentStep.file"></audio>
-        </span>
+        <audio ref="audio" controls @ended="playNext"></audio>
         &nbsp;
       </div>
     </div>
@@ -24,59 +22,62 @@
 </template>
 
 
-<script lang="ts">
+<script lang="ts" setup>
 import { useRoutineStore, Step } from "@/store/routine";
+import { ref, computed, onMounted, watch } from "vue";
 
-export default {
-  name: "Player",
-  data() {
-    return {
-      currentIndex: -1 as number,
-      isPlaying: false as boolean,
-      isPaused: false as boolean,
-    };
-  },
-  methods: {
-    wait(duration: number) { // will be replaced with media controlls
-      return new Promise(resolve => setTimeout(resolve, duration));
-    },    
-    async showNext() { // will be replaced with media controlls
-      this.currentIndex++;
-      if (this.currentIndex >= this.steps.length) {
-        this.stop();
-        return;
-      }
+const { steps } = useRoutineStore();
+let currentIndex = ref(-1);
+let pauseStatus = true;
 
-      await this.wait(this.currentStep?.duration || 0)
-      if (!this.isPaused) this.showNext();
-    },
-    play() {
-      this.isPlaying = true;
-      this.isPaused = false;
-      this.showNext();
-    },
-    stop() {
-      this.currentIndex = -1;
-      this.isPlaying = false;
-      this.isPaused = false;
-    },
-    pause() {
-      this.isPaused = this.isPlaying;
-      this.isPlaying = false;
-    },
-  },
-  computed: {
-    steps(): Step[] {
-      return useRoutineStore().steps;
-    },
-    currentStep(): Step | undefined {
-      return this.steps[this.currentIndex] || undefined;
-    },
-    currentStepDuration(): number | undefined {
-      return this.currentStep?.duration;
-    },
-  },
+const audio = ref<HTMLAudioElement>();
+
+onMounted(() => {
+  const audioElement = audio.value;
+  if (!audioElement) return;
+  audioElement.addEventListener("canplay", () => {
+    audioElement.play();
+  });
+  audioElement.addEventListener("play", () => {
+    pauseStatus = false;
+  })
+  audioElement.addEventListener("pause", () => {
+    pauseStatus = true;
+  })
+})
+
+const playNext = async () => {
+  currentIndex.value++;
+  if (!currentStep) {
+    stop();
+    return;
+  }
+
+  const audioElement = audio.value;
+  if (!audioElement) return;
+
+  const response = await fetch(currentStep.value?.file);
+  const blob = await response.blob();
+  const url = URL.createObjectURL(blob);
+  
+  audioElement.src = url;
+  audioElement.play();
 };
+
+const play = () => {
+  stop();
+  // TODO caricxare tutti i passi qui
+  playNext();
+};
+
+const stop = () => {
+  currentIndex.value = -1;
+  audio.value?.pause();
+};
+
+const currentStep = computed((): Step => {
+  return steps[currentIndex.value] || undefined;
+});
 </script>
 
 <style lang="scss">
