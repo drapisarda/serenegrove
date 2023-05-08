@@ -32,10 +32,10 @@ const currentIndex = ref(-1);
 const pauseStatus = ref(true);
 
 const audio = ref<HTMLAudioElement>();
-const audioElementComputed = computed(() => audio.value);
+const audioUrl = ref<string | null>(null);
 
 onMounted(() => {
-  if (!audioElementComputed.value) return;
+  if (!audio.value) return;
 })
 
 const currentStep = computed((): Step => {
@@ -44,7 +44,7 @@ const currentStep = computed((): Step => {
 
 const playNext = async () => {
   currentIndex.value++;
-  if (!currentStep.value || !audioElementComputed.value) {
+  if (!currentStep.value || !audio.value) {
     stop();
     return;
   }
@@ -54,7 +54,7 @@ const playNext = async () => {
     const blob = await response.blob();
     const url = URL.createObjectURL(blob);
     await loadAudio(url);
-    audioElementComputed.value.play();
+    audio.value.play();
   } catch (error) {
     console.error(error);
     stop();
@@ -63,12 +63,13 @@ const playNext = async () => {
 
 const loadAudio = (url: string): Promise<void> => {
   return new Promise((resolve, reject) => {
-    const audioElement = audioElementComputed.value;
+    const audioElement = audio.value;
     if (!audioElement) {
       reject(new Error("Audio element is not defined"));
       return;
     }
 
+    audioUrl.value = url;
     audioElement.src = url;
     audioElement.onloadeddata = () => {
       resolve();
@@ -92,22 +93,26 @@ const play = () => {
 };
 
 const pause = () => {
-  if (!audioElementComputed.value) return;
+  if (!audio.value) return;
 
-  audioElementComputed.value.pause();
+  audio.value.pause();
 }
 
 const stop = () => {
-  if (!audioElementComputed.value) return;
+  if (!audio.value) return;
 
-  audioElementComputed.value.pause();
+  audio.value.pause();
   currentIndex.value = -1;
-  audioElementComputed.value.currentTime = 0;
+  audio.value.currentTime = 0;
+  if (audioUrl.value) {
+    URL.revokeObjectURL(audioUrl.value);
+    audioUrl.value = null;
+  }
 };
 
-const updateAudioStatus = (event: any) => {
-  if (!audioElementComputed.value) return true;
-  pauseStatus.value = audioElementComputed.value.paused && currentIndex.value > -1;
+const updateAudioStatus = (event: Event) => {
+  if (!audio.value) return true;
+  pauseStatus.value = audio.value.paused && currentIndex.value > -1;
 }
 
 </script>
