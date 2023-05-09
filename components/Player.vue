@@ -2,17 +2,11 @@
   <div class="player block">
     <div class="container">
       <div class="block">
-        <div class="player__action player__action--play"
-          :class="{ 'player__action--active': !pauseStatus && currentIndex > -1 }" @click="play">
-          ▶️
+        <div class="player__action player__action--play-pause">
+          <span v-show="pauseStatus" @click="play">▶️</span>
+          <span v-show="!pauseStatus" @click="pause">⏸️</span>
         </div>
-        <div class="player__action player__action--pause" :class="{ 'player__action--active': pauseStatus }"
-          @click="pause">
-          ⏸️
-        </div>
-        <div class="player__action player__action--stop" @click="stop">
-          ⏹️
-        </div>
+        <div class="player__action player__action--stop" @click="stop">⏹️</div>
       </div>
       <div class="player__now-playing block">
         <audio ref="audio" controls @ended="playNext" @play="updateAudioStatus" @pause="updateAudioStatus"></audio>
@@ -111,8 +105,7 @@ const stop = () => {
 };
 
 const updateAudioStatus = (event: Event) => {
-  if (!audio.value) return true;
-  pauseStatus.value = audio.value.paused && currentIndex.value > -1;
+  pauseStatus.value = audio.value?.paused || false;
 }
 
 </script>
@@ -127,7 +120,7 @@ const updateAudioStatus = (event: Event) => {
   &__action {
     flex: 0;
     font-size: 3em;
-    margin-right: 1em;
+    padding: 0 0.5em;
 
     &--active {
       background: #f00;
