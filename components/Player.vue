@@ -21,16 +21,16 @@
 import { useRoutineStore, Step } from "@/store/routine";
 import { ref, computed, onMounted, watch } from "vue";
 
-const { steps } = useRoutineStore();
+const { steps, saveLoadedBlobUrl } = useRoutineStore();
+watch(steps, (newSteps: Step[]) => {
+  stop();
+});
+
 const currentIndex = ref(-1);
 const pauseStatus = ref(true);
 
 const audio = ref<HTMLAudioElement>();
 const audioUrl = ref<string | null>(null);
-
-onMounted(() => {
-  if (!audio.value) return;
-})
 
 const currentStep = computed((): Step => {
   return steps[currentIndex.value] || undefined;
@@ -44,10 +44,9 @@ const playNext = async () => {
   }
 
   try {
-    const response = await fetch(currentStep.value?.file);
-    const blob = await response.blob();
-    const url = URL.createObjectURL(blob);
-    await loadAudio(url);
+    if (!currentStep.value.url) console.error('impossible to load');
+    console.log(`setting ${currentStep.value.file}`)
+    audio.value.src = currentStep.value.file;
     audio.value.play();
   } catch (error) {
     console.error(error);
@@ -55,35 +54,29 @@ const playNext = async () => {
   }
 };
 
-const loadAudio = (url: string): Promise<void> => {
-  return new Promise((resolve, reject) => {
-    const audioElement = audio.value;
-    if (!audioElement) {
-      reject(new Error("Audio element is not defined"));
-      return;
-    }
 
-    audioUrl.value = url;
-    audioElement.src = url;
-    audioElement.onloadeddata = () => {
-      resolve();
-    };
-    audioElement.onerror = () => {
-      reject(new Error("Failed to load audio file"));
-    };
-  });
-};
+const loadAllSteps = async () => {
+  console.log('loading steps')
+  return Promise.all(steps.map(async (step: Step, index: number) => {
+    if (step.url) return;
+    const response = await fetch(step.file);
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+    console.log('loading steps' + step.name)
+    saveLoadedBlobUrl(index, url)
+  }));
+}
 
-const play = () => {
+const play = async () => {
+  // pause/play behaviour
   if (currentStep.value) {
     audio.value?.play();
     return;
   };
 
-  // nuova riproduzione
-  // TODO caricare tutti i passi qui
-
-  playNext();  
+  await loadAllSteps();
+  console.log('steps loaded')
+  playNext();
 };
 
 const pause = () => {
@@ -121,10 +114,6 @@ const updateAudioStatus = (event: Event) => {
     flex: 0;
     font-size: 3em;
     padding: 0 0.5em;
-
-    &--active {
-      background: #f00;
-    }
   }
 }
 </style>

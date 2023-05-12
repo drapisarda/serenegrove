@@ -51,7 +51,7 @@
   
   
 <script lang="ts">
-import { useRoutineStore } from "@/store/routine";
+import { useRoutineStore, Step } from "@/store/routine";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -59,8 +59,8 @@ export default defineComponent({
     const { steps, stepsOptions, addStepAtTheBottom, removeStep } =
       useRoutineStore();
     return {
-      steps,
-      stepsOptions,
+      steps: steps as Step[],
+      stepsOptions: stepsOptions as Step[],
       addStepAtTheBottom,
       removeStep,
     };
