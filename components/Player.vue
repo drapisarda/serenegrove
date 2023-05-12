@@ -9,7 +9,8 @@
         <div class="player__action player__action--stop" @click="stop">⏹️</div>
       </div>
       <div class="player__now-playing block">
-        <audio ref="audio" controls @ended="playNext" @play="updateAudioStatus" @pause="updateAudioStatus"></audio>
+        <audio src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus" @pause="updateAudioStatus">
+        </audio>
         &nbsp;
       </div>
     </div>
@@ -30,7 +31,9 @@ const currentIndex = ref(-1);
 const pauseStatus = ref(true);
 
 const audio = ref<HTMLAudioElement>();
+const source = ref<HTMLSourceElement>();
 const audioUrl = ref<string | null>(null);
+const audioCache = new Map<string, string>();
 
 const currentStep = computed((): Step => {
   return steps[currentIndex.value] || undefined;
@@ -44,9 +47,9 @@ const playNext = async () => {
   }
 
   try {
-    if (!currentStep.value.url) console.error('impossible to load');
-    console.log(`setting ${currentStep.value.file}`)
-    audio.value.src = currentStep.value.file;
+    const fileUrl = await getAudioFileUrl(currentStep.value);
+    console.log(`setting ${currentStep.value.file}`);
+    audio.value.src = fileUrl;
     audio.value.play();
   } catch (error) {
     console.error(error);
@@ -54,16 +57,32 @@ const playNext = async () => {
   }
 };
 
+const getAudioFileUrl = async (step: Step): Promise<string> => {
+  const { file, url } = step;
+  if (url) {
+    return url;
+  }
+
+  if (audioCache.has(file)) {
+    return audioCache.get(file)!;
+  }
+
+  const response = await fetch(file);
+  const blob = await response.blob();
+  const fileUrl = URL.createObjectURL(blob);
+  audioCache.set(file, fileUrl);
+  return fileUrl;
+}
 
 const loadAllSteps = async () => {
   console.log('loading steps')
   return Promise.all(steps.map(async (step: Step, index: number) => {
-    if (step.url) return;
-    const response = await fetch(step.file);
-    const blob = await response.blob();
-    const url = URL.createObjectURL(blob);
-    console.log('loading steps' + step.name)
-    saveLoadedBlobUrl(index, url)
+    if (step.url || audioCache.has(step.file)) {
+      return;
+    }
+    const fileUrl = await getAudioFileUrl(step);
+    console.log(`loading ${step.name}`)
+    saveLoadedBlobUrl(index, fileUrl)
   }));
 }
 
@@ -92,7 +111,7 @@ const stop = () => {
   currentIndex.value = -1;
   audio.value.currentTime = 0;
   if (audioUrl.value) {
-    URL.revokeObjectURL(audioUrl.value);
+    // URL.revokeObjectURL(audioUrl.value);
     audioUrl.value = null;
   }
 };
