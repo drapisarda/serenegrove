@@ -1,4 +1,5 @@
 <template>
+  <Navigation />
   <section class="block">
     <section class="main-steps-list">
       <header class="block">

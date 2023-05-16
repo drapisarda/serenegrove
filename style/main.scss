@@ -5,4 +5,11 @@ body {
   background: $tertiary;
   color: $primary;
   font-family: 'Arial', 'Helvetica', sans-serif;
+  background: url('../assets/img/forest_bg.webp') no-repeat center center transparent;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh;
 }
