@@ -6,7 +6,6 @@ export interface Step {
   name: string,
   duration: number,
   file: string,
-  url: string | null,
 }
 
 export const useRoutineStore = defineStore("mainRoutine", {
@@ -38,9 +37,6 @@ export const useRoutineStore = defineStore("mainRoutine", {
       if (removeIndex < 0) return;
       this.$state.steps.splice(removeIndex, 1);
       this.lastEdit = Date.now();
-    },
-    saveLoadedBlobUrl(index: number, url: string | null) {
-      this.$state.steps[index].url = url;
     },
   },
   persist: {
