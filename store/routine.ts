@@ -38,6 +38,13 @@ export const useRoutineStore = defineStore("mainRoutine", {
       this.$state.steps.splice(removeIndex, 1);
       this.lastEdit = Date.now();
     },
+    moveStep(stepIndex: number, amount: number) {
+      const newIndex = (stepIndex + amount);
+      if (newIndex < 0 || newIndex >= this.$state.steps.length) return;
+      const element = this.$state.steps[stepIndex];
+      this.$state.steps.splice(stepIndex, 1);
+      this.$state.steps.splice(newIndex, 0, element);
+    }
   },
   persist: {
     storage: persistedState.localStorage,
