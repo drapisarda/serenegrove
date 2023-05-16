@@ -14,11 +14,11 @@ export const useRoutineStore = defineStore("mainRoutine", {
     lastEdit: 0 as number,
     version: useVersionStore().getVersion() as string,
     stepsOptions: [
-      { name: 'breath', duration: 3000, file: '../audio/1.mp3' },
-      { name: 'body scan', duration: 5000, file: '../audio/2.mp3' },
-      { name: 'sounds', duration: 7000, file: '../audio/3.mp3' },
-      { name: 'mantra', duration: 5000, file: '../audio/4.mp3' },
-      { name: 'bell', duration: 3000, file: '../audio/5.mp3' },
+      { name: 'breath', duration: 3000, file: '../assets/audio/1.mp3' },
+      { name: 'body scan', duration: 5000, file: '../assets/audio/2.mp3' },
+      { name: 'sounds', duration: 7000, file: '../assets/audio/3.mp3' },
+      { name: 'mantra', duration: 5000, file: '../assets/audio/4.mp3' },
+      { name: 'bell', duration: 3000, file: '../assets/audio/5.mp3' },
     ] as Step[],
   }),
   actions: {
