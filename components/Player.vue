@@ -122,7 +122,6 @@ const stop = () => {
   currentIndex.value = -1;
   audio.value.currentTime = 0;
   if (audioUrl.value) {
-    // URL.revokeObjectURL(audioUrl.value);
     audioUrl.value = null;
   }
 };
