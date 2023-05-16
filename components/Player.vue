@@ -1,19 +1,25 @@
 <template>
   <div class="player">
-    <div class="player__actions"
-      :class="{ 'player__actions--visible': !stopStatus, 'player__actions--paused': pauseStatus }">
-      <div class="player__action player__action--play-pause">
-        <span v-show="pauseStatus" @click="play">▶️</span>
-        <span v-show="!pauseStatus" @click="pause">⏸️</span>
+    <div class="player__playing"
+      :class="{ 'player__playing--visible': !stopStatus, 'player__playing--paused': pauseStatus }">
+      <div class="block">
+        <div class="container">
+          <div class="player__actions columns">
+            <div class="column player__action player__action--play-pause">
+              <span v-show="pauseStatus" @click="play">▶️</span>
+              <span v-show="!pauseStatus" @click="pause">⏸️</span>
 
-      </div>
-      <div class="player__action player__action--stop" @click="stop">⏹️</div>
-      <div class="waveContainer">
-        <div class="wave wave1"></div>
-        <div class="wave wave2"></div>
-        <div class="wave wave3"></div>
-        <div class="wave wave4"></div>
-        <div class="wave wave5"></div>
+            </div>
+            <div class="column player__action player__action--stop" @click="stop">⏹️</div>
+          </div>
+          <div class="waveContainer">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+            <div class="wave wave4"></div>
+            <div class="wave wave5"></div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="block">
@@ -21,10 +27,8 @@
         <div class="player__start">
           <span class="player__action" @click="play">▶️</span>
         </div>
-        <div class="player__now-playing">
-          <audio src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus" @pause="updateAudioStatus">
-          </audio>
-        </div>
+        <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus" @pause="updateAudioStatus">
+        </audio>
       </div>
     </div>
   </div>
@@ -139,22 +143,49 @@ const updateAudioStatus = (event: Event) => {
     justify-content: center;
   }
 
-  &__actions {
+  &__playing {
     position: absolute;
     top: 0;
     left: 0;
-    background: red;
     width: 100vw;
     height: 100vh;
     opacity: 0;
-    z-index: 12;
+    z-index: 31;
     transition: opacity 1s .1s;
     pointer-events: none;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
     &--visible {
       opacity: 1;
       pointer-events: all;
     }
+
+    &--paused .wave {
+      animation-name: off;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      transform: scaleY(0.1);
+    }
+  }
+
+  &__actions {
+    justify-content: center;
   }
 
   &__action {
@@ -163,105 +194,100 @@ const updateAudioStatus = (event: Event) => {
     padding: 0 0.5em;
   }
 
-  &__now-playing audio {
+  &__audio-element {
     display: none;
   }
 
-  // audio animation
+}
 
-  @keyframes quiet {
-    25% {
-      transform: scaleY(.6);
-    }
+// audio animation
 
-    50% {
-      transform: scaleY(.4);
-    }
-
-    75% {
-      transform: scaleY(.8);
-    }
+@keyframes quiet {
+  25% {
+    transform: scaleY(.6);
   }
 
-  @keyframes normal {
-    25% {
-      transform: scaleY(1);
-    }
-
-    50% {
-      transform: scaleY(.4);
-    }
-
-    75% {
-      transform: scaleY(.6);
-    }
-  }
-
-  @keyframes loud {
-    25% {
-      transform: scaleY(1);
-    }
-
-    50% {
-      transform: scaleY(.4);
-    }
-
-    75% {
-      transform: scaleY(1.2);
-    }
-  }
-
-  @keyframes off {
-    90% {
-      transform: scaleY(0.1);
-    }
-  }
-
-  .waveContainer {
-    display: flex;
-    justify-content: space-between;
-    height: 64px;
-    --boxSize: 8px;
-    --gutter: 4px;
-    width: calc((var(--boxSize) + var(--gutter)) * 5);
-  }
-
-  .wave {
+  50% {
     transform: scaleY(.4);
-    height: 100%;
-    width: var(--boxSize);
-    background: #12E2DC;
-    animation-duration: 1.2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    border-radius: 8px;
   }
 
-  .wave1 {
-    animation-name: quiet;
+  75% {
+    transform: scaleY(.8);
+  }
+}
+
+@keyframes normal {
+  25% {
+    transform: scaleY(1);
   }
 
-  .wave2 {
-    animation-name: normal;
+  50% {
+    transform: scaleY(.4);
   }
 
-  .wave3 {
-    animation-name: quiet;
+  75% {
+    transform: scaleY(.6);
+  }
+}
+
+@keyframes loud {
+  25% {
+    transform: scaleY(1);
   }
 
-  .wave4 {
-    animation-name: loud;
+  50% {
+    transform: scaleY(.4);
   }
 
-  .wave5 {
-    animation-name: quiet;
+  75% {
+    transform: scaleY(1.2);
   }
+}
 
-  &__actions--paused .wave {
-    animation-name: off;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+@keyframes off {
+  90% {
     transform: scaleY(0.1);
   }
+}
+
+.waveContainer {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  height: 64px;
+  --boxSize: 8px;
+  --gutter: 4px;
+  width: calc((var(--boxSize) + var(--gutter)) * 5);
+}
+
+.wave {
+  transform: scaleY(.4);
+  height: 100%;
+  width: var(--boxSize);
+  background: #12E2DC;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  border-radius: 8px;
+}
+
+.wave1 {
+  animation-name: quiet;
+}
+
+.wave2 {
+  animation-name: normal;
+}
+
+.wave3 {
+  animation-name: quiet;
+}
+
+.wave4 {
+  animation-name: loud;
+}
+
+.wave5 {
+  animation-name: quiet;
 }
 </style>
