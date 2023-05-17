@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false,
   modules: [
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
@@ -22,5 +23,15 @@ export default defineNuxtConfig({
         },
       ],
     },
-  }
+  },
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      meta: [
+        { name: 'robots', content: 'no-index' }
+      ]
+    },
+    baseURL: '/calmroots/',
+  },
 })
