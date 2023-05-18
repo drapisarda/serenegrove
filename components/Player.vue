@@ -136,6 +136,7 @@ const updateAudioStatus = (event: Event) => {
 </script>
 
 <style lang="scss">
+@import "@/style/vars.scss";
 .player {
   .block {
     display: flex;
@@ -149,7 +150,7 @@ const updateAudioStatus = (event: Event) => {
     width: 100svw;
     height: 100svh;
     opacity: 0;
-    z-index: 31;
+    z-index: $playerZIndex;
     transition: opacity 1s .1s;
     pointer-events: none;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);

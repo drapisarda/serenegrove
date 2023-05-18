@@ -1,9 +1,10 @@
 <template>
-  <header class="block">
+  <!-- <header class="block">
     <Navigation />
-  </header>
-  <Player />
+  </header> -->
   <List />
+  <Player />
+  <Toast/>
 </template>
 
 

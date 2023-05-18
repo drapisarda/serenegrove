@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
-import { useVersionStore } from "./version";
+import { useGlobalStore } from "./global";
 
 export interface Step {
   name: string,
@@ -12,7 +12,7 @@ export const useRoutineStore = defineStore("mainRoutine", {
   state: () => ({
     steps: [] as Step[],
     lastEdit: 0 as number,
-    version: useVersionStore().getVersion() as string,
+    version: useGlobalStore().getVersion() as string,
     stepsOptions: [
       { name: 'breath', duration: 3000, file: '@/assets/audio/1.mp3' },
       { name: 'body scan', duration: 5000, file: '@/assets/audio/2.mp3' },
