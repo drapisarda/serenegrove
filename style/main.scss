@@ -1,3 +1,4 @@
+@import 'reset';
 @import 'vars';
 
 body {
@@ -10,5 +11,9 @@ body {
   -o-background-size: cover;
   background-size: cover;
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.block {
+  overflow: hidden;
 }

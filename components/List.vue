@@ -1,7 +1,7 @@
 <template>
   <div class="steps-list block">
     <div class="container">
-      <div class="tile is-ancestor">
+      <div class="tile">
         <div class="steps-list__list steps-list__list--options tile is-6 is-parent">
           <ul>
             <li class="card mb-4" v-for="(value, index) in stepsOptions" :key="index"

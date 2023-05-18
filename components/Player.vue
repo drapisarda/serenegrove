@@ -2,15 +2,14 @@
   <div class="player">
     <div class="player__playing"
       :class="{ 'player__playing--visible': !stopStatus, 'player__playing--paused': pauseStatus }">
-      <div class="block">
+      <div class="tile is-parent">
         <div class="container">
-          <div class="player__actions columns">
-            <div class="column player__action player__action--play-pause">
+          <div class="player__actions columns is-mobile">
+            <div class="column player__action player__action--play-pause column">
               <span v-show="pauseStatus" @click="play">▶️</span>
               <span v-show="!pauseStatus" @click="pause">⏸️</span>
-
             </div>
-            <div class="column player__action player__action--stop" @click="stop">⏹️</div>
+            <div class="column player__action player__action--stop column" @click="stop">⏹️</div>
           </div>
           <div class="waveContainer">
             <div class="wave wave1"></div>
@@ -22,7 +21,7 @@
         </div>
       </div>
     </div>
-    <div class="block">
+    <div class="tile is-parent">
       <div class="container">
         <div class="player__start">
           <span class="player__action" @click="play">▶️</span>
@@ -37,7 +36,7 @@
 
 <script lang="ts" setup>
 import { useRoutineStore, Step } from "@/store/routine";
-import { ref, computed, onMounted, watch } from "vue";
+import { ref, computed, watch } from "vue";
 
 const { steps } = useRoutineStore();
 watch(steps, (newSteps: Step[]) => {
@@ -147,8 +146,8 @@ const updateAudioStatus = (event: Event) => {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100svw;
+    height: 100svh;
     opacity: 0;
     z-index: 31;
     transition: opacity 1s .1s;
