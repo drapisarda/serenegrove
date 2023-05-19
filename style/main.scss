@@ -30,3 +30,9 @@ body {
     pointer-events: all;
   }
 }
+
+.section {
+  @media (max-width: 600px) {
+    padding: $size-5 $size-6;
+  }
+}
