@@ -26,6 +26,7 @@
       <div class="steps-list__add-button block">
         <button class="button is-large add-button" @click="toggleModal">
           <span>➕</span>
+          Add steps to your routine
         </button>
       </div>
       <div class="modal section" :class="{ 'is-active': modalIsOpen }">
@@ -126,8 +127,8 @@ export default defineComponent({
       padding: 0;
       width: 100%;
       height: 100%;
-      position: relative;
-      padding-bottom: $size-2;
+      display: flex;
+      flex-direction: column;
     }
 
     .card-image {
@@ -154,13 +155,14 @@ export default defineComponent({
       }
     }
 
-    .card-footer button {
+    .card-footer {
+      flex: 1;
+      button {
       flex-basis: 100%;
       padding-left: $size-7;
       padding-right: $size-7;
-      position: absolute;
-      bottom: 0;
       width: 100%;
+    }
     }
   }
 
@@ -171,6 +173,9 @@ export default defineComponent({
 
   &__add-button button {
     width: 100%;
+    span{
+      margin-right: $size-7;
+    }
   }
 
   .add-button {
