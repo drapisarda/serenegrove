@@ -30,7 +30,7 @@ const displayMessage = (newMessage: ToastMessage, duration = 3000) => {
 
 <style scoped lang="scss">
 @import "@/style/vars.scss";
-$spacing: 3rem;
+$spacing: $size-1;
 
 .toast {
   position: fixed;

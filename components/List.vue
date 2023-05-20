@@ -24,7 +24,7 @@
         </ul>
       </div>
       <div class="steps-list__add-button block">
-        <button class="button is-large" @click="toggleModal">
+        <button class="button is-large add-button" @click="toggleModal">
           <span>➕</span>
         </button>
       </div>
@@ -36,14 +36,17 @@
             <p class="block">
             <ul>
               <li v-for="(step, index) in stepsOptions" :key="index">
-                <button class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }" @click="() => addStep(step)">
+                <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }" @click="() => addStep(step)">
+                  <div class="card-image">
+                    <picture>
+                      <source :srcset="`/assets/img/icons/512/${step.icon}`" media="(min-width: 512px)">
+                      <img :src="`/assets/img/icons/128/${step.icon}`" :alt="`${step.name} - ${step.description}`">
+                    </picture>
+                  </div>
                   <header class="card-header">
                     <p class="card-header-title">
                       {{ step.name }} - {{ step.duration / 1000 }}s
                     </p>
-                    <button class="card-header-icon" aria-label="add element">
-                      ➕
-                    </button>
                   </header>
                   <div class="card-content">
                     <div class="content">
@@ -52,7 +55,13 @@
                       </p>
                     </div>
                   </div>
-                </button>
+                  <div class="card-footer">
+                    <button class="card-header-icon add-button" aria-label="add element" @click="() => addStep(step)">
+                      <span>➕</span>
+                        Add to your routine
+                    </button>
+                  </div>
+                </div>
               </li>
             </ul>
             </p>
@@ -112,22 +121,46 @@ export default defineComponent({
   }
 
   &__list--options {
-    button.card {
+    .card {
       text-align: left;
       padding: 0;
-
-      cursor: pointer;
       width: 100%;
+      height: 100%;
+      position: relative;
+      padding-bottom: $size-2;
+    }
+
+    .card-image {
+      text-align: center;
+
+      img {
+        padding: $size-6;
+      }
     }
 
     .card-header-icon {
       flex: 0;
+      justify-content: space-around;
     }
 
     ul {
       display: grid;
       column-gap: $size-4;
-      grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+      row-gap: $size-4;
+      grid-template-columns: repeat(auto-fit, minmax($tablet/4, 1fr));
+
+      @media (min-width: 600px) {
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+      }
+    }
+
+    .card-footer button {
+      flex-basis: 100%;
+      padding-left: $size-7;
+      padding-right: $size-7;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
     }
   }
 
@@ -138,7 +171,11 @@ export default defineComponent({
 
   &__add-button button {
     width: 100%;
+  }
+
+  .add-button {
     background-color: $success;
+    color: white;
 
     span {
       filter: invert(100%) brightness(2);
