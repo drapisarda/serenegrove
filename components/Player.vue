@@ -2,6 +2,13 @@
   <div class="player section">
     <div class="player__playing"
       :class="{ 'player__playing--visible': !stopStatus, 'player__playing--paused': pauseStatus }">
+      <div class="waveContainer section">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+            <div class="wave wave4"></div>
+            <div class="wave wave5"></div>
+          </div>
       <div class="tile is-parent">
         <div class="container">
           <div class="player__actions columns is-mobile">
@@ -17,13 +24,6 @@
               <img src="/assets/img/icons/32/stop-button.png" alt="Pause routine">
               <span>Stop</span>
             </div>
-          </div>
-          <div class="waveContainer">
-            <div class="wave wave1"></div>
-            <div class="wave wave2"></div>
-            <div class="wave wave3"></div>
-            <div class="wave wave4"></div>
-            <div class="wave wave5"></div>
           </div>
         </div>
       </div>
@@ -291,9 +291,9 @@ const updateAudioStatus = (event: Event) => {
   display: flex;
   margin: auto;
   justify-content: space-between;
-  height: 64px;
+  height: 50vh;
   --boxSize: 8px;
-  --gutter: 4px;
+  --gutter: #{$size-5};
   width: calc((var(--boxSize) + var(--gutter)) * 5);
 }
 
