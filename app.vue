@@ -2,8 +2,8 @@
   <!-- <header class="block">
     <Navigation />
   </header> -->
-  <List />
   <Player />
+  <List />
   <Toast/>
 </template>
 

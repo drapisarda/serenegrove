@@ -10,14 +10,14 @@
               </p>
               <button @click="() => moveStep(index, -1)" class="card-header-icon"
                 :class="{ 'card-header-icon--inactive': index === 0 }" aria-label="move up">
-                ⬆️
+                <img src="/assets/img/icons/32/up-chevron.png" alt="Pause routine">
               </button>
               <button @click="() => moveStep(index, 1)" class="card-header-icon"
                 :class="{ 'card-header-icon--inactive': index === steps.length - 1 }" aria-label="move down">
-                ⬇️
+                <img src="/assets/img/icons/32/down-chevron.png" alt="Pause routine">
               </button>
               <button class="card-header-icon" aria-label="remove element" @click="() => removeStep(step.name, index)">
-                🗑
+                <img src="/assets/img/icons/32/bin.png" alt="Pause routine">
               </button>
             </header>
           </li>
@@ -25,7 +25,7 @@
       </div>
       <div class="steps-list__add-button block">
         <button class="button is-large add-button" @click="toggleModal">
-          <span>➕</span>
+          <img src="/assets/img/icons/32/plus.png" alt="Add step to your routine">
           Add steps to your routine
         </button>
       </div>
@@ -58,8 +58,10 @@
                   </div>
                   <div class="card-footer">
                     <button class="card-header-icon add-button" aria-label="add element" @click="() => addStep(step)">
-                      <span>➕</span>
-                        Add to your routine
+                      <img src="/assets/img/icons/32/plus.png" alt="Add step to your routine">
+                      <span>
+                        Add step to your routine
+                      </span>
                     </button>
                   </div>
                 </div>
@@ -167,7 +169,7 @@ export default defineComponent({
   }
 
   .card-header-icon--inactive {
-    filter: saturate(0);
+    opacity: 0.3;
     pointer-events: none;
   }
 
@@ -181,9 +183,13 @@ export default defineComponent({
   .add-button {
     background-color: $success;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    span {
+    img {
       filter: invert(100%) brightness(2);
+      margin-right: 0.5em;
     }
   }
 }

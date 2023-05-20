@@ -1,15 +1,22 @@
 <template>
-  <div class="player">
+  <div class="player section">
     <div class="player__playing"
       :class="{ 'player__playing--visible': !stopStatus, 'player__playing--paused': pauseStatus }">
       <div class="tile is-parent">
         <div class="container">
           <div class="player__actions columns is-mobile">
-            <div class="column player__action player__action--play-pause column">
-              <span v-show="pauseStatus" @click="play">▶️</span>
-              <span v-show="!pauseStatus" @click="pause">⏸️</span>
+            <div class="column player__action player__action--play-pause column" v-show="pauseStatus" @click="play">
+              <img src="/assets/img/icons/32/play-button.png" alt="Play your routine">
+              <span>Play</span>
             </div>
-            <div class="column player__action player__action--stop column" @click="stop">⏹️</div>
+            <div class="column player__action player__action--play-pause column" v-show="!pauseStatus" @click="pause">
+              <img src="/assets/img/icons/32/pause-button.png" alt="Pause routine">
+              <span> Pause </span>
+            </div>
+            <div class="column player__action player__action--stop column" @click="stop">
+              <img src="/assets/img/icons/32/stop-button.png" alt="Pause routine">
+              <span>Stop</span>
+            </div>
           </div>
           <div class="waveContainer">
             <div class="wave wave1"></div>
@@ -24,9 +31,12 @@
     <div class="tile is-parent">
       <div class="container">
         <div class="player__start">
-          <span class="player__action" @click="play">▶️</span>
+          <button class="player__action" @click="play">
+            <img src="/assets/img/icons/32/play-button.png" alt="Play your routine">
+          </button>
         </div>
-        <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus" @pause="updateAudioStatus">
+        <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"
+          @pause="updateAudioStatus">
         </audio>
       </div>
     </div>
@@ -64,7 +74,6 @@ const playNext = async () => {
 
   try {
     const fileUrl = await getAudioFileUrl(currentStep.value);
-    console.log(`setting ${currentStep.value.file}`);
     audio.value.src = fileUrl;
     audio.value.play();
   } catch (error) {
@@ -73,6 +82,13 @@ const playNext = async () => {
   }
 };
 
+const audioCacheClean = () => {
+  audioCache.forEach((blob: string, fileName: string) => {
+    URL.revokeObjectURL(blob);
+    audioCache.delete(fileName);
+  })
+}
+
 const getAudioFileUrl = async (step: Step): Promise<string> => {
   const { file } = step;
 
@@ -80,11 +96,16 @@ const getAudioFileUrl = async (step: Step): Promise<string> => {
     return audioCache.get(file)!;
   }
 
-  const response = await fetch(file);
-  const blob = await response.blob();
-  const fileUrl = URL.createObjectURL(blob);
-  audioCache.set(file, fileUrl);
-  return fileUrl;
+  try {
+    const response = await fetch(file);
+    const blob = await response.blob();
+    const fileUrl = URL.createObjectURL(blob);
+    return fileUrl;
+  } catch (error) {
+    console.error(error);
+  }
+
+  return 'error';
 }
 
 const loadAllSteps = async () => {
@@ -93,8 +114,13 @@ const loadAllSteps = async () => {
     if (audioCache.has(step.file)) {
       return;
     }
-    const fileUrl = await getAudioFileUrl(step);
-    console.log(`loading ${step.name}`)
+
+    try {
+      audioCache.set(step.file, await getAudioFileUrl(step));
+      console.log(`loading ${step.name}`)
+    } catch (error) {
+      console.error(error);
+    }
   }));
 }
 
@@ -137,6 +163,7 @@ const updateAudioStatus = (event: Event) => {
 
 <style lang="scss">
 @import "@/style/vars.scss";
+
 .player {
   .block {
     display: flex;
@@ -190,8 +217,18 @@ const updateAudioStatus = (event: Event) => {
 
   &__action {
     flex: 0;
-    font-size: 3em;
     padding: 0 0.5em;
+    flex: 1;
+    background-color: yellow;
+    text-align: center;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      padding: $size-7;
+    }
   }
 
   &__audio-element {
