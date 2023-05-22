@@ -33,6 +33,7 @@
         <div class="player__start">
           <button class="player__action" @click="play">
             <img src="/assets/img/icons/32/play-button.png" alt="Play your routine">
+            <span>Start your meditation</span>
           </button>
         </div>
         <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"
@@ -222,7 +223,7 @@ const updateAudioStatus = (event: Event) => {
     background-color: yellow;
     text-align: center;
     color: black;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 

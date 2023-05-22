@@ -25,15 +25,16 @@
       </div>
       <div class="steps-list__add-button block">
         <button class="button is-large add-button" @click="toggleModal">
-          <img src="/assets/img/icons/32/plus.png" alt="Add step to your routine">
+          <img src="/assets/img/icons/32/plus.png" alt="Add steps to your routine">
           Add steps to your routine
         </button>
       </div>
-      <div class="modal section" :class="{ 'is-active': modalIsOpen }">
+      <div class="modal" :class="{ 'is-active': modalIsOpen }">
         <div class="modal-background" @click="toggleModal"></div>
+        <div class="modal-close" @click="toggleModal"></div>
         <div class="modal-content">
+          <h3 class="block is-size-3"> Add steps to your routine </h3>
           <div class="steps-list__list steps-list__list--options block">
-            <h3 class="block is-size-3"> Add steps to your routine </h3>
             <p class="block">
             <ul>
               <li v-for="(step, index) in stepsOptions" :key="index">
@@ -60,7 +61,7 @@
                     <button class="card-header-icon add-button" aria-label="add element" @click="() => addStep(step)">
                       <img src="/assets/img/icons/32/plus.png" alt="Add step to your routine">
                       <span>
-                        Add step to your routine
+                        Add to your routine
                       </span>
                     </button>
                   </div>
@@ -119,6 +120,8 @@ export default defineComponent({
 @import "@/style/vars.scss";
 
 .steps-list {
+  $root: &;
+
   ul {
     list-style: none;
   }
@@ -137,7 +140,8 @@ export default defineComponent({
       text-align: center;
 
       img {
-        padding: $size-6;
+        padding: $size-4;
+        height: 130px;
       }
     }
 
@@ -159,12 +163,13 @@ export default defineComponent({
 
     .card-footer {
       flex: 1;
+
       button {
-      flex-basis: 100%;
-      padding-left: $size-7;
-      padding-right: $size-7;
-      width: 100%;
-    }
+        flex-basis: 100%;
+        padding-left: $size-7;
+        padding-right: $size-7;
+        width: 100%;
+      }
     }
   }
 
@@ -175,7 +180,8 @@ export default defineComponent({
 
   &__add-button button {
     width: 100%;
-    span{
+
+    span {
       margin-right: $size-7;
     }
   }
@@ -190,7 +196,18 @@ export default defineComponent({
     img {
       filter: invert(100%) brightness(2);
       margin-right: 0.5em;
+      height: 20px;
     }
   }
-}
-</style>
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+
+    #{$root}__list {
+      max-height: 100%;
+      overflow: scroll;
+      flex: 1;
+    }
+  }
+}</style>
