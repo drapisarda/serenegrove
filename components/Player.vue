@@ -31,7 +31,7 @@
     <div class="tile is-parent">
       <div class="container">
         <div class="player__start">
-          <button class="player__action" @click="play">
+          <button class="player__action button success is-large" :class="{'inactive': emptyRoutine}" @click="play">
             <img src="/assets/img/icons/32/play-button.png" alt="Play your routine">
             <span>Start your meditation</span>
           </button>
@@ -65,6 +65,10 @@ const audioCache = new Map<string, string>();
 const currentStep = computed((): Step => {
   return steps[currentIndex.value] || undefined;
 });
+
+const emptyRoutine = computed((): Boolean => {
+  return steps.length === 0;
+})
 
 const playNext = async () => {
   currentIndex.value++;
@@ -221,18 +225,15 @@ const updateAudioStatus = (event: Event) => {
   }
 
   &__action {
-    flex: 0;
-    padding: 0 0.5em;
     flex: 1;
-    background-color: yellow;
     text-align: center;
-    color: black;
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
     img {
       padding: $size-7;
+      filter: invert(100%);
     }
   }
 

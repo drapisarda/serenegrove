@@ -24,7 +24,7 @@
         </ul>
       </div>
       <div class="steps-list__add-button block">
-        <button class="button is-large add-button" @click="toggleModal">
+        <button class="button is-large add-button success" @click="toggleModal">
           <img src="/assets/img/icons/32/plus.png" alt="Add steps to your routine">
           Add steps to your routine
         </button>
@@ -58,7 +58,7 @@
                     </div>
                   </div>
                   <div class="card-footer">
-                    <button class="card-header-icon add-button" aria-label="add element" @click="() => addStep(step)">
+                    <button class="card-header-icon add-button button success" aria-label="add element" @click="() => addStep(step)">
                       <img src="/assets/img/icons/32/plus.png" alt="Add step to your routine">
                       <span>
                         Add to your routine
@@ -191,11 +191,10 @@ export default defineComponent({
   }
 
   .add-button {
-    background-color: $success;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 0;
 
     img {
       filter: invert(100%) brightness(2);

@@ -48,3 +48,16 @@ body {
     padding: $size-5 $size-6;
   }
 }
+
+.button {
+  &.success{
+    background-color: $success;
+    color: $clear;
+  }
+
+  &.inactive {
+    opacity: 0.4;
+    pointer-events: none;
+    filter: saturate(20%);
+  }
+}
