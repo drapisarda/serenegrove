@@ -15,6 +15,10 @@ body {
   background-color: $bg;
 }
 
+strong {
+  color: inherit;
+}
+
 .block {
   overflow: hidden;
 }
@@ -59,5 +63,11 @@ body {
     opacity: 0.4;
     pointer-events: none;
     filter: saturate(20%);
+  }
+
+  &.is-large {
+    @media (max-width: $tablet) {
+      font-size: $size-6;
+    }
   }
 }
