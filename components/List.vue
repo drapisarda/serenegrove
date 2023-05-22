@@ -38,7 +38,7 @@
             <p class="block">
             <ul>
               <li v-for="(step, index) in stepsOptions" :key="index">
-                <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }" @click="() => addStep(step)">
+                <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }">
                   <div class="card-image">
                     <picture>
                       <source :srcset="`/assets/img/icons/512/${step.icon}`" media="(min-width: 512px)">
@@ -154,15 +154,19 @@ export default defineComponent({
       display: grid;
       column-gap: $size-4;
       row-gap: $size-4;
-      grid-template-columns: repeat(auto-fit, minmax($tablet/4, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(calc(#{$tablet}/4), 1fr));
 
       @media (min-width: 600px) {
         grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
       }
     }
 
-    .card-footer {
+    .card-content {
+      padding: $size-7;
       flex: 1;
+    }
+
+    .card-footer {
 
       button {
         flex-basis: 100%;

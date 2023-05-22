@@ -171,6 +171,10 @@ const updateAudioStatus = (event: Event) => {
     justify-content: center;
   }
 
+  &__start {
+    text-align: center;
+  }
+
   &__playing {
     position: absolute;
     top: 0;

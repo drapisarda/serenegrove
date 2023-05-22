@@ -2,9 +2,7 @@
   <!-- <header class="block">
     <Navigation />
   </header> -->
-  <Player />
-  <List />
-  <Toast/>
+  <NuxtPage />
 </template>
 
 

@@ -12,7 +12,6 @@ export default defineNuxtConfig({
     storage: 'localStorage'
   },
   css: [
-    'bulma',
   ],
   vite: {
     resolve: {
