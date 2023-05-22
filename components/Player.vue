@@ -1,5 +1,5 @@
 <template>
-  <div class="player section">
+  <div class="player">
     <div class="player__playing"
       :class="{ 'player__playing--visible': !stopStatus, 'player__playing--paused': pauseStatus }">
       <div class="waveContainer section">
@@ -32,8 +32,13 @@
       <div class="container">
         <div class="player__start">
           <button class="player__action button success is-large" :class="{'inactive': emptyRoutine}" @click="play">
-            <img src="/assets/img/icons/32/play-button.png" alt="Play your routine">
-            <span>Start your meditation</span>
+            <template v-if="emptyRoutine">
+              Add one step to start your routine
+            </template>  
+            <template v-else>
+              <img src="/assets/img/icons/32/play-button.png" alt="Play your routine">
+              <span>Start your meditation</span>
+            </template>  
           </button>
         </div>
         <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"

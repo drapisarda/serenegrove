@@ -11,6 +11,21 @@
         <p class="subtitle block">
           Build a routine, enjoy presence.
         </p>
+        <div class="block">
+          <p>
+            The service is still under development
+          </p>
+          <p>
+            Subscribe to be among the firsts to access the app, know about its development 
+            and contribute to the project. Let's make meditation easyer and accessible for everyone. Together.
+          </p>
+        </div>
+        <div class="block">
+          <p>
+            <input class="input block" type="email" placeholder="subscribe to our newsletter">
+            <button class="button success">Subscribe</button>
+          </p>
+        </div>
         <div class="hero-button block">
           <a href="#routine" class="button is-success">
             Create your routine now
