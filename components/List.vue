@@ -41,8 +41,8 @@
                 <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }">
                   <div class="card-image">
                     <picture>
-                      <source :srcset="`/assets/img/icons/512/${step.icon}`" media="(min-width: 512px)">
-                      <img :src="`/assets/img/icons/128/${step.icon}`" :alt="`${step.name} - ${step.description}`">
+                      <source :srcset="`./assets/img/icons/512/${step.icon}`" media="(min-width: 512px)">
+                      <img :src="`./assets/img/icons/128/${step.icon}`" :alt="`${step.name} - ${step.description}`">
                     </picture>
                   </div>
                   <header class="card-header">
@@ -58,7 +58,8 @@
                     </div>
                   </div>
                   <div class="card-footer">
-                    <button class="card-header-icon add-button button success" aria-label="add element" @click="() => addStep(step)">
+                    <button class="card-header-icon add-button button success" aria-label="add element"
+                      @click="() => addStep(step)">
                       <img src="/assets/img/icons/32/plus.png" alt="Add step to your routine">
                       <span>
                         Add to your routine
@@ -77,43 +78,29 @@
 </template>
   
   
-<script lang="ts">
+<script lang="ts" setup>
 import { useRoutineStore, Step } from "@/store/routine";
 import { useGlobalStore, ToastStyles } from "@/store/global";
-import { defineComponent, ref } from "vue";
+import { ref } from "vue";
 
-export default defineComponent({
-  setup() {
-    let modalIsOpen = ref(false);
-    const toggleModal = () => {
-      modalIsOpen.value = !modalIsOpen.value;
-    };
-    const { setToastMessage } = useGlobalStore();
+let modalIsOpen = ref(false);
+const toggleModal = () => {
+  modalIsOpen.value = !modalIsOpen.value;
+};
+const { setToastMessage } = useGlobalStore();
 
-    const { steps, stepsOptions, addStepAtTheBottom, removeStep: removeStepStore, moveStep } =
-      useRoutineStore();
+const { steps, stepsOptions, addStepAtTheBottom, removeStep: removeStepStore, moveStep } =
+  useRoutineStore();
 
-    const addStep = (step: Step) => {
-      setToastMessage(`step ${step.name} added to the routine`, ToastStyles.Success);
-      addStepAtTheBottom(step);
-    };
+const addStep = (step: Step) => {
+  setToastMessage(`step ${step.name} added to the routine`, ToastStyles.Success);
+  addStepAtTheBottom(step);
+};
 
-    const removeStep = (name: string, index: number) => {
-      removeStepStore(index);
-      setToastMessage(`step ${name} removed from the routine`, ToastStyles.Warning);
-    }
-
-    return {
-      steps: steps as Step[],
-      stepsOptions: stepsOptions as Step[],
-      addStep,
-      removeStep,
-      moveStep,
-      toggleModal,
-      modalIsOpen
-    };
-  },
-});
+const removeStep = (name: string, index: number) => {
+  removeStepStore(index);
+  setToastMessage(`step ${name} removed from the routine`, ToastStyles.Warning);
+}
 </script>
 
 <style lang="scss" scoped>
@@ -206,6 +193,8 @@ export default defineComponent({
   .modal-content {
     display: flex;
     flex-direction: column;
+    max-height: initial;
+    margin-top: 80px;
 
     #{$root}__list {
       max-height: 100%;
@@ -213,4 +202,5 @@ export default defineComponent({
       flex: 1;
     }
   }
-}</style>
+}
+</style>
