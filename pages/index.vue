@@ -1,7 +1,9 @@
 <template>
   <section class="hero hero--home">
     <div class="hero-body columns is-8 is-variable">
-      <div class="column hero-bg"></div>
+      <div class="column hero-bg">
+        <Logo />
+      </div>
       <div class="column hero-claim">
         <div class="block">
           <h1 class="title is-spaced is-2">
@@ -48,7 +50,7 @@
   <Toast />
 </template>  
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/style/vars.scss";
 
 .hero {
@@ -61,10 +63,22 @@
   .hero-bg {
     background: url('/assets/img/forest_bg.webp') no-repeat top center $bg;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .subtitle {
     color: $clear-1;
+  }
+
+  .logo {
+    height: 25vh;
+    
+    @media (min-width: $tablet) {
+      height: 300px;
+
+    }
   }
 }
 </style>
