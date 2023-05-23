@@ -53,6 +53,7 @@
 <script lang="ts" setup>
 import { useRoutineStore, Step } from "@/store/routine";
 import { ref, computed, watch } from "vue";
+const baseURL = import.meta.env.BASE_URL;
 
 const { steps } = useRoutineStore();
 watch(steps, (newSteps: Step[]) => {
@@ -107,7 +108,7 @@ const getAudioFileUrl = async (step: Step): Promise<string> => {
   }
 
   try {
-    const response = await fetch(file);
+    const response = await fetch(baseURL+file);
     const blob = await response.blob();
     const fileUrl = URL.createObjectURL(blob);
     return fileUrl;

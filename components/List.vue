@@ -41,8 +41,8 @@
                 <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }">
                   <div class="card-image">
                     <picture>
-                      <source :srcset="`./assets/img/icons/512/${step.icon}`" media="(min-width: 512px)">
-                      <img :src="`./assets/img/icons/128/${step.icon}`" :alt="`${step.name} - ${step.description}`">
+                      <!-- <source :srcset="`/assets/img/icons/512/${step.icon}`" media="(min-width: 512px)"> -->
+                      <img :src="listImages[index]" :alt="`${step.name} - ${step.description}`">
                     </picture>
                   </div>
                   <header class="card-header">
@@ -82,6 +82,7 @@
 import { useRoutineStore, Step } from "@/store/routine";
 import { useGlobalStore, ToastStyles } from "@/store/global";
 import { ref } from "vue";
+const baseURL = import.meta.env.BASE_URL;
 
 let modalIsOpen = ref(false);
 const toggleModal = () => {
@@ -101,6 +102,8 @@ const removeStep = (name: string, index: number) => {
   removeStepStore(index);
   setToastMessage(`step ${name} removed from the routine`, ToastStyles.Warning);
 }
+
+const listImages = stepsOptions.map(step => `${baseURL}/assets/img/icons/128/${step.icon}`);
 </script>
 
 <style lang="scss" scoped>
