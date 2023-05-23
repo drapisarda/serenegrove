@@ -185,7 +185,7 @@ const updateAudioStatus = (event: Event) => {
   }
 
   &__playing {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100svw;
