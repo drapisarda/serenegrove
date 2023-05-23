@@ -32,9 +32,9 @@
       <div class="modal" :class="{ 'is-active': modalIsOpen }">
         <div class="modal-background" @click="toggleModal"></div>
         <div class="modal-close" @click="toggleModal"></div>
-        <div class="modal-content">
+        <div class="modal-content section">
           <h3 class="block is-size-3"> Add steps to your routine </h3>
-          <div class="steps-list__list steps-list__list--options block">
+          <div class="steps-list__list steps-list__list--options">
             <p class="block">
             <ul>
               <li v-for="(step, index) in stepsOptions" :key="index">
@@ -117,6 +117,7 @@ const listImages = stepsOptions.map(step => `${baseURL}/assets/img/icons/128/${s
   }
 
   &__list--options {
+    
     .card {
       text-align: left;
       padding: 0;
