@@ -36,14 +36,14 @@
               <button class="button success">Subscribe</button>
             </p>
           </div>
-          <div class="hero__button block">
-            <a href="#routine" class="button is-success">
-              Create your routine now
-            </a>
-          </div>
         </div>
       </div>
     </div>
+  </section>
+  <section class="section is-centered">
+    <a href="#routine" class="button is-success is-large">
+      Create your routine now
+    </a>
   </section>
   <section id="routine">
     <Player />
@@ -57,6 +57,10 @@
 
 .hero {
   min-height: 100svh;
+
+  @media (min-width: $tablet) {
+    min-height: 25svh;
+  }
 
   .title {
     color: $clear;
