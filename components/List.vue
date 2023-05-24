@@ -1,10 +1,13 @@
 <template>
   <div class="steps-list section">
-    <div class="container">
+    <div class="container is-max-desktop">
       <div class="steps-list__list steps-list__list--routine block">
         <ul>
           <li class="card" :class="{ 'mb-4': index !== steps.length - 1 }" v-for="(step, index) in steps" :key="index">
             <header class="card-header">
+              <div class="card-image">
+                <img :src="listImages.get(step.name).url" :alt="listImages.get(step.name).altDescription">
+              </div>
               <p class="card-header-title">
                 {{ step.name }} - {{ step.duration / 1000 }}s
               </p>
@@ -17,7 +20,7 @@
                 <img src="/assets/img/icons/32/down-chevron.png" alt="Pause routine">
               </button>
               <button class="card-header-icon" aria-label="remove element" @click="() => removeStep(step.name, index)">
-                <img src="/assets/img/icons/32/bin.png" alt="Pause routine">
+                <img src="/assets/img/icons/32/bin.png" alt="Pause routine"> 
               </button>
             </header>
           </li>
@@ -40,10 +43,7 @@
               <li v-for="(step, index) in stepsOptions" :key="index">
                 <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }">
                   <div class="card-image">
-                    <picture>
-                      <!-- <source :srcset="`/assets/img/icons/512/${step.icon}`" media="(min-width: 512px)"> -->
-                      <img :src="listImages[index]" :alt="`${step.name} - ${step.description}`">
-                    </picture>
+                    <img :src="listImages.get(step.name).url" :alt="listImages.get(step.name).altDescription">
                   </div>
                   <header class="card-header">
                     <p class="card-header-title">
@@ -103,7 +103,18 @@ const removeStep = (name: string, index: number) => {
   setToastMessage(`step ${name} removed from the routine`, ToastStyles.Warning);
 }
 
-const listImages = stepsOptions.map(step => `${baseURL}/assets/img/icons/128/${step.icon}`);
+interface imageData {
+  url: string,
+  altDescription: string
+}
+
+// TODO MAKE SVGs
+const listImages = new Map<string, imageData>();
+stepsOptions.forEach(step => listImages.set(step.name, {
+  url: `${baseURL}/assets/img/icons/128/${step.icon}`,
+  altDescription: `${step.name} - ${step.description}`.substring(0, 15),
+})
+);
 </script>
 
 <style lang="scss" scoped>
@@ -116,8 +127,17 @@ const listImages = stepsOptions.map(step => `${baseURL}/assets/img/icons/128/${s
     list-style: none;
   }
 
+  &__list {
+    .card-image {
+      padding: $size-6;
+      img {
+        height: $size-1;
+      }
+    }
+  }
+
   &__list--options {
-    
+
     .card {
       text-align: left;
       padding: 0;
@@ -158,7 +178,6 @@ const listImages = stepsOptions.map(step => `${baseURL}/assets/img/icons/128/${s
     }
 
     .card-footer {
-
       button {
         flex-basis: 100%;
         padding-left: $size-7;
