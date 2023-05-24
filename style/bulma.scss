@@ -3,3 +3,10 @@
 .container {
   max-width: $tablet;
 }
+
+.modal-content {
+  @media (min-width: $tablet) {
+    max-width: $desktop;
+    width: 100%;
+  }
+}

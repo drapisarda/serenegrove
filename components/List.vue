@@ -20,7 +20,7 @@
                 <img src="/assets/img/icons/32/down-chevron.png" alt="Pause routine">
               </button>
               <button class="card-header-icon" aria-label="remove element" @click="() => removeStep(step.name, index)">
-                <img src="/assets/img/icons/32/bin.png" alt="Pause routine"> 
+                <img src="/assets/img/icons/32/bin.png" alt="Pause routine">
               </button>
             </header>
           </li>
@@ -130,6 +130,7 @@ stepsOptions.forEach(step => listImages.set(step.name, {
   &__list {
     .card-image {
       padding: $size-6;
+
       img {
         height: $size-1;
       }
@@ -151,8 +152,11 @@ stepsOptions.forEach(step => listImages.set(step.name, {
       text-align: center;
 
       img {
-        padding: $size-4;
-        height: 130px;
+        height: 100px;
+        
+        @media (min-width: $desktop) {
+          height: 130px;
+        }
       }
     }
 
