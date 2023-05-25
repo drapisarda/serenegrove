@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer footer--custom">
     <div class="content columns">
       <div class="column">
         <h3>
@@ -31,6 +31,7 @@
 
 <style lang="scss">
 @import "@/style/vars.scss";
+// more on bulma.scss
 
 .footer {
   background-color: $dark-2;
@@ -38,6 +39,7 @@
   h3 {
     color: $clear;
   }
+
 
   &__credits {
     text-align: center;
