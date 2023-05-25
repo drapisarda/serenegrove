@@ -123,7 +123,7 @@ const getAudioFileUrl = async (file: string): Promise<string> => {
 const loadAllSteps = async () => {
   const stepsAndIntro = steps.concat([intro])
   return Promise.all(stepsAndIntro.map(async (step: Step, index: number) => {
-    if (audioCache.has(step.file)) {
+    if (audioCache.has(step.file) || stopStatus.value) {
       return;
     }
 
@@ -143,8 +143,15 @@ const play = async () => {
     return;
   };
 
-  await loadAllSteps()
+  await loadAllSteps();
   loadedStatus.value = true;
+
+  // the user stops before finishing the loading
+  if (stopStatus.value) {
+    loadedStatus.value = false;
+    return;
+  }
+
   playAudioFile(intro.file);
 };
 
