@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import LOGO from '@/public/assets/img/icons/calmroots.svg?component';
+import LOGO from '@/public/assets/img/icons/logo.svg?component';
 
 </script>
 

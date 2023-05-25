@@ -3,7 +3,7 @@
     <div class="content columns">
       <div class="column">
         <h3>
-          Calmroots
+          SereneGrove
         </h3>
         <p>
           A non-profit community to promote meditation and self consciousness.
@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="content footer__credits">
-      Calmroots - 2023 - All rights reserved
+      SereneGrove - 2023 - All rights reserved
     </div>
   </footer>
 </template>
