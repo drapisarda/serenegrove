@@ -54,6 +54,12 @@ strong {
 }
 
 .button {
+  img {
+    max-height: 100%;
+    margin-right: 0.5em;
+    height: 32px;
+    width: 32px;
+  }
   &.success{
     background-color: $success;
     color: $clear;

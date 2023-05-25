@@ -9,17 +9,23 @@
       <div class="tile is-parent">
         <div class="container is-max-desktop">
           <div class="player__actions columns is-mobile">
-            <div class="column player__action player__action--play-pause column" v-show="pauseStatus" @click="play">
-              <img src="/assets/img/icons/32/play-button.png" alt="Play your routine">
-              <span>Play</span>
+            <div class="column player__action player__action--play-pause column" v-show="pauseStatus">
+              <button class="button" @click="play">
+                <img src="/assets/img/icons/play-button.svg" alt="Play your routine">
+                <span>Play</span>
+              </button>
             </div>
-            <div class="column player__action player__action--play-pause column" v-show="!pauseStatus" @click="pause">
-              <img src="/assets/img/icons/32/pause-button.png" alt="Pause routine">
-              <span> Pause </span>
+            <div class="column player__action player__action--play-pause column" v-show="!pauseStatus" >
+              <button class="button" @click="pause">
+                <img src="/assets/img/icons/pause-button.svg" alt="Pause routine">
+                <span> Pause </span>
+              </button>
             </div>
             <div class="column player__action player__action--stop column" @click="stop">
-              <img src="/assets/img/icons/32/stop-button.png" alt="Pause routine">
-              <span>Stop</span>
+              <button class="button">
+                <img src="/assets/img/icons/stop-button.svg" alt="Pause routine">
+                <span>Stop</span>
+              </button>
             </div>
           </div>
         </div>
@@ -33,7 +39,7 @@
               Add one step to start your routine
             </template>
             <template v-else>
-              <img src="/assets/img/icons/32/play-button.png" alt="Play your routine">
+              <img src="/assets/img/icons/play-button.svg" alt="Play your routine">
               <span>Start your meditation</span>
             </template>
           </button>
@@ -191,7 +197,7 @@ const updateAudioStatus = (event: Event) => {
   }
 
   &__loaders {
-    height: 25svh;
+    height: 50svh;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -218,7 +224,7 @@ const updateAudioStatus = (event: Event) => {
     top: 0;
     left: 0;
     width: 100svw;
-    height: 100svh;
+    height: 100vh;
     opacity: 0;
     z-index: $playerZIndex;
     transition: opacity 1s .1s;
@@ -265,9 +271,16 @@ const updateAudioStatus = (event: Event) => {
     align-items: center;
     justify-content: center;
 
-    img {
-      padding: $size-7;
-      filter: invert(100%);
+    button {
+      background: transparent;
+      border: none;
+      font-size: $size-2;
+      color: $clear;
+
+      img {
+        height: 42px;
+        width: 42px;
+      }
     }
 
     &--play-pause {
@@ -277,6 +290,10 @@ const updateAudioStatus = (event: Event) => {
         visibility: visible;
       }
     }
+  }
+
+  button img {
+    filter: invert(100%);
   }
 
   &__audio-element {

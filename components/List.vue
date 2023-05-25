@@ -13,14 +13,14 @@
               </p>
               <button @click="() => moveStep(index, -1)" class="card-header-icon"
                 :class="{ 'card-header-icon--inactive': index === 0 }" aria-label="move up">
-                <img src="/assets/img/icons/32/up-chevron.png" alt="Pause routine">
+                <img src="/assets/img/icons/up-chevron.svg" alt="Pause routine">
               </button>
               <button @click="() => moveStep(index, 1)" class="card-header-icon"
                 :class="{ 'card-header-icon--inactive': index === steps.length - 1 }" aria-label="move down">
-                <img src="/assets/img/icons/32/down-chevron.png" alt="Pause routine">
+                <img src="/assets/img/icons/down-chevron.svg" alt="Pause routine">
               </button>
               <button class="card-header-icon" aria-label="remove element" @click="() => removeStep(step.name, index)">
-                <img src="/assets/img/icons/32/bin.png" alt="Pause routine">
+                <img src="/assets/img/icons/bin.svg" alt="Pause routine">
               </button>
             </header>
           </li>
@@ -28,7 +28,7 @@
       </div>
       <div class="steps-list__add-button block">
         <button class="button is-large add-button success" @click="toggleModal">
-          <img src="/assets/img/icons/32/plus.png" alt="Add steps to your routine">
+          <img src="/assets/img/icons/plus.svg" alt="Add steps to your routine">
           Add steps to your routine
         </button>
       </div>
@@ -60,7 +60,7 @@
                   <div class="card-footer">
                     <button class="card-header-icon add-button button success" aria-label="add element"
                       @click="() => addStep(step)">
-                      <img src="/assets/img/icons/32/plus.png" alt="Add step to your routine">
+                      <img src="/assets/img/icons/plus.svg" alt="Add step to your routine">
                       <span>
                         Add to your routine
                       </span>
@@ -134,9 +134,15 @@ stepsOptions.forEach(step => listImages.set(step.name, {
         height: $size-1;
       }
     }
+
+    button img {
+      height: 32px;
+      width: 32px;
+    }
   }
 
   &__list--options {
+    padding-bottom: 6.5em;
 
     .card {
       text-align: left;
@@ -212,7 +218,6 @@ stepsOptions.forEach(step => listImages.set(step.name, {
     img {
       filter: invert(100%) brightness(2);
       margin-right: 0.5em;
-      height: 20px;
     }
   }
 
