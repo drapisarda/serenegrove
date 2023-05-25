@@ -3,6 +3,7 @@
     <Navigation />
   </header> -->
   <NuxtPage />
+  <Footer />
 </template>
 
 
