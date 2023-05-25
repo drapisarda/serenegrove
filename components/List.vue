@@ -111,7 +111,7 @@ interface imageData {
 // TODO MAKE SVGs
 const listImages = new Map<string, imageData>();
 stepsOptions.forEach(step => listImages.set(step.name, {
-  url: `${baseURL}/assets/img/icons/128/${step.icon}`,
+  url: `${baseURL}/assets/img/icons/${step.icon}`,
   altDescription: `${step.name} - ${step.description}`.substring(0, 15),
 })
 );
