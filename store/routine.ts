@@ -17,7 +17,7 @@ export const useRoutineStore = defineStore("mainRoutine", {
     version: useGlobalStore().getVersion() as string,
     intro:  { name: 'Intro', duration: 3000, file: '/assets/audio/intro.mp3', description: 'Welcome to your meditation routine', icon: '' },
     stepsOptions: [
-      { name: 'Breath', duration: 3000, file: '/assets/audio/1.mp3', description: 'Focus your attention on the sensation of the breath, observing its natural flow without trying to control it.', icon: '005-breath.svg' },
+      { name: 'Breath', duration: 3000, file: '/assets/audio/breath.mp3', description: 'Focus your attention on the sensation of the breath, observing its natural flow without trying to control it.', icon: '005-breath.svg' },
       { name: 'Body scan', duration: 5000, file: '/assets/audio/body_scan.mp3', description: 'Systematically bring awareness to different parts of the body, observing physical sensations without judgment.', icon: '003-meditation.svg' },
       { name: 'Sounds around you', duration: 7000, file: '/assets/audio/sounds.mp3', description: 'Direct your attention to the sounds in your environment, observing them as they arise and fade away without analysis.', icon: '004-landscape.svg' },
       { name: 'Mantra', duration: 5000, file: '/assets/audio/mantra.mp3', description: 'Repeat a chosen word or phrase silently in your mind to cultivate inner calm and focused awareness.', icon: '002-shree.svg' },
