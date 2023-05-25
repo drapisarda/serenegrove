@@ -23,11 +23,11 @@
               The service is still under development.
             </p>
             <p>
-              <strong>Subscribe</strong> to be among the firsts to access the app, know about its development
+              <strong>Subscribe</strong> to be among the first to access the app, know about its development
               and contribute to the project.
             </p>
             <p>
-              Let's make meditation easyer and accessible for everyone. Together.
+              Let's make meditation easier and accessible for everyone. Together.
             </p>
           </div>
           <div class="block">
