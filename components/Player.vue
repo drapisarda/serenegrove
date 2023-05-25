@@ -1,16 +1,13 @@
 <template>
-  <div class="player">
+  <div class="player" :class="{ 'player--loaded': loadedStatus }">
     <div class="player__playing"
       :class="{ 'player__playing--visible': !stopStatus, 'player__playing--paused': pauseStatus }">
-      <div class="waveContainer section">
-            <div class="wave wave1"></div>
-            <div class="wave wave2"></div>
-            <div class="wave wave3"></div>
-            <div class="wave wave4"></div>
-            <div class="wave wave5"></div>
-          </div>
+      <div class="player__loaders section container is-max-desktop">
+        <Loader />
+        <Waves />
+      </div>
       <div class="tile is-parent">
-        <div class="container">
+        <div class="container is-max-desktop">
           <div class="player__actions columns is-mobile">
             <div class="column player__action player__action--play-pause column" v-show="pauseStatus" @click="play">
               <img src="/assets/img/icons/32/play-button.png" alt="Play your routine">
@@ -31,14 +28,14 @@
     <div class="tile is-parent">
       <div class="container">
         <div class="player__start is-centered">
-          <button class="player__action button success is-large" :class="{'inactive': emptyRoutine}" @click="play">
+          <button class="player__action button success is-large" :class="{ 'inactive': emptyRoutine }" @click="play">
             <template v-if="emptyRoutine">
               Add one step to start your routine
-            </template>  
+            </template>
             <template v-else>
               <img src="/assets/img/icons/32/play-button.png" alt="Play your routine">
               <span>Start your meditation</span>
-            </template>  
+            </template>
           </button>
         </div>
         <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"
@@ -63,6 +60,7 @@ watch(steps, (newSteps: Step[]) => {
 const currentIndex = ref(-1);
 const pauseStatus = ref(true);
 const stopStatus = ref(true);
+const loadedStatus = ref(false);
 
 const audio = ref<HTMLAudioElement>();
 const audioUrl = ref<string | null>(null);
@@ -81,7 +79,7 @@ const playNext = async () => {
   playAudioFile(currentStep.value.file)
 };
 
-const playAudioFile = async (fileRelativeUrl: string) =>  {
+const playAudioFile = async (fileRelativeUrl: string) => {
   if (!fileRelativeUrl || !audio.value) {
     stop();
     return;
@@ -111,7 +109,7 @@ const getAudioFileUrl = async (file: string): Promise<string> => {
   }
 
   try {
-    const response = await fetch(baseURL+file);
+    const response = await fetch(baseURL + file);
     const blob = await response.blob();
     const fileUrl = URL.createObjectURL(blob);
     return fileUrl;
@@ -145,7 +143,8 @@ const play = async () => {
     return;
   };
 
-  await loadAllSteps();
+  await loadAllSteps()
+  loadedStatus.value = true;
   playAudioFile(intro.file);
 };
 
@@ -177,9 +176,34 @@ const updateAudioStatus = (event: Event) => {
 @import "@/style/vars.scss";
 
 .player {
+  $root: &;
+
   .block {
     display: flex;
     justify-content: center;
+  }
+
+  &__loaders {
+    height: 25svh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .waveContainer {
+      display: none;
+    }
+
+    #{$root}--loaded & {
+      .lds-roller {
+        display: none;
+      }
+
+      .waveContainer {
+        display: flex;
+      }
+    }
   }
 
   &__playing {
@@ -238,102 +262,19 @@ const updateAudioStatus = (event: Event) => {
       padding: $size-7;
       filter: invert(100%);
     }
+
+    &--play-pause {
+      visibility: hidden;
+
+      #{$root}--loaded & {
+        visibility: visible;
+      }
+    }
   }
 
   &__audio-element {
     display: none;
   }
 
-}
-
-// audio animation
-
-@keyframes quiet {
-  25% {
-    transform: scaleY(.6);
-  }
-
-  50% {
-    transform: scaleY(.4);
-  }
-
-  75% {
-    transform: scaleY(.8);
-  }
-}
-
-@keyframes normal {
-  25% {
-    transform: scaleY(1);
-  }
-
-  50% {
-    transform: scaleY(.4);
-  }
-
-  75% {
-    transform: scaleY(.6);
-  }
-}
-
-@keyframes loud {
-  25% {
-    transform: scaleY(1);
-  }
-
-  50% {
-    transform: scaleY(.4);
-  }
-
-  75% {
-    transform: scaleY(1.2);
-  }
-}
-
-@keyframes off {
-  90% {
-    transform: scaleY(0.1);
-  }
-}
-
-.waveContainer {
-  display: flex;
-  margin: auto;
-  justify-content: space-between;
-  height: 50vh;
-  --boxSize: 8px;
-  --gutter: #{$size-5};
-  width: calc((var(--boxSize) + var(--gutter)) * 5);
-}
-
-.wave {
-  transform: scaleY(.4);
-  height: 100%;
-  width: var(--boxSize);
-  background: #12E2DC;
-  animation-duration: 1.2s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  border-radius: 8px;
-}
-
-.wave1 {
-  animation-name: quiet;
-}
-
-.wave2 {
-  animation-name: normal;
-}
-
-.wave3 {
-  animation-name: quiet;
-}
-
-.wave4 {
-  animation-name: loud;
-}
-
-.wave5 {
-  animation-name: quiet;
 }
 </style>
