@@ -82,7 +82,12 @@ const emptyRoutine = computed((): Boolean => {
 
 const playNext = async () => {
   currentIndex.value++;
-  playAudioFile(currentStep.value.file)
+  if (!currentStep) {
+    stop();
+    return;
+  }
+
+  setTimeout(() => playAudioFile(currentStep.value.file), (currentIndex.value === 1) ? 0 : currentStep.value.pauseBefore || 10000);
 };
 
 const playAudioFile = async (fileRelativeUrl: string) => {
@@ -143,11 +148,14 @@ const loadAllSteps = async () => {
 
 const play = async () => {
   stopStatus.value = false;
+  pauseStatus.value = false;
   // pause/play behaviour
   if (currentStep.value) {
     audio.value?.play();
     return;
   };
+
+  currentIndex.value = 0;
 
   await loadAllSteps();
   loadedStatus.value = true;
@@ -163,12 +171,14 @@ const play = async () => {
 
 const pause = () => {
   if (!audio.value) return;
+  pauseStatus.value = true;
 
   audio.value.pause();
 }
 
 const stop = () => {
   stopStatus.value = true;
+  pauseStatus.value = true;
   if (!audio.value) return;
 
   audio.value.pause();
@@ -180,7 +190,7 @@ const stop = () => {
 };
 
 const updateAudioStatus = (event: Event) => {
-  pauseStatus.value = audio.value?.paused || false;
+  //pauseStatus.value = audio.value?.paused || false;
 }
 
 </script>

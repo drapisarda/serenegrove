@@ -8,6 +8,7 @@ export interface Step {
   file: string,
   description: string,
   icon: string,
+  pauseBefore: number,
 }
 
 export const useRoutineStore = defineStore("mainRoutine", {
