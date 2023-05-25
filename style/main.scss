@@ -33,9 +33,19 @@ strong {
   &.is-active {
     opacity: 1;
     pointer-events: all;
+
+    .modal-close {
+      pointer-events: all;
+    }
   }
 
   .modal-close {
+    pointer-events: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+    
     &::before{
       width: 100%;
     }
@@ -43,7 +53,6 @@ strong {
     &::after {
       height: 100%;
     }
-
   }
 }
 
