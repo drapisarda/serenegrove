@@ -15,6 +15,7 @@ export const useRoutineStore = defineStore("mainRoutine", {
     steps: [] as Step[],
     lastEdit: 0 as number,
     version: useGlobalStore().getVersion() as string,
+    intro:  { name: 'Intro', duration: 3000, file: '/assets/audio/intro.mp3', description: 'Welcome to your meditation routine', icon: '' },
     stepsOptions: [
       { name: 'Breath', duration: 3000, file: '/assets/audio/1.mp3', description: 'Focus your attention on the sensation of the breath, observing its natural flow without trying to control it.', icon: '005-breath.svg' },
       { name: 'Body scan', duration: 5000, file: '/assets/audio/body_scan.mp3', description: 'Systematically bring awareness to different parts of the body, observing physical sensations without judgment.', icon: '003-meditation.svg' },

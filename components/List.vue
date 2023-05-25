@@ -108,7 +108,6 @@ interface imageData {
   altDescription: string
 }
 
-// TODO MAKE SVGs
 const listImages = new Map<string, imageData>();
 stepsOptions.forEach(step => listImages.set(step.name, {
   url: `${baseURL}/assets/img/icons/${step.icon}`,

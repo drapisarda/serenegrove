@@ -55,7 +55,7 @@ import { useRoutineStore, Step } from "@/store/routine";
 import { ref, computed, watch } from "vue";
 const baseURL = import.meta.env.BASE_URL;
 
-const { steps } = useRoutineStore();
+const { steps, intro } = useRoutineStore();
 watch(steps, (newSteps: Step[]) => {
   stop();
 });
@@ -78,13 +78,17 @@ const emptyRoutine = computed((): Boolean => {
 
 const playNext = async () => {
   currentIndex.value++;
-  if (!currentStep.value || !audio.value) {
+  playAudioFile(currentStep.value.file)
+};
+
+const playAudioFile = async (fileRelativeUrl: string) =>  {
+  if (!fileRelativeUrl || !audio.value) {
     stop();
     return;
   }
 
   try {
-    const fileUrl = await getAudioFileUrl(currentStep.value);
+    const fileUrl = await getAudioFileUrl(fileRelativeUrl);
     audio.value.src = fileUrl;
     audio.value.play();
   } catch (error) {
@@ -93,6 +97,7 @@ const playNext = async () => {
   }
 };
 
+// DEBUG purposes
 const audioCacheClean = () => {
   audioCache.forEach((blob: string, fileName: string) => {
     URL.revokeObjectURL(blob);
@@ -100,9 +105,7 @@ const audioCacheClean = () => {
   })
 }
 
-const getAudioFileUrl = async (step: Step): Promise<string> => {
-  const { file } = step;
-
+const getAudioFileUrl = async (file: string): Promise<string> => {
   if (audioCache.has(file)) {
     return audioCache.get(file)!;
   }
@@ -120,13 +123,14 @@ const getAudioFileUrl = async (step: Step): Promise<string> => {
 }
 
 const loadAllSteps = async () => {
-  return Promise.all(steps.map(async (step: Step, index: number) => {
+  const stepsAndIntro = steps.concat([intro])
+  return Promise.all(stepsAndIntro.map(async (step: Step, index: number) => {
     if (audioCache.has(step.file)) {
       return;
     }
 
     try {
-      audioCache.set(step.file, await getAudioFileUrl(step));
+      audioCache.set(step.file, await getAudioFileUrl(step.file));
     } catch (error) {
       console.error(error);
     }
@@ -142,8 +146,7 @@ const play = async () => {
   };
 
   await loadAllSteps();
-  console.log('steps loaded')
-  playNext();
+  playAudioFile(intro.file);
 };
 
 const pause = () => {
