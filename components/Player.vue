@@ -120,7 +120,6 @@ const getAudioFileUrl = async (step: Step): Promise<string> => {
 }
 
 const loadAllSteps = async () => {
-  console.log('loading steps')
   return Promise.all(steps.map(async (step: Step, index: number) => {
     if (audioCache.has(step.file)) {
       return;
@@ -128,7 +127,6 @@ const loadAllSteps = async () => {
 
     try {
       audioCache.set(step.file, await getAudioFileUrl(step));
-      console.log(`loading ${step.name}`)
     } catch (error) {
       console.error(error);
     }
