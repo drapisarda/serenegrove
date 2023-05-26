@@ -36,6 +36,6 @@ export default defineNuxtConfig({
         { name: 'robots', content: 'no-index' }
       ]
     },
-    baseURL: '/calmroots/',
+    baseURL: '/serenegrove/',
   },
 })
