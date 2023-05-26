@@ -6,7 +6,7 @@
           <li class="card" :class="{ 'mb-4': index !== steps.length - 1 }" v-for="(step, index) in steps" :key="index">
             <header class="card-header">
               <div class="card-image">
-                <img :src="listImages.get(step.name).url" :alt="listImages.get(step.name).altDescription">
+                <img v-if="getStepIconData(step.name)" :src="getStepIconData(step.name).url" :alt="getStepIconData(step.name).altDescription">
               </div>
               <p class="card-header-title">
                 {{ step.name }} - {{ step.duration / 1000 }}s
@@ -43,7 +43,7 @@
               <li v-for="(step, index) in stepsOptions" :key="index">
                 <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }">
                   <div class="card-image">
-                    <img :src="listImages.get(step.name).url" :alt="listImages.get(step.name).altDescription">
+                    <img v-if="getStepIconData(step.name)" :src="getStepIconData(step.name).url" :alt="getStepIconData(step.name).altDescription">
                   </div>
                   <header class="card-header">
                     <p class="card-header-title">
@@ -79,18 +79,16 @@
   
   
 <script lang="ts" setup>
-import { useRoutineStore, Step } from "@/store/routine";
+import { useRoutineStore, Step, StepIconData } from "@/store/routine";
 import { useGlobalStore, ToastStyles } from "@/store/global";
 import { ref } from "vue";
-const baseURL = import.meta.env.BASE_URL;
-
 let modalIsOpen = ref(false);
 const toggleModal = () => {
   modalIsOpen.value = !modalIsOpen.value;
 };
 const { setToastMessage } = useGlobalStore();
 
-const { steps, stepsOptions, addStepAtTheBottom, removeStep: removeStepStore, moveStep } =
+const { steps, stepsOptions, addStepAtTheBottom, removeStep: removeStepStore, moveStep, stepIconsDataMap } =
   useRoutineStore();
 
 const addStep = (step: Step) => {
@@ -103,17 +101,7 @@ const removeStep = (name: string, index: number) => {
   setToastMessage(`step ${name} removed from the routine`, ToastStyles.Warning);
 }
 
-interface imageData {
-  url: string,
-  altDescription: string
-}
-
-const listImages = new Map<string, imageData>();
-stepsOptions.forEach(step => listImages.set(step.name, {
-  url: `${baseURL}assets/img/icons/${step.icon}`,
-  altDescription: `${step.name} - ${step.description}`.substring(0, 15),
-})
-);
+const getStepIconData = (stepName: string) => stepIconsDataMap.get(stepName);
 </script>
 
 <style lang="scss" scoped>

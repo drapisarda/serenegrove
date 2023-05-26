@@ -30,6 +30,7 @@
           </div>
         </div>
       </div>
+      <RoutineCarousel :currentStepIndex="currentIndex"/>
     </div>
     <div class="tile is-parent">
       <div class="container">
@@ -49,6 +50,7 @@
         </audio>
       </div>
     </div>
+    
   </div>
 </template>
 
@@ -58,7 +60,7 @@ import { useRoutineStore, Step } from "@/store/routine";
 import { ref, computed, watch } from "vue";
 const baseURL = import.meta.env.BASE_URL;
 
-const { steps, intro } = useRoutineStore();
+const { playerSteps, steps } = useRoutineStore();
 watch(steps, (newSteps: Step[]) => {
   stop();
 });
@@ -73,7 +75,7 @@ const audioUrl = ref<string | null>(null);
 const audioCache = new Map<string, string>();
 
 const currentStep = computed((): Step => {
-  return steps[currentIndex.value] || undefined;
+  return playerSteps[currentIndex.value] || undefined;
 });
 
 const emptyRoutine = computed((): Boolean => {
@@ -132,8 +134,7 @@ const getAudioFileUrl = async (file: string): Promise<string> => {
 }
 
 const loadAllSteps = async () => {
-  const stepsAndIntro = steps.concat([intro])
-  return Promise.all(stepsAndIntro.map(async (step: Step, index: number) => {
+  return Promise.all(playerSteps.map(async (step: Step, index: number) => {
     if (audioCache.has(step.file) || stopStatus.value) {
       return;
     }
@@ -166,7 +167,7 @@ const play = async () => {
     return;
   }
 
-  playAudioFile(intro.file);
+  playAudioFile(playerSteps[0].file);
 };
 
 const pause = () => {
