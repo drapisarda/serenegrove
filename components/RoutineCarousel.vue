@@ -1,6 +1,6 @@
 <template>
   <div class="routine-carousel">
-    <ul class="columns">
+    <ul class="columns is-mobile">
       <li class="column" v-for="step in carouselSteps">
         <img v-if="step" :src="step.url" :alt="step.altDescription">
       </li>

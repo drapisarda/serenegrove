@@ -126,8 +126,17 @@ const getStepIconData = (stepName: string) => stepIconsDataMap.get(stepName);
     }
 
     button img {
-      height: 32px;
-      width: 32px;
+      height: 24px;
+      width: 24px;
+      
+      @media (min-width: $tablet) {
+        height: 32px;
+        width: 32px;
+      }
+    }
+
+    .card-header-icon {
+      flex-shrink: 0;
     }
   }
 
