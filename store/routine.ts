@@ -19,7 +19,7 @@ export interface StepIconData {
 
 
 const debugAudio = '/assets/audio/1.mp3';
-const debug = true;
+const debug = false;
 
 export const useRoutineStore = defineStore("mainRoutine", {
   state: () => ({
