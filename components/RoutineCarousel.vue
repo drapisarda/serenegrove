@@ -41,7 +41,6 @@ const carouselSteps = computed((): (StepIconData | undefined)[] => [
 <style lang="scss">
 .routine-carousel {
   .columns {
-    max-width: 450px;
     margin: auto;
   }
 
@@ -51,10 +50,12 @@ const carouselSteps = computed((): (StepIconData | undefined)[] => [
     align-items: baseline;
 
     img {
-      width: 150px;
+      width: 100%;
+      max-height: 100%;
+      max-width: 100%;
       opacity: 0.5;
       filter: invert(100%);
-      transform: scale(0.7);
+      transform: scale(0.5);
     }
 
     &:nth-child(2) {
@@ -62,7 +63,11 @@ const carouselSteps = computed((): (StepIconData | undefined)[] => [
         opacity: 1;
         transform: scale(1);
         animation: pulse 3s linear infinite;
+        .player__playing--paused & {
+          animation: none;
+        }
       }
+
 
       @keyframes pulse {
         0% {

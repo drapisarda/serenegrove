@@ -4,7 +4,7 @@
       :class="{ 'player__playing--visible': !stopStatus, 'player__playing--paused': pauseStatus }">
       <div class="player__loaders section container is-max-desktop">
         <Loader />
-        <Waves />
+        <RoutineCarousel :currentStepIndex="currentIndex"/>
       </div>
       <div class="tile is-parent">
         <div class="container is-max-desktop">
@@ -30,7 +30,6 @@
           </div>
         </div>
       </div>
-      <RoutineCarousel :currentStepIndex="currentIndex"/>
     </div>
     <div class="tile is-parent">
       <div class="container">
@@ -78,18 +77,27 @@ const currentStep = computed((): Step => {
   return playerSteps[currentIndex.value] || undefined;
 });
 
+const pauseBeforePlayStep = computed((): number => {
+  const previousStep = playerSteps[currentIndex.value - 1];
+  if (!previousStep) return 0;
+
+  return previousStep.pauseAfter !== undefined ? previousStep.pauseAfter : 10000;
+});
+
+
 const emptyRoutine = computed((): Boolean => {
   return steps.length === 0;
 })
 
 const playNext = async () => {
   currentIndex.value++;
-  if (!currentStep) {
+  if (!currentStep.value) {
     stop();
     return;
   }
 
-  setTimeout(() => playAudioFile(currentStep.value.file), (currentIndex.value === 1) ? 0 : currentStep.value.pauseBefore || 10000);
+  // TODO pause after
+  setTimeout(() => playAudioFile(currentStep.value.file), pauseBeforePlayStep.value);
 };
 
 const playAudioFile = async (fileRelativeUrl: string) => {

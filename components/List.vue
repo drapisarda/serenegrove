@@ -9,7 +9,8 @@
                 <img v-if="getStepIconData(step.name)" :src="getStepIconData(step.name).url" :alt="getStepIconData(step.name).altDescription">
               </div>
               <p class="card-header-title">
-                {{ step.name }} - {{ step.duration / 1000 }}s
+                {{ step.name }}
+                 <!-- - {{ step.duration / 1000 }}s -->
               </p>
               <button @click="() => moveStep(index, -1)" class="card-header-icon"
                 :class="{ 'card-header-icon--inactive': index === 0 }" aria-label="move up">
@@ -47,7 +48,8 @@
                   </div>
                   <header class="card-header">
                     <p class="card-header-title">
-                      {{ step.name }} - {{ step.duration / 1000 }}s
+                      {{ step.name }} 
+                      <!-- - {{ step.duration / 1000 }}s -->
                     </p>
                   </header>
                   <div class="card-content">
