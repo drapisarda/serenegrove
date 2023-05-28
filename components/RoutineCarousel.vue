@@ -10,7 +10,7 @@
 
 <script lang="ts" setup>
 import { useRoutineStore, Step, StepIconData } from "@/store/routine";
-const { playerSteps, intro, stepIconsDataMap } = useRoutineStore();
+const { playerSteps, stepIconsDataMap } = useRoutineStore();
 const props = defineProps(['currentStepIndex']);
 
 

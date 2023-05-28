@@ -59,6 +59,9 @@ import { useRoutineStore, Step } from "@/store/routine";
 import { ref, computed, watch } from "vue";
 const baseURL = import.meta.env.BASE_URL;
 
+const debugAudio = '/assets/audio/1.mp3';
+const debug = true;
+
 const { playerSteps, steps } = useRoutineStore();
 watch(steps, (newSteps: Step[]) => {
   stop();
@@ -142,12 +145,15 @@ const getAudioFileUrl = async (file: string): Promise<string> => {
 }
 
 const loadAllSteps = async () => {
-  return Promise.all(playerSteps.map(async (step: Step, index: number) => {
+  const stepsToLoad = debug ? [{file: debugAudio} as Step] :  playerSteps;
+
+  return Promise.all(stepsToLoad.map(async (step: Step, index: number) => {
     if (audioCache.has(step.file) || stopStatus.value) {
       return;
     }
 
     try {
+      if (audioCache.get(step.file)) return;
       audioCache.set(step.file, await getAudioFileUrl(step.file));
     } catch (error) {
       console.error(error);

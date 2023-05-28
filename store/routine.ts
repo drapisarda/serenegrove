@@ -9,6 +9,7 @@ export interface Step {
   description: string,
   icon: string,
   pauseAfter: number,
+  iconData: StepIconData,
 }
 
 export interface StepIconData {
@@ -16,12 +17,17 @@ export interface StepIconData {
   altDescription: string
 }
 
+
+const debugAudio = '/assets/audio/1.mp3';
+const debug = true;
+
 export const useRoutineStore = defineStore("mainRoutine", {
   state: () => ({
     steps: [] as Step[],
     lastEdit: 0 as number,
     version: useGlobalStore().getVersion() as string,
     intro:  { name: 'Intro', duration: 3000, file: '/assets/audio/intro.mp3', description: 'Welcome to your meditation routine', icon: 'logo_only.svg', pauseAfter: 0 } as Step,
+    outro:  { name: 'Outro', duration: 3000, file: '/assets/audio/outro.mp3', description: 'Thank you for meditate with SereneGrove', icon: 'logo_only.svg', pauseAfter: 0 } as Step,
     stepsOptions: [
       { name: 'Breath', duration: 3000, file: '/assets/audio/breath.mp3', description: 'Focus your attention on the sensation of the breath, observing its natural flow without trying to control it.', icon: '005-breath.svg' },
       { name: 'Body scan', duration: 5000, file: '/assets/audio/body_scan.mp3', description: 'Systematically bring awareness to different parts of the body, observing physical sensations without judgment.', icon: '003-meditation.svg' },
@@ -59,7 +65,7 @@ export const useRoutineStore = defineStore("mainRoutine", {
     stepIconsDataMap(state): Map<string, StepIconData> {
       const baseURL = import.meta.env.BASE_URL;
       const stepIconData = new Map<string, StepIconData>();
-      [state.intro].concat(state.stepsOptions).forEach((step, index) => stepIconData.set(step.name, {
+      [state.intro,state.outro].concat(state.stepsOptions).forEach((step, index) => stepIconData.set(step.name, {
         url: `${baseURL}assets/img/icons/${step.icon}`,
         altDescription: `${step.name} - ${step.description}`.substring(0, 20),
       }));
@@ -67,7 +73,15 @@ export const useRoutineStore = defineStore("mainRoutine", {
       return stepIconData;
     },
     playerSteps(state): Step[] {
-      return [state.intro].concat(state.steps);
+      const fullRoutire  = [state.intro].concat(state.steps).concat([state.outro]);
+
+      if (debug) return fullRoutire.map(step => {
+        step.file = debugAudio;
+        return step
+      })
+
+      return fullRoutire;
+
     }
   },
   persist: {
