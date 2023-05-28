@@ -2,7 +2,7 @@
   <div class="player" :class="{ 'player--loaded': loadedStatus }">
     <div class="player__playing"
       :class="{ 'player__playing--visible': !stopStatus, 'player__playing--paused': pauseStatus }">
-      <div class="player__loaders section container is-max-desktop">
+      <div class="player__carousel section container is-max-desktop">
         <Loader />
         <RoutineCarousel :currentStepIndex="currentIndex"/>
       </div>
@@ -210,7 +210,7 @@ const updateAudioStatus = (event: Event) => {
     justify-content: center;
   }
 
-  &__loaders {
+  &__carousel {
     height: 50svh;
     overflow: hidden;
     display: flex;
@@ -225,10 +225,6 @@ const updateAudioStatus = (event: Event) => {
     #{$root}--loaded & {
       .lds-roller {
         display: none;
-      }
-
-      .waveContainer {
-        display: flex;
       }
     }
   }
@@ -276,6 +272,11 @@ const updateAudioStatus = (event: Event) => {
 
   &__actions {
     justify-content: center;
+    display: none;
+
+    #{$root}--loaded & {
+      display: flex;
+    }
   }
 
   &__action {
