@@ -119,10 +119,15 @@ const getStepIconData = (stepName: string) => stepIconsDataMap.get(stepName);
   &__list {
     .card-image {
       padding: $size-6;
+      flex-shrink: 0;
 
       img {
         height: $size-1;
       }
+    }
+
+    .card-header-title {
+      font-size: clamp(0.7em, 5vw, 1em); 
     }
 
     button img {
@@ -165,8 +170,8 @@ const getStepIconData = (stepName: string) => stepIconsDataMap.get(stepName);
     }
 
     .card-header-icon {
-      flex: 0;
       justify-content: space-around;
+      flex: 0;
     }
 
     ul {
