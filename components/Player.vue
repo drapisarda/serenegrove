@@ -59,9 +59,6 @@ import { useRoutineStore, Step } from "@/store/routine";
 import { ref, computed, watch } from "vue";
 const baseURL = import.meta.env.BASE_URL;
 
-const debugAudio = '/assets/audio/1.mp3';
-const debug = true;
-
 const { playerSteps, steps } = useRoutineStore();
 watch(steps, (newSteps: Step[]) => {
   stop();
@@ -80,27 +77,21 @@ const currentStep = computed((): Step => {
   return playerSteps[currentIndex.value] || undefined;
 });
 
-const pauseBeforePlayStep = computed((): number => {
-  const previousStep = playerSteps[currentIndex.value - 1];
-  if (!previousStep) return 0;
-
-  return previousStep.pauseAfter !== undefined ? previousStep.pauseAfter : 10000;
-});
-
-
 const emptyRoutine = computed((): Boolean => {
   return steps.length === 0;
 })
 
 const playNext = async () => {
-  currentIndex.value++;
-  if (!currentStep.value) {
-    stop();
-    return;
-  }
-
-  // TODO pause after
-  setTimeout(() => playAudioFile(currentStep.value.file), pauseBeforePlayStep.value);
+  setTimeout(() => {
+    currentIndex.value++
+    if (!currentStep.value) {
+      stop();
+      return;
+    }
+  
+    // TODO pause after
+    playAudioFile(currentStep.value.file);
+  }, currentStep.value.pauseAfter !== undefined ? currentStep.value.pauseAfter : 10000);
 };
 
 const playAudioFile = async (fileRelativeUrl: string) => {
@@ -145,9 +136,7 @@ const getAudioFileUrl = async (file: string): Promise<string> => {
 }
 
 const loadAllSteps = async () => {
-  const stepsToLoad = debug ? [{file: debugAudio} as Step] :  playerSteps;
-
-  return Promise.all(stepsToLoad.map(async (step: Step, index: number) => {
+  return Promise.all(playerSteps.map(async (step: Step, index: number) => {
     if (audioCache.has(step.file) || stopStatus.value) {
       return;
     }
