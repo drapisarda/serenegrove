@@ -18,27 +18,29 @@
           <p class="subtitle">
             Build a routine, enjoy presence.
           </p>
-          <div class="block">
-            <p>
-              The service is still under development.
-            </p>
-            <p>
-              <strong>Subscribe</strong> to be among the first to access the app, know about its development
-              and contribute to the project.
-            </p>
-            <p>
-              Let's make meditation easier and accessible for everyone. Together.
-            </p>
-            <Newsletter />
-          </div>
-          <div class="block">
-          </div>
         </div>
       </div>
     </div>
   </section>
+  <section>
+    <div class="container section">
+      <div class="block">
+        <p>
+          The service is still under development.
+        </p>
+        <p>
+          <strong>Subscribe</strong> to be among the first to access the app, know about its development
+          and contribute to the project.
+        </p>
+        <p>
+          Let's make meditation easier and accessible for everyone. Together.
+        </p>
+      </div>
+      <Newsletter />
+    </div>
+  </section>
   <section class="section is-centered">
-    <a href="#routine" class="button is-success is-large">
+    <a href="#routine" class="button is-primary is-large">
       Create your routine now
     </a>
   </section>
@@ -53,7 +55,7 @@
 @import "@/style/vars.scss";
 
 .hero {
-  min-height: 100svh;
+  min-height: 80svh;
 
   @media (min-width: $tablet) {
     min-height: 25svh;

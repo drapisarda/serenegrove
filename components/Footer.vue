@@ -54,8 +54,6 @@
     }
 
     a {
-      color: $success;
-
       &:hover {
         color: $clear-1;
       }

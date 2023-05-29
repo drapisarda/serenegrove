@@ -1,78 +1,75 @@
 <template>
-  <div class="steps-list section">
-    <div class="container is-max-desktop">
-      <div class="steps-list__list steps-list__list--routine block">
-        <ul>
-          <li class="card" :class="{ 'mb-4': index !== steps.length - 1 }" v-for="(step, index) in steps" :key="index">
-            <header class="card-header">
-              <div class="card-image">
-                <img :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`">
-              </div>
-              <p class="card-header-title">
-                {{ step.name }}
-                 <!-- - {{ step.duration / 1000 }}s -->
-              </p>
-              <button @click="() => moveStep(index, -1)" class="card-header-icon"
-                :class="{ 'card-header-icon--inactive': index === 0 }" aria-label="move up">
-                <img src="/assets/img/icons/up-chevron.svg" alt="Pause routine">
-              </button>
-              <button @click="() => moveStep(index, 1)" class="card-header-icon"
-                :class="{ 'card-header-icon--inactive': index === steps.length - 1 }" aria-label="move down">
-                <img src="/assets/img/icons/down-chevron.svg" alt="Pause routine">
-              </button>
-              <button class="card-header-icon" aria-label="remove element" @click="() => removeStep(step.name, index)">
-                <img src="/assets/img/icons/bin.svg" alt="Pause routine">
-              </button>
-            </header>
-          </li>
-        </ul>
-      </div>
-      <div class="steps-list__add-button block">
-        <button class="button is-large add-button success" @click="toggleModal">
-          <img src="/assets/img/icons/plus.svg" alt="Add steps to your routine">
-          Add steps to your routine
-        </button>
-      </div>
-      <div class="modal" :class="{ 'is-active': modalIsOpen }">
-        <div class="modal-background" @click="toggleModal"></div>
-        <div class="modal-close" @click="toggleModal"></div>
-        <div class="modal-content section">
-          <h3 class="block is-size-3"> Add steps to your routine </h3>
-          <div class="steps-list__list steps-list__list--options">
-            <p class="block">
-            <ul>
-              <li v-for="(step, index) in stepsOptions" :key="index">
-                <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }">
-                  <div class="card-image">
-                    <img :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`">
-                  </div>
-                  <header class="card-header">
-                    <p class="card-header-title">
-                      {{ step.name }} 
-                      <!-- - {{ step.duration / 1000 }}s -->
+  <div class="steps-list container section">
+    <div class="steps-list__list steps-list__list--routine block">
+      <ul>
+        <li class="card" :class="{ 'mb-4': index !== steps.length - 1 }" v-for="(step, index) in steps" :key="index">
+          <header class="card-header">
+            <div class="card-image">
+              <img :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`">
+            </div>
+            <p class="card-header-title">
+              {{ step.name }}
+            </p>
+            <button @click="() => moveStep(index, -1)" class="card-header-icon"
+              :class="{ 'card-header-icon--inactive': index === 0 }" aria-label="move up">
+              <img src="/assets/img/icons/up-chevron.svg" alt="Pause routine">
+            </button>
+            <button @click="() => moveStep(index, 1)" class="card-header-icon"
+              :class="{ 'card-header-icon--inactive': index === steps.length - 1 }" aria-label="move down">
+              <img src="/assets/img/icons/down-chevron.svg" alt="Pause routine">
+            </button>
+            <button class="card-header-icon" aria-label="remove element" @click="() => removeStep(step.name, index)">
+              <img src="/assets/img/icons/bin.svg" alt="Pause routine">
+            </button>
+          </header>
+        </li>
+      </ul>
+    </div>
+    <div class="steps-list__add-button block">
+      <button class="button is-large add-button is-primary" @click="toggleModal">
+        <img src="/assets/img/icons/plus.svg" alt="Add steps to your routine">
+        Add steps to your routine
+      </button>
+    </div>
+    <div class="modal" :class="{ 'is-active': modalIsOpen }">
+      <div class="modal-background" @click="toggleModal"></div>
+      <div class="modal-close" @click="toggleModal"></div>
+      <div class="modal-content section">
+        <h3 class="block is-size-3"> Add steps to your routine </h3>
+        <div class="steps-list__list steps-list__list--options">
+          <p class="block">
+          <ul>
+            <li v-for="(step, index) in stepsOptions" :key="index">
+              <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }">
+                <div class="card-image">
+                  <img :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`">
+                </div>
+                <header class="card-header">
+                  <p class="card-header-title">
+                    {{ step.name }}
+                    <!-- - {{ step.duration / 1000 }}s -->
+                  </p>
+                </header>
+                <div class="card-content">
+                  <div class="content">
+                    <p>
+                      {{ step.description }}
                     </p>
-                  </header>
-                  <div class="card-content">
-                    <div class="content">
-                      <p>
-                        {{ step.description }}
-                      </p>
-                    </div>
-                  </div>
-                  <div class="card-footer">
-                    <button class="card-header-icon add-button button success" aria-label="add element"
-                      @click="() => addStep(step)">
-                      <img src="/assets/img/icons/plus.svg" alt="Add step to your routine">
-                      <span>
-                        Add to your routine
-                      </span>
-                    </button>
                   </div>
                 </div>
-              </li>
-            </ul>
-            </p>
-          </div>
+                <div class="card-footer">
+                  <button class="card-header-icon add-button button is-primary" aria-label="add element"
+                    @click="() => addStep(step)">
+                    <img src="/assets/img/icons/plus.svg" alt="Add step to your routine">
+                    <span>
+                      Add to your routine
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+          </p>
         </div>
       </div>
     </div>
@@ -125,13 +122,13 @@ const removeStep = (name: string, index: number) => {
     }
 
     .card-header-title {
-      font-size: clamp(0.7em, 5vw, 1em); 
+      font-size: clamp(0.7em, 5vw, 1em);
     }
 
     button img {
       height: 24px;
       width: 24px;
-      
+
       @media (min-width: $tablet) {
         height: 32px;
         width: 32px;
@@ -160,7 +157,7 @@ const removeStep = (name: string, index: number) => {
 
       img {
         height: 100px;
-        
+
         @media (min-width: $desktop) {
           height: 130px;
         }
@@ -204,7 +201,7 @@ const removeStep = (name: string, index: number) => {
   }
 
   &__add-button button {
-    width: 100%;
+    margin: auto;
 
     span {
       margin-right: $size-7;
@@ -216,6 +213,10 @@ const removeStep = (name: string, index: number) => {
     align-items: center;
     justify-content: center;
     border-radius: 0;
+
+    &:hover img {
+      filter: invert(0) brightness(0);
+    }
 
     img {
       filter: invert(100%) brightness(2);

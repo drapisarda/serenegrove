@@ -5,13 +5,10 @@
       method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
       novalidate>
       <div id="mc_embed_signup_scroll">
-        <h2>Subscribe</h2>
-        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-        <div class="mc-field-group">
-          <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
-          </label>
-          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
-          <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+        <div class="mc-field-group field">
+          <label class="label" for="mce-EMAIL">Email Address<span class="asterisk">*</span></label><br>
+          <input class="input required email" type="email" value="" name="EMAIL"  id="mce-EMAIL" required>
+          <div class="helper_text" id="mce-EMAIL-HELPERTEXT" ></div>
         </div>
         <div id="mce-responses" class="clear foot">
           <div class="response" id="mce-error-response" style="display:none"></div>
@@ -22,10 +19,9 @@
             name="b_f668e4d9b5cfc362bf643a0f5_a2510cc4f9" tabindex="-1" value=""></div>
         <div class="optionalParent">
           <div class="clear foot">
-            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button is-primary">
             <p class="brandingLogo"><a href="http://eepurl.com/isevcA"
-                title="Mailchimp - email marketing made easy and fun"><img
-                  src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+                title="Mailchimp - email marketing made easy and fun">Made with Mailchimp</a></p>
           </div>
         </div>
       </div>
@@ -46,3 +42,12 @@ useHead({
   ]
 })
 </script>
+
+<style lang="scss">
+.mc-field-group {
+  flex-wrap: wrap;
+  .input {
+    flex: 1;
+  }
+}
+</style>

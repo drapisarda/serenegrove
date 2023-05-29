@@ -23,7 +23,7 @@ watch(toastMessage, (newMessage: ToastMessage) => displayMessage(newMessage));
 const displayMessage = (newMessage: ToastMessage, duration = 3000) => {
   isVisible.value = true;
   message.value = newMessage.message;
-  messageClass.value = `is-${newMessage.style ? newMessage.style : 'success'}`;
+  messageClass.value = `is-${newMessage.style ? newMessage.style : 'is-primary'}`;
   setTimeout(function () { isVisible.value = false }, duration);
 }
 </script>

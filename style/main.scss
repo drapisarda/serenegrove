@@ -2,6 +2,16 @@
 @import 'vars';
 @import 'bulma';
 
+@font-face {
+  font-family: 'Quattrocento';
+  src:  url('../fonts/Quattrocento/Quattrocento-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Lora';
+  src:  url('../fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype'),
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -9,7 +19,6 @@ html {
 body {
   background: $bg;
   color: $clear;
-  font-family: 'Arial', 'Helvetica', sans-serif;
   min-width: 100vw;
   min-height: 100svh;
   background-color: $bg;
@@ -83,6 +92,16 @@ strong {
   &.is-large {
     @media (max-width: $tablet) {
       font-size: $size-6;
+    }
+  }
+
+  &.is-primary {
+    color: $clear;
+    background-color: $success;
+
+    &:hover {
+      color: $success;
+      background-color: $clear;
     }
   }
 }
