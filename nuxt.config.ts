@@ -2,7 +2,7 @@
 import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   modules: [
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
@@ -34,8 +34,7 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       meta: [
         { name: 'robots', content: 'no-index' }
-      ]
+      ],
     },
-    baseURL: '/serenegrove/',
   },
 })

@@ -29,12 +29,9 @@
             <p>
               Let's make meditation easier and accessible for everyone. Together.
             </p>
+            <Newsletter />
           </div>
           <div class="block">
-            <p>
-              <input class="input block" type="email" placeholder="subscribe to our newsletter">
-              <button class="button success">Subscribe</button>
-            </p>
           </div>
         </div>
       </div>
