@@ -38,17 +38,14 @@ export const useRoutineStore = defineStore("mainRoutine", {
   }),
   actions: {
     addStep(step: Step, insertIndex: number) {
-      console.log(`add ${insertIndex}`);
       this.$state.steps.splice(insertIndex, 0, step);
       this.lastEdit = Date.now();
     },
     addStepAtTheBottom(step: Step) {
-      console.log('add at the bottom');
       this.$state.steps.push(step);
       this.lastEdit = Date.now();
     },
     removeStep(removeIndex: number) {
-      console.log(`remove ${removeIndex}`);
       if (removeIndex < 0) return;
       this.$state.steps.splice(removeIndex, 1);
       this.lastEdit = Date.now();
@@ -65,7 +62,7 @@ export const useRoutineStore = defineStore("mainRoutine", {
     stepIconsDataMap(state): Map<string, StepIconData> {
       const baseURL = import.meta.env.BASE_URL;
       const stepIconData = new Map<string, StepIconData>();
-      [state.intro,state.outro].concat(state.stepsOptions).forEach((step, index) => stepIconData.set(step.name, {
+      this.playerSteps.forEach((step, index) => stepIconData.set(step.name, {
         url: `${baseURL}assets/img/icons/${step.icon}`,
         altDescription: `${step.name} - ${step.description}`.substring(0, 20),
       }));
