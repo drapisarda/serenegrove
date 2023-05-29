@@ -6,7 +6,7 @@
           <li class="card" :class="{ 'mb-4': index !== steps.length - 1 }" v-for="(step, index) in steps" :key="index">
             <header class="card-header">
               <div class="card-image">
-                <img v-if="getStepIconData(step.name)" :src="getStepIconData(step.name).url" :alt="getStepIconData(step.name).altDescription">
+                <img :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`">
               </div>
               <p class="card-header-title">
                 {{ step.name }}
@@ -44,7 +44,7 @@
               <li v-for="(step, index) in stepsOptions" :key="index">
                 <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }">
                   <div class="card-image">
-                    <img v-if="getStepIconData(step.name)" :src="getStepIconData(step.name).url" :alt="getStepIconData(step.name).altDescription">
+                    <img :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`">
                   </div>
                   <header class="card-header">
                     <p class="card-header-title">
@@ -81,7 +81,7 @@
   
   
 <script lang="ts" setup>
-import { useRoutineStore, Step, StepIconData } from "@/store/routine";
+import { useRoutineStore, Step } from "@/store/routine";
 import { useGlobalStore, ToastStyles } from "@/store/global";
 import { ref } from "vue";
 let modalIsOpen = ref(false);
@@ -90,7 +90,7 @@ const toggleModal = () => {
 };
 const { setToastMessage } = useGlobalStore();
 
-const { steps, stepsOptions, addStepAtTheBottom, removeStep: removeStepStore, moveStep, stepIconsDataMap } =
+const { steps, stepsOptions, addStepAtTheBottom, removeStep: removeStepStore, moveStep } =
   useRoutineStore();
 
 const addStep = (step: Step) => {
@@ -102,8 +102,6 @@ const removeStep = (name: string, index: number) => {
   removeStepStore(index);
   setToastMessage(`step ${name} removed from the routine`, ToastStyles.Warning);
 }
-
-const getStepIconData = (stepName: string) => stepIconsDataMap.get(stepName);
 </script>
 
 <style lang="scss" scoped>

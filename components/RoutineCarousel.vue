@@ -2,39 +2,30 @@
   <div class="routine-carousel">
     <ul class="columns is-mobile">
       <li class="column" v-for="step in carouselSteps">
-        <img v-if="step" :src="step.url" :alt="step.altDescription">
+        <img v-if="step" :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`">
       </li>
     </ul>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { useRoutineStore, Step, StepIconData } from "@/store/routine";
-const { playerSteps, stepIconsDataMap } = useRoutineStore();
-const props = defineProps(['currentStepIndex']);
+import { useRoutineStore, Step } from "@/store/routine";
+const props = defineProps(['currentStepIndex', 'playerSteps']);
 
-
-const getStepIconData = (stepIndex: number): StepIconData | undefined => {
-  const step = playerSteps[stepIndex];
-  if (!step) return;
-
-  return stepIconsDataMap.get(step.name);
-}
-
-const currentStepIconData = computed((): StepIconData | undefined => {
-  return getStepIconData(props.currentStepIndex);
+const currentStep = computed((): Step | undefined => {
+  return props.playerSteps[props.currentStepIndex];
 });
-const previousStepIconData = computed((): StepIconData | undefined => {
-  return getStepIconData(props.currentStepIndex - 1);
+const previousStep = computed((): Step | undefined => {
+  return props.playerSteps[props.currentStepIndex - 1];
 });
-const nextStepIconData = computed((): StepIconData | undefined => {
-  return getStepIconData(props.currentStepIndex + 1);
+const nextStep = computed((): Step | undefined => {
+  return props.playerSteps[props.currentStepIndex + 1];
 });
 
-const carouselSteps = computed((): (StepIconData | undefined)[] => [
-  previousStepIconData.value,
-  currentStepIconData.value,
-  nextStepIconData.value,
+const carouselSteps = computed((): (Step | undefined)[] => [
+  previousStep.value,
+  currentStep.value,
+  nextStep.value,
 ])
 </script>
 

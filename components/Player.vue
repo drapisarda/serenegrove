@@ -4,7 +4,7 @@
       :class="{ 'player__playing--visible': !stopStatus, 'player__playing--paused': pauseStatus }">
       <div class="player__carousel section container is-max-desktop">
         <Loader />
-        <RoutineCarousel :currentStepIndex="currentIndex"/>
+        <RoutineCarousel :currentStepIndex="currentIndex" :playerSteps="playerSteps"/>
       </div>
       <div class="tile is-parent">
         <div class="container is-max-desktop">
@@ -57,11 +57,13 @@
 <script lang="ts" setup>
 import { useRoutineStore, Step } from "@/store/routine";
 import { ref, computed, watch } from "vue";
-const baseURL = import.meta.env.BASE_URL;
 
-const { playerSteps, steps } = useRoutineStore();
+const { steps, intro, outro } = useRoutineStore();
+let playerSteps = [intro].concat(steps).concat([outro]);
+
 watch(steps, (newSteps: Step[]) => {
-  stop();
+  playerSteps = [intro].concat(steps).concat([outro]);
+  if (!stopStatus) stop();
 });
 
 const currentIndex = ref(-1);
@@ -89,7 +91,6 @@ const playNext = async () => {
       return;
     }
   
-    // TODO pause after
     playAudioFile(currentStep.value.file);
   }, currentStep.value.pauseAfter !== undefined ? currentStep.value.pauseAfter : 10000);
 };
@@ -110,7 +111,7 @@ const playAudioFile = async (fileRelativeUrl: string) => {
   }
 };
 
-// DEBUG purposes
+// This is for reset or debug purpose
 const audioCacheClean = () => {
   audioCache.forEach((blob: string, fileName: string) => {
     URL.revokeObjectURL(blob);
@@ -124,7 +125,8 @@ const getAudioFileUrl = async (file: string): Promise<string> => {
   }
 
   try {
-    const response = await fetch(baseURL + file);
+    console.log('fetching '+file)
+    const response = await fetch(file);
     const blob = await response.blob();
     const fileUrl = URL.createObjectURL(blob);
     return fileUrl;
@@ -272,11 +274,6 @@ const updateAudioStatus = (event: Event) => {
 
   &__actions {
     justify-content: center;
-    display: none;
-
-    #{$root}--loaded & {
-      display: flex;
-    }
   }
 
   &__action {
@@ -313,6 +310,14 @@ const updateAudioStatus = (event: Event) => {
 
   &__audio-element {
     display: none;
+  }
+
+  .routine-carousel {
+    display: none;
+  }
+
+  &--loaded .routine-carousel {
+    display: flex;
   }
 
 }
