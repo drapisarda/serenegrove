@@ -1,5 +1,5 @@
 <template>
-  <div class="routine-carousel">
+  <div class="routine-carousel" v-if="currentStepIndex > -1">
     <ul class="columns is-mobile">
       <li class="column" v-for="step in carouselSteps">
         <img v-if="step" :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`">

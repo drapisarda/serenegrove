@@ -58,11 +58,22 @@
 import { useRoutineStore, Step } from "@/store/routine";
 import { ref, computed, watch } from "vue";
 
+const baseURL = import.meta.env.BASE_URL;
+const debugAudio = `${baseURL}/assets/audio/1.mp3`;
+const debug = false;
+
 const { steps, intro, outro } = useRoutineStore();
 let playerSteps = [intro].concat(steps).concat([outro]);
 
 watch(steps, (newSteps: Step[]) => {
   playerSteps = [intro].concat(steps).concat([outro]);
+  if (debug) {
+    playerSteps.map(step => {
+      step.file = debugAudio;
+      step.pauseAfter = 0;
+      return step;
+    })
+  }
   if (!stopStatus) stop();
 });
 

@@ -12,9 +12,6 @@ export interface Step {
 
 const baseURL = import.meta.env.BASE_URL;
 
-const debugAudio = `${baseURL}/assets/audio/1.mp3`;
-const debug = false;
-
 export const useRoutineStore = defineStore("mainRoutine", {
   state: () => ({
     steps: [] as Step[],
@@ -50,18 +47,6 @@ export const useRoutineStore = defineStore("mainRoutine", {
       const element = this.$state.steps[stepIndex];
       this.$state.steps.splice(stepIndex, 1);
       this.$state.steps.splice(newIndex, 0, element);
-    },
-  },
-  getters: {
-    playerSteps(state): Step[] {
-      const fullRoutire = state.steps; //[state.intro].concat(state.steps).concat([state.outro]);
-
-      if (debug) return fullRoutire.map(step => {
-        step.file = debugAudio;
-        return step;
-      })
-
-      return fullRoutire;
     },
   },
   persist: {
