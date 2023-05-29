@@ -24,7 +24,7 @@ export const useRoutineStore = defineStore("mainRoutine", {
       { name: 'Body scan', duration: 5000, file: `${baseURL}/assets/audio/body_scan.mp3`, description: 'Systematically bring awareness to different parts of the body, observing physical sensations without judgment.', icon: `${baseURL}assets/img/icons/003-meditation.svg` },
       { name: 'Sounds around you', duration: 7000, file: `${baseURL}/assets/audio/sounds.mp3`, description: 'Direct your attention to the sounds in your environment, observing them as they arise and fade away without analysis.', icon: `${baseURL}assets/img/icons/004-landscape.svg` },
       { name: 'Mantra', duration: 5000, file: `${baseURL}/assets/audio/mantra.mp3`, description: 'Repeat a chosen word or phrase silently in your mind to cultivate inner calm and focused awareness.', icon: `${baseURL}assets/img/icons/002-shree.svg` },
-      { name: 'Bell sound', duration: 3000, file: `${baseURL}/assets/audio/bell.mp3`, description: 'Focus your attention on the sound of a bell, observing its duration, resonance, and fading away to develop concentration.', icon: `${baseURL}assets/img/icons/001-standing-bell.svg` },
+      { name: 'Bell sound', duration: 3000, file: `${baseURL}/assets/audio/bell.mp3`, description: 'Focus your attention on the sound of a bell, observing its duration, resonance, and fading away to develop concentration.', icon: `${baseURL}assets/img/icons/001-standing-bell.svg`, pauseAfter: 4 },
     ] as Step[],
   }),
   actions: {
