@@ -8,7 +8,7 @@
     </p>
     <p>
       The guide voice for your meditation is by <a href="http://www.weylynember.com/" target="_blank">Weylyn Ember</a>.
-      Check her amazing content on <a href="http://www.weylynember.com/" target="_blank">her website</a> and
+      Check her amazing content on <a href="https://www.weylynember.com/" target="_blank">her website</a> and
       <a href="https://www.youtube.com/@weylynember" target="_blank">YouTube channel</a>.
     </p>
     <p>
@@ -29,3 +29,5 @@
     </ul>
   </section>
 </template>
+
+<script></script>
