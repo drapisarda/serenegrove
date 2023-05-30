@@ -1,13 +1,20 @@
 <template>
-  <div class="logo">
-    <LOGO />
-    <LOGO />
+  <div class="logo" :class="{ 'logo--h': horizontal }">
+    <template v-if="horizontal">
+      <LOGOH />
+      <LOGOH />
+    </template>
+    <template v-else>
+      <LOGO v-if="!horizontal" />
+      <LOGO v-if="!horizontal" />
+    </template>
   </div>
 </template>
 
 <script setup lang="ts">
+import LOGOH from '@/public/assets/img/icons/logo_h.svg?component';
 import LOGO from '@/public/assets/img/icons/logo.svg?component';
-
+const props = defineProps(['horizontal']);
 </script>
 
 <style lang="scss">
@@ -42,6 +49,16 @@ import LOGO from '@/public/assets/img/icons/logo.svg?component';
         fill: $dark-1;
       }
 
+      z-index: 1;
+    }
+
+  }
+
+  &--h {
+    svg+svg {
+      scale: 1.05;
+      opacity: 1;
+      filter: blur(2px);
       z-index: 1;
     }
   }
