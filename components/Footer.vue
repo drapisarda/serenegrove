@@ -20,6 +20,9 @@
           <li>
             <a href="#">Privacy</a>
           </li>
+          <li>
+            <a href="/credits">Credits</a>
+          </li>
         </ul>
       </div>
     </div>

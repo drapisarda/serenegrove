@@ -34,7 +34,7 @@
     <div class="tile is-parent">
       <div class="container">
         <div class="player__start is-centered">
-          <button class="player__action button success is-large" :class="{ 'inactive': emptyRoutine }" @click="play">
+          <button class="player__action button is-primary is-large" :class="{ 'inactive': emptyRoutine }" @click="play">
             <template v-if="emptyRoutine">
               Add one step to start your routine
             </template>

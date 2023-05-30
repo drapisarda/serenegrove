@@ -6,8 +6,10 @@
       novalidate>
       <div id="mc_embed_signup_scroll">
         <div class="mc-field-group field">
-          <label class="label" for="mce-EMAIL">Email Address<span class="asterisk">*</span></label><br>
-          <input class="input required email" type="email" value="" name="EMAIL"  id="mce-EMAIL" required>
+          <p>
+            <label class="label" for="mce-EMAIL">Email Address<span class="asterisk">*</span></label>
+            <input class="input required email" type="email" value="" name="EMAIL"  id="mce-EMAIL" required>
+          </p>
           <div class="helper_text" id="mce-EMAIL-HELPERTEXT" ></div>
         </div>
         <div id="mce-responses" class="clear foot">
