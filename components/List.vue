@@ -212,7 +212,6 @@ const removeStep = (name: string, index: number) => {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0;
 
     &:hover img {
       filter: invert(0) brightness(0);
@@ -228,12 +227,16 @@ const removeStep = (name: string, index: number) => {
     display: flex;
     flex-direction: column;
     max-height: initial;
-    margin-top: 80px;
+    padding-top: 0;
 
     #{$root}__list {
       max-height: 100%;
       overflow: scroll;
       flex: 1;
+    }
+
+    .button {
+      border-radius: 0;
     }
   }
 }
