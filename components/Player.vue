@@ -34,7 +34,7 @@
       </ClientOnly>
     </div>
     <div class="tile is-parent">
-      <div class="container">
+      <div class="container is-max-widescreen">
         <ClientOnly fallback-tag="span" fallback="Loading your routine">
           <div class="player__start is-centered">
             <button class="player__action button is-primary is-large" :class="{ 'inactive': emptyRoutine }" @click="play">

@@ -23,6 +23,12 @@ body, button, input, optgroup, select, textarea {
     .modal-close {
       z-index: 3;
       pointer-events: all;
+      max-width: unset;
+      max-height: unset;
+      @media (min-width: $tablet) {
+        width: $size-1;
+        height: $size-1;
+      }
     }
   }
 

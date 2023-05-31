@@ -1,29 +1,32 @@
 <template>
   <footer class="footer footer--custom">
-    <div class="content columns">
-      <div class="column">
-        <h3>
-          SereneGrove
-        </h3>
-        <p>
-          A non-profit community to promote meditation and self consciousness.
-        </p>
-      </div>
-      <div class="column footer__links">
-        <ul>
-          <li>
-            <a href="#">About us</a>
-          </li>
-          <li>
-            <a href="#">Contribute</a>
-          </li>
-          <li>
-            <a href="#">Privacy</a>
-          </li>
-          <li>
-            <a href="/credits">Credits</a>
-          </li>
-        </ul>
+    <div class="container is-max-widescreen">
+      <div class="columns">
+
+        <div class="column">
+          <h3>
+            SereneGrove
+          </h3>
+          <p>
+            A non-profit community to promote meditation and self consciousness.
+          </p>
+        </div>
+        <div class="column footer__links">
+          <ul>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Contribute</a>
+            </li>
+            <li>
+              <a href="#">Privacy</a>
+            </li>
+            <li>
+              <a href="/credits">Credits</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="content footer__credits">

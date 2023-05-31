@@ -55,6 +55,7 @@ useHead({
   flex-wrap: wrap;
   .input {
     flex: 1;
+    max-width: 40em;
   }
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="steps-list container section">
+  <div class="steps-list container section is-max-desktop">
     <div class="steps-list__list steps-list__list--routine block">
       <ul>
         <li class="card" :class="{ 'mb-4': index !== steps.length - 1 }" v-for="(step, index) in steps" :key="index">
@@ -101,7 +101,7 @@ const removeStep = (name: string, index: number) => {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/style/vars.scss";
 
 .steps-list {
@@ -175,7 +175,7 @@ const removeStep = (name: string, index: number) => {
       row-gap: $size-4;
       grid-template-columns: repeat(auto-fit, minmax(calc(#{$tablet}/4), 1fr));
 
-      @media (min-width: 600px) {
+      @media (min-width: $tablet) {
         grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
       }
     }
@@ -191,6 +191,13 @@ const removeStep = (name: string, index: number) => {
         padding-left: $size-7;
         padding-right: $size-7;
         width: 100%;
+        padding-top: $size-3;
+        padding-bottom: $size-3;
+
+        @media (min-width: $tablet) {
+          padding-top: $size-5;
+          padding-bottom: $size-5;
+        }
       }
     }
   }

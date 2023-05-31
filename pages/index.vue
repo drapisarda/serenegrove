@@ -23,7 +23,7 @@
     </div>
   </section>
   <section>
-    <div class="container section">
+    <div class="container section is-max-widescreen">
       <div class="block">
         <p>
           The service is still under development.
