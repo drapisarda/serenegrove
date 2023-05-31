@@ -19,8 +19,9 @@ body, button, input, optgroup, select, textarea {
   &.is-active {
     opacity: 1;
     pointer-events: all;
-
+    
     .modal-close {
+      z-index: 3;
       pointer-events: all;
     }
   }
