@@ -30,7 +30,7 @@
         </p>
         <p>
           <strong>Subscribe</strong> to be among the first to access the app, know about its development
-          and contribute to the project.
+          and contribute to the project. We'll use your email exclusively to contact you about SereneGrove. No spam. No commercial offers. Never.
         </p>
         <p>
           Let's make meditation easier and accessible for everyone. Together.
@@ -39,7 +39,7 @@
       <Newsletter />
     </div>
   </section>
-  <section class="section is-centered">
+  <section v-if="false" class="section is-centered">
     <a href="#routine" class="button is-primary is-large">
       Create your routine now
     </a>
