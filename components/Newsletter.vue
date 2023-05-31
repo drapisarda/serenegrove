@@ -10,9 +10,10 @@
             <label class="label" for="mce-EMAIL">Email Address<span class="asterisk">*</span></label>
             <input class="input required email" type="email" value="" name="EMAIL"  id="mce-EMAIL" required>
           </p>
-          <div class="helper_text" id="mce-EMAIL-HELPERTEXT" ></div>
         </div>
         <div id="mce-responses" class="clear foot">
+          <div class="helper_text" id="mce-EMAIL-HELPERTEXT" ></div>
+          <div for="mce-EMAIL" class="mce_inline_error"></div>
           <div class="response" id="mce-error-response" style="display:none"></div>
           <div class="response" id="mce-success-response" style="display:none"></div>
         </div>
@@ -36,6 +37,7 @@ useHead({
   script: [
     {
       src: '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js',
+      defer: true,
     },
     {
       src: '!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/f668e4d9b5cfc362bf643a0f5/70d223ff4652eb4352dae28cc.js");',
@@ -51,5 +53,10 @@ useHead({
   .input {
     flex: 1;
   }
+}
+
+#mce-responses {
+  font-size: 0.8em;
+  min-height: 2em;
 }
 </style>
