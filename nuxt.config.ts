@@ -35,6 +35,7 @@ export default defineNuxtConfig({
       meta: [
         { name: 'robots', content: 'no-index' }
       ],
+      title: 'SereneGrove - your meditation routine'
     },
   },
 })
