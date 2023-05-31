@@ -3,7 +3,7 @@
     <div class="container is-max-widescreen">
       <div class="columns">
 
-        <div class="column">
+        <div class="column is-8">
           <h3>
             SereneGrove
           </h3>
@@ -11,13 +11,10 @@
             A non-profit community to promote meditation and self consciousness.
           </p>
         </div>
-        <div class="column footer__links">
+        <div class="column is-4 footer__links">
           <ul>
             <li>
-              <a href="#">About us</a>
-            </li>
-            <li>
-              <a href="#">Contribute</a>
+              <a href="/about">About us</a>
             </li>
             <li>
               <a href="#">Privacy</a>
