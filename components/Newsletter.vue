@@ -23,8 +23,11 @@
         <div class="optionalParent">
           <div class="clear foot">
             <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button is-primary">
-            <p class="brandingLogo"><a href="http://eepurl.com/isevcA"
-                title="Mailchimp - email marketing made easy and fun">Made with Mailchimp</a></p>
+            <p class="brandingLogo">
+              <a href="http://eepurl.com/isevcA"
+                title="Mailchimp - email marketing made easy and fun" target="_blank">Made with Mailchimp</a> -
+              <a href="https://www.intuit.com/privacy/statement/" target="_blank"> Know about how your data are managed</a>
+            </p>
           </div>
         </div>
       </div>
