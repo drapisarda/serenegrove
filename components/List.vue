@@ -58,7 +58,7 @@
                   </div>
                 </div>
                 <div class="card-footer">
-                  <button class="card-header-icon add-button button is-primary" aria-label="add element"
+                  <button class="add-button button is-primary" aria-label="add element"
                     @click="() => addStep(step)">
                     <img src="/assets/img/icons/plus.svg" alt="Add step to your routine">
                     <span>
@@ -185,19 +185,20 @@ const removeStep = (name: string, index: number) => {
       flex: 1;
     }
 
-    .card-footer {
-      button {
-        flex-basis: 100%;
-        padding-left: $size-7;
-        padding-right: $size-7;
-        width: 100%;
-        padding-top: $size-3;
-        padding-bottom: $size-3;
+    button {
+      flex-basis: 100%;
+      padding-left: $size-7;
+      padding-right: $size-7;
+      width: 100%;
+      padding-top: $size-5;
+      padding-bottom: $size-5;
+      border-radius: 0;
+      height: auto;
+      max-height: none;
 
-        @media (min-width: $tablet) {
-          padding-top: $size-5;
-          padding-bottom: $size-5;
-        }
+      @media (min-width: $tablet) {
+        padding-top: $size-7;
+        padding-bottom: $size-7;
       }
     }
   }
@@ -219,15 +220,6 @@ const removeStep = (name: string, index: number) => {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    &:hover img {
-      filter: invert(0) brightness(0);
-    }
-
-    img {
-      filter: invert(100%) brightness(2);
-      margin-right: 0.5em;
-    }
   }
 
   .modal-content {
@@ -240,10 +232,6 @@ const removeStep = (name: string, index: number) => {
       max-height: 100%;
       overflow: scroll;
       flex: 1;
-    }
-
-    .button {
-      border-radius: 0;
     }
   }
 }

@@ -4,7 +4,12 @@
   max-width: $tablet;
 }
 
-body, button, input, optgroup, select, textarea {
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: 'Lora', 'Times new roman', 'Arial', 'Helvetica', serif;
 }
 
@@ -15,36 +20,37 @@ body, button, input, optgroup, select, textarea {
   pointer-events: none;
   transition: opacity .5s ease-in-out .1s;
   z-index: $modalZIndex;
-  
+
   &.is-active {
     opacity: 1;
     pointer-events: all;
-    
+
     .modal-close {
-      z-index: 3;
       pointer-events: all;
-      max-width: unset;
-      max-height: unset;
-      @media (min-width: $tablet) {
-        width: $size-1;
-        height: $size-1;
-      }
     }
   }
 
   .modal-close {
+    z-index: 3;
+    max-width: unset;
+    max-height: unset;
     pointer-events: none;
-
+  
     &:hover {
       cursor: pointer;
     }
-    
-    &::before{
+  
+    &::before {
       width: 100%;
     }
-
+  
     &::after {
       height: 100%;
+    }
+
+    @media (min-width: $tablet) {
+      width: $size-1;
+      height: $size-1;
     }
   }
 

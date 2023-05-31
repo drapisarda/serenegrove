@@ -104,10 +104,30 @@ p + p {
   &.is-primary {
     color: $clear;
     background-color: $success;
+    
+    &:focus:not(:active) {
+      color: $clear;
+      border: 2px solid rgba($clear, 0.7);
+      box-shadow: none;
+    }
 
-    &:hover {
+    &:hover,
+    &:hover:not(:active) {
       color: $success;
       background-color: $clear;
+
+      &:focus {
+        border: 2px solid rgba($success, 0.7);
+      }
+    }
+
+    &:hover img {
+      filter: invert(0) brightness(0);
+    }
+
+    img {
+      filter: invert(100%) brightness(2);
+      margin-right: 0.5em;
     }
   }
 }
