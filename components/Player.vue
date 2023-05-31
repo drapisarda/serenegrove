@@ -2,54 +2,57 @@
   <div class="player" :class="{ 'player--loaded': loadedStatus }">
     <div class="player__playing"
       :class="{ 'player__playing--visible': !stopStatus, 'player__playing--paused': pauseStatus }">
-      <div class="player__carousel section container is-max-desktop">
-        <Loader />
-        <RoutineCarousel :currentStepIndex="currentIndex" :playerSteps="playerSteps"/>
-      </div>
-      <div class="tile is-parent">
-        <div class="container is-max-desktop">
-          <div class="player__actions columns is-mobile">
-            <div class="column player__action player__action--play-pause column" v-show="pauseStatus">
-              <button class="button" @click="play">
-                <img src="/assets/img/icons/play-button.svg" alt="Play your routine">
-                <span>Play</span>
-              </button>
-            </div>
-            <div class="column player__action player__action--play-pause column" v-show="!pauseStatus" >
-              <button class="button" @click="pause">
-                <img src="/assets/img/icons/pause-button.svg" alt="Pause routine">
-                <span> Pause </span>
-              </button>
-            </div>
-            <div class="column player__action player__action--stop column" @click="stop">
-              <button class="button">
-                <img src="/assets/img/icons/stop-button.svg" alt="Pause routine">
-                <span>Stop</span>
-              </button>
+      <ClientOnly fallback-tag="span" fallback="Loading...">
+        <div class="player__carousel section container is-max-desktop">
+          <Loader />
+          <RoutineCarousel :currentStepIndex="currentIndex" :playerSteps="playerSteps" />
+        </div>
+        <div class="tile is-parent">
+          <div class="container is-max-desktop">
+            <div class="player__actions columns is-mobile">
+              <div class="column player__action player__action--play-pause column" v-show="pauseStatus">
+                <button class="button" @click="play">
+                  <img src="/assets/img/icons/play-button.svg" alt="Play your routine">
+                  <span>Play</span>
+                </button>
+              </div>
+              <div class="column player__action player__action--play-pause column" v-show="!pauseStatus">
+                <button class="button" @click="pause">
+                  <img src="/assets/img/icons/pause-button.svg" alt="Pause routine">
+                  <span> Pause </span>
+                </button>
+              </div>
+              <div class="column player__action player__action--stop column" @click="stop">
+                <button class="button">
+                  <img src="/assets/img/icons/stop-button.svg" alt="Pause routine">
+                  <span>Stop</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </ClientOnly>
     </div>
     <div class="tile is-parent">
       <div class="container">
-        <div class="player__start is-centered">
-          <button class="player__action button is-primary is-large" :class="{ 'inactive': emptyRoutine }" @click="play">
-            <template v-if="emptyRoutine">
-              Add one step to start your routine
-            </template>
-            <template v-else>
-              <img src="/assets/img/icons/play-button.svg" alt="Play your routine">
-              <span>Start your meditation</span>
-            </template>
-          </button>
-        </div>
-        <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"
-          @pause="updateAudioStatus">
-        </audio>
+        <ClientOnly fallback-tag="span" fallback="Loading your routine">
+          <div class="player__start is-centered">
+            <button class="player__action button is-primary is-large" :class="{ 'inactive': emptyRoutine }" @click="play">
+              <span v-if="emptyRoutine">
+                Add one step to start your routine
+              </span>
+              <span v-else>
+                <img src="/assets/img/icons/play-button.svg" alt="Play your routine">
+                <span>Start your meditation</span>
+              </span>
+            </button>
+          </div>
+          <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"
+            @pause="updateAudioStatus">
+          </audio>
+        </ClientOnly>
       </div>
     </div>
-    
   </div>
 </template>
 
@@ -136,7 +139,7 @@ const getAudioFileUrl = async (file: string): Promise<string> => {
   }
 
   try {
-    console.log('fetching '+file)
+    console.log('fetching ' + file)
     const response = await fetch(file);
     const blob = await response.blob();
     const fileUrl = URL.createObjectURL(blob);
@@ -315,8 +318,14 @@ const updateAudioStatus = (event: Event) => {
     }
   }
 
-  button img {
-    filter: invert(100%);
+  button {
+    img {
+      filter: invert(100%);
+    }
+
+    &:hover img {
+      filter: invert(0);
+    }
   }
 
   &__audio-element {
