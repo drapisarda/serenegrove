@@ -55,9 +55,11 @@ textarea {
   }
 
   .modal-content {
+    padding-top: $modal-close-dimensions + $size-5;
     @media (min-width: $tablet) {
       max-width: $desktop;
       width: 100%;
+      // padding-top: 0;
     }
   }
 }

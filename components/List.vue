@@ -226,7 +226,6 @@ const removeStep = (name: string, index: number) => {
     display: flex;
     flex-direction: column;
     max-height: initial;
-    padding-top: 0;
 
     #{$root}__list {
       max-height: 100%;
