@@ -9,23 +9,23 @@
         </div>
         <div class="tile is-parent">
           <div class="container is-max-desktop">
-            <div class="player__actions columns is-mobile">
+            <div class="player__actions is-mobile">
               <div class="column player__action player__action--play-pause column" v-show="pauseStatus">
                 <button class="button" @click="play">
-                  <img src="/assets/img/icons/play-button.svg" alt="Play your routine">
-                  <span>Play</span>
+                  <Play />
+                  <div>Play</div>
                 </button>
               </div>
               <div class="column player__action player__action--play-pause column" v-show="!pauseStatus">
                 <button class="button" @click="pause">
-                  <img src="/assets/img/icons/pause-button.svg" alt="Pause routine">
-                  <span> Pause </span>
+                  <Pause />
+                  <div> Pause </div>
                 </button>
               </div>
               <div class="column player__action player__action--stop column" @click="stop">
                 <button class="button">
-                  <img src="/assets/img/icons/stop-button.svg" alt="Pause routine">
-                  <span>Stop</span>
+                  <Stop />
+                  <div>Stop</div>
                 </button>
               </div>
             </div>
@@ -35,17 +35,22 @@
     </div>
     <div class="tile is-parent">
       <div class="container is-max-widescreen">
-        <ClientOnly fallback-tag="span" fallback="Loading your routine">
+        <ClientOnly fallback-tag="span">
+          <template #fallback>
+            <Loader />
+          </template>
           <div class="player__start is-centered">
-            <button class="player__action button is-primary is-large" :class="{ 'inactive': emptyRoutine }" @click="play">
-              <span v-if="emptyRoutine">
-                Add one step to start your routine
-              </span>
-              <span v-else>
-                <img src="/assets/img/icons/play-button.svg" alt="Play your routine">
-                <span>Start your meditation</span>
-              </span>
-            </button>
+            <div class="player__action">
+              <button class=" button is-primary is-large" :class="{ 'inactive': emptyRoutine }" @click="play">
+                <span v-if="emptyRoutine">
+                  Add one step to start your routine
+                </span>
+                <template v-else>
+                  <Play />
+                  <div>Start your meditation</div>
+                </template>
+              </button>
+            </div>
           </div>
           <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"
             @pause="updateAudioStatus">
@@ -60,6 +65,9 @@
 <script lang="ts" setup>
 import { useRoutineStore, Step } from "@/store/routine";
 import { ref, computed, watch } from "vue";
+import Play from "@/public/assets/img/icons/play-button.svg";
+import Pause from "@/public/assets/img/icons/pause-button.svg";
+import Stop from "@/public/assets/img/icons/stop-button.svg";
 
 const baseURL = import.meta.env.BASE_URL;
 const debugAudio = `${baseURL}/assets/audio/1.mp3`;
@@ -239,7 +247,7 @@ const updateAudioStatus = (event: Event) => {
     }
 
     #{$root}--loaded & {
-      .lds-roller {
+      .rloader {
         display: none;
       }
     }
@@ -288,10 +296,11 @@ const updateAudioStatus = (event: Event) => {
 
   &__actions {
     justify-content: center;
+    display: flex;
   }
 
   &__action {
-    flex: 1;
+    flex: 0;
     text-align: center;
     display: inline-flex;
     align-items: center;
@@ -302,10 +311,26 @@ const updateAudioStatus = (event: Event) => {
       border: none;
       font-size: $size-2;
       color: $clear;
+      padding-left: $size-5;
+      padding-right: $size-5;
 
-      img {
+      svg {
+        fill: $clear;
         height: 42px;
         width: 42px;
+      }
+
+      &:hover {
+        color: $dark;
+
+        svg {
+          fill: $dark;
+        }
+      }
+
+      div {
+        min-width: 5em;
+        padding: 0 $size-5;
       }
     }
 

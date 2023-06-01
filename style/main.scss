@@ -34,6 +34,10 @@ h1, h2, h3, h4, h5 {
   font-weight: 400;
   line-height: 1.3;
 
+  &:first-child {
+    margin-top: 0;
+  }
+
   .section &:first-child {
     margin-top: 0;
   }
@@ -86,6 +90,7 @@ p + p {
     align-items: center;
   }
 
+  svg,
   img {
     max-height: 100%;
     margin-right: 0.5em;
@@ -112,6 +117,13 @@ p + p {
   &.is-primary {
     color: $clear;
     background-color: $success;
+
+    svg {
+      fill: $clear;
+      path {
+        fill: $clear;
+      }
+    }
     
     &:focus:not(:active) {
       color: $clear;
@@ -126,6 +138,14 @@ p + p {
 
       &:focus {
         border: 2px solid rgba($success, 0.7);
+      }
+
+      svg {
+        fill: $success;
+        path {
+          fill: $success;
+        }
+
       }
     }
 

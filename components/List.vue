@@ -27,7 +27,7 @@
     </div>
     <div class="steps-list__add-button block">
       <button class="button is-large add-button is-primary" @click="toggleModal">
-        <img src="/assets/img/icons/plus.svg" alt="Add steps to your routine">
+        <Plus />
         Add steps to your routine
       </button>
     </div>
@@ -60,7 +60,7 @@
                 <div class="card-footer">
                   <button class="add-button button is-primary" aria-label="add element"
                     @click="() => addStep(step)">
-                    <img src="/assets/img/icons/plus.svg" alt="Add step to your routine">
+                    <Plus />
                     <span>
                       Add to your routine
                     </span>
@@ -80,6 +80,7 @@
 <script lang="ts" setup>
 import { useRoutineStore, Step } from "@/store/routine";
 import { useGlobalStore, ToastStyles } from "@/store/global";
+import Plus from '@/public/assets/img/icons/plus.svg';
 import { ref } from "vue";
 let modalIsOpen = ref(false);
 const toggleModal = () => {
