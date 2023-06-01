@@ -22,32 +22,35 @@
       </div>
     </div>
   </section>
-  <section>
-    <div class="container section is-max-widescreen">
-      <div class="block">
-        <p>
-          The service is still under development.
-        </p>
-        <p>
-          <strong>Subscribe</strong> to be among the first to access the app, know about its development
-          and contribute to the project. We'll use your email exclusively to contact you about SereneGrove. No spam. No commercial offers. Never.
-        </p>
-        <p>
-          Let's make meditation easier and accessible for everyone. Together.
-        </p>
+  <div class="page-content">
+    <section>
+      <div class="container section is-max-widescreen">
+        <div class="block">
+          <p>
+            The service is still under development.
+          </p>
+          <p>
+            <strong>Subscribe</strong> to be among the first to access the app, know about its development
+            and contribute to the project. We'll use your email exclusively to contact you about SereneGrove. No spam. No
+            commercial offers. Never.
+          </p>
+          <p>
+            Let's make meditation easier and accessible for everyone. Together.
+          </p>
+        </div>
+        <Newsletter />
       </div>
-      <Newsletter />
-    </div>
-  </section>
-  <section v-if="false" class="section is-centered">
-    <a href="#routine" class="button is-primary is-large">
-      Create your routine now
-    </a>
-  </section>
-  <section id="routine">
-    <Player />
-    <List />
-  </section>
+    </section>
+    <section v-if="false" class="section is-centered">
+      <a href="#routine" class="button is-primary is-large">
+        Create your routine now
+      </a>
+    </section>
+    <section id="routine" class="section">
+      <Player />
+      <List />
+    </section>
+  </div>
   <Toast />
 </template>
 
@@ -84,6 +87,12 @@
       height: 300px;
 
     }
+  }
+}
+
+.page-content {
+  >section:nth-child(odd) {
+    background-color: $dark-1;
   }
 }
 </style>

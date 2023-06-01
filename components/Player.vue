@@ -33,30 +33,28 @@
         </div>
       </ClientOnly>
     </div>
-    <div class="tile is-parent">
-      <div class="container is-max-widescreen">
-        <ClientOnly fallback-tag="span">
-          <template #fallback>
-            <Loader />
-          </template>
-          <div class="player__start is-centered">
-            <div class="player__action">
-              <button class=" button is-primary is-large" :class="{ 'inactive': emptyRoutine }" @click="play">
-                <span v-if="emptyRoutine">
-                  Add one step to start your routine
-                </span>
-                <template v-else>
-                  <Play />
-                  <div>Start your meditation</div>
-                </template>
-              </button>
-            </div>
+    <div class="container is-max-widescreen">
+      <ClientOnly fallback-tag="span">
+        <template #fallback>
+          <Loader />
+        </template>
+        <div class="player__start is-centered">
+          <div class="player__action">
+            <button class=" button is-primary is-large" :class="{ 'inactive': emptyRoutine }" @click="play">
+              <span v-if="emptyRoutine">
+                Add one step to start your routine
+              </span>
+              <template v-else>
+                <Play />
+                <div>Start your meditation</div>
+              </template>
+            </button>
           </div>
-          <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"
-            @pause="updateAudioStatus">
-          </audio>
-        </ClientOnly>
-      </div>
+        </div>
+        <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"
+          @pause="updateAudioStatus">
+        </audio>
+      </ClientOnly>
     </div>
   </div>
 </template>
@@ -112,7 +110,7 @@ const playNext = async () => {
       stop();
       return;
     }
-  
+
     playAudioFile(currentStep.value.file);
   }, currentStep.value.pauseAfter !== undefined ? currentStep.value.pauseAfter : 10000);
 };
