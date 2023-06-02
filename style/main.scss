@@ -20,7 +20,7 @@ html {
 body {
   background: $bg;
   font-family: 'Lora', 'Times new roman', 'Arial', 'Helvetica', serif;
-  color: $clear;
+  color: $clear-1;
   min-width: 100vw;
   min-height: 100svh;
   background-color: $bg;
@@ -74,13 +74,13 @@ p + p {
   margin-top: 1rem;
 }
 
-.section ul {
-  list-style: disc;
-}
-
 .section {
   @media (max-width: 600px) {
     padding: $size-5 $size-6;
+  }
+
+  ul {
+    list-style: disc;
   }
 }
 
@@ -99,7 +99,7 @@ p + p {
   }
   &.success{
     background-color: $success;
-    color: $clear;
+    color: $clear-1;
   }
 
   &.inactive {
@@ -115,35 +115,37 @@ p + p {
   }
 
   &.is-primary {
-    color: $clear;
-    background-color: $success;
+    color: $primaryButtonText;
+    background-color: $primaryButtonBg;
+    border: 2px solid;
+    border-color: transparent;
 
     svg {
-      fill: $clear;
+      fill: $primaryButtonText;
       path {
-        fill: $clear;
+        fill: $primaryButtonText;
       }
     }
     
     &:focus:not(:active) {
-      color: $clear;
-      border: 2px solid rgba($clear, 0.7);
+      color: $clear-1;
+      border-color: $clear-1;
       box-shadow: none;
     }
 
     &:hover,
     &:hover:not(:active) {
-      color: $success;
-      background-color: $clear;
+      color: $primaryButtonTextHover;
+      background-color: $primaryButtonBgHover;
 
       &:focus {
         border: 2px solid rgba($success, 0.7);
       }
 
       svg {
-        fill: $success;
+        fill: $primaryButtonTextHover;
         path {
-          fill: $success;
+          fill: $primaryButtonTextHover;
         }
 
       }
@@ -167,5 +169,15 @@ p + p {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+.page-content {
+  >section {
+    background-color: $dark-3;
+  }
+
+  >section:nth-child(odd) {
+    background-color: $dark-4;
   }
 }

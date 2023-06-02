@@ -92,13 +92,13 @@ const { steps, stepsOptions, addStepAtTheBottom, removeStep: removeStepStore, mo
   useRoutineStore();
 
 const addStep = (step: Step) => {
-  setToastMessage(`step ${step.name} added to the routine`, ToastStyles.Success);
+  setToastMessage(`Step "${step.name}" added to the routine`, ToastStyles.Success);
   addStepAtTheBottom(step);
 };
 
 const removeStep = (name: string, index: number) => {
   removeStepStore(index);
-  setToastMessage(`step ${name} removed from the routine`, ToastStyles.Warning);
+  setToastMessage(`Step "${name}" removed from the routine`, ToastStyles.Warning);
 }
 </script>
 

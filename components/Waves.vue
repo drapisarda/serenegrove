@@ -26,7 +26,7 @@
   transform: scaleY(.4);
   height: 100%;
   width: var(--boxSize);
-  background: $clear;
+  background: $clear-1;
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;

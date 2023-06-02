@@ -13,6 +13,9 @@ textarea {
   font-family: 'Lora', 'Times new roman', 'Arial', 'Helvetica', serif;
 }
 
+.subtitle {
+  color: $clear-2;
+}
 
 .modal {
   opacity: 0;
@@ -61,17 +64,5 @@ textarea {
       width: 100%;
       // padding-top: 0;
     }
-  }
-}
-
-.footer {
-  background-color: $dark-2;
-
-  .content ul {
-    list-style: none;
-  }
-
-  h3 {
-    color: $clear;
   }
 }

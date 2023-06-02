@@ -3,9 +3,11 @@
     <div class="player__playing"
       :class="{ 'player__playing--visible': !stopStatus, 'player__playing--paused': pauseStatus }">
       <ClientOnly fallback-tag="span" fallback="Loading...">
-        <div class="player__carousel section container is-max-desktop">
-          <Loader />
-          <RoutineCarousel :currentStepIndex="currentIndex" :playerSteps="playerSteps" />
+        <div class="player__carousel section">
+          <div class="container is-max-desktop">
+            <Loader />
+            <RoutineCarousel :currentStepIndex="currentIndex" :playerSteps="playerSteps" />
+          </div>
         </div>
         <div class="tile is-parent">
           <div class="container is-max-desktop">
@@ -265,6 +267,15 @@ const updateAudioStatus = (event: Event) => {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 
+    .button:hover{
+      color: $clear-5;
+
+      svg {
+        fill: $clear-5;
+      }
+
+    }
+
     @keyframes gradient {
       0% {
         background-position: 0% 50%;
@@ -308,21 +319,21 @@ const updateAudioStatus = (event: Event) => {
       background: transparent;
       border: none;
       font-size: $size-2;
-      color: $clear;
+      color: $clear-1;
       padding-left: $size-5;
       padding-right: $size-5;
 
       svg {
-        fill: $clear;
+        fill: $clear-1;
         height: 42px;
         width: 42px;
       }
 
       &:hover {
-        color: $dark;
+        color: $dark-1;
 
         svg {
-          fill: $dark;
+          fill: $dark-1;
         }
       }
 
@@ -338,16 +349,6 @@ const updateAudioStatus = (event: Event) => {
       #{$root}--loaded & {
         visibility: visible;
       }
-    }
-  }
-
-  button {
-    img {
-      filter: invert(100%);
-    }
-
-    &:hover img {
-      filter: invert(0);
     }
   }
 

@@ -1,8 +1,10 @@
 <template>
-  <header v-if="showHeader" class="block">
+  <header v-if="showHeader">
     <Navigation />
   </header>
-  <NuxtPage />
+  <div class="page-content">
+    <NuxtPage />
+  </div>
   <Footer />
 </template>
 

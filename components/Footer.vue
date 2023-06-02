@@ -32,17 +32,18 @@
   </footer>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/style/vars.scss";
-// more on bulma.scss
-
 .footer {
-  background-color: $dark-2;
+  background-color: $dark-5;
 
-  h3 {
-    color: $clear;
+  .content ul {
+    list-style: none;
   }
 
+  h3 {
+    color: $clear-1;
+  }
 
   &__credits {
     text-align: center;
@@ -54,12 +55,6 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-    }
-
-    a {
-      &:hover {
-        color: $clear-1;
-      }
     }
   }
 }

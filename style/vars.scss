@@ -6,18 +6,27 @@ $tertiary: #F4B183;
 $quaternary: #DFA67B;
 
 
-$bg: #2E3C3C;
-$dark: black;
-$dark-1: #263840;
-$dark-2: #141f24;
-$clear: white;
-$clear-1: #cecece;
+$dark-1: #61876E;
+$dark-2: #D5E7DE;
+$dark-3: #3F6B5D;
+$dark-4: #3C6255;
+$dark-5: #2C3C3C;
+$clear-1: white;
+$clear-2: #FEF8C6;
+$clear-3: #FDF5BD;
+$clear-4: #FCCAB2;
+$clear-5: #FAB99E;
 
-$label-color: $clear;
-$success: DarkGreen;
-$success-1: rgb(64, 150, 64);
-$link: $success-1;
-$link-hover: $clear;
+$bg: $dark-5;
+$label-color: $clear-1;
+$success: $dark-1;
+$link: $clear-2;
+$link-hover: $clear-1;
+
+$primaryButtonBg: $clear-2;
+$primaryButtonText: $dark-5;
+$primaryButtonBgHover: $primaryButtonText;
+$primaryButtonTextHover: $primaryButtonBg;
 
 $playerZIndex: 32;
 $modalZIndex: 31;

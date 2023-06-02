@@ -46,7 +46,7 @@ const props = defineProps(['horizontal']);
       filter: blur(5px);
 
       path {
-        fill: $dark-1;
+        fill: $dark-2;
       }
 
       z-index: 1;
