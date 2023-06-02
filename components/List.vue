@@ -1,5 +1,5 @@
 <template>
-  <div class="steps-list container section is-max-desktop">
+  <div class="steps-list container is-max-desktop">
     <div class="steps-list__list steps-list__list--routine block">
       <ul>
         <li class="card" :class="{ 'mb-4': index !== steps.length - 1 }" v-for="(step, index) in steps" :key="index">
@@ -107,6 +107,7 @@ const removeStep = (name: string, index: number) => {
 
 .steps-list {
   $root: &;
+  margin-top: $size-2;
 
   ul {
     list-style: none;

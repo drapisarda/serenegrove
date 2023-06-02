@@ -23,8 +23,8 @@
     </div>
   </section>
 
-  <section>
-    <div class="container section is-max-widescreen">
+  <section class="section">
+    <div class="container is-max-widescreen">
       <div class="block">
         <h2>
           Get early access!
@@ -34,7 +34,7 @@
         </p>
         <p>
           <strong>Subscribe</strong> to be among the first to access the app, know about its development
-          and contribute to the project. We'll use your email exclusively to contact you about SereneGrove. 
+          and contribute to the project. We'll use your email exclusively to contact you about SereneGrove.
         </p>
         <p>
           <strong>
