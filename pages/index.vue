@@ -26,16 +26,23 @@
   <section>
     <div class="container section is-max-widescreen">
       <div class="block">
+        <h2>
+          Get early access!
+        </h2>
         <p>
-          The service is still under development.
+          The service will be publicly available on July 2023. But you can <strong>get early access now</strong>.
         </p>
         <p>
           <strong>Subscribe</strong> to be among the first to access the app, know about its development
-          and contribute to the project. We'll use your email exclusively to contact you about SereneGrove. No spam. No
-          commercial offers. Never.
+          and contribute to the project. We'll use your email exclusively to contact you about SereneGrove. 
         </p>
         <p>
-          Let's make meditation easier and accessible for everyone. Together.
+          <strong>
+            No spam. No unrelated content. Never.
+          </strong>
+        </p>
+        <p>
+          Let's make meditation easier and accessible for everyone. <strong>Together</strong>.
         </p>
       </div>
       <Newsletter />
