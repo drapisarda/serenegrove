@@ -8,7 +8,7 @@
         <div class="column hero__claim">
           <div class="block">
             <h1 class="title is-spaced is-2">
-              Your custom meditation routine.
+              Your custom guided meditation routine.
             </h1>
             <h2 class="title is-4">
               Ready when you are. <br>
@@ -20,6 +20,32 @@
           </p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <h2>
+        Welcome to SereneGrove.
+      </h2>
+      <p>
+        With SereneGrove your can easily create your very own guided meditation. 
+        We believe that everyone should have access to the benefits of meditation, 
+        regardless of their location or experience level. 
+        That's why we've made our platform available for free.
+      </p>
+      <p>
+        Our mission is to make the world a better place by helping people find peace 
+        and serenity in their daily lives. We believe that meditation a powerful 
+        tools for achieving this goal.
+      </p>
+      <p>
+        Our website allows you to create a custom guided meditation 
+        routine that's tailored to your specific needs. You can choose 
+        from a variety of meditation techniques, including breath exercises, 
+        relaxation, and visualization. You can also choose the length of your 
+        meditation, the voice of your guide, and the background music.
+      </p>
     </div>
   </section>
 

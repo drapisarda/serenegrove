@@ -44,9 +44,10 @@ const props = defineProps(['horizontal']);
       scale: 1.02;
       opacity: 1;
       filter: blur(5px);
+      stroke: $dark-5;
 
       path {
-        fill: $dark-2;
+        fill: $dark-5;
       }
 
       z-index: 1;
