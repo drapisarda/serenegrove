@@ -50,9 +50,9 @@
         If you feel like to provide us a feedback, we would love to hear from you.
       </p>
       <p class="has-text-centered">
-        <button class="button is-primary">
+        <a class="button is-primary" :href="feedback_form" target="_blank">
           Give use your feedback
-        </button>
+        </a>
       </p>
     </div>
   </section>
@@ -60,6 +60,6 @@
 
 <script lang="ts" setup>
 const { query } = useRoute();
-const { test1 } = useRuntimeConfig()
+const { test1,feedback_form } = useRuntimeConfig();
 let rightfullTester = test1 === query.testid;
 </script>

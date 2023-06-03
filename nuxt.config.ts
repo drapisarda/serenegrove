@@ -41,6 +41,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       test1: process.env.TEST_1,
+      feedback_form: process.env.FEEDBACK_FORM,
     }
   }
 })
