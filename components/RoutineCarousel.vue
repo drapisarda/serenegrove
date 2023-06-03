@@ -1,7 +1,7 @@
 <template>
   <div class="routine-carousel" v-if="currentStepIndex > -1">
     <ul class="columns is-mobile">
-      <li class="column" v-for="(step, index) in carouselSteps" :key="index" :class="{'is-6': index === 1}">
+      <li class="column" v-for="(step, index) in carouselSteps" :key="index" :class="{ 'is-6': index === 1 }">
         <img v-if="step" :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`">
       </li>
     </ul>
@@ -54,6 +54,7 @@ const carouselSteps = computed((): (Step | undefined)[] => [
         opacity: 1;
         transform: scale(1);
         animation: pulse 3s linear infinite;
+
         .player__playing--paused & {
           animation: none;
         }

@@ -235,12 +235,17 @@ const updateAudioStatus = (event: Event) => {
   }
 
   &__carousel {
-    height: 50svh;
+    min-height: 50svh;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+
+    @media (min-width: $tablet) {
+      padding-top: $size-2;
+      padding-bottom: $size-2;
+    }
 
     .waveContainer {
       display: none;
@@ -343,7 +348,7 @@ const updateAudioStatus = (event: Event) => {
       border: none;
       font-size: $size-3;
       color: $clear-1;
-      
+
       @media (min-width: $tablet) {
         font-size: $size-2;
       }
