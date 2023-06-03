@@ -38,4 +38,9 @@ export default defineNuxtConfig({
       title: 'SereneGrove - your meditation routine'
     },
   },
+  runtimeConfig: {
+    public: {
+      test1: process.env.TEST_1,
+    }
+  }
 })

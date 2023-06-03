@@ -69,15 +69,6 @@
       <Newsletter />
     </div>
   </section>
-  <section v-if="false" class="section is-centered">
-    <a href="#routine" class="button is-primary is-large">
-      Create your routine now
-    </a>
-  </section>
-  <section id="routine" class="section">
-    <Player />
-    <List />
-  </section>
   <Toast />
 </template>
 
