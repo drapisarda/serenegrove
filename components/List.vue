@@ -117,6 +117,11 @@ const removeStep = (name: string, index: number) => {
     .card-image {
       padding: $size-6;
       flex-shrink: 0;
+      display: none;
+
+      @media (min-width: $miniMobile) {
+        display: block;
+      }
 
       img {
         height: $size-1;
@@ -156,6 +161,7 @@ const removeStep = (name: string, index: number) => {
 
     .card-image {
       text-align: center;
+      display: block;
 
       img {
         height: 100px;

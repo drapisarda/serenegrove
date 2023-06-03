@@ -11,7 +11,7 @@
         </div>
         <div class="tile is-parent">
           <div class="container is-max-desktop">
-            <div class="player__actions is-mobile">
+            <div class="player__actions columns is-mobile">
               <div class="column player__action player__action--play-pause column" v-show="pauseStatus">
                 <button class="button" @click="play">
                   <Play />
@@ -267,14 +267,37 @@ const updateAudioStatus = (event: Event) => {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 
-    .button:hover{
-      color: $clear-5;
+    // TODO make a button variant
+    .button {
+      padding-left: 0;
+      padding-right: 0;
 
-      svg {
-        fill: $clear-5;
+      @media (min-width: $tablet) {
+        padding-left: $size-5;
+        padding-right: $size-5;
       }
 
+      &:hover {
+        color: $clear-5;
+
+        svg {
+          fill: $clear-5;
+        }
+      }
+
+      svg {
+        @media (min-width: $tablet) {
+          margin-right: 0;
+        }
+      }
+
+      div {
+        @media (min-width: $tablet) {
+          padding: 0;
+        }
+      }
     }
+
 
     @keyframes gradient {
       0% {
@@ -318,10 +341,12 @@ const updateAudioStatus = (event: Event) => {
     button {
       background: transparent;
       border: none;
-      font-size: $size-2;
+      font-size: $size-3;
       color: $clear-1;
-      padding-left: $size-5;
-      padding-right: $size-5;
+      
+      @media (min-width: $tablet) {
+        font-size: $size-2;
+      }
 
       svg {
         fill: $clear-1;
@@ -338,8 +363,10 @@ const updateAudioStatus = (event: Event) => {
       }
 
       div {
-        min-width: 5em;
-        padding: 0 $size-5;
+        @media (min-width: $tablet) {
+          padding: 0 $size-5;
+          min-width: 5em;
+        }
       }
     }
 

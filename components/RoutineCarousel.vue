@@ -1,7 +1,7 @@
 <template>
   <div class="routine-carousel" v-if="currentStepIndex > -1">
     <ul class="columns is-mobile">
-      <li class="column" v-for="step in carouselSteps">
+      <li class="column" v-for="(step, index) in carouselSteps" :key="index" :class="{'is-6': index === 1}">
         <img v-if="step" :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`">
       </li>
     </ul>
@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useRoutineStore, Step } from "@/store/routine";
+import { Step } from "@/store/routine";
 const props = defineProps(['currentStepIndex', 'playerSteps']);
 
 const currentStep = computed((): Step | undefined => {
@@ -38,7 +38,7 @@ const carouselSteps = computed((): (Step | undefined)[] => [
   .column {
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
 
     img {
       width: 100%;

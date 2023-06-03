@@ -35,11 +35,6 @@
         That's why we've made our platform available for free.
       </p>
       <p>
-        Our mission is to make the world a better place by helping people find peace 
-        and serenity in their daily lives. We believe that meditation a powerful 
-        tools for achieving this goal.
-      </p>
-      <p>
         Our website allows you to create a custom guided meditation 
         routine that's tailored to your specific needs. You can choose 
         from a variety of meditation techniques, including breath exercises, 
