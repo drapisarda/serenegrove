@@ -102,7 +102,7 @@ const removeStep = (name: string, index: number) => {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/style/vars.scss";
 
 .steps-list {

@@ -2,14 +2,11 @@
   <section class="section">
     <div class="container">
       <h1>
-        Test your meditation companion
+        Your meditation companion
       </h1>
       <p>
         <strong>SereneGrove</strong> is on development. We would love to have you testing
         this early version.
-      </p>
-      <p>
-        As it as a meditation companion. Play with it.
       </p>
     </div>
   </section>
@@ -46,6 +43,9 @@
   </section>
   <section class="section" v-if="rightfullTester">
     <div class="container">
+      <h2>
+        Help us to do more and better with your feedback.
+      </h2>
       <p>
         If you feel like to provide us a feedback, we would love to hear from you.
       </p>
