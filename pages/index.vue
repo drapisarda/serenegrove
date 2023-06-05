@@ -30,9 +30,6 @@
       </h2>
       <p>
         With SereneGrove your can easily create your very own guided meditation. 
-        We believe that everyone should have access to the benefits of meditation, 
-        regardless of their location or experience level. 
-        That's why we've made our platform available for free.
       </p>
       <p>
         Our website allows you to create a custom guided meditation 
@@ -44,17 +41,30 @@
     </div>
   </section>
 
+  <ClientOnly>
+    <section id="routine" class="section section--clear">
+      <div class="container">
+        <h2>
+          Create your routine. Enjoy meditation.
+        </h2>
+        <p>
+          Start by just clicking on the "Add steps to your routine" button.
+        </p>
+        <p></p>
+        <Player />
+        <List />
+      </div>
+    </section>
+  </ClientOnly>
+
   <section class="section">
     <div class="container is-max-widescreen">
       <div class="block">
         <h2>
-          Get early access!
+          Stay in touch!
         </h2>
         <p>
-          The service will be publicly available on July 2023. But you can <strong>get early access now</strong>.
-        </p>
-        <p>
-          <strong>Subscribe</strong> to be among the first to access the app, know about its development
+          <strong>Subscribe</strong> to be among the first to know about its development
           and contribute to the project. We'll use your email exclusively to contact you about SereneGrove.
         </p>
         <p>

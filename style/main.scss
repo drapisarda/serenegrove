@@ -82,6 +82,20 @@ p + p {
   ul {
     list-style: disc;
   }
+
+  &--clear:nth-child(even),
+  &--clear:nth-child(odd) {
+    color: $bg;
+    background-color: $dark-2;
+
+    h1, h2, h3, h4, h5 {
+      color: $dark-3;
+    }
+    
+    .page-content > & {
+      background-color: $dark-2;
+    }
+  }
 }
 
 .button {
@@ -137,6 +151,7 @@ p + p {
     &:hover:not(:active) {
       color: $primaryButtonTextHover;
       background-color: $primaryButtonBgHover;
+      border-color: $primaryButtonTextHover;
 
       &:focus {
         border: 2px solid rgba($success, 0.7);
@@ -147,7 +162,26 @@ p + p {
         path {
           fill: $primaryButtonTextHover;
         }
+      }
 
+    }
+
+    .section--clear & {
+      color: $dark-2;
+      background-color: $dark-3;
+      
+      &:hover,
+      &:hover:not(:active) {
+        color: $dark-3;
+        background-color: $dark-2;
+        border-color: $dark-3;
+
+        svg {
+          fill: $dark-3;
+          path {
+            fill: $dark-3;
+          }
+        }
       }
     }
 
