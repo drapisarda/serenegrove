@@ -2,7 +2,7 @@
   <div class="player" :class="{ 'player--loaded': loadedStatus }">
     <div class="player__playing"
       :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
-      <ClientOnly fallback-tag="span" fallback="Your meditation is loading...">
+      <ClientOnly fallback-tag="span"  v-if="visibleStatus" fallback="Your meditation is loading...">
         <div class="player__carousel section">
           <div class="container is-max-desktop">
             <Loader v-if="!stopStatus" message="Your meditation is loading..." />
@@ -42,7 +42,7 @@
                 <button class="button">
                   <Stop v-if="!stopStatus" />
                   <div v-if="!stopStatus">Stop</div>
-                  <div v-if="stopStatus && visibleStatus">
+                  <div v-if="stopStatus">
                     End your meditation
                   </div>
                 </button>
