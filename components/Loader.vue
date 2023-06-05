@@ -10,8 +10,17 @@
       <div></div>
       <div></div>
     </div>
+    <div class="rloader__message">
+      <p>
+        {{ message }}
+      </p>
+    </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+const props = defineProps(['message']);
+</script>
 
 <style lang="scss">
 @import "@/style/vars.scss";
@@ -21,6 +30,12 @@
   justify-content: center;
   align-items: center;
   padding: $size-4;
+  flex-direction: column;
+  color: $clear-1;
+
+  &__message {
+    margin-top: $size-3;
+  }
 }
 
 .lds-roller {
@@ -40,7 +55,7 @@
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: #fff;
+    background: $clear-1;
     margin: -4px 0 0 -4px;
   }
 
@@ -115,11 +130,6 @@
     }
   }
 }
-
-
-
-
-
 
 @keyframes lds-roller {
   0% {

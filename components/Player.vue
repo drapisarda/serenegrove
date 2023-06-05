@@ -1,33 +1,50 @@
 <template>
   <div class="player" :class="{ 'player--loaded': loadedStatus }">
     <div class="player__playing"
-      :class="{ 'player__playing--visible': !stopStatus, 'player__playing--paused': pauseStatus }">
-      <ClientOnly fallback-tag="span" fallback="Loading...">
+      :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
+      <ClientOnly fallback-tag="span" fallback="Your meditation is loading...">
         <div class="player__carousel section">
           <div class="container is-max-desktop">
-            <Loader />
+            <Loader v-if="!stopStatus" message="Your meditation is loading..." />
             <RoutineCarousel :currentStepIndex="currentIndex" :playerSteps="playerSteps" />
+            <div class="player__feedback" v-if="stopStatus && visibleStatus">
+              <h3>
+                How you liked this meditation?
+              </h3>
+              <p>
+                We'd love to here from you. Please, share your opinion with use. Fill this 3 minutes form and help
+                us to grow and make your meditations better and better.
+              </p>
+              <p class="has-text-centered">
+                <a class="button is-primary" :href="feedback_form" target="_blank">
+                  Give use your feedback
+                </a>
+              </p>
+            </div>
           </div>
         </div>
         <div class="tile is-parent">
           <div class="container is-max-desktop">
             <div class="player__actions columns is-mobile">
-              <div class="column player__action player__action--play-pause column" v-show="pauseStatus">
+              <div class="column player__action player__action--play-pause column" v-show="pauseStatus && !stopStatus">
                 <button class="button" @click="play">
                   <Play />
                   <div>Play</div>
                 </button>
               </div>
-              <div class="column player__action player__action--play-pause column" v-show="!pauseStatus">
+              <div class="column player__action player__action--play-pause column" v-show="!pauseStatus && !stopStatus">
                 <button class="button" @click="pause">
                   <Pause />
                   <div> Pause </div>
                 </button>
               </div>
-              <div class="column player__action player__action--stop column" @click="stop">
+              <div class="column player__action player__action--stop column" @click="stopAndClose">
                 <button class="button">
-                  <Stop />
-                  <div>Stop</div>
+                  <Stop v-if="!stopStatus" />
+                  <div v-if="!stopStatus">Stop</div>
+                  <div v-if="stopStatus && visibleStatus">
+                    End your meditation
+                  </div>
                 </button>
               </div>
             </div>
@@ -72,6 +89,7 @@ import Stop from "@/public/assets/img/icons/stop-button.svg";
 const baseURL = import.meta.env.BASE_URL;
 const debugAudio = `${baseURL}/assets/audio/1.mp3`;
 const debug = false;
+const { feedback_form } = useRuntimeConfig();
 
 const { steps, intro, outro } = useRoutineStore();
 let playerSteps = [intro].concat(steps).concat([outro]);
@@ -85,13 +103,14 @@ watch(steps, (newSteps: Step[]) => {
       return step;
     })
   }
-  if (!stopStatus) stop();
+  if (!stopStatus) stopAndClose();
 });
 
 const currentIndex = ref(-1);
 const pauseStatus = ref(true);
 const stopStatus = ref(true);
 const loadedStatus = ref(false);
+const visibleStatus = ref(false);
 
 const audio = ref<HTMLAudioElement>();
 const audioUrl = ref<string | null>(null);
@@ -108,7 +127,7 @@ const emptyRoutine = computed((): Boolean => {
 const playNext = async () => {
   setTimeout(() => {
     currentIndex.value++
-    if (!currentStep.value) {
+    if (!currentStep.value) { // mediatation ends
       stop();
       return;
     }
@@ -118,8 +137,13 @@ const playNext = async () => {
 };
 
 const playAudioFile = async (fileRelativeUrl: string) => {
-  if (!fileRelativeUrl || !audio.value) {
-    stop();
+  if (!audio.value) {
+    stopAndClose();
+    return;
+  }
+
+  if (!fileRelativeUrl) {
+    stopAndClose();
     return;
   }
 
@@ -129,7 +153,7 @@ const playAudioFile = async (fileRelativeUrl: string) => {
     audio.value.play();
   } catch (error) {
     console.error(error);
-    stop();
+    stopAndClose();
   }
 };
 
@@ -159,6 +183,8 @@ const getAudioFileUrl = async (file: string): Promise<string> => {
   return 'error';
 }
 
+
+// TODO: Load also the icons and the full carousel
 const loadAllSteps = async () => {
   return Promise.all(playerSteps.map(async (step: Step, index: number) => {
     if (audioCache.has(step.file) || stopStatus.value) {
@@ -177,6 +203,7 @@ const loadAllSteps = async () => {
 const play = async () => {
   stopStatus.value = false;
   pauseStatus.value = false;
+  visibleStatus.value = true;
   // pause/play behaviour
   if (currentStep.value) {
     audio.value?.play();
@@ -204,6 +231,10 @@ const pause = () => {
   audio.value.pause();
 }
 
+const stopAndClose = () => {
+  visibleStatus.value = false;
+  stop();
+}
 const stop = () => {
   stopStatus.value = true;
   pauseStatus.value = true;
@@ -228,6 +259,7 @@ const updateAudioStatus = (event: Event) => {
 
 .player {
   $root: &;
+  color: $clear-1;
 
   .block {
     display: flex;
@@ -273,20 +305,18 @@ const updateAudioStatus = (event: Event) => {
     animation: gradient 15s ease infinite;
 
     // TODO make a button variant
-    .button {
-      padding-left: 0;
-      padding-right: 0;
-
-      @media (min-width: $tablet) {
+    #{$root}__action .button {
+      @media (min-width: $miniMobile) {
+        font-size: $size-3;
         padding-left: $size-5;
         padding-right: $size-5;
       }
 
       &:hover {
-        color: $clear-5;
+        color: $dark-2;
 
         svg {
-          fill: $clear-5;
+          fill: $dark-2;
         }
       }
 
@@ -343,15 +373,9 @@ const updateAudioStatus = (event: Event) => {
     align-items: center;
     justify-content: center;
 
-    button {
+    .button {
       background: transparent;
-      border: none;
-      font-size: $size-3;
       color: $clear-1;
-
-      @media (min-width: $tablet) {
-        font-size: $size-2;
-      }
 
       svg {
         fill: $clear-1;

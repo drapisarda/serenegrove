@@ -43,7 +43,7 @@
 
   <ClientOnly>
     <section id="routine" class="section section--clear">
-      <div class="container">
+      <div class="container is-max-widescreen">
         <h2>
           Create your routine. Enjoy meditation.
         </h2>

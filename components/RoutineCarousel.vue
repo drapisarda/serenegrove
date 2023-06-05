@@ -41,9 +41,7 @@ const carouselSteps = computed((): (Step | undefined)[] => [
     align-items: center;
 
     img {
-      width: 100%;
-      max-height: 100%;
-      max-width: 100%;
+      height: 170px;
       opacity: 0.5;
       filter: invert(100%);
       transform: scale(0.5);
