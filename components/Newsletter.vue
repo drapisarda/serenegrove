@@ -3,7 +3,7 @@
     <form
       action="https://danielerapisarda.us21.list-manage.com/subscribe/post?u=f668e4d9b5cfc362bf643a0f5&amp;id=a2510cc4f9&amp;f_id=00a355e1f0"
       method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
-      novalidate>
+      >
       <div id="mc_embed_signup_scroll">
         <div class="mc-field-group field">
           <p>
@@ -38,10 +38,6 @@
 <script lang="ts" setup>
 useHead({
   script: [
-    {
-      src: '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js',
-      defer: true,
-    },
     {
       src: '!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/f668e4d9b5cfc362bf643a0f5/70d223ff4652eb4352dae28cc.js");',
       id: 'mcjs'

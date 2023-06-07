@@ -1,8 +1,8 @@
 <template>
   <div class="routine-carousel" v-if="currentStepIndex > -1">
     <ul class="columns is-mobile">
-      <li class="column" v-for="(step, index) in carouselSteps" :key="index" :class="{ 'is-6': index === 1 }">
-        <img v-if="step" :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`">
+      <li class="column" v-for="(step, index) in carouselSteps" :key="index" :class="{ 'is-6': index === 1, 'is-3': index !== 1 }">
+        <Icon v-if="step" :name="step.icon" />
       </li>
     </ul>
   </div>
@@ -30,9 +30,11 @@ const carouselSteps = computed((): (Step | undefined)[] => [
 </script>
 
 <style lang="scss">
+@import "@/style/vars.scss";
 .routine-carousel {
   .columns {
     margin: auto;
+    width: 100%;
   }
 
   .column {
@@ -40,15 +42,15 @@ const carouselSteps = computed((): (Step | undefined)[] => [
     justify-content: center;
     align-items: center;
 
-    img {
+    svg {
       height: 170px;
       opacity: 0.5;
-      filter: invert(100%);
+      fill: $clear-1;
       transform: scale(0.5);
     }
 
     &:nth-child(2) {
-      img {
+      svg {
         opacity: 1;
         transform: scale(1);
         animation: pulse 3s linear infinite;

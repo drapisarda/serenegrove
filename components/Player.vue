@@ -4,7 +4,7 @@
       :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
       <ClientOnly fallback-tag="span"  v-if="visibleStatus" fallback="Your meditation is loading...">
         <div class="player__carousel section">
-          <div class="container is-max-desktop">
+          <div class="container is-max-tablet">
             <Loader v-if="!stopStatus" message="Your meditation is loading..." />
             <RoutineCarousel :currentStepIndex="currentIndex" :playerSteps="playerSteps" />
             <div class="player__feedback" v-if="stopStatus && visibleStatus">
@@ -23,7 +23,7 @@
             </div>
           </div>
         </div>
-        <div class="tile is-parent">
+        <div class="player__playing-actions">
           <div class="container is-max-desktop">
             <div class="player__actions columns is-mobile">
               <div class="column player__action player__action--play-pause column" v-show="pauseStatus && !stopStatus">
@@ -267,7 +267,7 @@ const updateAudioStatus = (event: Event) => {
   }
 
   &__carousel {
-    min-height: 50svh;
+    height: 75svh;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -287,6 +287,15 @@ const updateAudioStatus = (event: Event) => {
       .rloader {
         display: none;
       }
+    }
+  }
+
+  &__playing-actions {
+    height: 25svh;
+
+    .container,
+    #{$root}__actions {
+      height: 100%;
     }
   }
 
@@ -313,10 +322,11 @@ const updateAudioStatus = (event: Event) => {
       }
 
       &:hover {
-        color: $dark-2;
+        color: $clear-2;
+        border-color: $clear-2;
 
         svg {
-          fill: $dark-2;
+          fill: $clear-2;
         }
       }
 
@@ -351,13 +361,6 @@ const updateAudioStatus = (event: Event) => {
     &--visible {
       opacity: 1;
       pointer-events: all;
-    }
-
-    &--paused .wave {
-      animation-name: off;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-      transform: scaleY(0.1);
     }
   }
 

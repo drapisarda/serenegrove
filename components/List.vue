@@ -5,7 +5,8 @@
         <li class="card" :class="{ 'mb-4': index !== steps.length - 1 }" v-for="(step, index) in steps" :key="index">
           <header class="card-header">
             <div class="card-image">
-              <img :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`">
+              <Icon :name="step.icon"/>
+              <!-- <img :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`"> -->
             </div>
             <p class="card-header-title">
               {{ step.name }}
@@ -42,7 +43,7 @@
             <li v-for="(step, index) in stepsOptions" :key="index">
               <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }">
                 <div class="card-image">
-                  <img :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`">
+                  <Icon :name="step.icon"/>
                 </div>
                 <header class="card-header">
                   <p class="card-header-title">
@@ -123,8 +124,9 @@ const removeStep = (name: string, index: number) => {
         display: block;
       }
 
-      img {
+      svg {
         height: $size-1;
+        width: auto;
       }
     }
 
@@ -163,7 +165,7 @@ const removeStep = (name: string, index: number) => {
       text-align: center;
       display: block;
 
-      img {
+      svg {
         height: 100px;
 
         @media (min-width: $desktop) {
