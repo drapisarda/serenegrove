@@ -2,11 +2,10 @@
   <div class="steps-list container is-max-desktop">
     <div class="steps-list__list steps-list__list--routine block">
       <ul>
-        <li class="card" :class="{ 'mb-4': index !== steps.length - 1 }" v-for="(step, index) in steps" :key="index">
+        <li class="card" :class="{ 'mb-4': index !== steps.length - 1 }" v-for="(step, index) in routineSteps" :key="index">
           <header class="card-header">
             <div class="card-image">
               <Icon :name="step.icon"/>
-              <!-- <img :src="step.icon" :alt="`${step.name} - ${step.description.substring(0, 15)}...`"> -->
             </div>
             <p class="card-header-title">
               {{ step.name }}
@@ -82,25 +81,31 @@
 import { useRoutineStore, Step } from "@/store/routine";
 import { useGlobalStore, ToastStyles } from "@/store/global";
 import Plus from '@/public/assets/img/icons/plus.svg';
-import { ref } from "vue";
+import { ref, watch } from "vue";
+
 let modalIsOpen = ref(false);
 const toggleModal = () => {
   modalIsOpen.value = !modalIsOpen.value;
 };
 const { setToastMessage } = useGlobalStore();
 
-const { steps, stepsOptions, addStepAtTheBottom, removeStep: removeStepStore, moveStep } =
+const { steps, stepsOptions, addStepAtTheBottom, removeStep: removeStepStore, moveStep, getRoutineSteps } =
   useRoutineStore();
 
 const addStep = (step: Step) => {
-  setToastMessage(`Step "${step.name}" added to the routine`, ToastStyles.Success);
   addStepAtTheBottom(step);
+  setToastMessage(`Step "${step.name}" added to the routine`, ToastStyles.Success);
 };
 
 const removeStep = (name: string, index: number) => {
   removeStepStore(index);
   setToastMessage(`Step "${name}" removed from the routine`, ToastStyles.Warning);
 }
+
+let routineSteps = getRoutineSteps();
+watch(steps, (newSteps: number[]) => {
+  routineSteps = getRoutineSteps()
+})
 </script>
 
 <style lang="scss" scoped>

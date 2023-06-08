@@ -4,7 +4,7 @@
       :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
       <ClientOnly fallback-tag="span"  v-if="visibleStatus" fallback="Your meditation is loading...">
         <div class="player__carousel section">
-          <div class="container is-max-tablet">
+          <div class="container is-max-desktop">
             <Loader v-if="!stopStatus" message="Your meditation is loading..." />
             <RoutineCarousel :currentStepIndex="currentIndex" :playerSteps="playerSteps" />
             <div class="player__feedback" v-if="stopStatus && visibleStatus">
@@ -91,11 +91,11 @@ const debugAudio = `${baseURL}/assets/audio/1.mp3`;
 const debug = false;
 const { feedback_form } = useRuntimeConfig();
 
-const { steps, intro, outro } = useRoutineStore();
-let playerSteps = [intro].concat(steps).concat([outro]);
+const { steps, intro, outro, getPlayerSteps } = useRoutineStore();
+let playerSteps = getPlayerSteps();
 
-watch(steps, (newSteps: Step[]) => {
-  playerSteps = [intro].concat(steps).concat([outro]);
+watch(steps, (newSteps: number[]) => {
+  playerSteps = getPlayerSteps();
   if (debug) {
     playerSteps.map(step => {
       step.file = debugAudio;
