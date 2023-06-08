@@ -41,6 +41,9 @@ export default defineNuxtConfig({
         { name: 'twitter:card', content: 'summary' },
       ],
       title: 'SereneGrove - Your custom guided meditation routine, for free',
+      link: [
+        { rel: 'canonical', href: "https://www.serenegrove.com/"}
+      ],
       script: [
         {
           type: "application/ld+json",
