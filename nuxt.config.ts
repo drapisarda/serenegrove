@@ -26,22 +26,6 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
-    ['nuxt-cache-ssr', {
-      // Can be disable per enviroment, like in dev
-      enabled: true,
-      store: {
-        type: 'memory',
-        max: 500,
-        ttl: 1000 * 60 // 1 Minute
-      },
-      pages: [
-        // these are prefixes of pages that need to be cached, for caching homepage use '/'
-        '/',
-        '/about',
-        '/newsletter',
-        '/credits',
-      ],
-    }]
   ],
   piniaPersistedstate: {
     cookieOptions: {
