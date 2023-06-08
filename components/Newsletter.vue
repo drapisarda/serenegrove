@@ -39,7 +39,7 @@
 useHead({
   script: [
     {
-      src: '!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/f668e4d9b5cfc362bf643a0f5/70d223ff4652eb4352dae28cc.js");',
+      children: '!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/f668e4d9b5cfc362bf643a0f5/70d223ff4652eb4352dae28cc.js");',
       id: 'mcjs'
     }
   ]
