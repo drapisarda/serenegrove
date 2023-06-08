@@ -7,16 +7,30 @@
         </div>
         <div class="column hero__claim">
           <div class="block">
-            <h1 class="title is-spaced is-2">
+            <h1 class="is-spaced is-2">
               Your custom guided meditation routine.
             </h1>
-            <h2 class="title is-4">
-              Ready when you are. <br>
-              Everywhere you are.
-            </h2>
           </div>
-          <p class="subtitle">
-            Build a routine, enjoy presence.
+          <h3 class="is-4">
+            Ready when you are. <br>
+            Everywhere you are.
+          </h3>
+          <p>
+            <strong>SereneGrove</strong> allows you to create your very own routine. With your favourite exercises, in the
+            order you like the most, to have where and when you prefere.
+          </p>
+          <p>
+            A regular meditation can help you achieving
+          <ul>
+            <li>Stress relief</li>
+            <li>Mental strenght</li>
+            <li>Resilience in everyday life</li>
+            <li>Calm</li>
+            <li>Better sleep quality</li>
+          </ul>
+          </p>
+          <p>
+            <a class="button is-primary" href="#routine"> Start Now </a>
           </p>
         </div>
       </div>
@@ -25,18 +39,20 @@
 
   <section class="section">
     <div class="container is-max-widescreen">
-      <h2>
-        Welcome to SereneGrove.
-      </h2>
-      <p>
-        With SereneGrove your can easily create your very own guided meditation. 
+      <h3>
+        How you want to meditate. When you want to meditate. For free.
+      </h3>
+      <p class="subtitle">
+        Premium meditation tools can be good and full of usefull features. But the core of meditation is very small.
+        It's all about <strong>practice</strong>.
       </p>
       <p>
-        Our website allows you to create a custom guided meditation 
-        routine that's tailored to your specific needs. You can choose 
-        from a variety of meditation techniques, including breath exercises, 
-        relaxation, and visualization. You can also choose the length of your 
-        meditation, the voice of your guide, and the background music.
+        Meditation should be <strong>free and available</strong> for everybody. Either you are and experienced or beginner
+        practicioner of meditation, we have something for you.
+      </p>
+      <p>
+        We created this website to give to the community a tool <strong>without all the fuss and effective in its use</strong>, that you can use <strong> now and for free</strong>.
+        Just setup your favourite routine, sit confortable, and start your meditation routine.
       </p>
     </div>
   </section>
@@ -88,6 +104,10 @@
 .hero {
   min-height: 80svh;
 
+  .subtitle {
+    color: $clear-2;
+  }
+
   &-body {
     background-color: $dark-5;
   }
@@ -98,6 +118,11 @@
 
   .title {
     color: $clear-1;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 1em;
   }
 
   &__bg {
@@ -116,5 +141,4 @@
 
     }
   }
-}
-</style>
+}</style>

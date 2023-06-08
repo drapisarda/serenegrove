@@ -137,6 +137,7 @@ watch(steps, (newSteps: number[]) => {
 
     .card-header-title {
       font-size: clamp(0.7em, 5vw, 1em);
+      padding: $size-7/2 $size-7;
     }
 
     button img {
@@ -196,8 +197,8 @@ watch(steps, (newSteps: number[]) => {
     }
 
     .card-content {
-      padding: $size-7;
       flex: 1;
+      padding: $size-7/2 $size-7;
     }
 
     button {

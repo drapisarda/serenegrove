@@ -163,7 +163,8 @@ p + p {
 
     }
 
-    .section--clear & {
+    .section--clear &,
+    .hero & {
       color: $dark-2;
       background-color: $dark-3;
       

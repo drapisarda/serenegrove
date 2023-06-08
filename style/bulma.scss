@@ -13,8 +13,17 @@ textarea {
   font-family: 'Lora', 'Times new roman', 'Arial', 'Helvetica', serif;
 }
 
+.title {
+  color: inherit;
+}
+
+.title,
 .subtitle {
-  color: $clear-2;
+  color: inherit;
+
+  strong {
+    color: inherit;
+  }
 }
 
 .modal {
@@ -23,6 +32,10 @@ textarea {
   pointer-events: none;
   transition: opacity .5s ease-in-out .1s;
   z-index: $modalZIndex;
+
+  h1,h2,h3,h4,h5 {
+    color: $clear-1;
+  }
 
   &.is-active {
     opacity: 1;
@@ -60,6 +73,7 @@ textarea {
   .modal-content {
     padding-top: $modal-close-dimensions + $size-5;
     @media (min-width: $tablet) {
+      padding-top: $modal-close-dimensions;
       max-width: $desktop;
       width: 100%;
       // padding-top: 0;
