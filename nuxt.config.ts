@@ -35,12 +35,22 @@ export default defineNuxtConfig({
       meta: [
         { name: 'robots', content: 'no-index' },
         { hid: 'description', name: 'description', content: 'With SereneGrove you can create your custom guided meditation, using your favourite mindfulness exercises' },
-        { property: 'og:title', content: `SereneGrove - Your custom guided meditation routine, for free`},
-        { property: 'og:image', content: `/assets/img/social.png`},
-        { property: 'og:description', content: 'With SereneGrove you can create your custom guided meditation, using your favourite mindfulness exercises'},
-        { name: 'twitter:card', content: 'summary'},
+        { property: 'og:title', content: `SereneGrove - Your custom guided meditation routine, for free` },
+        { property: 'og:image', content: `/assets/img/social.png` },
+        { property: 'og:description', content: 'With SereneGrove you can create your custom guided meditation, using your favourite mindfulness exercises' },
+        { name: 'twitter:card', content: 'summary' },
       ],
-      title: 'SereneGrove - Your custom guided meditation routine, for free'
+      title: 'SereneGrove - Your custom guided meditation routine, for free',
+      script: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "http://Schema.org",
+            "@type": "Organization",
+            "url": "https://www.serenegrove.com",
+          }),
+        },
+      ],
     },
   },
   runtimeConfig: {
