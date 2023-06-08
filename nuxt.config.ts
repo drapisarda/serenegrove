@@ -1,26 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import svgLoader from 'vite-svg-loader'
 
-interface Device {
-  userAgent: string
-  isDesktop: boolean
-  isIos: boolean
-  isAndroid: boolean
-  isMobile: boolean
-  isMobileOrTablet: boolean
-  isDesktopOrTablet: boolean
-  isTablet: boolean
-  isWindows: boolean
-  isMacOS: boolean
-  isApple: boolean
-  isSafari: boolean
-  isFirefox: boolean
-  isEdge: boolean
-  isChrome: boolean
-  isSamsung: boolean
-  isCrawler: boolean
-}
-
 export default defineNuxtConfig({
   ssr: true,
   modules: [
@@ -53,9 +33,14 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       meta: [
-        { name: 'robots', content: 'no-index' }
+        { name: 'robots', content: 'no-index' },
+        { hid: 'description', name: 'description', content: 'With SereneGrove you can create your custom guided meditation, using your favourite mindfulness exercises' },
+        { property: 'og:title', content: `SereneGrove - Your custom guided meditation routine, for free`},
+        { property: 'og:image', content: `/assets/img/social.png`},
+        { property: 'og:description', content: 'With SereneGrove you can create your custom guided meditation, using your favourite mindfulness exercises'},
+        { name: 'twitter:card', content: 'summary'},
       ],
-      title: 'SereneGrove - Your custom guided meditation routine'
+      title: 'SereneGrove - Your custom guided meditation routine, for free'
     },
   },
   runtimeConfig: {
