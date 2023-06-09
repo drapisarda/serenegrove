@@ -4,7 +4,7 @@
       :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
       <ClientOnly fallback-tag="span"  v-if="visibleStatus" fallback="Your meditation is loading...">
         <div class="player__carousel section">
-          <div class="container is-max-desktop">
+          <div class="container">
             <Loader v-if="!stopStatus" message="Your meditation is loading..." />
             <RoutineCarousel :currentStepIndex="currentIndex" :playerSteps="playerSteps" />
             <div class="player__feedback" v-if="stopStatus && visibleStatus">
@@ -273,10 +273,14 @@ const updateAudioStatus = (event: Event) => {
     align-items: center;
     justify-content: center;
     text-align: center;
-
+    
     @media (min-width: $tablet) {
       padding-top: $size-2;
       padding-bottom: $size-2;
+    }
+    
+    .routine-carousel {
+      height: 100%;
     }
 
     .waveContainer {

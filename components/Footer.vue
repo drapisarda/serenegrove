@@ -14,6 +14,9 @@
         <div class="column is-4 footer__links">
           <ul>
             <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
               <a href="/about">About us</a>
             </li>
             <li>

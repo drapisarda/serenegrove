@@ -35,6 +35,7 @@ const carouselSteps = computed((): (Step | undefined)[] => [
   .columns {
     margin: auto;
     width: 100%;
+    height: 100%;
   }
 
   .column {
@@ -43,7 +44,8 @@ const carouselSteps = computed((): (Step | undefined)[] => [
     align-items: center;
 
     svg {
-      height: 170px;
+      height: 100%;
+      width: 100%;
       opacity: 0.5;
       fill: $clear-1;
       transform: scale(0.5);
