@@ -51,27 +51,26 @@
         practicioner of meditation, we have something for you.
       </p>
       <p>
-        We created this website to give to the community a tool <strong>without all the fuss and effective in its use</strong>, that you can use <strong> now and for free</strong>.
+        We created this website to give to the community a tool <strong>without all the fuss and effective in its
+          use</strong>, that you can use <strong> now and for free</strong>.
         Just setup your favourite routine, sit confortable, and start your meditation routine.
       </p>
     </div>
   </section>
 
-  <ClientOnly>
-    <section id="routine" class="section section--clear">
-      <div class="container is-max-widescreen">
-        <h2>
-          Create your routine. Enjoy meditation.
-        </h2>
-        <p>
-          Start by just clicking on the "Add steps to your routine" button.
-        </p>
-        <p></p>
-        <Player />
-        <List />
-      </div>
-    </section>
-  </ClientOnly>
+  <section id="routine" class="section section--clear">
+    <div class="container is-max-widescreen">
+      <h2>
+        Create your routine. Enjoy meditation.
+      </h2>
+      <p>
+        Start by just clicking on the "Add steps to your routine" button.
+      </p>
+      <p></p>
+      <Player />
+      <List />
+    </div>
+  </section>
 
   <section class="section">
     <div class="container is-max-widescreen">
@@ -141,4 +140,5 @@
 
     }
   }
-}</style>
+}
+</style>
