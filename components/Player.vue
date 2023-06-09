@@ -2,7 +2,10 @@
   <div class="player" :class="{ 'player--loaded': loadedStatus }">
     <div class="player__playing"
       :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
-      <ClientOnly fallback-tag="span"  v-if="visibleStatus" fallback="Your meditation is loading...">
+      <ClientOnly v-if="visibleStatus">
+        <template #fallback>
+          <Loader />
+        </template>
         <div class="player__carousel section">
           <div class="container">
             <Loader v-if="!stopStatus" message="Your meditation is loading..." />
