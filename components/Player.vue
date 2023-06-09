@@ -174,7 +174,6 @@ const getAudioFileUrl = async (file: string): Promise<string> => {
   }
 
   try {
-    console.log('fetching ' + file)
     const response = await fetch(file);
     const blob = await response.blob();
     const fileUrl = URL.createObjectURL(blob);
