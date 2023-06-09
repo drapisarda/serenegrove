@@ -17,7 +17,7 @@
               <a href="/about">About us</a>
             </li>
             <li>
-              <a href="/privacy">Privacy</a>
+              <a href="/privacy">Privacy & Datenschutzerklärung</a>
             </li>
             <li>
               <a href="/newsletter">Newsletter</a>
