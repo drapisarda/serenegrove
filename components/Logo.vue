@@ -24,7 +24,6 @@ const props = defineProps(['horizontal']);
   position: relative;
   height: 100%;
   width: 100%;
-  max-height: 300px;
   max-width: 100%;
   display: flex;
   align-items: center;
@@ -32,8 +31,8 @@ const props = defineProps(['horizontal']);
 
   svg {
     position: absolute;
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     z-index: 2;
 
     path {
