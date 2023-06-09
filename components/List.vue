@@ -31,13 +31,13 @@
         Add steps to your routine
       </button>
     </div>
-    <div class="modal" :class="{ 'is-active': modalIsOpen }">
+    <div class="modal" :class="{ 'is-active': modalIsOpen }" @keydown.esc="closeModal" tabindex="0" ref="modal">
       <div class="modal-background" @click="toggleModal"></div>
       <div class="modal-close" @click="toggleModal"></div>
       <div class="modal-content section">
-        <h3 class="block is-size-3"> Add steps to your routine </h3>
+        <h3 class="is-size-3"> Add steps to your routine </h3>
         <div class="steps-list__list steps-list__list--options">
-          <p class="block">
+          <p>
           <ul>
             <li v-for="(step, index) in stepsOptions" :key="index">
               <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }">
@@ -82,11 +82,20 @@ import { useRoutineStore, Step } from "@/store/routine";
 import { useGlobalStore, ToastStyles } from "@/store/global";
 import Plus from '@/public/assets/img/icons/plus.svg';
 import { ref, watch } from "vue";
+const modal  = ref(null);
 
 let modalIsOpen = ref(false);
 const toggleModal = () => {
   modalIsOpen.value = !modalIsOpen.value;
+  if (!modalIsOpen.value || ! modal.value) return;
+  
+  modal.value.focus();
 };
+
+const closeModal = () => {
+  modalIsOpen.value = false;
+}
+
 const { setToastMessage } = useGlobalStore();
 
 const { steps, stepsOptions, addStepAtTheBottom, removeStep: removeStepStore, moveStep, getRoutineSteps } =
@@ -120,6 +129,7 @@ watch(steps, (newSteps: number[]) => {
   }
 
   &__list {
+    overflow: visible;
     .card-image {
       padding: $size-6;
       flex-shrink: 0;
@@ -157,6 +167,7 @@ watch(steps, (newSteps: number[]) => {
 
   &__list--options {
     padding-bottom: 6.5em;
+    overflow: scroll;
 
     .card {
       text-align: left;
