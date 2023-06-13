@@ -12,8 +12,8 @@
 </template>
 
 <script setup lang="ts">
-import LOGOH from '@/public/assets/img/icons/logo_h.svg?component';
-import LOGO from '@/public/assets/img/icons/logo.svg?component';
+import LOGOH from '@/src/assets/img/icons/logo_h.svg';
+import LOGO from '@/src/assets/img/icons/logo.svg';
 const props = defineProps(['horizontal']);
 </script>
 

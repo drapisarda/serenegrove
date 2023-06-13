@@ -16,14 +16,14 @@
             </p>
             <button @click="() => moveStep(index, -1)" class="card-header-icon"
               :class="{ 'card-header-icon--inactive': index === 0 }" aria-label="move up">
-              <img src="/assets/img/icons/up-chevron.svg" alt="Pause routine">
+              <UpShevron/>
             </button>
             <button @click="() => moveStep(index, 1)" class="card-header-icon"
               :class="{ 'card-header-icon--inactive': index === steps.length - 1 }" aria-label="move down">
-              <img src="/assets/img/icons/down-chevron.svg" alt="Pause routine">
+              <DownShevron/>
             </button>
             <button class="card-header-icon" aria-label="remove element" @click="() => removeStep(step.name, index)">
-              <img src="/assets/img/icons/bin.svg" alt="Pause routine">
+              <Bin />
             </button>
           </header>
         </li>
@@ -84,7 +84,11 @@
 <script lang="ts" setup>
 import { useRoutineStore, Step } from "@/store/routine";
 import { useGlobalStore, ToastStyles } from "@/store/global";
-import Plus from '@/public/assets/img/icons/plus.svg';
+import Plus from '@/src/assets/img/icons/plus.svg';
+import Bin from '@/src/assets/img/icons/bin.svg';
+import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
+import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
+
 import { ref, watch } from "vue";
 const modal  = ref(null);
 
@@ -155,7 +159,7 @@ watch(steps, (newSteps: number[]) => {
       margin-bottom: 0;
     }
 
-    button img {
+    button svg {
       height: 24px;
       width: 24px;
 

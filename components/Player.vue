@@ -80,9 +80,9 @@
 <script lang="ts" setup>
 import { useRoutineStore, Step } from "@/store/routine";
 import { ref, computed, watch, onMounted } from "vue";
-import Play from "@/public/assets/img/icons/play-button.svg";
-import Pause from "@/public/assets/img/icons/pause-button.svg";
-import Stop from "@/public/assets/img/icons/stop-button.svg";
+import Play from "@/src/assets/img/icons/play-button.svg";
+import Pause from "@/src/assets/img/icons/pause-button.svg";
+import Stop from "@/src/assets/img/icons/stop-button.svg";
 
 const baseURL = import.meta.env.BASE_URL;
 const debugAudio = `${baseURL}/assets/audio/1.mp3`;
