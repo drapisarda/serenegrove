@@ -1,5 +1,9 @@
 <template>
   <div class="steps-list container is-max-desktop">
+    <ClientOnly>
+      <template #fallback>
+        <Loader />
+      </template>
     <div class="steps-list__list steps-list__list--routine block">
       <ul>
         <li class="card" :class="{ 'mb-4': index !== steps.length - 1 }" v-for="(step, index) in routineSteps" :key="index">
@@ -73,9 +77,9 @@
         </div>
       </div>
     </div>
+    </ClientOnly>
   </div>
 </template>
-  
   
 <script lang="ts" setup>
 import { useRoutineStore, Step } from "@/store/routine";
@@ -146,8 +150,9 @@ watch(steps, (newSteps: number[]) => {
     }
 
     .card-header-title {
-      font-size: clamp(0.7em, 5vw, 1em);
-      padding: $size-7/2 $size-7;
+      font-size: clamp(0.7em, 5vw, 1.5em);
+      padding: calc($size-7/2) $size-7;
+      margin-bottom: 0;
     }
 
     button img {
@@ -209,7 +214,7 @@ watch(steps, (newSteps: number[]) => {
 
     .card-content {
       flex: 1;
-      padding: $size-7/2 $size-7;
+      padding: calc($size-7/2) $size-7;
     }
 
     button {

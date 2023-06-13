@@ -6,11 +6,9 @@
           <Logo />
         </div>
         <div class="column hero__claim">
-          <div class="block">
-            <h1 class="is-spaced is-2">
-              Your custom guided meditation routine.
-            </h1>
-          </div>
+          <h1 class="is-spaced is-2">
+            Your custom guided meditation routine.
+          </h1>
           <h3 class="is-4">
             Ready when you are. <br>
             Everywhere you are.
@@ -21,6 +19,7 @@
           </p>
           <p>
             A regular meditation can help you achieving
+          </p>
           <ul>
             <li>Stress relief</li>
             <li>Mental strenght</li>
@@ -28,8 +27,7 @@
             <li>Calm</li>
             <li>Better sleep quality</li>
           </ul>
-          </p>
-          <p>
+          <p class="has-text-centered">
             <a class="button is-primary" href="#routine"> Start Now </a>
           </p>
         </div>

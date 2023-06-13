@@ -2,61 +2,56 @@
   <div class="player" :class="{ 'player--loaded': loadedStatus }">
     <div class="player__playing"
       :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
-      <ClientOnly v-if="visibleStatus">
-        <template #fallback>
-          <Loader />
-        </template>
-        <div class="player__carousel section">
-          <div class="container">
-            <Loader v-if="!stopStatus" message="Your meditation is loading..." />
-            <RoutineCarousel :currentStepIndex="currentIndex" :playerSteps="playerSteps" />
-            <div class="player__feedback" v-if="stopStatus && visibleStatus">
-              <h3>
-                How you liked this meditation?
-              </h3>
-              <p>
-                We'd love to here from you. Please, share your opinion with use. Fill this 3 minutes form and help
-                us to grow and make your meditations better and better.
-              </p>
-              <p class="has-text-centered">
-                <a class="button is-primary" :href="feedback_form" target="_blank">
-                  Give use your feedback
-                </a>
-              </p>
+      <div class="player__carousel section">
+        <div class="container">
+          <Loader v-if="!stopStatus" message="Your meditation is loading..." />
+          <RoutineCarousel :currentStepIndex="currentIndex" :playerSteps="playerSteps" />
+          <div class="player__feedback" v-if="stopStatus && visibleStatus">
+            <h3>
+              How you liked this meditation?
+            </h3>
+            <p>
+              We'd love to here from you. Please, share your opinion with use. Fill this 3 minutes form and help
+              us to grow and make your meditations better and better.
+            </p>
+            <p class="has-text-centered">
+              <a class="button is-primary" :href="feedback_form" target="_blank">
+                Give use your feedback
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="player__playing-actions">
+        <div class="container is-max-desktop">
+          <div class="player__actions columns is-mobile" ref="playing">
+            <div class="column player__action player__action--play-pause column" v-show="pauseStatus && !stopStatus">
+              <button class="button" @click="play">
+                <Play />
+                <div>Play</div>
+              </button>
+            </div>
+            <div class="column player__action player__action--play-pause column" v-show="!pauseStatus && !stopStatus">
+              <button class="button" @click="pause">
+                <Pause />
+                <div> Pause </div>
+              </button>
+            </div>
+            <div class="column player__action player__action--stop column">
+              <button class="button" @click="stopAndClose">
+                <Stop v-if="!stopStatus" />
+                <div v-if="!stopStatus">Stop</div>
+                <div v-if="stopStatus">
+                  End your meditation
+                </div>
+              </button>
             </div>
           </div>
         </div>
-        <div class="player__playing-actions">
-          <div class="container is-max-desktop">
-            <div class="player__actions columns is-mobile">
-              <div class="column player__action player__action--play-pause column" v-show="pauseStatus && !stopStatus">
-                <button class="button" @click="play">
-                  <Play />
-                  <div>Play</div>
-                </button>
-              </div>
-              <div class="column player__action player__action--play-pause column" v-show="!pauseStatus && !stopStatus">
-                <button class="button" @click="pause">
-                  <Pause />
-                  <div> Pause </div>
-                </button>
-              </div>
-              <div class="column player__action player__action--stop column" @click="stopAndClose">
-                <button class="button">
-                  <Stop v-if="!stopStatus" />
-                  <div v-if="!stopStatus">Stop</div>
-                  <div v-if="stopStatus">
-                    End your meditation
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </ClientOnly>
+      </div>
     </div>
     <div class="container is-max-widescreen">
-      <ClientOnly fallback-tag="span">
+      <ClientOnly>
         <template #fallback>
           <Loader />
         </template>
@@ -73,10 +68,10 @@
             </button>
           </div>
         </div>
-        <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"
-          @pause="updateAudioStatus">
-        </audio>
       </ClientOnly>
+      <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"
+        @pause="updateAudioStatus">
+      </audio>
     </div>
   </div>
 </template>
@@ -84,7 +79,7 @@
 
 <script lang="ts" setup>
 import { useRoutineStore, Step } from "@/store/routine";
-import { ref, computed, watch } from "vue";
+import { ref, computed, watch, onMounted } from "vue";
 import Play from "@/public/assets/img/icons/play-button.svg";
 import Pause from "@/public/assets/img/icons/pause-button.svg";
 import Stop from "@/public/assets/img/icons/stop-button.svg";
@@ -114,6 +109,8 @@ const pauseStatus = ref(true);
 const stopStatus = ref(true);
 const loadedStatus = ref(false);
 const visibleStatus = ref(false);
+const playing = ref<HTMLAudioElement>();
+const player = ref<HTMLAudioElement>();
 
 const audio = ref<HTMLAudioElement>();
 const audioUrl = ref<string | null>(null);
@@ -275,12 +272,12 @@ const updateAudioStatus = (event: Event) => {
     align-items: center;
     justify-content: center;
     text-align: center;
-    
+
     @media (min-width: $tablet) {
       padding-top: $size-2;
       padding-bottom: $size-2;
     }
-    
+
     .routine-carousel {
       height: 100%;
     }
@@ -341,12 +338,6 @@ const updateAudioStatus = (event: Event) => {
           margin-right: 0;
         }
       }
-
-      div {
-        @media (min-width: $tablet) {
-          padding: 0;
-        }
-      }
     }
 
 
@@ -402,7 +393,6 @@ const updateAudioStatus = (event: Event) => {
 
       div {
         @media (min-width: $tablet) {
-          padding: 0 $size-5;
           min-width: 5em;
         }
       }
