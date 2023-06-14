@@ -217,3 +217,32 @@ p, ul {
     background-color: $dark-4;
   }
 }
+
+
+.hide, .show, .hide-default, .show-default {
+  transition: opacity 1s ease-in-out;
+}
+
+.hide {
+  &, &.show-default {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.show {
+  &,&.hide-default {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.hide-default {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.show-default {
+  opacity: 1;
+  pointer-events: all;
+}

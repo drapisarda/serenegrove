@@ -11,20 +11,27 @@ export interface Step {
   pauseAfter: number,
 }
 
+// TODO use standard
+export interface TimeFormat {
+  hours: string,
+  minutes: string,
+  seconds: string
+}
+
 const baseURL = import.meta.env.BASE_URL;
 
 const originalState = {
   steps: [] as number[],
   lastEdit: 0 as number,
   version: '0' as string,
-  intro: { name: 'Intro', duration: 3000, file: `${baseURL}assets/audio/intro.mp3`, description: 'Welcome to your meditation routine', icon: `logoOnly`, pauseAfter: 5 } as Step,
-  outro: { name: 'Outro', duration: 3000, file: `${baseURL}assets/audio/outro.mp3`, description: 'Thank you for meditate with SereneGrove', icon: `logoOnly`, pauseAfter: 0 } as Step,
+  intro: { name: 'Intro', duration: 68, file: `${baseURL}assets/audio/intro.mp3`, description: 'Welcome to your meditation routine', icon: `logoOnly`, pauseAfter: 5 } as Step,
+  outro: { name: 'Outro', duration: 37, file: `${baseURL}assets/audio/outro.mp3`, description: 'Thank you for meditate with SereneGrove', icon: `logoOnly`, pauseAfter: 0 } as Step,
   stepsOptions: [
-    { id: 0, name: 'Breath', duration: 3000, file: `${baseURL}assets/audio/breath.mp3`, description: 'Focus your attention on the sensation of the breath, observing its natural flow without trying to control it.', icon: `breath`, pauseAfter: 30 },
-    { id: 1, name: 'Body scan', duration: 5000, file: `${baseURL}assets/audio/body_scan.mp3`, description: 'Systematically bring awareness to different parts of the body, observing physical sensations without judgment.', icon: `body`, pauseAfter: 120 },
-    { id: 2, name: 'Sounds around you', duration: 7000, file: `${baseURL}assets/audio/sounds.mp3`, description: 'Direct your attention to the sounds in your environment, observing them as they arise and fade away without analysis.', icon: `sounds`, pauseAfter: 60 },
-    { id: 3, name: 'Mantra', duration: 5000, file: `${baseURL}assets/audio/mantra.mp3`, description: 'Repeat a chosen word or phrase silently in your mind to cultivate inner calm and focused awareness.', icon: `mantra`, pauseAfter: 120 },
-    { id: 4, name: 'Bell sound', duration: 3000, file: `${baseURL}assets/audio/bell.mp3`, description: 'Focus your attention on the sound of a bell, observing its duration, resonance, and fading away to develop concentration.', icon: `bell`, pauseAfter: 5 },
+    { id: 0, name: 'Breath', duration: 61, file: `${baseURL}assets/audio/breath.mp3`, description: 'Focus your attention on the sensation of the breath, observing its natural flow without trying to control it.', icon: `breath`, pauseAfter: 30 },
+    { id: 1, name: 'Body scan', duration: 129, file: `${baseURL}assets/audio/body_scan.mp3`, description: 'Systematically bring awareness to different parts of the body, observing physical sensations without judgment.', icon: `body`, pauseAfter: 120 },
+    { id: 2, name: 'Sounds around you', duration: 52, file: `${baseURL}assets/audio/sounds.mp3`, description: 'Direct your attention to the sounds in your environment, observing them as they arise and fade away without analysis.', icon: `sounds`, pauseAfter: 60 },
+    { id: 3, name: 'Mantra', duration: 62, file: `${baseURL}assets/audio/mantra.mp3`, description: 'Repeat a chosen word or phrase silently in your mind to cultivate inner calm and focused awareness.', icon: `mantra`, pauseAfter: 120 },
+    { id: 4, name: 'Bell sound', duration: 60, file: `${baseURL}assets/audio/bell.mp3`, description: 'Focus your attention on the sound of a bell, observing its duration, resonance, and fading away to develop concentration.', icon: `bell`, pauseAfter: 5 },
   ] as Step[],
 }
 
@@ -60,17 +67,20 @@ export const useRoutineStore = defineStore("mainRoutine", {
     getStep(id: number): Step | undefined {
       return this.$state.stepsOptions.find((step) => step.id === id);
     },
-    getRoutineSteps() {
+    getRoutineSteps(): Step[] {
       return  this.$state.steps
       .map(stepId => this.getStep(stepId))
       .filter((step): step is Step => typeof step !== 'undefined');
     },
-    getPlayerSteps() {
+    getPlayerSteps(): Step[] {
       return [this.$state.intro]
         .concat(this.getRoutineSteps())
         .concat([this.$state.outro])
-    }
-  },
+    },
+    getRoutineDuration(currentStepIndex: number = 0): number {
+      return this.getPlayerSteps().slice(currentStepIndex).reduce((acc: number, step: Step) => acc + step.duration + step.pauseAfter, 0);
+    },
+  }, 
   persist: {
     storage: persistedState.localStorage,
   },

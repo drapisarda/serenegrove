@@ -4,9 +4,7 @@
       :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
       <div class="player__carousel section">
         <div class="container">
-          <Loader v-if="!stopStatus" message="Your meditation is loading..." />
-          <RoutineCarousel :currentStepIndex="currentIndex" :playerSteps="playerSteps" />
-          <div class="player__feedback" v-if="stopStatus && visibleStatus">
+          <div class="player__feedback hide-default" :class="{'show': stopStatus && visibleStatus}">
             <h3>
               How you liked this meditation?
             </h3>
@@ -20,6 +18,15 @@
               </a>
             </p>
           </div>
+          <Loader v-if="!stopStatus" message="Your meditation is loading..." />
+          <RoutineCarousel :class="{'hide': stopStatus && visibleStatus}" :currentStepIndex="currentIndex" :playerSteps="playerSteps" />
+        </div>
+      </div>
+      <div class="player__time" :class="{ 'hide': stopStatus }">
+        <div class="container">
+          <p class="has-text-centered">
+            <RoutineTimer :time="routineDuration" :start="!pauseStatus" :stop="stopStatus" />
+          </p>
         </div>
       </div>
       <div class="player__playing-actions">
@@ -38,12 +45,12 @@
               </button>
             </div>
             <div class="column player__action player__action--stop column">
-              <button class="button" @click="stopAndClose">
-                <Stop v-if="!stopStatus" />
-                <div v-if="!stopStatus">Stop</div>
-                <div v-if="stopStatus">
-                  End your meditation
-                </div>
+              <button v-if="!stopStatus" class="button" @click="stop">
+                <Stop />
+                <div>Stop</div>
+              </button>
+              <button v-if="stopStatus" class="button" @click="stopAndClose">
+                End your meditation
               </button>
             </div>
           </div>
@@ -79,7 +86,7 @@
 
 <script lang="ts" setup>
 import { useRoutineStore, Step } from "@/store/routine";
-import { ref, computed, watch, onMounted } from "vue";
+import { ref, computed, watch } from "vue";
 import Play from "@/src/assets/img/icons/play-button.svg";
 import Pause from "@/src/assets/img/icons/pause-button.svg";
 import Stop from "@/src/assets/img/icons/stop-button.svg";
@@ -88,19 +95,20 @@ const baseURL = import.meta.env.BASE_URL;
 const debugAudio = `${baseURL}/assets/audio/1.mp3`;
 const debug = false;
 const { feedback_form } = useRuntimeConfig();
-
-const { steps, intro, outro, getPlayerSteps } = useRoutineStore();
+const { steps, getPlayerSteps, getRoutineDuration } = useRoutineStore();
 let playerSteps = getPlayerSteps();
+const routineDuration = ref(getRoutineDuration());
 
 watch(steps, (newSteps: number[]) => {
   playerSteps = getPlayerSteps();
   if (debug) {
     playerSteps.map(step => {
       step.file = debugAudio;
-      step.pauseAfter = 0;
       return step;
     })
   }
+
+  routineDuration.value = getRoutineDuration();
   if (!stopStatus) stopAndClose();
 });
 
@@ -110,8 +118,6 @@ const stopStatus = ref(true);
 const loadedStatus = ref(false);
 const visibleStatus = ref(false);
 const playing = ref<HTMLAudioElement>();
-const player = ref<HTMLAudioElement>();
-
 const audio = ref<HTMLAudioElement>();
 const audioUrl = ref<string | null>(null);
 const audioCache = new Map<string, string>();
@@ -133,7 +139,7 @@ const playNext = async () => {
     }
 
     playAudioFile(currentStep.value.file);
-  }, currentStep.value.pauseAfter !== undefined ? currentStep.value.pauseAfter : 10000);
+  }, currentStep.value.pauseAfter * 1000);
 };
 
 const playAudioFile = async (fileRelativeUrl: string) => {
@@ -203,6 +209,7 @@ const play = async () => {
   stopStatus.value = false;
   pauseStatus.value = false;
   visibleStatus.value = true;
+  routineDuration.value = getRoutineDuration();
   // pause/play behaviour
   if (currentStep.value) {
     audio.value?.play();
@@ -238,19 +245,17 @@ const stop = () => {
   stopStatus.value = true;
   pauseStatus.value = true;
   if (!audio.value) return;
-
   audio.value.pause();
-  currentIndex.value = -1;
-  audio.value.currentTime = 0;
-  if (audioUrl.value) {
-    audioUrl.value = null;
-  }
+
+  setTimeout(() => {
+    currentIndex.value = -1;
+    if (!audio.value) return;
+    audio.value.currentTime = 0;
+    if (audioUrl.value) {
+      audioUrl.value = null;
+    }
+  }, 1000)
 };
-
-const updateAudioStatus = (event: Event) => {
-  //pauseStatus.value = audio.value?.paused || false;
-}
-
 </script>
 
 <style lang="scss">
@@ -266,16 +271,25 @@ const updateAudioStatus = (event: Event) => {
   }
 
   &__carousel {
-    height: 75svh;
+    height: 65svh;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
 
     @media (min-width: $tablet) {
       padding-top: $size-2;
       padding-bottom: $size-2;
+    }
+
+    .container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .routine-carousel {
@@ -291,6 +305,17 @@ const updateAudioStatus = (event: Event) => {
         display: none;
       }
     }
+  }
+
+  &__feedback {
+    position: absolute;
+    top: 15svh;
+    left: 0;
+    width: 100%;
+  }
+
+  &__time {
+    font-size: $size-2;
   }
 
   &__playing-actions {

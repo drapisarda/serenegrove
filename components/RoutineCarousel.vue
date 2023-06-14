@@ -1,7 +1,8 @@
 <template>
-  <div class="routine-carousel" v-if="currentStepIndex > -1">
+  <div class="routine-carousel">
     <ul class="columns is-mobile">
-      <li class="column" v-for="(step, index) in carouselSteps" :key="index" :class="{ 'is-6': index === 1, 'is-3': index !== 1 }">
+      <li class="column" v-for="(step, index) in carouselSteps" :key="index"
+        :class="{ 'is-6': index === 1, 'is-3': index !== 1 }">
         <Icon v-if="step" :name="step.icon" />
       </li>
     </ul>
@@ -31,6 +32,7 @@ const carouselSteps = computed((): (Step | undefined)[] => [
 
 <style lang="scss">
 @import "@/style/vars.scss";
+
 .routine-carousel {
   .columns {
     margin: auto;
@@ -55,7 +57,7 @@ const carouselSteps = computed((): (Step | undefined)[] => [
       svg {
         opacity: 1;
         transform: scale(1);
-        animation: pulse 3s linear infinite;
+        animation: pulse 10s ease-in-out infinite;
 
         .player__playing--paused & {
           animation: none;
@@ -68,13 +70,8 @@ const carouselSteps = computed((): (Step | undefined)[] => [
           transform: scale(1);
         }
 
-        20% {
+        50% {
           transform: scale(1.2);
-        }
-
-
-        90% {
-          transform: scale(0.9);
         }
 
         100% {
