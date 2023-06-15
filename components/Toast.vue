@@ -19,53 +19,38 @@ const messageClass = ref('');
 const isVisible = ref(false);
 const { toastMessage } = useGlobalStore();
 watch(toastMessage, (newMessage: ToastMessage) => displayMessage(newMessage));
+let displayInterval: NodeJS.Timeout | undefined;
 
-const displayMessage = (newMessage: ToastMessage, duration = 3000) => {
-  isVisible.value = true;
+const displayMessage = (newMessage: ToastMessage, duration: number = 3000) => {
+  if (displayInterval) {
+    isVisible.value = false;
+    clearInterval(displayInterval);
+    displayInterval = undefined;
+  }
+  
   message.value = newMessage.message;
   messageClass.value = `is-${newMessage.style ? newMessage.style : 'is-primary'}`;
-  setTimeout(function () { isVisible.value = false }, duration);
+  isVisible.value = true;
+  displayInterval = setTimeout(function () { isVisible.value = false; }, duration);
 }
 </script>
 
 <style scoped lang="scss">
 @import "@/style/vars.scss";
-$spacing: $size-1;
+$spacing: 0;
 
 .toast {
   position: fixed;
   width: 100%;
   bottom: $spacing;
-  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s .1s;
 
   &.toast--visible {
     z-index: $toastZIndex;
-    visibility: visible;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  }
-
-  @keyframes fadein {
-    from {
-      bottom: 0;
-      opacity: 0;
-    }
-
-    to {
-      bottom: $spacing;
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadeout {
-    from {
-      bottom: $spacing;
-      opacity: 1;
-    }
-
-    to {
-      bottom: 0;
-      opacity: 0;
-    }
+    opacity: 1;
+    pointer-events: all;
   }
 }
 </style>
