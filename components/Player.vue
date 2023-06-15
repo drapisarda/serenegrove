@@ -6,18 +6,7 @@
         <div class="player__carousel section">
           <div class="container">
             <div class="player__feedback hide-default" :class="{ 'show': stopStatus && visibleStatus }">
-              <h3>
-                How you liked this meditation?
-              </h3>
-              <p>
-                We'd love to here from you. Please, share your opinion with use. Fill this 3 minutes form and help
-                us to grow and make your meditations better and better.
-              </p>
-              <p class="has-text-centered">
-                <a class="button is-primary" :href="feedback_form" target="_blank">
-                  Give use your feedback
-                </a>
-              </p>
+              <FeedbackRequest/>
             </div>
             <Loader v-if="!stopStatus" message="Your meditation is loading..." />
             <RoutineCarousel :class="{ 'hide': stopStatus && visibleStatus }" :currentStepIndex="currentIndex"
@@ -95,7 +84,6 @@ import Stop from "@/src/assets/img/icons/stop-button.svg";
 const baseURL = import.meta.env.BASE_URL;
 const debugAudio = `${baseURL}/assets/audio/1.mp3`;
 const debug = false;
-const { feedback_form } = useRuntimeConfig();
 const { steps, getPlayerSteps, getRoutineDuration } = useRoutineStore();
 let playerSteps = getPlayerSteps();
 const routineDuration = ref(getRoutineDuration());
