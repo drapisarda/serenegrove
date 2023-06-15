@@ -2,31 +2,30 @@
   <div class="player" :class="{ 'player--loaded': loadedStatus }">
     <div class="player__playing"
       :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
-      <div class="player__carousel section">
-        <div class="container">
-          <div class="player__feedback hide-default" :class="{'show': stopStatus && visibleStatus}">
-            <h3>
-              How you liked this meditation?
-            </h3>
-            <p>
-              We'd love to here from you. Please, share your opinion with use. Fill this 3 minutes form and help
-              us to grow and make your meditations better and better.
-            </p>
-            <p class="has-text-centered">
-              <a class="button is-primary" :href="feedback_form" target="_blank">
-                Give use your feedback
-              </a>
-            </p>
+      <div class="player__content">
+        <div class="player__carousel section">
+          <div class="container">
+            <div class="player__feedback hide-default" :class="{ 'show': stopStatus && visibleStatus }">
+              <h3>
+                How you liked this meditation?
+              </h3>
+              <p>
+                We'd love to here from you. Please, share your opinion with use. Fill this 3 minutes form and help
+                us to grow and make your meditations better and better.
+              </p>
+              <p class="has-text-centered">
+                <a class="button is-primary" :href="feedback_form" target="_blank">
+                  Give use your feedback
+                </a>
+              </p>
+            </div>
+            <Loader v-if="!stopStatus" message="Your meditation is loading..." />
+            <RoutineCarousel :class="{ 'hide': stopStatus && visibleStatus }" :currentStepIndex="currentIndex"
+              :playerSteps="playerSteps" />
           </div>
-          <Loader v-if="!stopStatus" message="Your meditation is loading..." />
-          <RoutineCarousel :class="{'hide': stopStatus && visibleStatus}" :currentStepIndex="currentIndex" :playerSteps="playerSteps" />
         </div>
-      </div>
-      <div class="player__time" :class="{ 'hide': stopStatus }">
-        <div class="container">
-          <p class="has-text-centered">
-            <RoutineTimer :time="routineDuration" :start="!pauseStatus" :stop="stopStatus" />
-          </p>
+        <div class="player__time" :class="{ 'hide': stopStatus }">
+          <RoutineTimer :time="routineDuration" :start="!pauseStatus" :stop="stopStatus" />
         </div>
       </div>
       <div class="player__playing-actions">
@@ -271,7 +270,7 @@ const stop = () => {
   }
 
   &__carousel {
-    height: 65svh;
+    flex: 1;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -316,6 +315,12 @@ const stop = () => {
 
   &__time {
     font-size: $size-2;
+  }
+
+  &__content {
+    height: 75svh;
+    display: flex;
+    flex-direction: column;
   }
 
   &__playing-actions {

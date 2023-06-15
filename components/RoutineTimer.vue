@@ -1,6 +1,11 @@
 <template>
-  <div>
-    <p>{{ formattedTime }}</p>
+  <div class="routine-timer">
+    <div class="container has-text-centered">
+      <p>{{ formattedTime }}</p>
+      <div class="routine-timer__bar">
+        <div class="routine-timer__bar-fill" :style="remainingTimeStyle"></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -19,6 +24,7 @@ const props = withDefaults(defineProps<{
 
 let intervalId: NodeJS.Timer | null = null;
 let currentTime = ref(props.time);
+let totalTime = ref(props.time);
 
 const formattedTime = computed(() => {
   let remainingTime = currentTime.value;
@@ -29,6 +35,10 @@ const formattedTime = computed(() => {
   const seconds = remainingTime.toString().padStart(2, '0');
   return hours !== '00' ? `${hours}:${minutes}:${seconds}` : `${minutes}:${seconds}`;
 });
+
+const remainingTimeStyle = computed(() => {
+  return `width: ${Math.round(currentTime.value / totalTime.value * 100 * 100)/100}%;`;
+})
 
 const decreaseTime = () => {
   if (currentTime.value > 0) currentTime.value -= 1;
@@ -42,7 +52,7 @@ const startTimer = () => {
 };
 
 const stopTimer = () => {
-  if(intervalId) clearInterval(intervalId);
+  if (intervalId) clearInterval(intervalId);
 };
 
 watch(() => props.start, (newVal) => {
@@ -65,3 +75,23 @@ watch(() => props.time, (newVal) => {
 
 onUnmounted(stopTimer);
 </script>
+
+
+<style lang="scss">
+@import "@/style/vars.scss";
+
+.routine-timer {
+  &__bar {
+    border: 1px solid $clear-1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__bar-fill {
+    background-color: $clear-5;
+    height: $size-3;
+    width: 100%;
+    transition: width 1s ease-in-out;
+  }
+}
+</style>
