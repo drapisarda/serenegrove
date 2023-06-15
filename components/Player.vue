@@ -24,31 +24,33 @@
               :playerSteps="playerSteps" />
           </div>
         </div>
-        <div class="player__time" :class="{ 'hide': stopStatus }">
+        <div class="player__time section" :class="{ 'hide': stopStatus }">
           <RoutineTimer :time="routineDuration" :start="!pauseStatus" :stop="stopStatus" />
         </div>
       </div>
-      <div class="player__playing-actions">
+      <div class="player__playing-actions section">
         <div class="container is-max-desktop">
           <div class="player__actions columns is-mobile" ref="playing">
-            <div class="column player__action player__action--play-pause column" v-show="pauseStatus && !stopStatus">
+            <div class="column is-6 player__action player__action--play-pause column" v-show="pauseStatus && !stopStatus">
               <button class="button" @click="play">
                 <Play />
                 <div>Play</div>
               </button>
             </div>
-            <div class="column player__action player__action--play-pause column" v-show="!pauseStatus && !stopStatus">
+            <div class="column is-6  player__action player__action--play-pause column" v-show="!pauseStatus && !stopStatus">
               <button class="button" @click="pause">
                 <Pause />
                 <div> Pause </div>
               </button>
             </div>
-            <div class="column player__action player__action--stop column">
-              <button v-if="!stopStatus" class="button" @click="stop">
+            <div v-if="!stopStatus" class="column is-6 player__action player__action--stop column">
+              <button  class="button" @click="stop">
                 <Stop />
                 <div>Stop</div>
               </button>
-              <button v-if="stopStatus" class="button" @click="stopAndClose">
+            </div>
+            <div v-if="stopStatus" class="column player__action player__action--stop column">
+              <button class="button" @click="stopAndClose">
                 End your meditation
               </button>
             </div>
@@ -315,6 +317,11 @@ const stop = () => {
 
   &__time {
     font-size: $size-2;
+
+    &.section {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
   &__content {
@@ -346,12 +353,22 @@ const stop = () => {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 
+    &:not(#{$root}__playing--visible) {
+      > * {
+        opacity: 0;
+      }
+    }
+
     // TODO make a button variant
     #{$root}__action .button {
+      width: 100%;
+      font-size: $size-4;
+      padding-left: $size-6;
+      padding-right: $size-6;
       @media (min-width: $miniMobile) {
-        font-size: $size-3;
         padding-left: $size-5;
         padding-right: $size-5;
+        font-size: $size-3;
       }
 
       &:hover {

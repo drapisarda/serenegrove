@@ -139,25 +139,35 @@ watch(steps, (newSteps: number[]) => {
   &__list {
     overflow: visible;
     .card-image {
-      padding: $size-6;
+      padding: $size-7;
       flex-shrink: 0;
       display: none;
 
       @media (min-width: $miniMobile) {
-        display: block;
+        display: flex;
+        align-items: center;
       }
 
+      @media (min-width: $tablet) {
+        padding: $size-6;
+      }
+
+
       svg {
-        height: $size-1;
         width: auto;
+        height: $size-3;
+        @media (min-width: $tablet) {
+          height: $size-2;
+        }
       }
     }
 
     .card-header-title {
-      font-size: clamp(1em, 4vw + 1rem, 1.5em);
+      font-size: clamp(1rem, 3vw, 1.6rem);
       padding: calc($size-7/2) $size-7;
       margin-bottom: 0;
       white-space: nowrap;
+      overflow: hidden;
     }
 
     button svg {

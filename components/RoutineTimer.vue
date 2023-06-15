@@ -1,9 +1,12 @@
 <template>
   <div class="routine-timer">
-    <div class="container has-text-centered">
-      <p>{{ formattedTime }}</p>
-      <div class="routine-timer__bar">
+    <div class="container is-max-desktop has-text-centered">
+      {{ formattedTime }}
+      <div class="routine-timer__bar" v-if="false">
         <div class="routine-timer__bar-fill" :style="remainingTimeStyle"></div>
+        <div class="routine-timer__bar-text">
+          {{ formattedTime }}
+        </div>
       </div>
     </div>
   </div>
@@ -37,7 +40,7 @@ const formattedTime = computed(() => {
 });
 
 const remainingTimeStyle = computed(() => {
-  return `width: ${Math.round(currentTime.value / totalTime.value * 100 * 100)/100}%;`;
+  return `transform: scaleX(${currentTime.value / totalTime.value});`;
 })
 
 const decreaseTime = () => {
@@ -85,13 +88,30 @@ onUnmounted(stopTimer);
     border: 1px solid $clear-1;
     display: flex;
     justify-content: flex-end;
+    height: 2em;
+    font-size: 1rem;
+    color: $clear-1;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__bar-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1em;
+    color: $dark-3;
   }
 
   &__bar-fill {
-    background-color: $clear-5;
-    height: $size-3;
+    height: 100%;
     width: 100%;
-    transition: width 1s ease-in-out;
+    background-color: $clear-5;
+    transition: transform 1s ease-in-out;
+    transform-origin: right center;
   }
 }
 </style>
