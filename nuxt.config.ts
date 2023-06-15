@@ -33,7 +33,6 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       meta: [
-        { name: 'robots', content: 'no-index' },
         { hid: 'description', name: 'description', content: 'With SereneGrove you can create your custom guided meditation, using your favourite mindfulness exercises' },
         { property: 'og:title', content: `SereneGrove - Your custom guided meditation routine, for free` },
         { property: 'og:image', content: `/assets/img/social.png` },
