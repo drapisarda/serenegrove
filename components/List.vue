@@ -154,9 +154,10 @@ watch(steps, (newSteps: number[]) => {
     }
 
     .card-header-title {
-      font-size: clamp(0.7em, 5vw, 1.5em);
+      font-size: clamp(1em, 4vw + 1rem, 1.5em);
       padding: calc($size-7/2) $size-7;
       margin-bottom: 0;
+      white-space: nowrap;
     }
 
     button svg {
@@ -207,12 +208,13 @@ watch(steps, (newSteps: number[]) => {
 
     ul {
       display: grid;
-      column-gap: $size-4;
+      column-gap: $size-5;
       row-gap: $size-4;
-      grid-template-columns: repeat(auto-fit, minmax(calc(#{$tablet}/4), 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(calc(50% - #{$size-4*2}), 1fr));
 
-      @media (min-width: $tablet) {
+      @media (min-width: $desktop) {
         grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+        column-gap: $size-4;
       }
     }
 
