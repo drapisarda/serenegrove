@@ -14,7 +14,7 @@
             Everywhere you are.
           </h3>
           <p>
-            <strong>SereneGrove</strong> allows you to create your very own routine. With your favourite exercises, in the
+            <strong>SereneGrove</strong> allows you to create your very own guided meditation routine. With your favourite exercises, in the
             order you like the most, to have where and when you prefere.
           </p>
           <p>
@@ -22,7 +22,7 @@
           </p>
           <ul>
             <li>Stress relief</li>
-            <li>Mental strenght</li>
+            <li>Mental strength</li>
             <li>Resilience in everyday life</li>
             <li>Calm</li>
             <li>Better sleep quality</li>
@@ -41,17 +41,17 @@
         How you want to meditate. When you want to meditate. For free.
       </h3>
       <p class="subtitle">
-        Premium meditation tools can be good and full of usefull features. But the core of meditation is very small.
+        Premium meditation tools can be good and full of useful features. But the core of meditation is very small.
         It's all about <strong>practice</strong>.
       </p>
       <p>
         Meditation should be <strong>free and available</strong> for everybody. Either you are and experienced or beginner
-        practicioner of meditation, we have something for you.
+        practitioner of meditation, we have something for you.
       </p>
       <p>
         We created this website to give to the community a tool <strong>without all the fuss and effective in its
           use</strong>, that you can use <strong> now and for free</strong>.
-        Just setup your favourite routine, sit confortable, and start your meditation routine.
+        Just setup your favourite routine, sit comfortable, and start your meditation routine.
       </p>
     </div>
   </section>
