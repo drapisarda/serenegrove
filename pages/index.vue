@@ -15,7 +15,7 @@
           </h3>
           <p>
             <strong>SereneGrove</strong> allows you to create your very own guided meditation routine. With your favourite exercises, in the
-            order you like the most, to have where and when you prefere.
+            order you like the most, to have where and when you prefer.
           </p>
           <p>
             A regular meditation can help you achieving
