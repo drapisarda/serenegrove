@@ -3,10 +3,10 @@
     <div class="player__playing"
       :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
       <div class="player__content">
-        <div class="player__carousel section">
+        <div class="player__top section">
           <div class="container">
             <div class="player__feedback hide-default" :class="{ 'show': stopStatus && visibleStatus }">
-              <FeedbackRequest/>
+              <FeedbackRequest />
             </div>
             <Loader v-if="!stopStatus" message="Your meditation is loading..." />
             <RoutineCarousel :class="{ 'hide': stopStatus && visibleStatus }" :currentStepIndex="currentIndex"
@@ -16,6 +16,9 @@
         <div class="player__time section" :class="{ 'hide': stopStatus }">
           <RoutineTimer :time="routineDuration" :start="!pauseStatus" :stop="stopStatus" />
         </div>
+        <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"
+          @pause="updateAudioStatus">
+        </audio>
       </div>
       <div class="player__playing-actions section">
         <div class="container is-max-desktop">
@@ -26,14 +29,15 @@
                 <div>Play</div>
               </button>
             </div>
-            <div class="column is-6  player__action player__action--play-pause column" v-show="!pauseStatus && !stopStatus">
+            <div class="column is-6  player__action player__action--play-pause column"
+              v-show="!pauseStatus && !stopStatus">
               <button class="button" @click="pause">
                 <Pause />
                 <div> Pause </div>
               </button>
             </div>
             <div v-if="!stopStatus" class="column is-6 player__action player__action--stop column">
-              <button  class="button" @click="stop">
+              <button class="button" @click="stop">
                 <Stop />
                 <div>Stop</div>
               </button>
@@ -66,9 +70,6 @@
           </div>
         </div>
       </ClientOnly>
-      <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"
-        @pause="updateAudioStatus">
-      </audio>
     </div>
   </div>
 </template>
@@ -259,7 +260,7 @@ const stop = () => {
     justify-content: center;
   }
 
-  &__carousel {
+  &__top {
     flex: 1;
     overflow: hidden;
     display: flex;
@@ -342,7 +343,7 @@ const stop = () => {
     animation: gradient 15s ease infinite;
 
     &:not(#{$root}__playing--visible) {
-      > * {
+      >* {
         opacity: 0;
       }
     }
@@ -353,6 +354,7 @@ const stop = () => {
       font-size: $size-4;
       padding-left: $size-6;
       padding-right: $size-6;
+
       @media (min-width: $miniMobile) {
         padding-left: $size-5;
         padding-right: $size-5;
