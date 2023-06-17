@@ -88,11 +88,13 @@ import Plus from '@/src/assets/img/icons/plus.svg';
 import Bin from '@/src/assets/img/icons/bin.svg';
 import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
 import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
+import { clipHtml } from "@/composables/clipHtml";
 
 import { ref, watch } from "vue";
 const modal = ref(null);
 
 let modalIsOpen = ref(false);
+clipHtml(modalIsOpen);
 const toggleModal = () => {
   modalIsOpen.value = !modalIsOpen.value;
   if (!modalIsOpen.value || !modal.value) return;
@@ -103,14 +105,6 @@ const toggleModal = () => {
 const closeModal = () => {
   modalIsOpen.value = false;
 }
-
-watch(modalIsOpen, (newValue) => {
-  if (newValue) {
-    document.documentElement.classList.add('is-clipped');
-  } else {
-    document.documentElement.classList.remove('is-clipped');
-  }
-})
 
 const { setToastMessage } = useGlobalStore();
 

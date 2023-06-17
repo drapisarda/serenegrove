@@ -81,6 +81,7 @@ import { ref, computed, watch } from "vue";
 import Play from "@/src/assets/img/icons/play-button.svg";
 import Pause from "@/src/assets/img/icons/pause-button.svg";
 import Stop from "@/src/assets/img/icons/stop-button.svg";
+import { clipHtml } from "@/composables/clipHtml";
 
 const baseURL = import.meta.env.BASE_URL;
 const debugAudio = `${baseURL}/assets/audio/1.mp3`;
@@ -107,6 +108,7 @@ const pauseStatus = ref(true);
 const stopStatus = ref(true);
 const loadedStatus = ref(false);
 const visibleStatus = ref(false);
+clipHtml(visibleStatus);
 const playing = ref<HTMLAudioElement>();
 const audio = ref<HTMLAudioElement>();
 const audioUrl = ref<string | null>(null);
@@ -194,14 +196,6 @@ const loadAllSteps = async () => {
     }
   }));
 }
-
-watch(visibleStatus, (newValue) => {
-  if (newValue) {
-    document.documentElement.classList.add('is-clipped');
-  } else {
-    document.documentElement.classList.remove('is-clipped');
-  }
-})
 
 const play = async () => {
   stopStatus.value = false;
