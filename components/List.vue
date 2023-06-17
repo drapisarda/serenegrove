@@ -4,79 +4,79 @@
       <template #fallback>
         <Loader />
       </template>
-    <div class="steps-list__list steps-list__list--routine block">
-      <ul>
-        <li class="card" :class="{ 'mb-4': index !== steps.length - 1 }" v-for="(step, index) in routineSteps" :key="index">
-          <header class="card-header">
-            <div class="card-image">
-              <Icon :name="step.icon"/>
-            </div>
-            <p class="card-header-title">
-              {{ step.name }}
-            </p>
-            <button @click="() => moveStep(index, -1)" class="card-header-icon"
-              :class="{ 'card-header-icon--inactive': index === 0 }" aria-label="move up">
-              <UpShevron/>
-            </button>
-            <button @click="() => moveStep(index, 1)" class="card-header-icon"
-              :class="{ 'card-header-icon--inactive': index === steps.length - 1 }" aria-label="move down">
-              <DownShevron/>
-            </button>
-            <button class="card-header-icon" aria-label="remove element" @click="() => removeStep(step.name, index)">
-              <Bin />
-            </button>
-          </header>
-        </li>
-      </ul>
-    </div>
-    <div class="steps-list__add-button block">
-      <button class="button is-large add-button is-primary" @click="toggleModal">
-        <Plus />
-        Add steps to your routine
-      </button>
-    </div>
-    <div class="modal" :class="{ 'is-active': modalIsOpen }" @keydown.esc="closeModal" tabindex="0" ref="modal">
-      <div class="modal-background" @click="toggleModal"></div>
-      <div class="modal-close" @click="toggleModal"></div>
-      <div class="modal-content section">
-        <h3 class="is-size-3"> Add steps to your routine </h3>
-        <div class="steps-list__list steps-list__list--options">
-          <p>
-          <ul>
-            <li v-for="(step, index) in stepsOptions" :key="index">
-              <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }">
-                <div class="card-image">
-                  <Icon :name="step.icon"/>
-                </div>
-                <header class="card-header">
-                  <p class="card-header-title">
-                    {{ step.name }}
-                    <!-- - {{ step.duration / 1000 }}s -->
-                  </p>
-                </header>
-                <div class="card-content">
-                  <div class="content">
-                    <p>
-                      {{ step.description }}
+      <div class="steps-list__list steps-list__list--routine block">
+        <ul>
+          <li class="card" :class="{ 'mb-4': index !== steps.length - 1 }" v-for="(step, index) in routineSteps"
+            :key="index">
+            <header class="card-header">
+              <div class="card-image">
+                <Icon :name="step.icon" />
+              </div>
+              <p class="card-header-title">
+                {{ step.name }}
+              </p>
+              <button @click="() => moveStep(index, -1)" class="card-header-icon"
+                :class="{ 'card-header-icon--inactive': index === 0 }" aria-label="move up">
+                <UpShevron />
+              </button>
+              <button @click="() => moveStep(index, 1)" class="card-header-icon"
+                :class="{ 'card-header-icon--inactive': index === steps.length - 1 }" aria-label="move down">
+                <DownShevron />
+              </button>
+              <button class="card-header-icon" aria-label="remove element" @click="() => removeStep(step.name, index)">
+                <Bin />
+              </button>
+            </header>
+          </li>
+        </ul>
+      </div>
+      <div class="steps-list__add-button block">
+        <button class="button is-large add-button is-primary" @click="toggleModal">
+          <Plus />
+          Add steps to your routine
+        </button>
+      </div>
+      <div class="modal" :class="{ 'is-active': modalIsOpen }" @keydown.esc="closeModal" tabindex="0" ref="modal">
+        <div class="modal-background" @click="toggleModal"></div>
+        <div class="modal-close" @click="toggleModal"></div>
+        <div class="modal-content section">
+          <h3 class="is-size-3"> Add steps to your routine </h3>
+          <div class="steps-list__list steps-list__list--options">
+            <p>
+            <ul>
+              <li v-for="(step, index) in stepsOptions" :key="index">
+                <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }">
+                  <div class="card-image">
+                    <Icon :name="step.icon" />
+                  </div>
+                  <header class="card-header">
+                    <p class="card-header-title">
+                      {{ step.name }}
+                      <!-- - {{ step.duration / 1000 }}s -->
                     </p>
+                  </header>
+                  <div class="card-content">
+                    <div class="content">
+                      <p>
+                        {{ step.description }}
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <button class="add-button button is-primary" aria-label="add element" @click="() => addStep(step)">
+                      <Plus />
+                      <span>
+                        Add to your routine
+                      </span>
+                    </button>
                   </div>
                 </div>
-                <div class="card-footer">
-                  <button class="add-button button is-primary" aria-label="add element"
-                    @click="() => addStep(step)">
-                    <Plus />
-                    <span>
-                      Add to your routine
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </li>
-          </ul>
-          </p>
+              </li>
+            </ul>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
     </ClientOnly>
   </div>
 </template>
@@ -90,19 +90,27 @@ import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
 import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
 
 import { ref, watch } from "vue";
-const modal  = ref(null);
+const modal = ref(null);
 
 let modalIsOpen = ref(false);
 const toggleModal = () => {
   modalIsOpen.value = !modalIsOpen.value;
-  if (!modalIsOpen.value || ! modal.value) return;
-  
+  if (!modalIsOpen.value || !modal.value) return;
+
   modal.value.focus();
 };
 
 const closeModal = () => {
   modalIsOpen.value = false;
 }
+
+watch(modalIsOpen, (newValue) => {
+  if (newValue) {
+    document.documentElement.classList.add('is-clipped');
+  } else {
+    document.documentElement.classList.remove('is-clipped');
+  }
+})
 
 const { setToastMessage } = useGlobalStore();
 
@@ -138,6 +146,7 @@ watch(steps, (newSteps: number[]) => {
 
   &__list {
     overflow: visible;
+
     .card-image {
       padding: $size-7;
       flex-shrink: 0;
@@ -156,6 +165,7 @@ watch(steps, (newSteps: number[]) => {
       svg {
         width: auto;
         height: $size-3;
+
         @media (min-width: $tablet) {
           height: $size-2;
         }

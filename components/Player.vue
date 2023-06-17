@@ -195,6 +195,14 @@ const loadAllSteps = async () => {
   }));
 }
 
+watch(visibleStatus, (newValue) => {
+  if (newValue) {
+    document.documentElement.classList.add('is-clipped');
+  } else {
+    document.documentElement.classList.remove('is-clipped');
+  }
+})
+
 const play = async () => {
   stopStatus.value = false;
   pauseStatus.value = false;
