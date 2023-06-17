@@ -36,10 +36,10 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       meta: [
-        { hid: 'description', name: 'description', content: 'With SereneGrove you can create your custom guided meditation, using your favourite mindfulness exercises' },
+        { hid: 'description', name: 'description', content: 'With SereneGrove you can create your custom guided meditation, using your favorite mindfulness exercises' },
         { property: 'og:title', content: process.env.TITLE },
         { property: 'og:image', content: `/assets/img/social.png` },
-        { property: 'og:description', content: 'With SereneGrove you can create your custom guided meditation, using your favourite mindfulness exercises' },
+        { property: 'og:description', content: 'With SereneGrove you can create your custom guided meditation, using your favorite mindfulness exercises' },
         { name: 'twitter:card', content: 'summary' },
       ],
       title: process.env.TITLE,

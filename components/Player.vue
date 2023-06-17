@@ -123,7 +123,7 @@ const emptyRoutine = computed((): Boolean => {
 const playNext = async () => {
   setTimeout(() => {
     currentIndex.value++
-    if (!currentStep.value) { // mediatation ends
+    if (!currentStep.value) { // meditation ends
       stop();
       return;
     }
@@ -200,7 +200,7 @@ const play = async () => {
   pauseStatus.value = false;
   visibleStatus.value = true;
   routineDuration.value = getRoutineDuration();
-  // pause/play behaviour
+  // pause/play behavior
   if (currentStep.value) {
     audio.value?.play();
     return;
