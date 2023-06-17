@@ -14,7 +14,7 @@
             Everywhere you are.
           </h3>
           <p>
-            <strong>SereneGrove</strong> allows you to create your very own guided meditation routine. With your favourite exercises, in the
+            <strong>SereneGrove</strong> allows you to create your very own guided meditation routine. With your favorite exercises, in the
             order you like the most, to have where and when you prefer.
           </p>
           <p>
@@ -51,7 +51,7 @@
       <p>
         We created this website to give to the community a tool <strong>without all the fuss and effective in its
           use</strong>, that you can use <strong> now and for free</strong>.
-        Just setup your favourite routine, sit comfortable, and start your meditation routine.
+        Just setup your favorite routine, sit comfortable, and start your meditation routine.
       </p>
     </div>
   </section>
