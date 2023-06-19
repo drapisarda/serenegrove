@@ -7,12 +7,12 @@
       <p class="card-header-title">
         {{ itemName }}
       </p>
-      <button @click="moveUp" class="card-header-icon"
-        :class="{ 'card-header-icon--inactive': isFirst }" aria-label="move up">
+      <button @click="moveUp" class="card-header-icon" :class="{ 'card-header-icon--inactive': isFirst }"
+        aria-label="move up">
         <UpShevron />
       </button>
-      <button @click="moveDown" class="card-header-icon"
-        :class="{ 'card-header-icon--inactive': isLast }" aria-label="move down">
+      <button @click="moveDown" class="card-header-icon" :class="{ 'card-header-icon--inactive': isLast }"
+        aria-label="move down">
         <DownShevron />
       </button>
       <button class="card-header-icon" aria-label="remove element" @click="remove">
@@ -23,12 +23,16 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, ref, watch } from "vue";
+import { defineProps } from "vue";
 import Bin from '@/src/assets/img/icons/bin.svg';
 import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
 import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
 import { useRoutineStore } from "@/store/routine";
+import { useGlobalStore, ToastStyles } from "@/store/global";
 
+const { setToastMessage } = useGlobalStore();
+
+// TODO use step
 const props = defineProps([
   'itemName',
   'icon',
@@ -47,14 +51,22 @@ const moveDown = () => {
   moveStep(props.index, 1);
 };
 
-const remove = () => removeStep(props.index);
+const remove = () => {
+  removeStep(props.index)
+  setToastMessage(`Step "${props.itemName}" removed from the routine`, ToastStyles.Warning);
+};
 </script>
 
 <style lang="scss" scoped>
 @import "@/style/vars.scss";
 
 .card {
-  overflow: visible;
+  box-shadow: 0 0.5em 1em -0.125em hsla(0, 0%, 4%, .1), 0 0 0 1px hsla(0, 0%, 4%, .02);
+
+  +& {
+    margin-bottom: $size-5;
+  }
+
 
   .card-image {
     padding: $size-7;
@@ -79,8 +91,22 @@ const remove = () => removeStep(props.index);
       }
     }
   }
+  .card-header {
+    display: flex;
+    background-color: $clear-1;
+    border-radius: $size-8;
+    box-shadow: 0 0.125em 0.25em hsla(0,0%,4%,.1);
+
+    button {
+      border: none;
+      background: transparent;
+    }
+  }
 
   .card-header-title {
+    flex: 1;
+    display: flex;
+    align-items: center;
     font-size: clamp(1rem, 3vw, 1.6rem);
     padding: calc($size-7/2) $size-7;
     margin-bottom: 0;
@@ -98,29 +124,15 @@ const remove = () => removeStep(props.index);
     }
   }
 
-  .card-header {
-    display: flex;
-    background-color: $clear-1;
-
-    button {
-      border: none;
-      background: transparent;
-    }
-  }
-
-  .card-header-title {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-
   .card-header-icon {
     flex-shrink: 0;
+    cursor: pointer;
   }
 
   .card-header-icon--inactive {
     opacity: 0.3;
     pointer-events: none;
+    cursor: default;
   }
 }
 </style>

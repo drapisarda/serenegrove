@@ -22,33 +22,7 @@
           <div class="steps-list__list steps-list__list--options">
             <p>
             <ul>
-              <li v-for="(step, index) in stepsOptions" :key="index">
-                <div class="card">
-                  <div class="card-image">
-                    <Icon :name="step.icon" />
-                  </div>
-                  <header class="card-header">
-                    <p class="card-header-title">
-                      {{ step.name }}
-                    </p>
-                  </header>
-                  <div class="card-content">
-                    <div class="content">
-                      <p>
-                        {{ step.description }}
-                      </p>
-                    </div>
-                  </div>
-                  <div class="card-footer">
-                    <button class="add-button button is-primary" aria-label="add element" @click="() => addStep(step)">
-                      <Plus />
-                      <span>
-                        Add to your routine
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </li>
+              <ListStep v-for="(step, index) in stepsOptions" :key="index" :step="step"/>
             </ul>
             </p>
           </div>
@@ -60,24 +34,11 @@
   
 <script lang="ts" setup>
 import { useRoutineStore, Step } from "@/store/routine";
-import { useGlobalStore, ToastStyles } from "@/store/global";
 import Plus from '@/src/assets/img/icons/plus.svg';
 import { ref, watch } from "vue";
 
-const { setToastMessage } = useGlobalStore();
-
-const { steps, stepsOptions, addStepAtTheBottom, removeStep: removeStepStore, moveStep, getRoutineSteps } =
+const { steps, stepsOptions, getRoutineSteps } =
   useRoutineStore();
-
-const addStep = (step: Step) => {
-  addStepAtTheBottom(step);
-  setToastMessage(`Step "${step.name}" added to the routine`, ToastStyles.Success);
-};
-
-const removeStep = (name: string, index: number) => {
-  removeStepStore(index);
-  setToastMessage(`Step "${name}" removed from the routine`, ToastStyles.Warning);
-}
 
 const routineSteps = ref(getRoutineSteps());
 watch(steps, (newSteps: number[]) => {
