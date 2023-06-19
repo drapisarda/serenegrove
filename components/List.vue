@@ -113,13 +113,13 @@ watch(steps, (newSteps: number[]) => {
   $root: &;
   margin-top: $size-2;
 
+  ul {
+    list-style: none;
+  }
+
   .modal {
     text-align: center;
     margin-top: $size-3;
-  }
-
-  ul {
-    list-style: none;
   }
 
   &__list {
@@ -138,7 +138,6 @@ watch(steps, (newSteps: number[]) => {
       @media (min-width: $tablet) {
         padding: $size-6;
       }
-
 
       svg {
         width: auto;
@@ -221,21 +220,16 @@ watch(steps, (newSteps: number[]) => {
       }
     }
 
-    .card-header-icon {
-      justify-content: space-around;
-      flex: 0;
-    }
-
     ul {
       display: grid;
       column-gap: $size-5;
       row-gap: $size-4;
       grid-template-columns: 100%;
-      
+
       @media (min-width: $miniMobile) {
         grid-template-columns: repeat(auto-fit, minmax(calc(50% - #{$size-4*2}), 1fr));
-
       }
+
       @media (min-width: $tablet) {
         grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
         column-gap: $size-4;
@@ -276,4 +270,5 @@ watch(steps, (newSteps: number[]) => {
     justify-content: center;
   }
 }
+
 </style>
