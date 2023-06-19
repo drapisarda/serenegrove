@@ -1,47 +1,11 @@
 <template>
-  <section class="hero hero--home">
-    <div class="hero-body">
-      <div class="row is-variable">
-        <div class="col-xs hero__bg">
-          <Logo />
-        </div>
-        <div class="col-xs hero__claim">
-          <h1 class="is-spaced">
-            Your custom guided meditation routine.
-          </h1>
-          <h3>
-            Ready when you are. <br>
-            Everywhere you are.
-          </h3>
-          <p>
-            <strong>SereneGrove</strong> allows you to create your very own guided meditation routine. With your favorite exercises, in the
-            order you like the most, to have where and when you prefer.
-          </p>
-          <p>
-            A regular meditation can help you achieving
-          </p>
-          <ul>
-            <li>Stress relief</li>
-            <li>Mental strength</li>
-            <li>Resilience in everyday life</li>
-            <li>Calm</li>
-            <li>Better sleep quality</li>
-          </ul>
-          <p class="has-text-centered">
-            <a class="button is-primary" href="#routine"> Start Now </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <Hero />
   <section class="section">
     <div class="container is-max-widescreen">
       <h3>
         How you want to meditate. When you want to meditate. For free.
       </h3>
       <p class="subtitle">
-        Premium meditation tools can be good and full of useful features. But the core of meditation is very small.
         It's all about <strong>practice</strong>.
       </p>
       <p>
@@ -95,48 +59,4 @@
   <Toast />
 </template>
 
-<style lang="scss">
-@import "@/style/vars.scss";
-
-.hero {
-  min-height: 80svh;
-
-  .subtitle {
-    color: $clear-2;
-  }
-
-  &-body {
-    background-color: $dark-5;
-  }
-
-  @media (min-width: $tablet) {
-    min-height: 25svh;
-  }
-
-  .title {
-    color: $clear-1;
-  }
-
-  ul {
-    list-style: disc;
-    padding-left: 1em;
-  }
-
-  &__bg {
-    background: url('/assets/img/forest_bg.webp') no-repeat top center $bg;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .logo {
-    height: 25vh;
-
-    @media (min-width: $tablet) {
-      height: 300px;
-
-    }
-  }
-}
-</style>
+<script lang="ts"></script>
