@@ -22,27 +22,27 @@
       </div>
       <div class="player__playing-actions section">
         <div class="container is-max-desktop">
-          <div class="player__actions columns is-mobile" ref="playing">
-            <div class="column is-6 player__action player__action--play-pause column" v-show="pauseStatus && !stopStatus">
+          <div class="player__actions row" ref="playing">
+            <div class="col-xs-6 player__action player__action--play-pause" v-show="pauseStatus && !stopStatus">
               <button class="button" @click="play">
                 <Play />
                 <div>Play</div>
               </button>
             </div>
-            <div class="column is-6  player__action player__action--play-pause column"
+            <div class="col-xs-6 player__action player__action--play-pause"
               v-show="!pauseStatus && !stopStatus">
               <button class="button" @click="pause">
                 <Pause />
                 <div> Pause </div>
               </button>
             </div>
-            <div v-if="!stopStatus" class="column is-6 player__action player__action--stop column">
+            <div v-if="!stopStatus" class="col-xs-6 player__action player__action--stop">
               <button class="button" @click="stop">
                 <Stop />
                 <div>Stop</div>
               </button>
             </div>
-            <div v-if="stopStatus" class="column player__action player__action--stop column">
+            <div v-if="stopStatus" class="col-xs-6 player__action player__action--stop">
               <button class="button" @click="stopAndClose">
                 End your meditation
               </button>

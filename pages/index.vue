@@ -1,15 +1,15 @@
 <template>
   <section class="hero hero--home">
     <div class="hero-body">
-      <div class="columns is-6 is-variable">
-        <div class="column hero__bg">
+      <div class="row is-variable">
+        <div class="col-xs hero__bg">
           <Logo />
         </div>
-        <div class="column hero__claim">
-          <h1 class="is-spaced is-2">
+        <div class="col-xs hero__claim">
+          <h1 class="is-spaced">
             Your custom guided meditation routine.
           </h1>
-          <h3 class="is-4">
+          <h3>
             Ready when you are. <br>
             Everywhere you are.
           </h3>

@@ -1,10 +1,8 @@
-@import '../node_modules/bulma/sass/utilities/initial-variables.sass';
 // https://colorhunt.co/palette/fff2ccffd966f4b183dfa67b
 $primary: #FFF2CC;
 $secondary: #FFD966;
 $tertiary: #F4B183;
 $quaternary: #DFA67B;
-
 
 $dark-1: #61876E;
 $dark-2: #D5E7DE;
@@ -16,6 +14,23 @@ $clear-2: #FEF8C6;
 $clear-3: #FDF5BD;
 $clear-4: #FCCAB2;
 $clear-5: #FAB99E;
+
+$white: #FFFFFF;
+
+$size-1: 3rem !default;
+$size-2: 2.5rem !default;
+$size-3: 2rem !default;
+$size-4: 1.5rem !default;
+$size-5: 1.25rem !default;
+$size-6: 1rem !default;
+$size-7: 0.75rem !default;
+
+$gap: 32px !default;
+$miniMobile: 400px !default;
+$tablet: 769px !default;
+$desktop: 960px + (2 * $gap) !default;
+$widescreen: 1152px + (2 * $gap) !default;
+$fullhd: 1344px + (2 * $gap) !default;
 
 $bg: $dark-5;
 $label-color: $clear-1;
@@ -32,5 +47,3 @@ $playerZIndex: 32;
 $modalZIndex: 31;
 $toastZIndex: 32;
 $modal-close-dimensions: $size-3;
-
-$miniMobile: 400px;

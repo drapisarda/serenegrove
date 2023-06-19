@@ -6,8 +6,7 @@
       </template>
       <div class="steps-list__list steps-list__list--routine block">
         <ul>
-          <li class="card" :class="{ 'mb-4': index !== steps.length - 1 }" v-for="(step, index) in routineSteps"
-            :key="index">
+          <li class="card" v-for="(step, index) in routineSteps" :key="index">
             <header class="card-header">
               <div class="card-image">
                 <Icon :name="step.icon" />
@@ -30,29 +29,24 @@
           </li>
         </ul>
       </div>
-      <div class="steps-list__add-button block">
-        <button class="button is-large add-button is-primary" @click="toggleModal">
+      <Modal>
+        <template v-slot:button-text>
           <Plus />
           Add steps to your routine
-        </button>
-      </div>
-      <div class="modal" :class="{ 'is-active': modalIsOpen }" @keydown.esc="closeModal" tabindex="0" ref="modal">
-        <div class="modal-background" @click="toggleModal"></div>
-        <div class="modal-close" @click="toggleModal"></div>
-        <div class="modal-content section">
-          <h3 class="is-size-3"> Add steps to your routine </h3>
+        </template>
+        <template v-slot:modal-content>
+          <h3 class="steps-list__modal-title"> Add steps to your routine </h3>
           <div class="steps-list__list steps-list__list--options">
             <p>
             <ul>
               <li v-for="(step, index) in stepsOptions" :key="index">
-                <div class="card" :class="{ 'mb-4': index !== stepsOptions.length - 1 }">
+                <div class="card">
                   <div class="card-image">
                     <Icon :name="step.icon" />
                   </div>
                   <header class="card-header">
                     <p class="card-header-title">
                       {{ step.name }}
-                      <!-- - {{ step.duration / 1000 }}s -->
                     </p>
                   </header>
                   <div class="card-content">
@@ -75,8 +69,8 @@
             </ul>
             </p>
           </div>
-        </div>
-      </div>
+        </template>
+      </Modal>
     </ClientOnly>
   </div>
 </template>
@@ -88,23 +82,8 @@ import Plus from '@/src/assets/img/icons/plus.svg';
 import Bin from '@/src/assets/img/icons/bin.svg';
 import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
 import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
-import { clipHtml } from "@/composables/clipHtml";
 
 import { ref, watch } from "vue";
-const modal = ref(null);
-
-let modalIsOpen = ref(false);
-clipHtml(modalIsOpen);
-const toggleModal = () => {
-  modalIsOpen.value = !modalIsOpen.value;
-  if (!modalIsOpen.value || !modal.value) return;
-
-  modal.value.focus();
-};
-
-const closeModal = () => {
-  modalIsOpen.value = false;
-}
 
 const { setToastMessage } = useGlobalStore();
 
@@ -133,6 +112,11 @@ watch(steps, (newSteps: number[]) => {
 .steps-list {
   $root: &;
   margin-top: $size-2;
+
+  .modal {
+    text-align: center;
+    margin-top: $size-3;
+  }
 
   ul {
     list-style: none;
@@ -184,9 +168,29 @@ watch(steps, (newSteps: number[]) => {
       }
     }
 
+    .card-header {
+      display: flex;
+      background-color: $clear-1;
+
+      button {
+        border: none;
+        background: transparent;
+      }
+    }
+
+    .card-header-title {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
     .card-header-icon {
       flex-shrink: 0;
     }
+  }
+
+  &__modal-title {
+    color: $white;
   }
 
   &__list--options {
@@ -200,6 +204,8 @@ watch(steps, (newSteps: number[]) => {
       height: 100%;
       display: flex;
       flex-direction: column;
+      margin-bottom: $size-3;
+      background-color: $white;
     }
 
     .card-image {
@@ -224,9 +230,13 @@ watch(steps, (newSteps: number[]) => {
       display: grid;
       column-gap: $size-5;
       row-gap: $size-4;
-      grid-template-columns: repeat(auto-fit, minmax(calc(50% - #{$size-4*2}), 1fr));
+      grid-template-columns: 100%;
+      
+      @media (min-width: $miniMobile) {
+        grid-template-columns: repeat(auto-fit, minmax(calc(50% - #{$size-4*2}), 1fr));
 
-      @media (min-width: $desktop) {
+      }
+      @media (min-width: $tablet) {
         grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
         column-gap: $size-4;
       }
@@ -260,30 +270,10 @@ watch(steps, (newSteps: number[]) => {
     pointer-events: none;
   }
 
-  &__add-button button {
-    margin: auto;
-
-    span {
-      margin-right: $size-7;
-    }
-  }
-
   .add-button {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .modal-content {
-    display: flex;
-    flex-direction: column;
-    max-height: initial;
-
-    #{$root}__list {
-      max-height: 100%;
-      overflow: scroll;
-      flex: 1;
-    }
   }
 }
 </style>

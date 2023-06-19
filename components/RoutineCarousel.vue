@@ -1,8 +1,8 @@
 <template>
   <div class="routine-carousel">
-    <ul class="columns is-mobile">
-      <li class="column" v-for="(step, index) in carouselSteps" :key="index"
-        :class="{ 'is-6': index === 1, 'is-3': index !== 1 }">
+    <ul class="row">
+      <li v-for="(step, index) in carouselSteps" :key="index"
+        :class="{ 'col-xs-6': index === 1, 'col-xs-3': index !== 1 }">
         <Icon v-if="step" :name="step.icon" />
       </li>
     </ul>
@@ -34,13 +34,13 @@ const carouselSteps = computed((): (Step | undefined)[] => [
 @import "@/style/vars.scss";
 
 .routine-carousel {
-  .columns {
+  .row {
     margin: auto;
     width: 100%;
     height: 100%;
   }
 
-  .column {
+  .row > li {
     display: flex;
     justify-content: center;
     align-items: center;

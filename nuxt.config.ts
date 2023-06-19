@@ -64,5 +64,5 @@ export default defineNuxtConfig({
       feedback_form: process.env.FEEDBACK_FORM,
       title: process.env.TITLE
     }
-  }
+  },
 })
