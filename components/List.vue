@@ -6,27 +6,10 @@
       </template>
       <div class="steps-list__list steps-list__list--routine block">
         <ul>
-          <li class="card" v-for="(step, index) in routineSteps" :key="index">
-            <header class="card-header">
-              <div class="card-image">
-                <Icon :name="step.icon" />
-              </div>
-              <p class="card-header-title">
-                {{ step.name }}
-              </p>
-              <button @click="() => moveStep(index, -1)" class="card-header-icon"
-                :class="{ 'card-header-icon--inactive': index === 0 }" aria-label="move up">
-                <UpShevron />
-              </button>
-              <button @click="() => moveStep(index, 1)" class="card-header-icon"
-                :class="{ 'card-header-icon--inactive': index === steps.length - 1 }" aria-label="move down">
-                <DownShevron />
-              </button>
-              <button class="card-header-icon" aria-label="remove element" @click="() => removeStep(step.name, index)">
-                <Bin />
-              </button>
-            </header>
-          </li>
+          <ListItem class="card" v-for="(step, index) in routineSteps" 
+            :key="index" :icon="step.icon" :itemName="step.name" :index="index"
+            :is-first="index===0" :is-last="index===routineSteps.length"
+          />
         </ul>
       </div>
       <Modal>
@@ -79,10 +62,6 @@
 import { useRoutineStore, Step } from "@/store/routine";
 import { useGlobalStore, ToastStyles } from "@/store/global";
 import Plus from '@/src/assets/img/icons/plus.svg';
-import Bin from '@/src/assets/img/icons/bin.svg';
-import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
-import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
-
 import { ref, watch } from "vue";
 
 const { setToastMessage } = useGlobalStore();
@@ -100,9 +79,9 @@ const removeStep = (name: string, index: number) => {
   setToastMessage(`Step "${name}" removed from the routine`, ToastStyles.Warning);
 }
 
-let routineSteps = getRoutineSteps();
+const routineSteps = ref(getRoutineSteps());
 watch(steps, (newSteps: number[]) => {
-  routineSteps = getRoutineSteps()
+  routineSteps.value = getRoutineSteps()
 })
 </script>
 
