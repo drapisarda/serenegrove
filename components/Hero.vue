@@ -30,7 +30,7 @@
               <li>Calm</li>
               <li>Better sleep quality</li>
             </ul>
-            <p class="has-text-centered">
+            <p>
               <a class="button is-primary" href="#routine"> Start Now </a>
             </p>
           </section>

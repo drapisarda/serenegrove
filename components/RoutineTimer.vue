@@ -1,6 +1,6 @@
 <template>
   <div class="routine-timer">
-    <div class="container is-max-desktop has-text-centered">
+    <div class="container is-max-desktop">
       {{ formattedTime }}
       <div class="routine-timer__bar" v-if="false">
         <div class="routine-timer__bar-fill" :style="remainingTimeStyle"></div>
@@ -84,6 +84,7 @@ onUnmounted(stopTimer);
 @import "@/style/vars.scss";
 
 .routine-timer {
+  text-align: center;
   &__bar {
     border: 1px solid $clear-1;
     display: flex;

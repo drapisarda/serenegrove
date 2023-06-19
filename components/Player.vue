@@ -6,7 +6,9 @@
         <div class="player__top section">
           <div class="container">
             <div class="player__feedback hide-default" :class="{ 'show': stopStatus && visibleStatus }">
-              <FeedbackRequest />
+              <div class="container">
+                <FeedbackRequest />
+              </div>
             </div>
             <Loader v-if="!stopStatus" message="Your meditation is loading..." />
             <RoutineCarousel :class="{ 'hide': stopStatus && visibleStatus }" :currentStepIndex="currentIndex"
@@ -42,7 +44,7 @@
                 <div>Stop</div>
               </button>
             </div>
-            <div v-if="stopStatus" class="col-xs-6 player__action player__action--stop">
+            <div v-if="stopStatus" class="col-ms-8 player__action player__action--stop">
               <button class="button" @click="stopAndClose">
                 End your meditation
               </button>
@@ -288,10 +290,6 @@ const stop = () => {
       height: 100%;
     }
 
-    .waveContainer {
-      display: none;
-    }
-
     #{$root}--loaded & {
       .rloader {
         display: none;
@@ -406,7 +404,6 @@ const stop = () => {
   }
 
   &__action {
-    flex: 0;
     text-align: center;
     display: inline-flex;
     align-items: center;
@@ -414,6 +411,7 @@ const stop = () => {
 
     .button {
       background: transparent;
+      border: 1px solid $white;
       color: $clear-1;
 
       svg {
@@ -424,6 +422,8 @@ const stop = () => {
 
       &:hover {
         color: $dark-1;
+
+        border-color: $dark-1;
 
         svg {
           fill: $dark-1;

@@ -1,5 +1,5 @@
 <template>
-  <div class="feedback-request">
+  <section class="feedback-request section">
     <h3>
       How you liked this meditation?
     </h3>
@@ -7,12 +7,12 @@
       We'd love to here from you. Please, share your opinion with use. Fill this 3 minutes form and help
       us to grow and make your meditations better and better.
     </p>
-    <p class="has-text-centered">
+    <p>
       <a class="button is-primary" :href="feedback_form" target="_blank">
         Give use your feedback
       </a>
     </p>
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>
