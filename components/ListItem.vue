@@ -41,7 +41,6 @@ const { moveStep, removeStep } = useRoutineStore();
 
 const moveUp = () => {
   moveStep(props.index, -1);
-  alert('move')
 };
 
 const moveDown = () => {
