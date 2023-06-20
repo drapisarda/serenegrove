@@ -6,10 +6,8 @@
       </template>
       <div class="steps-list__list steps-list__list--routine block">
         <ul>
-          <ListItem class="card" v-for="(step, index) in routineSteps" 
-            :key="index" :icon="step.icon" :itemName="step.name" :index="index"
-            :is-first="index===0" :is-last="index===routineSteps.length-1"
-          />
+          <ListItem class="card" v-for="(step, index) in routineSteps" :key="index" :icon="step.icon"
+            :itemName="step.name" :index="index" :is-first="index === 0" :is-last="index === routineSteps.length - 1" />
         </ul>
       </div>
       <Modal>
@@ -22,7 +20,7 @@
           <div class="steps-list__list steps-list__list--options">
             <p>
             <ul>
-              <ListStep v-for="(step, index) in stepsOptions" :key="index" :step="step"/>
+              <ListStep v-for="(step, index) in stepsOptions" :key="index" :step="step" />
             </ul>
             </p>
           </div>
@@ -210,5 +208,4 @@ watch(steps, (newSteps: number[]) => {
     justify-content: center;
   }
 }
-
 </style>
