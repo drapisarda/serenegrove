@@ -69,6 +69,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: $size-7;
 
   .logo {
     height: 50px;
