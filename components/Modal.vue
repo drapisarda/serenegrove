@@ -12,17 +12,17 @@
 
 <script setup>
 import { ref } from "vue";
+import { clipHtml } from "@/composables/clipHtml";
 
 const modalStatus = ref(false);
+clipHtml(modalStatus)
 
 const openModal = () => {
   modalStatus.value = true;
-  document.documentElement.classList.add('is-clipped');
 };
 
 const closeModal = () => {
   modalStatus.value = false;
-  document.documentElement.classList.remove('is-clipped');
 };
 </script>
 
