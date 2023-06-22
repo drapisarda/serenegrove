@@ -255,9 +255,15 @@ p, ul {
   }
 
   &.is-secondary {
-    color: $primaryButtonBg;
-    background-color: $primaryButtonText;
-    border: 1px solid $primaryButtonBg;
+    color: $white;
+    background-color: transparent;
+    border: 2px solid $white;
+
+    &:hover {
+      color: $dark-2;
+      background-color: $dark-3;
+      border-color: transparent;
+    }
   }
 }
 

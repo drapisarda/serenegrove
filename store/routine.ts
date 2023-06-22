@@ -18,6 +18,25 @@ export interface TimeFormat {
   seconds: string
 }
 
+interface RoutineTimeVariationType {
+  id: number,
+  label: string;
+  modifier: number;
+}
+
+export const routineTimeVariations: RoutineTimeVariationType[] = [
+  {
+    id: 0,
+    label: 'standard',
+    modifier: 1,
+  },
+  {
+    id: 1,
+    label: 'extended',
+    modifier: 2,
+  },
+];
+
 const baseURL = import.meta.env.BASE_URL;
 
 const originalState = {
@@ -33,6 +52,7 @@ const originalState = {
     { id: 3, name: 'Mantra', duration: 62, file: `${baseURL}assets/audio/mantra.mp3`, description: 'Repeat a chosen word or phrase silently in your mind to cultivate inner calm and focused awareness.', icon: `mantra`, pauseAfter: 120 },
     { id: 4, name: 'Bell sound', duration: 60, file: `${baseURL}assets/audio/bell.mp3`, description: 'Focus your attention on the sound of a bell, observing its duration, resonance, and fading away to develop concentration.', icon: `bell`, pauseAfter: 5 },
   ] as Step[],
+  routineVariation: routineTimeVariations[0] as RoutineTimeVariationType,
 }
 
 export const useRoutineStore = defineStore("mainRoutine", {
@@ -68,19 +88,30 @@ export const useRoutineStore = defineStore("mainRoutine", {
       return this.$state.stepsOptions.find((step) => step.id === id);
     },
     getRoutineSteps(): Step[] {
-      return  this.$state.steps
-      .map(stepId => this.getStep(stepId))
-      .filter((step): step is Step => typeof step !== 'undefined');
+      return this.$state.steps
+        .map(stepId => this.getStep(stepId))
+        .filter((step): step is Step => typeof step !== 'undefined');
     },
     getPlayerSteps(): Step[] {
       return [this.$state.intro]
         .concat(this.getRoutineSteps())
         .concat([this.$state.outro])
     },
-    getRoutineDuration(currentStepIndex: number = 0): number {
-      return this.getPlayerSteps().slice(currentStepIndex).reduce((acc: number, step: Step) => acc + step.duration + step.pauseAfter, 0);
+    getRoutineDuration(modifier: number = this.$state.routineVariation?.modifier): number {
+      return this.getPlayerSteps().reduce((acc: number, step: Step) => {
+        return acc + step.duration + step.pauseAfter * modifier
+      }, 0);
     },
-  }, 
+    getRoutineVariationId(): number {
+      return this.$state.routineVariation.id;
+    },
+    setRoutineVariation(routineVariationId: number) {
+      const newVariation = routineTimeVariations.find(variation => variation.id === routineVariationId) || routineTimeVariations[0];
+      this.$state.routineVariation.id = newVariation.id;
+      this.$state.routineVariation.label = newVariation.label;
+      this.$state.routineVariation.modifier = newVariation.modifier;
+    },
+  },
   persist: {
     storage: persistedState.localStorage,
   },

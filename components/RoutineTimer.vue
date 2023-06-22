@@ -1,11 +1,11 @@
 <template>
   <div class="routine-timer">
     <div class="container is-max-desktop">
-      {{ formattedTime }}
-      <div class="routine-timer__bar" v-if="false">
+      {{ formattedTime(currentTime) }}
+      <div class="routine-timer__bar" v-if="showBar">
         <div class="routine-timer__bar-fill" :style="remainingTimeStyle"></div>
         <div class="routine-timer__bar-text">
-          {{ formattedTime }}
+          {{ formattedTime(currentTime) }}
         </div>
       </div>
     </div>
@@ -14,6 +14,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onUnmounted, watch } from 'vue';
+import { formattedTime } from '@/composables/formattedTime';
 
 const props = withDefaults(defineProps<{
   time: number,
@@ -22,48 +23,35 @@ const props = withDefaults(defineProps<{
 }>(), {
   time: 0,
   start: false,
-  stop: false
+  stop: false,
 });
+
+const showBar = false;
 
 let intervalId: NodeJS.Timer | null = null;
 let currentTime = ref(props.time);
 let totalTime = ref(props.time);
 
-const formattedTime = computed(() => {
-  let remainingTime = currentTime.value;
-  const hours = Math.floor(remainingTime / 3600).toString().padStart(2, '0');
-  remainingTime %= 3600;
-  const minutes = Math.floor(remainingTime / 60).toString().padStart(2, '0');
-  remainingTime %= 60;
-  const seconds = remainingTime.toString().padStart(2, '0');
-  return hours !== '00' ? `${hours}:${minutes}:${seconds}` : `${minutes}:${seconds}`;
-});
-
 const remainingTimeStyle = computed(() => {
   return `transform: scaleX(${currentTime.value / totalTime.value});`;
 })
 
-const decreaseTime = () => {
-  if (currentTime.value > 0) currentTime.value -= 1;
-};
-
 const startTimer = () => {
   currentTime.value = props.time;
   intervalId = setInterval(() => {
-    if (props.start) decreaseTime();
+    if (props.start) currentTime.value -= 1;
   }, 1000);
 };
 
 const stopTimer = () => {
-  if (intervalId) clearInterval(intervalId);
+  if (!intervalId) return;
+
+  clearInterval(intervalId);
+  intervalId = null;
 };
 
 watch(() => props.start, (newVal) => {
-  if (newVal) {
-    startTimer();
-  } else {
-    stopTimer();
-  }
+  if (newVal && !intervalId) startTimer();
 });
 
 watch(() => props.stop, (newVal) => {

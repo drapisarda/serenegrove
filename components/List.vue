@@ -20,7 +20,7 @@
           <div class="steps-list__list steps-list__list--options">
             <p>
             <ul>
-              <ListStep v-for="(step, index) in stepsOptions" :key="index" :step="step" />
+              <ListStepItem v-for="(step, index) in stepsOptions" :key="index" :step="step" />
             </ul>
             </p>
           </div>

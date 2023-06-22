@@ -50,13 +50,13 @@ const carouselSteps = computed((): (Step | undefined)[] => [
       width: 100%;
       opacity: 0.5;
       fill: $clear-1;
-      transform: scale(0.5);
+      transform: scale(0.3);
     }
 
     &:nth-child(2) {
       svg {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(0.8);
         animation: pulse 10s ease-in-out infinite;
 
         .player__playing--paused & {
@@ -67,15 +67,15 @@ const carouselSteps = computed((): (Step | undefined)[] => [
 
       @keyframes pulse {
         0% {
-          transform: scale(1);
+          transform: scale(0.8);
         }
 
         50% {
-          transform: scale(1.2);
+          transform: scale(1);
         }
 
         100% {
-          transform: scale(1);
+          transform: scale(0.8);
         }
       }
     }
