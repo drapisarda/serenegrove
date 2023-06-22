@@ -112,9 +112,7 @@ const add = () => {
   }
 
   .card-header {
-    font-weight: bold;
     font-size: 1.2em;
-    font-family: 'Quattrocento', 'Times new roman', 'Arial', 'Helvetica', serif;
   }
   
   .card-content {

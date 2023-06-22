@@ -340,7 +340,6 @@ const stop = () => {
 
   &__page {
     position: absolute;
-    top: 15svh;
     left: 0;
     width: 100%;
   }
