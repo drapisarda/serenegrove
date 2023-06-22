@@ -1,6 +1,6 @@
 <template>
   <section id="routine" class="section section--clear">
-    <div class="container is-max-widescreen">
+    <div class="container">
       <h2>
         Create your routine. Enjoy meditation.
       </h2>

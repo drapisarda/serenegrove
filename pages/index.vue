@@ -1,7 +1,7 @@
 <template>
   <Hero />
   <section class="section">
-    <div class="container is-max-widescreen">
+    <div class="container">
       <h3>
         How you want to meditate. When you want to meditate. For free.
       </h3>
@@ -21,7 +21,7 @@
   </section>
 
   <section id="routine" class="section section--clear">
-    <div class="container is-max-widescreen">
+    <div class="container">
       <h2>
         Create your routine. Enjoy meditation.
       </h2>
@@ -35,7 +35,7 @@
   </section>
 
   <section class="section">
-    <div class="container is-max-widescreen">
+    <div class="container">
       <div class="block">
         <h2>
           Stay in touch!

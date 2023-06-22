@@ -1,7 +1,7 @@
 <template>
   <footer class="footer footer--custom">
     <div class="section">
-      <div class="container is-max-widescreen">
+      <div class="container">
         <div class="row">
           <div class="col-sm-8">
             <h3>

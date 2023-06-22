@@ -1,6 +1,6 @@
 <template>
   <li>
-    <div class="card">
+    <div class="card card--step">
       <div class="card-image">
         <Icon :name="step.icon" />
       </div>
@@ -74,7 +74,6 @@ const add = () => {
 
   .card-content {
     flex: 1;
-    padding: calc($size-7/2) $size-7;
   }
 
   button {
@@ -98,6 +97,28 @@ const add = () => {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .card-image,
+  .card-header,
+  .card-content {
+    padding: 0 $size-7;
+  }
+
+  .card-image {
+    padding-top: $size-5;
+    padding-bottom: $size-5;
+    line-height: 0;
+  }
+
+  .card-header {
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: 'Quattrocento', 'Times new roman', 'Arial', 'Helvetica', serif;
+  }
+  
+  .card-content {
+    padding-bottom: $size-6;
   }
 }
 </style>

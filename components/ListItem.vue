@@ -1,5 +1,5 @@
 <template>
-  <li class="card">
+  <li class="card card--list-item">
     <header class="card-header">
       <div class="card-image">
         <Icon :name="icon" />
@@ -66,7 +66,6 @@ const remove = () => {
   +& {
     margin-bottom: $size-5;
   }
-
 
   .card-image {
     padding: $size-7;
