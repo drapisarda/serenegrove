@@ -1,5 +1,5 @@
 <template>
-  <div class="modal">
+  <div class="modal" @keyup="handleKeys">
     <button @click="openModal" class="button is-primary is-large">
       <slot name="button-text">Open Modal</slot>
     </button>
@@ -10,12 +10,16 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import { clipHtml } from "@/composables/clipHtml";
 
 const modalStatus = ref(false);
 clipHtml(modalStatus)
+
+const handleKeys = (event: KeyboardEvent) => {
+  if (event.key==='Escape') closeModal();
+};
 
 const openModal = () => {
   modalStatus.value = true;

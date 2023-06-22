@@ -1,5 +1,5 @@
 <template>
-  <div class="player" :class="{ 'player--loaded': loadedStatus }">
+  <div class="player" :class="{ 'player--loaded': loadedStatus }" @keyup="handleKeys">
     <div class="player__playing"
       :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
       <div class="player__content">
@@ -16,7 +16,6 @@
                 </button>
               </div>
             </div>
-
 
             <div class="player__page player__page--feedback hide-default" :class="{ 'show': askFeedback }">
               <div class="container">
@@ -137,6 +136,11 @@ const currentStep = computed((): Step => {
 const emptyRoutine = computed((): Boolean => {
   return steps.length === 0;
 })
+
+const handleKeys = (event: KeyboardEvent) => {
+  console.log('key pressed')
+  if (event.key==='Escape') stopAndClose();
+};
 
 const playNext = async () => {
   setTimeout(() => {

@@ -3,8 +3,10 @@
     <h3>Chose the duration you prefer</h3>
     <div class="duration__options">
       <div class="duration__option" v-for="variation in routineTimeVariations ">
-        <input type="radio" v-model="variationChose" name="duration" :id="`${variation.label}-duration`" :value="variation.id">
-        <label class="button" :for="`${variation.label}-duration`" :class="{'is-primary': variationChose === variation.id, 'is-secondary': variationChose !== variation.id }">
+        <input type="radio" v-model="variationChose" name="duration" :id="`${variation.label}-duration`"
+          :value="variation.id">
+        <label class="button" :for="`${variation.label}-duration`"
+          :class="{ 'is-primary': variationChose === variation.id, 'is-secondary': variationChose !== variation.id}">
           {{ variation.label }} : {{ formattedTime(getRoutineDuration(variation.modifier)) }}
         </label>
       </div>
@@ -13,24 +15,20 @@
 </template>
 
 <script lang="ts" setup>
+import { onMounted } from "vue";
 import { useRoutineStore, routineTimeVariations } from "@/store/routine";
 import { formattedTime } from '@/composables/formattedTime';
 
-const { steps, routineVariation, getRoutineDuration, setRoutineVariation } = useRoutineStore();
-const variationChose = ref(routineVariation.id);
+const { routineVariation, getRoutineDuration, setRoutineVariation } = useRoutineStore();
+const variationChose = ref(0);
 
-watch(steps, () => {
-  routineDuration.value = formattedTime(getRoutineDuration());
+onMounted(() => {
+  variationChose.value = routineVariation.id;
 })
 
 watch(variationChose, () => {
   setRoutineVariation(variationChose.value);
-  routineDuration.value = formattedTime(getRoutineDuration());
 })
-
-const routineDuration = ref(formattedTime(getRoutineDuration()));
-
-const emptyRoutine = computed((): Boolean => steps.length === 0)
 </script>
 
 <style lang="scss">
@@ -38,6 +36,7 @@ const emptyRoutine = computed((): Boolean => steps.length === 0)
 
 .duration {
   visibility: visible;
+  margin-bottom: $size-3;
 
   &__option {
     margin-bottom: $size-4;

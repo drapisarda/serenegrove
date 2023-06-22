@@ -289,7 +289,11 @@ p, ul {
 
 
 .hide, .show, .hide-default, .show-default {
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out 0.2s;
+}
+
+.hide-default.show, .show-default.hide {
+  transition: opacity 0.1s ease-in-out 0;
 }
 
 .hide {
