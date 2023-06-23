@@ -4,23 +4,12 @@
       <template #fallback>
         <Loader />
       </template>
-      <BurgerMenu>
-        <template v-slot:menu-content>
-        <div class="steps-list__list steps-list__list--options">
-          <ul>
-            <ListStepItem v-for="(step, index) in stepsOptions" :key="index" :step="step" />
-          </ul>
-        </div>
-      </template>
-      <template v-slot:menu-under>
-        <div class="steps-list__list steps-list__list--routine">
-          <ul>
-            <ListItem class="card" v-for="(step, index) in routineSteps" :key="index" :icon="step.icon"
-              :itemName="step.name" :index="index" :is-first="index === 0" :is-last="index === routineSteps.length - 1" />
-          </ul>
-        </div>
-      </template>
-      </BurgerMenu>
+      <div class="steps-list__list steps-list__list--routine">
+        <ul>
+          <ListItem class="card" v-for="(step, index) in routineSteps" :key="index" :icon="step.icon"
+            :itemName="step.name" :index="index" :is-first="index === 0" :is-last="index === routineSteps.length - 1" />
+        </ul>
+      </div>
       <Modal>
         <template v-slot:button-text>
           <Plus />
@@ -61,6 +50,7 @@ watch(steps, (newSteps: number[]) => {
 .steps-list {
   $root: &;
   margin-top: $size-2;
+  overflow: hidden;
   position: relative;
 
   ul {
