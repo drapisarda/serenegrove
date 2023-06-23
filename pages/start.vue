@@ -9,7 +9,7 @@
       </p>
       <p></p>
       <Player />
-      <List />
+      <StepsList />
     </div>
   </section>
 
