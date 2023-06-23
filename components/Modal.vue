@@ -1,6 +1,6 @@
 <template>
   <div class="modal" @keyup="handleKeys">
-    <button @click="openModal" class="button is-primary is-large">
+    <button @click="openModal" class="button is-primary">
       <slot name="button-text">Open Modal</slot>
     </button>
     <dialog :open="modalStatus" class="modal__dialog">

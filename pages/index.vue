@@ -20,17 +20,14 @@
     </div>
   </section>
 
-  <section id="routine" class="section section--clear">
+  <section id="routine" class="section section--clear is-centered">
     <div class="container">
       <h2>
         Create your routine. Enjoy meditation.
       </h2>
-      <p>
-        Start by just clicking on the "Add steps to your routine" button.
-      </p>
-      <p></p>
-      <Player />
-      <List />
+      <a href="/start" class="button is-primary is-large">
+        Start now!
+      </a>
     </div>
   </section>
 

@@ -10,7 +10,7 @@
             <div class="player__page player__page--duration hide-default" :class="{ 'show': askDuration }">
               <div class="container">
                 <RoutineDuration />
-                <button class="button is-primary is-large" :class="{ 'inactive': !activeStatus }" @click="play">
+                <button class="button is-primary" :class="{ 'inactive': !activeStatus }" @click="play">
                   <Play />
                   <div>Start your meditation</div>
                 </button>
@@ -77,7 +77,7 @@
         </template>
         <div class="player__start is-centered">
           <div class="player__action">
-            <button class="button is-primary is-large" :class="{ 'inactive': emptyRoutine }" @click="display">
+            <button class="button is-primary" :class="{ 'inactive': emptyRoutine }" @click="display">
               <span v-if="emptyRoutine">
                 Add one step to start your routine
               </span>

@@ -4,24 +4,25 @@
 
 @font-face {
   font-family: 'Quattrocento';
-  src:  url('../fonts/Quattrocento/Quattrocento-Regular.ttf') format('truetype');
+  src: url('../fonts/Quattrocento/Quattrocento-Regular.ttf') format('truetype');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Quattrocento';
-  src:  url('../fonts/Quattrocento/Quattrocento-Bold.ttf') format('truetype');
+  src: url('../fonts/Quattrocento/Quattrocento-Bold.ttf') format('truetype');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'Lora';
-  src:  url('../fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype'),
+  src: url('../fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype'),
 }
 
 html {
   scroll-behavior: smooth;
-  font-size: 100%; /*16px*/
+  font-size: 100%;
+  /*16px*/
   box-sizing: border-box;
 
   &.is-clipped {
@@ -29,7 +30,9 @@ html {
   }
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -44,7 +47,11 @@ body {
   line-height: 1.75;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 3rem 0 1.38rem;
   font-family: 'Quattrocento', 'Times new roman', 'Arial', 'Helvetica', serif;
   font-weight: 600;
@@ -65,15 +72,26 @@ h1 {
   font-size: 3.052rem;
 }
 
-h2 {font-size: 2.441rem;}
+h2 {
+  font-size: 2.441rem;
+}
 
-h3 {font-size: 1.953rem;}
+h3 {
+  font-size: 1.953rem;
+}
 
-h4 {font-size: 1.563rem;}
+h4 {
+  font-size: 1.563rem;
+}
 
-h5 {font-size: 1.25rem;}
+h5 {
+  font-size: 1.25rem;
+}
 
-small, .text_small {font-size: 0.8rem;}
+small,
+.text_small {
+  font-size: 0.8rem;
+}
 
 strong {
   color: inherit;
@@ -87,7 +105,7 @@ em {
 a {
   color: $clear-2;
   text-decoration: none;
-  
+
   &:active {
     color: $clear-2;
   }
@@ -97,23 +115,13 @@ a {
   }
 }
 
-p, ul {
+p,
+ul {
   margin-bottom: 1rem;
 
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.button {
-  display: inline-flex;
-  font-family: inherit;
-  font-size: 1rem;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 4px;
-  padding: calc(.5em - 1px) 1em;
 }
 
 .container {
@@ -124,6 +132,7 @@ p, ul {
 
 .section {
   padding: $size-5 $size-6;
+
   @media (min-width: $tablet) {
     padding: $size-3 0;
   }
@@ -137,7 +146,7 @@ p, ul {
     color: $bg;
     background-color: $dark-2;
 
-    .page-content > & {
+    .page-content>& {
       background-color: $dark-2;
     }
   }
@@ -157,6 +166,15 @@ p, ul {
 }
 
 .button {
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: calc(.5em - 1px) 1em;
+
   span {
     display: flex;
     align-items: center;
@@ -169,7 +187,8 @@ p, ul {
     height: 32px;
     width: 32px;
   }
-  &.success{
+
+  &.success {
     background-color: $success;
     color: $clear-1;
   }
@@ -181,9 +200,9 @@ p, ul {
   }
 
   &.is-large {
-    @media (max-width: $tablet) {
-      font-size: $size-6;
-    }
+    font-size: 2.5em;
+    padding: $size-6 $size-4;
+    text-align: center;
   }
 
   &.is-primary {
@@ -194,11 +213,12 @@ p, ul {
 
     svg {
       fill: $primaryButtonText;
+
       path {
         fill: $primaryButtonText;
       }
     }
-    
+
     &:focus:not(:active) {
       color: $clear-1;
       border-color: $clear-1;
@@ -217,6 +237,7 @@ p, ul {
 
       svg {
         fill: $primaryButtonTextHover;
+
         path {
           fill: $primaryButtonTextHover;
         }
@@ -228,7 +249,7 @@ p, ul {
     .hero & {
       color: $dark-2;
       background-color: $dark-3;
-      
+
       &:hover,
       &:hover:not(:active) {
         color: $dark-3;
@@ -237,6 +258,7 @@ p, ul {
 
         svg {
           fill: $dark-3;
+
           path {
             fill: $dark-3;
           }
@@ -288,23 +310,31 @@ p, ul {
 }
 
 
-.hide, .show, .hide-default, .show-default {
+.hide,
+.show,
+.hide-default,
+.show-default {
   transition: opacity 1s ease-in-out 0.2s;
 }
 
-.hide-default.show, .show-default.hide {
+.hide-default.show,
+.show-default.hide {
   transition: opacity 0.1s ease-in-out 0;
 }
 
 .hide {
-  &, &.show-default {
+
+  &,
+  &.show-default {
     opacity: 0;
     pointer-events: none;
   }
 }
 
 .show {
-  &,&.hide-default {
+
+  &,
+  &.hide-default {
     opacity: 1;
     pointer-events: all;
   }
