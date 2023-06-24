@@ -53,7 +53,6 @@
       <Newsletter />
     </div>
   </section>
-  <Toast />
 </template>
 
 <script lang="ts"></script>

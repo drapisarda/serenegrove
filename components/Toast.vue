@@ -1,11 +1,9 @@
 <template>
-  <div class="toast" :class="{'toast--visible': isVisible}">
+  <div class="toast" :class="{ 'toast--visible': isVisible, [messageClass]: true }">
     <slot>
-      <div class="notification" :class="messageClass">
-        <p>
-          {{ message }}
-        </p>
-      </div>
+      <p>
+        {{ message }}
+      </p>
     </slot>
   </div>
 </template>
@@ -27,7 +25,7 @@ const displayMessage = (newMessage: ToastMessage, duration: number = 3000) => {
     clearInterval(displayInterval);
     displayInterval = undefined;
   }
-  
+
   message.value = newMessage.message;
   messageClass.value = `is-${newMessage.style ? newMessage.style : 'is-primary'}`;
   isVisible.value = true;
@@ -46,6 +44,17 @@ $spacing: 0;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s .1s;
+  padding: $size-6 $size-4;
+  background-color: $dark-1;
+  z-index: 12;
+
+  &.is-success {
+    background-color: $success;
+  }
+  &.is-warning {
+    background-color: $clear-3;
+    color: $dark-5;
+  }
 
   &.toast--visible {
     z-index: $toastZIndex;

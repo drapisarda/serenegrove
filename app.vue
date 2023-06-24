@@ -6,6 +6,7 @@
     <NuxtPage />
   </div>
   <Footer />
+  <Toast />
 </template>
 
 <script lang="ts" setup>
