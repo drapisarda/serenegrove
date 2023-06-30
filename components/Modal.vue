@@ -39,7 +39,7 @@ const closeModal = () => {
     left: 0;
     width: 100%;
     height: 100svh;
-    z-index: 10;
+    z-index: $modalZIndex;
     margin: 0;
     background-color: rgba(0, 0, 0, 0.8);
     /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */

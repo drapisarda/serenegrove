@@ -46,7 +46,7 @@ $spacing: 0;
   transition: opacity 0.5s .1s;
   padding: $size-6 $size-4;
   background-color: $dark-1;
-  z-index: 12;
+  z-index: $toastZIndex;
 
   &.is-success {
     background-color: $success;

@@ -40,8 +40,9 @@ $primaryButtonBgHover: $primaryButtonText;
 $primaryButtonTextHover: $primaryButtonBg;
 
 $playerZIndex: 32;
-$modalZIndex: 31;
-$toastZIndex: 32;
+$modalZIndex: $playerZIndex - 10;
+$toastZIndex: $modalZIndex + 5;
+$sidebarMenuZIndex: $toastZIndex - 1;
 $modal-close-dimensions: $size-3;
 
 $listIconSize: 24px;
