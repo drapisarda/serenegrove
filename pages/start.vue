@@ -9,8 +9,42 @@
       </p>
       <p></p>
       <Player />
-      <StepsList />
+      <div class="container is-max-desktop">
+        <ClientOnly>
+          <template #fallback>
+            <Loader />
+          </template>
+          <ListItems />
+          <Modal>
+            <template v-slot:button-text>
+              <Plus />
+              Add steps to your routine
+            </template>
+            <template v-slot:modal-title>
+              <h3> Add steps to your routine </h3>
+            </template>
+            <template v-slot:modal-content>
+              <ListStepItems />
+            </template>
+          </Modal>
+        </ClientOnly>
+      </div>
     </div>
   </section>
-
 </template>
+
+<style lang="scss" scoped>
+@import "@/style/vars.scss";
+
+.player {
+  margin-bottom: $size-4;
+}
+
+.modal {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+</style>

@@ -47,6 +47,7 @@ $spacing: 0;
   padding: $size-6 $size-4;
   background-color: $dark-1;
   z-index: $toastZIndex;
+  height: $barHeight;
 
   &.is-success {
     background-color: $success;

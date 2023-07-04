@@ -51,6 +51,7 @@ const add = () => {
 
 .card {
   text-align: left;
+  color: $black;
   padding: 0;
   width: 100%;
   height: 100%;
@@ -65,15 +66,13 @@ const add = () => {
 
     svg {
       height: 100px;
-
-      @media (min-width: $desktop) {
-        height: 130px;
-      }
+      max-width: 100%;
     }
   }
 
   .card-content {
     flex: 1;
+    color: $black;
   }
 
   button {

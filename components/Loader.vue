@@ -24,7 +24,6 @@ const props = defineProps(['message']);
 
 <style lang="scss">
 @import "@/style/vars.scss";
-
 .rloader {
   display: flex;
   justify-content: center;
@@ -32,6 +31,7 @@ const props = defineProps(['message']);
   padding: $size-4;
   flex-direction: column;
   color: $clear-1;
+  width: 100%;
 
   &__message {
     margin-top: $size-3;
@@ -43,6 +43,7 @@ const props = defineProps(['message']);
   position: relative;
   width: 80px;
   height: 80px;
+  max-height: 100%;
 }
 
 .lds-roller div {

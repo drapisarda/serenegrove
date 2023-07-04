@@ -1,12 +1,7 @@
 <template>
-  <header v-if="showHeader">
-    <Navigation />
-  </header>
-  <div class="page-content">
+  <NuxtLayout>
     <NuxtPage />
-  </div>
-  <Footer />
-  <Toast />
+  </NuxtLayout>
 </template>
 
 <script lang="ts" setup>
@@ -16,8 +11,6 @@ import { useGlobalStore } from "@/store/global";
 const { version } = useRoutineStore();
 const { version: globalVersion } = useGlobalStore();
 if (version !== globalVersion) useRoutineStore().$reset();
-
-const showHeader = useRoute().path !== '/';
 </script>
 
 <style lang="scss">

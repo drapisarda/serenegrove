@@ -5,10 +5,9 @@
       <div class="player__content">
         <div class="player__top section">
           <div class="container">
-
-
             <div class="player__page player__page--duration hide-default" :class="{ 'show': askDuration }">
               <div class="container">
+                <h3>Chose the duration you prefer</h3>
                 <RoutineDuration />
                 <button class="button is-primary" :class="{ 'inactive': !activeStatus }" @click="play">
                   <Play />
@@ -73,18 +72,19 @@
     <div class="container player__display">
       <ClientOnly>
         <template #fallback>
-          <Loader />
         </template>
         <div class="player__start is-centered">
           <div class="player__action">
             <button class="button is-primary" :class="{ 'inactive': emptyRoutine }" @click="display">
-              <span v-if="emptyRoutine">
-                Add one step to start your routine
-              </span>
-              <template v-else>
-                <Play />
-                <div>Start your meditation</div>
-              </template>
+              <slot name="play-button">
+                <span v-if="emptyRoutine">
+                  Add one step to start your routine
+                </span>
+                <template v-else>
+                  <Play />
+                  <div>Start your meditation</div>
+                </template>
+              </slot>
             </button>
           </div>
         </div>
@@ -139,7 +139,7 @@ const emptyRoutine = computed((): Boolean => {
 
 const handleKeys = (event: KeyboardEvent) => {
   console.log('key pressed')
-  if (event.key==='Escape') stopAndClose();
+  if (event.key === 'Escape') stopAndClose();
 };
 
 const playNext = async () => {
@@ -331,10 +331,8 @@ const stop = () => {
       height: 100%;
     }
 
-    #{$root}--loaded & {
-      .rloader {
-        display: none;
-      }
+    #{$root}--loaded & .rloader {
+      display: none;
     }
   }
 
@@ -342,6 +340,12 @@ const stop = () => {
     position: absolute;
     left: 0;
     width: 100%;
+  }
+
+  &__start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__time {

@@ -1,6 +1,5 @@
 <template>
   <div class="duration">
-    <h3>Chose the duration you prefer</h3>
     <div class="duration__options">
       <div class="duration__option" v-for="variation in routineTimeVariations ">
         <input type="radio" v-model="variationChose" name="duration" :id="`${variation.label}-duration`"
@@ -29,6 +28,8 @@ onMounted(() => {
 watch(variationChose, () => {
   setRoutineVariation(variationChose.value);
 })
+
+// TODO OPTION TO CLOSE MODAL INSTEAD OF CHOOSING
 </script>
 
 <style lang="scss">

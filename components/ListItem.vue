@@ -61,6 +61,7 @@ const remove = () => {
 @import "@/style/vars.scss";
 
 .card {
+  color: $black;
   box-shadow: 0 0.5em 1em -0.125em hsla(0, 0%, 4%, .1), 0 0 0 1px hsla(0, 0%, 4%, .02);
 
   +& {
@@ -84,6 +85,7 @@ const remove = () => {
     svg {
       width: auto;
       height: $size-3;
+      max-width: 100%;
 
       @media (min-width: $tablet) {
         height: $size-2;
@@ -116,6 +118,7 @@ const remove = () => {
   button svg {
     height: 24px;
     width: 24px;
+    max-width: 100%;
 
     @media (min-width: $tablet) {
       height: 32px;

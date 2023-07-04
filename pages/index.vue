@@ -9,7 +9,8 @@
         It's all about <strong>practice</strong>.
       </p>
       <p>
-        Meditation should be <strong>free and available</strong> for everybody. Either you are and experienced or beginner
+        Meditation should be <strong>free and available</strong> for everybody. Either you are and experienced or
+        beginner
         practitioner of meditation, we have something for you.
       </p>
       <p>
@@ -55,4 +56,6 @@
   </section>
 </template>
 
-<script lang="ts"></script>
+<script setup>
+definePageMeta({ layout: 'home' })  
+</script>

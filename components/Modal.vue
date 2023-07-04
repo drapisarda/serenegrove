@@ -1,11 +1,16 @@
 <template>
   <div class="modal" @keyup="handleKeys">
-    <button @click="openModal" class="button is-primary">
-      <slot name="button-text">Open Modal</slot>
-    </button>
+    <div class="modal__button">
+      <button @click="openModal" class="button is-primary">
+        <slot name="button-text">Open Modal</slot>
+      </button>
+    </div>
     <dialog :open="modalStatus" class="modal__dialog">
       <button class="modal__close" @click="closeModal">X</button>
-      <slot name="modal-content" class="section"></slot>
+      <slot name="modal-title" class="section"></slot>
+      <div class="modal__content">
+        <slot name="modal-content" class="section"></slot>
+      </div>
     </dialog>
   </div>
 </template>
@@ -82,6 +87,15 @@ const closeModal = () => {
     100% {
       background-position: 0% 50%;
     }
+  }
+
+  &__dialog {
+    color: $white;
+    border: none;
+  }
+
+  &__content {
+    overflow: scroll;
   }
 }
 </style>
