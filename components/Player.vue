@@ -5,7 +5,7 @@
       <div class="player__content">
         <div class="player__top section">
           <div class="container">
-            <div class="player__page player__page--duration hide-default" :class="{ 'show': askDuration }">
+            <!-- <div class="player__page player__page--duration hide-default" :class="{ 'show': askDuration }">
               <div class="container">
                 <h3>Chose the duration you prefer</h3>
                 <RoutineDuration />
@@ -14,7 +14,7 @@
                   <div>Start your meditation</div>
                 </button>
               </div>
-            </div>
+            </div> -->
 
             <div class="player__page player__page--feedback hide-default" :class="{ 'show': askFeedback }">
               <div class="container">
@@ -217,9 +217,10 @@ const loadAllSteps = async () => {
 }
 
 const display = () => {
-  askDuration.value = true;
-  askFeedback.value = false;
+  // askDuration.value = false;
+  // askFeedback.value = false;
   visibleStatus.value = true;
+  play();
 }
 
 const play = async () => {
