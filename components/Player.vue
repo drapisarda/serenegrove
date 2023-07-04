@@ -217,8 +217,6 @@ const loadAllSteps = async () => {
 }
 
 const display = () => {
-  // askDuration.value = false;
-  // askFeedback.value = false;
   visibleStatus.value = true;
   play();
 }
@@ -267,11 +265,12 @@ const pause = () => {
 }
 
 const stopAndClose = () => {
+  stop();
   visibleStatus.value = false;
   askFeedback.value = false;
   askDuration.value = false;
-  stop();
 }
+
 const stop = () => {
   stopStatus.value = true;
   pauseStatus.value = true;
