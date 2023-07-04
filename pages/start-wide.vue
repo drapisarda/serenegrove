@@ -9,7 +9,7 @@
         <div class="col col-md-7">
           <div class="start-wide__title">
             <h2>
-              Meditation exercises to chose from
+              Pick your exercises
             </h2>
           </div>
           <div class="start-wide__content">
@@ -62,7 +62,11 @@ const emptyRoutine = computed((): Boolean => {
   }
 
   .row {
-    height: 100%;
+    overflow: scroll;
+    
+    @media (min-width: $tablet) {
+      height: 100%;
+    }
   }
   
   .col {
