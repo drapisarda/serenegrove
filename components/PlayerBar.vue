@@ -1,7 +1,7 @@
 <template>
   <div class="player-bar">
     <div class="container row">
-      <div class="col">
+      <div class="col col-sm-2">
         <Player>
           <template v-slot:play-button>
             <Play />
@@ -10,7 +10,7 @@
       </div>
       <div class="col">Your meditation will last {{formattedTime(duration)}}</div>
       <div class="col player-bar__switch">
-        Extend duration <Switch v-model="extendedDuration" />
+        Extend duration <Switch v-model="isExtendedDuration" />
       </div>
     </div>
   </div>
@@ -20,17 +20,20 @@
 import { onMounted } from "vue";
 import { useRoutineStore } from "@/store/routine";
 import Play from "@/src/assets/img/icons/play-button.svg";
-const { routineVariation, setRoutineVariation, getRoutineDuration } = useRoutineStore()
+const { steps, routineVariation, setRoutineVariation, getRoutineDuration } = useRoutineStore()
 import { formattedTime } from '@/composables/formattedTime';
 const duration = ref(getRoutineDuration());
 
 // TODO make it better. Not it only manages 2 variations
-const extendedDuration = ref(false);
+const isExtendedDuration = ref(false);
 onMounted(()=> {
-  extendedDuration.value = routineVariation.id === 1;
+  isExtendedDuration.value = routineVariation.id === 1;
 })
-watch(extendedDuration, () => {
-  setRoutineVariation(extendedDuration.value ? 1 : 0);
+watch(steps, () => {
+  duration.value = getRoutineDuration();
+})
+watch(isExtendedDuration, () => {
+  setRoutineVariation(isExtendedDuration.value ? 1 : 0);
   duration.value = getRoutineDuration();
 });
 </script>
