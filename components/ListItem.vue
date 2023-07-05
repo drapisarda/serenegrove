@@ -86,6 +86,7 @@ const remove = () => {
       width: auto;
       height: $size-3;
       max-width: 100%;
+      fill: $black;
 
       @media (min-width: $tablet) {
         height: $size-2;
@@ -124,6 +125,11 @@ const remove = () => {
       height: 32px;
       width: 32px;
     }
+
+  }
+
+  .card-header-icon svg {
+    stroke: $black;
   }
 
   .card-header-icon {

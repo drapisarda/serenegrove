@@ -67,6 +67,7 @@ const add = () => {
     svg {
       height: 100px;
       max-width: 100%;
+      fill: $black;
     }
   }
 
