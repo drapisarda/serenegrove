@@ -13,7 +13,7 @@ export enum ToastStyles {
 
 export const useGlobalStore = defineStore("global", {
   state: () => ({
-    version: '0.4' as string,
+    version: '0.5' as string,
     toastMessage: {} as ToastMessage,
   }),
   actions: {
