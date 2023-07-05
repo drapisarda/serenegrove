@@ -40,12 +40,16 @@ watch(isExtendedDuration, () => {
 
 <style lang="scss" scoped>
 @import "@/style/vars.scss";
+$primaryColor: $clear-3;
+$secondaryColor: $dark-5;
 
 .player-bar {
+  --primary-color: #{$primaryColor};
+  --secondary-color: #{$secondaryColor};
   $root: &;
   width: 100%;
-  background-color: $clear-3;
-  color: $dark-5;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   display: flex;
   align-items: center;
   z-index: $toastZIndex - 1;
@@ -73,15 +77,22 @@ watch(isExtendedDuration, () => {
 
   :deep(.player__start .button) {
     width: 100%;
-    border: none;
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+
+    &:hover {
+      --primary-color: #{$secondaryColor};
+      --secondary-color: #{$primaryColor};
+    }
 
     svg {
       width: $listIconSize;
       height: auto;
-      fill: $black;
+      fill: var(--primary-color);
+      margin-right: 0;
 
       path {
-        fill: $black;
+        fill: var(--primary-color);
       }
 
       @media (min-width: $tablet) {
