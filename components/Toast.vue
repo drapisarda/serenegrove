@@ -40,7 +40,7 @@ $spacing: 0;
 .toast {
   position: fixed;
   width: 100%;
-  bottom: $spacing;
+  top: $spacing;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s .1s;
