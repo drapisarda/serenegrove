@@ -40,8 +40,8 @@ watch(isExtendedDuration, () => {
 
 <style lang="scss" scoped>
 @import "@/style/vars.scss";
-$primaryColor: $clear-3;
-$secondaryColor: $dark-5;
+$primaryColor: $clear-2;
+$secondaryColor: $dark-1;
 
 .player-bar {
   --primary-color: #{$primaryColor};
