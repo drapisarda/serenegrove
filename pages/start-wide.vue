@@ -1,6 +1,6 @@
 <template>
   <div class="start-wide">
-    <div class="section--clear row">
+    <div class="start-wide__row section--clear row">
       <ClientOnly>
         <template #fallback>
           <Loader />
@@ -17,7 +17,11 @@
           </div>
         </div>
 
-        <div class="col">
+        <div class="col start-wide__routine" :class="{'start-wide__routine--open':routineOpen}">
+          <div class="start-wide__routine-toggle" @click="routineToggle">
+            <DownShevron v-if="routineOpen" />
+            <UpShevron v-else />
+          </div>
           <div class="start-wide__title">
             <h2>
               Your meditation routine
@@ -29,18 +33,17 @@
         </div>
       </ClientOnly>
     </div>
-    <PlayerBar class="start-wide__player-bar" v-show="!emptyRoutine"/>
+    <PlayerBar class="start-wide__player-bar" />
   </div>
 </template>
 
 <script lang="ts" setup>
+import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
+import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
 definePageMeta({ layout: 'player' })
-import { useRoutineStore } from "@/store/routine";
-const { steps } = useRoutineStore();
+const routineOpen = ref(false);
 
-const emptyRoutine = computed((): Boolean => {
-  return steps.length === 0;
-})
+const routineToggle = () => routineOpen.value = !routineOpen.value;
 </script>
 
 
@@ -61,37 +64,97 @@ const emptyRoutine = computed((): Boolean => {
     list-style: none;
   }
 
-  .row {
-    overflow: scroll;
-    
+  &__row {
+    overflow: hidden;
+    flex-direction: column;
+    position: relative;
+
     @media (min-width: $tablet) {
+      flex-direction: row;
       height: 100%;
     }
   }
-  
+
   .col {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100%; // TODO is this useful?
+    flex: 1;
+    overflow: scroll;
   }
 
   &__content {
-    overflow: scroll;
     flex: 1;
+    overflow: scroll;
   }
 
   .steps-list {
-    padding-bottom: $barHeight;
     overflow: scroll;
   }
 
+  $routineChevronHeight: 4rem;
+  &__routine {
+    transition: all 1s ease-in-out;
+    transform: translate(0, #{- $routineChevronHeight - $size-2});
+    @media (min-width: $tablet) {
+      transform: translate(0, 0);
+    }
+
+    &.col {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: $dark-2;
+      height: 100%;
+
+      @media (min-width: $tablet) {
+        position: static;
+      }
+    }
+
+    &--open {
+      transform: translate(0, -100%);
+
+      @media (min-width: $tablet) {
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  &__routine-toggle {
+    text-align: center;
+    @media (min-width: $tablet) {
+      display: none;
+    }
+
+    svg {
+      // DOTO fixa
+      height: $routineChevronHeight;
+      width: $routineChevronHeight;
+      display: inline;
+
+
+      :deep(path) {
+        stroke: $black;
+      }
+    }
+
+  }
+
   &__player-bar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     display: flex;
     align-items: center;
     height: $barHeight;
+
+    &--disabled {
+      opacity: 0.5;
+      pointer-events: none;
+      filter: blur(2px);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
-}
-</style>
+}</style>

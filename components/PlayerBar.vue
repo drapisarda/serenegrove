@@ -63,6 +63,10 @@ $secondaryColor: $dark-1;
     font-size: inherit;
   }
 
+  &--disabled {
+    filter: blur(3px);
+  }
+
   .row {
     align-items: center;
     justify-content: center;
@@ -78,7 +82,7 @@ $secondaryColor: $dark-1;
     align-items: center;
     justify-content: center;
 
-    :deep(svg) {
+    :deep( > svg) {
       height: 1.1em;
       width: 1.1em;
       margin-right: 0.5em;
