@@ -1,16 +1,19 @@
 <template>
   <div class="player-bar">
     <div class="container row">
-      <div class="col col-sm-2">
+      <div class="col">
+        <Clock /> {{ formattedTime(duration) }}
+      </div>
+      <div class="col col-xs-3 player-bar__button">
         <Player>
           <template v-slot:play-button>
             <Play />
           </template>
         </Player>
       </div>
-      <div class="col">Your meditation will last {{formattedTime(duration)}}</div>
       <div class="col player-bar__switch">
-        Extend duration <Switch v-model="isExtendedDuration" />
+        Extend
+        <Switch v-model="isExtendedDuration" />
       </div>
     </div>
   </div>
@@ -20,13 +23,14 @@
 import { onMounted } from "vue";
 import { useRoutineStore } from "@/store/routine";
 import Play from "@/src/assets/img/icons/play-button.svg";
+import Clock from "@/src/assets/img/icons/clock.svg";
 const { steps, routineVariation, setRoutineVariation, getRoutineDuration } = useRoutineStore()
 import { formattedTime } from '@/composables/formattedTime';
 const duration = ref(getRoutineDuration());
 
 // TODO make it better. Not it only manages 2 variations
 const isExtendedDuration = ref(false);
-onMounted(()=> {
+onMounted(() => {
   isExtendedDuration.value = routineVariation.id === 1;
 })
 watch(steps, () => {
@@ -53,10 +57,17 @@ $secondaryColor: $dark-1;
   display: flex;
   align-items: center;
   z-index: $toastZIndex - 1;
+  font-size: 0.8em;
+
+  @media (min-width: $tablet) {
+    font-size: inherit;
+  }
 
   .row {
     align-items: center;
     justify-content: center;
+    height: 100%;
+    overflow: hidden;
   }
 
   .col {
@@ -65,6 +76,27 @@ $secondaryColor: $dark-1;
     padding-bottom: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    :deep(svg) {
+      height: 1.1em;
+      width: 1.1em;
+      margin-right: 0.5em;
+      path {
+        fill: var(--secondary-color);
+      }
+    }
+  }
+
+  &__button {
+    @media (max-width: $tablet) {
+      padding-left: $size-8;
+      padding-right: $size-8;
+    }
+  }
+
+  &__switch {
+    text-align: left;
   }
 
   :deep(.player__start > .player__action) {
@@ -100,5 +132,4 @@ $secondaryColor: $dark-1;
       }
     }
   }
-}
-</style>
+}</style>

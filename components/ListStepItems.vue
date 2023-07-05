@@ -25,8 +25,6 @@ watch(steps, (newSteps: number[]) => {
 .steps-list {
   $root: &;
   position: relative;
-  // overflow: hidden;
-  // container-type: inline-size;
 
   ul {
     list-style: none;
