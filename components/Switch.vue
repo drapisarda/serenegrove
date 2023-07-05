@@ -30,7 +30,7 @@ defineEmits(['update:modelValue'])
     left: 0;
     width: 40px;
     height: 24px;
-    background-color: #2196F3;
+    background-color: #ccc;
     border-radius: 34px;
     cursor: pointer;
     transition: background-color 0.3s;
