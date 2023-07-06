@@ -37,7 +37,7 @@ export const routineTimeVariations: RoutineTimeVariationType[] = [
   },
 ];
 
-const baseURL = import.meta.env.BASE_URL;
+const baseURL = '/';
 
 const originalState = {
   steps: [] as number[],

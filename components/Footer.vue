@@ -17,7 +17,7 @@
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/start#routine">Start now!</a>
+                <a href="/generate">Start now!</a>
               </li>
               <li>
                 <a href="/about">About us</a>
