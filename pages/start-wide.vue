@@ -6,7 +6,7 @@
           <Loader />
         </template>
 
-        <div class="col col-md-7">
+        <div class="col col-sm-7">
           <div class="start-wide__title">
             <h2>
               Pick your exercises
@@ -17,7 +17,7 @@
           </div>
         </div>
 
-        <div class="col start-wide__routine" :class="{'start-wide__routine--open':routineOpen}">
+        <div class="col col-sm-5 start-wide__routine" :class="{'start-wide__routine--open':routineOpen}">
           <div class="start-wide__routine-toggle" @click="routineToggle">
             <DownShevron v-if="routineOpen" />
             <UpShevron v-else />
@@ -69,7 +69,7 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
     flex-direction: column;
     position: relative;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $miniMobile) {
       flex-direction: row;
       height: 100%;
     }

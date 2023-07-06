@@ -1,5 +1,17 @@
 @import 'reset';
 @import 'vars';
+//sass-flexbox-grid
+  
+$grid-columns: 12; // Set number of columns in the grid
+  
+$xs-max: $miniMobile -1px; // Set xs breakpoint's max width
+$sm-max: $tablet -1px; // Set sm breakpoint's max width
+$md-max: $desktop -1px; // Set md breakpoint's max width
+$lg-max: $widescreen -1px; // Set lg breakpoint's max width
+  
+$gutter: $gap; // Set gutter size
+  
+$content-well-max-width: "none"; // Set the max-width of the content well
 @import '../node_modules/@drewbot/sass-flexbox-grid/public/sass-flexbox/scss/main.scss';
 
 @font-face {
