@@ -86,11 +86,34 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
 
   &__content {
     flex: 1;
-    overflow: scroll;
-  }
+    overflow: hidden;
+    position: relative;
 
-  .steps-list {
-    overflow: scroll;
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: $size-5;
+      background: linear-gradient(180deg, rgba(red($dark-2),green($dark-2),blue($dark-2), 1) 0%, rgba(0,0,0,0) 100%);
+      z-index: 1;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+      transform: rotate(180deg);
+    }
+
+    .list-items,
+    .steps-list {
+      overflow: scroll;
+      height: 100%;
+      padding: $size-5 0;
+    }
   }
 
   $routineChevronHeight: 4rem;
@@ -98,7 +121,10 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
   &__routine {
     transition: all 1s ease-in-out;
     transform: translate(0, 0);
-    padding-top: 0;
+    z-index: 2;
+    @media (max-width: $tablet - 1) {
+      padding-top: 0;
+    }
 
     &.col {
       position: absolute;
@@ -161,6 +187,7 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
       cursor: pointer;
       height: 100%;
       width: 100%;
+      z-index: 2;
 
       :deep(path) {
         stroke: $black;

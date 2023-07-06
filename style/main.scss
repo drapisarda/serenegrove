@@ -59,11 +59,15 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 3rem 0 1.38rem;
+  margin: 3rem 0 1rem;
   font-family: 'Quattrocento', 'Times new roman', 'Arial', 'Helvetica', serif;
   font-weight: 600;
   line-height: 1.3;
   color: inherit;
+
+  @media (min-width: $tablet) {
+    margin: 3rem 0 1.38rem;
+  }
 
   &:first-child {
     margin-top: 0;
