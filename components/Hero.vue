@@ -3,10 +3,10 @@
     <div class="hero hero--home">
       <div class="hero-body">
         <div class="row is-variable">
-          <div class="col-sm hero__bg">
+          <div class="col-md-6 hero__bg">
             <Logo />
           </div>
-          <section class="col-sm hero__claim section">
+          <section class="col-md-6 hero__claim section">
             <h1 class="is-spaced">
               Your custom guided meditation routine.
             </h1>

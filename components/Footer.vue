@@ -3,7 +3,7 @@
     <div class="section">
       <div class="container">
         <div class="row">
-          <div class="col-sm-8">
+          <div class="col-md-8 footer__about">
             <h3>
               SereneGrove
             </h3>
@@ -11,7 +11,7 @@
               A non-profit community to promote meditation and self consciousness.
             </p>
           </div>
-          <div class="col-sm-4 footer__links">
+          <div class="col-md-4 footer__links">
             <ul>
               <li>
                 <a href="/">Home</a>
@@ -67,6 +67,10 @@
       display: flex;
       flex-direction: column;
     }
+  }
+
+  &__about {
+    margin-bottom: $size-5;
   }
 }
 </style>
