@@ -78,19 +78,11 @@ const add = () => {
 
   button {
     flex-basis: 100%;
-    padding-left: $size-7;
-    padding-right: $size-7;
+    padding: $size-7 $size-8;
     width: 100%;
-    padding-top: $size-5;
-    padding-bottom: $size-5;
     border-radius: 0;
     height: auto;
     max-height: none;
-
-    @media (min-width: $tablet) {
-      padding-top: $size-7;
-      padding-bottom: $size-7;
-    }
   }
 
   .add-button {
