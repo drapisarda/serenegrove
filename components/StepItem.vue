@@ -59,6 +59,7 @@ const add = () => {
   flex-direction: column;
   margin-bottom: $size-3;
   background-color: $white;
+  box-shadow: $defaultBoxShadow;
 
   .card-image {
     text-align: center;

@@ -6,7 +6,7 @@
           <Loader />
         </template>
 
-        <div class="col col-lg-7">
+        <div class="col col-lg-7 col-no-gutter">
           <div class="start-wide__title">
             <h2>
               Pick your exercises
@@ -17,7 +17,7 @@
           </div>
         </div>
 
-        <div class="col col-lg-5 start-wide__routine" :class="{ 'open': routineOpen }">
+        <div class="col col-lg-5 col-no-gutter start-wide__routine" :class="{ 'open': routineOpen }">
           <div class="start-wide__routine-toggle" @click="routineToggle">
             <DownShevron v-if="routineOpen" />
             <UpShevron v-else />
@@ -60,6 +60,14 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
   left: 0;
   right: 0;
 
+  &__title {
+    .col-no-gutter & {
+      padding-top: $gap;
+      padding-left: $gap;
+      padding-right: $gap;
+    }
+  }
+
   ul {
     list-style: none;
   }
@@ -89,13 +97,14 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
     overflow: hidden;
     position: relative;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       content: "";
       position: absolute;
       left: 0;
       width: 100%;
       height: $size-5;
-      background: linear-gradient(180deg, rgba(red($dark-2),green($dark-2),blue($dark-2), 1) 0%, rgba(0,0,0,0) 100%);
+      background: linear-gradient(180deg, rgba(red($dark-2), green($dark-2), blue($dark-2), 1) 0%, rgba(0, 0, 0, 0) 100%);
       z-index: 1;
     }
 
@@ -113,6 +122,11 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
       overflow: scroll;
       height: 100%;
       padding: $size-5 0;
+
+      .col-no-gutter & {
+        padding-left: $gap;
+        padding-right: $gap;
+      }
     }
   }
 
@@ -122,7 +136,8 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
     transition: all 1s ease-in-out;
     transform: translate(0, 0);
     z-index: 2;
-    @media (max-width: $tablet - 1) {
+
+    @media (max-width: ($tablet - 1)) {
       padding-top: 0;
     }
 

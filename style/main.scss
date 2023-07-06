@@ -2,6 +2,7 @@
 @import 'vars';
 //sass-flexbox-grid
 
+$gutter: $gap;
 $xs-max: $miniMobile - 1; // Set xs breakpoint's max width
 $sm-max: $tablet - 1; // Set sm breakpoint's max width
 $md-max: $desktop - 1; // Set md breakpoint's max width

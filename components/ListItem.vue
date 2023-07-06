@@ -62,7 +62,6 @@ const remove = () => {
 
 .card {
   color: $black;
-  box-shadow: 0 0.5em 1em -0.125em hsla(0, 0%, 4%, .1), 0 0 0 1px hsla(0, 0%, 4%, .02);
 
   +& {
     margin-bottom: $size-5;
@@ -97,7 +96,7 @@ const remove = () => {
     display: flex;
     background-color: $clear-1;
     border-radius: $size-8;
-    box-shadow: 0 0.125em 0.25em hsla(0,0%,4%,.1);
+    box-shadow: $defaultBoxShadow;
 
     button {
       border: none;
