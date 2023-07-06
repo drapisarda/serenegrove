@@ -13,21 +13,22 @@ $clear-5: #FAB99E;
 $white: #FFFFFF;
 $black: $dark-5;
 
-$size-1: 3rem !default;
-$size-2: 2.5rem !default;
-$size-3: 2rem !default;
-$size-4: 1.5rem !default;
-$size-5: 1.25rem !default;
-$size-6: 1rem !default;
-$size-7: 0.75rem !default;
-$size-8: 0.25rem !default;
+$size-1: 3rem;
+$size-2: 2.5rem;
+$size-3: 2rem;
+$size-4: 1.5rem;
+$size-5: 1.25rem;
+$size-6: 1rem;
+$size-7: 0.75rem;
+$size-8: 0.25rem;
 
-$gap: 16px !default;
-$miniMobile: 400px !default;
-$tablet: 769px !default;
-$desktop: 960px + (2 * $gap) !default;
-$widescreen: 1152px + (2 * $gap) !default;
-$fullhd: 1344px + (2 * $gap) !default;
+// TODO What about using rems like in sassflexboxgrid ? Or also using sassflexboxgrid mixins?
+$gap: 16px;
+$miniMobile: 400px;
+$tablet: 769px;
+$desktop: 960px + (2 * $gap);
+$widescreen: 1152px + (2 * $gap);
+$fullhd: 1344px + (2 * $gap);
 
 $bg: $dark-5;
 $label-color: $clear-1;
