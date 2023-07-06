@@ -1,9 +1,9 @@
 <template>
   <div class="toast" :class="{ 'toast--visible': isVisible, [messageClass]: true }">
     <slot>
-      <p>
+      <div class="toast__content">
         {{ message }}
-      </p>
+      </div>
     </slot>
   </div>
 </template>
@@ -35,31 +35,38 @@ const displayMessage = (newMessage: ToastMessage, duration: number = 3000) => {
 
 <style scoped lang="scss">
 @import "@/style/vars.scss";
-$spacing: 0;
 
 .toast {
   position: fixed;
   width: 100%;
-  top: $spacing;
+  top: 0;
   opacity: 0;
+  transform: translate(0, -120%);
   pointer-events: none;
-  transition: opacity 0.5s .1s;
-  padding: $size-6 $size-4;
-  background-color: $dark-1;
+  transition: all 0.5s .1s;
   z-index: $toastZIndex;
   height: $barHeight;
-
-  &.is-success {
-    background-color: $success;
-  }
-  &.is-warning {
-    background-color: $clear-3;
-    color: $dark-5;
+  text-align: center;
+  
+  &__content {
+    padding: $size-6 $size-4;
+    background-color: $dark-1;
+    display: inline-flex;
+    margin-top: $size-7;
+    border-radius: $size-8;
+    .is-success & {
+      background-color: $success;
+    }
+    .is-warning & {
+      background-color: $clear-3;
+      color: $dark-5;
+    }
   }
 
   &.toast--visible {
     z-index: $toastZIndex;
     opacity: 1;
+    transform: translate(0, 0);
     pointer-events: all;
   }
 }

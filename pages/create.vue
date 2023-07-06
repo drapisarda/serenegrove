@@ -127,7 +127,6 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
     transform: translate(0, - $routineChevronHeight - $size-8 - $size-8);
     transition: all 1s ease-in-out;
     overflow: visible;
-    margin-top: $size-8;
     height: $routineChevronHeight;
     width: $routineChevronHeight;
     align-self: center;
