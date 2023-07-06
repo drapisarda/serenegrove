@@ -1,6 +1,6 @@
 <template>
   <div class="start-wide">
-    <div class="start-wide__row section--clear row">
+    <div class="start-wide__row row">
       <ClientOnly>
         <template #fallback>
           <Loader />
@@ -17,7 +17,7 @@
           </div>
         </div>
 
-        <div class="col col-lg-5 start-wide__routine" :class="{'start-wide__routine--open':routineOpen}">
+        <div class="col col-lg-5 start-wide__routine" :class="{ 'open': routineOpen }">
           <div class="start-wide__routine-toggle" @click="routineToggle">
             <DownShevron v-if="routineOpen" />
             <UpShevron v-else />
@@ -81,6 +81,7 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
     height: 100%; // TODO is this useful?
     flex: 1;
     overflow: scroll;
+    background-color: $dark-2;
   }
 
   &__content {
@@ -93,12 +94,11 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
   }
 
   $routineChevronHeight: 4rem;
+
   &__routine {
     transition: all 1s ease-in-out;
-    transform: translate(0, #{- $routineChevronHeight - $size-2});
-    @media (min-width: $tablet) {
-      transform: translate(0, 0);
-    }
+    transform: translate(0, 0);
+    padding-top: 0;
 
     &.col {
       position: absolute;
@@ -107,13 +107,14 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
       width: 100%;
       background-color: $dark-2;
       height: 100%;
-  
+      overflow: visible;
+
       @media (min-width: $tablet) {
         position: static;
       }
     }
 
-    &--open {
+    &.open {
       transform: translate(0, -100%);
 
       @media (min-width: $tablet) {
@@ -123,17 +124,44 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
   }
 
   &__routine-toggle {
-    text-align: center;
+    transform: translate(0, - $routineChevronHeight - $size-8 - $size-8);
+    transition: all 1s ease-in-out;
+    overflow: visible;
+    margin-top: $size-8;
+    height: $routineChevronHeight;
+    width: $routineChevronHeight;
+    align-self: center;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $dark-2;
+      border-radius: 100%;
+      border: 1px solid $black;
+      opacity: 1;
+      transition: opacity 0.4s linear 0.6s;
+      z-index: -1;
+
+      .open & {
+        opacity: 0;
+      }
+    }
+
     @media (min-width: $tablet) {
       display: none;
     }
 
-    svg {
-      // DOTO fixa
-      height: $routineChevronHeight;
-      width: $routineChevronHeight;
-      display: inline;
+    .open & {
+      transform: translate(0, 0);
+    }
 
+    svg {
+      cursor: pointer;
+      height: 100%;
+      width: 100%;
 
       :deep(path) {
         stroke: $black;
@@ -157,4 +185,5 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
       }
     }
   }
-}</style>
+}
+</style>

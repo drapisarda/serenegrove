@@ -26,7 +26,7 @@
       <h2>
         Create your routine. Enjoy meditation.
       </h2>
-      <a href="/start" class="button is-primary is-large">
+      <a href="/create" class="button is-primary is-large">
         Start now!
       </a>
     </div>
