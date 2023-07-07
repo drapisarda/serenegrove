@@ -1,5 +1,6 @@
 <template>
   <Hero />
+  
   <section class="section">
     <div class="container">
       <h3>

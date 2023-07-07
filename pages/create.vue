@@ -214,7 +214,8 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
   &__player-bar {
     display: flex;
     align-items: center;
-    height: $barHeight;
+    height: calc(#{$barHeight} + 100vh - 100svh);
+    padding-bottom: calc(100vh - 100svh);
 
     &--disabled {
       opacity: 0.5;

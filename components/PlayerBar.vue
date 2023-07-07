@@ -52,12 +52,12 @@ $secondaryColor: $dark-1;
   --secondary-color: #{$secondaryColor};
   $root: &;
   width: 100%;
+  font-size: 0.8em;
   background-color: var(--primary-color);
   color: var(--secondary-color);
   display: flex;
   align-items: center;
   z-index: $toastZIndex - 1;
-  font-size: 0.8em;
 
   @media (min-width: $tablet) {
     font-size: inherit;
