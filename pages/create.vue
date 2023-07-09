@@ -244,8 +244,8 @@ const manageTouchMove = (event: TouchEvent) => {
   &__player-bar {
     display: flex;
     align-items: center;
-    height: calc(#{$barHeight} + 100vh - 100svh + $size-8);
-    padding-bottom: calc(100vh - 100svh + $size-8);
+    height: calc(#{$barHeight} + 100vh - 100svh + #{$size-8});
+    padding-bottom: calc(100vh - 100svh + #{$size-8});
     padding-top: $size-8;
 
     &--disabled {
