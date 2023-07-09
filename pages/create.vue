@@ -17,7 +17,9 @@
           </div>
         </div>
 
-        <div class="col col-lg-5 col-no-gutter start-wide__routine" :class="{ 'open': routineOpen }">
+        <div class="col col-lg-5 col-no-gutter start-wide__routine"
+          :class="{ 'open': routineOpen, 'scrolling-down': scrollingDown }" @touchstart.self="manageTouchStart($event)"
+          @touchend.self="manageTouchEnd($event)" @touchmove.self="manageTouchMove">
           <div class="start-wide__routine-toggle" @click="routineToggle">
             <DownShevron v-if="routineOpen" />
             <UpShevron v-else />
@@ -42,8 +44,32 @@ import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
 import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
 definePageMeta({ layout: 'player' })
 const routineOpen = ref(false);
+let touchStart = 0;
+let touchLast: number;
+const scrollDownLimit = 300;
+const scrollingDown = ref(false)
 
-const routineToggle = () => routineOpen.value = !routineOpen.value;
+const routineToggle = () => {
+  routineOpen.value = !routineOpen.value;
+  scrollingDown.value = false;
+}
+const manageTouchStart = (event: TouchEvent) => {
+  if (!event.touches || !event.touches[0]) return;
+  touchStart = event.touches[0].pageY;
+}
+const manageTouchEnd = (event: TouchEvent) => {
+  scrollingDown.value = false;
+  if (touchLast - touchStart < scrollDownLimit) return;
+  touchLast = 0;
+  routineOpen.value = false;
+}
+const manageTouchMove = (event: TouchEvent) => {
+  touchLast = event.touches[0].pageY;
+  const scrollValue = touchLast - touchStart;
+  if (scrollValue < 0) return;
+  scrollingDown.value = scrollValue > (scrollDownLimit / 3);
+  if (scrollValue > scrollDownLimit) manageTouchEnd(event);
+}
 </script>
 
 
@@ -93,7 +119,6 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
   }
 
   &__content {
-    flex: 1;
     overflow: hidden;
     position: relative;
 
@@ -136,9 +161,14 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
     transition: all 1s ease-in-out;
     transform: translate(0, 0);
     z-index: 2;
+    user-select: none;
 
     @media (max-width: ($tablet - 1)) {
       padding-top: 0;
+    }
+
+    @media (min-width: $tablet) {
+      transform: translate(0, 0);
     }
 
     &.col {
@@ -157,11 +187,11 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
 
     &.open {
       transform: translate(0, -100%);
-
-      @media (min-width: $tablet) {
-        transform: translate(0, 0);
+      &.scrolling-down {
+        transform: translate(0, -90%);
       }
     }
+
   }
 
   &__routine-toggle {
@@ -214,8 +244,9 @@ const routineToggle = () => routineOpen.value = !routineOpen.value;
   &__player-bar {
     display: flex;
     align-items: center;
-    height: calc(#{$barHeight} + 100vh - 100svh);
-    padding-bottom: calc(100vh - 100svh);
+    height: calc(#{$barHeight} + 100vh - 100svh + $size-8);
+    padding-bottom: calc(100vh - 100svh + $size-8);
+    padding-top: $size-8;
 
     &--disabled {
       opacity: 0.5;

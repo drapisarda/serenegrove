@@ -2,20 +2,14 @@
   <div class="player" :class="{ 'player--loaded': loadedStatus }" @keyup="handleKeys">
     <div class="player__playing"
       :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
+      <div class="player__action player__action--close">
+        <button class="button" @click="stopOrClose">
+          <CloseIcon />
+        </button>
+      </div>
       <div class="player__content">
         <div class="player__top section">
           <div class="container">
-            <!-- <div class="player__page player__page--duration hide-default" :class="{ 'show': askDuration }">
-              <div class="container">
-                <h3>Chose the duration you prefer</h3>
-                <RoutineDuration />
-                <button class="button is-primary" :class="{ 'inactive': !activeStatus }" @click="play">
-                  <Play />
-                  <div>Start your meditation</div>
-                </button>
-              </div>
-            </div> -->
-
             <div class="player__page player__page--feedback hide-default" :class="{ 'show': askFeedback }">
               <div class="container">
                 <FeedbackRequest />
@@ -39,7 +33,7 @@
           @pause="updateAudioStatus">
         </audio>
       </div>
-      <div class="player__playing-actions section">
+      <div class="player__playing-actions">
         <div class="container is-max-desktop">
           <div class="player__actions row">
             <div class="col-xs-6 player__action player__action--play-pause" v-show="pauseStatus && !stopStatus">
@@ -52,12 +46,6 @@
               <button class="button" @click="pause">
                 <Pause />
                 <div> Pause </div>
-              </button>
-            </div>
-            <div v-if="!stopStatus" class="col-xs-6 player__action player__action--stop">
-              <button class="button" @click="stop">
-                <Stop />
-                <div>Stop</div>
               </button>
             </div>
             <div v-if="stopStatus && askFeedback" class="col-ms-8 player__action player__action--stop">
@@ -99,7 +87,7 @@ import { useRoutineStore, Step } from "@/store/routine";
 import { ref, computed, watch } from "vue";
 import Play from "@/src/assets/img/icons/play-button.svg";
 import Pause from "@/src/assets/img/icons/pause-button.svg";
-import Stop from "@/src/assets/img/icons/stop-button.svg";
+import CloseIcon from "@/src/assets/img/icons/close.svg";
 import { clipHtml } from "@/composables/clipHtml";
 
 const baseURL = import.meta.env.BASE_URL;
@@ -271,6 +259,12 @@ const stopAndClose = () => {
   askDuration.value = false;
 }
 
+const stopOrClose = () => {
+  if (!stopStatus.value) {
+    stop();
+  } else stopAndClose();
+}
+
 const stop = () => {
   stopStatus.value = true;
   pauseStatus.value = true;
@@ -364,11 +358,13 @@ const stop = () => {
   }
 
   &__playing-actions {
-    height: 25svh;
-
     .container,
     #{$root}__actions {
       height: 100%;
+    }
+
+    .button:first-child:last-child {
+      min-width: 250px;
     }
   }
 
@@ -394,36 +390,6 @@ const stop = () => {
         opacity: 0;
       }
     }
-
-    // TODO make a button variant
-    #{$root}__action .button {
-      width: 100%;
-      font-size: $size-4;
-      padding-left: $size-6;
-      padding-right: $size-6;
-
-      @media (min-width: $miniMobile) {
-        padding-left: $size-5;
-        padding-right: $size-5;
-        font-size: $size-3;
-      }
-
-      &:hover {
-        color: $clear-2;
-        border-color: $clear-2;
-
-        svg {
-          fill: $clear-2;
-        }
-      }
-
-      svg {
-        @media (min-width: $tablet) {
-          margin-right: 0;
-        }
-      }
-    }
-
 
     @keyframes gradient {
       0% {
@@ -461,13 +427,42 @@ const stop = () => {
 
     .button {
       background: transparent;
-      border: 1px solid $white;
+      border: 1px solid $clear-1;
       color: $clear-1;
+      width: 100%;
+      font-size: $size-4;
+      padding-left: $size-6;
+      padding-right: $size-6;
+
+      @media (min-width: $miniMobile) {
+        padding-left: $size-5;
+        padding-right: $size-5;
+        font-size: $size-3;
+      }
+
+      &:hover {
+        color: $clear-2;
+        border-color: $clear-2;
+
+        svg {
+          fill: $clear-2;
+        }
+      }
+
+      svg {
+        @media (min-width: $tablet) {
+          margin-right: 0;
+        }
+      }
 
       svg {
         fill: $clear-1;
         height: 42px;
         width: 42px;
+
+        path {
+          fill: $clear-1;
+        }
       }
 
       &:hover {
@@ -492,6 +487,21 @@ const stop = () => {
 
       #{$root}--loaded & {
         visibility: visible;
+      }
+    }
+
+    &--close {
+      display: flex;
+      justify-content: flex-end;
+
+      .button {
+        border: transparent;
+        width: auto;
+      }
+      
+      svg {
+        cursor: pointer;
+        margin: 0;
       }
     }
   }
