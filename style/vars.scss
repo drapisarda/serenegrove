@@ -1,16 +1,17 @@
+$white: #FFFFFF;
+
 // https://colorhunt.co/palette/fff2ccffd966f4b183dfa67b
 $dark-1: #61876E;
 $dark-2: #D5E7DE;
 $dark-3: #3F6B5D;
 $dark-4: #3C6255;
 $dark-5: #2C3C3C;
-$clear-1: white;
+$clear-1: $white;
 $clear-2: #FEF8C6;
 $clear-3: #FDF5BD;
-$clear-4: #FCCAB2;
+$clear-4: rgb(254, 254, 243);
 $clear-5: #FAB99E;
 
-$white: #FFFFFF;
 $black: $dark-5;
 
 $size-1: 3rem;

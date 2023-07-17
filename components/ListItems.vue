@@ -1,6 +1,6 @@
 <template>
   <ul class="list-items">
-    <ListItem class="card" v-for="(step, index) in routineSteps" :key="index" :icon="step.icon" :itemName="step.name"
+    <ListItem v-for="(step, index) in routineSteps" :key="index" :icon="step.icon" :itemName="step.name"
       :index="index" :is-first="index === 0" :is-last="index === routineSteps.length - 1" />
   </ul>
 </template>

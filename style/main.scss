@@ -182,15 +182,23 @@ svg {
   max-height: 100%;
 }
 
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
 .button {
   display: inline-flex;
   font-family: inherit;
   font-size: 1rem;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   border-radius: 4px;
   padding: calc(.5em - 1px) 1em;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   span {
     display: flex;
@@ -384,4 +392,10 @@ label {
 .card-header {
   font-weight: bold;
   font-family: 'Quattrocento', 'Times new roman', 'Arial', 'Helvetica', serif;
+}
+
+.card-image svg {
+  background-color: $dark-2;
+  border-radius: $size-8;
+  fill: $black;
 }

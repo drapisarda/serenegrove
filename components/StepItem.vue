@@ -1,6 +1,6 @@
 <template>
   <li>
-    <div class="card card--step">
+    <button class="card" aria-label="add element" @click="add">
       <div class="card-image">
         <Icon :name="step.icon" />
       </div>
@@ -16,15 +16,15 @@
           </p>
         </div>
       </div>
-      <div class="card-footer">
+      <!-- <div class="card-footer">
         <button class="add-button button is-primary" aria-label="add element" @click="add">
           <Plus />
           <span>
             Add to your routine
           </span>
         </button>
-      </div>
-    </div>
+      </div> -->
+    </button>
   </li>
 </template>
 
@@ -60,15 +60,28 @@ const add = () => {
   margin-bottom: $size-3;
   background-color: $white;
   box-shadow: $defaultBoxShadow;
+  font-size: $size-7;
+  border: none;
+  border-radius: $size-8;
+
+  &:hover {
+    background-color: $clear-4;
+  }
 
   .card-image {
     text-align: center;
     display: block;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    padding: $size-7;
+
+    @media (min-width: $tablet) {
+      aspect-ratio: 1;
+    }
 
     svg {
-      height: 100px;
-      max-width: 100%;
-      fill: $black;
+      padding: $size-6;
     }
   }
 
@@ -92,16 +105,9 @@ const add = () => {
     justify-content: center;
   }
 
-  .card-image,
   .card-header,
   .card-content {
     padding: 0 $size-7;
-  }
-
-  .card-image {
-    padding-top: $size-5;
-    padding-bottom: $size-5;
-    line-height: 0;
   }
 
   .card-header {

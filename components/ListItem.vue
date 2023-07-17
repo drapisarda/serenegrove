@@ -1,5 +1,5 @@
 <template>
-  <li class="card card--list-item">
+  <li class="card">
     <header class="card-header">
       <div class="card-image">
         <Icon :name="icon" />
@@ -68,7 +68,8 @@ const remove = () => {
   }
 
   .card-image {
-    padding: $size-7;
+    padding: $size-8;
+    padding-left: $size-7;
     flex-shrink: 0;
     display: none;
 
@@ -77,19 +78,11 @@ const remove = () => {
       align-items: center;
     }
 
-    @media (min-width: $tablet) {
-      padding: $size-6;
-    }
-
     svg {
       width: auto;
-      height: $size-3;
+      height: $size-2;
       max-width: 100%;
-      fill: $black;
-
-      @media (min-width: $tablet) {
-        height: $size-2;
-      }
+      padding: $size-8;
     }
   }
   .card-header {

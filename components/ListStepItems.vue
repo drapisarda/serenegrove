@@ -28,11 +28,11 @@ watch(steps, (newSteps: number[]) => {
 
   ul {
     list-style: none;
+    
     display: grid;
     column-gap: $size-5;
     row-gap: $size-4;
-    grid-template-columns: repeat(auto-fit, minmax(calc($miniMobile/2), 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 }
 </style>
