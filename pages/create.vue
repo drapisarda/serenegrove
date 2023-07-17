@@ -19,7 +19,7 @@
 
         <div class="col col-lg-5 col-no-gutter start-wide__routine"
           :class="{ 'open': routineOpen, 'scrolling-down': scrollingDown }" @touchstart.self="manageTouchStart($event)"
-          @touchend.self="manageTouchEnd($event)" @touchmove.self="manageTouchMove">
+          @touchend.self="manageTouchEnd($event)" @touchmove.self="manageTouchMove" @drag.self="manageDrag">
           <div class="start-wide__routine-toggle" @click="routineToggle">
             <DownShevron v-if="routineOpen" />
             <UpShevron v-else />
@@ -70,6 +70,8 @@ const manageTouchMove = (event: TouchEvent) => {
   scrollingDown.value = scrollValue > (scrollDownLimit / 3);
   if (scrollValue > scrollDownLimit) manageTouchEnd(event);
 }
+
+const manageDrag = (event: DragEvent) => console.log(event)
 </script>
 
 
@@ -200,7 +202,8 @@ const manageTouchMove = (event: TouchEvent) => {
     overflow: visible;
     height: $routineChevronHeight;
     width: $routineChevronHeight;
-    align-self: center;
+    margin-right: $size-7;
+    align-self: flex-end;
     position: relative;
 
     &:before {
@@ -217,6 +220,7 @@ const manageTouchMove = (event: TouchEvent) => {
 
       .open & {
         opacity: 0;
+        background-color: $dark-2;
       }
     }
 
