@@ -6,18 +6,7 @@
           <Loader />
         </template>
 
-        <div class="col col-lg-7 col-no-gutter">
-          <div class="start-wide__title">
-            <h2>
-              Pick your exercises
-            </h2>
-          </div>
-          <div class="start-wide__content">
-            <ListStepItems />
-          </div>
-        </div>
-
-        <div class="col col-lg-5 col-no-gutter start-wide__routine"
+        <div class="col col-md-4 col-no-gutter start-wide__routine"
           :class="{ 'open': routineOpen, 'scrolling-down': scrollingDown }" @touchstart.self="manageTouchStart($event)"
           @touchend.self="manageTouchEnd($event)" @touchmove.self="manageTouchMove" @drag.self="manageDrag">
           <div class="start-wide__routine-toggle" @click="routineToggle">
@@ -31,6 +20,17 @@
           </div>
           <div class="start-wide__content">
             <ListItems />
+          </div>
+        </div>
+
+        <div class="col col-md-8 col-no-gutter start-wide__steps-choice">
+          <div class="start-wide__title">
+            <h2>
+              Pick your exercises
+            </h2>
+          </div>
+          <div class="start-wide__content">
+            <ListStepItems />
           </div>
         </div>
       </ClientOnly>

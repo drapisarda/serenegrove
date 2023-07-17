@@ -1,30 +1,25 @@
 <template>
   <li>
-    <button class="card" aria-label="add element" @click="add">
-      <div class="card-image">
-        <Icon :name="step.icon" />
-      </div>
-      <header class="card-header">
-        <p class="card-header-title">
-          {{ step.name }}
-        </p>
-      </header>
-      <div class="card-content">
-        <div class="content">
-          <p>
-            {{ step.description }}
-          </p>
+    <div class="card row">
+      <div class="col-sm-4">
+        <div class="card-image">
+          <Icon :name="step.icon" />
         </div>
       </div>
-      <!-- <div class="card-footer">
-        <button class="add-button button is-primary" aria-label="add element" @click="add">
-          <Plus />
-          <span>
-            Add to your routine
-          </span>
-        </button>
-      </div> -->
-    </button>
+      <div class="col-sm-8 card-content">
+        <header class="card-header">
+          <p class="card-header-title">
+            {{ step.name }}
+          </p>
+        </header>
+        <p>
+          {{ step.description }}
+        </p>
+      </div>
+      <button class="col-sm-offset-4 col-md-8 card-footer" aria-label="add element to your playlist" @click="add">
+        <Plus /> Add to playlist
+      </button>
+    </div>
   </li>
 </template>
 
@@ -52,20 +47,25 @@ const add = () => {
 .card {
   text-align: left;
   color: $black;
-  padding: 0;
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  margin-bottom: $size-3;
   background-color: $white;
   box-shadow: $defaultBoxShadow;
   font-size: $size-7;
   border: none;
   border-radius: $size-8;
 
-  &:hover {
-    background-color: $clear-4;
+  &.row {
+    padding: $size-7;
+
+    >div {
+      padding: $size-8 0;
+
+      @media (min-width: $miniMobile) {
+        padding: $size-8;
+      }
+    }
   }
 
   .card-image {
@@ -74,48 +74,62 @@ const add = () => {
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    padding: $size-7;
-
-    @media (min-width: $tablet) {
-      aspect-ratio: 1;
-    }
+    aspect-ratio: 1;
 
     svg {
-      padding: $size-6;
+      padding: $size-8;
+
+      @media (min-width: $tablet) {
+        padding: $size-6;
+      }
     }
   }
 
   .card-content {
-    flex: 1;
     color: $black;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      flex: 1;
+    }
   }
 
-  button {
-    flex-basis: 100%;
-    padding: $size-7 $size-8;
-    width: 100%;
-    border-radius: 0;
-    height: auto;
-    max-height: none;
-  }
+  $primaryColor: $black;
+  $secondaryColor: $white;
 
-  .add-button {
+  button.card-footer {
+    --primary-color: #{$primaryColor};
+    --secondary-color: #{$secondaryColor};
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: none;
     display: flex;
     align-items: center;
-    justify-content: center;
-  }
+    padding: 0.2em 0.5em;
+    border-radius: $size-8;
 
-  .card-header,
-  .card-content {
-    padding: 0 $size-7;
+    svg {
+      height: 1.1em;
+      width: 1.1em;
+      padding: 0.1em;
+      display: inline;
+      border: 1px solid var(--primary-color);
+      border-radius: 50%;
+      margin-right: 1em;
+
+      :deep(path) {
+        fill: var(--primary-color);
+      }
+    }
+
+    &:hover {
+      --primary-color: #{$secondaryColor};
+      --secondary-color: #{$primaryColor};
+    }
   }
 
   .card-header {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
-  
-  .card-content {
-    padding-bottom: $size-6;
-  }
-}
-</style>
+}</style>

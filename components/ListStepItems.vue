@@ -32,7 +32,7 @@ watch(steps, (newSteps: number[]) => {
     display: grid;
     column-gap: $size-5;
     row-gap: $size-4;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
   }
 }
 </style>
