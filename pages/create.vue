@@ -188,9 +188,11 @@ const manageDrag = (event: DragEvent) => console.log(event)
     }
 
     &.open {
-      transform: translate(0, -100%);
-      &.scrolling-down {
-        transform: translate(0, -90%);
+      @media (max-width: ($tablet - 1)) {
+        transform: translate(0, -100%);
+        &.scrolling-down {
+          transform: translate(0, -90%);
+        }
       }
     }
 
@@ -219,8 +221,10 @@ const manageDrag = (event: DragEvent) => console.log(event)
       z-index: -1;
 
       .open & {
-        opacity: 0;
-        background-color: $dark-2;
+        @media (max-width: ($tablet - 1)) {
+          opacity: 0;
+          background-color: $dark-2;
+        }
       }
     }
 
@@ -229,7 +233,9 @@ const manageDrag = (event: DragEvent) => console.log(event)
     }
 
     .open & {
-      transform: translate(0, 0);
+      @media (max-width: ($tablet - 1)) {
+        transform: translate(0, 0);
+      }
     }
 
     svg {

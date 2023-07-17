@@ -68,14 +68,16 @@ const remove = () => {
   }
 
   .card-image {
-    padding: $size-8;
-    padding-left: $size-7;
+    padding: $size-7;
     flex-shrink: 0;
     display: none;
 
     @media (min-width: $miniMobile) {
       display: flex;
       align-items: center;
+    }
+    @media (min-width: $tablet) {
+      padding: $size-8 $size-8 $size-8 $size-7;
     }
 
     svg {
