@@ -115,6 +115,8 @@ $secondaryColor: $dark-1;
     width: 100%;
     background-color: var(--secondary-color);
     border-color: var(--primary-color);
+    font-size: 0;
+    height: auto;
 
     &:hover {
       --primary-color: #{$secondaryColor};
@@ -126,6 +128,7 @@ $secondaryColor: $dark-1;
       height: auto;
       fill: var(--primary-color);
       margin-right: 0;
+      padding: $size-7 0;
 
       path {
         fill: var(--primary-color);
