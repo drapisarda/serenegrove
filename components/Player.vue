@@ -333,7 +333,9 @@ const stop = () => {
   &__page {
     position: absolute;
     left: 0;
+    top:0;
     width: 100%;
+    height: 100%;
   }
 
   &__start {
@@ -441,17 +443,11 @@ const stop = () => {
       }
 
       &:hover {
-        color: $clear-2;
-        border-color: $clear-2;
+        color: $clear-5;
+        border-color: $clear-5;
 
-        svg {
-          fill: $clear-2;
-        }
-      }
-
-      svg {
-        @media (min-width: $tablet) {
-          margin-right: 0;
+        svg path {
+          fill: $clear-5;
         }
       }
 
@@ -463,15 +459,9 @@ const stop = () => {
         path {
           fill: $clear-1;
         }
-      }
 
-      &:hover {
-        color: $dark-1;
-
-        border-color: $dark-1;
-
-        svg {
-          fill: $dark-1;
+        @media (min-width: $tablet) {
+          margin-right: 0;
         }
       }
 

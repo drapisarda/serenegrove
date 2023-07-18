@@ -44,6 +44,7 @@ const carouselSteps = computed((): (Step | undefined)[] => [
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 
     svg {
       height: 100%;
