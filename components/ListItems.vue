@@ -1,7 +1,7 @@
 <template>
   <ul class="list-items">
-    <ListItem v-for="(step, index) in routineSteps" :key="index" :icon="step.icon" :itemName="step.name"
-      :index="index" :is-first="index === 0" :is-last="index === routineSteps.length - 1" />
+    <ListItem v-for="(step, index) in routineSteps" :key="index" :step="step" :index="index" :is-first="index === 0"
+      :is-last="index === routineSteps.length - 1" />
   </ul>
 </template>
 
@@ -21,4 +21,7 @@ watch(steps, (newSteps: number[]) => {
 <style lang="scss" scoped>
 @import "@/style/vars.scss";
 
+.card+.card {
+  margin-top: $size-7;
+}
 </style>

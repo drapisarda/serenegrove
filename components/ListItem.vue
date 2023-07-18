@@ -2,22 +2,29 @@
   <li class="card">
     <header class="card-header">
       <div class="card-image">
-        <Icon :name="icon" />
+        <Icon :name="step.icon" />
       </div>
-      <p class="card-header-title">
-        {{ itemName }}
-      </p>
-      <button @click="moveUp" class="card-header-icon" :class="{ 'card-header-icon--inactive': isFirst }"
-        aria-label="move up">
-        <UpShevron />
-      </button>
-      <button @click="moveDown" class="card-header-icon" :class="{ 'card-header-icon--inactive': isLast }"
-        aria-label="move down">
-        <DownShevron />
-      </button>
-      <button class="card-header-icon" aria-label="remove element" @click="remove">
-        <Bin />
-      </button>
+      <div class="card-content">
+        <p class="card-header__title">
+          {{ step.name }}
+        </p>
+        <p class="card-header__duration">
+          {{ formattedTime(step.duration) }}
+        </p>
+      </div>
+      <div class="card-actions">
+        <button @click="moveUp" class="card-header-icon" :class="{ 'card-header-icon--inactive': isFirst }"
+          aria-label="move up">
+          <UpShevron />
+        </button>
+        <button @click="moveDown" class="card-header-icon" :class="{ 'card-header-icon--inactive': isLast }"
+          aria-label="move down">
+          <DownShevron />
+        </button>
+        <button class="card-header-icon" aria-label="remove element" @click="remove">
+          <Bin />
+        </button>
+      </div>
     </header>
   </li>
 </template>
@@ -29,13 +36,13 @@ import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
 import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
 import { useRoutineStore } from "@/store/routine";
 import { useGlobalStore, ToastStyles } from "@/store/global";
+import { formattedTime } from '@/composables/formattedTime';
 
 const { setToastMessage } = useGlobalStore();
 
 // TODO use step
 const props = defineProps([
-  'itemName',
-  'icon',
+  'step',
   'index',
   'isFirst',
   'isLast',
@@ -53,7 +60,7 @@ const moveDown = () => {
 
 const remove = () => {
   removeStep(props.index)
-  setToastMessage(`Step "${props.itemName}" removed from the routine`, ToastStyles.Warning);
+  setToastMessage(`Step "${props.step.name}" removed from the routine`, ToastStyles.Warning);
 };
 </script>
 
@@ -62,10 +69,6 @@ const remove = () => {
 
 .card {
   color: $black;
-
-  +& {
-    margin-bottom: $size-5;
-  }
 
   .card-image {
     padding: $size-7;
@@ -76,6 +79,7 @@ const remove = () => {
       display: flex;
       align-items: center;
     }
+
     @media (min-width: $tablet) {
       padding: $size-8 $size-8 $size-8 $size-7;
     }
@@ -87,11 +91,14 @@ const remove = () => {
       padding: $size-8;
     }
   }
+
   .card-header {
     display: flex;
     background-color: $clear-1;
     border-radius: $size-8;
     box-shadow: $defaultBoxShadow;
+    align-items: center;
+    font-size: $size-6;
 
     button {
       border: none;
@@ -99,27 +106,25 @@ const remove = () => {
     }
   }
 
-  .card-header-title {
+  .card-header__title {
     flex: 1;
     display: flex;
     align-items: center;
-    font-size: clamp(1rem, 3vw, 1.6rem);
-    padding: calc($size-7/2) $size-7;
     margin-bottom: 0;
     white-space: nowrap;
     overflow: hidden;
   }
 
   button svg {
-    height: 24px;
-    width: 24px;
+    height: 22px;
+    width: 22px;
     max-width: 100%;
+    padding: 2px;
 
     @media (min-width: $tablet) {
-      height: 32px;
-      width: 32px;
+      height: 28px;
+      width: 28px;
     }
-
   }
 
   .card-header-icon svg {
@@ -135,6 +140,17 @@ const remove = () => {
     opacity: 0.3;
     pointer-events: none;
     cursor: default;
+  }
+
+  .card-header__duration {
+    font-size: 0.9em;
+    color: $dark-3;
+    font-weight: normal;
+  }
+
+  .card-content {
+    flex: 1;
+    padding: calc($size-7/2) $size-7;
   }
 }
 </style>

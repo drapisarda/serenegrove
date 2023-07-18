@@ -15,6 +15,9 @@
         <p>
           {{ step.description }}
         </p>
+        <p class="card-header__duration">
+          {{ formattedTime(step.duration) }}
+        </p>
       </div>
       <div class="col-md-offset-4 col-md-8 card-footer">
         <button class="button" aria-label="add element to your playlist" @click="add">
@@ -30,6 +33,7 @@ import { defineProps } from "vue";
 import Plus from '@/src/assets/img/icons/plus.svg';
 import { useRoutineStore, Step } from "@/store/routine";
 import { useGlobalStore, ToastStyles } from "@/store/global";
+import { formattedTime } from '@/composables/formattedTime';
 
 const { setToastMessage } = useGlobalStore();
 
@@ -139,6 +143,10 @@ const add = () => {
 
   .card-header {
     font-size: 1.3em;
+
+    &__duration {
+      color: $dark-3;
+    }
   }
 }
 </style>

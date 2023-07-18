@@ -14,9 +14,9 @@
             <UpShevron v-else />
           </div>
           <div class="start-wide__title">
-            <h2>
+            <h4>
               Your meditation routine
-            </h2>
+            </h4>
           </div>
           <div class="start-wide__content">
             <ListItems />
@@ -25,9 +25,9 @@
 
         <div class="col col-md-8 col-no-gutter start-wide__steps-choice">
           <div class="start-wide__title">
-            <h2>
+            <h4>
               Pick your exercises
-            </h2>
+            </h4>
           </div>
           <div class="start-wide__content">
             <ListStepItems />
@@ -93,6 +93,10 @@ const manageDrag = (event: DragEvent) => console.log(event)
       padding-top: $gap;
       padding-left: $gap;
       padding-right: $gap;
+    }
+
+    h4 {
+      margin-bottom: 0.2em;
     }
   }
 
