@@ -187,6 +187,14 @@ button {
   font-family: inherit;
 }
 
+button {
+  transition: all 0.2s ease 0s;
+
+  svg path {
+    transition: all 0.2s ease 0s;
+  }
+}
+
 .button {
   display: inline-flex;
   font-family: inherit;
