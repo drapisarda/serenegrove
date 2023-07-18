@@ -16,9 +16,11 @@
           {{ step.description }}
         </p>
       </div>
-      <button class="col-sm-offset-4 col-md-8 card-footer" aria-label="add element to your playlist" @click="add">
-        <Plus /> Add to playlist
-      </button>
+      <div class="col-md-offset-4 col-md-8 card-footer">
+        <button class="button" aria-label="add element to your playlist" @click="add">
+          <Plus /> Add to playlist
+        </button>
+      </div>
     </div>
   </li>
 </template>
@@ -98,38 +100,45 @@ const add = () => {
   $primaryColor: $black;
   $secondaryColor: $white;
 
-  button.card-footer {
-    --primary-color: #{$primaryColor};
-    --secondary-color: #{$secondaryColor};
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-    border: none;
-    display: flex;
-    align-items: center;
-    padding: 0.2em 0.5em;
-    border-radius: $size-8;
+  .card-footer {
+    align-self: flex-end;
 
-    svg {
-      height: 1.1em;
-      width: 1.1em;
-      padding: 0.1em;
-      display: inline;
-      border: 1px solid var(--primary-color);
-      border-radius: 50%;
-      margin-right: 1em;
+    .button {
+      --primary-color: #{$primaryColor};
+      --secondary-color: #{$secondaryColor};
+      color: var(--primary-color);
+      background-color: var(--secondary-color);
+      border: none;
+      display: flex;
+      align-items: center;
+      padding: 0.2em 0.5em;
+      border-radius: $size-8;
 
-      :deep(path) {
-        fill: var(--primary-color);
+      svg {
+        height: 1.1em;
+        width: 1.1em;
+        padding: 0.1em;
+        display: inline;
+        border: 1px solid var(--primary-color);
+        border-radius: 50%;
+        @media (min-width: $desktop) {
+          margin-right: 1em;
+        }
+
+        :deep(path) {
+          fill: var(--primary-color);
+        }
       }
-    }
 
-    &:hover {
-      --primary-color: #{$secondaryColor};
-      --secondary-color: #{$primaryColor};
+      &:hover {
+        --primary-color: #{$secondaryColor};
+        --secondary-color: #{$primaryColor};
+      }
     }
   }
 
   .card-header {
     font-size: 1.3em;
   }
-}</style>
+}
+</style>

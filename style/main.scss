@@ -188,11 +188,6 @@ button {
 }
 
 button {
-  transition: all 0.2s ease 0s;
-
-  svg path {
-    transition: all 0.2s ease 0s;
-  }
 }
 
 .button {
@@ -203,6 +198,11 @@ button {
   justify-content: center;
   border-radius: 4px;
   padding: calc(.5em - 1px) 1em;
+  transition: all 0.2s ease 0s;
+
+  svg path {
+    transition: all 0.2s ease 0s;
+  }
 
   &:hover {
     cursor: pointer;
