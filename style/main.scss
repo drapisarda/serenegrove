@@ -85,11 +85,11 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1rem, -0.875rem + 8.333vw, 2.2rem);
+  font-size: clamp(1.7rem, -0.875rem + 8.333vw, 2.2rem);
 }
 
 h3 {
-  font-size: 1.953rem;
+  font-size: clamp(1.2rem, -1rem + 8.333vw, 2.2rem);
 }
 
 h4 {
@@ -187,10 +187,14 @@ button {
   font-family: inherit;
 }
 
-button {
-}
+$buttonPrimaryColor: $black;
+$buttonSecondaryColor: $white;
 
 .button {
+  --button-primary-color: #{$buttonPrimaryColor};
+  --button-secondary-color: #{$buttonSecondaryColor};
+  color: var(--button-primary-color);
+  background-color: var(--button-secondary-color);
   display: inline-flex;
   font-family: inherit;
   font-size: 1rem;
@@ -202,10 +206,14 @@ button {
 
   svg path {
     transition: all 0.2s ease 0s;
+    fill: var(--button-primary-color);
+    border-color: var(--primary-color);
   }
 
   &:hover {
     cursor: pointer;
+    --button-primary-color: #{$buttonSecondaryColor};
+    --button-secondary-color: #{$buttonPrimaryColor};
   }
 
   span {
@@ -406,4 +414,11 @@ label {
   background-color: $dark-2;
   border-radius: $size-8;
   fill: $black;
+}
+
+.card {
+  background-color: $white;
+  box-shadow: $defaultBoxShadow;
+  border: none;
+  border-radius: $size-8;
 }

@@ -71,6 +71,10 @@
   justify-content: center;
   padding: $size-7;
 
+  .container {
+    max-width: 100%;
+  }
+
   .logo {
     height: 50px;
     width: 200px;

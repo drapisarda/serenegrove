@@ -94,9 +94,6 @@ const remove = () => {
 
   .card-header {
     display: flex;
-    background-color: $clear-1;
-    border-radius: $size-8;
-    box-shadow: $defaultBoxShadow;
     align-items: center;
     font-size: $size-6;
 
@@ -151,6 +148,10 @@ const remove = () => {
   .card-content {
     flex: 1;
     padding: calc($size-7/2) $size-7;
+  }
+
+  .card-actions {
+    line-height: 0;
   }
 }
 </style>

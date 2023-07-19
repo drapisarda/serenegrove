@@ -56,11 +56,7 @@ const add = () => {
   width: 100%;
   height: 100%;
   display: flex;
-  background-color: $white;
-  box-shadow: $defaultBoxShadow;
   font-size: $size-7;
-  border: none;
-  border-radius: $size-8;
 
   &.row {
     padding: $size-7;
@@ -108,10 +104,6 @@ const add = () => {
     align-self: flex-end;
 
     .button {
-      --primary-color: #{$primaryColor};
-      --secondary-color: #{$secondaryColor};
-      color: var(--primary-color);
-      background-color: var(--secondary-color);
       border: none;
       display: flex;
       align-items: center;
@@ -123,20 +115,12 @@ const add = () => {
         width: 1.1em;
         padding: 0.1em;
         display: inline;
-        border: 1px solid var(--primary-color);
+        border-width: 1px;
+        border-style: solid;
         border-radius: 50%;
         @media (min-width: $desktop) {
           margin-right: 1em;
         }
-
-        :deep(path) {
-          fill: var(--primary-color);
-        }
-      }
-
-      &:hover {
-        --primary-color: #{$secondaryColor};
-        --secondary-color: #{$primaryColor};
       }
     }
   }
