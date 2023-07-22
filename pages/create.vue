@@ -6,30 +6,13 @@
           <Loader />
         </template>
 
-        <div class="col col-md-4 col-no-gutter start-wide__routine"
-          :class="{ 'open': routineOpen, 'scrolling-down': scrollingDown }" @touchstart.self="manageTouchStart($event)"
-          @touchend.self="manageTouchEnd($event)" @touchmove.self="manageTouchMove" @drag.self="manageDrag">
-          <div class="start-wide__routine-toggle" @click="routineToggle">
-            <DownShevron v-if="routineOpen" />
-            <UpShevron v-else />
-          </div>
-          <div class="start-wide__title">
-            <h4>
-              Your meditation routine
-            </h4>
-          </div>
-          <div class="start-wide__content">
-            <ListItems />
-          </div>
-        </div>
+        <Playlist class="col col-md-4" />
 
-        <div class="col col-md-8 col-no-gutter start-wide__steps-choice">
-          <div class="start-wide__title">
-            <h4>
-              Pick your exercises
-            </h4>
-          </div>
-          <div class="start-wide__content">
+        <div class="col col-md-8 start-wide__steps-choice">
+          <h2 class="start-wide__title">
+            Pick your exercises
+          </h2>
+          <div class="start-wide__content card">
             <ListStepItems />
           </div>
         </div>
@@ -40,38 +23,7 @@
 </template>
 
 <script lang="ts" setup>
-import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
-import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
 definePageMeta({ layout: 'player' })
-const routineOpen = ref(false);
-let touchStart = 0;
-let touchLast: number;
-const scrollDownLimit = 300;
-const scrollingDown = ref(false)
-
-const routineToggle = () => {
-  routineOpen.value = !routineOpen.value;
-  scrollingDown.value = false;
-}
-const manageTouchStart = (event: TouchEvent) => {
-  if (!event.touches || !event.touches[0]) return;
-  touchStart = event.touches[0].pageY;
-}
-const manageTouchEnd = (event: TouchEvent) => {
-  scrollingDown.value = false;
-  if (touchLast - touchStart < scrollDownLimit) return;
-  touchLast = 0;
-  routineOpen.value = false;
-}
-const manageTouchMove = (event: TouchEvent) => {
-  touchLast = event.touches[0].pageY;
-  const scrollValue = touchLast - touchStart;
-  if (scrollValue < 0) return;
-  scrollingDown.value = scrollValue > (scrollDownLimit / 3);
-  if (scrollValue > scrollDownLimit) manageTouchEnd(event);
-}
-
-const manageDrag = (event: DragEvent) => console.log(event)
 </script>
 
 
@@ -89,14 +41,13 @@ const manageDrag = (event: DragEvent) => console.log(event)
   right: 0;
 
   &__title {
+    margin-bottom: 0;
+    padding-top: $gap;
+    padding-bottom: $gap;
     .col-no-gutter & {
-      padding-top: $gap;
+      margin-top: $size-7;
       padding-left: $gap;
       padding-right: $gap;
-    }
-
-    h4 {
-      margin-bottom: 0.2em;
     }
   }
 
@@ -118,7 +69,7 @@ const manageDrag = (event: DragEvent) => console.log(event)
   .col {
     display: flex;
     flex-direction: column;
-    height: 100%; // TODO is this useful?
+    height: 100%;
     flex: 1;
     overflow: scroll;
     background-color: $dark-2;
@@ -135,7 +86,7 @@ const manageDrag = (event: DragEvent) => console.log(event)
       left: 0;
       width: 100%;
       height: $size-5;
-      background: linear-gradient(180deg, rgba(red($dark-2), green($dark-2), blue($dark-2), 1) 0%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%);
       z-index: 1;
     }
 
@@ -148,11 +99,13 @@ const manageDrag = (event: DragEvent) => console.log(event)
       transform: rotate(180deg);
     }
 
-    .list-items,
     .steps-list {
       overflow: scroll;
       height: 100%;
-      padding: $size-5 0;
+
+      :deep ul {
+        padding: $size-5 $size-8;
+      }
 
       .col-no-gutter & {
         padding-left: $gap;
@@ -161,98 +114,18 @@ const manageDrag = (event: DragEvent) => console.log(event)
     }
   }
 
-  $routineChevronHeight: 4rem;
-
-  &__routine {
-    transition: all 1s ease-in-out;
-    transform: translate(0, 0);
-    z-index: 2;
-    user-select: none;
-
-    @media (max-width: ($tablet - 1)) {
-      padding-top: 0;
-    }
-
-    @media (min-width: $tablet) {
-      transform: translate(0, 0);
-    }
-
-    &.col {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: $dark-2;
-      height: 100%;
-      overflow: visible;
-
-      @media (min-width: $tablet) {
-        position: static;
-      }
-    }
-
-    &.open {
-      @media (max-width: ($tablet - 1)) {
-        transform: translate(0, -100%);
-        &.scrolling-down {
-          transform: translate(0, -90%);
-        }
-      }
-    }
-
-  }
-
-  &__routine-toggle {
-    transform: translate(0, - $routineChevronHeight - $size-8 - $size-8);
-    transition: all 1s ease-in-out;
+  .playlist {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $dark-2;
+    height: 100%;
     overflow: visible;
-    height: $routineChevronHeight;
-    width: $routineChevronHeight;
-    margin-right: $size-7;
-    align-self: flex-end;
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: $dark-2;
-      border-radius: 100%;
-      border: 1px solid $black;
-      opacity: 1;
-      transition: opacity 0.4s linear 0.6s;
-      z-index: -1;
-
-      .open & {
-        @media (max-width: ($tablet - 1)) {
-          opacity: 0;
-          background-color: $dark-2;
-        }
-      }
-    }
 
     @media (min-width: $tablet) {
-      display: none;
+      position: static;
     }
-
-    .open & {
-      @media (max-width: ($tablet - 1)) {
-        transform: translate(0, 0);
-      }
-    }
-
-    svg {
-      cursor: pointer;
-      height: 100%;
-      width: 100%;
-      z-index: 2;
-
-      :deep(path) {
-        stroke: $black;
-      }
-    }
-
   }
 
   &__player-bar {
