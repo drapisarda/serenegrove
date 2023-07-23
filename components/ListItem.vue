@@ -9,7 +9,7 @@
           {{ step.name }}
         </p>
         <p class="card-header__duration">
-          {{ formattedTime(step.duration) }}
+          <Clock/> {{ formattedTime(step.duration) }}
         </p>
       </div>
       <div class="card-actions">
@@ -34,6 +34,7 @@ import { defineProps } from "vue";
 import Bin from '@/src/assets/img/icons/bin.svg';
 import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
 import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
+import Clock from "@/src/assets/img/icons/clock.svg";
 import { useRoutineStore } from "@/store/routine";
 import { useGlobalStore, ToastStyles } from "@/store/global";
 import { formattedTime } from '@/composables/formattedTime';
@@ -143,6 +144,19 @@ const remove = () => {
     font-size: 0.9em;
     color: $dark-3;
     font-weight: normal;
+    display: flex;
+    align-items: center;
+
+    svg {
+      height: 1em;
+      width: 1em;
+      margin-right: $size-8;
+      margin-top: -3px;
+
+      :deep(path) {
+        fill: $dark-3;
+      }
+    }
   }
 
   .card-content {

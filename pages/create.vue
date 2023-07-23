@@ -10,8 +10,11 @@
 
         <div class="col col-md-8 start-wide__steps-choice">
           <h2 class="start-wide__title">
-            Pick your exercises
+            Welcome to your meditation routine
           </h2>
+          <h5 class="start-wide__subtitle">
+            Pick your exercises
+          </h5>
           <div class="start-wide__content card">
             <ListStepItems />
           </div>
@@ -49,6 +52,10 @@ definePageMeta({ layout: 'player' })
       padding-left: $gap;
       padding-right: $gap;
     }
+  }
+
+  &__subtitle {
+    margin-top: 0;
   }
 
   ul {

@@ -7,9 +7,9 @@
       <UpShevron v-else />
     </div>
     <div class="card">
-      <h4 class="playlist__title">
+      <h5 class="playlist__title">
         Your meditation routine
-      </h4>
+      </h5>
       <div class="playlist__content">
         <ListItems />
       </div>
@@ -174,7 +174,6 @@ $routineChevronHeight: 3rem;
 
 
   &__title {
-    font-size: 1.3em;
     padding-top: $size-7;
     padding-left: $size-7;
     padding-right: $size-7;

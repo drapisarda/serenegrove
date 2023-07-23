@@ -16,7 +16,7 @@
           {{ step.description }}
         </p>
         <p class="card-header__duration">
-          {{ formattedTime(step.duration) }}
+          <Clock/> {{ formattedTime(step.duration) }}
         </p>
       </div>
       <div class="col-md-offset-4 col-md-8 card-footer">
@@ -30,6 +30,7 @@
 
 <script lang="ts" setup>
 import { defineProps } from "vue";
+import Clock from "@/src/assets/img/icons/clock.svg";
 import Plus from '@/src/assets/img/icons/plus.svg';
 import { useRoutineStore, Step } from "@/store/routine";
 import { useGlobalStore, ToastStyles } from "@/store/global";
@@ -129,7 +130,20 @@ const add = () => {
     font-size: 1.3em;
 
     &__duration {
+      display: flex;
+      align-items: center;
       color: $dark-3;
+
+      svg {
+        width: 1em;
+        height: 1em;
+        margin-right: $size-8;
+        margin-top: -1px;
+
+        :deep(path) {
+          fill: $dark-3;
+        }
+      }
     }
   }
 }
