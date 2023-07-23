@@ -19,7 +19,7 @@
           <Clock/> {{ formattedTime(step.duration) }}
         </p>
       </div>
-      <div class="col-md-offset-4 col-md-8 card-footer">
+      <div class="col-xs-offset-4 col-sx-8 card-footer">
         <button class="button" aria-label="add element to your playlist" @click="add">
           <Plus /> Add to playlist
         </button>
@@ -57,7 +57,13 @@ const add = () => {
   width: 100%;
   height: 100%;
   display: flex;
-  font-size: $size-7;
+  font-size: $size-6;
+  @media (min-width: $tablet) {
+    font-size: $size-7;
+  }
+  @media (min-width: $desktop) {
+    font-size: $size-6;
+  }
 
   &.row {
     padding: $size-7;
@@ -80,9 +86,12 @@ const add = () => {
     aspect-ratio: 1;
 
     svg {
-      padding: $size-8;
-
+      padding: $size-6;
+      
       @media (min-width: $tablet) {
+        padding: $size-8;
+      }
+      @media (min-width: $desktop) {
         padding: $size-6;
       }
     }
