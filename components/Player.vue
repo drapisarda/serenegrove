@@ -1,5 +1,5 @@
 <template>
-  <div class="player" :class="{ 'player--loaded': loadedStatus }" @keyup="handleKeys">
+  <div class="player" :class="{ 'player--loaded': loadedStatus }" @keyup="handleKeys" tabindex="0">
     <div class="player__playing"
       :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
       <div class="player__action player__action--close">
@@ -126,8 +126,9 @@ const emptyRoutine = computed((): Boolean => {
 })
 
 const handleKeys = (event: KeyboardEvent) => {
-  console.log('key pressed')
-  if (event.key === 'Escape') stopAndClose();
+  console.log('key pressed', event.key, event.key.length, pauseStatus.value)
+  if (event.key === 'Escape') stopOrClose();
+  if (event.key === ' ') pauseStatus.value ? play() : pause();
 };
 
 const playNext = async () => {
