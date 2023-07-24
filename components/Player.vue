@@ -126,7 +126,6 @@ const emptyRoutine = computed((): Boolean => {
 })
 
 const handleKeys = (event: KeyboardEvent) => {
-  console.log('key pressed', event.key, event.key.length, pauseStatus.value)
   if (event.key === 'Escape') stopOrClose();
   if (event.key === ' ') pauseStatus.value ? play() : pause();
 };
