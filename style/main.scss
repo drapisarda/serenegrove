@@ -342,6 +342,31 @@ $buttonSecondaryColor: $white;
       border-color: transparent;
     }
   }
+
+  &--close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: transparent;
+    padding: $size-6 $size-7;
+    width: $size-2;
+    height: $size-2;
+    box-sizing: content-box;
+    z-index: 1;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    svg {
+      margin: 0;
+    }
+
+    svg path {
+      fill: $white;
+    }
+  }
 }
 
 .is-centered {

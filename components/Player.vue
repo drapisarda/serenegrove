@@ -2,11 +2,9 @@
   <div class="player" :class="{ 'player--loaded': loadedStatus }" @keyup="handleKeys" tabindex="0">
     <div class="player__playing"
       :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
-      <div class="player__action player__action--close">
-        <button class="button" @click="stopOrClose">
-          <CloseIcon />
-        </button>
-      </div>
+      <button class="button button--close" @click="stopOrClose">
+        <CloseIcon />
+      </button>
       <div class="player__content">
         <div class="player__top section">
           <div class="container">
@@ -483,16 +481,6 @@ const stop = () => {
     &--close {
       display: flex;
       justify-content: flex-end;
-
-      .button {
-        border: transparent;
-        width: auto;
-      }
-      
-      svg {
-        cursor: pointer;
-        margin: 0;
-      }
     }
   }
 

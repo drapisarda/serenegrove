@@ -14,7 +14,7 @@
       </a>
       <Transition>
       <div class="navbar-start" :class="{ 'navbar-start--open': menuIsOpen }" v-show="menuIsOpen">
-          <button class="button navbar-start__close" @click="toggleMenu">
+          <button class="button button--close" @click="toggleMenu">
             <CloseIcon />
           </button>
           <a href="/create">Start now!</a>
@@ -109,6 +109,7 @@ const toggleMenu = () => {
       opacity: 1;
       flex-direction: row;
       background-color: transparent;
+      pointer-events: all;
       display: block !important;
     }
 
@@ -127,25 +128,9 @@ const toggleMenu = () => {
       z-index: $playerZIndex - 3;
     }
 
-    &__close {
-      // TODO sync with player
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: transparent;
-      border: none;
-      padding: $size-6 $size-7;
-
+    .button--close {
       @media (min-width: $tablet) {
         display: none;
-      }
-
-      svg {
-        margin: 0;
-      }
-
-      svg path {
-        fill: $white;
       }
     }
 
