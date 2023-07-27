@@ -6,9 +6,9 @@
           <Loader />
         </template>
 
-        <Playlist class="col col-md-4" />
+        <Playlist class="col col-md-5 col-lg-4 col-" />
 
-        <div class="col col-md-8 start-wide__steps-choice">
+        <div class="col col-md-7 col-lg-8 start-wide__steps-choice">
           <h2 class="start-wide__title">
             Welcome to your meditation routine
           </h2>
