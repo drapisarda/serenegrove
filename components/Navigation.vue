@@ -106,7 +106,6 @@ const toggleMenu = () => {
 
     @media (min-width: $tablet) {
       position: static;
-      opacity: 1;
       flex-direction: row;
       background-color: transparent;
       pointer-events: all;
@@ -117,10 +116,16 @@ const toggleMenu = () => {
       opacity: 0;
     }
 
+    &.v-enter-to,
     &--open {
       opacity: 1;
       z-index: $playerZIndex - 3;
       pointer-events: all;
+    }
+
+    &.v-leave-from {
+      opacity: 1;
+      z-index: $playerZIndex - 3;
     }
 
     &.v-leave-to {
