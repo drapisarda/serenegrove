@@ -45,30 +45,12 @@
         Why meditation?
       </h2>
       <p>
-        Meditation is a powerful tool with a host of benefits for both your body and mind. Here are some of the key
-        advantages:
+        Meditation is a potent tool for personal growth. It can help reduce stress, enhance mental clarity, and foster emotional health. Regular practice improves sleep, boosts immunity, and promotes mindfulness. It's a gateway to a balanced, healthier lifestyle, helping you navigate life's ups and downs with ease.
       </p>
 
-      <ul>
-        <li><strong>Stress Reduction</strong>: Meditation lowers cortisol, the stress hormone, reducing stress levels.
-        </li>
-        <li><strong>Mental Health Improvement</strong>: Regular meditation can help manage anxiety and depression,
-          fostering calmness, and peace.</li>
-        <li><strong>Enhanced Concentration</strong>: Meditation trains the mind to focus better, increasing the attention
-          span.</li>
-        <li><strong>Emotional Health Boost</strong>: Through meditation, you can cultivate a positive outlook on life and
-          improved self-image.</li>
-        <li><strong>Better Sleep</strong>: Regular meditation aids in better sleep quality by controlling runaway
-          thoughts.</li>
-        <li><strong>Immunity Boost</strong>: Meditation can fortify the immune system, making you more resistant to
-          diseases.</li>
-        <li><strong>Promotion of Mindfulness</strong>: Meditation enhances mindfulness, or being present in the moment,
-          which can improve all aspects of life.</li>
-        <li><strong>Healthier Lifestyle Encouragement</strong>: Regular meditation can lead to healthier lifestyle
-          choices, thus improving life quality and longevity.</li>
-      </ul>
-      <p>In essence, meditation, though it requires patience and practice, contributes significantly to overall well-being
-        and health.</p>
+      <p>
+        <a href="/why-meditation  ">Learn more</a>.
+      </p>
     </div>
   </section>
 

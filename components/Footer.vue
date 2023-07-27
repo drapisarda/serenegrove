@@ -17,10 +17,13 @@
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/generate">Start now!</a>
+                <a href="/create">Start now!</a>
               </li>
               <li>
                 <a href="/about">About us</a>
+              </li>
+              <li>
+                <a href="/why-meditation">Why Meditation?</a>
               </li>
               <li>
                 <a href="/privacy">Privacy & Datenschutzerklärung</a>
@@ -66,6 +69,10 @@
       list-style: none;
       display: flex;
       flex-direction: column;
+    }
+
+    li {
+      line-height: 1.3em;
     }
   }
 

@@ -140,6 +140,10 @@ ul {
   max-width: $tablet;
   width: 100%;
   margin: auto;
+
+  &--wide {
+    max-width: $widescreen;
+  }
 }
 
 .section {
@@ -151,6 +155,16 @@ ul {
 
   ul {
     list-style: disc;
+    list-style-position: inside;
+  }
+
+  li {
+    margin-bottom: $size-7;
+  }
+
+  img {
+    max-width: 100%;
+    font-size: 1em;
   }
 
   &--clear:nth-child(even),
