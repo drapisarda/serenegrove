@@ -461,4 +461,8 @@ label {
   border: none;
   border-radius: $size-8;
   overflow: hidden;
+
+  &.row {
+    justify-content: center;
+  }
 }
