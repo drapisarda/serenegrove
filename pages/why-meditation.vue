@@ -10,12 +10,12 @@
       </p>
     </div>
     <div class="container container--wide">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="/assets/img/serenegrove-1.webp" alt="Regular meditation can lead to healthier lifestyle
+      <div class="row center-xs">
+        <div class="col-md-4">
+          <img src="/assets/img/serenegrove-3.webp" alt="Regular meditation can lead to healthier lifestyle
             choices, thus improving life quality and longevity.">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
           <ul>
             <li><strong>Stress Reduction</strong>: Meditation lowers cortisol, the stress hormone, reducing stress levels.
             </li>
@@ -30,7 +30,7 @@
           </ul>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-8">
           <ul>
             <li><strong>Better Sleep</strong>: Regular meditation aids in better sleep quality by controlling runaway
               thoughts.</li>
@@ -43,8 +43,8 @@
               choices, thus improving life quality and longevity.</li>
           </ul>
         </div>
-        <div class="col-md-6">
-          <img src="/assets/img/serenegrove-2.webp"
+        <div class="col-md-4">
+          <img src="/assets/img/serenegrove-4.webp"
             alt="Meditation lowers cortisol, the stress hormone, reducing stress levels.">
         </div>
       </div>
@@ -62,13 +62,24 @@ definePageMeta({ layout: 'default' })
 
 <style lang="scss" scoped>
 @import "@/style/vars.scss";
-.row > div {
-  display: flex;
-  align-items: center;
-  margin-top: $size-5;
 
-  &:last-child {
-    margin-bottom: $size-5;
+.row {
+  &>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: $size-5;
+
+    &:last-child {
+      margin-bottom: $size-5;
+    }
+  }
+}
+
+.col-md-8 {
+  @media (min-width: $tablet) {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 </style>
