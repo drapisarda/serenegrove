@@ -9,6 +9,8 @@
         advantages:
       </p>
     </div>
+  </section>
+  <section class="section">
     <div class="container container--wide">
       <div class="row row--wide center-xs">
         <div class="col-md-4">
@@ -29,7 +31,12 @@
               improved self-image.</li>
           </ul>
         </div>
-
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container container--wide">
+      <div class="row row--wide center-xs">
         <div class="col-md-8">
           <ul>
             <li><strong>Better Sleep</strong>: Regular meditation aids in better sleep quality by controlling runaway
@@ -49,9 +56,11 @@
         </div>
       </div>
     </div>
+  </section>
+  <section class="section">
     <div class="container">
       <div class="quote">
-        <p><strong>In essence</strong>, meditation, though it requires patience and 
+        <p><strong>In essence</strong>, meditation, though it requires patience and
           practice, contributes significantly to overall well-being and health.</p>
       </div>
     </div>
@@ -70,13 +79,10 @@ strong {
 }
 
 .row {
-  font-size: 1.2em;
-
   &>div {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: $size-5;
 
     &:last-child {
       margin-bottom: $size-5;

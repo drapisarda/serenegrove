@@ -484,7 +484,8 @@ label {
 .row.row--wide {
   > div {
     @media (min-width: $tablet) {
-      padding: $gap*3;
+      padding-right: $gap*3;
+      padding-left: $gap*3;
     }
   }
 }

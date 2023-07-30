@@ -161,6 +161,7 @@ const toggleMenu = () => {
       z-index: 1;
       margin-right: 2em;
       padding: $size-8 $size-7;
+      font-weight: 700;
 
       &:after {
         position: absolute;

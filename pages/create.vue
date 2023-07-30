@@ -33,6 +33,8 @@ definePageMeta({ layout: 'player' })
 <style lang="scss" scoped>
 @import "@/style/vars.scss";
 
+$contentBg: $dark-2;
+
 .start-wide {
   display: flex;
   flex-direction: column;
@@ -79,12 +81,17 @@ definePageMeta({ layout: 'player' })
     height: 100%;
     flex: 1;
     overflow: scroll;
-    background-color: $dark-2;
+    background-color: $contentBg;
   }
 
   &__content {
     overflow: hidden;
     position: relative;
+
+    @media (max-width: #{$tablet - 1px}) {
+      background: none;
+      box-shadow: none;
+    }
 
     &::before,
     &::after {
@@ -93,8 +100,12 @@ definePageMeta({ layout: 'player' })
       left: 0;
       width: 100%;
       height: $size-5;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%);
       z-index: 1;
+      background: linear-gradient(180deg, rgba(red($contentBg), green($contentBg), blue($contentBg), 1) 0%, rgba(0, 0, 0, 0) 100%);
+      
+      @media (min-width: $tablet) {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%);
+      }
     }
 
     &::before {
@@ -126,7 +137,7 @@ definePageMeta({ layout: 'player' })
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: $dark-2;
+    background-color: $contentBg;
     height: 100%;
     overflow: visible;
 
