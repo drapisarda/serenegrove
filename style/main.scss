@@ -8,6 +8,9 @@ $sm-max: $tablet - 1; // Set sm breakpoint's max width
 $md-max: $desktop - 1; // Set md breakpoint's max width
 $lg-max: $widescreen - 1; // Set lg breakpoint's max width
 
+$bodyFontFamily: 'Quattrocento', 'Times new roman', 'Arial', 'Helvetica', serif;
+$highlightsFontFamily: 'Lora', 'Times new roman', 'Arial', 'Helvetica', serif;
+
 // TODO non sta generando col-md
 @import '../node_modules/@drewbot/sass-flexbox-grid/public/sass-flexbox/scss/main.scss';
 
@@ -47,7 +50,7 @@ html {
 
 body {
   background: $bg;
-  font-family: 'Lora', 'Times new roman', 'Arial', 'Helvetica', serif;
+  font-family: $bodyFontFamily;
   color: $clear-1;
   min-width: 100vw;
   min-height: 100svh;
@@ -61,7 +64,7 @@ h3,
 h4,
 h5 {
   margin: 3rem 0 1rem;
-  font-family: 'Quattrocento', 'Times new roman', 'Arial', 'Helvetica', serif;
+  font-family: $highlightsFontFamily;
   font-weight: 600;
   line-height: 1.3;
   color: inherit;
@@ -108,6 +111,7 @@ small,
 strong {
   color: inherit;
   font-weight: bold;
+  font-family: $highlightsFontFamily
 }
 
 em {
@@ -446,7 +450,7 @@ label {
 
 .card-header {
   font-weight: bold;
-  font-family: 'Quattrocento', 'Times new roman', 'Arial', 'Helvetica', serif;
+  font-family: $highlightsFontFamily;
 }
 
 .card-image svg {
@@ -464,5 +468,20 @@ label {
 
   &.row {
     justify-content: center;
+  }
+}
+
+.quote {
+  border-left: $size-7 solid $clear-2;
+  padding-left: $size-5;
+  margin-top: $size-5;
+  margin-bottom: $size-5;
+  font-size: 1.2em;
+  @media (min-width: $tablet) {
+    font-size: 2em;
+  }
+
+  strong {
+    color: $clear-2;
   }
 }

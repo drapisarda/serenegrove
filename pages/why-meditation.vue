@@ -50,8 +50,10 @@
       </div>
     </div>
     <div class="container">
-      <p>In essence, meditation, though it requires patience and practice, contributes significantly to overall well-being
-        and health.</p>
+      <div class="quote">
+        <p><strong>In essence</strong>, meditation, though it requires patience and 
+          practice, contributes significantly to overall well-being and health.</p>
+      </div>
     </div>
   </section>
 </template>
@@ -63,7 +65,13 @@ definePageMeta({ layout: 'default' })
 <style lang="scss" scoped>
 @import "@/style/vars.scss";
 
+strong {
+  font-size: 1.1em;
+}
+
 .row {
+  font-size: 1.2em;
+
   &>div {
     display: flex;
     align-items: center;
