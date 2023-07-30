@@ -33,7 +33,7 @@ $highlightsFontFamily: 'Lora', 'Times new roman', 'Arial', 'Helvetica', serif;
 
 html {
   scroll-behavior: smooth;
-  font-size: 100%;
+  font-size: 18px;
   /*16px*/
   box-sizing: border-box;
 
@@ -483,5 +483,13 @@ label {
 
   strong {
     color: $clear-2;
+  }
+}
+
+.row.row--wide {
+  > div {
+    @media (min-width: $tablet) {
+      padding: $gap*3;
+    }
   }
 }

@@ -10,7 +10,7 @@
       </p>
     </div>
     <div class="container container--wide">
-      <div class="row center-xs">
+      <div class="row row--wide center-xs">
         <div class="col-md-4">
           <img src="/assets/img/serenegrove-3.webp" alt="Regular meditation can lead to healthier lifestyle
             choices, thus improving life quality and longevity.">
@@ -81,13 +81,6 @@ strong {
     &:last-child {
       margin-bottom: $size-5;
     }
-  }
-}
-
-.col-md-8 {
-  @media (min-width: $tablet) {
-    padding-left: 10%;
-    padding-right: 10%;
   }
 }
 </style>
