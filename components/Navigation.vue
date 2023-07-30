@@ -17,7 +17,7 @@
           <button class="button button--close" @click="toggleMenu">
             <CloseIcon />
           </button>
-          <a href="/create">Start now!</a>
+          <a class="button navbar-cta" href="/create">Start now!</a>
           <a href="/about">About us</a>
           <a href="/why-meditation">Why Meditation?</a>
           
@@ -84,6 +84,23 @@ const toggleMenu = () => {
       background: $white;
       margin-bottom: .4em;
       border-radius: 2px;
+    }
+  }
+
+  .navbar-cta {
+    background-color: $clear-2;
+    border-color: $dark-3;
+    color: $dark-3;
+    border-radius: 0;
+
+    &:hover {
+      background-color: $dark-3;
+      border-color: $dark-3;
+      color: $clear-4;
+    }
+
+    &::after {
+      display: none;
     }
   }
 

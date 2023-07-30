@@ -247,11 +247,6 @@ $buttonSecondaryColor: $white;
     width: 32px;
   }
 
-  &.success {
-    background-color: $success;
-    color: $clear-1;
-  }
-
   &.inactive {
     opacity: 0.4;
     pointer-events: none;
