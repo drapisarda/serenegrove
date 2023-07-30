@@ -173,6 +173,7 @@ $routineChevronHeight: 3rem;
   }
 
 
+  :deep(.list-items > p),
   &__title {
     padding-top: $size-7;
     padding-left: $size-7;
