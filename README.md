@@ -1,9 +1,13 @@
-# Serene Grove
+# SereneGrove
 SereneGrove is a project by [Daniele Rapisarda](https://www.danielerapisarda.com/) and other collaborators.
+
+![SereneGrove](https://serenegrove.com/assets/img/preview1.png)
 
 This is an experimental project made to give the meditation community a tool to make meditation easy and accessible.
 
 Our mission is to make the world a better place by helping people find peace and serenity in their daily lives. We believe that meditation a powerful tools for achieving this goal and everyone should have access to the benefits of meditation, regardless of their location or experience level. That's why we've made our platform available for free and we aim to continuously improve it.
+
+![SereneGrove](https://serenegrove.com/assets/img/preview2.png)
 
 This project is still on going. If you like to contribute, please contact us with an email to
 _contact_ _at_ SereneGrove (dot) com
