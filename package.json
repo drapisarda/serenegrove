@@ -21,5 +21,12 @@
     "@pinia/nuxt": "^0.4.7",
     "pinia": "^2.0.33",
     "vite-svg-loader": "^4.0.0"
-  }
+  },
+  "name": "serenegrove",
+  "description": "https://www.serenegrove.com/",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Daniele Rapisarda",
+  "license": "ISC"
 }
