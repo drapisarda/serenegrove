@@ -9,7 +9,7 @@
           Rapisarda</a> and other <a href="/credits">collaborators</a>.
       </p>
       <p>
-        This is a sperimental project made to give the meditation community a tool to make
+        This is a experimental project made to give the meditation community a tool to make
         meditation easy and accessible.
       </p>
       <p>
