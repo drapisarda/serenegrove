@@ -11,7 +11,6 @@
 
 <script lang="ts" setup>
 import { type Step } from "@/store/types";
-
 const props = defineProps(['currentStepIndex', 'playerSteps']);
 
 const currentStep = computed((): Step | undefined => {

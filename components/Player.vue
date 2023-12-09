@@ -81,8 +81,13 @@
 
 
 <script lang="ts" setup>
+<<<<<<< HEAD
 import { type Step } from "@/store/types";
 import { ref, computed } from "vue";
+=======
+import { useRoutineStore, type Step } from "@/store/routine";
+import { ref, computed, watch } from "vue";
+>>>>>>> 13fb228 (update type usages)
 import Play from "@/src/assets/img/icons/play-button.svg";
 import Pause from "@/src/assets/img/icons/pause-button.svg";
 import CloseIcon from "@/src/assets/img/icons/close.svg";
