@@ -17,7 +17,6 @@
     "vue": "latest"
   },
   "dependencies": {
-    "sass-flexbox-grid": "https://github.com/jvdl/sass-flexbox-grid.git#master",
     "@pinia/nuxt": "^0.5.1",
     "pinia": "^2.0.33",
     "vite-svg-loader": "^4.0.0"
