@@ -81,7 +81,7 @@
 
 
 <script lang="ts" setup>
-import { useRoutineStore, Step } from "@/store/routine";
+import { useRoutineStore, type Step } from "@/store/routine";
 import { ref, computed, watch } from "vue";
 import Play from "@/src/assets/img/icons/play-button.svg";
 import Pause from "@/src/assets/img/icons/pause-button.svg";

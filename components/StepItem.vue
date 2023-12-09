@@ -32,7 +32,7 @@
 import { defineProps } from "vue";
 import Clock from "@/src/assets/img/icons/clock.svg";
 import Plus from '@/src/assets/img/icons/plus.svg';
-import { useRoutineStore, Step } from "@/store/routine";
+import { useRoutineStore, type Step } from "@/store/routine";
 import { useGlobalStore, ToastStyles } from "@/store/global";
 import { formattedTime } from '@/composables/formattedTime';
 
