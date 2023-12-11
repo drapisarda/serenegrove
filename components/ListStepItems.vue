@@ -1,17 +1,26 @@
 <template>
   <div class="steps-list">
     <ul>
-      <StepItem v-for="(step, index) in stepsOptions" :key="index" :step="step" />
+      <StepItem v-for="(step, index) in stepsOptions" :key="index" :step="step" @add="add" />
     </ul>
   </div>
 </template>
   
 <script lang="ts" setup>
-import { useRoutineStore, } from "@/store/routine";
+import { useRoutineStore, type Step } from "@/store/routine";
+import { useGlobalStore, ToastStyles } from "@/store/global";
+
 import { ref, watch } from "vue";
 
-const { steps, stepsOptions, getRoutineSteps } =
+const { steps, stepsOptions, getRoutineSteps, addStepAtTheBottom } =
   useRoutineStore();
+
+const { setToastMessage } = useGlobalStore();
+
+const add = (step: Step) => {
+  addStepAtTheBottom(step);
+  setToastMessage(`Step "${step.name}" added to the routine`, ToastStyles.Success);
+}
 
 const routineSteps = ref(getRoutineSteps());
 watch(steps, (newSteps: number[]) => {
