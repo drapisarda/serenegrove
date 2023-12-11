@@ -9,19 +9,19 @@
           {{ step.name }}
         </p>
         <p class="card-header__duration">
-          <Clock/> {{ formattedTime(step.duration) }}
+          <Clock/> <span>{{ formattedTime(step.duration) }}</span>
         </p>
       </div>
       <div class="card-actions">
-        <button @click="moveUp" class="card-header-icon" :class="{ 'card-header-icon--inactive': isFirst }"
+        <button @click="$emit('moveUp', index)" class="card-header-icon card-actions--move-up" :class="{ 'card-header-icon--inactive': isFirst }"
           aria-label="move up">
           <UpShevron />
         </button>
-        <button @click="moveDown" class="card-header-icon" :class="{ 'card-header-icon--inactive': isLast }"
+        <button @click="$emit('moveDown', index)" class="card-header-icon card-actions--move-down" :class="{ 'card-header-icon--inactive': isLast }"
           aria-label="move down">
           <DownShevron />
         </button>
-        <button class="card-header-icon" aria-label="remove element" @click="remove">
+        <button class="card-header-icon card-actions--remove" aria-label="remove element" @click="$emit('remove', {id: index, name: step.name})">
           <Bin />
         </button>
       </div>
@@ -30,16 +30,11 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps } from "vue";
 import Bin from '@/src/assets/img/icons/bin.svg';
 import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
 import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
 import Clock from "@/src/assets/img/icons/clock.svg";
-import { useRoutineStore } from "@/store/routine";
-import { useGlobalStore, ToastStyles } from "@/store/global";
 import { formattedTime } from '@/composables/formattedTime';
-
-const { setToastMessage } = useGlobalStore();
 
 // TODO use step
 const props = defineProps([
@@ -49,20 +44,11 @@ const props = defineProps([
   'isLast',
 ]);
 
-const { moveStep, removeStep } = useRoutineStore();
-
-const moveUp = () => {
-  moveStep(props.index, -1);
-};
-
-const moveDown = () => {
-  moveStep(props.index, 1);
-};
-
-const remove = () => {
-  removeStep(props.index)
-  setToastMessage(`Step "${props.step.name}" removed from the routine`, ToastStyles.Warning);
-};
+defineEmits({
+  'moveUp': null,
+  'moveDown': null,
+  'remove': null
+})
 </script>
 
 <style lang="scss" scoped>
