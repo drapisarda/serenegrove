@@ -5,8 +5,11 @@ describe('Pages are loading', async () => {
   const pages = [
     {id: 'Home', url: '/'},
     {id: 'Create', url: '/create/'},
+    {id: 'About', url: '/about/'},
+    {id: 'why Meditation', url: '/why-meditation/'},
+    {id: 'Privacy', url: '/privacy/'},
     {id: 'Newsletter', url: '/newsletter/'},
-    {id: 'Privacy', url: '/privacy'},
+    {id: 'Credits', url: '/credits/'},
   ]
 
   await setup({
