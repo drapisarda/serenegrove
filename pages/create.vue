@@ -21,7 +21,7 @@
         </div>
       </ClientOnly>
     </div>
-    <PlayerBar class="start-wide__player-bar" />
+    <PlayerContainer class="start-wide__player-bar" />
   </div>
 </template>
 

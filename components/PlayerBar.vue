@@ -1,8 +1,8 @@
 <template>
   <div class="player-bar">
     <div class="container row">
-      <div class="col">
-        <Clock /> {{ formattedTime(duration) }}
+      <div class="col player-bar__duration">
+        <Clock /> <span>{{ formattedTime(props.duration) }}</span>
       </div>
       <div class="col col-xs-3 player-bar__button">
         <Player>
@@ -13,33 +13,21 @@
       </div>
       <div class="col player-bar__switch">
         Extend
-        <Switch v-model="isExtendedDuration" />
+        <Switch v-model="props.extended" @updateModelValue="updateRoutineVariation"/>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from "vue";
-import { useRoutineStore } from "@/store/routine";
 import Play from "@/src/assets/img/icons/play-button.svg";
 import Clock from "@/src/assets/img/icons/clock.svg";
-const { steps, routineVariation, setRoutineVariation, getRoutineDuration } = useRoutineStore()
 import { formattedTime } from '@/composables/formattedTime';
-const duration = ref(getRoutineDuration());
 
-// TODO make it better. Not it only manages 2 variations
-const isExtendedDuration = ref(false);
-onMounted(() => {
-  isExtendedDuration.value = routineVariation.id === 1;
-})
-watch(steps, () => {
-  duration.value = getRoutineDuration();
-})
-watch(isExtendedDuration, () => {
-  setRoutineVariation(isExtendedDuration.value ? 1 : 0);
-  duration.value = getRoutineDuration();
-});
+const props = defineProps(['extended', 'duration']);
+const emit = defineEmits(['updateModelValue'])
+
+const updateRoutineVariation = (e: Event) => emit('updateModelValue', e)
 </script>
 
 <style lang="scss" scoped>

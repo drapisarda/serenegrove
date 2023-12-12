@@ -6,7 +6,7 @@ describe('Pages are loading', async () => {
     {id: 'Home', url: '/'},
     {id: 'Create', url: '/create/'},
     {id: 'About', url: '/about/'},
-    {id: 'why Meditation', url: '/why-meditation/'},
+    {id: 'Why Meditation', url: '/why-meditation/'},
     {id: 'Privacy', url: '/privacy/'},
     {id: 'Newsletter', url: '/newsletter/'},
     {id: 'Credits', url: '/credits/'},
