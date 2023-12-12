@@ -28,7 +28,7 @@ const remove = (e: {id: number, name: string}) => {
 };
 
 const routineSteps = ref(getRoutineSteps());
-watch(steps, (newSteps: number[]) => {
+watch(steps, () => {
   routineSteps.value = getRoutineSteps()
 })
 </script>
