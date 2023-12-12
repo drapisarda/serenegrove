@@ -1,13 +1,14 @@
 import { defineConfig } from 'vitest/config'
 import * as path from 'path';
 import vue from '@vitejs/plugin-vue'
-import * as persistedState from "@pinia-plugin-persistedstate/nuxt";
 
 // export default defineVitestConfig({
 export default defineConfig({
   plugins: [
     vue(),
-    () => persistedState
+  ],
+  setupFiles: [
+    '@/tests/setup-tests.js',
   ],
   test: {
     globals: true,

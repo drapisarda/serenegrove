@@ -1,22 +1,6 @@
 import { defineStore } from "pinia";
 import { useGlobalStore } from "./global";
-
-export interface Step {
-  id: number,
-  name: string,
-  duration: number,
-  file: string,
-  description: string,
-  icon: string,
-  pauseAfter: number,
-}
-
-// TODO use standard
-export interface TimeFormat {
-  hours: string,
-  minutes: string,
-  seconds: string
-}
+import { type Step } from "./types";
 
 interface RoutineTimeVariationType {
   id: number,

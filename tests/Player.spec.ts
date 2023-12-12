@@ -1,23 +1,27 @@
-import Switch from '@/components/Switch.vue'
+import Player from '@/components/Player.vue'
+import FeedbackRequest from '@/components/FeedbackRequest.vue'
+import Loader from '@/components/Loader.vue'
 import { mount, VueWrapper } from '@vue/test-utils'
 
-describe('Switch component test', async () => {
+describe('Player component test', async () => {
   let wrapper: VueWrapper;
-  const modelValue = 0;
 
   beforeAll(() => {
-    wrapper = mount(Switch, {
+    wrapper = mount(Player, {
+      components: [
+        FeedbackRequest,
+        Loader
+      ],
       props: {
-        modelValue
+        routineVariation: false,
+        duration: 90,
+        playerSteps: [],
       },
     });
   })
 
-  test('Switch emit and checkbox functionality', () => {
-    wrapper.find('.toggle-input').trigger('click');
-    wrapper.find('.toggle-input').trigger('click');
-    expect(wrapper.emitted().updateModelValue[0][0]).toBe(!modelValue);
-    expect(wrapper.emitted().updateModelValue[1][0]).toBe(!!modelValue);
-    expect(wrapper.emitted().updateModelValue.length).toBe(2);
+  test('Player can be opened', () => {
+    expect(wrapper.find('.player__playing').html().length).toBeGreaterThan(0);
+    wrapper.find('.player__start button').trigger('click');
   })
 })

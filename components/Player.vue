@@ -81,7 +81,7 @@
 
 
 <script lang="ts" setup>
-import { type Step } from "@/store/routine";
+import { type Step } from "@/store/types";
 import { ref, computed } from "vue";
 import Play from "@/src/assets/img/icons/play-button.svg";
 import Pause from "@/src/assets/img/icons/pause-button.svg";

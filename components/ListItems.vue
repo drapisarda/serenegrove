@@ -12,7 +12,8 @@
 
 <script lang="ts" setup>
 import { useRoutineStore, } from "@/store/routine";
-import { useGlobalStore, ToastStyles} from "@/store/global";
+import { useGlobalStore} from "@/store/global";
+import { type ToastStyles } from "@/store/types";
 import { ref, watch } from "vue";
 
 const { steps, getRoutineSteps, moveStep, removeStep } =

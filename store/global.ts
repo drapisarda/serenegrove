@@ -1,16 +1,5 @@
 import { defineStore } from "pinia";
 
-export interface ToastMessage {
-  message: string,
-  id: number,
-  style: string
-}
-
-export enum ToastStyles {
-  Success = 'success',
-  Warning = 'warning',
-}
-
 export const useGlobalStore = defineStore("global", {
   state: () => ({
     version: '0.5' as string,
