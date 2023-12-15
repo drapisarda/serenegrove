@@ -1,5 +1,5 @@
 <template>
-  <li class="card">
+  <li class="card list-item">
     <header class="card-header">
       <div class="card-image">
         <Icon :name="step.icon" />
@@ -13,15 +13,15 @@
         </p>
       </div>
       <div class="card-actions">
-        <button @click="moveUp" class="card-header-icon" :class="{ 'card-header-icon--inactive': isFirst }"
+        <button @click="moveUp" class="card-header-icon card-actions__up" :class="{ 'card-header-icon--inactive': isFirst }"
           aria-label="move up">
           <UpShevron />
         </button>
-        <button @click="moveDown" class="card-header-icon" :class="{ 'card-header-icon--inactive': isLast }"
+        <button @click="moveDown" class="card-header-icon card-actions__down" :class="{ 'card-header-icon--inactive': isLast }"
           aria-label="move down">
           <DownShevron />
         </button>
-        <button class="card-header-icon" aria-label="remove element" @click="remove">
+        <button class="card-header-icon card-actions__remove" aria-label="remove element" @click="remove">
           <Bin />
         </button>
       </div>

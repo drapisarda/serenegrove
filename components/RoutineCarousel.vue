@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Step } from "@/store/routine";
+import { type Step } from "@/store/routine";
 const props = defineProps(['currentStepIndex', 'playerSteps']);
 
 const currentStep = computed((): Step | undefined => {

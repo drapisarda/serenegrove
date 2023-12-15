@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useGlobalStore, ToastMessage } from "@/store/global";
+import { useGlobalStore, type ToastMessage } from "@/store/global";
 import { ref, watch } from "vue";
 
 const message = ref('');
