@@ -12,7 +12,7 @@ $bodyFontFamily: 'Quattrocento', 'Times new roman', 'Arial', 'Helvetica', serif;
 $highlightsFontFamily: 'Lora', 'Times new roman', 'Arial', 'Helvetica', serif;
 
 // TODO non sta generando col-md
-@import '../node_modules/@drewbot/sass-flexbox-grid/public/sass-flexbox/scss/main.scss';
+@import './grid/main.scss';
 
 @font-face {
   font-family: 'Quattrocento';

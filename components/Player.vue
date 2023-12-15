@@ -24,7 +24,7 @@
         </div>
 
         <div class="player__time section" :class="{ 'hide': stopStatus }">
-          <RoutineTimer :time="routineDuration" :start="!pauseStatus" :stop="stopStatus" />
+          <RoutineTimer :time="duration" :start="!pauseStatus" :stop="stopStatus" />
         </div>
 
         <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"
@@ -81,8 +81,8 @@
 
 
 <script lang="ts" setup>
-import { useRoutineStore, Step } from "@/store/routine";
-import { ref, computed, watch } from "vue";
+import { type Step } from "@/store/types";
+import { ref, computed } from "vue";
 import Play from "@/src/assets/img/icons/play-button.svg";
 import Pause from "@/src/assets/img/icons/pause-button.svg";
 import CloseIcon from "@/src/assets/img/icons/close.svg";
@@ -91,14 +91,7 @@ import { clipHtml } from "@/composables/clipHtml";
 const baseURL = import.meta.env.BASE_URL;
 const debugAudio = `${baseURL}/assets/audio/1.mp3`;
 const debug = false;
-const { steps, routineVariation, getPlayerSteps, getRoutineDuration } = useRoutineStore();
-let playerSteps = getPlayerSteps();
-const routineDuration = ref(getRoutineDuration());
-
-watch(steps, (newSteps: number[]) => {
-  routineDuration.value = getRoutineDuration();
-  if (!stopStatus) stopAndClose();
-});
+const props = defineProps(['playerSteps', 'routineVariation', 'duration'])
 
 const currentIndex = ref(-1);
 const pauseStatus = ref(true);
@@ -109,18 +102,18 @@ clipHtml(visibleStatus);
 
 const askFeedback = ref(false);
 const askDuration = ref(false);
-const activeStatus = computed((): Boolean => !emptyRoutine.value && !!routineVariation && visibleStatus.value);
+const activeStatus = computed((): Boolean => !emptyRoutine.value && visibleStatus.value);
 
 const audio = ref<HTMLAudioElement>();
 const audioUrl = ref<string | null>(null);
 const audioCache = new Map<string, string>();
 
 const currentStep = computed((): Step => {
-  return playerSteps[currentIndex.value] || undefined;
+  return props.playerSteps[currentIndex.value] || undefined;
 });
 
 const emptyRoutine = computed((): Boolean => {
-  return steps.length === 0;
+  return props.playerSteps.length === 0;
 })
 
 const handleKeys = (event: KeyboardEvent) => {
@@ -137,7 +130,7 @@ const playNext = async () => {
     }
 
     playAudioFile(currentStep.value.file);
-  }, currentStep.value.pauseAfter * routineVariation.modifier * 1000);
+  }, currentStep.value.pauseAfter * props.routineVariation.modifier * 1000);
 };
 
 const playAudioFile = async (fileRelativeUrl: string) => {
@@ -188,7 +181,7 @@ const getAudioFileUrl = async (file: string): Promise<string> => {
 
 // TODO: Load also the icons and the full carousel
 const loadAllSteps = async () => {
-  return Promise.all(playerSteps.map(async (step: Step, index: number) => {
+  return Promise.all(props.playerSteps.map(async (step: Step, index: number) => {
     if (audioCache.has(step.file) || stopStatus.value) {
       return;
     }
@@ -212,25 +205,25 @@ const play = async () => {
 
   askDuration.value = false;
 
-  playerSteps = getPlayerSteps();
   if (debug) {
-    playerSteps.map(step => {
+    props.playerSteps.map((step: Step) => {
       step.file = debugAudio;
       return step;
     })
   }
 
+  
   stopStatus.value = false;
   pauseStatus.value = false;
-  routineDuration.value = getRoutineDuration();
+  
   // pause/play behavior
   if (currentStep.value) {
     audio.value?.play();
     return;
   };
-
+  
   currentIndex.value = 0;
-
+  
   await loadAllSteps();
   loadedStatus.value = true;
 
@@ -240,7 +233,7 @@ const play = async () => {
     return;
   }
 
-  playAudioFile(playerSteps[0].file);
+  playAudioFile(props.playerSteps[0].file);
 };
 
 const pause = () => {

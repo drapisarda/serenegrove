@@ -12,15 +12,15 @@
             {{ step.name }}
           </p>
         </header>
-        <p>
+        <p class="card-content__description">
           {{ step.description }}
         </p>
         <p class="card-header__duration">
-          <Clock/> {{ formattedTime(step.duration) }}
+          <Clock/> <span>{{ formattedTime(step.duration) }}</span>
         </p>
       </div>
       <div class="col-xs-offset-4 col-sx-8 card-footer">
-        <button class="button" aria-label="add element to your playlist" @click="add">
+        <button class="button" aria-label="add element to your playlist" @click="$emit('add', step)">
           <Plus /> Add to playlist
         </button>
       </div>
@@ -29,23 +29,15 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps } from "vue";
 import Clock from "@/src/assets/img/icons/clock.svg";
 import Plus from '@/src/assets/img/icons/plus.svg';
-import { useRoutineStore, Step } from "@/store/routine";
-import { useGlobalStore, ToastStyles } from "@/store/global";
 import { formattedTime } from '@/composables/formattedTime';
 
-const { setToastMessage } = useGlobalStore();
+defineEmits({
+  'add': null,
+})
 
-const props = defineProps<{ step: Step }>();
-
-const { addStepAtTheBottom } = useRoutineStore();
-
-const add = () => {
-  addStepAtTheBottom(props.step);
-  setToastMessage(`Step "${props.step.name}" added to the routine`, ToastStyles.Success);
-};
+const props = defineProps(['step']);
 </script>
 
 <style lang="scss" scoped>

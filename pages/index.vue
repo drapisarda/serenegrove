@@ -49,7 +49,7 @@
       </p>
 
       <p>
-        <a href="/why-meditation  ">Learn more</a>.
+        <a href="/why-meditation">Learn more</a>.
       </p>
     </div>
   </section>
