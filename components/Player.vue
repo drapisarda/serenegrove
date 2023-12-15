@@ -35,13 +35,13 @@
         <div class="container is-max-desktop">
           <div class="player__actions row">
             <div class="col-xs-6 player__action player__action--play-pause" v-show="pauseStatus && !stopStatus">
-              <button class="button" @click="play">
+              <button class="button player__action__button--play" @click="play">
                 <Play />
                 <div>Play</div>
               </button>
             </div>
             <div class="col-xs-6 player__action player__action--play-pause" v-show="!pauseStatus && !stopStatus">
-              <button class="button" @click="pause">
+              <button class="button player__action__button--pause" @click="pause">
                 <Pause />
                 <div> Pause </div>
               </button>
