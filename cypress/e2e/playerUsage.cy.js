@@ -1,4 +1,4 @@
-describe('Home page behaviors', () => {
+describe('Player usages', () => {
 
   const mediaPlays = (els, expectation)=>{
     let audible = false
