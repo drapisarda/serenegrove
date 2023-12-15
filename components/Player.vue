@@ -206,23 +206,24 @@ const play = async () => {
   askDuration.value = false;
 
   if (debug) {
-    props.playerSteps.map(step => {
+    props.playerSteps.map((step: Step) => {
       step.file = debugAudio;
       return step;
     })
   }
 
+  
   stopStatus.value = false;
   pauseStatus.value = false;
-
+  
   // pause/play behavior
   if (currentStep.value) {
     audio.value?.play();
     return;
   };
-
+  
   currentIndex.value = 0;
-
+  
   await loadAllSteps();
   loadedStatus.value = true;
 

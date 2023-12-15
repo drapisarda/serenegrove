@@ -25,3 +25,9 @@ export enum ToastStyles {
   Success = 'success',
   Warning = 'warning',
 }
+
+export interface RoutineTimeVariationType {
+  id: number,
+  label: string;
+  modifier: number;
+}
