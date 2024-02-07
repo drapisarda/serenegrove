@@ -1,13 +1,13 @@
 <template>
   <div class="toggle-switch">
-    <input class="toggle-input" :checked="modelValue" @input="$emit('update:modelValue', $event.target.checked)" id="toggle" type="checkbox">
+    <input class="toggle-input" :checked="modelValue" @click="$emit('updateModelValue', $event.target.checked)" id="toggle" type="checkbox">
     <label class="toggle-label" for="toggle"/>
   </div>
 </template>
 
 <script lang="ts" setup>
 defineProps(['modelValue'])
-defineEmits(['update:modelValue'])
+defineEmits(['updateModelValue'])
 </script>
 
 <style lang="scss">
