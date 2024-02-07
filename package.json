@@ -6,12 +6,9 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-<<<<<<< HEAD
     "test": "vitest",
-    "coverage": "vitest run --coverage"
-=======
+    "coverage": "vitest run --coverage",
     "cy:run": "cypress run"
->>>>>>> 7e5323d (Cypress integration and user behaviour test)
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.8.1",

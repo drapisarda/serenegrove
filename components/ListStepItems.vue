@@ -8,7 +8,7 @@
   
 <script lang="ts" setup>
 import { useRoutineStore } from "@/store/routine";
-import { type Step, type ToastStyles } from "@/store/types";
+import { type Step, ToastStyles } from "@/store/types";
 import { useGlobalStore } from "@/store/global";
 
 import { ref, watch } from "vue";

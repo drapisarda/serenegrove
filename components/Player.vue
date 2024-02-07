@@ -61,9 +61,9 @@
         </template>
         <div class="player__start is-centered">
           <div class="player__action">
-            <button class="button is-primary" :class="{ 'inactive': emptyRoutine }" @click="display">
+            <button class="button is-primary" :class="{ 'inactive': disable }" @click="display">
               <slot name="play-button">
-                <span v-if="emptyRoutine">
+                <span v-if="disable">
                   Add one step to start your routine
                 </span>
                 <template v-else>
@@ -81,13 +81,8 @@
 
 
 <script lang="ts" setup>
-<<<<<<< HEAD
 import { type Step } from "@/store/types";
 import { ref, computed } from "vue";
-=======
-import { useRoutineStore, type Step } from "@/store/routine";
-import { ref, computed, watch } from "vue";
->>>>>>> 13fb228 (update type usages)
 import Play from "@/src/assets/img/icons/play-button.svg";
 import Pause from "@/src/assets/img/icons/pause-button.svg";
 import CloseIcon from "@/src/assets/img/icons/close.svg";
@@ -96,7 +91,12 @@ import { clipHtml } from "@/composables/clipHtml";
 const baseURL = import.meta.env.BASE_URL;
 const debugAudio = `${baseURL}/assets/audio/1.mp3`;
 const debug = false;
-const props = defineProps(['playerSteps', 'routineVariation', 'duration'])
+const props = defineProps([
+  'playerSteps',
+  'disable',
+  'routineVariation', 
+  'duration'
+])
 
 const currentIndex = ref(-1);
 const pauseStatus = ref(true);
@@ -107,7 +107,7 @@ clipHtml(visibleStatus);
 
 const askFeedback = ref(false);
 const askDuration = ref(false);
-const activeStatus = computed((): Boolean => !emptyRoutine.value && visibleStatus.value);
+const activeStatus = computed((): Boolean => !props.disable && visibleStatus.value);
 
 const audio = ref<HTMLAudioElement>();
 const audioUrl = ref<string | null>(null);
@@ -116,10 +116,6 @@ const audioCache = new Map<string, string>();
 const currentStep = computed((): Step => {
   return props.playerSteps[currentIndex.value] || undefined;
 });
-
-const emptyRoutine = computed((): Boolean => {
-  return props.playerSteps.length === 0;
-})
 
 const handleKeys = (event: KeyboardEvent) => {
   if (event.key === 'Escape') stopOrClose();
@@ -217,18 +213,18 @@ const play = async () => {
     })
   }
 
-  
+
   stopStatus.value = false;
   pauseStatus.value = false;
-  
+
   // pause/play behavior
   if (currentStep.value) {
     audio.value?.play();
     return;
   };
-  
+
   currentIndex.value = 0;
-  
+
   await loadAllSteps();
   loadedStatus.value = true;
 
@@ -329,7 +325,7 @@ const stop = () => {
   &__page {
     position: absolute;
     left: 0;
-    top:0;
+    top: 0;
     width: 100%;
     height: 100%;
   }
@@ -356,6 +352,7 @@ const stop = () => {
   }
 
   &__playing-actions {
+
     .container,
     #{$root}__actions {
       height: 100%;

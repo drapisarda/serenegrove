@@ -1,11 +1,16 @@
 <template>
-  <PlayerBar :playerSteps="playerSteps" :duration="duration" :extended="isExtendedDuration" @updateModelValue="updateRoutineVariation"/>
+  <PlayerBar 
+    :playerSteps="playerSteps" :duration="duration" 
+    :extended="isExtendedDuration" @updateModelValue="updateRoutineVariation"
+    :disable="disable"
+  />
 </template>
 <script lang="ts" setup>
 import { onMounted } from "vue";
 import { useRoutineStore } from "@/store/routine";
-const { steps, routineVariation, setRoutineVariation, getRoutineDuration, getPlayerSteps } = useRoutineStore()
+const { steps, routineVariation, setRoutineVariation, getRoutineDuration, getPlayerSteps, getRoutineSteps } = useRoutineStore()
 const playerSteps = ref(getPlayerSteps());
+const disable = ref(getRoutineSteps().length === 0);
 const duration = ref(getRoutineDuration());
 
 // TODO make it better. No it only manages 2 variations
@@ -16,6 +21,7 @@ onMounted(() => {
 watch(steps, () => {
   playerSteps.value = getPlayerSteps();
   duration.value = getRoutineDuration();
+  disable.value = getRoutineSteps().length === 0;
 })
 
 const updateRoutineVariation = (newExtendedVariation: boolean) => {

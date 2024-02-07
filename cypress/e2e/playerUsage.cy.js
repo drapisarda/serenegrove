@@ -30,32 +30,34 @@ describe('Player usages', () => {
     // list items edit
     cy.get('.list-items').find('.list-item').eq(0).find('.card-header__title').contains('Breath')
     cy.get('.list-items').find('.list-item').eq(1).find('.card-header__title').contains('Sounds')
-    cy.get('.list-items').find('.list-item').eq(0).find('.card-actions__down').click({ scrollBehavior: 'center' })
+    cy.get('.list-items').find('.list-item').eq(0).find('.card-actions--move-down').click()
 
     cy.get('.list-items').find('.list-item').eq(0).find('.card-header__title').contains('Sounds')
     cy.get('.list-items').find('.list-item').eq(1).find('.card-header__title').contains('Breath')
-    cy.get('.list-items').find('.list-item').eq(1).find('.card-actions__down').click({ scrollBehavior: 'center' })
+    cy.get('.list-items').find('.list-item').eq(1).find('.card-actions--move-down').click()
     cy.get('.list-items').find('.list-item').eq(1).find('.card-header__title').contains('Bell sound')
+    cy.get('.list-items').find('.list-item').eq(1).find('.card-actions--move-up').click();
+    cy.get('.list-items').find('.list-item').eq(0).find('.card-header__title').contains('Bell sound')
 
-    cy.get('.list-items').find('.list-item').eq(1).find('.card-actions__remove').click({ scrollBehavior: 'center' })
+    cy.get('.list-items').find('.list-item').eq(1).find('.card-actions--remove').click()
     cy.get('.list-items').find('.list-item').eq(1).find('.card-header__title').contains('Breath')
 
     cy.get('.list-items').find('.list-item').should('have.length', 2)
 
     // play / pause
-    cy.get('.player__start button').click({ scrollBehavior: 'center' })
+    cy.get('.player__start button').click()
     cy.get('.player__playing.player__playing--visible').should('be.visible');
     cy.get('audio').should(($p) => mediaPlays($p, true))
     cy.wait(500)
-    cy.get('.player__action__button--pause').click({ scrollBehavior: 'center' })
+    cy.get('.player__action__button--pause').click()
     cy.get('audio').should(($p) => mediaPlays($p, false))
     cy.wait(500)
-    cy.get('.player__action__button--play').click({ scrollBehavior: 'center' })
+    cy.get('.player__action__button--play').click()
     cy.get('audio').should(($p) => mediaPlays($p, true))
 
     // exit
-    cy.get('.player__playing .button--close').click({ scrollBehavior: 'center' })
+    cy.get('.player__playing .button--close').click()
     cy.get('.feedback-request').contains('How you liked this meditation?')
-    cy.get('.player__playing .player__action--stop').click({ scrollBehavior: 'center' })
+    cy.get('.player__playing .player__action--stop').click()
   })
 })
