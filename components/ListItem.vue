@@ -1,5 +1,5 @@
 <template>
-  <li class="card">
+  <li class="card list-item">
     <header class="card-header">
       <div class="card-image">
         <Icon :name="step.icon" />

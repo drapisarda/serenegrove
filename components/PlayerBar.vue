@@ -5,7 +5,7 @@
         <Clock /> <span>{{ formattedTime(props.duration) }}</span>
       </div>
       <div class="col col-xs-3 player-bar__button">
-        <Player :playerSteps="playerSteps" :routineVariation="extended" :duration="duration">
+        <Player :playerSteps="playerSteps" :routineVariation="extended" :duration="duration" :disable="disable">
           <template v-slot:play-button>
             <Play />
           </template>
@@ -24,7 +24,7 @@ import Play from "@/src/assets/img/icons/play-button.svg";
 import Clock from "@/src/assets/img/icons/clock.svg";
 import { formattedTime } from '@/composables/formattedTime';
 
-const props = defineProps(['extended', 'duration', 'playerSteps']);
+const props = defineProps(['extended', 'duration', 'playerSteps', 'disable']);
 const emit = defineEmits(['updateModelValue'])
 
 const updateRoutineVariation = (e: Event) => emit('updateModelValue', e)

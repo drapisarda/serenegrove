@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li class="step-item">
     <div class="card row">
       <div class="col-sm-4">
         <div class="card-image">
