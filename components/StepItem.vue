@@ -19,7 +19,7 @@
           <Clock/> <span>{{ formattedTime(step.duration) }}</span>
         </p>
       </div>
-      <div class="col-xs-offset-4 col-sx-8 card-footer">
+      <div class="col-xs-offset-4 col-sm-8 card-footer">
         <button class="button" aria-label="add element to your playlist" @click="$emit('add', step)">
           <Plus /> Add to playlist
         </button>
@@ -50,6 +50,7 @@ const props = defineProps(['step']);
   height: 100%;
   display: flex;
   font-size: $size-6;
+  box-shadow: none;
   @media (min-width: $tablet) {
     font-size: $size-7;
   }
@@ -58,13 +59,13 @@ const props = defineProps(['step']);
   }
 
   &.row {
-    padding: $size-7;
+    padding: 0;
 
     >div {
       padding: $size-8 0;
 
       @media (min-width: $miniMobile) {
-        padding: $size-8;
+        padding: $size-8*2;
       }
     }
   }
@@ -109,8 +110,9 @@ const props = defineProps(['step']);
       border: none;
       display: flex;
       align-items: center;
-      padding: 0.2em 0.5em;
+      padding: 0.5em;
       border-radius: $size-8;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
 
       svg {
         height: 1.1em;

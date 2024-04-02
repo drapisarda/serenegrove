@@ -40,8 +40,9 @@ watch(steps, (newSteps: number[]) => {
     list-style: none;
     
     display: grid;
-    column-gap: $size-5;
-    row-gap: $size-4;
+    padding: $size-7;
+    column-gap: $size-6;
+    row-gap: $size-3;
     grid-template-columns: repeat(auto-fit, 1fr);
     @media (min-width: $tablet) {
       grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));

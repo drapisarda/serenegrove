@@ -121,10 +121,6 @@ $contentBg: $dark-2;
       overflow: scroll;
       height: 100%;
 
-      :deep ul {
-        padding: $size-5 $size-8;
-      }
-
       .col-no-gutter & {
         padding-left: $gap;
         padding-right: $gap;
