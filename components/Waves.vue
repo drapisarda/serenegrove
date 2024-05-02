@@ -1,5 +1,5 @@
 <template>
-  <div class="waveContainer">
+  <div class="wave-container">
     <div class="wave wave1"></div>
     <div class="wave wave2"></div>
     <div class="wave wave3"></div>
@@ -12,7 +12,7 @@
 <style lang="scss">
 @import "@/style/vars.scss";
 
-.waveContainer {
+.wave-container {
   display: flex;
   margin: auto;
   justify-content: space-between;
