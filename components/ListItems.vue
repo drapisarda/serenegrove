@@ -34,7 +34,7 @@ watch(steps, () => {
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @import "@/style/vars.scss";
 
 .list-items__empty {

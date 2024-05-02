@@ -30,7 +30,7 @@ const emit = defineEmits(['updateModelValue'])
 const updateRoutineVariation = (e: Event) => emit('updateModelValue', e)
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @import "@/style/vars.scss";
 $primaryColor: $clear-2;
 $secondaryColor: $dark-1;

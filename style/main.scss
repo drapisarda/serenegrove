@@ -378,6 +378,10 @@ $buttonSecondaryColor: $white;
   }
 }
 
+.space-bottom {
+  margin-bottom: $size-5;
+}
+
 .page-content {
   >section {
     background-color: $dark-3;

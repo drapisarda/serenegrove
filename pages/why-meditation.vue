@@ -17,7 +17,7 @@
           <img src="/assets/img/serenegrove-3.webp" alt="Regular meditation can lead to healthier lifestyle
             choices, thus improving life quality and longevity.">
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 is-centered--flex">
           <ul>
             <li><strong>Stress Reduction</strong>: Meditation lowers cortisol, the stress hormone, reducing stress levels.
             </li>
@@ -37,7 +37,7 @@
   <section class="section">
     <div class="container container--wide">
       <div class="row row--wide center-xs">
-        <div class="col-md-8">
+        <div class="col-md-8 is-centered--flex space-bottom">
           <ul>
             <li><strong>Better Sleep</strong>: Regular meditation aids in better sleep quality by controlling runaway
               thoughts.</li>
@@ -70,23 +70,3 @@
 <script setup>
 definePageMeta({ layout: 'default' })  
 </script>
-
-<style lang="scss" scoped>
-@import "@/style/vars.scss";
-
-strong {
-  font-size: 1.1em;
-}
-
-.row {
-  &>div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:last-child {
-      margin-bottom: $size-5;
-    }
-  }
-}
-</style>

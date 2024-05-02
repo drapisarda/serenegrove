@@ -29,7 +29,7 @@ watch(steps, (newSteps: number[]) => {
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @import "@/style/vars.scss";
 
 .steps-list {

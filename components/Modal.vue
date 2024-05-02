@@ -35,7 +35,7 @@ const closeModal = () => {
 };
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
 @import "@/style/vars.scss";
 .modal {
   &__dialog {

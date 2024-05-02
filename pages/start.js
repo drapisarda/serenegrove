@@ -34,7 +34,7 @@
 //   </section>
 // </template>
 
-// <style lang="scss" scoped>
+// <style lang="scss" >
 // @import "@/style/vars.scss";
 
 // .player {

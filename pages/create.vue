@@ -30,7 +30,7 @@ definePageMeta({ layout: 'player' })
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/style/vars.scss";
 
 $contentBg: $dark-2;

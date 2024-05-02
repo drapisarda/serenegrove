@@ -33,7 +33,7 @@ const displayMessage = (newMessage: ToastMessage, duration: number = 3000) => {
 }
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
 @import "@/style/vars.scss";
 
 .toast {

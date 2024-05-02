@@ -22,7 +22,7 @@ const toggleMenu = () => {
 }
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
 @import "@/style/vars.scss";
 .container {
   position: relative;

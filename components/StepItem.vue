@@ -40,7 +40,7 @@ defineEmits({
 const props = defineProps(['step']);
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @import "@/style/vars.scss";
 
 .card {

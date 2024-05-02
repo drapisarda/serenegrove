@@ -52,7 +52,7 @@ const manageTouchMove = (event: TouchEvent) => {
 const manageDrag = (event: DragEvent) => console.log(event)
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @import "@/style/vars.scss";
 $routineChevronHeight: 3rem;
 
