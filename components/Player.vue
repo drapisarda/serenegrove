@@ -275,7 +275,7 @@ const stop = () => {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import "@/style/vars.scss";
 
 .player {

@@ -13,7 +13,7 @@
         <span aria-hidden="true"></span>
       </a>
       <Transition>
-      <div class="navbar-start" :class="{ 'navbar-start--open': menuIsOpen }" v-show="menuIsOpen">
+      <div class="navbar-start" :class="{ 'navbar-start--open': menuIsOpen }" v-show="menuIsOpen" aria-expanded="true">
           <button class="button button--close" @click="toggleMenu">
             <CloseIcon />
           </button>
