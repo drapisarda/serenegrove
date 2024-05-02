@@ -73,15 +73,15 @@ $contentBg: $dark-2;
       flex-direction: row;
       height: 100%;
     }
-  }
 
-  .col {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    flex: 1;
-    overflow: scroll;
-    background-color: $contentBg;
+    > .col {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      flex: 1;
+      overflow: scroll;
+      background-color: $contentBg;
+    }
   }
 
   &__content {

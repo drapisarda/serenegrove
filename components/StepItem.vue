@@ -40,10 +40,10 @@ defineEmits({
 const props = defineProps(['step']);
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 @import "@/style/vars.scss";
 
-.card {
+.step-item .card {
   text-align: left;
   color: $black;
   width: 100%;
@@ -77,8 +77,12 @@ const props = defineProps(['step']);
     overflow: hidden;
     line-height: 0;
     aspect-ratio: 1;
+    padding: 0;
 
     svg {
+      width: 100%;
+      height: 100%;
+      padding-bottom: 100%;
       padding: $size-6;
       
       @media (min-width: $tablet) {

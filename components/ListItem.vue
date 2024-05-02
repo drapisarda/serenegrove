@@ -139,7 +139,7 @@ defineEmits({
       margin-right: $size-8;
       margin-top: -3px;
 
-      :deep(path) {
+      path {
         fill: $dark-3;
       }
     }

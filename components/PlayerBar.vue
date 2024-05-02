@@ -30,7 +30,7 @@ const emit = defineEmits(['updateModelValue'])
 const updateRoutineVariation = (e: Event) => emit('updateModelValue', e)
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 @import "@/style/vars.scss";
 $primaryColor: $clear-2;
 $secondaryColor: $dark-1;
@@ -70,7 +70,7 @@ $secondaryColor: $dark-1;
     align-items: center;
     justify-content: center;
 
-    :deep( > svg) {
+    > svg {
       height: 1.1em;
       width: 1.1em;
       margin-right: 0.5em;
@@ -91,15 +91,15 @@ $secondaryColor: $dark-1;
     text-align: left;
   }
 
-  :deep(.player__start > .player__action) {
+  .player__start > .player__action {
     width: 100%;
   }
 
-  :deep(.player) {
+  .player {
     width: 100%;
   }
 
-  :deep(.player__start .button) {
+  .player__start .button {
     width: 100%;
     background-color: var(--secondary-color);
     border-color: var(--primary-color);

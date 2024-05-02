@@ -126,7 +126,7 @@ $routineChevronHeight: 3rem;
       z-index: 2;
       padding: $size-8;
 
-      :deep(path) {
+      path {
         stroke: $black;
       }
     }
@@ -173,7 +173,7 @@ $routineChevronHeight: 3rem;
   }
 
 
-  :deep(.list-items > p),
+  .list-items > p,
   &__title {
     padding-top: $size-7;
     padding-left: $size-7;
