@@ -1,6 +1,6 @@
 import { defineStore } from "pinia"
 import { useGlobalStore } from "./global"
-import { type Step } from "./types"
+import { type Step, type RoutineTimeVariationType } from "./types"
 import { originalState, routineTimeVariations } from './vars'
 
 export const useRoutineStore = defineStore("mainRoutine", {
@@ -51,8 +51,8 @@ export const useRoutineStore = defineStore("mainRoutine", {
         return acc + step.duration + step.pauseAfter * modifier
       }, 0);
     },
-    getRoutineVariationId(): number {
-      return this.$state.routineVariation.id;
+    getRoutineVariation(): RoutineTimeVariationType {
+      return this.$state.routineVariation;
     },
     setRoutineVariation(routineVariationId: number) {
       const newVariation = routineTimeVariations.find(variation => variation.id === routineVariationId) || routineTimeVariations[0];

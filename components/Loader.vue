@@ -20,10 +20,7 @@
 
 <script lang="ts" setup>
 const props = defineProps({
-  message: {
-    type: String,
-    required: true,
-  }
+  message: String,
 });
 </script>
 

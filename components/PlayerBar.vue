@@ -5,7 +5,7 @@
         <Clock /> <span>{{ formattedTime(props.duration) }}</span>
       </div>
       <div class="col col-xs-3 player-bar__button">
-        <Player :playerSteps="playerSteps" :routineVariation="extended" :duration="duration" :disable="disable">
+        <Player :playerSteps="playerSteps" :routineVariation="routineVariation" :duration="duration" :disable="disable">
           <template v-slot:play-button>
             <Play />
           </template>
@@ -20,10 +20,13 @@
 </template>
 
 <script lang="ts" setup>
+import { computed } from "vue";
 import { type Step } from "@/store/types";
 import Play from "@/src/assets/img/icons/play-button.svg";
 import Clock from "@/src/assets/img/icons/clock.svg";
 import { formattedTime } from '@/composables/formattedTime';
+import { useRoutineStore } from "@/store/routine";
+const { getRoutineVariation } = useRoutineStore()
 
 const props = defineProps({
   playerSteps: {
@@ -43,6 +46,9 @@ const props = defineProps({
 const emit = defineEmits(['updateModelValue'])
 
 const updateRoutineVariation = (e: Event) => emit('updateModelValue', e)
+// TODO This has to be done better
+
+const routineVariation  = computed(() => getRoutineVariation());
 </script>
 
 <style lang="scss">
