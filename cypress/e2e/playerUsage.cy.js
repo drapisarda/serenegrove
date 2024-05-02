@@ -15,32 +15,38 @@ describe('Player usages', () => {
   it('User creates a playlist', () => { 
     cy.visit('http://localhost:3000')
 
+    const clickOnStepListItemButton = (index) => cy.get('.steps-list ul .step-item').eq(index).find('button').click({ scrollBehavior: 'center' })
+    const getListItems = () => cy.get('.list-items').find('.list-item')
+    const getListItem = (index) => getListItems().eq(index)
+
     cy.contains(' Start now! ').click()
 
     cy.get('.player__start button').should('have.class', 'inactive')
     cy.get('.player__playing').should('not.be.visible');
 
     cy.get('.steps-list ul').find('.step-item').should('have.length', 5)
-    cy.get('.steps-list ul .step-item').eq(0).find('button').click({ scrollBehavior: 'center' })
-    cy.get('.steps-list ul .step-item').eq(2).find('button').click({ scrollBehavior: 'center' })
-    cy.get('.steps-list ul .step-item').eq(4).find('button').click({ scrollBehavior: 'center' })
 
-    cy.get('.list-items').find('.list-item').should('have.length', 3)
+    clickOnStepListItemButton(0)
+    clickOnStepListItemButton(2)
+    clickOnStepListItemButton(4)
+
+
+    getListItems().should('have.length', 3)
 
     // list items edit
-    cy.get('.list-items').find('.list-item').eq(0).find('.card-header__title').contains('Breath')
-    cy.get('.list-items').find('.list-item').eq(1).find('.card-header__title').contains('Sounds')
-    cy.get('.list-items').find('.list-item').eq(0).find('.card-actions--move-down').click()
+    getListItem(0).find('.card-header__title').contains('Breath')
+    getListItem(1).find('.card-header__title').contains('Sounds')
+    getListItem(0).find('.card-actions--move-down').click()
 
-    cy.get('.list-items').find('.list-item').eq(0).find('.card-header__title').contains('Sounds')
-    cy.get('.list-items').find('.list-item').eq(1).find('.card-header__title').contains('Breath')
-    cy.get('.list-items').find('.list-item').eq(1).find('.card-actions--move-down').click()
-    cy.get('.list-items').find('.list-item').eq(1).find('.card-header__title').contains('Bell sound')
-    cy.get('.list-items').find('.list-item').eq(1).find('.card-actions--move-up').click();
-    cy.get('.list-items').find('.list-item').eq(0).find('.card-header__title').contains('Bell sound')
+    getListItem(0).find('.card-header__title').contains('Sounds')
+    getListItem(1).find('.card-header__title').contains('Breath')
+    getListItem(1).find('.card-actions--move-down').click()
+    getListItem(1).find('.card-header__title').contains('Bell sound')
+    getListItem(1).find('.card-actions--move-up').click();
+    getListItem(0).find('.card-header__title').contains('Bell sound')
 
-    cy.get('.list-items').find('.list-item').eq(1).find('.card-actions--remove').click()
-    cy.get('.list-items').find('.list-item').eq(1).find('.card-header__title').contains('Breath')
+    getListItem(1).find('.card-actions--remove').click()
+    getListItem(1).find('.card-header__title').contains('Breath')
 
     cy.get('.list-items').find('.list-item').should('have.length', 2)
 
