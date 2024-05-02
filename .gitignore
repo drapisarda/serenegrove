@@ -10,3 +10,4 @@ package-lock.json
 .vscode
 .DS_Store
 coverage
+tests/cypress/screenshots
