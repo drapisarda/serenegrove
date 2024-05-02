@@ -17,9 +17,9 @@
           <button class="button button--close" @click="toggleMenu">
             <CloseIcon />
           </button>
-          <a class="button navbar-cta" href="/create">Start now!</a>
-          <a href="/about">About us</a>
-          <a href="/why-meditation">Why Meditation?</a>
+          <NuxtLink class="button navbar-cta" href="/create">Start now!</NuxtLink>
+          <NuxtLink href="/about">About us</NuxtLink>
+          <NuxtLink href="/why-meditation">Why Meditation?</NuxtLink>
           
           <div v-if="false" class="navbar-item has-dropdown is-hoverable">
             <hr class="navbar-divider">

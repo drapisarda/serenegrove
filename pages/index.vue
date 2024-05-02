@@ -31,9 +31,9 @@
               favorite exercises.
       </p>
       <p class="is-centered">
-        <a href="/create" class="button is-primary is-large">
+        <NuxtLink href="/create" class="button is-primary is-large">
           Start now!
-        </a>
+        </NuxtLink>
       </p>
     </div>
   </section>
@@ -48,7 +48,7 @@
       </p>
 
       <p>
-        <a href="/why-meditation">Learn more</a>.
+        <NuxtLink href="/why-meditation">Learn more</NuxtLink>.
       </p>
     </div>
   </section>

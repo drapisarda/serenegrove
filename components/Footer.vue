@@ -1,3 +1,5 @@
+
+import { NuxtLink } from '#build/components';
 <template>
   <footer class="footer footer--custom">
     <div class="section">
@@ -14,25 +16,25 @@
           <div class="col-md-4 footer__links">
             <ul>
               <li>
-                <a href="/">Home</a>
+                <NuxtLink href="/">Home</NuxtLink>
               </li>
               <li>
-                <a href="/create">Start now!</a>
+                <NuxtLink href="/create">Start now!</NuxtLink>
               </li>
               <li>
-                <a href="/about">About us</a>
+                <NuxtLink href="/about">About us</NuxtLink>
               </li>
               <li>
-                <a href="/why-meditation">Why Meditation?</a>
+                <NuxtLink href="/why-meditation">Why Meditation?</NuxtLink>
               </li>
               <li>
-                <a href="/privacy">Privacy & Datenschutzerklärung</a>
+                <NuxtLink href="/privacy">Privacy & Datenschutzerklärung</NuxtLink>
               </li>
               <li>
-                <a href="/newsletter">Newsletter</a>
+                <NuxtLink href="/newsletter">Newsletter</NuxtLink>
               </li>
               <li>
-                <a href="/credits">Credits</a>
+                <NuxtLink href="/credits">Credits</NuxtLink>
               </li>
             </ul>
           </div>
