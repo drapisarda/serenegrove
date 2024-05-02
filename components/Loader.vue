@@ -19,7 +19,12 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps(['message']);
+const props = defineProps({
+  message: {
+    type: String,
+    required: true,
+  }
+});
 </script>
 
 <style lang="scss">

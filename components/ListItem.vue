@@ -35,14 +35,27 @@ import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
 import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
 import Clock from "@/src/assets/img/icons/clock.svg";
 import { formattedTime } from '@/composables/formattedTime';
+import { type Step } from "@/store/types";
 
 // TODO use step
-const props = defineProps([
-  'step',
-  'index',
-  'isFirst',
-  'isLast',
-]);
+const props = defineProps({
+  step: {
+    type: Object as PropType<Step>,
+    required: true,
+  },
+  index: {
+    type: Number,
+    required: true,
+  },
+  isFirst: {
+    type: Boolean,
+    required: true,
+  },
+  isLast: {
+    type: Boolean,
+    required: true,
+  }
+});
 
 defineEmits({
   'moveUp': null,

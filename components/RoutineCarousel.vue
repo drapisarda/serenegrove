@@ -11,7 +11,16 @@
 
 <script lang="ts" setup>
 import { type Step } from "@/store/types";
-const props = defineProps(['currentStepIndex', 'playerSteps']);
+const props = defineProps({
+  currentStepIndex: {
+    type: Number,
+    required: true,
+  },
+  playerSteps: {
+    type: Object as PropType<Step[]>,
+    required: true,
+  },
+})
 
 const currentStep = computed((): Step | undefined => {
   return props.playerSteps[props.currentStepIndex];

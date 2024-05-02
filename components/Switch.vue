@@ -1,12 +1,21 @@
 <template>
   <div class="toggle-switch">
-    <input class="toggle-input" :checked="modelValue" @click="$emit('updateModelValue', $event.target.checked)" id="toggle" type="checkbox">
-    <label class="toggle-label" for="toggle"/>
+    <input class="toggle-input" :checked="modelValue" @click="$emit('updateModelValue', $event.target.checked)" :id="id" type="checkbox">
+    <label class="toggle-label" :for="id"/>
   </div>
 </template>
 
 <script lang="ts" setup>
-defineProps(['modelValue'])
+defineProps({
+  modelValue: {
+    type: Boolean,
+    required: true
+  },
+  id: {
+    type: String,
+    required: true
+  }
+})
 defineEmits(['updateModelValue'])
 </script>
 

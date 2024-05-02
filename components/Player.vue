@@ -81,7 +81,7 @@
 
 
 <script lang="ts" setup>
-import { type Step } from "@/store/types";
+import { type Step, type RoutineTimeVariationType } from "@/store/types";
 import { ref, computed } from "vue";
 import Play from "@/src/assets/img/icons/play-button.svg";
 import Pause from "@/src/assets/img/icons/pause-button.svg";
@@ -91,12 +91,22 @@ import { clipHtml } from "@/composables/clipHtml";
 const baseURL = import.meta.env.BASE_URL;
 const debugAudio = `${baseURL}/assets/audio/1.mp3`;
 const debug = false;
-const props = defineProps([
-  'playerSteps',
-  'disable',
-  'routineVariation', 
-  'duration'
-])
+
+const props = defineProps({
+  playerSteps: {
+    type: Object as PropType<Step[]>,
+    required: true,
+  },
+  disable: {
+    type: Boolean,
+    default: false,
+  },
+  routineVariation: {
+    type: Object as PropType<RoutineTimeVariationType>,
+    required: true,
+  },
+  duration: Number
+})
 
 const currentIndex = ref(-1);
 const pauseStatus = ref(true);

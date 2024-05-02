@@ -29,6 +29,7 @@
 </template>
 
 <script lang="ts" setup>
+import { type Step } from "@/store/types";
 import Clock from "@/src/assets/img/icons/clock.svg";
 import Plus from '@/src/assets/img/icons/plus.svg';
 import { formattedTime } from '@/composables/formattedTime';
@@ -37,7 +38,12 @@ defineEmits({
   'add': null,
 })
 
-const props = defineProps(['step']);
+defineProps({
+  step: {
+    type: Object as PropType<Step>,
+    required: true,
+  }
+});
 </script>
 
 <style lang="scss">

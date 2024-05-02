@@ -13,18 +13,33 @@
       </div>
       <div class="col player-bar__switch">
         Extend
-        <Switch v-model="props.extended" @updateModelValue="updateRoutineVariation"/>
+        <Switch v-model="props.extended" @updateModelValue="updateRoutineVariation" :id="'extend'"/>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { type Step } from "@/store/types";
 import Play from "@/src/assets/img/icons/play-button.svg";
 import Clock from "@/src/assets/img/icons/clock.svg";
 import { formattedTime } from '@/composables/formattedTime';
 
-const props = defineProps(['extended', 'duration', 'playerSteps', 'disable']);
+const props = defineProps({
+  playerSteps: {
+    type: Object as PropType<Step[]>,
+    required: true,
+  },
+  disable: {
+    type: Boolean,
+    default: false,
+  },
+  extended: {
+    type: Boolean,
+    default: false,
+  },
+  duration: Number
+})
 const emit = defineEmits(['updateModelValue'])
 
 const updateRoutineVariation = (e: Event) => emit('updateModelValue', e)
