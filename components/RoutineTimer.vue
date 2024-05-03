@@ -28,7 +28,7 @@ const props = withDefaults(defineProps<{
 
 const showBar = false;
 
-let intervalId: NodeJS.Timer | null = null;
+let intervalId: NodeJS.Timeout | null = null;
 let currentTime = ref(props.time);
 let totalTime = ref(props.time);
 
@@ -39,7 +39,7 @@ const remainingTimeStyle = computed(() => {
 const startTimer = () => {
   currentTime.value = props.time;
   intervalId = setInterval(() => {
-    if (props.start) currentTime.value -= 1;
+    if (props.start && currentTime.value > 0) currentTime.value -= 1;
   }, 1000);
 };
 
