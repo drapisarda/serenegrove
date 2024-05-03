@@ -13,11 +13,11 @@
         </p>
       </div>
       <div class="card-actions">
-        <button @click="$emit('moveUp', index)" class="card-header-icon card-actions--move-up" :class="{ 'card-header-icon--inactive': isFirst }"
+        <button @click="$emit('moveUp', index)" class="card-header-icon card-actions--move-up" :class="{ 'inactive': isFirst }"
           aria-label="move up">
           <UpShevron />
         </button>
-        <button @click="$emit('moveDown', index)" class="card-header-icon card-actions--move-down" :class="{ 'card-header-icon--inactive': isLast }"
+        <button @click="$emit('moveDown', index)" class="card-header-icon card-actions--move-down" :class="{ 'inactive': isLast }"
           aria-label="move down">
           <DownShevron />
         </button>
@@ -133,10 +133,8 @@ defineEmits({
     cursor: pointer;
   }
 
-  .card-header-icon--inactive {
+  .card-header-icon.inactive {
     opacity: 0.3;
-    pointer-events: none;
-    cursor: default;
   }
 
   .card-header__duration {

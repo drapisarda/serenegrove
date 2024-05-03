@@ -247,12 +247,6 @@ $buttonSecondaryColor: $white;
     width: 32px;
   }
 
-  &.inactive {
-    opacity: 0.4;
-    pointer-events: none;
-    filter: saturate(20%);
-  }
-
   &.is-large {
     font-size: 2.5em;
     padding: $size-6 $size-4;
@@ -368,6 +362,13 @@ $buttonSecondaryColor: $white;
   }
 }
 
+button.inactive {
+  opacity: 0.4;
+  pointer-events: none;
+  filter: saturate(20%);
+  cursor: default;
+}
+
 .is-centered {
   text-align: center;
 
@@ -476,6 +477,7 @@ label {
   margin-top: $size-5;
   margin-bottom: $size-5;
   font-size: 1.2em;
+
   @media (min-width: $tablet) {
     font-size: 2em;
   }
@@ -486,11 +488,13 @@ label {
 }
 
 .row.row--wide {
-  > div {
+  >div {
     margin-top: $size-5;
+
     @media (min-width: $tablet) {
       margin-top: 0;
     }
+
     @media (min-width: $tablet) {
       padding-right: $gap*3;
       padding-left: $gap*3;
