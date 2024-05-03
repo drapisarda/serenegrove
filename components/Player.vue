@@ -27,8 +27,7 @@
           <RoutineTimer :time="duration" :start="!pauseStatus" :stop="stopStatus" />
         </div>
 
-        <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext" @play="updateAudioStatus"
-          @pause="updateAudioStatus">
+        <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext">
         </audio>
       </div>
       <div class="player__playing-actions">
@@ -439,10 +438,6 @@ const stop = () => {
       font-size: $size-4;
       padding-left: $size-6;
       padding-right: $size-6;
-
-      svg path {
-        
-      }
 
       @media (min-width: $miniMobile) {
         padding-left: $size-5;

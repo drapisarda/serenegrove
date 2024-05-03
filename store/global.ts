@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import { type ToastMessage } from "./types";
 
 export const useGlobalStore = defineStore("global", {
   state: () => ({

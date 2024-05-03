@@ -9,8 +9,9 @@
 </template>
 
 <script lang="ts" setup>
-import { useGlobalStore, type ToastMessage } from "@/store/global";
+import { useGlobalStore } from "@/store/global";
 import { ref, watch } from "vue";
+import type { ToastMessage } from "~/store/types";
 
 const message = ref('');
 const messageClass = ref('');

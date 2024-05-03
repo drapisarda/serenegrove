@@ -41,7 +41,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  duration: Number
+  duration: {
+    type: Number,
+    default: 0
+  }
 })
 const emit = defineEmits(['updateModelValue'])
 

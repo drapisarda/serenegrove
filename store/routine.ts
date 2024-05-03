@@ -45,10 +45,10 @@ export const useRoutineStore = defineStore("mainRoutine", {
         .concat(this.getRoutineSteps())
         .concat([this.$state.outro])
     },
-    getRoutineDuration(modifier: number = this.$state.routineVariation?.modifier): number {
+    getRoutineDuration(): number {
       if (this.getRoutineSteps().length === 0) return 0;
       return this.getPlayerSteps().reduce((acc: number, step: Step) => {
-        return acc + step.duration + step.pauseAfter * modifier
+        return acc + step.duration + step.pauseAfter * this.$state.routineVariation?.modifier
       }, 0);
     },
     getRoutineVariation(): RoutineTimeVariationType {
