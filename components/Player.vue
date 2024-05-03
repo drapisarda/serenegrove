@@ -1,59 +1,62 @@
 <template>
   <div class="player" :class="{ 'player--loaded': loadedStatus }" @keyup="handleKeys" tabindex="0">
-    <div class="player__playing"
-      :class="{ 'player__playing--visible': visibleStatus, 'player__playing--paused': pauseStatus }">
-      <button class="button button--close" @click="stopOrClose">
-        <CloseIcon />
-      </button>
-      <div class="player__content">
-        <div class="player__top section">
-          <div class="container">
-            <div class="player__page player__page--feedback hide-default" :class="{ 'show': askFeedback }">
-              <div class="container">
-                <FeedbackRequest />
+    <Transition>
+      <div class="player__playing" v-show="visibleStatus"
+        :class="{'player__playing--paused': pauseStatus }">
+        <button class="button button--close" @click="stopOrClose">
+          <CloseIcon />
+        </button>
+        <div class="player__bg"></div>
+        <div class="player__content">
+          <div class="player__top section">
+            <div class="container">
+              <div class="player__page player__page--feedback hide-default" :class="{ 'show': askFeedback }">
+                <div class="container">
+                  <FeedbackRequest />
+                </div>
+              </div>
+
+              <div class="player__page player__page--carousel hide-default" :class="{ 'show': !stopStatus }">
+                <Loader v-if="!stopStatus" message="Your meditation is loading..." />
+                <RoutineCarousel :class="{ 'hide': stopStatus && visibleStatus }" :currentStepIndex="currentIndex"
+                  :playerSteps="playerSteps" />
+              </div>
+
+            </div>
+          </div>
+
+          <div class="player__time section" :class="{ 'hide': stopStatus }">
+            <RoutineTimer :time="duration" :start="!pauseStatus" :stop="stopStatus" />
+          </div>
+
+          <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext">
+          </audio>
+        </div>
+        <div class="player__playing-actions">
+          <div class="container is-max-desktop">
+            <div class="player__actions row">
+              <div class="col-xs-6 player__action player__action--play-pause" v-show="pauseStatus && !stopStatus">
+                <button class="button player__action__button--play" @click="play">
+                  <Play />
+                  <div>Play</div>
+                </button>
+              </div>
+              <div class="col-xs-6 player__action player__action--play-pause" v-show="!pauseStatus && !stopStatus">
+                <button class="button player__action__button--pause" @click="pause">
+                  <Pause />
+                  <div> Pause </div>
+                </button>
+              </div>
+              <div v-if="stopStatus && askFeedback" class="col-ms-8 player__action player__action--stop">
+                <button class="button" @click="stopAndClose">
+                  End your meditation
+                </button>
               </div>
             </div>
-
-            <div class="player__page player__page--carousel hide-default" :class="{ 'show': !stopStatus }">
-              <Loader v-if="!stopStatus" message="Your meditation is loading..." />
-              <RoutineCarousel :class="{ 'hide': stopStatus && visibleStatus }" :currentStepIndex="currentIndex"
-                :playerSteps="playerSteps" />
-            </div>
-
-          </div>
-        </div>
-
-        <div class="player__time section" :class="{ 'hide': stopStatus }">
-          <RoutineTimer :time="duration" :start="!pauseStatus" :stop="stopStatus" />
-        </div>
-
-        <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext">
-        </audio>
-      </div>
-      <div class="player__playing-actions">
-        <div class="container is-max-desktop">
-          <div class="player__actions row">
-            <div class="col-xs-6 player__action player__action--play-pause" v-show="pauseStatus && !stopStatus">
-              <button class="button player__action__button--play" @click="play">
-                <Play />
-                <div>Play</div>
-              </button>
-            </div>
-            <div class="col-xs-6 player__action player__action--play-pause" v-show="!pauseStatus && !stopStatus">
-              <button class="button player__action__button--pause" @click="pause">
-                <Pause />
-                <div> Pause </div>
-              </button>
-            </div>
-            <div v-if="stopStatus && askFeedback" class="col-ms-8 player__action player__action--stop">
-              <button class="button" @click="stopAndClose">
-                End your meditation
-              </button>
-            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Transition>
     <div class="container player__display">
       <ClientOnly>
         <template #fallback>
@@ -358,6 +361,11 @@ const stop = () => {
     height: 75svh;
     display: flex;
     flex-direction: column;
+
+    .v-enter-from &,
+    .v-leave-to & {
+      opacity: 0;
+    }
   }
 
   &__playing-actions {
@@ -372,49 +380,44 @@ const stop = () => {
     }
   }
 
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   &__playing {
     position: fixed;
     top: 0;
     left: 0;
     width: 100svw;
     height: 100vh;
-    max-height: 0;
-    max-width: 0;
-    overflow: hidden;
-    opacity: 0;
-    pointer-events: none;
     z-index: $playerZIndex;
-    transition: opacity 1s .1s;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    transition: opacity 1s ease;
 
-    &:not(#{$root}__playing--visible) {
-      >* {
-        opacity: 0;
-      }
-    }
-
-    @keyframes gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    &--visible {
-      opacity: 1;
-      pointer-events: all;
-      max-width: none;
-      max-height: none;
-      overflow: visible;
+    &.v-enter-from,
+    &.v-leave-to {
+      opacity: 0;
     }
   }
 
