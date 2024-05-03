@@ -285,7 +285,7 @@ const stop = () => {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import "@/style/vars.scss";
 
 .player {
@@ -432,12 +432,17 @@ const stop = () => {
 
     .button {
       background: transparent;
-      border: 1px solid $clear-1;
-      color: $clear-1;
+      --main-color: #{$clear-1};
+      border: 1px solid var(--main-color);
+      color: var(--main-color);
       width: 100%;
       font-size: $size-4;
       padding-left: $size-6;
       padding-right: $size-6;
+
+      svg path {
+        
+      }
 
       @media (min-width: $miniMobile) {
         padding-left: $size-5;
@@ -445,27 +450,22 @@ const stop = () => {
         font-size: $size-3;
       }
 
-      &:hover {
-        color: $clear-5;
-        border-color: $clear-5;
-
-        svg path {
-          fill: $clear-5;
-        }
-      }
-
       svg {
-        fill: $clear-1;
+        fill: var(--main-color);
         height: 42px;
         width: 42px;
 
         path {
-          fill: $clear-1;
+          fill: var(--main-color);
         }
 
         @media (min-width: $tablet) {
           margin-right: 0;
         }
+      }
+
+      &:hover {
+        --main-color: #{$clear-5};
       }
 
       div {
