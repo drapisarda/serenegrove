@@ -51,8 +51,9 @@ describe('Player usages', () => {
     cy.get('.list-items').find('.list-item').should('have.length', 2)
 
     // play / pause
+    cy.get('.player__playing').should('not.be.visible');
     cy.get('.player__start button').click()
-    cy.get('.player__playing.player__playing--visible').should('be.visible');
+    cy.get('.player__playing').should('be.visible');
     cy.get('audio').should(($p) => mediaPlays($p, true))
     cy.wait(500)
     cy.get('.player__action__button--pause').click()
@@ -65,5 +66,6 @@ describe('Player usages', () => {
     cy.get('.player__playing .button--close').click()
     cy.get('.feedback-request').contains('How you liked this meditation?')
     cy.get('.player__playing .player__action--stop').click()
+    cy.get('.player__playing').should('not.be.visible');
   })
 })
