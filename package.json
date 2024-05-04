@@ -8,9 +8,13 @@
     "postinstall": "nuxt prepare",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
+    "@eslint/js": "^9.2.0",
+    "@nuxt/eslint": "^0.3.10",
     "@nuxt/test-utils": "^3.8.1",
     "@nuxt/types": "^2.17.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
@@ -19,12 +23,16 @@
     "@vue/test-utils": "^2.4.3",
     "cypress": "^13.6.1",
     "cypress-localstorage-commands": "^2.2.5",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.25.0",
+    "globals": "^15.1.0",
     "happy-dom": "^12.10.3",
     "jsdom": "^23.0.1",
     "nuxt": "^3.2.2",
     "playwright-core": "^1.40.1",
     "sass": "^1.59.2",
     "typescript": "^5.3.3",
+    "typescript-eslint": "^7.8.0",
     "unplugin-auto-import": "^0.17.2",
     "vitest": "^1.0.4"
   },
