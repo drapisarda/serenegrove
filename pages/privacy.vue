@@ -227,7 +227,8 @@
           personenbezogenen
           Daten gegen die Vorgaben der DSGVO verstößt.</li>
       </ul>
-      <p class="seal"><a href="https://datenschutz-generator.de/"
+      <p class="seal"><a
+href="https://datenschutz-generator.de/"
           title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken." target="_blank"
           rel="noopener noreferrer nofollow">Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas
           Schwenke</a>

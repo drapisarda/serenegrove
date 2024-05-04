@@ -1,5 +1,5 @@
 import ListItem from '@/components/ListItem.vue'
-import { mount, VueWrapper } from '@vue/test-utils'
+import { mount, type VueWrapper } from '@vue/test-utils'
 import { formattedTime } from '@/composables/formattedTime';
 
 describe('ListItem component test', async () => {

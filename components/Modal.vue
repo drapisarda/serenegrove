@@ -1,15 +1,15 @@
 <template>
   <div class="modal" @keyup="handleKeys">
     <div class="modal__button">
-      <button @click="openModal" class="button is-primary">
+      <button class="button is-primary" @click="openModal">
         <slot name="button-text">Open Modal</slot>
       </button>
     </div>
     <dialog :open="modalStatus" class="modal__dialog">
       <button class="modal__close" @click="closeModal">X</button>
-      <slot name="modal-title" class="section"></slot>
+      <slot name="modal-title" class="section"/>
       <div class="modal__content">
-        <slot name="modal-content" class="section"></slot>
+        <slot name="modal-content" class="section"/>
       </div>
     </dialog>
   </div>

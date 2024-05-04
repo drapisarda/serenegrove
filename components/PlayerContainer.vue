@@ -1,8 +1,8 @@
 <template>
   <PlayerBar 
-    :playerSteps="playerSteps" :duration="duration" 
-    :extended="isExtendedDuration" @updateModelValue="updateRoutineVariation"
-    :disable="disable"
+    :player-steps="playerSteps" :duration="duration" 
+    :extended="isExtendedDuration" :disable="disable"
+    @update-model-value="updateRoutineVariation"
   />
 </template>
 <script lang="ts" setup>

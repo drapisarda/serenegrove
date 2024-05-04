@@ -1,5 +1,6 @@
 <template>
-  <div class="playlist" :class="{ 'open': routineOpen, 'scrolling-down': scrollingDown }"
+  <div
+class="playlist" :class="{ 'open': routineOpen, 'scrolling-down': scrollingDown }"
     @touchstart.self="manageTouchStart($event)" @touchend.self="manageTouchEnd($event)" @touchmove.self="manageTouchMove"
     @drag.self="manageDrag">
     <div class="playlist__toggle" @click="routineToggle">

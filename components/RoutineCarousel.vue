@@ -1,7 +1,8 @@
 <template>
   <div class="routine-carousel">
     <ul class="row">
-      <li v-for="(step, index) in carouselSteps" :key="index" class="col-no-gutter"
+      <li
+v-for="(step, index) in carouselSteps" :key="index" class="col-no-gutter"
         :class="{ 'col-xs-8': index === 1, 'col-xs-2': index !== 1 }">
         <Icon v-if="step" :name="step.icon" />
       </li>

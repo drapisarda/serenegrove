@@ -14,7 +14,8 @@
     <div class="container container--wide">
       <div class="row row--wide center-xs">
         <div class="col-md-4">
-          <img src="/assets/img/serenegrove-3.webp" alt="Regular meditation can lead to healthier lifestyle
+          <img
+src="/assets/img/serenegrove-3.webp" alt="Regular meditation can lead to healthier lifestyle
             choices, thus improving life quality and longevity.">
         </div>
         <div class="col-md-8 is-centered--flex">
@@ -51,7 +52,8 @@
           </ul>
         </div>
         <div class="col-md-4">
-          <img src="/assets/img/serenegrove-4.webp"
+          <img
+src="/assets/img/serenegrove-4.webp"
             alt="Meditation lowers cortisol, the stress hormone, reducing stress levels.">
         </div>
       </div>

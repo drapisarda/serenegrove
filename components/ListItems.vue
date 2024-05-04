@@ -1,10 +1,11 @@
 <template>
   <div class="list-items">
-    <p class="list-items__empty" v-if="routineSteps.length === 0">
+    <p v-if="routineSteps.length === 0" class="list-items__empty">
       Add at least one exercise to your playlist
     </p>
     <ul v-else>
-      <ListItem v-for="(step, index) in routineSteps" :key="index" :step="step" :index="index" :is-first="index === 0"
+      <ListItem
+v-for="(step, index) in routineSteps" :key="index" :step="step" :index="index" :is-first="index === 0"
         :is-last="index === routineSteps.length - 1" @move-up="moveUp" @move-down="moveDown" @remove="remove"/>
     </ul>
   </div>

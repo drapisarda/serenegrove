@@ -1,5 +1,5 @@
 import PlayerBar from '@/components/PlayerBar.vue'
-import { mount, VueWrapper } from '@vue/test-utils'
+import { mount, type VueWrapper } from '@vue/test-utils'
 import { formattedTime } from '@/composables/formattedTime';
 
 describe('PlayerBar component test', async () => {

@@ -13,12 +13,14 @@
         </p>
       </div>
       <div class="card-actions">
-        <button @click="$emit('moveUp', index)" class="card-header-icon card-actions--move-up" :class="{ 'inactive': isFirst }"
-          aria-label="move up">
+        <button
+class="card-header-icon card-actions--move-up" :class="{ 'inactive': isFirst }" aria-label="move up"
+          @click="$emit('moveUp', index)">
           <UpShevron />
         </button>
-        <button @click="$emit('moveDown', index)" class="card-header-icon card-actions--move-down" :class="{ 'inactive': isLast }"
-          aria-label="move down">
+        <button
+class="card-header-icon card-actions--move-down" :class="{ 'inactive': isLast }" aria-label="move down"
+          @click="$emit('moveDown', index)">
           <DownShevron />
         </button>
         <button class="card-header-icon card-actions--remove" aria-label="remove element" @click="$emit('remove', {id: index, name: step.name})">
@@ -38,7 +40,7 @@ import { formattedTime } from '@/composables/formattedTime';
 import { type Step } from "@/store/types";
 
 // TODO use step
-const props = defineProps({
+defineProps({
   step: {
     type: Object as PropType<Step>,
     required: true,

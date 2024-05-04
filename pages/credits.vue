@@ -24,7 +24,8 @@
           The step's icons are by <a href="https://www.flaticon.com/authors/eucalyp" target="_blank">Eucalyp</a>.
         </li>
         <li>
-          The icons on the steps list are made by <a href="https://www.svgrepo.com/author/fefanto/"
+          The icons on the steps list are made by <a
+href="https://www.svgrepo.com/author/fefanto/"
             target="_blank">Fefanto</a>
           and <a href="https://www.svgrepo.com/author/afnizarnur/" target="_blank">Afnizarnur</a> .
         </li>

@@ -1,10 +1,10 @@
 <template>
   <div class="wave-container">
-    <div class="wave wave1"></div>
-    <div class="wave wave2"></div>
-    <div class="wave wave3"></div>
-    <div class="wave wave4"></div>
-    <div class="wave wave5"></div>
+    <div class="wave wave1"/>
+    <div class="wave wave2"/>
+    <div class="wave wave3"/>
+    <div class="wave wave4"/>
+    <div class="wave wave5"/>
   </div>
 </template>
 

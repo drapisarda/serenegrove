@@ -1,7 +1,6 @@
 import Player from '@/components/Player.vue'
-import { mount, VueWrapper } from '@vue/test-utils'
+import { mount, type VueWrapper } from '@vue/test-utils'
 import { originalState } from '@/store/vars'
-import { vi } from 'vitest'
 
 describe('Player component test', async () => {
   let wrapper: VueWrapper;

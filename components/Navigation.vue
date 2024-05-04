@@ -8,12 +8,12 @@
 
     <div class="navbar-menu">
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" tabindex="0" @click="toggleMenu">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+        <span aria-hidden="true"/>
+        <span aria-hidden="true"/>
+        <span aria-hidden="true"/>
       </a>
       <Transition>
-      <div class="navbar-start" :class="{ 'navbar-start--open': menuIsOpen }" v-show="menuIsOpen" aria-expanded="true">
+      <div v-show="menuIsOpen" class="navbar-start" :class="{ 'navbar-start--open': menuIsOpen }" aria-expanded="true">
           <button class="button button--close" @click="toggleMenu">
             <CloseIcon />
           </button>

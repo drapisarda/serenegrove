@@ -1,12 +1,13 @@
 <template>
-  <div class="player" :class="{ 'player--loaded': loadedStatus }" @keyup="handleKeys" tabindex="0">
+  <div class="player" :class="{ 'player--loaded': loadedStatus }" tabindex="0" @keyup="handleKeys">
     <Transition>
-      <div class="player__playing" v-show="visibleStatus"
+      <div
+v-show="visibleStatus" class="player__playing"
         :class="{'player__playing--paused': pauseStatus }">
         <button class="button button--close" @click="stopOrClose">
           <CloseIcon />
         </button>
-        <div class="player__bg"></div>
+        <div class="player__bg"/>
         <div class="player__content">
           <div class="player__top section">
             <div class="container">
@@ -18,8 +19,9 @@
 
               <div class="player__page player__page--carousel hide-default" :class="{ 'show': !stopStatus }">
                 <Loader v-if="!stopStatus" message="Your meditation is loading..." />
-                <RoutineCarousel :class="{ 'hide': stopStatus && visibleStatus }" :currentStepIndex="currentIndex"
-                  :playerSteps="playerSteps" />
+                <RoutineCarousel
+:class="{ 'hide': stopStatus && visibleStatus }" :current-step-index="currentIndex"
+                  :player-steps="playerSteps" />
               </div>
 
             </div>
@@ -29,19 +31,18 @@
             <RoutineTimer :time="duration" :start="!pauseStatus" :stop="stopStatus" />
           </div>
 
-          <audio class="player__audio-element" src="" ref="audio" controls @ended="playNext">
-          </audio>
+          <audio ref="audio" class="player__audio-element" src="" controls @ended="playNext"/>
         </div>
         <div class="player__playing-actions">
           <div class="container is-max-desktop">
             <div class="player__actions row">
-              <div class="col-xs-6 player__action player__action--play-pause" v-show="pauseStatus && !stopStatus">
+              <div v-show="pauseStatus && !stopStatus" class="col-xs-6 player__action player__action--play-pause">
                 <button class="button player__action__button--play" @click="play">
                   <Play />
                   <div>Play</div>
                 </button>
               </div>
-              <div class="col-xs-6 player__action player__action--play-pause" v-show="!pauseStatus && !stopStatus">
+              <div v-show="!pauseStatus && !stopStatus" class="col-xs-6 player__action player__action--play-pause">
                 <button class="button player__action__button--pause" @click="pause">
                   <Pause />
                   <div> Pause </div>
@@ -59,8 +60,7 @@
     </Transition>
     <div class="container player__display">
       <ClientOnly>
-        <template #fallback>
-        </template>
+        <template #fallback/>
         <div class="player__start is-centered">
           <div class="player__action">
             <button class="button is-primary" :class="{ 'inactive': disable }" @click="display">
@@ -119,7 +119,7 @@ clipHtml(visibleStatus);
 
 const askFeedback = ref(false);
 const askDuration = ref(false);
-const activeStatus = computed((): Boolean => !props.disable && visibleStatus.value);
+const activeStatus = computed((): boolean => !props.disable && visibleStatus.value);
 
 const audio = ref<HTMLAudioElement>();
 const audioUrl = ref<string | null>(null);

@@ -1,5 +1,5 @@
 import Switch from '@/components/Switch.vue'
-import { mount, VueWrapper } from '@vue/test-utils'
+import { mount, type VueWrapper } from '@vue/test-utils'
 
 describe('Switch component test', async () => {
   let wrapper: VueWrapper;

@@ -5,15 +5,15 @@
         <Clock /> <span>{{ formattedTime(props.duration) }}</span>
       </div>
       <div class="col col-xs-3 player-bar__button">
-        <Player :playerSteps="playerSteps" :routineVariation="routineVariation" :duration="duration" :disable="disable">
-          <template v-slot:play-button>
+        <Player :player-steps="playerSteps" :routine-variation="routineVariation" :duration="duration" :disable="disable">
+          <template #play-button>
             <Play />
           </template>
         </Player>
       </div>
       <div class="col player-bar__switch">
         Extend
-        <Switch v-model="props.extended" @updateModelValue="updateRoutineVariation" :id="'extend'"/>
+        <Switch :id="'extend'" v-model="props.extended" @update-model-value="updateRoutineVariation"/>
       </div>
     </div>
   </div>

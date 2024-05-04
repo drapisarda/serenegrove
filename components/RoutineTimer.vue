@@ -2,8 +2,8 @@
   <div class="routine-timer">
     <div class="container is-max-desktop">
       {{ formattedTime(currentTime) }}
-      <div class="routine-timer__bar" v-if="showBar">
-        <div class="routine-timer__bar-fill" :style="remainingTimeStyle"></div>
+      <div v-if="showBar" class="routine-timer__bar">
+        <div class="routine-timer__bar-fill" :style="remainingTimeStyle"/>
         <div class="routine-timer__bar-text">
           {{ formattedTime(currentTime) }}
         </div>
@@ -29,8 +29,8 @@ const props = withDefaults(defineProps<{
 const showBar = false;
 
 let intervalId: NodeJS.Timeout | null = null;
-let currentTime = ref(props.time);
-let totalTime = ref(props.time);
+const currentTime = ref(props.time);
+const totalTime = ref(props.time);
 
 const remainingTimeStyle = computed(() => {
   return `transform: scaleX(${currentTime.value / totalTime.value});`;
