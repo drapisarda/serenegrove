@@ -2,7 +2,7 @@
   <div class="player-bar">
     <div class="container row">
       <div class="col player-bar__duration">
-        <Clock /> <span>{{ formattedTime(props.duration) }}</span>
+        <Clock /> <span>{{ displayDuration }}</span>
       </div>
       <div class="col col-xs-3 player-bar__button">
         <Player :player-steps="playerSteps" :routine-variation="routineVariation" :duration="duration" :disable="disable">
@@ -13,20 +13,25 @@
       </div>
       <div class="col player-bar__switch">
         Extend
-        <Switch :id="'extend'" v-model="props.extended" @update-model-value="updateRoutineVariation"/>
+        <Switch :id="'extend'" v-model="isExtendedDuration" @update-model-value="updateRoutineVariation"/>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
+import { onMounted, ref, computed } from "vue";
 import { type Step } from "@/store/types";
 import Play from "@/src/assets/img/icons/play-button.svg";
 import Clock from "@/src/assets/img/icons/clock.svg";
 import { formattedTime } from '@/composables/formattedTime';
 import { useRoutineStore } from "@/store/routine";
-const { getRoutineVariation } = useRoutineStore()
+const { routineVariation } = useRoutineStore()
+
+const isExtendedDuration = ref(false);
+onMounted(() => {
+  isExtendedDuration.value = routineVariation.id === 1;
+})
 
 const props = defineProps({
   playerSteps: {
@@ -37,21 +42,16 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  extended: {
-    type: Boolean,
-    default: false,
-  },
   duration: {
     type: Number,
     default: 0
   }
 })
+
+const displayDuration = computed(() => formattedTime(props.duration))
+
 const emit = defineEmits(['updateModelValue'])
-
 const updateRoutineVariation = (e: Event) => emit('updateModelValue', e)
-// TODO This has to be done better
-
-const routineVariation  = computed(() => getRoutineVariation());
 </script>
 
 <style lang="scss">

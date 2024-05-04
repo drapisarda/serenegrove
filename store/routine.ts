@@ -62,6 +62,6 @@ export const useRoutineStore = defineStore("mainRoutine", {
     },
   },
   persist: {
-    storage: persistedState.localStorage,
+    storage: import.meta.client ? persistedState.localStorage : {},
   },
 });

@@ -1,6 +1,6 @@
 import Player from '@/components/Player.vue'
 import { mount, type VueWrapper } from '@vue/test-utils'
-import { originalState } from '@/store/vars'
+import { originalState, routineTimeVariations } from '@/store/vars'
 
 describe('Player component test', async () => {
   let wrapper: VueWrapper;
@@ -26,7 +26,7 @@ describe('Player component test', async () => {
         }
       },
       props: {
-        routineVariation: false,
+        routineVariation: routineTimeVariations[0],
         duration: 90,
         playerSteps: originalState.stepsOptions.slice(3),
       },

@@ -13,6 +13,9 @@ describe('StepItem component test', async () => {
     wrapper = mount(StepItem, {
       props: {
         step: {
+          id: 0,
+          file: '',
+          pauseAfter: 0,
           icon,
           name,
           duration,
@@ -23,9 +26,9 @@ describe('StepItem component test', async () => {
   })
 
   test('StepItem content', () => {
-    expect(wrapper.find('.card-image icon').attributes().name).toBe(icon);
-    expect(wrapper.find('.card-header-title').text().trim()).toBe(name);
-    expect(wrapper.find('.card-content__description').text().trim()).toBe(description);
-    expect(wrapper.find('.card-header__duration span').text()).toBe(formattedTime(duration));
+    expect(wrapper.find('.card-image icon').attributes().name).to.eq(icon);
+    expect(wrapper.find('.card-header-title').text().trim()).to.eq(name);
+    expect(wrapper.find('.card-content__description').text().trim()).to.eq(description);
+    expect(wrapper.find('.card-header__duration span').text()).to.eq(formattedTime(duration));
   })
 })
