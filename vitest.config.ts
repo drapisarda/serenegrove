@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   test: {
+    watch: false,
     globals: true,
     environment: 'happy-dom',
   },
