@@ -1,5 +1,3 @@
-
-import { NuxtLink } from '#build/components';
 <template>
   <footer class="footer footer--custom">
     <div class="section">
