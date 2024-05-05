@@ -1,36 +1,44 @@
 <template>
   <div class="steps-list">
     <ul>
-      <StepItem v-for="(step, index) in stepsOptions" :key="index" :step="step" @add="add" />
+      <StepItem
+        v-for="(step, index) in stepsOptions"
+        :key="index"
+        :step="step"
+        @add="add"
+      />
     </ul>
   </div>
 </template>
-  
-<script lang="ts" setup>
-import { useRoutineStore } from "@/store/routine";
-import { type Step, ToastStyles } from "@/store/types";
-import { useGlobalStore } from "@/store/global";
 
-import { ref, watch } from "vue";
+<script lang="ts" setup>
+import { useRoutineStore } from '@/store/routine'
+import { type Step, ToastStyles } from '@/store/types'
+import { useGlobalStore } from '@/store/global'
+
+import { ref, watch } from 'vue'
 
 const { steps, stepsOptions, getRoutineSteps, addStepAtTheBottom } =
-  useRoutineStore();
+  useRoutineStore()
 
-const { setToastMessage } = useGlobalStore();
+const { setToastMessage } = useGlobalStore()
 
 const add = (step: Step) => {
-  addStepAtTheBottom(step);
-  setToastMessage(`Step "${step.name}" added to the routine`, ToastStyles.Success);
+  addStepAtTheBottom(step)
+  setToastMessage(
+    `Step "${step.name}" added to the routine`,
+    ToastStyles.Success,
+  )
 }
 
-const routineSteps = ref(getRoutineSteps());
+const routineSteps = ref(getRoutineSteps())
 watch(steps, () => {
   routineSteps.value = getRoutineSteps()
 })
 </script>
 
-<style lang="scss" >
-@import "@/style/vars.scss";
+<style lang="scss">
+@import '@/style/vars.scss';
 
 .steps-list {
   $root: &;
@@ -38,7 +46,7 @@ watch(steps, () => {
 
   ul {
     list-style: none;
-    
+
     display: grid;
     padding: $size-7;
     column-gap: $size-6;

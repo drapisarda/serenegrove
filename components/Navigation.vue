@@ -7,35 +7,47 @@
     </div>
 
     <div class="navbar-menu">
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" tabindex="0" @click="toggleMenu">
-        <span aria-hidden="true"/>
-        <span aria-hidden="true"/>
-        <span aria-hidden="true"/>
+      <a
+        role="button"
+        class="navbar-burger"
+        aria-label="menu"
+        aria-expanded="false"
+        tabindex="0"
+        @click="toggleMenu"
+      >
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
       </a>
       <Transition>
-      <div v-show="menuIsOpen" class="navbar-start" :class="{ 'navbar-start--open': menuIsOpen }" aria-expanded="true">
+        <div
+          v-show="menuIsOpen"
+          class="navbar-start"
+          :class="{ 'navbar-start--open': menuIsOpen }"
+          aria-expanded="true"
+        >
           <button class="button button--close" @click="toggleMenu">
             <CloseIcon />
           </button>
-          <NuxtLink class="button navbar-cta" href="/create">Start now!</NuxtLink>
+          <NuxtLink class="button navbar-cta" href="/create"
+            >Start now!</NuxtLink
+          >
           <NuxtLink href="/about">About us</NuxtLink>
           <NuxtLink href="/why-meditation">Why Meditation?</NuxtLink>
-          
+
           <div v-if="false" class="navbar-item has-dropdown is-hoverable">
-            <hr class="navbar-divider">
+            <hr class="navbar-divider" />
           </div>
         </div>
       </Transition>
-        
+
       <div v-if="false" class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
             <a class="button is-primary">
               <strong>Sign up</strong>
             </a>
-            <a class="button is-light">
-              Log in
-            </a>
+            <a class="button is-light"> Log in </a>
           </div>
         </div>
       </div>
@@ -44,16 +56,16 @@
 </template>
 
 <script lang="ts" setup>
-import CloseIcon from "@/src/assets/img/icons/close.svg";
-const menuIsOpen = ref(false);
+import CloseIcon from '@/src/assets/img/icons/close.svg'
+const menuIsOpen = ref(false)
 
 const toggleMenu = () => {
   menuIsOpen.value = !menuIsOpen.value
-};
+}
 </script>
 
 <style lang="scss">
-@import "@/style/vars.scss";
+@import '@/style/vars.scss';
 
 .navbar {
   background: url('/assets/img/forest_bg.webp') no-repeat top center $bg;
@@ -79,10 +91,10 @@ const toggleMenu = () => {
 
     span {
       display: block;
-      height: .3em;
+      height: 0.3em;
       width: 2em;
       background: $white;
-      margin-bottom: .4em;
+      margin-bottom: 0.4em;
       border-radius: 2px;
     }
   }
@@ -113,7 +125,7 @@ const toggleMenu = () => {
     height: 100%;
     display: flex;
     justify-content: flex-end;
-    transition: opacity .3s ease-in-out 0s;
+    transition: opacity 0.3s ease-in-out 0s;
     background-color: $dark-5;
 
     display: flex;
@@ -172,13 +184,12 @@ const toggleMenu = () => {
         background-color: $dark-5;
         z-index: -1;
         filter: blur(5px);
-        opacity: .4;
+        opacity: 0.4;
 
         @media (min-width: $tablet) {
-          content: "";
+          content: '';
         }
       }
-
     }
   }
 }

@@ -1,23 +1,23 @@
 export interface Step {
-  id: number,
-  name: string,
-  duration: number,
-  file: string,
-  description: string,
-  icon: string,
-  pauseAfter: number,
+  id: number
+  name: string
+  duration: number
+  file: string
+  description: string
+  icon: string
+  pauseAfter: number
 }
 
 // TODO use standard
 export interface TimeFormat {
-  hours: string,
-  minutes: string,
+  hours: string
+  minutes: string
   seconds: string
 }
 
 export interface ToastMessage {
-  message: string,
-  id: number,
+  message: string
+  id: number
   style: string
 }
 
@@ -27,7 +27,7 @@ export enum ToastStyles {
 }
 
 export interface RoutineTimeVariationType {
-  id: number,
-  label: string;
-  modifier: number;
+  id: number
+  label: string
+  modifier: number
 }

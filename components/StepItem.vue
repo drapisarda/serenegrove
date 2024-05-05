@@ -16,11 +16,15 @@
           {{ step.description }}
         </p>
         <p class="card-header__duration">
-          <Clock/> <span>{{ formattedTime(step.duration) }}</span>
+          <Clock /> <span>{{ formattedTime(step.duration) }}</span>
         </p>
       </div>
       <div class="col-xs-offset-4 col-sm-8 card-footer">
-        <button class="button" aria-label="add element to your playlist" @click="$emit('add', step)">
+        <button
+          class="button"
+          aria-label="add element to your playlist"
+          @click="$emit('add', step)"
+        >
           <Plus /> Add to playlist
         </button>
       </div>
@@ -29,25 +33,25 @@
 </template>
 
 <script lang="ts" setup>
-import { type Step } from "@/store/types";
-import Clock from "@/src/assets/img/icons/clock.svg";
-import Plus from '@/src/assets/img/icons/plus.svg';
-import { formattedTime } from '@/composables/formattedTime';
+import { type Step } from '@/store/types'
+import Clock from '@/src/assets/img/icons/clock.svg'
+import Plus from '@/src/assets/img/icons/plus.svg'
+import { formattedTime } from '@/composables/formattedTime'
 
 defineEmits({
-  'add': null,
+  add: null,
 })
 
 defineProps({
   step: {
     type: Object as PropType<Step>,
     required: true,
-  }
-});
+  },
+})
 </script>
 
 <style lang="scss">
-@import "@/style/vars.scss";
+@import '@/style/vars.scss';
 
 .step-item .card {
   text-align: left;
@@ -67,11 +71,11 @@ defineProps({
   &.row {
     padding: 0;
 
-    >div {
+    > div {
       padding: $size-8 0;
 
       @media (min-width: $miniMobile) {
-        padding: $size-8*2;
+        padding: $size-8 * 2;
       }
     }
   }
@@ -90,7 +94,7 @@ defineProps({
       height: 100%;
       padding-bottom: 100%;
       padding: $size-6;
-      
+
       @media (min-width: $tablet) {
         padding: $size-8;
       }

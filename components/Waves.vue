@@ -1,16 +1,15 @@
 <template>
   <div class="wave-container">
-    <div class="wave wave1"/>
-    <div class="wave wave2"/>
-    <div class="wave wave3"/>
-    <div class="wave wave4"/>
-    <div class="wave wave5"/>
+    <div class="wave wave1" />
+    <div class="wave wave2" />
+    <div class="wave wave3" />
+    <div class="wave wave4" />
+    <div class="wave wave5" />
   </div>
 </template>
 
-
 <style lang="scss">
-@import "@/style/vars.scss";
+@import '@/style/vars.scss';
 
 .wave-container {
   display: flex;
@@ -23,7 +22,7 @@
 }
 
 .wave {
-  transform: scaleY(.4);
+  transform: scaleY(0.4);
   height: 100%;
   width: var(--boxSize);
   background: $clear-1;
@@ -55,15 +54,15 @@
 
 @keyframes quiet {
   25% {
-    transform: scaleY(.6);
+    transform: scaleY(0.6);
   }
 
   50% {
-    transform: scaleY(.4);
+    transform: scaleY(0.4);
   }
 
   75% {
-    transform: scaleY(.8);
+    transform: scaleY(0.8);
   }
 }
 
@@ -73,11 +72,11 @@
   }
 
   50% {
-    transform: scaleY(.4);
+    transform: scaleY(0.4);
   }
 
   75% {
-    transform: scaleY(.6);
+    transform: scaleY(0.6);
   }
 }
 
@@ -87,7 +86,7 @@
   }
 
   50% {
-    transform: scaleY(.4);
+    transform: scaleY(0.4);
   }
 
   75% {
@@ -100,5 +99,4 @@
     transform: scaleY(0.1);
   }
 }
-
 </style>

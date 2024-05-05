@@ -1,12 +1,12 @@
 import ListItem from '@/components/ListItem.vue'
 import { mount, type VueWrapper } from '@vue/test-utils'
-import { formattedTime } from '@/composables/formattedTime';
+import { formattedTime } from '@/composables/formattedTime'
 
 describe('ListItem component test', async () => {
-  const name = 'Lorem Ipsum';
+  const name = 'Lorem Ipsum'
   const icon = 'mantra'
   const duration = 90
-  let wrapper: VueWrapper;
+  let wrapper: VueWrapper
 
   beforeAll(() => {
     wrapper = mount(ListItem, {
@@ -14,16 +14,18 @@ describe('ListItem component test', async () => {
         step: {
           icon,
           name,
-          duration
-        }
+          duration,
+        },
       },
-    });
+    })
   })
 
   test('ListItem content', () => {
-    expect(wrapper.find('.card-image icon').attributes().name).is.eq(icon);
-    expect(wrapper.find('.card-header__title').text().trim()).is.eq(name);
-    expect(wrapper.find('.card-header__duration span').text()).is.eq(formattedTime(duration));
+    expect(wrapper.find('.card-image icon').attributes().name).is.eq(icon)
+    expect(wrapper.find('.card-header__title').text().trim()).is.eq(name)
+    expect(wrapper.find('.card-header__duration span').text()).is.eq(
+      formattedTime(duration),
+    )
   })
 
   test('List Item event emit', () => {

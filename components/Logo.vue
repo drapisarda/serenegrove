@@ -12,18 +12,18 @@
 </template>
 
 <script setup lang="ts">
-import LOGOH from '@/src/assets/img/icons/logo_h.svg';
-import LOGO from '@/src/assets/img/icons/logo.svg';
+import LOGOH from '@/src/assets/img/icons/logo_h.svg'
+import LOGO from '@/src/assets/img/icons/logo.svg'
 defineProps({
-  horizontal:{
+  horizontal: {
     type: Boolean,
-    default: false
-  }
-});
+    default: false,
+  },
+})
 </script>
 
 <style lang="scss">
-@import "@/style/vars.scss";
+@import '@/style/vars.scss';
 
 .logo {
   position: relative;
@@ -44,7 +44,7 @@ defineProps({
       fill: white;
     }
 
-    +svg {
+    + svg {
       scale: 1.02;
       opacity: 1;
       filter: blur(5px);
@@ -56,11 +56,10 @@ defineProps({
 
       z-index: 1;
     }
-
   }
 
   &--h {
-    svg+svg {
+    svg + svg {
       scale: 1.05;
       opacity: 1;
       filter: blur(2px);

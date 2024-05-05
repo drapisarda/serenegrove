@@ -9,12 +9,8 @@
         <Playlist class="col col-md-5 col-lg-4 col-" />
 
         <div class="col col-md-7 col-lg-8 start-wide__steps-choice">
-          <h2 class="start-wide__title">
-            Welcome to your meditation routine
-          </h2>
-          <h5 class="start-wide__subtitle">
-            Pick your exercises
-          </h5>
+          <h2 class="start-wide__title">Welcome to your meditation routine</h2>
+          <h5 class="start-wide__subtitle">Pick your exercises</h5>
           <div class="start-wide__content card">
             <ListStepItems />
           </div>
@@ -29,9 +25,8 @@
 definePageMeta({ layout: 'player' })
 </script>
 
-
 <style lang="scss">
-@import "@/style/vars.scss";
+@import '@/style/vars.scss';
 
 $contentBg: $dark-2;
 
@@ -95,16 +90,24 @@ $contentBg: $dark-2;
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       width: 100%;
       height: $size-5;
       z-index: 1;
-      background: linear-gradient(180deg, rgba(red($contentBg), green($contentBg), blue($contentBg), 1) 0%, rgba(0, 0, 0, 0) 100%);
-      
+      background: linear-gradient(
+        180deg,
+        rgba(red($contentBg), green($contentBg), blue($contentBg), 1) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+
       @media (min-width: $tablet) {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
       }
     }
 

@@ -4,11 +4,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 footer__about">
-            <h3>
-              SereneGrove
-            </h3>
+            <h3>SereneGrove</h3>
             <p>
-              A non-profit community to promote meditation and self consciousness.
+              A non-profit community to promote meditation and self
+              consciousness.
             </p>
           </div>
           <div class="col-md-4 footer__links">
@@ -26,7 +25,9 @@
                 <NuxtLink href="/why-meditation">Why Meditation?</NuxtLink>
               </li>
               <li>
-                <NuxtLink href="/privacy">Privacy & Datenschutzerklärung</NuxtLink>
+                <NuxtLink href="/privacy"
+                  >Privacy & Datenschutzerklärung</NuxtLink
+                >
               </li>
               <li>
                 <NuxtLink href="/newsletter">Newsletter</NuxtLink>
@@ -45,8 +46,8 @@
   </footer>
 </template>
 
-<style lang="scss" >
-@import "@/style/vars.scss";
+<style lang="scss">
+@import '@/style/vars.scss';
 
 .footer {
   background-color: $dark-5;

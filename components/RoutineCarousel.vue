@@ -2,8 +2,11 @@
   <div class="routine-carousel">
     <ul class="row">
       <li
-v-for="(step, index) in carouselSteps" :key="index" class="col-no-gutter"
-        :class="{ 'col-xs-8': index === 1, 'col-xs-2': index !== 1 }">
+        v-for="(step, index) in carouselSteps"
+        :key="index"
+        class="col-no-gutter"
+        :class="{ 'col-xs-8': index === 1, 'col-xs-2': index !== 1 }"
+      >
         <Icon v-if="step" :name="step.icon" />
       </li>
     </ul>
@@ -11,7 +14,7 @@ v-for="(step, index) in carouselSteps" :key="index" class="col-no-gutter"
 </template>
 
 <script lang="ts" setup>
-import { type Step } from "@/store/types";
+import { type Step } from '@/store/types'
 const props = defineProps({
   currentStepIndex: {
     type: Number,
@@ -24,14 +27,14 @@ const props = defineProps({
 })
 
 const currentStep = computed((): Step | undefined => {
-  return props.playerSteps[props.currentStepIndex];
-});
+  return props.playerSteps[props.currentStepIndex]
+})
 const previousStep = computed((): Step | undefined => {
-  return props.playerSteps[props.currentStepIndex - 1];
-});
+  return props.playerSteps[props.currentStepIndex - 1]
+})
 const nextStep = computed((): Step | undefined => {
-  return props.playerSteps[props.currentStepIndex + 1];
-});
+  return props.playerSteps[props.currentStepIndex + 1]
+})
 
 const carouselSteps = computed((): (Step | undefined)[] => [
   previousStep.value,
@@ -41,7 +44,7 @@ const carouselSteps = computed((): (Step | undefined)[] => [
 </script>
 
 <style lang="scss">
-@import "@/style/vars.scss";
+@import '@/style/vars.scss';
 
 .routine-carousel {
   .row {
@@ -74,7 +77,6 @@ const carouselSteps = computed((): (Step | undefined)[] => [
           animation: none;
         }
       }
-
 
       @keyframes pulse {
         0% {

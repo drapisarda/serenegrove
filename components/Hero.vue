@@ -6,11 +6,9 @@
           <Logo />
         </div>
         <section class="col-md-6 hero__claim section">
-          <h1 class="is-spaced">
-            Your custom guided meditation routine.
-          </h1>
+          <h1 class="is-spaced">Your custom guided meditation routine.</h1>
           <h3>
-            Ready when you are. <br>
+            Ready when you are. <br />
             Everywhere you are.
           </h3>
         </section>
@@ -19,18 +17,17 @@
   </slot>
 </template>
 
-<script lang="ts">
-</script>
+<script lang="ts"></script>
 
 <style lang="scss">
-@import "@/style/vars.scss";
+@import '@/style/vars.scss';
 
 .hero {
   min-height: 80vh;
   display: flex;
   align-items: stretch;
   background-color: $dark-5;
-  
+
   @media (min-width: $tablet) {
     padding: $size-4;
     min-height: 70svh;
@@ -69,7 +66,6 @@
 
     @media (min-width: $tablet) {
       height: 300px;
-
     }
   }
 }

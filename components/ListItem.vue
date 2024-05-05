@@ -9,21 +9,31 @@
           {{ step.name }}
         </p>
         <p class="card-header__duration">
-          <Clock/> <span>{{ formattedTime(step.duration) }}</span>
+          <Clock /> <span>{{ formattedTime(step.duration) }}</span>
         </p>
       </div>
       <div class="card-actions">
         <button
-class="card-header-icon card-actions--move-up" :class="{ 'inactive': isFirst }" aria-label="move up"
-          @click="$emit('moveUp', index)">
+          class="card-header-icon card-actions--move-up"
+          :class="{ inactive: isFirst }"
+          aria-label="move up"
+          @click="$emit('moveUp', index)"
+        >
           <UpShevron />
         </button>
         <button
-class="card-header-icon card-actions--move-down" :class="{ 'inactive': isLast }" aria-label="move down"
-          @click="$emit('moveDown', index)">
+          class="card-header-icon card-actions--move-down"
+          :class="{ inactive: isLast }"
+          aria-label="move down"
+          @click="$emit('moveDown', index)"
+        >
           <DownShevron />
         </button>
-        <button class="card-header-icon card-actions--remove" aria-label="remove element" @click="$emit('remove', {id: index, name: step.name})">
+        <button
+          class="card-header-icon card-actions--remove"
+          aria-label="remove element"
+          @click="$emit('remove', { id: index, name: step.name })"
+        >
           <Bin />
         </button>
       </div>
@@ -32,12 +42,12 @@ class="card-header-icon card-actions--move-down" :class="{ 'inactive': isLast }"
 </template>
 
 <script lang="ts" setup>
-import Bin from '@/src/assets/img/icons/bin.svg';
-import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
-import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
-import Clock from "@/src/assets/img/icons/clock.svg";
-import { formattedTime } from '@/composables/formattedTime';
-import { type Step } from "@/store/types";
+import Bin from '@/src/assets/img/icons/bin.svg'
+import UpShevron from '@/src/assets/img/icons/up-chevron.svg'
+import DownShevron from '@/src/assets/img/icons/down-chevron.svg'
+import Clock from '@/src/assets/img/icons/clock.svg'
+import { formattedTime } from '@/composables/formattedTime'
+import { type Step } from '@/store/types'
 
 // TODO use step
 defineProps({
@@ -56,18 +66,18 @@ defineProps({
   isLast: {
     type: Boolean,
     required: true,
-  }
-});
+  },
+})
 
 defineEmits({
-  'moveUp': null,
-  'moveDown': null,
-  'remove': null
+  moveUp: null,
+  moveDown: null,
+  remove: null,
 })
 </script>
 
-<style lang="scss" >
-@import "@/style/vars.scss";
+<style lang="scss">
+@import '@/style/vars.scss';
 
 .card {
   color: $black;

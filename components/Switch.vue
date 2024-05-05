@@ -1,7 +1,13 @@
 <template>
   <div class="toggle-switch">
-    <input :id="id" class="toggle-input" :checked="modelValue" type="checkbox" @click="updateModelValue">
-    <label class="toggle-label" :for="id"/>
+    <input
+      :id="id"
+      class="toggle-input"
+      :checked="modelValue"
+      type="checkbox"
+      @click="updateModelValue"
+    />
+    <label class="toggle-label" :for="id" />
   </div>
 </template>
 
@@ -9,12 +15,12 @@
 defineProps({
   modelValue: {
     type: Boolean,
-    required: true
+    required: true,
   },
   id: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 })
 
 const emit = defineEmits(['updateModelValue'])
@@ -50,7 +56,7 @@ const updateModelValue = (event: Event) => {
     transition: background-color 0.3s;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       width: 20px;
       height: 20px;
@@ -64,7 +70,7 @@ const updateModelValue = (event: Event) => {
   }
 
   .toggle-input:checked + .toggle-label {
-    background-color: #4CAF50;
+    background-color: #4caf50;
 
     &::before {
       transform: translateX(16px);
@@ -73,11 +79,11 @@ const updateModelValue = (event: Event) => {
 
   &.light {
     .toggle-label {
-      background-color: #BEBEBE;
+      background-color: #bebebe;
     }
 
     .toggle-input:checked + .toggle-label {
-      background-color: #9B9B9B;
+      background-color: #9b9b9b;
 
       &::before {
         transform: translateX(6px);
@@ -87,7 +93,7 @@ const updateModelValue = (event: Event) => {
 
   &.dark {
     .toggle-label {
-      background-color: #4B4B4B;
+      background-color: #4b4b4b;
     }
 
     .toggle-input:checked + .toggle-label {
@@ -99,5 +105,4 @@ const updateModelValue = (event: Event) => {
     }
   }
 }
-
 </style>

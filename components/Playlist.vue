@@ -1,16 +1,18 @@
 <template>
   <div
-class="playlist" :class="{ 'open': routineOpen, 'scrolling-down': scrollingDown }"
-    @touchstart.self="manageTouchStart($event)" @touchend.self="manageTouchEnd($event)" @touchmove.self="manageTouchMove"
-    @drag.self="manageDrag">
+    class="playlist"
+    :class="{ open: routineOpen, 'scrolling-down': scrollingDown }"
+    @touchstart.self="manageTouchStart($event)"
+    @touchend.self="manageTouchEnd($event)"
+    @touchmove.self="manageTouchMove"
+    @drag.self="manageDrag"
+  >
     <div class="playlist__toggle" @click="routineToggle">
       <DownShevron v-if="routineOpen" />
       <UpShevron v-else />
     </div>
     <div class="card">
-      <h5 class="playlist__title">
-        Your meditation routine
-      </h5>
+      <h5 class="playlist__title">Your meditation routine</h5>
       <div class="playlist__content">
         <ListItems />
       </div>
@@ -19,42 +21,42 @@ class="playlist" :class="{ 'open': routineOpen, 'scrolling-down': scrollingDown 
 </template>
 
 <script lang="ts" setup>
-import UpShevron from '@/src/assets/img/icons/up-chevron.svg';
-import DownShevron from '@/src/assets/img/icons/down-chevron.svg';
+import UpShevron from '@/src/assets/img/icons/up-chevron.svg'
+import DownShevron from '@/src/assets/img/icons/down-chevron.svg'
 
-const routineOpen = ref(false);
-let touchStart = 0;
-let touchLast: number;
-const scrollDownLimit = 300;
+const routineOpen = ref(false)
+let touchStart = 0
+let touchLast: number
+const scrollDownLimit = 300
 const scrollingDown = ref(false)
 
 const routineToggle = () => {
-  routineOpen.value = !routineOpen.value;
-  scrollingDown.value = false;
+  routineOpen.value = !routineOpen.value
+  scrollingDown.value = false
 }
 const manageTouchStart = (event: TouchEvent) => {
-  if (!event.touches || !event.touches[0]) return;
-  touchStart = event.touches[0].pageY;
+  if (!event.touches || !event.touches[0]) return
+  touchStart = event.touches[0].pageY
 }
 const manageTouchEnd = () => {
-  scrollingDown.value = false;
-  if (touchLast - touchStart < scrollDownLimit) return;
-  touchLast = 0;
-  routineOpen.value = false;
+  scrollingDown.value = false
+  if (touchLast - touchStart < scrollDownLimit) return
+  touchLast = 0
+  routineOpen.value = false
 }
 const manageTouchMove = (event: TouchEvent) => {
-  touchLast = event.touches[0].pageY;
-  const scrollValue = touchLast - touchStart;
-  if (scrollValue < 0) return;
-  scrollingDown.value = scrollValue > (scrollDownLimit / 3);
-  if (scrollValue > scrollDownLimit) manageTouchEnd(event);
+  touchLast = event.touches[0].pageY
+  const scrollValue = touchLast - touchStart
+  if (scrollValue < 0) return
+  scrollingDown.value = scrollValue > scrollDownLimit / 3
+  if (scrollValue > scrollDownLimit) manageTouchEnd(event)
 }
 
 const manageDrag = (event: DragEvent) => console.log(event)
 </script>
 
-<style lang="scss" >
-@import "@/style/vars.scss";
+<style lang="scss">
+@import '@/style/vars.scss';
 $routineChevronHeight: 3rem;
 
 .playlist {
@@ -82,7 +84,7 @@ $routineChevronHeight: 3rem;
   }
 
   &__toggle {
-    transform: translate(0, - $routineChevronHeight - $size-8 - $size-8);
+    transform: translate(0, -$routineChevronHeight - $size-8 - $size-8);
     transition: all 1s ease-in-out;
     overflow: visible;
     height: $routineChevronHeight;
@@ -91,7 +93,7 @@ $routineChevronHeight: 3rem;
     position: relative;
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       height: 100%;
@@ -131,7 +133,6 @@ $routineChevronHeight: 3rem;
         stroke: $black;
       }
     }
-
   }
 
   .card {
@@ -143,7 +144,7 @@ $routineChevronHeight: 3rem;
   &__content {
     position: relative;
     overflow: hidden;
-    
+
     ul {
       height: 100%;
       overflow: scroll;
@@ -152,12 +153,16 @@ $routineChevronHeight: 3rem;
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       width: 100%;
       height: $size-5;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
       z-index: 1;
     }
 
@@ -172,7 +177,6 @@ $routineChevronHeight: 3rem;
       border-bottom-right-radius: $size-8;
     }
   }
-
 
   .list-items > p,
   &__title {

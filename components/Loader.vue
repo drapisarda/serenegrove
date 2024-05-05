@@ -1,14 +1,14 @@
 <template>
   <div class="rloader">
     <div class="lds-roller">
-      <div/>
-      <div/>
-      <div/>
-      <div/>
-      <div/>
-      <div/>
-      <div/>
-      <div/>
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
     </div>
     <div class="rloader__message">
       <p>
@@ -22,13 +22,13 @@
 defineProps({
   message: {
     type: String,
-    default: ''
+    default: '',
   },
-});
+})
 </script>
 
 <style lang="scss">
-@import "@/style/vars.scss";
+@import '@/style/vars.scss';
 .rloader {
   display: flex;
   justify-content: center;
@@ -55,7 +55,7 @@ defineProps({
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   transform-origin: 40px 40px;
   &:after {
-    content: " ";
+    content: ' ';
     display: block;
     position: absolute;
     width: 7px;
@@ -81,7 +81,7 @@ defineProps({
       left: 56px;
     }
   }
-  
+
   &:nth-child(3) {
     animation-delay: -0.108s;
 
@@ -90,7 +90,7 @@ defineProps({
       left: 48px;
     }
   }
-  
+
   &:nth-child(4) {
     animation-delay: -0.144s;
 
@@ -99,7 +99,7 @@ defineProps({
       left: 40px;
     }
   }
-  
+
   &:nth-child(5) {
     animation-delay: -0.18s;
 
@@ -108,7 +108,7 @@ defineProps({
       left: 32px;
     }
   }
-  
+
   &:nth-child(6) {
     animation-delay: -0.216s;
 
@@ -117,7 +117,7 @@ defineProps({
       left: 24px;
     }
   }
-  
+
   &:nth-child(7) {
     animation-delay: -0.252s;
 
@@ -126,7 +126,7 @@ defineProps({
       left: 17px;
     }
   }
-  
+
   &:nth-child(8) {
     animation-delay: -0.288s;
 
@@ -145,4 +145,5 @@ defineProps({
   100% {
     transform: rotate(360deg);
   }
-}</style>
+}
+</style>

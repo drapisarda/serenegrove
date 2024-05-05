@@ -5,7 +5,12 @@
         <Clock /> <span>{{ displayDuration }}</span>
       </div>
       <div class="col col-xs-3 player-bar__button">
-        <Player :player-steps="playerSteps" :routine-variation="routineVariation" :duration="duration" :disabled="disabled">
+        <Player
+          :player-steps="playerSteps"
+          :routine-variation="routineVariation"
+          :duration="duration"
+          :disabled="disabled"
+        >
           <template #play-button>
             <Play />
           </template>
@@ -13,24 +18,28 @@
       </div>
       <div class="col player-bar__switch">
         Extend
-        <Switch :id="'extend'" v-model="isExtendedDuration" @update-model-value="updateRoutineVariation"/>
+        <Switch
+          :id="'extend'"
+          v-model="isExtendedDuration"
+          @update-model-value="updateRoutineVariation"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref, computed } from "vue";
-import { type Step } from "@/store/types";
-import Play from "@/src/assets/img/icons/play-button.svg";
-import Clock from "@/src/assets/img/icons/clock.svg";
-import { formattedTime } from '@/composables/formattedTime';
-import { useRoutineStore } from "@/store/routine";
+import { onMounted, ref, computed } from 'vue'
+import { type Step } from '@/store/types'
+import Play from '@/src/assets/img/icons/play-button.svg'
+import Clock from '@/src/assets/img/icons/clock.svg'
+import { formattedTime } from '@/composables/formattedTime'
+import { useRoutineStore } from '@/store/routine'
 const { routineVariation } = useRoutineStore()
 
-const isExtendedDuration = ref(false);
+const isExtendedDuration = ref(false)
 onMounted(() => {
-  isExtendedDuration.value = routineVariation.id === 1;
+  isExtendedDuration.value = routineVariation.id === 1
 })
 
 const props = defineProps({
@@ -44,8 +53,8 @@ const props = defineProps({
   },
   duration: {
     type: Number,
-    default: 0
-  }
+    default: 0,
+  },
 })
 
 const displayDuration = computed(() => formattedTime(props.duration))
@@ -55,7 +64,7 @@ const updateRoutineVariation = (e: Event) => emit('updateModelValue', e)
 </script>
 
 <style lang="scss">
-@import "@/style/vars.scss";
+@import '@/style/vars.scss';
 $primaryColor: $clear-2;
 $secondaryColor: $dark-1;
 
@@ -151,4 +160,5 @@ $secondaryColor: $dark-1;
       }
     }
   }
-}</style>
+}
+</style>

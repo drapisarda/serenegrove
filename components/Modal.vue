@@ -7,36 +7,36 @@
     </div>
     <dialog :open="modalStatus" class="modal__dialog">
       <button class="modal__close" @click="closeModal">X</button>
-      <slot name="modal-title" class="section"/>
+      <slot name="modal-title" class="section" />
       <div class="modal__content">
-        <slot name="modal-content" class="section"/>
+        <slot name="modal-content" class="section" />
       </div>
     </dialog>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { clipHtml } from "@/composables/clipHtml";
+import { ref } from 'vue'
+import { clipHtml } from '@/composables/clipHtml'
 
-const modalStatus = ref(false);
+const modalStatus = ref(false)
 clipHtml(modalStatus)
 
 const handleKeys = (event: KeyboardEvent) => {
-  if (event.key==='Escape') closeModal();
-};
+  if (event.key === 'Escape') closeModal()
+}
 
 const openModal = () => {
-  modalStatus.value = true;
-};
+  modalStatus.value = true
+}
 
 const closeModal = () => {
-  modalStatus.value = false;
-};
+  modalStatus.value = false
+}
 </script>
 
-<style  lang="scss">
-@import "@/style/vars.scss";
+<style lang="scss">
+@import '@/style/vars.scss';
 .modal {
   &__dialog {
     position: fixed;

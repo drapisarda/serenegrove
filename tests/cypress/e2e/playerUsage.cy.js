@@ -15,10 +15,15 @@ const mediaPlays = (els, expectation) => {
   expect(audible).to.eq(expectation)
 }
 
-const clickOnStepListItemButton = (index) => cy.get('.steps-list ul .step-item').eq(index).find('button').click({ scrollBehavior: 'center' })
+const clickOnStepListItemButton = (index) =>
+  cy
+    .get('.steps-list ul .step-item')
+    .eq(index)
+    .find('button')
+    .click({ scrollBehavior: 'center' })
 const getListItems = () => cy.get('.list-items').find('.list-item')
 const getListItem = (index) => getListItems().eq(index)
-const playlistToSet = [0, 2, 4]; // Breath, Sound, Bell sound
+const playlistToSet = [0, 2, 4] // Breath, Sound, Bell sound
 let elementsNames = []
 
 describe('Player usages', () => {
@@ -35,13 +40,15 @@ describe('Player usages', () => {
 
   it('Player page is ready', () => {
     cy.get('.player__start button').should('have.class', 'inactive')
-    cy.get('.player__playing').should('not.be.visible');
-    cy.get('.steps-list ul').find('.step-item').should('have.length', stepsOptions.length)
+    cy.get('.player__playing').should('not.be.visible')
+    cy.get('.steps-list ul')
+      .find('.step-item')
+      .should('have.length', stepsOptions.length)
   })
 
   it('User creates a playlist.', () => {
     // creates a playlists and returns the names of the steps
-    elementsNames = playlistToSet.map(index => {
+    elementsNames = playlistToSet.map((index) => {
       clickOnStepListItemButton(index)
       return stepsOptions[index].name
     })
@@ -60,8 +67,12 @@ describe('Player usages', () => {
     getListItem(2).find('.card-header__title').contains(elementsNames[2])
 
     // move up of the first item and move down of the last are disabled
-    getListItem(0).find('.card-actions--move-up').should('have.class', 'inactive')
-    getListItem(playlistToSet.length - 1).find('.card-actions--move-down').should('have.class', 'inactive')
+    getListItem(0)
+      .find('.card-actions--move-up')
+      .should('have.class', 'inactive')
+    getListItem(playlistToSet.length - 1)
+      .find('.card-actions--move-down')
+      .should('have.class', 'inactive')
   })
 
   it('User interacts with the playlist properly', () => {
@@ -78,7 +89,7 @@ describe('Player usages', () => {
     getListItem(2).find('.card-header__title').contains(elementsNames[0])
 
     // move up again the element 2, now we have 2, 1, 0
-    getListItem(1).find('.card-actions--move-up').click();
+    getListItem(1).find('.card-actions--move-up').click()
     getListItem(0).find('.card-header__title').contains(elementsNames[2])
     getListItem(1).find('.card-header__title').contains(elementsNames[1])
     getListItem(2).find('.card-header__title').contains(elementsNames[0])
@@ -94,10 +105,10 @@ describe('Player usages', () => {
     cy.get('.player__start button').should('have.not.class', 'inactive')
 
     // play / pause
-    cy.get('.player__playing').should('not.be.visible');
+    cy.get('.player__playing').should('not.be.visible')
     cy.get('.player__start button').click()
     cy.wait(500)
-    cy.get('.player__playing').should('be.visible');
+    cy.get('.player__playing').should('be.visible')
     cy.get('audio').then(($p) => mediaPlays($p, true))
     cy.wait(500)
     cy.get('.player__action__button--pause').click()
@@ -110,6 +121,6 @@ describe('Player usages', () => {
     cy.get('.player__playing .button--close').click()
     cy.get('.feedback-request').contains('How you liked this meditation?')
     cy.get('.player__playing .player__action--stop').click()
-    cy.get('.player__playing').should('not.be.visible');
+    cy.get('.player__playing').should('not.be.visible')
   })
 })

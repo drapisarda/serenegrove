@@ -3,7 +3,7 @@
     <div class="container is-max-desktop">
       {{ formattedTime(currentTime) }}
       <div v-if="showBar" class="routine-timer__bar">
-        <div class="routine-timer__bar-fill" :style="remainingTimeStyle"/>
+        <div class="routine-timer__bar-fill" :style="remainingTimeStyle" />
         <div class="routine-timer__bar-text">
           {{ formattedTime(currentTime) }}
         </div>
@@ -13,64 +13,75 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onUnmounted, watch } from 'vue';
-import { formattedTime } from '@/composables/formattedTime';
+import { ref, computed, onUnmounted, watch } from 'vue'
+import { formattedTime } from '@/composables/formattedTime'
 
-const props = withDefaults(defineProps<{
-  time: number,
-  start: boolean,
-  stop: boolean,
-}>(), {
-  time: 0,
-  start: false,
-  stop: false,
-});
+const props = withDefaults(
+  defineProps<{
+    time: number
+    start: boolean
+    stop: boolean
+  }>(),
+  {
+    time: 0,
+    start: false,
+    stop: false,
+  },
+)
 
-const showBar = false;
+const showBar = false
 
-let intervalId: number | null = null;
-const currentTime = ref(props.time);
-const totalTime = ref(props.time);
+let intervalId: number | null = null
+const currentTime = ref(props.time)
+const totalTime = ref(props.time)
 
 const remainingTimeStyle = computed(() => {
-  return `transform: scaleX(${currentTime.value / totalTime.value});`;
+  return `transform: scaleX(${currentTime.value / totalTime.value});`
 })
 
 const startTimer = () => {
-  if (!window) return;
-  currentTime.value = props.time;
+  if (!window) return
+  currentTime.value = props.time
   intervalId = window.setInterval(() => {
-    if (props.start && currentTime.value > 0) currentTime.value -= 1;
-  }, 1000);
-};
+    if (props.start && currentTime.value > 0) currentTime.value -= 1
+  }, 1000)
+}
 
 const stopTimer = () => {
-  if (!intervalId) return;
+  if (!intervalId) return
 
-  clearInterval(intervalId);
-  intervalId = null;
-};
+  clearInterval(intervalId)
+  intervalId = null
+}
 
-watch(() => props.start, (newVal) => {
-  if (newVal && !intervalId) startTimer();
-});
+watch(
+  () => props.start,
+  (newVal) => {
+    if (newVal && !intervalId) startTimer()
+  },
+)
 
-watch(() => props.stop, (newVal) => {
-  if (newVal) {
-    stopTimer();
-  }
-});
+watch(
+  () => props.stop,
+  (newVal) => {
+    if (newVal) {
+      stopTimer()
+    }
+  },
+)
 
-watch(() => props.time, () => {
-  stopTimer();
-});
+watch(
+  () => props.time,
+  () => {
+    stopTimer()
+  },
+)
 
-onUnmounted(stopTimer);
+onUnmounted(stopTimer)
 </script>
 
-
 <style lang="scss">
-@import "@/style/vars.scss";
+@import '@/style/vars.scss';
 
 .routine-timer {
   text-align: center;
