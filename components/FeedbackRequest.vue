@@ -15,5 +15,5 @@
 </template>
 
 <script lang="ts" setup>
-const { feedback_form } = useRuntimeConfig()
+const { feedback_form } = useRuntimeConfig().public
 </script>
