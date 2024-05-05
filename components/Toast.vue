@@ -18,7 +18,7 @@ const messageClass = ref('');
 const isVisible = ref(false);
 const { toastMessage } = useGlobalStore();
 watch(toastMessage, (newMessage: ToastMessage) => displayMessage(newMessage));
-let displayInterval: NodeJS.Timeout | undefined;
+let displayInterval: number | undefined;
 
 const displayMessage = (newMessage: ToastMessage, duration: number = 3000) => {
   if (displayInterval) {
@@ -30,7 +30,7 @@ const displayMessage = (newMessage: ToastMessage, duration: number = 3000) => {
   message.value = newMessage.message;
   messageClass.value = `is-${newMessage.style ? newMessage.style : 'is-primary'}`;
   isVisible.value = true;
-  displayInterval = setTimeout(function () { isVisible.value = false; }, duration);
+  if (window) displayInterval = window.setTimeout(function () { isVisible.value = false; }, duration);
 }
 </script>
 
