@@ -28,7 +28,7 @@ const props = withDefaults(defineProps<{
 
 const showBar = false;
 
-let intervalId: NodeJS.Timeout | null = null;
+let intervalId: number | null = null;
 const currentTime = ref(props.time);
 const totalTime = ref(props.time);
 
@@ -37,8 +37,9 @@ const remainingTimeStyle = computed(() => {
 })
 
 const startTimer = () => {
+  if (!window) return;
   currentTime.value = props.time;
-  intervalId = setInterval(() => {
+  intervalId = window.setInterval(() => {
     if (props.start && currentTime.value > 0) currentTime.value -= 1;
   }, 1000);
 };
@@ -60,7 +61,7 @@ watch(() => props.stop, (newVal) => {
   }
 });
 
-watch(() => props.time, (newVal) => {
+watch(() => props.time, () => {
   stopTimer();
 });
 
