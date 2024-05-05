@@ -14,7 +14,7 @@
 <script setup lang="ts">
 import LOGOH from '@/src/assets/img/icons/logo_h.svg';
 import LOGO from '@/src/assets/img/icons/logo.svg';
-const props = defineProps({
+defineProps({
   horizontal:{
     type: Boolean,
     default: false

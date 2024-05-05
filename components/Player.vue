@@ -107,7 +107,10 @@ const props = defineProps({
     type: Object as PropType<RoutineTimeVariationType>,
     required: true,
   },
-  duration: Number
+  duration: {
+    type: Number,
+    default: 0
+  }
 })
 
 const currentIndex = ref(-1);
@@ -168,12 +171,12 @@ const playAudioFile = async (fileRelativeUrl: string) => {
 };
 
 // This is for reset or debug purpose
-const audioCacheClean = () => {
-  audioCache.forEach((blob: string, fileName: string) => {
-    URL.revokeObjectURL(blob);
-    audioCache.delete(fileName);
-  })
-}
+// const audioCacheClean = () => {
+//   audioCache.forEach((blob: string, fileName: string) => {
+//     URL.revokeObjectURL(blob);
+//     audioCache.delete(fileName);
+//   })
+// }
 
 const getAudioFileUrl = async (file: string): Promise<string> => {
   if (audioCache.has(file)) {
@@ -194,7 +197,7 @@ const getAudioFileUrl = async (file: string): Promise<string> => {
 
 // TODO: Load also the icons and the full carousel
 const loadAllSteps = async () => {
-  return Promise.all(props.playerSteps.map(async (step: Step, index: number) => {
+  return Promise.all(props.playerSteps.map(async (step: Step) => {
     if (audioCache.has(step.file) || stopStatus.value) {
       return;
     }

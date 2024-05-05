@@ -1,5 +1,6 @@
 import Switch from '@/components/Switch.vue'
 import { mount, type VueWrapper } from '@vue/test-utils'
+import { expect } from 'vitest'
 
 describe('Switch component test', async () => {
   let wrapper: VueWrapper;
@@ -17,8 +18,8 @@ describe('Switch component test', async () => {
   test('Switch emit and checkbox functionality', () => {
     wrapper.find('.toggle-input').trigger('click');
     wrapper.find('.toggle-input').trigger('click');
-    expect(wrapper.emitted().updateModelValue[0][0]).to.eq(!modelValue);
-    expect(wrapper.emitted().updateModelValue[1][0]).to.eq(!!modelValue);
-    expect(wrapper.emitted().updateModelValue.length).to.eq(2);
+    expect(wrapper.emitted().updateModelValue[0][0]).toBe(!modelValue);
+    expect(wrapper.emitted().updateModelValue[1][0]).toBe(!!modelValue);
+    expect(wrapper.emitted().updateModelValue.length).toBe(2);
   })
 })

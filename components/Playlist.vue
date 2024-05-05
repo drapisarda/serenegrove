@@ -36,7 +36,7 @@ const manageTouchStart = (event: TouchEvent) => {
   if (!event.touches || !event.touches[0]) return;
   touchStart = event.touches[0].pageY;
 }
-const manageTouchEnd = (event: TouchEvent) => {
+const manageTouchEnd = () => {
   scrollingDown.value = false;
   if (touchLast - touchStart < scrollDownLimit) return;
   touchLast = 0;

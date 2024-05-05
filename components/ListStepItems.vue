@@ -24,7 +24,7 @@ const add = (step: Step) => {
 }
 
 const routineSteps = ref(getRoutineSteps());
-watch(steps, (newSteps: number[]) => {
+watch(steps, () => {
   routineSteps.value = getRoutineSteps()
 })
 </script>

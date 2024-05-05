@@ -1,4 +1,4 @@
-export function clipHtml(watchable: any) {
+export function clipHtml(watchable: Ref<boolean>) {
   if (typeof watch === 'undefined') return;
   watch(watchable, (newValue) => {
     if (newValue) {

@@ -1,6 +1,6 @@
 <template>
   <div class="toggle-switch">
-    <input class="toggle-input" :checked="modelValue" @click="updateModelValue" :id="id" type="checkbox">
+    <input :id="id" class="toggle-input" :checked="modelValue" type="checkbox" @click="updateModelValue">
     <label class="toggle-label" :for="id"/>
   </div>
 </template>
@@ -18,7 +18,10 @@ defineProps({
 })
 
 const emit = defineEmits(['updateModelValue'])
-const updateModelValue = (event: Event) => emit('updateModelValue', (<HTMLInputElement>event.target).checked)
+const updateModelValue = (event: Event) => {
+  const target = event.target as HTMLInputElement
+  return emit('updateModelValue', target?.checked)
+}
 </script>
 
 <style lang="scss">

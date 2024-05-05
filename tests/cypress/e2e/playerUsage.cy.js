@@ -1,4 +1,6 @@
+/* eslint-disable cypress/no-unnecessary-waiting */
 import { originalState } from '../../../store/vars'
+import { expect } from 'chai'
 
 const { stepsOptions } = originalState
 const mediaPlays = (els, expectation) => {
@@ -24,7 +26,7 @@ describe('Player usages', () => {
     cy.restoreLocalStorage()
     cy.visit('http://localhost:3000')
     cy.contains(' Start now! ').click()
-    cy.wait(500)
+    cy.intercept('/')
   })
 
   afterEach(() => {
@@ -96,7 +98,7 @@ describe('Player usages', () => {
     cy.get('.player__start button').click()
     cy.wait(500)
     cy.get('.player__playing').should('be.visible');
-    cy.get('audio').should(($p) => mediaPlays($p, true))
+    cy.get('audio').then(($p) => mediaPlays($p, true))
     cy.wait(500)
     cy.get('.player__action__button--pause').click()
     cy.get('audio').should(($p) => mediaPlays($p, false))

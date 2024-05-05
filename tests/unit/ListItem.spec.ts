@@ -21,19 +21,19 @@ describe('ListItem component test', async () => {
   })
 
   test('ListItem content', () => {
-    expect(wrapper.find('.card-image icon').attributes().name).toBe(icon);
-    expect(wrapper.find('.card-header__title').text().trim()).toBe(name);
-    expect(wrapper.find('.card-header__duration span').text()).toBe(formattedTime(duration));
+    expect(wrapper.find('.card-image icon').attributes().name).is.eq(icon);
+    expect(wrapper.find('.card-header__title').text().trim()).is.eq(name);
+    expect(wrapper.find('.card-header__duration span').text()).is.eq(formattedTime(duration));
   })
 
   test('List Item event emit', () => {
     wrapper.find('.card-actions--move-up').trigger('click')
-    expect(wrapper.emitted().moveUp.length).toBe(1)
+    expect(wrapper.emitted().moveUp.length).is.eq(1)
 
     wrapper.find('.card-actions--move-down').trigger('click')
-    expect(wrapper.emitted().moveDown.length).toBe(1)
+    expect(wrapper.emitted().moveDown.length).is.eq(1)
 
     wrapper.find('.card-actions--remove').trigger('click')
-    expect(wrapper.emitted().remove.length).toBe(1)
+    expect(wrapper.emitted().remove.length).is.eq(1)
   })
 })

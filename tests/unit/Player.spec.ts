@@ -1,6 +1,7 @@
 import Player from '@/components/Player.vue'
 import { mount, type VueWrapper } from '@vue/test-utils'
 import { originalState, routineTimeVariations } from '@/store/vars'
+import { expect } from 'vitest'
 
 describe('Player component test', async () => {
   let wrapper: VueWrapper;
@@ -34,23 +35,23 @@ describe('Player component test', async () => {
   })
 
   it('Player UI can be opened', () => {
-    expect(wrapper.exists()).toBe(true);
+    expect(wrapper.exists()).is.eq(true);
   })
 
   it('changes UI when "play" button is clicked', async () => {
     await wrapper.vm.$nextTick();
-    expect(wrapper.vm.visibleStatus).toBe(false);
-    expect(wrapper.vm.pauseStatus).toBe(true);
-    expect(wrapper.vm.currentStep).toBeUndefined();
+    expect(wrapper.vm.visibleStatus).is.eq(false);
+    expect(wrapper.vm.pauseStatus).is.eq(true);
+    expect(wrapper.vm.currentStep).toBe(undefined);
 
-    expect(wrapper.vm.play).toBeDefined();
+    expect(wrapper.vm.play).not.toBe(undefined);
     await wrapper.find('.player__start button').trigger('click');
     await wrapper.vm.$nextTick();
 
     /**
      * Possible future implementation: create a testing server to return the mp3 resources,
      * then test the proper loading of the blobs as in Player.vue:getAudioFileUrl
-     * expect(wrapper.vm.audio.src.indexOf('blob')).toBe(0)
+     * expect(wrapper.vm.audio.src.indexOf('blob')).is.eq(0)
     */
 
     expect(wrapper.vm.currentStep).toStrictEqual(playerSteps[0]);
@@ -62,7 +63,7 @@ describe('Player component test', async () => {
     await wrapper.trigger('keyup', { key: 'Escape' });
     await wrapper.vm.$nextTick();
 
-    expect(wrapper.vm.currentStep).toBeUndefined();
+    expect(wrapper.vm.currentStep).toBe(undefined);
     expect(wrapper.vm.visibleStatus).toBe(false);
     expect(wrapper.vm.pauseStatus).toBe(true);
   });

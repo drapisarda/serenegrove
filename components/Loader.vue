@@ -19,8 +19,11 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
-  message: String,
+defineProps({
+  message: {
+    type: String,
+    default: ''
+  },
 });
 </script>
 
