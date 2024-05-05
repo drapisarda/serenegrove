@@ -119,7 +119,7 @@ clipHtml(visibleStatus);
 
 const askFeedback = ref(false);
 const askDuration = ref(false);
-const activeStatus = computed((): boolean => !props.disable && visibleStatus.value);
+const activeStatus = computed((): boolean => !props.disabled && visibleStatus.value);
 
 const audio = ref<HTMLAudioElement>();
 const audioUrl = ref<string | null>(null);
