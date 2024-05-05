@@ -5,7 +5,7 @@
         <Clock /> <span>{{ displayDuration }}</span>
       </div>
       <div class="col col-xs-3 player-bar__button">
-        <Player :player-steps="playerSteps" :routine-variation="routineVariation" :duration="duration" :disable="disable">
+        <Player :player-steps="playerSteps" :routine-variation="routineVariation" :duration="duration" :disabled="disabled">
           <template #play-button>
             <Play />
           </template>
@@ -38,7 +38,7 @@ const props = defineProps({
     type: Object as PropType<Step[]>,
     required: true,
   },
-  disable: {
+  disabled: {
     type: Boolean,
     default: false,
   },

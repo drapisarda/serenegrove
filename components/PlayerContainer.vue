@@ -1,6 +1,6 @@
 <template>
   <PlayerBar 
-    :player-steps="playerSteps" :duration="duration" 
+    :player-steps="playerSteps" :duration="duration" :disabled="disabled"
     @update-model-value="updateRoutineVariation"
   />
 </template>
@@ -8,13 +8,13 @@
 import { useRoutineStore } from "@/store/routine";
 const { steps, setRoutineVariation, getRoutineDuration, getPlayerSteps, getRoutineSteps } = useRoutineStore()
 const playerSteps = ref(getPlayerSteps());
-const disable = ref(getRoutineSteps().length === 0);
+const disabled = ref(getRoutineSteps().length === 0);
 const duration = ref(getRoutineDuration());
 
 watch(steps, () => {
   playerSteps.value = getPlayerSteps();
   duration.value = getRoutineDuration();
-  disable.value = getRoutineSteps().length === 0;
+  disabled.value = getRoutineSteps().length === 0;
 })
 
 const updateRoutineVariation = (newExtendedVariation: boolean) => {

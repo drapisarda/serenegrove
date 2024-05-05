@@ -63,9 +63,9 @@ v-show="visibleStatus" class="player__playing"
         <template #fallback/>
         <div class="player__start is-centered">
           <div class="player__action">
-            <button class="button is-primary" :class="{ 'inactive': disable }" @click="display">
+            <button class="button is-primary" :class="{ 'inactive': disabled }" @click="display">
               <slot name="play-button">
-                <span v-if="disable">
+                <span v-if="disabled">
                   Add one step to start your routine
                 </span>
                 <template v-else>
@@ -99,7 +99,7 @@ const props = defineProps({
     type: Object as PropType<Step[]>,
     required: true,
   },
-  disable: {
+  disabled: {
     type: Boolean,
     default: false,
   },
