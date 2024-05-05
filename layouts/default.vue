@@ -3,8 +3,7 @@
     <Navigation />
   </header>
   <div class="page-content">
-    <NuxtPage />
+    <slot />
   </div>
   <Footer />
-  <Toast />
 </template>

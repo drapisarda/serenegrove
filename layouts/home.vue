@@ -3,5 +3,4 @@
     <slot />
   </div>
   <Footer />
-  <Toast />
 </template>
