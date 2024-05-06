@@ -2,12 +2,20 @@
   <div
     class="playlist"
     :class="{ open: routineOpen, 'scrolling-down': scrollingDown }"
+    role="button"
+    tabindex="0"
     @touchstart.self="manageTouchStart($event)"
-    @touchend.self="manageTouchEnd($event)"
+    @touchend.self="manageTouchEnd()"
     @touchmove.self="manageTouchMove"
     @drag.self="manageDrag"
   >
-    <div class="playlist__toggle" @click="routineToggle">
+    <div
+      class="playlist__toggle"
+      role="button"
+      tabindex="0"
+      @keydown="routineToggle"
+      @click="routineToggle"
+    >
       <DownShevron v-if="routineOpen" />
       <UpShevron v-else />
     </div>

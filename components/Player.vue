@@ -1,8 +1,10 @@
+<!-- eslint-disable vuejs-accessibility/media-has-caption -->
 <template>
   <div
     class="player"
     :class="{ 'player--loaded': loadedStatus }"
     tabindex="0"
+    role="button"
     @keyup="handleKeys"
   >
     <Transition>

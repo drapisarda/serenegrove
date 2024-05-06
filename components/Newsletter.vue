@@ -12,16 +12,16 @@
         <div class="mc-field-group field">
           <p>
             <label class="label" for="mce-EMAIL"
-              >Email Address<span class="asterisk">*</span></label
-            >
-            <input
-              id="mce-EMAIL"
-              class="input required email"
-              type="email"
-              value=""
-              name="EMAIL"
-              required
-            />
+              >Email Address<span class="asterisk">*</span> <br />
+              <input
+                id="mce-EMAIL"
+                class="input required email"
+                type="email"
+                value=""
+                name="EMAIL"
+                required
+              />
+            </label>
           </p>
         </div>
         <div id="mce-responses" class="clear foot">

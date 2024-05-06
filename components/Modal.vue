@@ -1,5 +1,5 @@
 <template>
-  <div class="modal" @keyup="handleKeys">
+  <div class="modal" role="button" tabindex="0" @keyup="handleKeys">
     <div class="modal__button">
       <button class="button is-primary" @click="openModal">
         <slot name="button-text">Open Modal</slot>

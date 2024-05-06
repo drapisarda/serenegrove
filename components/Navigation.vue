@@ -1,7 +1,11 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item navbar-item--logo" href="/">
+      <a
+        class="navbar-item navbar-item--logo"
+        href="/"
+        aria-label="SereneGrove"
+      >
         <Logo :horizontal="true" />
       </a>
     </div>
@@ -13,6 +17,7 @@
         aria-label="menu"
         aria-expanded="false"
         tabindex="0"
+        @keyup="toggleMenu"
         @click="toggleMenu"
       >
         <span aria-hidden="true" />

@@ -1,13 +1,14 @@
 <template>
   <div class="toggle-switch">
-    <input
-      :id="id"
-      class="toggle-input"
-      :checked="modelValue"
-      type="checkbox"
-      @click="updateModelValue"
-    />
-    <label class="toggle-label" :for="id" />
+    <label class="toggle-label" :for="id">
+      <input
+        :id="id"
+        class="toggle-input"
+        :checked="modelValue"
+        type="checkbox"
+        @click="updateModelValue"
+      />
+    </label>
   </div>
 </template>
 
@@ -69,7 +70,7 @@ const updateModelValue = (event: Event) => {
     }
   }
 
-  .toggle-input:checked + .toggle-label {
+  .toggle-label:has(.toggle-input:checked) {
     background-color: #4caf50;
 
     &::before {
@@ -82,7 +83,7 @@ const updateModelValue = (event: Event) => {
       background-color: #bebebe;
     }
 
-    .toggle-input:checked + .toggle-label {
+    .toggle-label:has(.toggle-input:checked) {
       background-color: #9b9b9b;
 
       &::before {
@@ -96,7 +97,7 @@ const updateModelValue = (event: Event) => {
       background-color: #4b4b4b;
     }
 
-    .toggle-input:checked + .toggle-label {
+    .toggle-label:has(.toggle-input:checked) {
       background-color: #717171;
 
       &::before {

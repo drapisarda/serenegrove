@@ -5,7 +5,7 @@ import pluginVue from 'eslint-plugin-vue'
 import withNuxt from './.nuxt/eslint.config.mjs'
 import pluginJest from 'eslint-plugin-jest'
 import { FlatCompat } from '@eslint/eslintrc'
-// import prettier from "prettier"
+import pluginVueA11y from 'eslint-plugin-vuejs-accessibility'
 
 const compat = new FlatCompat()
 
@@ -14,8 +14,10 @@ export default withNuxt([
   ...tseslint.configs.recommended,
   ...pluginVue.configs['flat/essential'],
   pluginJest.configs.recommended['flat/recommended'],
+  ...pluginVueA11y.configs['flat/recommended'],
   ...compat.config({
     extends: [
+      'plugin:vue/vue3-essential',
       'plugin:cypress/recommended',
       'plugin:prettier/recommended',
       'prettier',
