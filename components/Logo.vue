@@ -5,8 +5,8 @@
       <LOGOH />
     </template>
     <template v-else>
-      <LOGO v-if="!horizontal" />
-      <LOGO v-if="!horizontal" />
+      <LOGO />
+      <LOGO />
     </template>
   </div>
 </template>

@@ -17,7 +17,7 @@
   </slot>
 </template>
 
-<script lang="ts"></script>
+<script lang="ts" setup></script>
 
 <style lang="scss">
 @import '@/style/vars.scss';
