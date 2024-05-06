@@ -59,12 +59,19 @@ describe('Player component test', async () => {
     expect(wrapper.vm.pauseStatus).toBe(false)
   })
 
-  it('stops or closes when "Escape" key is pressed', async () => {
+  it('stops when "Escape" key is pressed. Closes when it is pressed again', async () => {
+    await wrapper.find('.player__start button').trigger('click')
+    await wrapper.vm.$nextTick()
+    expect(wrapper.vm.pauseStatus).toBe(false)
+
     await wrapper.trigger('keyup', { key: 'Escape' })
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.vm.currentStep).toBe(undefined)
-    expect(wrapper.vm.visibleStatus).toBe(false)
     expect(wrapper.vm.pauseStatus).toBe(true)
+
+    await wrapper.trigger('keyup', { key: 'Escape' })
+    await wrapper.vm.$nextTick()
+
+    expect(wrapper.vm.visibleStatus).toBe(false)
   })
 })
