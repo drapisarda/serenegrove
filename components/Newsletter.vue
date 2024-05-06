@@ -75,6 +75,8 @@
 </template>
 
 <script lang="ts" setup>
+import { useHead } from '@unhead/vue'
+
 useHead({
   script: [
     {
@@ -89,6 +91,7 @@ useHead({
 <style lang="scss">
 .mc-field-group {
   flex-wrap: wrap;
+
   .input {
     flex: 1;
     max-width: 40em;

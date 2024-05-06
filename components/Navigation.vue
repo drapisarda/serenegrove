@@ -61,6 +61,7 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
 import CloseIcon from '@/src/assets/img/icons/close.svg'
 const menuIsOpen = ref(false)
 

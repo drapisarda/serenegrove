@@ -15,5 +15,6 @@
 </template>
 
 <script lang="ts" setup>
+import { useRuntimeConfig } from '#imports'
 const { feedback_form } = useRuntimeConfig().public
 </script>
