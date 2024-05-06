@@ -35,13 +35,13 @@ describe('Player component test', async () => {
   })
 
   it('Player UI can be opened', () => {
-    expect(wrapper.exists()).is.eq(true)
+    expect(wrapper.exists()).toBe(true)
   })
 
   it('changes UI when "play" button is clicked', async () => {
     await wrapper.vm.$nextTick()
-    expect(wrapper.vm.visibleStatus).is.eq(false)
-    expect(wrapper.vm.pauseStatus).is.eq(true)
+    expect(wrapper.vm.visibleStatus).toBe(false)
+    expect(wrapper.vm.pauseStatus).toBe(true)
     expect(wrapper.vm.currentStep).toBe(undefined)
 
     expect(wrapper.vm.play).not.toBe(undefined)
@@ -51,7 +51,7 @@ describe('Player component test', async () => {
     /**
      * Possible future implementation: create a testing server to return the mp3 resources,
      * then test the proper loading of the blobs as in Player.vue:getAudioFileUrl
-     * expect(wrapper.vm.audio.src.indexOf('blob')).is.eq(0)
+     * expect(wrapper.vm.audio.src.indexOf('blob')).toBe(0)
      */
 
     expect(wrapper.vm.currentStep).toStrictEqual(playerSteps[0])
