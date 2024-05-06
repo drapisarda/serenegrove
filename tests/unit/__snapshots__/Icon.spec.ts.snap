@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Components mount > Icon mount 1`] = `
+exports[`Components mount > Icons mount Bell sound 1`] = `
 VueWrapper {
   "__app": {
     "_component": {
@@ -459,7 +459,7 @@ VueWrapper {
             "__file": "/Users/danielerapisarda/projects/serenegrove/components/Icon.vue",
             "__name": "Icon",
             "components": {},
-            "name": "breath",
+            "name": "bell",
             "props": {
               "name": {
                 "required": true,
@@ -470,7 +470,7 @@ VueWrapper {
             "setup": [Function],
           },
           "u": null,
-          "uid": 1,
+          "uid": 9,
           "um": null,
           "update": [Function],
           "vnode": [Circular],
@@ -506,7 +506,7 @@ VueWrapper {
           "__file": "/Users/danielerapisarda/projects/serenegrove/components/Icon.vue",
           "__name": "Icon",
           "components": {},
-          "name": "breath",
+          "name": "bell",
           "props": {
             "name": {
               "required": true,
@@ -525,7 +525,7 @@ VueWrapper {
         "setup": [Function],
       },
       "u": null,
-      "uid": 0,
+      "uid": 8,
       "um": null,
       "update": [Function],
       "vnode": {
@@ -593,7 +593,7 @@ VueWrapper {
       "withProxy": null,
     },
     "_props": null,
-    "_uid": 0,
+    "_uid": 4,
     "component": [Function],
     "config": {
       "compilerOptions": {},
@@ -624,631 +624,7 @@ VueWrapper {
 }
 `;
 
-exports[`Components mount > Icons mount 1`] = `
-VueWrapper {
-  "__app": {
-    "_component": {
-      "name": "VTU_ROOT",
-      "render": [Function],
-      "setup": [Function],
-    },
-    "_container": <div
-      data-v-app=""
-    >
-      <!---->
-    </div>,
-    "_context": {
-      "app": [Circular],
-      "components": {
-        "transition": {
-          "name": "transition",
-        },
-        "transition-group": {
-          "name": "transition-group",
-        },
-      },
-      "config": {
-        "compilerOptions": {},
-        "errorHandler": undefined,
-        "globalProperties": {},
-        "isNativeTag": [Function],
-        "optionMergeStrategies": {},
-        "performance": false,
-        "warnHandler": undefined,
-      },
-      "directives": {},
-      "emitsCache": WeakMap {},
-      "mixins": [
-        {
-          "beforeCreate": [Function],
-        },
-      ],
-      "optionsCache": WeakMap {},
-      "propsCache": WeakMap {},
-      "provides": {},
-      "reload": [Function],
-    },
-    "_instance": {
-      "a": null,
-      "accessCache": {},
-      "appContext": {
-        "app": [Circular],
-        "components": {
-          "transition": {
-            "name": "transition",
-          },
-          "transition-group": {
-            "name": "transition-group",
-          },
-        },
-        "config": {
-          "compilerOptions": {},
-          "errorHandler": undefined,
-          "globalProperties": {},
-          "isNativeTag": [Function],
-          "optionMergeStrategies": {},
-          "performance": false,
-          "warnHandler": undefined,
-        },
-        "directives": {},
-        "emitsCache": WeakMap {},
-        "mixins": [
-          {
-            "beforeCreate": [Function],
-          },
-        ],
-        "optionsCache": WeakMap {},
-        "propsCache": WeakMap {},
-        "provides": {},
-        "reload": [Function],
-      },
-      "asyncDep": null,
-      "asyncResolved": false,
-      "attrs": {},
-      "attrsProxy": null,
-      "bc": null,
-      "bm": null,
-      "bu": null,
-      "bum": null,
-      "c": null,
-      "components": null,
-      "ctx": {
-        "VTU_COMPONENT": {},
-      },
-      "da": null,
-      "data": {},
-      "devtoolsRawSetupState": {
-        "VTU_COMPONENT": RefImpl {
-          "__v_isRef": true,
-          "__v_isShallow": false,
-          "_rawValue": {},
-          "_value": {},
-          "dep": undefined,
-        },
-      },
-      "directives": null,
-      "ec": null,
-      "effect": ReactiveEffect {
-        "active": true,
-        "allowRecurse": true,
-        "deps": [
-          Set {
-            [Circular],
-          },
-          Set {
-            [Circular],
-          },
-          Set {
-            [Circular],
-          },
-        ],
-        "fn": [Function],
-        "onTrack": undefined,
-        "onTrigger": undefined,
-        "parent": undefined,
-        "scheduler": [Function],
-      },
-      "emit": [Function],
-      "emitsOptions": null,
-      "emitted": null,
-      "exposeProxy": null,
-      "exposed": null,
-      "inheritAttrs": undefined,
-      "isDeactivated": false,
-      "isMounted": true,
-      "isUnmounted": false,
-      "m": null,
-      "next": null,
-      "parent": null,
-      "props": {},
-      "propsDefaults": {},
-      "propsOptions": [
-        {},
-        [],
-      ],
-      "provides": {},
-      "proxy": {
-        "VTU_COMPONENT": {},
-      },
-      "refs": {
-        "VTU_COMPONENT": {},
-      },
-      "render": [Function],
-      "renderCache": [],
-      "root": [Circular],
-      "rtc": null,
-      "rtg": null,
-      "scope": EffectScope {
-        "_active": true,
-        "cleanups": [],
-        "detached": true,
-        "effects": [
-          ReactiveEffect {
-            "active": true,
-            "allowRecurse": true,
-            "deps": [
-              Set {
-                [Circular],
-              },
-              Set {
-                [Circular],
-              },
-              Set {
-                [Circular],
-              },
-            ],
-            "fn": [Function],
-            "onTrack": undefined,
-            "onTrigger": undefined,
-            "parent": undefined,
-            "scheduler": [Function],
-          },
-        ],
-        "parent": undefined,
-      },
-      "setupContext": null,
-      "setupState": {
-        "VTU_COMPONENT": {},
-      },
-      "slots": {},
-      "slotsProxy": null,
-      "sp": null,
-      "subTree": {
-        "__v_isVNode": true,
-        "__v_skip": true,
-        "anchor": null,
-        "appContext": null,
-        "children": null,
-        "component": {
-          "a": null,
-          "accessCache": {},
-          "appContext": {
-            "app": [Circular],
-            "components": {
-              "transition": {
-                "name": "transition",
-              },
-              "transition-group": {
-                "name": "transition-group",
-              },
-            },
-            "config": {
-              "compilerOptions": {},
-              "errorHandler": undefined,
-              "globalProperties": {},
-              "isNativeTag": [Function],
-              "optionMergeStrategies": {},
-              "performance": false,
-              "warnHandler": undefined,
-            },
-            "directives": {},
-            "emitsCache": WeakMap {},
-            "mixins": [
-              {
-                "beforeCreate": [Function],
-              },
-            ],
-            "optionsCache": WeakMap {},
-            "propsCache": WeakMap {},
-            "provides": {},
-            "reload": [Function],
-          },
-          "asyncDep": null,
-          "asyncResolved": false,
-          "attrs": {},
-          "attrsProxy": null,
-          "bc": null,
-          "bm": null,
-          "bu": null,
-          "bum": null,
-          "c": null,
-          "components": {},
-          "ctx": {
-            "name": undefined,
-          },
-          "da": null,
-          "data": {},
-          "devtoolsRawSetupState": {
-            "computed": [Function],
-            "icon": ComputedRefImpl {
-              "__v_isReadonly": true,
-              "__v_isRef": true,
-              "_cacheable": true,
-              "_dirty": false,
-              "_setter": [Function],
-              "_value": undefined,
-              "dep": Set {
-                ReactiveEffect {
-                  "active": true,
-                  "allowRecurse": true,
-                  "deps": [
-                    [Circular],
-                  ],
-                  "fn": [Function],
-                  "onTrack": undefined,
-                  "onTrigger": undefined,
-                  "parent": undefined,
-                  "scheduler": [Function],
-                },
-              },
-              "effect": ReactiveEffect {
-                "active": true,
-                "computed": [Circular],
-                "deps": [
-                  Set {
-                    [Circular],
-                  },
-                ],
-                "fn": [Function],
-                "parent": undefined,
-                "scheduler": [Function],
-              },
-            },
-            "icons": {
-              "bell": "/src/assets/img/icons/001-standing-bell.svg",
-              "body": "/src/assets/img/icons/003-meditation.svg",
-              "breath": "/src/assets/img/icons/005-breath.svg",
-              "logoOnly": "/src/assets/img/icons/logo_only.svg",
-              "mantra": "/src/assets/img/icons/002-shree.svg",
-              "sounds": "/src/assets/img/icons/004-landscape.svg",
-            },
-            "props": {
-              "name": undefined,
-            },
-          },
-          "directives": null,
-          "ec": null,
-          "effect": ReactiveEffect {
-            "active": true,
-            "allowRecurse": true,
-            "deps": [
-              Set {
-                [Circular],
-              },
-            ],
-            "fn": [Function],
-            "onTrack": undefined,
-            "onTrigger": undefined,
-            "parent": undefined,
-            "scheduler": [Function],
-          },
-          "emit": [Function],
-          "emitsOptions": null,
-          "emitted": null,
-          "exposeProxy": {},
-          "exposed": {},
-          "inheritAttrs": undefined,
-          "isDeactivated": false,
-          "isMounted": true,
-          "isUnmounted": false,
-          "m": null,
-          "next": null,
-          "parent": [Circular],
-          "props": {
-            "name": undefined,
-          },
-          "propsDefaults": {},
-          "propsOptions": [
-            {
-              "name": {
-                "0": false,
-                "1": true,
-                "required": true,
-                "type": [Function],
-              },
-            },
-            [],
-          ],
-          "provides": {},
-          "proxy": {
-            "name": undefined,
-          },
-          "refs": {},
-          "render": [Function],
-          "renderCache": [],
-          "root": [Circular],
-          "rtc": null,
-          "rtg": null,
-          "scope": EffectScope {
-            "_active": true,
-            "cleanups": [],
-            "detached": true,
-            "effects": [
-              ReactiveEffect {
-                "active": true,
-                "computed": ComputedRefImpl {
-                  "__v_isReadonly": true,
-                  "__v_isRef": true,
-                  "_cacheable": true,
-                  "_dirty": false,
-                  "_setter": [Function],
-                  "_value": undefined,
-                  "dep": Set {
-                    ReactiveEffect {
-                      "active": true,
-                      "allowRecurse": true,
-                      "deps": [
-                        [Circular],
-                      ],
-                      "fn": [Function],
-                      "onTrack": undefined,
-                      "onTrigger": undefined,
-                      "parent": undefined,
-                      "scheduler": [Function],
-                    },
-                  },
-                  "effect": [Circular],
-                },
-                "deps": [
-                  Set {
-                    [Circular],
-                  },
-                ],
-                "fn": [Function],
-                "parent": undefined,
-                "scheduler": [Function],
-              },
-              ReactiveEffect {
-                "active": true,
-                "allowRecurse": true,
-                "deps": [
-                  Set {
-                    [Circular],
-                  },
-                ],
-                "fn": [Function],
-                "onTrack": undefined,
-                "onTrigger": undefined,
-                "parent": undefined,
-                "scheduler": [Function],
-              },
-            ],
-            "parent": undefined,
-          },
-          "setupContext": {
-            "attrs": {},
-            "emit": [Function],
-            "expose": [Function],
-            "slots": {},
-          },
-          "setupState": {
-            "computed": [Function],
-            "icon": undefined,
-            "icons": {
-              "bell": "/src/assets/img/icons/001-standing-bell.svg",
-              "body": "/src/assets/img/icons/003-meditation.svg",
-              "breath": "/src/assets/img/icons/005-breath.svg",
-              "logoOnly": "/src/assets/img/icons/logo_only.svg",
-              "mantra": "/src/assets/img/icons/002-shree.svg",
-              "sounds": "/src/assets/img/icons/004-landscape.svg",
-            },
-            "props": {
-              "name": undefined,
-            },
-          },
-          "slots": {},
-          "slotsProxy": {},
-          "sp": null,
-          "subTree": {
-            "__v_isVNode": true,
-            "__v_skip": true,
-            "anchor": null,
-            "appContext": null,
-            "children": null,
-            "component": null,
-            "ctx": [Circular],
-            "dirs": null,
-            "dynamicChildren": [],
-            "dynamicProps": null,
-            "el": <!---->,
-            "key": null,
-            "patchFlag": 0,
-            "props": null,
-            "ref": null,
-            "scopeId": null,
-            "shapeFlag": 0,
-            "slotScopeIds": null,
-            "ssContent": null,
-            "ssFallback": null,
-            "staticCount": 0,
-            "suspense": null,
-            "target": null,
-            "targetAnchor": null,
-            "transition": null,
-            "type": Symbol(v-cmt),
-          },
-          "suspense": null,
-          "suspenseId": 0,
-          "type": {
-            "__file": "/Users/danielerapisarda/projects/serenegrove/components/Icon.vue",
-            "__name": "Icon",
-            "components": {},
-            "name": "breath",
-            "props": {
-              "name": {
-                "required": true,
-                "type": [Function],
-              },
-            },
-            "render": [Function],
-            "setup": [Function],
-          },
-          "u": null,
-          "uid": 1,
-          "um": null,
-          "update": [Function],
-          "vnode": [Circular],
-          "withProxy": null,
-        },
-        "ctx": [Circular],
-        "dirs": null,
-        "dynamicChildren": null,
-        "dynamicProps": null,
-        "el": <!---->,
-        "key": null,
-        "patchFlag": 0,
-        "props": {
-          "ref": "VTU_COMPONENT",
-        },
-        "ref": {
-          "f": false,
-          "i": [Circular],
-          "k": undefined,
-          "r": "VTU_COMPONENT",
-        },
-        "scopeId": null,
-        "shapeFlag": 4,
-        "slotScopeIds": null,
-        "ssContent": null,
-        "ssFallback": null,
-        "staticCount": 0,
-        "suspense": null,
-        "target": null,
-        "targetAnchor": null,
-        "transition": null,
-        "type": {
-          "__file": "/Users/danielerapisarda/projects/serenegrove/components/Icon.vue",
-          "__name": "Icon",
-          "components": {},
-          "name": "breath",
-          "props": {
-            "name": {
-              "required": true,
-              "type": [Function],
-            },
-          },
-          "render": [Function],
-          "setup": [Function],
-        },
-      },
-      "suspense": null,
-      "suspenseId": 0,
-      "type": {
-        "name": "VTU_ROOT",
-        "render": [Function],
-        "setup": [Function],
-      },
-      "u": null,
-      "uid": 0,
-      "um": null,
-      "update": [Function],
-      "vnode": {
-        "__v_isVNode": true,
-        "__v_skip": true,
-        "anchor": null,
-        "appContext": {
-          "app": [Circular],
-          "components": {
-            "transition": {
-              "name": "transition",
-            },
-            "transition-group": {
-              "name": "transition-group",
-            },
-          },
-          "config": {
-            "compilerOptions": {},
-            "errorHandler": undefined,
-            "globalProperties": {},
-            "isNativeTag": [Function],
-            "optionMergeStrategies": {},
-            "performance": false,
-            "warnHandler": undefined,
-          },
-          "directives": {},
-          "emitsCache": WeakMap {},
-          "mixins": [
-            {
-              "beforeCreate": [Function],
-            },
-          ],
-          "optionsCache": WeakMap {},
-          "propsCache": WeakMap {},
-          "provides": {},
-          "reload": [Function],
-        },
-        "children": null,
-        "component": [Circular],
-        "ctx": null,
-        "dirs": null,
-        "dynamicChildren": null,
-        "dynamicProps": null,
-        "el": <!---->,
-        "key": null,
-        "patchFlag": 0,
-        "props": null,
-        "ref": null,
-        "scopeId": null,
-        "shapeFlag": 4,
-        "slotScopeIds": null,
-        "ssContent": null,
-        "ssFallback": null,
-        "staticCount": 0,
-        "suspense": null,
-        "target": null,
-        "targetAnchor": null,
-        "transition": null,
-        "type": {
-          "name": "VTU_ROOT",
-          "render": [Function],
-          "setup": [Function],
-        },
-      },
-      "withProxy": null,
-    },
-    "_props": null,
-    "_uid": 0,
-    "component": [Function],
-    "config": {
-      "compilerOptions": {},
-      "errorHandler": undefined,
-      "globalProperties": {},
-      "isNativeTag": [Function],
-      "optionMergeStrategies": {},
-      "performance": false,
-      "warnHandler": undefined,
-    },
-    "directive": [Function],
-    "mixin": [Function],
-    "mount": [Function],
-    "provide": [Function],
-    "runWithContext": [Function],
-    "unmount": [Function],
-    "use": [Function],
-    "version": "3.3.11",
-  },
-  "__setProps": [Function],
-  "cleanUpCallbacks": [],
-  "componentVM": {},
-  "isDisabled": [Function],
-  "rootVM": {
-    "VTU_COMPONENT": {},
-  },
-  "wrapperElement": <!---->,
-}
-`;
-
-exports[`Components mount > Icons mount 2`] = `
+exports[`Components mount > Icons mount Body scan 1`] = `
 VueWrapper {
   "__app": {
     "_component": {
@@ -1872,7 +1248,7 @@ VueWrapper {
 }
 `;
 
-exports[`Components mount > Icons mount 3`] = `
+exports[`Components mount > Icons mount Breath 1`] = `
 VueWrapper {
   "__app": {
     "_component": {
@@ -2331,7 +1707,7 @@ VueWrapper {
             "__file": "/Users/danielerapisarda/projects/serenegrove/components/Icon.vue",
             "__name": "Icon",
             "components": {},
-            "name": "sounds",
+            "name": "breath",
             "props": {
               "name": {
                 "required": true,
@@ -2342,7 +1718,7 @@ VueWrapper {
             "setup": [Function],
           },
           "u": null,
-          "uid": 5,
+          "uid": 1,
           "um": null,
           "update": [Function],
           "vnode": [Circular],
@@ -2378,7 +1754,7 @@ VueWrapper {
           "__file": "/Users/danielerapisarda/projects/serenegrove/components/Icon.vue",
           "__name": "Icon",
           "components": {},
-          "name": "sounds",
+          "name": "breath",
           "props": {
             "name": {
               "required": true,
@@ -2397,7 +1773,7 @@ VueWrapper {
         "setup": [Function],
       },
       "u": null,
-      "uid": 4,
+      "uid": 0,
       "um": null,
       "update": [Function],
       "vnode": {
@@ -2465,7 +1841,7 @@ VueWrapper {
       "withProxy": null,
     },
     "_props": null,
-    "_uid": 2,
+    "_uid": 0,
     "component": [Function],
     "config": {
       "compilerOptions": {},
@@ -2496,7 +1872,7 @@ VueWrapper {
 }
 `;
 
-exports[`Components mount > Icons mount 4`] = `
+exports[`Components mount > Icons mount Mantra 1`] = `
 VueWrapper {
   "__app": {
     "_component": {
@@ -3120,7 +2496,7 @@ VueWrapper {
 }
 `;
 
-exports[`Components mount > Icons mount 5`] = `
+exports[`Components mount > Icons mount Sounds 1`] = `
 VueWrapper {
   "__app": {
     "_component": {
@@ -3579,7 +2955,7 @@ VueWrapper {
             "__file": "/Users/danielerapisarda/projects/serenegrove/components/Icon.vue",
             "__name": "Icon",
             "components": {},
-            "name": "bell",
+            "name": "sounds",
             "props": {
               "name": {
                 "required": true,
@@ -3590,7 +2966,7 @@ VueWrapper {
             "setup": [Function],
           },
           "u": null,
-          "uid": 9,
+          "uid": 5,
           "um": null,
           "update": [Function],
           "vnode": [Circular],
@@ -3626,7 +3002,7 @@ VueWrapper {
           "__file": "/Users/danielerapisarda/projects/serenegrove/components/Icon.vue",
           "__name": "Icon",
           "components": {},
-          "name": "bell",
+          "name": "sounds",
           "props": {
             "name": {
               "required": true,
@@ -3645,7 +3021,7 @@ VueWrapper {
         "setup": [Function],
       },
       "u": null,
-      "uid": 8,
+      "uid": 4,
       "um": null,
       "update": [Function],
       "vnode": {
@@ -3713,7 +3089,7 @@ VueWrapper {
       "withProxy": null,
     },
     "_props": null,
-    "_uid": 4,
+    "_uid": 2,
     "component": [Function],
     "config": {
       "compilerOptions": {},

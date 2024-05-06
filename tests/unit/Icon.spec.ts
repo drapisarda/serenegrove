@@ -4,8 +4,8 @@ import { mount } from '@vue/test-utils'
 import { expect } from 'vitest'
 
 describe('Components mount', () => {
-  test('Icons mount', () => {
-    originalState.stepsOptions.forEach((step) => {
+  originalState.stepsOptions.forEach((step) => {
+    test(`Icons mount ${step.name}`, () => {
       const wrapper = mount(Icon, {
         name: step.icon,
       })
