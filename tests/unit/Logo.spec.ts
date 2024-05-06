@@ -1,15 +1,15 @@
 import Logo from '@/components/Logo.vue'
 import { mount } from '@vue/test-utils'
-import { expect, it } from 'vitest'
+import { expect } from 'vitest'
 
 describe('Components mount', () => {
-  it('Standard Logo mount', () => {
+  test('Standard Logo mount', () => {
     const wrapper = mount(Logo, {})
 
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('Horizontal Logo mount', () => {
+  test('Horizontal Logo mount', () => {
     const wrapper = mount(Logo, {
       props: {
         horizontal: true,
