@@ -17,7 +17,7 @@
           class="card-header-icon card-actions--move-up"
           :class="{ inactive: isFirst }"
           aria-label="move up"
-          @click="$emit('moveUp', index)"
+          @click="moveUp"
         >
           <UpShevron />
         </button>
@@ -25,7 +25,7 @@
           class="card-header-icon card-actions--move-down"
           :class="{ inactive: isLast }"
           aria-label="move down"
-          @click="$emit('moveDown', index)"
+          @click="moveDown"
         >
           <DownShevron />
         </button>
@@ -49,8 +49,7 @@ import Clock from '@/src/assets/img/icons/clock.svg'
 import { formattedTime } from '@/composables/formattedTime'
 import { type Step } from '@/store/types'
 
-// TODO use step
-defineProps({
+const props = defineProps({
   step: {
     type: Object as PropType<Step>,
     required: true,
@@ -69,11 +68,21 @@ defineProps({
   },
 })
 
-defineEmits({
+const emit = defineEmits({
   moveUp: null,
   moveDown: null,
   remove: null,
 })
+
+const moveUp = () => {
+  if (props.isFirst) return
+  emit('moveUp', props.index)
+}
+
+const moveDown = () => {
+  if (props.isLast) return
+  emit('moveDown', props.index)
+}
 </script>
 
 <style lang="scss">
