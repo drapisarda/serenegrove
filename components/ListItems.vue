@@ -11,8 +11,8 @@
         :index="index"
         :is-first="index === 0"
         :is-last="index === routineSteps.length - 1"
-        @move-up="moveUp"
-        @move-down="moveDown"
+        @move-up="moveUp(index)"
+        @move-down="moveDown(index)"
         @remove="remove"
       />
     </ul>
@@ -23,26 +23,24 @@
 import { useRoutineStore } from '@/store/routine'
 import { useGlobalStore } from '@/store/global'
 import { ToastStyles } from '@/store/types'
-import { ref, watch } from 'vue'
+import { computed } from 'vue'
+import ListItem from '@/components/ListItem.vue'
 
-const { steps, getRoutineSteps, moveStep, removeStep } = useRoutineStore()
+const { getRoutineSteps, moveStep, removeStep } = useRoutineStore()
 
 const { setToastMessage } = useGlobalStore()
 
-const moveUp = (e: number) => moveStep(e, -1)
-const moveDown = (e: number) => moveStep(e, 1)
-const remove = (e: { id: number; name: string }) => {
-  removeStep(e.id)
+const moveUp = (index: number) => moveStep(index, -1)
+const moveDown = (index: number) => moveStep(index, 1)
+const remove = (e: { index: number; name: string }) => {
+  removeStep(e.index)
   setToastMessage(
     `Step "${e.name}" removed from the routine`,
     ToastStyles.Warning,
   )
 }
 
-const routineSteps = ref(getRoutineSteps())
-watch(steps, () => {
-  routineSteps.value = getRoutineSteps()
-})
+const routineSteps = computed(() => getRoutineSteps())
 </script>
 
 <style lang="scss">
