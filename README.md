@@ -22,6 +22,8 @@ To run it locally you want to:
 * run `npm run dev` so see the project running live on your machine.
 * visit [http://localhost:3000](http://localhost:3000) on your browser
 
+## Generate
+This is supposed to be a static website. To generate the proper files run `npm run generate`. You'll find them in `./output/public/` .
 
 ## Credits
 ### Voice
