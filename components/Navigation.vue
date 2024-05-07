@@ -17,8 +17,8 @@
         aria-label="menu"
         aria-expanded="false"
         tabindex="0"
-        @keyup="toggleMenu"
-        @click="toggleMenu"
+        @keyup="toggleMenu()"
+        @click="toggleMenu()"
       >
         <span aria-hidden="true" />
         <span aria-hidden="true" />
@@ -31,7 +31,11 @@
           :class="{ 'navbar-start--open': menuIsOpen }"
           aria-expanded="true"
         >
-          <button class="button button--close" @click="toggleMenu">
+          <button
+            class="button button--close"
+            @click="toggleMenu()"
+            @keyup="toggleMenu()"
+          >
             <CloseIcon />
           </button>
           <NuxtLink class="button navbar-cta" href="/create"
@@ -39,23 +43,8 @@
           >
           <NuxtLink href="/about">About us</NuxtLink>
           <NuxtLink href="/why-meditation">Why Meditation?</NuxtLink>
-
-          <div v-if="false" class="navbar-item has-dropdown is-hoverable">
-            <hr class="navbar-divider" />
-          </div>
         </div>
       </Transition>
-
-      <div v-if="false" class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light"> Log in </a>
-          </div>
-        </div>
-      </div>
     </div>
   </nav>
 </template>

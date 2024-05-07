@@ -1252,10 +1252,8 @@ VueWrapper {
               >
                 Why Meditation?
               </nuxtlink>
-              <!--v-if-->
             </div>
           </transition-stub>
-          <!--v-if-->
         </div>
       </nav>
     </div>,
@@ -1636,7 +1634,12 @@ VueWrapper {
           "proxy": {},
           "refs": {},
           "render": [Function],
-          "renderCache": [],
+          "renderCache": [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
           "root": [Circular],
           "rtc": null,
           "rtg": null,
@@ -2598,10 +2601,11 @@ VueWrapper {
                                   </src/assets/img/icons/close.svg />
                                 </button>,
                                 "key": null,
-                                "patchFlag": 0,
+                                "patchFlag": 32,
                                 "props": {
                                   "class": "button button--close",
                                   "onClick": [Function],
+                                  "onKeyup": [Function],
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -2807,34 +2811,6 @@ VueWrapper {
                                 "transition": null,
                                 "type": "NuxtLink",
                               },
-                              {
-                                "__v_isVNode": true,
-                                "__v_skip": true,
-                                "anchor": null,
-                                "appContext": null,
-                                "children": "v-if",
-                                "component": null,
-                                "ctx": [Circular],
-                                "dirs": null,
-                                "dynamicChildren": [],
-                                "dynamicProps": null,
-                                "el": <!--v-if-->,
-                                "key": null,
-                                "patchFlag": 0,
-                                "props": null,
-                                "ref": null,
-                                "scopeId": null,
-                                "shapeFlag": 8,
-                                "slotScopeIds": null,
-                                "ssContent": null,
-                                "ssFallback": null,
-                                "staticCount": 0,
-                                "suspense": null,
-                                "target": null,
-                                "targetAnchor": null,
-                                "transition": null,
-                                "type": Symbol(v-cmt),
-                              },
                             ],
                             "component": null,
                             "ctx": [Circular],
@@ -2882,7 +2858,6 @@ VueWrapper {
                               >
                                 Why Meditation?
                               </nuxtlink>
-                              <!--v-if-->
                             </div>,
                             "key": null,
                             "patchFlag": 2,
@@ -2940,7 +2915,6 @@ VueWrapper {
                             >
                               Why Meditation?
                             </nuxtlink>
-                            <!--v-if-->
                           </div>
                         </transition-stub>,
                         "key": null,
@@ -3110,7 +3084,6 @@ VueWrapper {
                         >
                           Why Meditation?
                         </nuxtlink>
-                        <!--v-if-->
                       </div>
                     </transition-stub>,
                     "key": null,
@@ -3208,34 +3181,6 @@ VueWrapper {
                       "setup": [Function],
                     },
                   },
-                  {
-                    "__v_isVNode": true,
-                    "__v_skip": true,
-                    "anchor": null,
-                    "appContext": null,
-                    "children": "v-if",
-                    "component": null,
-                    "ctx": [Circular],
-                    "dirs": null,
-                    "dynamicChildren": [],
-                    "dynamicProps": null,
-                    "el": <!--v-if-->,
-                    "key": null,
-                    "patchFlag": 0,
-                    "props": null,
-                    "ref": null,
-                    "scopeId": null,
-                    "shapeFlag": 8,
-                    "slotScopeIds": null,
-                    "ssContent": null,
-                    "ssFallback": null,
-                    "staticCount": 0,
-                    "suspense": null,
-                    "target": null,
-                    "targetAnchor": null,
-                    "transition": null,
-                    "type": Symbol(v-cmt),
-                  },
                 ],
                 "component": null,
                 "ctx": [Circular],
@@ -3293,10 +3238,8 @@ VueWrapper {
                       >
                         Why Meditation?
                       </nuxtlink>
-                      <!--v-if-->
                     </div>
                   </transition-stub>
-                  <!--v-if-->
                 </div>,
                 "key": null,
                 "patchFlag": 0,
@@ -4002,10 +3945,11 @@ VueWrapper {
                               </src/assets/img/icons/close.svg />
                             </button>,
                             "key": null,
-                            "patchFlag": 0,
+                            "patchFlag": 32,
                             "props": {
                               "class": "button button--close",
                               "onClick": [Function],
+                              "onKeyup": [Function],
                             },
                             "ref": null,
                             "scopeId": null,
@@ -4211,34 +4155,6 @@ VueWrapper {
                             "transition": null,
                             "type": "NuxtLink",
                           },
-                          {
-                            "__v_isVNode": true,
-                            "__v_skip": true,
-                            "anchor": null,
-                            "appContext": null,
-                            "children": "v-if",
-                            "component": null,
-                            "ctx": [Circular],
-                            "dirs": null,
-                            "dynamicChildren": [],
-                            "dynamicProps": null,
-                            "el": <!--v-if-->,
-                            "key": null,
-                            "patchFlag": 0,
-                            "props": null,
-                            "ref": null,
-                            "scopeId": null,
-                            "shapeFlag": 8,
-                            "slotScopeIds": null,
-                            "ssContent": null,
-                            "ssFallback": null,
-                            "staticCount": 0,
-                            "suspense": null,
-                            "target": null,
-                            "targetAnchor": null,
-                            "transition": null,
-                            "type": Symbol(v-cmt),
-                          },
                         ],
                         "component": null,
                         "ctx": [Circular],
@@ -4286,7 +4202,6 @@ VueWrapper {
                           >
                             Why Meditation?
                           </nuxtlink>
-                          <!--v-if-->
                         </div>,
                         "key": null,
                         "patchFlag": 2,
@@ -4344,7 +4259,6 @@ VueWrapper {
                         >
                           Why Meditation?
                         </nuxtlink>
-                        <!--v-if-->
                       </div>
                     </transition-stub>,
                     "key": null,
@@ -4514,7 +4428,6 @@ VueWrapper {
                     >
                       Why Meditation?
                     </nuxtlink>
-                    <!--v-if-->
                   </div>
                 </transition-stub>,
                 "key": null,
@@ -4612,34 +4525,6 @@ VueWrapper {
                   "setup": [Function],
                 },
               },
-              {
-                "__v_isVNode": true,
-                "__v_skip": true,
-                "anchor": null,
-                "appContext": null,
-                "children": "v-if",
-                "component": null,
-                "ctx": [Circular],
-                "dirs": null,
-                "dynamicChildren": [],
-                "dynamicProps": null,
-                "el": <!--v-if-->,
-                "key": null,
-                "patchFlag": 0,
-                "props": null,
-                "ref": null,
-                "scopeId": null,
-                "shapeFlag": 8,
-                "slotScopeIds": null,
-                "ssContent": null,
-                "ssFallback": null,
-                "staticCount": 0,
-                "suspense": null,
-                "target": null,
-                "targetAnchor": null,
-                "transition": null,
-                "type": Symbol(v-cmt),
-              },
             ],
             "dynamicProps": null,
             "el": <nav
@@ -4711,10 +4596,8 @@ VueWrapper {
                     >
                       Why Meditation?
                     </nuxtlink>
-                    <!--v-if-->
                   </div>
                 </transition-stub>
-                <!--v-if-->
               </div>
             </nav>,
             "key": null,
@@ -4826,10 +4709,8 @@ VueWrapper {
                 >
                   Why Meditation?
                 </nuxtlink>
-                <!--v-if-->
               </div>
             </transition-stub>
-            <!--v-if-->
           </div>
         </nav>,
         "key": null,
@@ -4982,10 +4863,8 @@ VueWrapper {
                 >
                   Why Meditation?
                 </nuxtlink>
-                <!--v-if-->
               </div>
             </transition-stub>
-            <!--v-if-->
           </div>
         </nav>,
         "key": null,
@@ -5280,10 +5159,8 @@ VueWrapper {
           >
             Why Meditation?
           </nuxtlink>
-          <!--v-if-->
         </div>
       </transition-stub>
-      <!--v-if-->
     </div>
   </nav>,
 }

@@ -1,0 +1,3995 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Navigation component test > Navigation mounts 1`] = `
+VueWrapper {
+  "__app": {
+    "_component": {
+      "name": "VTU_ROOT",
+      "render": [Function],
+      "setup": [Function],
+    },
+    "_container": <div
+      data-v-app=""
+    >
+      <nav
+        aria-label="main navigation"
+        class="navbar"
+        role="navigation"
+      >
+        <div
+          class="navbar-brand"
+        >
+          <a
+            aria-label="SereneGrove"
+            class="navbar-item navbar-item--logo"
+            href="/"
+          >
+            <logo
+              horizontal="true"
+            />
+          </a>
+        </div>
+        <div
+          class="navbar-menu"
+        >
+          <a
+            aria-expanded="false"
+            aria-label="menu"
+            class="navbar-burger"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              aria-hidden="true"
+            />
+            <span
+              aria-hidden="true"
+            />
+            <span
+              aria-hidden="true"
+            />
+          </a>
+          <transition-stub
+            appear="false"
+            css="true"
+            persisted="true"
+          >
+            <div
+              aria-expanded="true"
+              class="navbar-start"
+              style="display: none;"
+            >
+              <button
+                class="button button--close"
+              >
+                </src/assets/img/icons/close.svg />
+              </button>
+              <nuxtlink
+                class="button navbar-cta"
+                href="/create"
+              >
+                Start now!
+              </nuxtlink>
+              <nuxtlink
+                href="/about"
+              >
+                About us
+              </nuxtlink>
+              <nuxtlink
+                href="/why-meditation"
+              >
+                Why Meditation?
+              </nuxtlink>
+            </div>
+          </transition-stub>
+        </div>
+      </nav>
+    </div>,
+    "_context": {
+      "app": [Circular],
+      "components": {
+        "transition": {
+          "name": "transition",
+        },
+        "transition-group": {
+          "name": "transition-group",
+        },
+      },
+      "config": {
+        "compilerOptions": {},
+        "errorHandler": undefined,
+        "globalProperties": {},
+        "isNativeTag": [Function],
+        "optionMergeStrategies": {},
+        "performance": false,
+        "warnHandler": undefined,
+      },
+      "directives": {},
+      "emitsCache": WeakMap {},
+      "mixins": [
+        {
+          "beforeCreate": [Function],
+        },
+      ],
+      "optionsCache": WeakMap {},
+      "propsCache": WeakMap {},
+      "provides": {},
+      "reload": [Function],
+    },
+    "_instance": {
+      "a": null,
+      "accessCache": {},
+      "appContext": {
+        "app": [Circular],
+        "components": {
+          "transition": {
+            "name": "transition",
+          },
+          "transition-group": {
+            "name": "transition-group",
+          },
+        },
+        "config": {
+          "compilerOptions": {},
+          "errorHandler": undefined,
+          "globalProperties": {},
+          "isNativeTag": [Function],
+          "optionMergeStrategies": {},
+          "performance": false,
+          "warnHandler": undefined,
+        },
+        "directives": {},
+        "emitsCache": WeakMap {},
+        "mixins": [
+          {
+            "beforeCreate": [Function],
+          },
+        ],
+        "optionsCache": WeakMap {},
+        "propsCache": WeakMap {},
+        "provides": {},
+        "reload": [Function],
+      },
+      "asyncDep": null,
+      "asyncResolved": false,
+      "attrs": {},
+      "attrsProxy": null,
+      "bc": null,
+      "bm": null,
+      "bu": null,
+      "bum": null,
+      "c": null,
+      "components": null,
+      "ctx": {
+        "VTU_COMPONENT": {},
+      },
+      "da": null,
+      "data": {},
+      "devtoolsRawSetupState": {
+        "VTU_COMPONENT": RefImpl {
+          "__v_isRef": true,
+          "__v_isShallow": false,
+          "_rawValue": {},
+          "_value": {},
+          "dep": undefined,
+        },
+      },
+      "directives": null,
+      "ec": null,
+      "effect": ReactiveEffect {
+        "active": true,
+        "allowRecurse": true,
+        "deps": [
+          Set {
+            [Circular],
+          },
+          Set {
+            [Circular],
+          },
+          Set {
+            [Circular],
+          },
+        ],
+        "fn": [Function],
+        "onTrack": undefined,
+        "onTrigger": undefined,
+        "parent": undefined,
+        "scheduler": [Function],
+      },
+      "emit": [Function],
+      "emitsOptions": null,
+      "emitted": null,
+      "exposeProxy": null,
+      "exposed": null,
+      "inheritAttrs": undefined,
+      "isDeactivated": false,
+      "isMounted": true,
+      "isUnmounted": false,
+      "m": null,
+      "next": null,
+      "parent": null,
+      "props": {},
+      "propsDefaults": {},
+      "propsOptions": [
+        {},
+        [],
+      ],
+      "provides": {},
+      "proxy": {
+        "VTU_COMPONENT": {},
+      },
+      "refs": {
+        "VTU_COMPONENT": {},
+      },
+      "render": [Function],
+      "renderCache": [],
+      "root": [Circular],
+      "rtc": null,
+      "rtg": null,
+      "scope": EffectScope {
+        "_active": true,
+        "cleanups": [],
+        "detached": true,
+        "effects": [
+          ReactiveEffect {
+            "active": true,
+            "allowRecurse": true,
+            "deps": [
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+            ],
+            "fn": [Function],
+            "onTrack": undefined,
+            "onTrigger": undefined,
+            "parent": undefined,
+            "scheduler": [Function],
+          },
+        ],
+        "parent": undefined,
+      },
+      "setupContext": null,
+      "setupState": {
+        "VTU_COMPONENT": {},
+      },
+      "slots": {},
+      "slotsProxy": null,
+      "sp": null,
+      "subTree": {
+        "__v_isVNode": true,
+        "__v_skip": true,
+        "anchor": null,
+        "appContext": null,
+        "children": null,
+        "component": {
+          "a": null,
+          "accessCache": {},
+          "appContext": {
+            "app": [Circular],
+            "components": {
+              "transition": {
+                "name": "transition",
+              },
+              "transition-group": {
+                "name": "transition-group",
+              },
+            },
+            "config": {
+              "compilerOptions": {},
+              "errorHandler": undefined,
+              "globalProperties": {},
+              "isNativeTag": [Function],
+              "optionMergeStrategies": {},
+              "performance": false,
+              "warnHandler": undefined,
+            },
+            "directives": {},
+            "emitsCache": WeakMap {},
+            "mixins": [
+              {
+                "beforeCreate": [Function],
+              },
+            ],
+            "optionsCache": WeakMap {},
+            "propsCache": WeakMap {},
+            "provides": {},
+            "reload": [Function],
+          },
+          "asyncDep": null,
+          "asyncResolved": false,
+          "attrs": {},
+          "attrsProxy": null,
+          "bc": null,
+          "bm": null,
+          "bu": null,
+          "bum": null,
+          "c": null,
+          "components": {},
+          "ctx": {},
+          "da": null,
+          "data": {},
+          "devtoolsRawSetupState": {
+            "CloseIcon": "/src/assets/img/icons/close.svg",
+            "menuIsOpen": RefImpl {
+              "__v_isRef": true,
+              "__v_isShallow": false,
+              "_rawValue": false,
+              "_value": false,
+              "dep": Set {
+                ReactiveEffect {
+                  "active": true,
+                  "allowRecurse": true,
+                  "deps": [
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    Set {
+                      [Circular],
+                    },
+                    [Circular],
+                  ],
+                  "fn": [Function],
+                  "onTrack": undefined,
+                  "onTrigger": undefined,
+                  "parent": undefined,
+                  "scheduler": [Function],
+                },
+              },
+            },
+            "toggleMenu": [Function],
+          },
+          "directives": null,
+          "ec": null,
+          "effect": ReactiveEffect {
+            "active": true,
+            "allowRecurse": true,
+            "deps": [],
+            "fn": [Function],
+            "onTrack": undefined,
+            "onTrigger": undefined,
+            "parent": undefined,
+            "scheduler": [Function],
+          },
+          "emit": [Function],
+          "emitsOptions": null,
+          "emitted": null,
+          "exposeProxy": {},
+          "exposed": {},
+          "inheritAttrs": undefined,
+          "isDeactivated": false,
+          "isMounted": true,
+          "isUnmounted": false,
+          "m": null,
+          "next": null,
+          "parent": [Circular],
+          "props": {},
+          "propsDefaults": {},
+          "propsOptions": [
+            {},
+            [],
+          ],
+          "provides": {},
+          "proxy": {},
+          "refs": {},
+          "render": [Function],
+          "renderCache": [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "root": [Circular],
+          "rtc": null,
+          "rtg": null,
+          "scope": EffectScope {
+            "_active": true,
+            "cleanups": [],
+            "detached": true,
+            "effects": [
+              ReactiveEffect {
+                "active": true,
+                "allowRecurse": true,
+                "deps": [],
+                "fn": [Function],
+                "onTrack": undefined,
+                "onTrigger": undefined,
+                "parent": undefined,
+                "scheduler": [Function],
+              },
+            ],
+            "parent": undefined,
+          },
+          "setupContext": {
+            "attrs": {},
+            "emit": [Function],
+            "expose": [Function],
+            "slots": {},
+          },
+          "setupState": {
+            "CloseIcon": "/src/assets/img/icons/close.svg",
+            "menuIsOpen": false,
+            "toggleMenu": [Function],
+          },
+          "slots": {},
+          "slotsProxy": {},
+          "sp": null,
+          "subTree": {
+            "__v_isVNode": true,
+            "__v_skip": true,
+            "anchor": null,
+            "appContext": null,
+            "children": [
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": [
+                  {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": [
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": null,
+                        "component": null,
+                        "ctx": [Circular],
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <logo
+                          horizontal="true"
+                        />,
+                        "key": null,
+                        "patchFlag": 0,
+                        "props": {
+                          "horizontal": true,
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 1,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "Logo",
+                      },
+                    ],
+                    "component": null,
+                    "ctx": [Circular],
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <a
+                      aria-label="SereneGrove"
+                      class="navbar-item navbar-item--logo"
+                      href="/"
+                    >
+                      <logo
+                        horizontal="true"
+                      />
+                    </a>,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": {
+                      "aria-label": "SereneGrove",
+                      "class": "navbar-item navbar-item--logo",
+                      "href": "/",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 17,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "a",
+                  },
+                ],
+                "component": null,
+                "ctx": [Circular],
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <div
+                  class="navbar-brand"
+                >
+                  <a
+                    aria-label="SereneGrove"
+                    class="navbar-item navbar-item--logo"
+                    href="/"
+                  >
+                    <logo
+                      horizontal="true"
+                    />
+                  </a>
+                </div>,
+                "key": null,
+                "patchFlag": 0,
+                "props": {
+                  "class": "navbar-brand",
+                },
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 17,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": "div",
+              },
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": [
+                  {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": [
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "ce": undefined,
+                        "children": null,
+                        "component": null,
+                        "ctx": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <span
+                          aria-hidden="true"
+                        />,
+                        "key": null,
+                        "patchFlag": -1,
+                        "props": {
+                          "aria-hidden": "true",
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 1,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "span",
+                      },
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "ce": undefined,
+                        "children": null,
+                        "component": null,
+                        "ctx": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <span
+                          aria-hidden="true"
+                        />,
+                        "key": null,
+                        "patchFlag": -1,
+                        "props": {
+                          "aria-hidden": "true",
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 1,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "span",
+                      },
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "ce": undefined,
+                        "children": null,
+                        "component": null,
+                        "ctx": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <span
+                          aria-hidden="true"
+                        />,
+                        "key": null,
+                        "patchFlag": -1,
+                        "props": {
+                          "aria-hidden": "true",
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 1,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "span",
+                      },
+                    ],
+                    "component": null,
+                    "ctx": [Circular],
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <a
+                      aria-expanded="false"
+                      aria-label="menu"
+                      class="navbar-burger"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <span
+                        aria-hidden="true"
+                      />
+                      <span
+                        aria-hidden="true"
+                      />
+                      <span
+                        aria-hidden="true"
+                      />
+                    </a>,
+                    "key": null,
+                    "patchFlag": 32,
+                    "props": {
+                      "aria-expanded": "false",
+                      "aria-label": "menu",
+                      "class": "navbar-burger",
+                      "onClick": [Function],
+                      "onKeyup": [Function],
+                      "role": "button",
+                      "tabindex": "0",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 17,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "a",
+                  },
+                  {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": {
+                      "default": [Function],
+                    },
+                    "component": {
+                      "a": null,
+                      "accessCache": {},
+                      "appContext": {
+                        "app": [Circular],
+                        "components": {
+                          "transition": {
+                            "name": "transition",
+                          },
+                          "transition-group": {
+                            "name": "transition-group",
+                          },
+                        },
+                        "config": {
+                          "compilerOptions": {},
+                          "errorHandler": undefined,
+                          "globalProperties": {},
+                          "isNativeTag": [Function],
+                          "optionMergeStrategies": {},
+                          "performance": false,
+                          "warnHandler": undefined,
+                        },
+                        "directives": {},
+                        "emitsCache": WeakMap {},
+                        "mixins": [
+                          {
+                            "beforeCreate": [Function],
+                          },
+                        ],
+                        "optionsCache": WeakMap {},
+                        "propsCache": WeakMap {},
+                        "provides": {},
+                        "reload": [Function],
+                      },
+                      "asyncDep": null,
+                      "asyncResolved": false,
+                      "attrs": {},
+                      "attrsProxy": null,
+                      "bc": null,
+                      "bm": null,
+                      "bu": null,
+                      "bum": null,
+                      "c": null,
+                      "components": null,
+                      "ctx": {
+                        "appear": false,
+                        "appearActiveClass": undefined,
+                        "appearFromClass": undefined,
+                        "appearToClass": undefined,
+                        "css": true,
+                        "duration": undefined,
+                        "enterActiveClass": undefined,
+                        "enterFromClass": undefined,
+                        "enterToClass": undefined,
+                        "leaveActiveClass": undefined,
+                        "leaveFromClass": undefined,
+                        "leaveToClass": undefined,
+                        "mode": undefined,
+                        "name": undefined,
+                        "onAfterAppear": undefined,
+                        "onAfterEnter": undefined,
+                        "onAfterLeave": undefined,
+                        "onAppear": undefined,
+                        "onAppearCancelled": undefined,
+                        "onBeforeAppear": undefined,
+                        "onBeforeEnter": undefined,
+                        "onBeforeLeave": undefined,
+                        "onEnter": undefined,
+                        "onEnterCancelled": undefined,
+                        "onLeave": undefined,
+                        "onLeaveCancelled": undefined,
+                        "persisted": true,
+                        "type": undefined,
+                      },
+                      "da": null,
+                      "data": {},
+                      "directives": null,
+                      "ec": null,
+                      "effect": ReactiveEffect {
+                        "active": true,
+                        "allowRecurse": true,
+                        "deps": [
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                        ],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "parent": undefined,
+                        "scheduler": [Function],
+                      },
+                      "emit": [Function],
+                      "emitsOptions": null,
+                      "emitted": null,
+                      "exposeProxy": null,
+                      "exposed": null,
+                      "inheritAttrs": undefined,
+                      "isDeactivated": false,
+                      "isMounted": true,
+                      "isUnmounted": false,
+                      "m": null,
+                      "next": null,
+                      "parent": [Circular],
+                      "props": {
+                        "appear": false,
+                        "appearActiveClass": undefined,
+                        "appearFromClass": undefined,
+                        "appearToClass": undefined,
+                        "css": true,
+                        "duration": undefined,
+                        "enterActiveClass": undefined,
+                        "enterFromClass": undefined,
+                        "enterToClass": undefined,
+                        "leaveActiveClass": undefined,
+                        "leaveFromClass": undefined,
+                        "leaveToClass": undefined,
+                        "mode": undefined,
+                        "name": undefined,
+                        "onAfterAppear": undefined,
+                        "onAfterEnter": undefined,
+                        "onAfterLeave": undefined,
+                        "onAppear": undefined,
+                        "onAppearCancelled": undefined,
+                        "onBeforeAppear": undefined,
+                        "onBeforeEnter": undefined,
+                        "onBeforeLeave": undefined,
+                        "onEnter": undefined,
+                        "onEnterCancelled": undefined,
+                        "onLeave": undefined,
+                        "onLeaveCancelled": undefined,
+                        "persisted": true,
+                        "type": undefined,
+                      },
+                      "propsDefaults": {},
+                      "propsOptions": [
+                        {
+                          "appear": {
+                            "0": true,
+                            "1": true,
+                            "type": [Function],
+                          },
+                          "appearActiveClass": {
+                            "0": false,
+                            "1": true,
+                            "type": [Function],
+                          },
+                          "appearFromClass": {
+                            "0": false,
+                            "1": true,
+                            "type": [Function],
+                          },
+                          "appearToClass": {
+                            "0": false,
+                            "1": true,
+                            "type": [Function],
+                          },
+                          "css": {
+                            "0": true,
+                            "1": true,
+                            "default": true,
+                            "type": [Function],
+                          },
+                          "duration": {
+                            "0": false,
+                            "1": true,
+                            "type": [
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "enterActiveClass": {
+                            "0": false,
+                            "1": true,
+                            "type": [Function],
+                          },
+                          "enterFromClass": {
+                            "0": false,
+                            "1": true,
+                            "type": [Function],
+                          },
+                          "enterToClass": {
+                            "0": false,
+                            "1": true,
+                            "type": [Function],
+                          },
+                          "leaveActiveClass": {
+                            "0": false,
+                            "1": true,
+                            "type": [Function],
+                          },
+                          "leaveFromClass": {
+                            "0": false,
+                            "1": true,
+                            "type": [Function],
+                          },
+                          "leaveToClass": {
+                            "0": false,
+                            "1": true,
+                            "type": [Function],
+                          },
+                          "mode": {
+                            "0": false,
+                            "1": true,
+                            "type": [Function],
+                          },
+                          "name": {
+                            "0": false,
+                            "1": true,
+                            "type": [Function],
+                          },
+                          "onAfterAppear": {
+                            "0": false,
+                            "1": true,
+                            "type": [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "onAfterEnter": {
+                            "0": false,
+                            "1": true,
+                            "type": [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "onAfterLeave": {
+                            "0": false,
+                            "1": true,
+                            "type": [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "onAppear": {
+                            "0": false,
+                            "1": true,
+                            "type": [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "onAppearCancelled": {
+                            "0": false,
+                            "1": true,
+                            "type": [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "onBeforeAppear": {
+                            "0": false,
+                            "1": true,
+                            "type": [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "onBeforeEnter": {
+                            "0": false,
+                            "1": true,
+                            "type": [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "onBeforeLeave": {
+                            "0": false,
+                            "1": true,
+                            "type": [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "onEnter": {
+                            "0": false,
+                            "1": true,
+                            "type": [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "onEnterCancelled": {
+                            "0": false,
+                            "1": true,
+                            "type": [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "onLeave": {
+                            "0": false,
+                            "1": true,
+                            "type": [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "onLeaveCancelled": {
+                            "0": false,
+                            "1": true,
+                            "type": [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "persisted": {
+                            "0": true,
+                            "1": true,
+                            "type": [Function],
+                          },
+                          "type": {
+                            "0": false,
+                            "1": true,
+                            "type": [Function],
+                          },
+                        },
+                        [
+                          "appear",
+                          "persisted",
+                          "css",
+                        ],
+                      ],
+                      "provides": {},
+                      "proxy": {
+                        "appear": false,
+                        "appearActiveClass": undefined,
+                        "appearFromClass": undefined,
+                        "appearToClass": undefined,
+                        "css": true,
+                        "duration": undefined,
+                        "enterActiveClass": undefined,
+                        "enterFromClass": undefined,
+                        "enterToClass": undefined,
+                        "leaveActiveClass": undefined,
+                        "leaveFromClass": undefined,
+                        "leaveToClass": undefined,
+                        "mode": undefined,
+                        "name": undefined,
+                        "onAfterAppear": undefined,
+                        "onAfterEnter": undefined,
+                        "onAfterLeave": undefined,
+                        "onAppear": undefined,
+                        "onAppearCancelled": undefined,
+                        "onBeforeAppear": undefined,
+                        "onBeforeEnter": undefined,
+                        "onBeforeLeave": undefined,
+                        "onEnter": undefined,
+                        "onEnterCancelled": undefined,
+                        "onLeave": undefined,
+                        "onLeaveCancelled": undefined,
+                        "persisted": true,
+                        "type": undefined,
+                      },
+                      "refs": {},
+                      "render": [Function],
+                      "renderCache": [],
+                      "root": [Circular],
+                      "rtc": null,
+                      "rtg": null,
+                      "scope": EffectScope {
+                        "_active": true,
+                        "cleanups": [],
+                        "detached": true,
+                        "effects": [
+                          ReactiveEffect {
+                            "active": true,
+                            "allowRecurse": true,
+                            "deps": [
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                            ],
+                            "fn": [Function],
+                            "onTrack": undefined,
+                            "onTrigger": undefined,
+                            "parent": undefined,
+                            "scheduler": [Function],
+                          },
+                        ],
+                        "parent": undefined,
+                      },
+                      "setupContext": {
+                        "attrs": {},
+                        "emit": [Function],
+                        "expose": [Function],
+                        "slots": {
+                          "default": [Function],
+                        },
+                      },
+                      "setupState": {},
+                      "slots": {
+                        "default": [Function],
+                      },
+                      "slotsProxy": {
+                        "default": [Function],
+                      },
+                      "sp": null,
+                      "subTree": {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": [
+                          {
+                            "__v_isVNode": true,
+                            "__v_skip": true,
+                            "anchor": null,
+                            "appContext": null,
+                            "children": [
+                              {
+                                "__v_isVNode": true,
+                                "__v_skip": true,
+                                "anchor": null,
+                                "appContext": null,
+                                "children": [
+                                  {
+                                    "__v_isVNode": true,
+                                    "__v_skip": true,
+                                    "anchor": null,
+                                    "appContext": null,
+                                    "children": null,
+                                    "component": null,
+                                    "ctx": [Circular],
+                                    "dirs": null,
+                                    "dynamicChildren": null,
+                                    "dynamicProps": null,
+                                    "el": </src/assets/img/icons/close.svg />,
+                                    "key": null,
+                                    "patchFlag": 0,
+                                    "props": null,
+                                    "ref": null,
+                                    "scopeId": null,
+                                    "shapeFlag": 1,
+                                    "slotScopeIds": null,
+                                    "ssContent": null,
+                                    "ssFallback": null,
+                                    "staticCount": 0,
+                                    "suspense": null,
+                                    "target": null,
+                                    "targetAnchor": null,
+                                    "transition": null,
+                                    "type": "/src/assets/img/icons/close.svg",
+                                  },
+                                ],
+                                "component": null,
+                                "ctx": [Circular],
+                                "dirs": null,
+                                "dynamicChildren": null,
+                                "dynamicProps": null,
+                                "el": <button
+                                  class="button button--close"
+                                >
+                                  </src/assets/img/icons/close.svg />
+                                </button>,
+                                "key": null,
+                                "patchFlag": 32,
+                                "props": {
+                                  "class": "button button--close",
+                                  "onClick": [Function],
+                                  "onKeyup": [Function],
+                                },
+                                "ref": null,
+                                "scopeId": null,
+                                "shapeFlag": 17,
+                                "slotScopeIds": null,
+                                "ssContent": null,
+                                "ssFallback": null,
+                                "staticCount": 0,
+                                "suspense": null,
+                                "target": null,
+                                "targetAnchor": null,
+                                "transition": null,
+                                "type": "button",
+                              },
+                              {
+                                "__v_isVNode": true,
+                                "__v_skip": true,
+                                "anchor": null,
+                                "appContext": null,
+                                "children": [
+                                  {
+                                    "__v_isVNode": true,
+                                    "__v_skip": true,
+                                    "anchor": null,
+                                    "appContext": null,
+                                    "children": "Start now!",
+                                    "component": null,
+                                    "ctx": [Circular],
+                                    "dirs": null,
+                                    "dynamicChildren": null,
+                                    "dynamicProps": null,
+                                    "el": Start now!,
+                                    "key": null,
+                                    "patchFlag": 0,
+                                    "props": null,
+                                    "ref": null,
+                                    "scopeId": null,
+                                    "shapeFlag": 8,
+                                    "slotScopeIds": null,
+                                    "ssContent": null,
+                                    "ssFallback": null,
+                                    "staticCount": 0,
+                                    "suspense": null,
+                                    "target": null,
+                                    "targetAnchor": null,
+                                    "transition": null,
+                                    "type": Symbol(v-txt),
+                                  },
+                                ],
+                                "component": null,
+                                "ctx": [Circular],
+                                "dirs": null,
+                                "dynamicChildren": null,
+                                "dynamicProps": null,
+                                "el": <nuxtlink
+                                  class="button navbar-cta"
+                                  href="/create"
+                                >
+                                  Start now!
+                                </nuxtlink>,
+                                "key": null,
+                                "patchFlag": 0,
+                                "props": {
+                                  "class": "button navbar-cta",
+                                  "href": "/create",
+                                },
+                                "ref": null,
+                                "scopeId": null,
+                                "shapeFlag": 17,
+                                "slotScopeIds": null,
+                                "ssContent": null,
+                                "ssFallback": null,
+                                "staticCount": 0,
+                                "suspense": null,
+                                "target": null,
+                                "targetAnchor": null,
+                                "transition": null,
+                                "type": "NuxtLink",
+                              },
+                              {
+                                "__v_isVNode": true,
+                                "__v_skip": true,
+                                "anchor": null,
+                                "appContext": null,
+                                "children": [
+                                  {
+                                    "__v_isVNode": true,
+                                    "__v_skip": true,
+                                    "anchor": null,
+                                    "appContext": null,
+                                    "children": "About us",
+                                    "component": null,
+                                    "ctx": [Circular],
+                                    "dirs": null,
+                                    "dynamicChildren": null,
+                                    "dynamicProps": null,
+                                    "el": About us,
+                                    "key": null,
+                                    "patchFlag": 0,
+                                    "props": null,
+                                    "ref": null,
+                                    "scopeId": null,
+                                    "shapeFlag": 8,
+                                    "slotScopeIds": null,
+                                    "ssContent": null,
+                                    "ssFallback": null,
+                                    "staticCount": 0,
+                                    "suspense": null,
+                                    "target": null,
+                                    "targetAnchor": null,
+                                    "transition": null,
+                                    "type": Symbol(v-txt),
+                                  },
+                                ],
+                                "component": null,
+                                "ctx": [Circular],
+                                "dirs": null,
+                                "dynamicChildren": null,
+                                "dynamicProps": null,
+                                "el": <nuxtlink
+                                  href="/about"
+                                >
+                                  About us
+                                </nuxtlink>,
+                                "key": null,
+                                "patchFlag": 0,
+                                "props": {
+                                  "href": "/about",
+                                },
+                                "ref": null,
+                                "scopeId": null,
+                                "shapeFlag": 17,
+                                "slotScopeIds": null,
+                                "ssContent": null,
+                                "ssFallback": null,
+                                "staticCount": 0,
+                                "suspense": null,
+                                "target": null,
+                                "targetAnchor": null,
+                                "transition": null,
+                                "type": "NuxtLink",
+                              },
+                              {
+                                "__v_isVNode": true,
+                                "__v_skip": true,
+                                "anchor": null,
+                                "appContext": null,
+                                "children": [
+                                  {
+                                    "__v_isVNode": true,
+                                    "__v_skip": true,
+                                    "anchor": null,
+                                    "appContext": null,
+                                    "children": "Why Meditation?",
+                                    "component": null,
+                                    "ctx": [Circular],
+                                    "dirs": null,
+                                    "dynamicChildren": null,
+                                    "dynamicProps": null,
+                                    "el": Why Meditation?,
+                                    "key": null,
+                                    "patchFlag": 0,
+                                    "props": null,
+                                    "ref": null,
+                                    "scopeId": null,
+                                    "shapeFlag": 8,
+                                    "slotScopeIds": null,
+                                    "ssContent": null,
+                                    "ssFallback": null,
+                                    "staticCount": 0,
+                                    "suspense": null,
+                                    "target": null,
+                                    "targetAnchor": null,
+                                    "transition": null,
+                                    "type": Symbol(v-txt),
+                                  },
+                                ],
+                                "component": null,
+                                "ctx": [Circular],
+                                "dirs": null,
+                                "dynamicChildren": null,
+                                "dynamicProps": null,
+                                "el": <nuxtlink
+                                  href="/why-meditation"
+                                >
+                                  Why Meditation?
+                                </nuxtlink>,
+                                "key": null,
+                                "patchFlag": 0,
+                                "props": {
+                                  "href": "/why-meditation",
+                                },
+                                "ref": null,
+                                "scopeId": null,
+                                "shapeFlag": 17,
+                                "slotScopeIds": null,
+                                "ssContent": null,
+                                "ssFallback": null,
+                                "staticCount": 0,
+                                "suspense": null,
+                                "target": null,
+                                "targetAnchor": null,
+                                "transition": null,
+                                "type": "NuxtLink",
+                              },
+                            ],
+                            "component": null,
+                            "ctx": [Circular],
+                            "dirs": [
+                              {
+                                "arg": undefined,
+                                "dir": {
+                                  "beforeMount": [Function],
+                                  "beforeUnmount": [Function],
+                                  "getSSRProps": [Function],
+                                  "mounted": [Function],
+                                  "updated": [Function],
+                                },
+                                "instance": {},
+                                "modifiers": {},
+                                "oldValue": undefined,
+                                "value": false,
+                              },
+                            ],
+                            "dynamicChildren": null,
+                            "dynamicProps": null,
+                            "el": <div
+                              aria-expanded="true"
+                              class="navbar-start"
+                              style="display: none;"
+                            >
+                              <button
+                                class="button button--close"
+                              >
+                                </src/assets/img/icons/close.svg />
+                              </button>
+                              <nuxtlink
+                                class="button navbar-cta"
+                                href="/create"
+                              >
+                                Start now!
+                              </nuxtlink>
+                              <nuxtlink
+                                href="/about"
+                              >
+                                About us
+                              </nuxtlink>
+                              <nuxtlink
+                                href="/why-meditation"
+                              >
+                                Why Meditation?
+                              </nuxtlink>
+                            </div>,
+                            "key": null,
+                            "patchFlag": 2,
+                            "props": {
+                              "aria-expanded": "true",
+                              "class": "navbar-start",
+                            },
+                            "ref": null,
+                            "scopeId": null,
+                            "shapeFlag": 17,
+                            "slotScopeIds": null,
+                            "ssContent": null,
+                            "ssFallback": null,
+                            "staticCount": 0,
+                            "suspense": null,
+                            "target": null,
+                            "targetAnchor": null,
+                            "transition": null,
+                            "type": "div",
+                          },
+                        ],
+                        "component": null,
+                        "ctx": [Circular],
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <transition-stub
+                          appear="false"
+                          css="true"
+                          persisted="true"
+                        >
+                          <div
+                            aria-expanded="true"
+                            class="navbar-start"
+                            style="display: none;"
+                          >
+                            <button
+                              class="button button--close"
+                            >
+                              </src/assets/img/icons/close.svg />
+                            </button>
+                            <nuxtlink
+                              class="button navbar-cta"
+                              href="/create"
+                            >
+                              Start now!
+                            </nuxtlink>
+                            <nuxtlink
+                              href="/about"
+                            >
+                              About us
+                            </nuxtlink>
+                            <nuxtlink
+                              href="/why-meditation"
+                            >
+                              Why Meditation?
+                            </nuxtlink>
+                          </div>
+                        </transition-stub>,
+                        "key": null,
+                        "patchFlag": 0,
+                        "props": {
+                          "appear": false,
+                          "appearActiveClass": undefined,
+                          "appearFromClass": undefined,
+                          "appearToClass": undefined,
+                          "css": true,
+                          "duration": undefined,
+                          "enterActiveClass": undefined,
+                          "enterFromClass": undefined,
+                          "enterToClass": undefined,
+                          "leaveActiveClass": undefined,
+                          "leaveFromClass": undefined,
+                          "leaveToClass": undefined,
+                          "mode": undefined,
+                          "name": undefined,
+                          "onAfterAppear": undefined,
+                          "onAfterEnter": undefined,
+                          "onAfterLeave": undefined,
+                          "onAppear": undefined,
+                          "onAppearCancelled": undefined,
+                          "onBeforeAppear": undefined,
+                          "onBeforeEnter": undefined,
+                          "onBeforeLeave": undefined,
+                          "onEnter": undefined,
+                          "onEnterCancelled": undefined,
+                          "onLeave": undefined,
+                          "onLeaveCancelled": undefined,
+                          "persisted": true,
+                          "type": undefined,
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 17,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "transition-stub",
+                      },
+                      "suspense": null,
+                      "suspenseId": 0,
+                      "type": {
+                        "model": undefined,
+                        "name": "transition",
+                        "props": {
+                          "appear": [Function],
+                          "appearActiveClass": [Function],
+                          "appearFromClass": [Function],
+                          "appearToClass": [Function],
+                          "css": {
+                            "default": true,
+                            "type": [Function],
+                          },
+                          "duration": [
+                            [Function],
+                            [Function],
+                            [Function],
+                          ],
+                          "enterActiveClass": [Function],
+                          "enterFromClass": [Function],
+                          "enterToClass": [Function],
+                          "leaveActiveClass": [Function],
+                          "leaveFromClass": [Function],
+                          "leaveToClass": [Function],
+                          "mode": [Function],
+                          "name": [Function],
+                          "onAfterAppear": [
+                            [Function],
+                            [Function],
+                          ],
+                          "onAfterEnter": [
+                            [Function],
+                            [Function],
+                          ],
+                          "onAfterLeave": [
+                            [Function],
+                            [Function],
+                          ],
+                          "onAppear": [
+                            [Function],
+                            [Function],
+                          ],
+                          "onAppearCancelled": [
+                            [Function],
+                            [Function],
+                          ],
+                          "onBeforeAppear": [
+                            [Function],
+                            [Function],
+                          ],
+                          "onBeforeEnter": [
+                            [Function],
+                            [Function],
+                          ],
+                          "onBeforeLeave": [
+                            [Function],
+                            [Function],
+                          ],
+                          "onEnter": [
+                            [Function],
+                            [Function],
+                          ],
+                          "onEnterCancelled": [
+                            [Function],
+                            [Function],
+                          ],
+                          "onLeave": [
+                            [Function],
+                            [Function],
+                          ],
+                          "onLeaveCancelled": [
+                            [Function],
+                            [Function],
+                          ],
+                          "persisted": [Function],
+                          "type": [Function],
+                        },
+                        "setup": [Function],
+                      },
+                      "u": null,
+                      "uid": 2,
+                      "um": null,
+                      "update": [Function],
+                      "vnode": [Circular],
+                      "withProxy": null,
+                    },
+                    "ctx": [Circular],
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <transition-stub
+                      appear="false"
+                      css="true"
+                      persisted="true"
+                    >
+                      <div
+                        aria-expanded="true"
+                        class="navbar-start"
+                        style="display: none;"
+                      >
+                        <button
+                          class="button button--close"
+                        >
+                          </src/assets/img/icons/close.svg />
+                        </button>
+                        <nuxtlink
+                          class="button navbar-cta"
+                          href="/create"
+                        >
+                          Start now!
+                        </nuxtlink>
+                        <nuxtlink
+                          href="/about"
+                        >
+                          About us
+                        </nuxtlink>
+                        <nuxtlink
+                          href="/why-meditation"
+                        >
+                          Why Meditation?
+                        </nuxtlink>
+                      </div>
+                    </transition-stub>,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": {
+                      "persisted": "",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 36,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": {
+                      "model": undefined,
+                      "name": "transition",
+                      "props": {
+                        "appear": [Function],
+                        "appearActiveClass": [Function],
+                        "appearFromClass": [Function],
+                        "appearToClass": [Function],
+                        "css": {
+                          "default": true,
+                          "type": [Function],
+                        },
+                        "duration": [
+                          [Function],
+                          [Function],
+                          [Function],
+                        ],
+                        "enterActiveClass": [Function],
+                        "enterFromClass": [Function],
+                        "enterToClass": [Function],
+                        "leaveActiveClass": [Function],
+                        "leaveFromClass": [Function],
+                        "leaveToClass": [Function],
+                        "mode": [Function],
+                        "name": [Function],
+                        "onAfterAppear": [
+                          [Function],
+                          [Function],
+                        ],
+                        "onAfterEnter": [
+                          [Function],
+                          [Function],
+                        ],
+                        "onAfterLeave": [
+                          [Function],
+                          [Function],
+                        ],
+                        "onAppear": [
+                          [Function],
+                          [Function],
+                        ],
+                        "onAppearCancelled": [
+                          [Function],
+                          [Function],
+                        ],
+                        "onBeforeAppear": [
+                          [Function],
+                          [Function],
+                        ],
+                        "onBeforeEnter": [
+                          [Function],
+                          [Function],
+                        ],
+                        "onBeforeLeave": [
+                          [Function],
+                          [Function],
+                        ],
+                        "onEnter": [
+                          [Function],
+                          [Function],
+                        ],
+                        "onEnterCancelled": [
+                          [Function],
+                          [Function],
+                        ],
+                        "onLeave": [
+                          [Function],
+                          [Function],
+                        ],
+                        "onLeaveCancelled": [
+                          [Function],
+                          [Function],
+                        ],
+                        "persisted": [Function],
+                        "type": [Function],
+                      },
+                      "setup": [Function],
+                    },
+                  },
+                ],
+                "component": null,
+                "ctx": [Circular],
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <div
+                  class="navbar-menu"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-label="menu"
+                    class="navbar-burger"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <span
+                      aria-hidden="true"
+                    />
+                    <span
+                      aria-hidden="true"
+                    />
+                    <span
+                      aria-hidden="true"
+                    />
+                  </a>
+                  <transition-stub
+                    appear="false"
+                    css="true"
+                    persisted="true"
+                  >
+                    <div
+                      aria-expanded="true"
+                      class="navbar-start"
+                      style="display: none;"
+                    >
+                      <button
+                        class="button button--close"
+                      >
+                        </src/assets/img/icons/close.svg />
+                      </button>
+                      <nuxtlink
+                        class="button navbar-cta"
+                        href="/create"
+                      >
+                        Start now!
+                      </nuxtlink>
+                      <nuxtlink
+                        href="/about"
+                      >
+                        About us
+                      </nuxtlink>
+                      <nuxtlink
+                        href="/why-meditation"
+                      >
+                        Why Meditation?
+                      </nuxtlink>
+                    </div>
+                  </transition-stub>
+                </div>,
+                "key": null,
+                "patchFlag": 0,
+                "props": {
+                  "class": "navbar-menu",
+                },
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 17,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": "div",
+              },
+            ],
+            "component": null,
+            "ctx": [Circular],
+            "dirs": null,
+            "dynamicChildren": [
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": {
+                  "default": [Function],
+                },
+                "component": {
+                  "a": null,
+                  "accessCache": {
+                    "@@__IMMUTABLE_ITERABLE__@@": 0,
+                    "@@__IMMUTABLE_RECORD__@@": 0,
+                    "_isMockFunction": 0,
+                    "appear": 3,
+                    "appearActiveClass": 3,
+                    "appearFromClass": 3,
+                    "appearToClass": 3,
+                    "constructor": 0,
+                    "css": 3,
+                    "duration": 3,
+                    "enterActiveClass": 3,
+                    "enterFromClass": 3,
+                    "enterToClass": 3,
+                    "leaveActiveClass": 3,
+                    "leaveFromClass": 3,
+                    "leaveToClass": 3,
+                    "mode": 3,
+                    "name": 3,
+                    "onAfterAppear": 3,
+                    "onAfterEnter": 3,
+                    "onAfterLeave": 3,
+                    "onAppear": 3,
+                    "onAppearCancelled": 3,
+                    "onBeforeAppear": 3,
+                    "onBeforeEnter": 3,
+                    "onBeforeLeave": 3,
+                    "onEnter": 3,
+                    "onEnterCancelled": 3,
+                    "onLeave": 3,
+                    "onLeaveCancelled": 3,
+                    "persisted": 3,
+                    "toJSON": 0,
+                    "type": 3,
+                    Symbol(Symbol.toStringTag): 0,
+                  },
+                  "appContext": {
+                    "app": [Circular],
+                    "components": {
+                      "transition": {
+                        "name": "transition",
+                      },
+                      "transition-group": {
+                        "name": "transition-group",
+                      },
+                    },
+                    "config": {
+                      "compilerOptions": {},
+                      "errorHandler": undefined,
+                      "globalProperties": {},
+                      "isNativeTag": [Function],
+                      "optionMergeStrategies": {},
+                      "performance": false,
+                      "warnHandler": undefined,
+                    },
+                    "directives": {},
+                    "emitsCache": WeakMap {},
+                    "mixins": [
+                      {
+                        "beforeCreate": [Function],
+                      },
+                    ],
+                    "optionsCache": WeakMap {},
+                    "propsCache": WeakMap {},
+                    "provides": {},
+                    "reload": [Function],
+                  },
+                  "asyncDep": null,
+                  "asyncResolved": false,
+                  "attrs": {},
+                  "attrsProxy": {},
+                  "bc": null,
+                  "bm": null,
+                  "bu": null,
+                  "bum": null,
+                  "c": null,
+                  "components": null,
+                  "ctx": {
+                    "appear": false,
+                    "appearActiveClass": undefined,
+                    "appearFromClass": undefined,
+                    "appearToClass": undefined,
+                    "css": true,
+                    "duration": undefined,
+                    "enterActiveClass": undefined,
+                    "enterFromClass": undefined,
+                    "enterToClass": undefined,
+                    "leaveActiveClass": undefined,
+                    "leaveFromClass": undefined,
+                    "leaveToClass": undefined,
+                    "mode": undefined,
+                    "name": undefined,
+                    "onAfterAppear": undefined,
+                    "onAfterEnter": undefined,
+                    "onAfterLeave": undefined,
+                    "onAppear": undefined,
+                    "onAppearCancelled": undefined,
+                    "onBeforeAppear": undefined,
+                    "onBeforeEnter": undefined,
+                    "onBeforeLeave": undefined,
+                    "onEnter": undefined,
+                    "onEnterCancelled": undefined,
+                    "onLeave": undefined,
+                    "onLeaveCancelled": undefined,
+                    "persisted": true,
+                    "type": undefined,
+                  },
+                  "da": null,
+                  "data": {},
+                  "directives": null,
+                  "ec": null,
+                  "effect": ReactiveEffect {
+                    "active": true,
+                    "allowRecurse": true,
+                    "deps": [
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                    ],
+                    "fn": [Function],
+                    "onTrack": undefined,
+                    "onTrigger": undefined,
+                    "parent": undefined,
+                    "scheduler": [Function],
+                  },
+                  "emit": [Function],
+                  "emitsOptions": null,
+                  "emitted": null,
+                  "exposeProxy": null,
+                  "exposed": null,
+                  "inheritAttrs": undefined,
+                  "isDeactivated": false,
+                  "isMounted": true,
+                  "isUnmounted": false,
+                  "m": null,
+                  "next": null,
+                  "parent": [Circular],
+                  "props": {
+                    "appear": false,
+                    "appearActiveClass": undefined,
+                    "appearFromClass": undefined,
+                    "appearToClass": undefined,
+                    "css": true,
+                    "duration": undefined,
+                    "enterActiveClass": undefined,
+                    "enterFromClass": undefined,
+                    "enterToClass": undefined,
+                    "leaveActiveClass": undefined,
+                    "leaveFromClass": undefined,
+                    "leaveToClass": undefined,
+                    "mode": undefined,
+                    "name": undefined,
+                    "onAfterAppear": undefined,
+                    "onAfterEnter": undefined,
+                    "onAfterLeave": undefined,
+                    "onAppear": undefined,
+                    "onAppearCancelled": undefined,
+                    "onBeforeAppear": undefined,
+                    "onBeforeEnter": undefined,
+                    "onBeforeLeave": undefined,
+                    "onEnter": undefined,
+                    "onEnterCancelled": undefined,
+                    "onLeave": undefined,
+                    "onLeaveCancelled": undefined,
+                    "persisted": true,
+                    "type": undefined,
+                  },
+                  "propsDefaults": {},
+                  "propsOptions": [
+                    {
+                      "appear": {
+                        "0": true,
+                        "1": true,
+                        "type": [Function],
+                      },
+                      "appearActiveClass": {
+                        "0": false,
+                        "1": true,
+                        "type": [Function],
+                      },
+                      "appearFromClass": {
+                        "0": false,
+                        "1": true,
+                        "type": [Function],
+                      },
+                      "appearToClass": {
+                        "0": false,
+                        "1": true,
+                        "type": [Function],
+                      },
+                      "css": {
+                        "0": true,
+                        "1": true,
+                        "default": true,
+                        "type": [Function],
+                      },
+                      "duration": {
+                        "0": false,
+                        "1": true,
+                        "type": [
+                          [Function],
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "enterActiveClass": {
+                        "0": false,
+                        "1": true,
+                        "type": [Function],
+                      },
+                      "enterFromClass": {
+                        "0": false,
+                        "1": true,
+                        "type": [Function],
+                      },
+                      "enterToClass": {
+                        "0": false,
+                        "1": true,
+                        "type": [Function],
+                      },
+                      "leaveActiveClass": {
+                        "0": false,
+                        "1": true,
+                        "type": [Function],
+                      },
+                      "leaveFromClass": {
+                        "0": false,
+                        "1": true,
+                        "type": [Function],
+                      },
+                      "leaveToClass": {
+                        "0": false,
+                        "1": true,
+                        "type": [Function],
+                      },
+                      "mode": {
+                        "0": false,
+                        "1": true,
+                        "type": [Function],
+                      },
+                      "name": {
+                        "0": false,
+                        "1": true,
+                        "type": [Function],
+                      },
+                      "onAfterAppear": {
+                        "0": false,
+                        "1": true,
+                        "type": [
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "onAfterEnter": {
+                        "0": false,
+                        "1": true,
+                        "type": [
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "onAfterLeave": {
+                        "0": false,
+                        "1": true,
+                        "type": [
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "onAppear": {
+                        "0": false,
+                        "1": true,
+                        "type": [
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "onAppearCancelled": {
+                        "0": false,
+                        "1": true,
+                        "type": [
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "onBeforeAppear": {
+                        "0": false,
+                        "1": true,
+                        "type": [
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "onBeforeEnter": {
+                        "0": false,
+                        "1": true,
+                        "type": [
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "onBeforeLeave": {
+                        "0": false,
+                        "1": true,
+                        "type": [
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "onEnter": {
+                        "0": false,
+                        "1": true,
+                        "type": [
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "onEnterCancelled": {
+                        "0": false,
+                        "1": true,
+                        "type": [
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "onLeave": {
+                        "0": false,
+                        "1": true,
+                        "type": [
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "onLeaveCancelled": {
+                        "0": false,
+                        "1": true,
+                        "type": [
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "persisted": {
+                        "0": true,
+                        "1": true,
+                        "type": [Function],
+                      },
+                      "type": {
+                        "0": false,
+                        "1": true,
+                        "type": [Function],
+                      },
+                    },
+                    [
+                      "appear",
+                      "persisted",
+                      "css",
+                    ],
+                  ],
+                  "provides": {},
+                  "proxy": {
+                    "appear": false,
+                    "appearActiveClass": undefined,
+                    "appearFromClass": undefined,
+                    "appearToClass": undefined,
+                    "css": true,
+                    "duration": undefined,
+                    "enterActiveClass": undefined,
+                    "enterFromClass": undefined,
+                    "enterToClass": undefined,
+                    "leaveActiveClass": undefined,
+                    "leaveFromClass": undefined,
+                    "leaveToClass": undefined,
+                    "mode": undefined,
+                    "name": undefined,
+                    "onAfterAppear": undefined,
+                    "onAfterEnter": undefined,
+                    "onAfterLeave": undefined,
+                    "onAppear": undefined,
+                    "onAppearCancelled": undefined,
+                    "onBeforeAppear": undefined,
+                    "onBeforeEnter": undefined,
+                    "onBeforeLeave": undefined,
+                    "onEnter": undefined,
+                    "onEnterCancelled": undefined,
+                    "onLeave": undefined,
+                    "onLeaveCancelled": undefined,
+                    "persisted": true,
+                    "type": undefined,
+                  },
+                  "refs": {},
+                  "render": [Function],
+                  "renderCache": [],
+                  "root": [Circular],
+                  "rtc": null,
+                  "rtg": null,
+                  "scope": EffectScope {
+                    "_active": true,
+                    "cleanups": [],
+                    "detached": true,
+                    "effects": [
+                      ReactiveEffect {
+                        "active": true,
+                        "allowRecurse": true,
+                        "deps": [
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                        ],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "parent": undefined,
+                        "scheduler": [Function],
+                      },
+                    ],
+                    "parent": undefined,
+                  },
+                  "setupContext": {
+                    "attrs": {},
+                    "emit": [Function],
+                    "expose": [Function],
+                    "slots": {
+                      "default": [Function],
+                    },
+                  },
+                  "setupState": {},
+                  "slots": {
+                    "default": [Function],
+                  },
+                  "slotsProxy": {
+                    "default": [Function],
+                  },
+                  "sp": null,
+                  "subTree": {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": [
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": [
+                          {
+                            "__v_isVNode": true,
+                            "__v_skip": true,
+                            "anchor": null,
+                            "appContext": null,
+                            "children": [
+                              {
+                                "__v_isVNode": true,
+                                "__v_skip": true,
+                                "anchor": null,
+                                "appContext": null,
+                                "children": null,
+                                "component": null,
+                                "ctx": [Circular],
+                                "dirs": null,
+                                "dynamicChildren": null,
+                                "dynamicProps": null,
+                                "el": </src/assets/img/icons/close.svg />,
+                                "key": null,
+                                "patchFlag": 0,
+                                "props": null,
+                                "ref": null,
+                                "scopeId": null,
+                                "shapeFlag": 1,
+                                "slotScopeIds": null,
+                                "ssContent": null,
+                                "ssFallback": null,
+                                "staticCount": 0,
+                                "suspense": null,
+                                "target": null,
+                                "targetAnchor": null,
+                                "transition": null,
+                                "type": "/src/assets/img/icons/close.svg",
+                              },
+                            ],
+                            "component": null,
+                            "ctx": [Circular],
+                            "dirs": null,
+                            "dynamicChildren": null,
+                            "dynamicProps": null,
+                            "el": <button
+                              class="button button--close"
+                            >
+                              </src/assets/img/icons/close.svg />
+                            </button>,
+                            "key": null,
+                            "patchFlag": 32,
+                            "props": {
+                              "class": "button button--close",
+                              "onClick": [Function],
+                              "onKeyup": [Function],
+                            },
+                            "ref": null,
+                            "scopeId": null,
+                            "shapeFlag": 17,
+                            "slotScopeIds": null,
+                            "ssContent": null,
+                            "ssFallback": null,
+                            "staticCount": 0,
+                            "suspense": null,
+                            "target": null,
+                            "targetAnchor": null,
+                            "transition": null,
+                            "type": "button",
+                          },
+                          {
+                            "__v_isVNode": true,
+                            "__v_skip": true,
+                            "anchor": null,
+                            "appContext": null,
+                            "children": [
+                              {
+                                "__v_isVNode": true,
+                                "__v_skip": true,
+                                "anchor": null,
+                                "appContext": null,
+                                "children": "Start now!",
+                                "component": null,
+                                "ctx": [Circular],
+                                "dirs": null,
+                                "dynamicChildren": null,
+                                "dynamicProps": null,
+                                "el": Start now!,
+                                "key": null,
+                                "patchFlag": 0,
+                                "props": null,
+                                "ref": null,
+                                "scopeId": null,
+                                "shapeFlag": 8,
+                                "slotScopeIds": null,
+                                "ssContent": null,
+                                "ssFallback": null,
+                                "staticCount": 0,
+                                "suspense": null,
+                                "target": null,
+                                "targetAnchor": null,
+                                "transition": null,
+                                "type": Symbol(v-txt),
+                              },
+                            ],
+                            "component": null,
+                            "ctx": [Circular],
+                            "dirs": null,
+                            "dynamicChildren": null,
+                            "dynamicProps": null,
+                            "el": <nuxtlink
+                              class="button navbar-cta"
+                              href="/create"
+                            >
+                              Start now!
+                            </nuxtlink>,
+                            "key": null,
+                            "patchFlag": 0,
+                            "props": {
+                              "class": "button navbar-cta",
+                              "href": "/create",
+                            },
+                            "ref": null,
+                            "scopeId": null,
+                            "shapeFlag": 17,
+                            "slotScopeIds": null,
+                            "ssContent": null,
+                            "ssFallback": null,
+                            "staticCount": 0,
+                            "suspense": null,
+                            "target": null,
+                            "targetAnchor": null,
+                            "transition": null,
+                            "type": "NuxtLink",
+                          },
+                          {
+                            "__v_isVNode": true,
+                            "__v_skip": true,
+                            "anchor": null,
+                            "appContext": null,
+                            "children": [
+                              {
+                                "__v_isVNode": true,
+                                "__v_skip": true,
+                                "anchor": null,
+                                "appContext": null,
+                                "children": "About us",
+                                "component": null,
+                                "ctx": [Circular],
+                                "dirs": null,
+                                "dynamicChildren": null,
+                                "dynamicProps": null,
+                                "el": About us,
+                                "key": null,
+                                "patchFlag": 0,
+                                "props": null,
+                                "ref": null,
+                                "scopeId": null,
+                                "shapeFlag": 8,
+                                "slotScopeIds": null,
+                                "ssContent": null,
+                                "ssFallback": null,
+                                "staticCount": 0,
+                                "suspense": null,
+                                "target": null,
+                                "targetAnchor": null,
+                                "transition": null,
+                                "type": Symbol(v-txt),
+                              },
+                            ],
+                            "component": null,
+                            "ctx": [Circular],
+                            "dirs": null,
+                            "dynamicChildren": null,
+                            "dynamicProps": null,
+                            "el": <nuxtlink
+                              href="/about"
+                            >
+                              About us
+                            </nuxtlink>,
+                            "key": null,
+                            "patchFlag": 0,
+                            "props": {
+                              "href": "/about",
+                            },
+                            "ref": null,
+                            "scopeId": null,
+                            "shapeFlag": 17,
+                            "slotScopeIds": null,
+                            "ssContent": null,
+                            "ssFallback": null,
+                            "staticCount": 0,
+                            "suspense": null,
+                            "target": null,
+                            "targetAnchor": null,
+                            "transition": null,
+                            "type": "NuxtLink",
+                          },
+                          {
+                            "__v_isVNode": true,
+                            "__v_skip": true,
+                            "anchor": null,
+                            "appContext": null,
+                            "children": [
+                              {
+                                "__v_isVNode": true,
+                                "__v_skip": true,
+                                "anchor": null,
+                                "appContext": null,
+                                "children": "Why Meditation?",
+                                "component": null,
+                                "ctx": [Circular],
+                                "dirs": null,
+                                "dynamicChildren": null,
+                                "dynamicProps": null,
+                                "el": Why Meditation?,
+                                "key": null,
+                                "patchFlag": 0,
+                                "props": null,
+                                "ref": null,
+                                "scopeId": null,
+                                "shapeFlag": 8,
+                                "slotScopeIds": null,
+                                "ssContent": null,
+                                "ssFallback": null,
+                                "staticCount": 0,
+                                "suspense": null,
+                                "target": null,
+                                "targetAnchor": null,
+                                "transition": null,
+                                "type": Symbol(v-txt),
+                              },
+                            ],
+                            "component": null,
+                            "ctx": [Circular],
+                            "dirs": null,
+                            "dynamicChildren": null,
+                            "dynamicProps": null,
+                            "el": <nuxtlink
+                              href="/why-meditation"
+                            >
+                              Why Meditation?
+                            </nuxtlink>,
+                            "key": null,
+                            "patchFlag": 0,
+                            "props": {
+                              "href": "/why-meditation",
+                            },
+                            "ref": null,
+                            "scopeId": null,
+                            "shapeFlag": 17,
+                            "slotScopeIds": null,
+                            "ssContent": null,
+                            "ssFallback": null,
+                            "staticCount": 0,
+                            "suspense": null,
+                            "target": null,
+                            "targetAnchor": null,
+                            "transition": null,
+                            "type": "NuxtLink",
+                          },
+                        ],
+                        "component": null,
+                        "ctx": [Circular],
+                        "dirs": [
+                          {
+                            "arg": undefined,
+                            "dir": {
+                              "beforeMount": [Function],
+                              "beforeUnmount": [Function],
+                              "getSSRProps": [Function],
+                              "mounted": [Function],
+                              "updated": [Function],
+                            },
+                            "instance": {},
+                            "modifiers": {},
+                            "oldValue": undefined,
+                            "value": false,
+                          },
+                        ],
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <div
+                          aria-expanded="true"
+                          class="navbar-start"
+                          style="display: none;"
+                        >
+                          <button
+                            class="button button--close"
+                          >
+                            </src/assets/img/icons/close.svg />
+                          </button>
+                          <nuxtlink
+                            class="button navbar-cta"
+                            href="/create"
+                          >
+                            Start now!
+                          </nuxtlink>
+                          <nuxtlink
+                            href="/about"
+                          >
+                            About us
+                          </nuxtlink>
+                          <nuxtlink
+                            href="/why-meditation"
+                          >
+                            Why Meditation?
+                          </nuxtlink>
+                        </div>,
+                        "key": null,
+                        "patchFlag": 2,
+                        "props": {
+                          "aria-expanded": "true",
+                          "class": "navbar-start",
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 17,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "div",
+                      },
+                    ],
+                    "component": null,
+                    "ctx": [Circular],
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <transition-stub
+                      appear="false"
+                      css="true"
+                      persisted="true"
+                    >
+                      <div
+                        aria-expanded="true"
+                        class="navbar-start"
+                        style="display: none;"
+                      >
+                        <button
+                          class="button button--close"
+                        >
+                          </src/assets/img/icons/close.svg />
+                        </button>
+                        <nuxtlink
+                          class="button navbar-cta"
+                          href="/create"
+                        >
+                          Start now!
+                        </nuxtlink>
+                        <nuxtlink
+                          href="/about"
+                        >
+                          About us
+                        </nuxtlink>
+                        <nuxtlink
+                          href="/why-meditation"
+                        >
+                          Why Meditation?
+                        </nuxtlink>
+                      </div>
+                    </transition-stub>,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": {
+                      "appear": false,
+                      "appearActiveClass": undefined,
+                      "appearFromClass": undefined,
+                      "appearToClass": undefined,
+                      "css": true,
+                      "duration": undefined,
+                      "enterActiveClass": undefined,
+                      "enterFromClass": undefined,
+                      "enterToClass": undefined,
+                      "leaveActiveClass": undefined,
+                      "leaveFromClass": undefined,
+                      "leaveToClass": undefined,
+                      "mode": undefined,
+                      "name": undefined,
+                      "onAfterAppear": undefined,
+                      "onAfterEnter": undefined,
+                      "onAfterLeave": undefined,
+                      "onAppear": undefined,
+                      "onAppearCancelled": undefined,
+                      "onBeforeAppear": undefined,
+                      "onBeforeEnter": undefined,
+                      "onBeforeLeave": undefined,
+                      "onEnter": undefined,
+                      "onEnterCancelled": undefined,
+                      "onLeave": undefined,
+                      "onLeaveCancelled": undefined,
+                      "persisted": true,
+                      "type": undefined,
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 17,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "transition-stub",
+                  },
+                  "suspense": null,
+                  "suspenseId": 0,
+                  "type": {
+                    "model": undefined,
+                    "name": "transition",
+                    "props": {
+                      "appear": [Function],
+                      "appearActiveClass": [Function],
+                      "appearFromClass": [Function],
+                      "appearToClass": [Function],
+                      "css": {
+                        "default": true,
+                        "type": [Function],
+                      },
+                      "duration": [
+                        [Function],
+                        [Function],
+                        [Function],
+                      ],
+                      "enterActiveClass": [Function],
+                      "enterFromClass": [Function],
+                      "enterToClass": [Function],
+                      "leaveActiveClass": [Function],
+                      "leaveFromClass": [Function],
+                      "leaveToClass": [Function],
+                      "mode": [Function],
+                      "name": [Function],
+                      "onAfterAppear": [
+                        [Function],
+                        [Function],
+                      ],
+                      "onAfterEnter": [
+                        [Function],
+                        [Function],
+                      ],
+                      "onAfterLeave": [
+                        [Function],
+                        [Function],
+                      ],
+                      "onAppear": [
+                        [Function],
+                        [Function],
+                      ],
+                      "onAppearCancelled": [
+                        [Function],
+                        [Function],
+                      ],
+                      "onBeforeAppear": [
+                        [Function],
+                        [Function],
+                      ],
+                      "onBeforeEnter": [
+                        [Function],
+                        [Function],
+                      ],
+                      "onBeforeLeave": [
+                        [Function],
+                        [Function],
+                      ],
+                      "onEnter": [
+                        [Function],
+                        [Function],
+                      ],
+                      "onEnterCancelled": [
+                        [Function],
+                        [Function],
+                      ],
+                      "onLeave": [
+                        [Function],
+                        [Function],
+                      ],
+                      "onLeaveCancelled": [
+                        [Function],
+                        [Function],
+                      ],
+                      "persisted": [Function],
+                      "type": [Function],
+                    },
+                    "setup": [Function],
+                  },
+                  "u": null,
+                  "uid": 2,
+                  "um": null,
+                  "update": [Function],
+                  "vnode": [Circular],
+                  "withProxy": null,
+                },
+                "ctx": [Circular],
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <transition-stub
+                  appear="false"
+                  css="true"
+                  persisted="true"
+                >
+                  <div
+                    aria-expanded="true"
+                    class="navbar-start"
+                    style="display: none;"
+                  >
+                    <button
+                      class="button button--close"
+                    >
+                      </src/assets/img/icons/close.svg />
+                    </button>
+                    <nuxtlink
+                      class="button navbar-cta"
+                      href="/create"
+                    >
+                      Start now!
+                    </nuxtlink>
+                    <nuxtlink
+                      href="/about"
+                    >
+                      About us
+                    </nuxtlink>
+                    <nuxtlink
+                      href="/why-meditation"
+                    >
+                      Why Meditation?
+                    </nuxtlink>
+                  </div>
+                </transition-stub>,
+                "key": null,
+                "patchFlag": 0,
+                "props": {
+                  "persisted": "",
+                },
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 36,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": {
+                  "model": undefined,
+                  "name": "transition",
+                  "props": {
+                    "appear": [Function],
+                    "appearActiveClass": [Function],
+                    "appearFromClass": [Function],
+                    "appearToClass": [Function],
+                    "css": {
+                      "default": true,
+                      "type": [Function],
+                    },
+                    "duration": [
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "enterActiveClass": [Function],
+                    "enterFromClass": [Function],
+                    "enterToClass": [Function],
+                    "leaveActiveClass": [Function],
+                    "leaveFromClass": [Function],
+                    "leaveToClass": [Function],
+                    "mode": [Function],
+                    "name": [Function],
+                    "onAfterAppear": [
+                      [Function],
+                      [Function],
+                    ],
+                    "onAfterEnter": [
+                      [Function],
+                      [Function],
+                    ],
+                    "onAfterLeave": [
+                      [Function],
+                      [Function],
+                    ],
+                    "onAppear": [
+                      [Function],
+                      [Function],
+                    ],
+                    "onAppearCancelled": [
+                      [Function],
+                      [Function],
+                    ],
+                    "onBeforeAppear": [
+                      [Function],
+                      [Function],
+                    ],
+                    "onBeforeEnter": [
+                      [Function],
+                      [Function],
+                    ],
+                    "onBeforeLeave": [
+                      [Function],
+                      [Function],
+                    ],
+                    "onEnter": [
+                      [Function],
+                      [Function],
+                    ],
+                    "onEnterCancelled": [
+                      [Function],
+                      [Function],
+                    ],
+                    "onLeave": [
+                      [Function],
+                      [Function],
+                    ],
+                    "onLeaveCancelled": [
+                      [Function],
+                      [Function],
+                    ],
+                    "persisted": [Function],
+                    "type": [Function],
+                  },
+                  "setup": [Function],
+                },
+              },
+            ],
+            "dynamicProps": null,
+            "el": <nav
+              aria-label="main navigation"
+              class="navbar"
+              role="navigation"
+            >
+              <div
+                class="navbar-brand"
+              >
+                <a
+                  aria-label="SereneGrove"
+                  class="navbar-item navbar-item--logo"
+                  href="/"
+                >
+                  <logo
+                    horizontal="true"
+                  />
+                </a>
+              </div>
+              <div
+                class="navbar-menu"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-label="menu"
+                  class="navbar-burger"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    aria-hidden="true"
+                  />
+                  <span
+                    aria-hidden="true"
+                  />
+                  <span
+                    aria-hidden="true"
+                  />
+                </a>
+                <transition-stub
+                  appear="false"
+                  css="true"
+                  persisted="true"
+                >
+                  <div
+                    aria-expanded="true"
+                    class="navbar-start"
+                    style="display: none;"
+                  >
+                    <button
+                      class="button button--close"
+                    >
+                      </src/assets/img/icons/close.svg />
+                    </button>
+                    <nuxtlink
+                      class="button navbar-cta"
+                      href="/create"
+                    >
+                      Start now!
+                    </nuxtlink>
+                    <nuxtlink
+                      href="/about"
+                    >
+                      About us
+                    </nuxtlink>
+                    <nuxtlink
+                      href="/why-meditation"
+                    >
+                      Why Meditation?
+                    </nuxtlink>
+                  </div>
+                </transition-stub>
+              </div>
+            </nav>,
+            "key": null,
+            "patchFlag": 0,
+            "props": {
+              "aria-label": "main navigation",
+              "class": "navbar",
+              "role": "navigation",
+            },
+            "ref": null,
+            "scopeId": null,
+            "shapeFlag": 17,
+            "slotScopeIds": null,
+            "ssContent": null,
+            "ssFallback": null,
+            "staticCount": 0,
+            "suspense": null,
+            "target": null,
+            "targetAnchor": null,
+            "transition": null,
+            "type": "nav",
+          },
+          "suspense": null,
+          "suspenseId": 0,
+          "type": {
+            "__file": "/Users/danielerapisarda/projects/serenegrove/components/Navigation.vue",
+            "__name": "Navigation",
+            "components": {},
+            "render": [Function],
+            "setup": [Function],
+          },
+          "u": null,
+          "uid": 1,
+          "um": null,
+          "update": [Function],
+          "vnode": [Circular],
+          "withProxy": null,
+        },
+        "ctx": [Circular],
+        "dirs": null,
+        "dynamicChildren": null,
+        "dynamicProps": null,
+        "el": <nav
+          aria-label="main navigation"
+          class="navbar"
+          role="navigation"
+        >
+          <div
+            class="navbar-brand"
+          >
+            <a
+              aria-label="SereneGrove"
+              class="navbar-item navbar-item--logo"
+              href="/"
+            >
+              <logo
+                horizontal="true"
+              />
+            </a>
+          </div>
+          <div
+            class="navbar-menu"
+          >
+            <a
+              aria-expanded="false"
+              aria-label="menu"
+              class="navbar-burger"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                aria-hidden="true"
+              />
+              <span
+                aria-hidden="true"
+              />
+              <span
+                aria-hidden="true"
+              />
+            </a>
+            <transition-stub
+              appear="false"
+              css="true"
+              persisted="true"
+            >
+              <div
+                aria-expanded="true"
+                class="navbar-start"
+                style="display: none;"
+              >
+                <button
+                  class="button button--close"
+                >
+                  </src/assets/img/icons/close.svg />
+                </button>
+                <nuxtlink
+                  class="button navbar-cta"
+                  href="/create"
+                >
+                  Start now!
+                </nuxtlink>
+                <nuxtlink
+                  href="/about"
+                >
+                  About us
+                </nuxtlink>
+                <nuxtlink
+                  href="/why-meditation"
+                >
+                  Why Meditation?
+                </nuxtlink>
+              </div>
+            </transition-stub>
+          </div>
+        </nav>,
+        "key": null,
+        "patchFlag": 0,
+        "props": {
+          "ref": "VTU_COMPONENT",
+        },
+        "ref": {
+          "f": false,
+          "i": [Circular],
+          "k": undefined,
+          "r": "VTU_COMPONENT",
+        },
+        "scopeId": null,
+        "shapeFlag": 4,
+        "slotScopeIds": null,
+        "ssContent": null,
+        "ssFallback": null,
+        "staticCount": 0,
+        "suspense": null,
+        "target": null,
+        "targetAnchor": null,
+        "transition": null,
+        "type": {
+          "__file": "/Users/danielerapisarda/projects/serenegrove/components/Navigation.vue",
+          "__name": "Navigation",
+          "components": {},
+          "render": [Function],
+          "setup": [Function],
+        },
+      },
+      "suspense": null,
+      "suspenseId": 0,
+      "type": {
+        "name": "VTU_ROOT",
+        "render": [Function],
+        "setup": [Function],
+      },
+      "u": null,
+      "uid": 0,
+      "um": null,
+      "update": [Function],
+      "vnode": {
+        "__v_isVNode": true,
+        "__v_skip": true,
+        "anchor": null,
+        "appContext": {
+          "app": [Circular],
+          "components": {
+            "transition": {
+              "name": "transition",
+            },
+            "transition-group": {
+              "name": "transition-group",
+            },
+          },
+          "config": {
+            "compilerOptions": {},
+            "errorHandler": undefined,
+            "globalProperties": {},
+            "isNativeTag": [Function],
+            "optionMergeStrategies": {},
+            "performance": false,
+            "warnHandler": undefined,
+          },
+          "directives": {},
+          "emitsCache": WeakMap {},
+          "mixins": [
+            {
+              "beforeCreate": [Function],
+            },
+          ],
+          "optionsCache": WeakMap {},
+          "propsCache": WeakMap {},
+          "provides": {},
+          "reload": [Function],
+        },
+        "children": null,
+        "component": [Circular],
+        "ctx": null,
+        "dirs": null,
+        "dynamicChildren": null,
+        "dynamicProps": null,
+        "el": <nav
+          aria-label="main navigation"
+          class="navbar"
+          role="navigation"
+        >
+          <div
+            class="navbar-brand"
+          >
+            <a
+              aria-label="SereneGrove"
+              class="navbar-item navbar-item--logo"
+              href="/"
+            >
+              <logo
+                horizontal="true"
+              />
+            </a>
+          </div>
+          <div
+            class="navbar-menu"
+          >
+            <a
+              aria-expanded="false"
+              aria-label="menu"
+              class="navbar-burger"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                aria-hidden="true"
+              />
+              <span
+                aria-hidden="true"
+              />
+              <span
+                aria-hidden="true"
+              />
+            </a>
+            <transition-stub
+              appear="false"
+              css="true"
+              persisted="true"
+            >
+              <div
+                aria-expanded="true"
+                class="navbar-start"
+                style="display: none;"
+              >
+                <button
+                  class="button button--close"
+                >
+                  </src/assets/img/icons/close.svg />
+                </button>
+                <nuxtlink
+                  class="button navbar-cta"
+                  href="/create"
+                >
+                  Start now!
+                </nuxtlink>
+                <nuxtlink
+                  href="/about"
+                >
+                  About us
+                </nuxtlink>
+                <nuxtlink
+                  href="/why-meditation"
+                >
+                  Why Meditation?
+                </nuxtlink>
+              </div>
+            </transition-stub>
+          </div>
+        </nav>,
+        "key": null,
+        "patchFlag": 0,
+        "props": null,
+        "ref": null,
+        "scopeId": null,
+        "shapeFlag": 4,
+        "slotScopeIds": null,
+        "ssContent": null,
+        "ssFallback": null,
+        "staticCount": 0,
+        "suspense": null,
+        "target": null,
+        "targetAnchor": null,
+        "transition": null,
+        "type": {
+          "name": "VTU_ROOT",
+          "render": [Function],
+          "setup": [Function],
+        },
+      },
+      "withProxy": null,
+    },
+    "_props": null,
+    "_uid": 0,
+    "component": [Function],
+    "config": {
+      "compilerOptions": {},
+      "errorHandler": undefined,
+      "globalProperties": {},
+      "isNativeTag": [Function],
+      "optionMergeStrategies": {},
+      "performance": false,
+      "warnHandler": undefined,
+    },
+    "directive": [Function],
+    "mixin": [Function],
+    "mount": [Function],
+    "provide": [Function],
+    "runWithContext": [Function],
+    "unmount": [Function],
+    "use": [Function],
+    "version": "3.3.11",
+  },
+  "__setProps": [Function],
+  "cleanUpCallbacks": [
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+  ],
+  "componentVM": {},
+  "isDisabled": [Function],
+  "rootVM": {
+    "VTU_COMPONENT": {},
+  },
+  "wrapperElement": <nav
+    aria-label="main navigation"
+    class="navbar"
+    role="navigation"
+  >
+    <div
+      class="navbar-brand"
+    >
+      <a
+        aria-label="SereneGrove"
+        class="navbar-item navbar-item--logo"
+        href="/"
+      >
+        <logo
+          horizontal="true"
+        />
+      </a>
+    </div>
+    <div
+      class="navbar-menu"
+    >
+      <a
+        aria-expanded="false"
+        aria-label="menu"
+        class="navbar-burger"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="true"
+        />
+        <span
+          aria-hidden="true"
+        />
+        <span
+          aria-hidden="true"
+        />
+      </a>
+      <transition-stub
+        appear="false"
+        css="true"
+        persisted="true"
+      >
+        <div
+          aria-expanded="true"
+          class="navbar-start"
+          style="display: none;"
+        >
+          <button
+            class="button button--close"
+          >
+            </src/assets/img/icons/close.svg />
+          </button>
+          <nuxtlink
+            class="button navbar-cta"
+            href="/create"
+          >
+            Start now!
+          </nuxtlink>
+          <nuxtlink
+            href="/about"
+          >
+            About us
+          </nuxtlink>
+          <nuxtlink
+            href="/why-meditation"
+          >
+            Why Meditation?
+          </nuxtlink>
+        </div>
+      </transition-stub>
+    </div>
+  </nav>,
+}
+`;
