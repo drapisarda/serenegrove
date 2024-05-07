@@ -32,7 +32,7 @@
         <button
           class="card-header-icon card-actions--remove"
           aria-label="remove element"
-          @click="$emit('remove', { id: index, name: step.name })"
+          @click="remove"
         >
           <Bin />
         </button>
@@ -82,6 +82,10 @@ const moveUp = () => {
 const moveDown = () => {
   if (props.isLast) return
   emit('moveDown', props.index)
+}
+
+const remove = () => {
+  emit('remove', { index: props.index, name: props.step.name })
 }
 </script>
 
