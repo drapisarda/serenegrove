@@ -30,9 +30,10 @@
               </div>
 
               <div
-                class="player__page player__page--carousel hide-default"
-                :class="{ show: !stopStatus }"
+                v-show="!stopStatus"
+                class="player__page player__page--carousel"
               >
+                <!-- TODO FIX UI -->
                 <Loader
                   v-if="!stopStatus"
                   message="Your meditation is loading..."
@@ -65,35 +66,28 @@
         <div class="player__playing-actions">
           <div class="container is-max-desktop">
             <div class="player__actions row">
-              <div
-                v-show="pauseStatus && !stopStatus"
-                class="col-xs-6 player__action player__action--play-pause"
-              >
+              <div class="col-xs-6 player__action player__action--play-pause">
                 <button
+                  v-show="pauseStatus && !stopStatus"
                   class="button player__action__button--play"
                   @click="play"
                 >
                   <Play />
                   <div>Play</div>
                 </button>
-              </div>
-              <div
-                v-show="!pauseStatus && !stopStatus"
-                class="col-xs-6 player__action player__action--play-pause"
-              >
                 <button
+                  v-show="!pauseStatus && !stopStatus"
                   class="button player__action__button--pause"
                   @click="pause"
                 >
                   <Pause />
                   <div>Pause</div>
                 </button>
-              </div>
-              <div
-                v-if="stopStatus && askFeedback"
-                class="col-ms-8 player__action player__action--stop"
-              >
-                <button class="button" @click="stopAndClose">
+                <button
+                  v-if="stopStatus && askFeedback"
+                  class="button player__action__button--stop"
+                  @click="stopAndClose"
+                >
                   End your meditation
                 </button>
               </div>
@@ -137,10 +131,6 @@ import Pause from '@/src/assets/img/icons/pause-button.svg'
 import CloseIcon from '@/src/assets/img/icons/close.svg'
 import { clipHtml } from '@/composables/clipHtml'
 
-const baseURL = import.meta.env.BASE_URL
-const debugAudio = `${baseURL}/assets/audio/1.mp3`
-const debug = false
-
 const props = defineProps({
   playerSteps: {
     type: Object as PropType<Step[]>,
@@ -168,13 +158,11 @@ const visibleStatus = ref(false)
 clipHtml(visibleStatus)
 
 const askFeedback = ref(false)
-const askDuration = ref(false)
 const activeStatus = computed(
   (): boolean => !props.disabled && visibleStatus.value,
 )
 
 const audio = ref<HTMLAudioElement>()
-const audioUrl = ref<string | null>(null)
 const audioCache = new Map<string, string>()
 
 const currentStep = computed((): Step => {
@@ -223,14 +211,6 @@ const playAudioFile = async (fileRelativeUrl: string) => {
   }
 }
 
-// This is for reset or debug purpose
-// const audioCacheClean = () => {
-//   audioCache.forEach((blob: string, fileName: string) => {
-//     URL.revokeObjectURL(blob);
-//     audioCache.delete(fileName);
-//   })
-// }
-
 const getAudioFileUrl = async (file: string): Promise<string> => {
   if (audioCache.has(file)) {
     return audioCache.get(file)!
@@ -240,6 +220,7 @@ const getAudioFileUrl = async (file: string): Promise<string> => {
     const response = await fetch(file)
     const blob = await response.blob()
     const fileUrl = URL.createObjectURL(blob)
+    audioCache.set(file, fileUrl)
     return fileUrl
   } catch (error) {
     console.error(error)
@@ -252,13 +233,11 @@ const getAudioFileUrl = async (file: string): Promise<string> => {
 const loadAllSteps = async () => {
   return Promise.all(
     props.playerSteps.map(async (step: Step) => {
-      if (audioCache.has(step.file) || stopStatus.value) {
-        return
-      }
-
       try {
-        if (audioCache.get(step.file)) return
-        audioCache.set(step.file, await getAudioFileUrl(step.file))
+        if (audioCache.has(step.file)) return
+        return getAudioFileUrl(step.file).then((fileBlob) =>
+          audioCache.set(step.file, fileBlob),
+        )
       } catch (error) {
         console.error(error)
       }
@@ -266,25 +245,18 @@ const loadAllSteps = async () => {
   )
 }
 
-const display = () => {
+const display = async () => {
   visibleStatus.value = true
-  play()
+  await play()
 }
 
 const play = async () => {
   if (!activeStatus.value) return
 
-  askDuration.value = false
-
-  if (debug) {
-    props.playerSteps.map((step: Step) => {
-      step.file = debugAudio
-      return step
-    })
-  }
-
   stopStatus.value = false
   pauseStatus.value = false
+  await loadAllSteps()
+  loadedStatus.value = true
 
   // pause/play behavior
   if (currentStep.value) {
@@ -293,31 +265,18 @@ const play = async () => {
   }
 
   currentIndex.value = 0
-
-  await loadAllSteps()
-  loadedStatus.value = true
-
-  // the user stops before finishing the loading
-  if (stopStatus.value) {
-    loadedStatus.value = false
-    return
-  }
-
   playAudioFile(props.playerSteps[0].file)
 }
 
 const pause = () => {
-  if (!audio.value) return
   pauseStatus.value = true
-
-  audio.value.pause()
+  audio.value?.pause()
 }
 
 const stopAndClose = () => {
   stop()
   visibleStatus.value = false
   askFeedback.value = false
-  askDuration.value = false
 }
 
 const stopOrClose = () => {
@@ -330,17 +289,9 @@ const stop = () => {
   stopStatus.value = true
   pauseStatus.value = true
   askFeedback.value = true
-  if (!audio.value) return
-  audio.value.pause()
-
-  setTimeout(() => {
-    currentIndex.value = -1
-    if (!audio.value) return
-    audio.value.currentTime = 0
-    if (audioUrl.value) {
-      audioUrl.value = null
-    }
-  }, 1000)
+  audio.value?.pause()
+  currentIndex.value = -1
+  audio.value ? (audio.value.currentTime = 0) : null
 }
 </script>
 
@@ -397,6 +348,12 @@ const stop = () => {
     top: 0;
     width: 100%;
     height: 100%;
+
+    &--carousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__start {

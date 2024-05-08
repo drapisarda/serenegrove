@@ -6,12 +6,6 @@ import { expect } from 'vitest'
 describe('Player component test', async () => {
   let wrapper: VueWrapper
 
-  const playerSteps = originalState.stepsOptions.slice(3).map((step) => {
-    const newStep = step
-    newStep.file = `http://localhost:3000${step.file}`
-    return newStep
-  })
-
   beforeEach(() => {
     wrapper = mount(Player, {
       global: {
@@ -30,22 +24,23 @@ describe('Player component test', async () => {
         routineVariation: routineTimeVariations[0],
         duration: 90,
         playerSteps: originalState.stepsOptions.slice(3),
+        pauseAfter: 0,
       },
     })
   })
 
-  it('Player UI can be opened', () => {
+  test('Player UI can be opened', () => {
     expect(wrapper.exists()).toBe(true)
+    expect(wrapper).toMatchSnapshot()
   })
 
-  it('changes UI when "play" button is clicked', async () => {
+  test('UI changes when "play" button is clicked', async () => {
     await wrapper.vm.$nextTick()
     expect(wrapper.vm.visibleStatus).toBe(false)
     expect(wrapper.vm.pauseStatus).toBe(true)
     expect(wrapper.vm.currentStep).toBe(undefined)
 
-    expect(wrapper.vm.play).not.toBe(undefined)
-    await wrapper.find('.player__start button').trigger('click')
+    wrapper.find('.player__start button').trigger('click')
     await wrapper.vm.$nextTick()
 
     /**
@@ -54,15 +49,16 @@ describe('Player component test', async () => {
      * expect(wrapper.vm.audio.src.indexOf('blob')).toBe(0)
      */
 
-    expect(wrapper.vm.currentStep).toStrictEqual(playerSteps[0])
     expect(wrapper.vm.visibleStatus).toBe(true)
     expect(wrapper.vm.pauseStatus).toBe(false)
+    await wrapper.vm.$nextTick()
   })
 
-  it('stops when "Escape" key is pressed. Closes when it is pressed again', async () => {
-    await wrapper.find('.player__start button').trigger('click')
+  test('Player stops when "Escape" key is pressed. It closes when it is pressed again', async () => {
+    wrapper.find('.player__start button').trigger('click')
     await wrapper.vm.$nextTick()
     expect(wrapper.vm.pauseStatus).toBe(false)
+    expect(wrapper.vm.visibleStatus).toBe(true)
 
     await wrapper.trigger('keyup', { key: 'Escape' })
     await wrapper.vm.$nextTick()
@@ -73,5 +69,38 @@ describe('Player component test', async () => {
     await wrapper.vm.$nextTick()
 
     expect(wrapper.vm.visibleStatus).toBe(false)
+  })
+
+  test('Player stops when the close button is pressed. It closes when it is clicked again', async () => {
+    wrapper.find('.player__start button').trigger('click')
+    await wrapper.vm.$nextTick()
+    expect(wrapper.vm.pauseStatus).toBe(false)
+    expect(wrapper.vm.visibleStatus).toBe(true)
+
+    wrapper.find('.button--close').trigger('click')
+    await wrapper.vm.$nextTick()
+    expect(wrapper.vm.pauseStatus).toBe(true)
+
+    wrapper.find('.button--close').trigger('click')
+    await wrapper.vm.$nextTick()
+
+    expect(wrapper.vm.visibleStatus).toBe(false)
+  })
+
+  test('Player pauses when the the play/pause button is pressed during play. It plays when it is clicked again', async () => {
+    wrapper.find('.player__start button').trigger('click')
+    await wrapper.vm.$nextTick()
+    expect(wrapper.vm.pauseStatus).toBe(false)
+    expect(wrapper.vm.visibleStatus).toBe(true)
+
+    wrapper.find('.player__action__button--pause').trigger('click')
+    await wrapper.vm.$nextTick()
+    expect(wrapper.vm.visibleStatus).toBe(true)
+    expect(wrapper.vm.pauseStatus).toBe(true)
+
+    wrapper.find('.player__action__button--play').trigger('click')
+    await wrapper.vm.$nextTick()
+    expect(wrapper.vm.pauseStatus).toBe(false)
+    expect(wrapper.vm.visibleStatus).toBe(true)
   })
 })

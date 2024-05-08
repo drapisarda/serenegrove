@@ -120,7 +120,7 @@ describe('Player usages', () => {
     // exit
     cy.get('.player__playing .button--close').click()
     cy.get('.feedback-request').contains('How you liked this meditation?')
-    cy.get('.player__playing .player__action--stop').click()
+    cy.get('.player__playing .player__action__button--stop').click()
     cy.get('.player__playing').should('not.be.visible')
   })
 })
