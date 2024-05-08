@@ -4,10 +4,9 @@
     :class="{ open: routineOpen, 'scrolling-down': scrollingDown }"
     role="button"
     tabindex="0"
-    @touchstart.self="manageTouchStart($event)"
-    @touchend.self="manageTouchEnd()"
-    @touchmove.self="manageTouchMove"
-    @drag.self="manageDrag"
+    @touchstart="manageTouchStart($event)"
+    @touchend="manageTouchEnd($event)"
+    @touchmove="manageTouchMove($event)"
   >
     <div
       class="playlist__toggle"
@@ -29,13 +28,14 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
 import UpShevron from '@/src/assets/img/icons/up-chevron.svg'
 import DownShevron from '@/src/assets/img/icons/down-chevron.svg'
 
 const routineOpen = ref(false)
 let touchStart = 0
 let touchLast: number
-const scrollDownLimit = 300
+const scrollDownLimit = 150
 const scrollingDown = ref(false)
 
 const routineToggle = () => {
@@ -43,10 +43,11 @@ const routineToggle = () => {
   scrollingDown.value = false
 }
 const manageTouchStart = (event: TouchEvent) => {
-  if (!event.touches || !event.touches[0]) return
   touchStart = event.touches[0].pageY
 }
-const manageTouchEnd = () => {
+
+const manageTouchEnd = (event: TouchEvent) => {
+  event.stopPropagation()
   scrollingDown.value = false
   if (touchLast - touchStart < scrollDownLimit) return
   touchLast = 0
@@ -56,11 +57,9 @@ const manageTouchMove = (event: TouchEvent) => {
   touchLast = event.touches[0].pageY
   const scrollValue = touchLast - touchStart
   if (scrollValue < 0) return
-  scrollingDown.value = scrollValue > scrollDownLimit / 3
+  scrollingDown.value = scrollValue > scrollDownLimit
   if (scrollValue > scrollDownLimit) manageTouchEnd(event)
 }
-
-const manageDrag = (event: DragEvent) => console.log(event)
 </script>
 
 <style lang="scss">
