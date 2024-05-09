@@ -47,12 +47,8 @@
             </div>
           </div>
 
-          <div class="player__time section" :class="{ hide: stopStatus }">
-            <RoutineTimer
-              :time="duration"
-              :start="!pauseStatus"
-              :stop="stopStatus"
-            />
+          <div v-show="!stopStatus" class="player__time section">
+            <RoutineTimer ref="timer" :time="duration" />
           </div>
 
           <audio
@@ -66,7 +62,9 @@
         <div class="player__playing-actions">
           <div class="container is-max-desktop">
             <div class="player__actions row">
-              <div class="col-xs-6 player__action player__action--play-pause">
+              <div
+                class="col-xs-12 col-sm-10 player__action player__action--play-pause"
+              >
                 <button
                   v-show="pauseStatus && !stopStatus"
                   class="button player__action__button--play"
@@ -125,7 +123,7 @@
 
 <script lang="ts" setup>
 import { type Step, type RoutineTimeVariationType } from '@/store/types'
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import Play from '@/src/assets/img/icons/play-button.svg'
 import Pause from '@/src/assets/img/icons/pause-button.svg'
 import CloseIcon from '@/src/assets/img/icons/close.svg'
@@ -163,6 +161,7 @@ const activeStatus = computed(
 )
 
 const audio = ref<HTMLAudioElement>()
+const timer = ref(null)
 const audioCache = new Map<string, string>()
 
 const currentStep = computed((): Step => {
@@ -173,6 +172,18 @@ const handleKeys = (event: KeyboardEvent) => {
   if (event.key === 'Escape') stopOrClose()
   if (event.key === ' ') pauseStatus.value ? play() : pause()
 }
+
+watch(stopStatus, (newValue) => {
+  if (!timer.value) return
+  if (!newValue) return
+  timer.value.stopTimer()
+})
+
+watch(pauseStatus, (newValue) => {
+  if (!timer.value) return
+  if (newValue) timer.value.pauseTimer()
+  else timer.value.startTimer()
+})
 
 const playNext = async () => {
   setTimeout(

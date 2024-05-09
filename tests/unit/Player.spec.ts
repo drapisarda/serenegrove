@@ -1,4 +1,5 @@
 import Player from '@/components/Player.vue'
+import RoutineTimer from '@/components/RoutineTimer.vue'
 import { mount, type VueWrapper } from '@vue/test-utils'
 import { originalState, routineTimeVariations } from '@/store/vars'
 import { expect } from 'vitest'
@@ -13,7 +14,7 @@ describe('Player component test', async () => {
           ClientOnly: {
             template: '<div><slot /></div>',
           },
-          RoutineTimer: true,
+          RoutineTimer,
           RoutineCarousel: true,
           Loader: true,
           FeedbackRequest: true,

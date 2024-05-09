@@ -67,13 +67,18 @@ VueWrapper {
                 </div>
               </div>
               <div
-                class="player__time section hide"
+                class="player__time section"
+                style="display: none;"
               >
-                <routine-timer-stub
-                  start="false"
-                  stop="true"
-                  time="90"
-                />
+                <div
+                  class="routine-timer"
+                >
+                  <div
+                    class="container is-max-desktop"
+                  >
+                    01:30
+                  </div>
+                </div>
               </div>
               <audio
                 class="player__audio-element"
@@ -91,7 +96,7 @@ VueWrapper {
                   class="player__actions row"
                 >
                   <div
-                    class="col-xs-6 player__action player__action--play-pause"
+                    class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                   >
                     <button
                       class="button player__action__button--play"
@@ -606,10 +611,32 @@ VueWrapper {
                       [Circular],
                     },
                     Set {
+                      ReactiveEffect {
+                        "active": true,
+                        "deps": [
+                          [Circular],
+                        ],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "parent": undefined,
+                        "scheduler": [Function],
+                      },
                       [Circular],
                     },
                     [Circular],
                     Set {
+                      ReactiveEffect {
+                        "active": true,
+                        "deps": [
+                          [Circular],
+                        ],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "parent": undefined,
+                        "scheduler": [Function],
+                      },
                       [Circular],
                     },
                     Set {
@@ -750,12 +777,34 @@ VueWrapper {
                       [Circular],
                     },
                     Set {
+                      ReactiveEffect {
+                        "active": true,
+                        "deps": [
+                          [Circular],
+                        ],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "parent": undefined,
+                        "scheduler": [Function],
+                      },
                       [Circular],
                     },
                     Set {
                       [Circular],
                     },
                     Set {
+                      ReactiveEffect {
+                        "active": true,
+                        "deps": [
+                          [Circular],
+                        ],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "parent": undefined,
+                        "scheduler": [Function],
+                      },
                       [Circular],
                     },
                     Set {
@@ -826,6 +875,17 @@ VueWrapper {
               "dep": Set {
                 ReactiveEffect {
                   "active": true,
+                  "deps": [
+                    [Circular],
+                  ],
+                  "fn": [Function],
+                  "onTrack": undefined,
+                  "onTrigger": undefined,
+                  "parent": undefined,
+                  "scheduler": [Function],
+                },
+                ReactiveEffect {
+                  "active": true,
                   "allowRecurse": true,
                   "deps": [
                     Set {
@@ -923,6 +983,17 @@ VueWrapper {
                       [Circular],
                     },
                     Set {
+                      ReactiveEffect {
+                        "active": true,
+                        "deps": [
+                          [Circular],
+                        ],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "parent": undefined,
+                        "scheduler": [Function],
+                      },
                       [Circular],
                     },
                     Set {
@@ -987,6 +1058,17 @@ VueWrapper {
               "_rawValue": true,
               "_value": true,
               "dep": Set {
+                ReactiveEffect {
+                  "active": true,
+                  "deps": [
+                    [Circular],
+                  ],
+                  "fn": [Function],
+                  "onTrack": undefined,
+                  "onTrigger": undefined,
+                  "parent": undefined,
+                  "scheduler": [Function],
+                },
                 ReactiveEffect {
                   "active": true,
                   "allowRecurse": true,
@@ -1082,6 +1164,17 @@ VueWrapper {
                       [Circular],
                     },
                     Set {
+                      ReactiveEffect {
+                        "active": true,
+                        "deps": [
+                          [Circular],
+                        ],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "parent": undefined,
+                        "scheduler": [Function],
+                      },
                       [Circular],
                     },
                     Set {
@@ -1108,6 +1201,21 @@ VueWrapper {
                   "scheduler": [Function],
                 },
               },
+            },
+            "timer": RefImpl {
+              "__v_isRef": true,
+              "__v_isShallow": false,
+              "_rawValue": {
+                "pauseTimer": [Function],
+                "startTimer": [Function],
+                "stopTimer": [Function],
+              },
+              "_value": {
+                "pauseTimer": [Function],
+                "startTimer": [Function],
+                "stopTimer": [Function],
+              },
+              "dep": undefined,
             },
             "visibleStatus": RefImpl {
               "__v_isRef": true,
@@ -1210,12 +1318,34 @@ VueWrapper {
                       [Circular],
                     },
                     Set {
+                      ReactiveEffect {
+                        "active": true,
+                        "deps": [
+                          [Circular],
+                        ],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "parent": undefined,
+                        "scheduler": [Function],
+                      },
                       [Circular],
                     },
                     Set {
                       [Circular],
                     },
                     Set {
+                      ReactiveEffect {
+                        "active": true,
+                        "deps": [
+                          [Circular],
+                        ],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "parent": undefined,
+                        "scheduler": [Function],
+                      },
                       [Circular],
                     },
                     [Circular],
@@ -1364,6 +1494,11 @@ VueWrapper {
               controls=""
               src=""
             />,
+            "timer": {
+              "pauseTimer": [Function],
+              "startTimer": [Function],
+              "stopTimer": [Function],
+            },
           },
           "render": [Function],
           "renderCache": [],
@@ -1404,6 +1539,294 @@ VueWrapper {
                 },
                 "deps": [],
                 "fn": [Function],
+                "parent": undefined,
+                "scheduler": [Function],
+              },
+              ReactiveEffect {
+                "active": true,
+                "deps": [
+                  Set {
+                    [Circular],
+                    ReactiveEffect {
+                      "active": true,
+                      "allowRecurse": true,
+                      "deps": [
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          ReactiveEffect {
+                            "active": true,
+                            "deps": [
+                              [Circular],
+                            ],
+                            "fn": [Function],
+                            "onTrack": undefined,
+                            "onTrigger": undefined,
+                            "parent": undefined,
+                            "scheduler": [Function],
+                          },
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        [Circular],
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                      ],
+                      "fn": [Function],
+                      "onTrack": undefined,
+                      "onTrigger": undefined,
+                      "parent": undefined,
+                      "scheduler": [Function],
+                    },
+                  },
+                ],
+                "fn": [Function],
+                "onTrack": undefined,
+                "onTrigger": undefined,
+                "parent": undefined,
+                "scheduler": [Function],
+              },
+              ReactiveEffect {
+                "active": true,
+                "deps": [
+                  Set {
+                    [Circular],
+                    ReactiveEffect {
+                      "active": true,
+                      "allowRecurse": true,
+                      "deps": [
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        [Circular],
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          ReactiveEffect {
+                            "active": true,
+                            "deps": [
+                              [Circular],
+                            ],
+                            "fn": [Function],
+                            "onTrack": undefined,
+                            "onTrigger": undefined,
+                            "parent": undefined,
+                            "scheduler": [Function],
+                          },
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                      ],
+                      "fn": [Function],
+                      "onTrack": undefined,
+                      "onTrigger": undefined,
+                      "parent": undefined,
+                      "scheduler": [Function],
+                    },
+                  },
+                ],
+                "fn": [Function],
+                "onTrack": undefined,
+                "onTrigger": undefined,
                 "parent": undefined,
                 "scheduler": [Function],
               },
@@ -1489,6 +1912,11 @@ VueWrapper {
             "stopAndClose": [Function],
             "stopOrClose": [Function],
             "stopStatus": true,
+            "timer": {
+              "pauseTimer": [Function],
+              "startTimer": [Function],
+              "stopTimer": [Function],
+            },
             "visibleStatus": false,
           },
           "slots": {},
@@ -1700,12 +2128,34 @@ VueWrapper {
                         [Circular],
                       },
                       Set {
+                        ReactiveEffect {
+                          "active": true,
+                          "deps": [
+                            [Circular],
+                          ],
+                          "fn": [Function],
+                          "onTrack": undefined,
+                          "onTrigger": undefined,
+                          "parent": undefined,
+                          "scheduler": [Function],
+                        },
                         [Circular],
                       },
                       Set {
                         [Circular],
                       },
                       Set {
+                        ReactiveEffect {
+                          "active": true,
+                          "deps": [
+                            [Circular],
+                          ],
+                          "fn": [Function],
+                          "onTrack": undefined,
+                          "onTrigger": undefined,
+                          "parent": undefined,
+                          "scheduler": [Function],
+                        },
                         [Circular],
                       },
                       Set {
@@ -2189,12 +2639,34 @@ VueWrapper {
                             [Circular],
                           },
                           Set {
+                            ReactiveEffect {
+                              "active": true,
+                              "deps": [
+                                [Circular],
+                              ],
+                              "fn": [Function],
+                              "onTrack": undefined,
+                              "onTrigger": undefined,
+                              "parent": undefined,
+                              "scheduler": [Function],
+                            },
                             [Circular],
                           },
                           Set {
                             [Circular],
                           },
                           Set {
+                            ReactiveEffect {
+                              "active": true,
+                              "deps": [
+                                [Circular],
+                              ],
+                              "fn": [Function],
+                              "onTrack": undefined,
+                              "onTrigger": undefined,
+                              "parent": undefined,
+                              "scheduler": [Function],
+                            },
                             [Circular],
                           },
                           Set {
@@ -3384,11 +3856,7 @@ VueWrapper {
                                       },
                                       "asyncDep": null,
                                       "asyncResolved": false,
-                                      "attrs": {
-                                        "start": false,
-                                        "stop": true,
-                                        "time": 90,
-                                      },
+                                      "attrs": {},
                                       "attrsProxy": null,
                                       "bc": null,
                                       "bm": null,
@@ -3396,9 +3864,99 @@ VueWrapper {
                                       "bum": null,
                                       "c": null,
                                       "components": null,
-                                      "ctx": {},
+                                      "ctx": {
+                                        "start": false,
+                                        "stop": false,
+                                        "time": 90,
+                                      },
                                       "da": null,
                                       "data": {},
+                                      "devtoolsRawSetupState": {
+                                        "currentTime": RefImpl {
+                                          "__v_isRef": true,
+                                          "__v_isShallow": false,
+                                          "_rawValue": 90,
+                                          "_value": 90,
+                                          "dep": Set {
+                                            ReactiveEffect {
+                                              "active": true,
+                                              "computed": ComputedRefImpl {
+                                                "__v_isReadonly": true,
+                                                "__v_isRef": true,
+                                                "_cacheable": true,
+                                                "_dirty": false,
+                                                "_setter": [Function],
+                                                "_value": "01:30",
+                                                "dep": Set {
+                                                  ReactiveEffect {
+                                                    "active": true,
+                                                    "allowRecurse": true,
+                                                    "deps": [
+                                                      [Circular],
+                                                    ],
+                                                    "fn": [Function],
+                                                    "onTrack": undefined,
+                                                    "onTrigger": undefined,
+                                                    "parent": undefined,
+                                                    "scheduler": [Function],
+                                                  },
+                                                },
+                                                "effect": [Circular],
+                                              },
+                                              "deps": [
+                                                [Circular],
+                                              ],
+                                              "fn": [Function],
+                                              "parent": undefined,
+                                              "scheduler": [Function],
+                                            },
+                                          },
+                                        },
+                                        "displayTime": ComputedRefImpl {
+                                          "__v_isReadonly": true,
+                                          "__v_isRef": true,
+                                          "_cacheable": true,
+                                          "_dirty": false,
+                                          "_setter": [Function],
+                                          "_value": "01:30",
+                                          "dep": Set {
+                                            ReactiveEffect {
+                                              "active": true,
+                                              "allowRecurse": true,
+                                              "deps": [
+                                                [Circular],
+                                              ],
+                                              "fn": [Function],
+                                              "onTrack": undefined,
+                                              "onTrigger": undefined,
+                                              "parent": undefined,
+                                              "scheduler": [Function],
+                                            },
+                                          },
+                                          "effect": ReactiveEffect {
+                                            "active": true,
+                                            "computed": [Circular],
+                                            "deps": [
+                                              Set {
+                                                [Circular],
+                                              },
+                                            ],
+                                            "fn": [Function],
+                                            "parent": undefined,
+                                            "scheduler": [Function],
+                                          },
+                                        },
+                                        "intervalId": null,
+                                        "pauseTimer": [Function],
+                                        "play": false,
+                                        "props": {
+                                          "start": false,
+                                          "stop": false,
+                                          "time": 90,
+                                        },
+                                        "startTimer": [Function],
+                                        "stopTimer": [Function],
+                                      },
                                       "directives": null,
                                       "ec": null,
                                       "effect": ReactiveEffect {
@@ -3418,8 +3976,16 @@ VueWrapper {
                                       "emit": [Function],
                                       "emitsOptions": null,
                                       "emitted": null,
-                                      "exposeProxy": null,
-                                      "exposed": null,
+                                      "exposeProxy": {
+                                        "pauseTimer": [Function],
+                                        "startTimer": [Function],
+                                        "stopTimer": [Function],
+                                      },
+                                      "exposed": {
+                                        "pauseTimer": [Function],
+                                        "startTimer": [Function],
+                                        "stopTimer": [Function],
+                                      },
                                       "inheritAttrs": undefined,
                                       "isDeactivated": false,
                                       "isMounted": true,
@@ -3427,14 +3993,45 @@ VueWrapper {
                                       "m": null,
                                       "next": null,
                                       "parent": [Circular],
-                                      "props": {},
+                                      "props": {
+                                        "start": false,
+                                        "stop": false,
+                                        "time": 90,
+                                      },
                                       "propsDefaults": {},
                                       "propsOptions": [
-                                        {},
-                                        [],
+                                        {
+                                          "start": {
+                                            "0": true,
+                                            "1": true,
+                                            "default": false,
+                                            "type": [Function],
+                                          },
+                                          "stop": {
+                                            "0": true,
+                                            "1": true,
+                                            "default": false,
+                                            "type": [Function],
+                                          },
+                                          "time": {
+                                            "0": false,
+                                            "1": true,
+                                            "default": 0,
+                                            "type": [Function],
+                                          },
+                                        },
+                                        [
+                                          "time",
+                                          "start",
+                                          "stop",
+                                        ],
                                       ],
                                       "provides": {},
-                                      "proxy": {},
+                                      "proxy": {
+                                        "start": false,
+                                        "stop": false,
+                                        "time": 90,
+                                      },
                                       "refs": {},
                                       "render": [Function],
                                       "renderCache": [],
@@ -3446,6 +4043,40 @@ VueWrapper {
                                         "cleanups": [],
                                         "detached": true,
                                         "effects": [
+                                          ReactiveEffect {
+                                            "active": true,
+                                            "computed": ComputedRefImpl {
+                                              "__v_isReadonly": true,
+                                              "__v_isRef": true,
+                                              "_cacheable": true,
+                                              "_dirty": false,
+                                              "_setter": [Function],
+                                              "_value": "01:30",
+                                              "dep": Set {
+                                                ReactiveEffect {
+                                                  "active": true,
+                                                  "allowRecurse": true,
+                                                  "deps": [
+                                                    [Circular],
+                                                  ],
+                                                  "fn": [Function],
+                                                  "onTrack": undefined,
+                                                  "onTrigger": undefined,
+                                                  "parent": undefined,
+                                                  "scheduler": [Function],
+                                                },
+                                              },
+                                              "effect": [Circular],
+                                            },
+                                            "deps": [
+                                              Set {
+                                                [Circular],
+                                              },
+                                            ],
+                                            "fn": [Function],
+                                            "parent": undefined,
+                                            "scheduler": [Function],
+                                          },
                                           ReactiveEffect {
                                             "active": true,
                                             "allowRecurse": true,
@@ -3464,16 +4095,25 @@ VueWrapper {
                                         "parent": undefined,
                                       },
                                       "setupContext": {
-                                        "attrs": {
-                                          "start": false,
-                                          "stop": true,
-                                          "time": 90,
-                                        },
+                                        "attrs": {},
                                         "emit": [Function],
                                         "expose": [Function],
                                         "slots": {},
                                       },
-                                      "setupState": {},
+                                      "setupState": {
+                                        "currentTime": 90,
+                                        "displayTime": "01:30",
+                                        "intervalId": null,
+                                        "pauseTimer": [Function],
+                                        "play": false,
+                                        "props": {
+                                          "start": false,
+                                          "stop": false,
+                                          "time": 90,
+                                        },
+                                        "startTimer": [Function],
+                                        "stopTimer": [Function],
+                                      },
                                       "slots": {},
                                       "slotsProxy": {},
                                       "sp": null,
@@ -3482,28 +4122,99 @@ VueWrapper {
                                         "__v_skip": true,
                                         "anchor": null,
                                         "appContext": null,
-                                        "ce": undefined,
-                                        "children": null,
+                                        "children": [
+                                          {
+                                            "__v_isVNode": true,
+                                            "__v_skip": true,
+                                            "anchor": null,
+                                            "appContext": null,
+                                            "children": "01:30",
+                                            "component": null,
+                                            "ctx": [Circular],
+                                            "dirs": null,
+                                            "dynamicChildren": null,
+                                            "dynamicProps": null,
+                                            "el": <div
+                                              class="container is-max-desktop"
+                                            >
+                                              01:30
+                                            </div>,
+                                            "key": null,
+                                            "patchFlag": 1,
+                                            "props": {
+                                              "class": "container is-max-desktop",
+                                            },
+                                            "ref": null,
+                                            "scopeId": null,
+                                            "shapeFlag": 9,
+                                            "slotScopeIds": null,
+                                            "ssContent": null,
+                                            "ssFallback": null,
+                                            "staticCount": 0,
+                                            "suspense": null,
+                                            "target": null,
+                                            "targetAnchor": null,
+                                            "transition": null,
+                                            "type": "div",
+                                          },
+                                        ],
                                         "component": null,
                                         "ctx": [Circular],
                                         "dirs": null,
-                                        "dynamicChildren": null,
+                                        "dynamicChildren": [
+                                          {
+                                            "__v_isVNode": true,
+                                            "__v_skip": true,
+                                            "anchor": null,
+                                            "appContext": null,
+                                            "children": "01:30",
+                                            "component": null,
+                                            "ctx": [Circular],
+                                            "dirs": null,
+                                            "dynamicChildren": null,
+                                            "dynamicProps": null,
+                                            "el": <div
+                                              class="container is-max-desktop"
+                                            >
+                                              01:30
+                                            </div>,
+                                            "key": null,
+                                            "patchFlag": 1,
+                                            "props": {
+                                              "class": "container is-max-desktop",
+                                            },
+                                            "ref": null,
+                                            "scopeId": null,
+                                            "shapeFlag": 9,
+                                            "slotScopeIds": null,
+                                            "ssContent": null,
+                                            "ssFallback": null,
+                                            "staticCount": 0,
+                                            "suspense": null,
+                                            "target": null,
+                                            "targetAnchor": null,
+                                            "transition": null,
+                                            "type": "div",
+                                          },
+                                        ],
                                         "dynamicProps": null,
-                                        "el": <routine-timer-stub
-                                          start="false"
-                                          stop="true"
-                                          time="90"
-                                        />,
+                                        "el": <div
+                                          class="routine-timer"
+                                        >
+                                          <div
+                                            class="container is-max-desktop"
+                                          >
+                                            01:30
+                                          </div>
+                                        </div>,
                                         "key": null,
-                                        "patchFlag": 16,
+                                        "patchFlag": 0,
                                         "props": {
-                                          "start": false,
-                                          "stop": true,
-                                          "time": 90,
+                                          "class": "routine-timer",
                                         },
                                         "ref": null,
                                         "scopeId": null,
-                                        "shapeFlag": 1,
+                                        "shapeFlag": 17,
                                         "slotScopeIds": null,
                                         "ssContent": null,
                                         "ssFallback": null,
@@ -3512,19 +4223,35 @@ VueWrapper {
                                         "target": null,
                                         "targetAnchor": null,
                                         "transition": null,
-                                        "type": "routine-timer-stub",
+                                        "type": "div",
                                       },
                                       "suspense": null,
                                       "suspenseId": 0,
                                       "type": {
-                                        "model": undefined,
-                                        "name": "RoutineTimer",
-                                        "props": {},
+                                        "__file": "/Users/danielerapisarda/projects/serenegrove/components/RoutineTimer.vue",
+                                        "__name": "RoutineTimer",
+                                        "props": {
+                                          "start": {
+                                            "default": false,
+                                            "type": [Function],
+                                          },
+                                          "stop": {
+                                            "default": false,
+                                            "type": [Function],
+                                          },
+                                          "time": {
+                                            "default": 0,
+                                            "type": [Function],
+                                          },
+                                        },
+                                        "render": [Function],
                                         "setup": [Function],
                                       },
                                       "u": null,
                                       "uid": 5,
-                                      "um": null,
+                                      "um": [
+                                        [Function],
+                                      ],
                                       "update": [Function],
                                       "vnode": [Circular],
                                       "withProxy": null,
@@ -3534,22 +4261,28 @@ VueWrapper {
                                     "dynamicChildren": null,
                                     "dynamicProps": [
                                       "time",
-                                      "start",
-                                      "stop",
                                     ],
-                                    "el": <routine-timer-stub
-                                      start="false"
-                                      stop="true"
-                                      time="90"
-                                    />,
+                                    "el": <div
+                                      class="routine-timer"
+                                    >
+                                      <div
+                                        class="container is-max-desktop"
+                                      >
+                                        01:30
+                                      </div>
+                                    </div>,
                                     "key": null,
                                     "patchFlag": 8,
                                     "props": {
-                                      "start": false,
-                                      "stop": true,
+                                      "ref": "timer",
                                       "time": 90,
                                     },
-                                    "ref": null,
+                                    "ref": {
+                                      "f": false,
+                                      "i": [Circular],
+                                      "k": undefined,
+                                      "r": "timer",
+                                    },
                                     "scopeId": null,
                                     "shapeFlag": 4,
                                     "slotScopeIds": null,
@@ -3561,31 +4294,65 @@ VueWrapper {
                                     "targetAnchor": null,
                                     "transition": null,
                                     "type": {
-                                      "model": undefined,
-                                      "name": "RoutineTimer",
-                                      "props": {},
+                                      "__file": "/Users/danielerapisarda/projects/serenegrove/components/RoutineTimer.vue",
+                                      "__name": "RoutineTimer",
+                                      "props": {
+                                        "start": {
+                                          "default": false,
+                                          "type": [Function],
+                                        },
+                                        "stop": {
+                                          "default": false,
+                                          "type": [Function],
+                                        },
+                                        "time": {
+                                          "default": 0,
+                                          "type": [Function],
+                                        },
+                                      },
+                                      "render": [Function],
                                       "setup": [Function],
                                     },
                                   },
                                 ],
                                 "component": null,
                                 "ctx": [Circular],
-                                "dirs": null,
+                                "dirs": [
+                                  {
+                                    "arg": undefined,
+                                    "dir": {
+                                      "beforeMount": [Function],
+                                      "beforeUnmount": [Function],
+                                      "getSSRProps": [Function],
+                                      "mounted": [Function],
+                                      "updated": [Function],
+                                    },
+                                    "instance": {},
+                                    "modifiers": {},
+                                    "oldValue": undefined,
+                                    "value": false,
+                                  },
+                                ],
                                 "dynamicChildren": null,
                                 "dynamicProps": null,
                                 "el": <div
-                                  class="player__time section hide"
+                                  class="player__time section"
+                                  style="display: none;"
                                 >
-                                  <routine-timer-stub
-                                    start="false"
-                                    stop="true"
-                                    time="90"
-                                  />
+                                  <div
+                                    class="routine-timer"
+                                  >
+                                    <div
+                                      class="container is-max-desktop"
+                                    >
+                                      01:30
+                                    </div>
+                                  </div>
                                 </div>,
                                 "key": null,
-                                "patchFlag": 2,
+                                "patchFlag": 512,
                                 "props": {
-                                  "class": "player__time section hide",
+                                  "class": "player__time section",
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -3682,13 +4449,18 @@ VueWrapper {
                                 </div>
                               </div>
                               <div
-                                class="player__time section hide"
+                                class="player__time section"
+                                style="display: none;"
                               >
-                                <routine-timer-stub
-                                  start="false"
-                                  stop="true"
-                                  time="90"
-                                />
+                                <div
+                                  class="routine-timer"
+                                >
+                                  <div
+                                    class="container is-max-desktop"
+                                  >
+                                    01:30
+                                  </div>
+                                </div>
                               </div>
                               <audio
                                 class="player__audio-element"
@@ -4001,7 +4773,7 @@ VueWrapper {
                                         "dynamicChildren": null,
                                         "dynamicProps": null,
                                         "el": <div
-                                          class="col-xs-6 player__action player__action--play-pause"
+                                          class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                                         >
                                           <button
                                             class="button player__action__button--play"
@@ -4026,7 +4798,7 @@ VueWrapper {
                                         "key": null,
                                         "patchFlag": 0,
                                         "props": {
-                                          "class": "col-xs-6 player__action player__action--play-pause",
+                                          "class": "col-xs-12 col-sm-10 player__action player__action--play-pause",
                                         },
                                         "ref": null,
                                         "scopeId": null,
@@ -4051,7 +4823,7 @@ VueWrapper {
                                       class="player__actions row"
                                     >
                                       <div
-                                        class="col-xs-6 player__action player__action--play-pause"
+                                        class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                                       >
                                         <button
                                           class="button player__action__button--play"
@@ -4105,7 +4877,7 @@ VueWrapper {
                                     class="player__actions row"
                                   >
                                     <div
-                                      class="col-xs-6 player__action player__action--play-pause"
+                                      class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                                     >
                                       <button
                                         class="button player__action__button--play"
@@ -4163,7 +4935,7 @@ VueWrapper {
                                   class="player__actions row"
                                 >
                                   <div
-                                    class="col-xs-6 player__action player__action--play-pause"
+                                    class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                                   >
                                     <button
                                       class="button player__action__button--play"
@@ -4272,13 +5044,18 @@ VueWrapper {
                               </div>
                             </div>
                             <div
-                              class="player__time section hide"
+                              class="player__time section"
+                              style="display: none;"
                             >
-                              <routine-timer-stub
-                                start="false"
-                                stop="true"
-                                time="90"
-                              />
+                              <div
+                                class="routine-timer"
+                              >
+                                <div
+                                  class="container is-max-desktop"
+                                >
+                                  01:30
+                                </div>
+                              </div>
                             </div>
                             <audio
                               class="player__audio-element"
@@ -4296,7 +5073,7 @@ VueWrapper {
                                 class="player__actions row"
                               >
                                 <div
-                                  class="col-xs-6 player__action player__action--play-pause"
+                                  class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                                 >
                                   <button
                                     class="button player__action__button--play"
@@ -4396,13 +5173,18 @@ VueWrapper {
                             </div>
                           </div>
                           <div
-                            class="player__time section hide"
+                            class="player__time section"
+                            style="display: none;"
                           >
-                            <routine-timer-stub
-                              start="false"
-                              stop="true"
-                              time="90"
-                            />
+                            <div
+                              class="routine-timer"
+                            >
+                              <div
+                                class="container is-max-desktop"
+                              >
+                                01:30
+                              </div>
+                            </div>
                           </div>
                           <audio
                             class="player__audio-element"
@@ -4420,7 +5202,7 @@ VueWrapper {
                               class="player__actions row"
                             >
                               <div
-                                class="col-xs-6 player__action player__action--play-pause"
+                                class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                               >
                                 <button
                                   class="button player__action__button--play"
@@ -4633,13 +5415,18 @@ VueWrapper {
                         </div>
                       </div>
                       <div
-                        class="player__time section hide"
+                        class="player__time section"
+                        style="display: none;"
                       >
-                        <routine-timer-stub
-                          start="false"
-                          stop="true"
-                          time="90"
-                        />
+                        <div
+                          class="routine-timer"
+                        >
+                          <div
+                            class="container is-max-desktop"
+                          >
+                            01:30
+                          </div>
+                        </div>
                       </div>
                       <audio
                         class="player__audio-element"
@@ -4657,7 +5444,7 @@ VueWrapper {
                           class="player__actions row"
                         >
                           <div
-                            class="col-xs-6 player__action player__action--play-pause"
+                            class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                           >
                             <button
                               class="button player__action__button--play"
@@ -4980,12 +5767,34 @@ VueWrapper {
                                         [Circular],
                                       },
                                       Set {
+                                        ReactiveEffect {
+                                          "active": true,
+                                          "deps": [
+                                            [Circular],
+                                          ],
+                                          "fn": [Function],
+                                          "onTrack": undefined,
+                                          "onTrigger": undefined,
+                                          "parent": undefined,
+                                          "scheduler": [Function],
+                                        },
                                         [Circular],
                                       },
                                       Set {
                                         [Circular],
                                       },
                                       Set {
+                                        ReactiveEffect {
+                                          "active": true,
+                                          "deps": [
+                                            [Circular],
+                                          ],
+                                          "fn": [Function],
+                                          "onTrack": undefined,
+                                          "onTrigger": undefined,
+                                          "parent": undefined,
+                                          "scheduler": [Function],
+                                        },
                                         [Circular],
                                       },
                                       [Circular],
@@ -5225,12 +6034,34 @@ VueWrapper {
                                             [Circular],
                                           },
                                           Set {
+                                            ReactiveEffect {
+                                              "active": true,
+                                              "deps": [
+                                                [Circular],
+                                              ],
+                                              "fn": [Function],
+                                              "onTrack": undefined,
+                                              "onTrigger": undefined,
+                                              "parent": undefined,
+                                              "scheduler": [Function],
+                                            },
                                             [Circular],
                                           },
                                           Set {
                                             [Circular],
                                           },
                                           Set {
+                                            ReactiveEffect {
+                                              "active": true,
+                                              "deps": [
+                                                [Circular],
+                                              ],
+                                              "fn": [Function],
+                                              "onTrack": undefined,
+                                              "onTrigger": undefined,
+                                              "parent": undefined,
+                                              "scheduler": [Function],
+                                            },
                                             [Circular],
                                           },
                                           [Circular],
@@ -6319,12 +7150,34 @@ VueWrapper {
                         [Circular],
                       },
                       Set {
+                        ReactiveEffect {
+                          "active": true,
+                          "deps": [
+                            [Circular],
+                          ],
+                          "fn": [Function],
+                          "onTrack": undefined,
+                          "onTrigger": undefined,
+                          "parent": undefined,
+                          "scheduler": [Function],
+                        },
                         [Circular],
                       },
                       Set {
                         [Circular],
                       },
                       Set {
+                        ReactiveEffect {
+                          "active": true,
+                          "deps": [
+                            [Circular],
+                          ],
+                          "fn": [Function],
+                          "onTrack": undefined,
+                          "onTrigger": undefined,
+                          "parent": undefined,
+                          "scheduler": [Function],
+                        },
                         [Circular],
                       },
                       Set {
@@ -6808,12 +7661,34 @@ VueWrapper {
                             [Circular],
                           },
                           Set {
+                            ReactiveEffect {
+                              "active": true,
+                              "deps": [
+                                [Circular],
+                              ],
+                              "fn": [Function],
+                              "onTrack": undefined,
+                              "onTrigger": undefined,
+                              "parent": undefined,
+                              "scheduler": [Function],
+                            },
                             [Circular],
                           },
                           Set {
                             [Circular],
                           },
                           Set {
+                            ReactiveEffect {
+                              "active": true,
+                              "deps": [
+                                [Circular],
+                              ],
+                              "fn": [Function],
+                              "onTrack": undefined,
+                              "onTrigger": undefined,
+                              "parent": undefined,
+                              "scheduler": [Function],
+                            },
                             [Circular],
                           },
                           Set {
@@ -7992,7 +8867,12 @@ VueWrapper {
                                         "@@__IMMUTABLE_ITERABLE__@@": 0,
                                         "@@__IMMUTABLE_RECORD__@@": 0,
                                         "_isMockFunction": 0,
-                                        "constructor": 0,
+                                        "hasAttribute": 0,
+                                        "nodeType": 0,
+                                        "start": 3,
+                                        "stop": 3,
+                                        "tagName": 0,
+                                        "time": 3,
                                         "toJSON": 0,
                                         Symbol(Symbol.toStringTag): 0,
                                       },
@@ -8047,25 +8927,107 @@ VueWrapper {
                                       },
                                       "asyncDep": null,
                                       "asyncResolved": false,
-                                      "attrs": {
-                                        "start": false,
-                                        "stop": true,
-                                        "time": 90,
-                                      },
-                                      "attrsProxy": {
-                                        "start": false,
-                                        "stop": true,
-                                        "time": 90,
-                                      },
+                                      "attrs": {},
+                                      "attrsProxy": {},
                                       "bc": null,
                                       "bm": null,
                                       "bu": null,
                                       "bum": null,
                                       "c": null,
                                       "components": null,
-                                      "ctx": {},
+                                      "ctx": {
+                                        "start": false,
+                                        "stop": false,
+                                        "time": 90,
+                                      },
                                       "da": null,
                                       "data": {},
+                                      "devtoolsRawSetupState": {
+                                        "currentTime": RefImpl {
+                                          "__v_isRef": true,
+                                          "__v_isShallow": false,
+                                          "_rawValue": 90,
+                                          "_value": 90,
+                                          "dep": Set {
+                                            ReactiveEffect {
+                                              "active": true,
+                                              "computed": ComputedRefImpl {
+                                                "__v_isReadonly": true,
+                                                "__v_isRef": true,
+                                                "_cacheable": true,
+                                                "_dirty": false,
+                                                "_setter": [Function],
+                                                "_value": "01:30",
+                                                "dep": Set {
+                                                  ReactiveEffect {
+                                                    "active": true,
+                                                    "allowRecurse": true,
+                                                    "deps": [
+                                                      [Circular],
+                                                    ],
+                                                    "fn": [Function],
+                                                    "onTrack": undefined,
+                                                    "onTrigger": undefined,
+                                                    "parent": undefined,
+                                                    "scheduler": [Function],
+                                                  },
+                                                },
+                                                "effect": [Circular],
+                                              },
+                                              "deps": [
+                                                [Circular],
+                                              ],
+                                              "fn": [Function],
+                                              "parent": undefined,
+                                              "scheduler": [Function],
+                                            },
+                                          },
+                                        },
+                                        "displayTime": ComputedRefImpl {
+                                          "__v_isReadonly": true,
+                                          "__v_isRef": true,
+                                          "_cacheable": true,
+                                          "_dirty": false,
+                                          "_setter": [Function],
+                                          "_value": "01:30",
+                                          "dep": Set {
+                                            ReactiveEffect {
+                                              "active": true,
+                                              "allowRecurse": true,
+                                              "deps": [
+                                                [Circular],
+                                              ],
+                                              "fn": [Function],
+                                              "onTrack": undefined,
+                                              "onTrigger": undefined,
+                                              "parent": undefined,
+                                              "scheduler": [Function],
+                                            },
+                                          },
+                                          "effect": ReactiveEffect {
+                                            "active": true,
+                                            "computed": [Circular],
+                                            "deps": [
+                                              Set {
+                                                [Circular],
+                                              },
+                                            ],
+                                            "fn": [Function],
+                                            "parent": undefined,
+                                            "scheduler": [Function],
+                                          },
+                                        },
+                                        "intervalId": null,
+                                        "pauseTimer": [Function],
+                                        "play": false,
+                                        "props": {
+                                          "start": false,
+                                          "stop": false,
+                                          "time": 90,
+                                        },
+                                        "startTimer": [Function],
+                                        "stopTimer": [Function],
+                                      },
                                       "directives": null,
                                       "ec": null,
                                       "effect": ReactiveEffect {
@@ -8085,8 +9047,16 @@ VueWrapper {
                                       "emit": [Function],
                                       "emitsOptions": null,
                                       "emitted": null,
-                                      "exposeProxy": null,
-                                      "exposed": null,
+                                      "exposeProxy": {
+                                        "pauseTimer": [Function],
+                                        "startTimer": [Function],
+                                        "stopTimer": [Function],
+                                      },
+                                      "exposed": {
+                                        "pauseTimer": [Function],
+                                        "startTimer": [Function],
+                                        "stopTimer": [Function],
+                                      },
                                       "inheritAttrs": undefined,
                                       "isDeactivated": false,
                                       "isMounted": true,
@@ -8094,14 +9064,45 @@ VueWrapper {
                                       "m": null,
                                       "next": null,
                                       "parent": [Circular],
-                                      "props": {},
+                                      "props": {
+                                        "start": false,
+                                        "stop": false,
+                                        "time": 90,
+                                      },
                                       "propsDefaults": {},
                                       "propsOptions": [
-                                        {},
-                                        [],
+                                        {
+                                          "start": {
+                                            "0": true,
+                                            "1": true,
+                                            "default": false,
+                                            "type": [Function],
+                                          },
+                                          "stop": {
+                                            "0": true,
+                                            "1": true,
+                                            "default": false,
+                                            "type": [Function],
+                                          },
+                                          "time": {
+                                            "0": false,
+                                            "1": true,
+                                            "default": 0,
+                                            "type": [Function],
+                                          },
+                                        },
+                                        [
+                                          "time",
+                                          "start",
+                                          "stop",
+                                        ],
                                       ],
                                       "provides": {},
-                                      "proxy": {},
+                                      "proxy": {
+                                        "start": false,
+                                        "stop": false,
+                                        "time": 90,
+                                      },
                                       "refs": {},
                                       "render": [Function],
                                       "renderCache": [],
@@ -8113,6 +9114,40 @@ VueWrapper {
                                         "cleanups": [],
                                         "detached": true,
                                         "effects": [
+                                          ReactiveEffect {
+                                            "active": true,
+                                            "computed": ComputedRefImpl {
+                                              "__v_isReadonly": true,
+                                              "__v_isRef": true,
+                                              "_cacheable": true,
+                                              "_dirty": false,
+                                              "_setter": [Function],
+                                              "_value": "01:30",
+                                              "dep": Set {
+                                                ReactiveEffect {
+                                                  "active": true,
+                                                  "allowRecurse": true,
+                                                  "deps": [
+                                                    [Circular],
+                                                  ],
+                                                  "fn": [Function],
+                                                  "onTrack": undefined,
+                                                  "onTrigger": undefined,
+                                                  "parent": undefined,
+                                                  "scheduler": [Function],
+                                                },
+                                              },
+                                              "effect": [Circular],
+                                            },
+                                            "deps": [
+                                              Set {
+                                                [Circular],
+                                              },
+                                            ],
+                                            "fn": [Function],
+                                            "parent": undefined,
+                                            "scheduler": [Function],
+                                          },
                                           ReactiveEffect {
                                             "active": true,
                                             "allowRecurse": true,
@@ -8131,16 +9166,25 @@ VueWrapper {
                                         "parent": undefined,
                                       },
                                       "setupContext": {
-                                        "attrs": {
-                                          "start": false,
-                                          "stop": true,
-                                          "time": 90,
-                                        },
+                                        "attrs": {},
                                         "emit": [Function],
                                         "expose": [Function],
                                         "slots": {},
                                       },
-                                      "setupState": {},
+                                      "setupState": {
+                                        "currentTime": 90,
+                                        "displayTime": "01:30",
+                                        "intervalId": null,
+                                        "pauseTimer": [Function],
+                                        "play": false,
+                                        "props": {
+                                          "start": false,
+                                          "stop": false,
+                                          "time": 90,
+                                        },
+                                        "startTimer": [Function],
+                                        "stopTimer": [Function],
+                                      },
                                       "slots": {},
                                       "slotsProxy": {},
                                       "sp": null,
@@ -8149,28 +9193,99 @@ VueWrapper {
                                         "__v_skip": true,
                                         "anchor": null,
                                         "appContext": null,
-                                        "ce": undefined,
-                                        "children": null,
+                                        "children": [
+                                          {
+                                            "__v_isVNode": true,
+                                            "__v_skip": true,
+                                            "anchor": null,
+                                            "appContext": null,
+                                            "children": "01:30",
+                                            "component": null,
+                                            "ctx": [Circular],
+                                            "dirs": null,
+                                            "dynamicChildren": null,
+                                            "dynamicProps": null,
+                                            "el": <div
+                                              class="container is-max-desktop"
+                                            >
+                                              01:30
+                                            </div>,
+                                            "key": null,
+                                            "patchFlag": 1,
+                                            "props": {
+                                              "class": "container is-max-desktop",
+                                            },
+                                            "ref": null,
+                                            "scopeId": null,
+                                            "shapeFlag": 9,
+                                            "slotScopeIds": null,
+                                            "ssContent": null,
+                                            "ssFallback": null,
+                                            "staticCount": 0,
+                                            "suspense": null,
+                                            "target": null,
+                                            "targetAnchor": null,
+                                            "transition": null,
+                                            "type": "div",
+                                          },
+                                        ],
                                         "component": null,
                                         "ctx": [Circular],
                                         "dirs": null,
-                                        "dynamicChildren": null,
+                                        "dynamicChildren": [
+                                          {
+                                            "__v_isVNode": true,
+                                            "__v_skip": true,
+                                            "anchor": null,
+                                            "appContext": null,
+                                            "children": "01:30",
+                                            "component": null,
+                                            "ctx": [Circular],
+                                            "dirs": null,
+                                            "dynamicChildren": null,
+                                            "dynamicProps": null,
+                                            "el": <div
+                                              class="container is-max-desktop"
+                                            >
+                                              01:30
+                                            </div>,
+                                            "key": null,
+                                            "patchFlag": 1,
+                                            "props": {
+                                              "class": "container is-max-desktop",
+                                            },
+                                            "ref": null,
+                                            "scopeId": null,
+                                            "shapeFlag": 9,
+                                            "slotScopeIds": null,
+                                            "ssContent": null,
+                                            "ssFallback": null,
+                                            "staticCount": 0,
+                                            "suspense": null,
+                                            "target": null,
+                                            "targetAnchor": null,
+                                            "transition": null,
+                                            "type": "div",
+                                          },
+                                        ],
                                         "dynamicProps": null,
-                                        "el": <routine-timer-stub
-                                          start="false"
-                                          stop="true"
-                                          time="90"
-                                        />,
+                                        "el": <div
+                                          class="routine-timer"
+                                        >
+                                          <div
+                                            class="container is-max-desktop"
+                                          >
+                                            01:30
+                                          </div>
+                                        </div>,
                                         "key": null,
-                                        "patchFlag": 16,
+                                        "patchFlag": 0,
                                         "props": {
-                                          "start": false,
-                                          "stop": true,
-                                          "time": 90,
+                                          "class": "routine-timer",
                                         },
                                         "ref": null,
                                         "scopeId": null,
-                                        "shapeFlag": 1,
+                                        "shapeFlag": 17,
                                         "slotScopeIds": null,
                                         "ssContent": null,
                                         "ssFallback": null,
@@ -8179,19 +9294,35 @@ VueWrapper {
                                         "target": null,
                                         "targetAnchor": null,
                                         "transition": null,
-                                        "type": "routine-timer-stub",
+                                        "type": "div",
                                       },
                                       "suspense": null,
                                       "suspenseId": 0,
                                       "type": {
-                                        "model": undefined,
-                                        "name": "RoutineTimer",
-                                        "props": {},
+                                        "__file": "/Users/danielerapisarda/projects/serenegrove/components/RoutineTimer.vue",
+                                        "__name": "RoutineTimer",
+                                        "props": {
+                                          "start": {
+                                            "default": false,
+                                            "type": [Function],
+                                          },
+                                          "stop": {
+                                            "default": false,
+                                            "type": [Function],
+                                          },
+                                          "time": {
+                                            "default": 0,
+                                            "type": [Function],
+                                          },
+                                        },
+                                        "render": [Function],
                                         "setup": [Function],
                                       },
                                       "u": null,
                                       "uid": 5,
-                                      "um": null,
+                                      "um": [
+                                        [Function],
+                                      ],
                                       "update": [Function],
                                       "vnode": [Circular],
                                       "withProxy": null,
@@ -8201,22 +9332,28 @@ VueWrapper {
                                     "dynamicChildren": null,
                                     "dynamicProps": [
                                       "time",
-                                      "start",
-                                      "stop",
                                     ],
-                                    "el": <routine-timer-stub
-                                      start="false"
-                                      stop="true"
-                                      time="90"
-                                    />,
+                                    "el": <div
+                                      class="routine-timer"
+                                    >
+                                      <div
+                                        class="container is-max-desktop"
+                                      >
+                                        01:30
+                                      </div>
+                                    </div>,
                                     "key": null,
                                     "patchFlag": 8,
                                     "props": {
-                                      "start": false,
-                                      "stop": true,
+                                      "ref": "timer",
                                       "time": 90,
                                     },
-                                    "ref": null,
+                                    "ref": {
+                                      "f": false,
+                                      "i": [Circular],
+                                      "k": undefined,
+                                      "r": "timer",
+                                    },
                                     "scopeId": null,
                                     "shapeFlag": 4,
                                     "slotScopeIds": null,
@@ -8228,31 +9365,65 @@ VueWrapper {
                                     "targetAnchor": null,
                                     "transition": null,
                                     "type": {
-                                      "model": undefined,
-                                      "name": "RoutineTimer",
-                                      "props": {},
+                                      "__file": "/Users/danielerapisarda/projects/serenegrove/components/RoutineTimer.vue",
+                                      "__name": "RoutineTimer",
+                                      "props": {
+                                        "start": {
+                                          "default": false,
+                                          "type": [Function],
+                                        },
+                                        "stop": {
+                                          "default": false,
+                                          "type": [Function],
+                                        },
+                                        "time": {
+                                          "default": 0,
+                                          "type": [Function],
+                                        },
+                                      },
+                                      "render": [Function],
                                       "setup": [Function],
                                     },
                                   },
                                 ],
                                 "component": null,
                                 "ctx": [Circular],
-                                "dirs": null,
+                                "dirs": [
+                                  {
+                                    "arg": undefined,
+                                    "dir": {
+                                      "beforeMount": [Function],
+                                      "beforeUnmount": [Function],
+                                      "getSSRProps": [Function],
+                                      "mounted": [Function],
+                                      "updated": [Function],
+                                    },
+                                    "instance": {},
+                                    "modifiers": {},
+                                    "oldValue": undefined,
+                                    "value": false,
+                                  },
+                                ],
                                 "dynamicChildren": null,
                                 "dynamicProps": null,
                                 "el": <div
-                                  class="player__time section hide"
+                                  class="player__time section"
+                                  style="display: none;"
                                 >
-                                  <routine-timer-stub
-                                    start="false"
-                                    stop="true"
-                                    time="90"
-                                  />
+                                  <div
+                                    class="routine-timer"
+                                  >
+                                    <div
+                                      class="container is-max-desktop"
+                                    >
+                                      01:30
+                                    </div>
+                                  </div>
                                 </div>,
                                 "key": null,
-                                "patchFlag": 2,
+                                "patchFlag": 512,
                                 "props": {
-                                  "class": "player__time section hide",
+                                  "class": "player__time section",
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -8349,13 +9520,18 @@ VueWrapper {
                                 </div>
                               </div>
                               <div
-                                class="player__time section hide"
+                                class="player__time section"
+                                style="display: none;"
                               >
-                                <routine-timer-stub
-                                  start="false"
-                                  stop="true"
-                                  time="90"
-                                />
+                                <div
+                                  class="routine-timer"
+                                >
+                                  <div
+                                    class="container is-max-desktop"
+                                  >
+                                    01:30
+                                  </div>
+                                </div>
                               </div>
                               <audio
                                 class="player__audio-element"
@@ -8668,7 +9844,7 @@ VueWrapper {
                                         "dynamicChildren": null,
                                         "dynamicProps": null,
                                         "el": <div
-                                          class="col-xs-6 player__action player__action--play-pause"
+                                          class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                                         >
                                           <button
                                             class="button player__action__button--play"
@@ -8693,7 +9869,7 @@ VueWrapper {
                                         "key": null,
                                         "patchFlag": 0,
                                         "props": {
-                                          "class": "col-xs-6 player__action player__action--play-pause",
+                                          "class": "col-xs-12 col-sm-10 player__action player__action--play-pause",
                                         },
                                         "ref": null,
                                         "scopeId": null,
@@ -8718,7 +9894,7 @@ VueWrapper {
                                       class="player__actions row"
                                     >
                                       <div
-                                        class="col-xs-6 player__action player__action--play-pause"
+                                        class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                                       >
                                         <button
                                           class="button player__action__button--play"
@@ -8772,7 +9948,7 @@ VueWrapper {
                                     class="player__actions row"
                                   >
                                     <div
-                                      class="col-xs-6 player__action player__action--play-pause"
+                                      class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                                     >
                                       <button
                                         class="button player__action__button--play"
@@ -8830,7 +10006,7 @@ VueWrapper {
                                   class="player__actions row"
                                 >
                                   <div
-                                    class="col-xs-6 player__action player__action--play-pause"
+                                    class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                                   >
                                     <button
                                       class="button player__action__button--play"
@@ -8939,13 +10115,18 @@ VueWrapper {
                               </div>
                             </div>
                             <div
-                              class="player__time section hide"
+                              class="player__time section"
+                              style="display: none;"
                             >
-                              <routine-timer-stub
-                                start="false"
-                                stop="true"
-                                time="90"
-                              />
+                              <div
+                                class="routine-timer"
+                              >
+                                <div
+                                  class="container is-max-desktop"
+                                >
+                                  01:30
+                                </div>
+                              </div>
                             </div>
                             <audio
                               class="player__audio-element"
@@ -8963,7 +10144,7 @@ VueWrapper {
                                 class="player__actions row"
                               >
                                 <div
-                                  class="col-xs-6 player__action player__action--play-pause"
+                                  class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                                 >
                                   <button
                                     class="button player__action__button--play"
@@ -9063,13 +10244,18 @@ VueWrapper {
                             </div>
                           </div>
                           <div
-                            class="player__time section hide"
+                            class="player__time section"
+                            style="display: none;"
                           >
-                            <routine-timer-stub
-                              start="false"
-                              stop="true"
-                              time="90"
-                            />
+                            <div
+                              class="routine-timer"
+                            >
+                              <div
+                                class="container is-max-desktop"
+                              >
+                                01:30
+                              </div>
+                            </div>
                           </div>
                           <audio
                             class="player__audio-element"
@@ -9087,7 +10273,7 @@ VueWrapper {
                               class="player__actions row"
                             >
                               <div
-                                class="col-xs-6 player__action player__action--play-pause"
+                                class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                               >
                                 <button
                                   class="button player__action__button--play"
@@ -9300,13 +10486,18 @@ VueWrapper {
                         </div>
                       </div>
                       <div
-                        class="player__time section hide"
+                        class="player__time section"
+                        style="display: none;"
                       >
-                        <routine-timer-stub
-                          start="false"
-                          stop="true"
-                          time="90"
-                        />
+                        <div
+                          class="routine-timer"
+                        >
+                          <div
+                            class="container is-max-desktop"
+                          >
+                            01:30
+                          </div>
+                        </div>
                       </div>
                       <audio
                         class="player__audio-element"
@@ -9324,7 +10515,7 @@ VueWrapper {
                           class="player__actions row"
                         >
                           <div
-                            class="col-xs-6 player__action player__action--play-pause"
+                            class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                           >
                             <button
                               class="button player__action__button--play"
@@ -9648,12 +10839,34 @@ VueWrapper {
                                     [Circular],
                                   },
                                   Set {
+                                    ReactiveEffect {
+                                      "active": true,
+                                      "deps": [
+                                        [Circular],
+                                      ],
+                                      "fn": [Function],
+                                      "onTrack": undefined,
+                                      "onTrigger": undefined,
+                                      "parent": undefined,
+                                      "scheduler": [Function],
+                                    },
                                     [Circular],
                                   },
                                   Set {
                                     [Circular],
                                   },
                                   Set {
+                                    ReactiveEffect {
+                                      "active": true,
+                                      "deps": [
+                                        [Circular],
+                                      ],
+                                      "fn": [Function],
+                                      "onTrack": undefined,
+                                      "onTrigger": undefined,
+                                      "parent": undefined,
+                                      "scheduler": [Function],
+                                    },
                                     [Circular],
                                   },
                                   [Circular],
@@ -9893,12 +11106,34 @@ VueWrapper {
                                         [Circular],
                                       },
                                       Set {
+                                        ReactiveEffect {
+                                          "active": true,
+                                          "deps": [
+                                            [Circular],
+                                          ],
+                                          "fn": [Function],
+                                          "onTrack": undefined,
+                                          "onTrigger": undefined,
+                                          "parent": undefined,
+                                          "scheduler": [Function],
+                                        },
                                         [Circular],
                                       },
                                       Set {
                                         [Circular],
                                       },
                                       Set {
+                                        ReactiveEffect {
+                                          "active": true,
+                                          "deps": [
+                                            [Circular],
+                                          ],
+                                          "fn": [Function],
+                                          "onTrack": undefined,
+                                          "onTrigger": undefined,
+                                          "parent": undefined,
+                                          "scheduler": [Function],
+                                        },
                                         [Circular],
                                       },
                                       [Circular],
@@ -10754,13 +11989,18 @@ VueWrapper {
                       </div>
                     </div>
                     <div
-                      class="player__time section hide"
+                      class="player__time section"
+                      style="display: none;"
                     >
-                      <routine-timer-stub
-                        start="false"
-                        stop="true"
-                        time="90"
-                      />
+                      <div
+                        class="routine-timer"
+                      >
+                        <div
+                          class="container is-max-desktop"
+                        >
+                          01:30
+                        </div>
+                      </div>
                     </div>
                     <audio
                       class="player__audio-element"
@@ -10778,7 +12018,7 @@ VueWrapper {
                         class="player__actions row"
                       >
                         <div
-                          class="col-xs-6 player__action player__action--play-pause"
+                          class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                         >
                           <button
                             class="button player__action__button--play"
@@ -10950,13 +12190,18 @@ VueWrapper {
                   </div>
                 </div>
                 <div
-                  class="player__time section hide"
+                  class="player__time section"
+                  style="display: none;"
                 >
-                  <routine-timer-stub
-                    start="false"
-                    stop="true"
-                    time="90"
-                  />
+                  <div
+                    class="routine-timer"
+                  >
+                    <div
+                      class="container is-max-desktop"
+                    >
+                      01:30
+                    </div>
+                  </div>
                 </div>
                 <audio
                   class="player__audio-element"
@@ -10974,7 +12219,7 @@ VueWrapper {
                     class="player__actions row"
                   >
                     <div
-                      class="col-xs-6 player__action player__action--play-pause"
+                      class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                     >
                       <button
                         class="button player__action__button--play"
@@ -11230,13 +12475,18 @@ VueWrapper {
                   </div>
                 </div>
                 <div
-                  class="player__time section hide"
+                  class="player__time section"
+                  style="display: none;"
                 >
-                  <routine-timer-stub
-                    start="false"
-                    stop="true"
-                    time="90"
-                  />
+                  <div
+                    class="routine-timer"
+                  >
+                    <div
+                      class="container is-max-desktop"
+                    >
+                      01:30
+                    </div>
+                  </div>
                 </div>
                 <audio
                   class="player__audio-element"
@@ -11254,7 +12504,7 @@ VueWrapper {
                     class="player__actions row"
                   >
                     <div
-                      class="col-xs-6 player__action player__action--play-pause"
+                      class="col-xs-12 col-sm-10 player__action player__action--play-pause"
                     >
                       <button
                         class="button player__action__button--play"
@@ -11589,13 +12839,18 @@ VueWrapper {
             </div>
           </div>
           <div
-            class="player__time section hide"
+            class="player__time section"
+            style="display: none;"
           >
-            <routine-timer-stub
-              start="false"
-              stop="true"
-              time="90"
-            />
+            <div
+              class="routine-timer"
+            >
+              <div
+                class="container is-max-desktop"
+              >
+                01:30
+              </div>
+            </div>
           </div>
           <audio
             class="player__audio-element"
@@ -11613,7 +12868,7 @@ VueWrapper {
               class="player__actions row"
             >
               <div
-                class="col-xs-6 player__action player__action--play-pause"
+                class="col-xs-12 col-sm-10 player__action player__action--play-pause"
               >
                 <button
                   class="button player__action__button--play"
