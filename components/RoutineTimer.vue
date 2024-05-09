@@ -1,50 +1,53 @@
 <template>
   <div class="routine-timer">
     <div class="container is-max-desktop">
-      {{ formattedTime(currentTime) }}
-      <div v-if="showBar" class="routine-timer__bar">
-        <div class="routine-timer__bar-fill" :style="remainingTimeStyle" />
-        <div class="routine-timer__bar-text">
-          {{ formattedTime(currentTime) }}
-        </div>
-      </div>
+      {{ displayTime }}
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onUnmounted, watch } from 'vue'
+import { ref, onUnmounted, computed } from 'vue'
 import { formattedTime } from '@/composables/formattedTime'
 
-const props = withDefaults(
-  defineProps<{
-    time: number
-    start: boolean
-    stop: boolean
-  }>(),
-  {
-    time: 0,
-    start: false,
-    stop: false,
+const props = defineProps({
+  time: {
+    type: Number,
+    default: 0,
   },
-)
-
-const showBar = false
+  start: {
+    type: Boolean,
+    default: false,
+  },
+  stop: {
+    type: Boolean,
+    default: false,
+  },
+})
 
 let intervalId: number | null = null
+let play: boolean = false
 const currentTime = ref(props.time)
-const totalTime = ref(props.time)
-
-const remainingTimeStyle = computed(() => {
-  return `transform: scaleX(${currentTime.value / totalTime.value});`
-})
+const displayTime = computed(() => formattedTime(currentTime.value))
 
 const startTimer = () => {
   if (!window) return
+
+  play = true
+  if (intervalId) return
+
   currentTime.value = props.time
   intervalId = window.setInterval(() => {
-    if (props.start && currentTime.value > 0) currentTime.value -= 1
+    if (currentTime.value == 0) {
+      play = false
+      stopTimer()
+    }
+    if (play && currentTime.value > 0) currentTime.value -= 1
   }, 1000)
+}
+
+const pauseTimer = () => {
+  play = false
 }
 
 const stopTimer = () => {
@@ -54,28 +57,11 @@ const stopTimer = () => {
   intervalId = null
 }
 
-watch(
-  () => props.start,
-  (newVal) => {
-    if (newVal && !intervalId) startTimer()
-  },
-)
-
-watch(
-  () => props.stop,
-  (newVal) => {
-    if (newVal) {
-      stopTimer()
-    }
-  },
-)
-
-watch(
-  () => props.time,
-  () => {
-    stopTimer()
-  },
-)
+defineExpose({
+  startTimer,
+  stopTimer,
+  pauseTimer,
+})
 
 onUnmounted(stopTimer)
 </script>
