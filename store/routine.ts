@@ -63,9 +63,8 @@ export const useRoutineStore = defineStore('mainRoutine', {
         routineTimeVariations.find(
           (variation) => variation.id === routineVariationId,
         ) || routineTimeVariations[0]
-      this.$state.routineVariation.id = newVariation.id
-      this.$state.routineVariation.label = newVariation.label
-      this.$state.routineVariation.modifier = newVariation.modifier
+
+      this.$state.routineVariation = { ...newVariation }
     },
   },
   persist: {
