@@ -1,38 +1,52 @@
 <template>
   <div class="toggle-switch">
     <label class="toggle-label" :for="id">
+      {{ label }}
       <input
         :id="id"
-        class="toggle-input"
-        :checked="modelValue"
+        v-model="model"
         type="checkbox"
-        @click="updateModelValue"
+        class="toggle-input"
+        :value="value"
       />
     </label>
   </div>
 </template>
 
 <script lang="ts" setup>
-defineProps({
+import { computed, defineEmits } from 'vue'
+const props = defineProps({
   modelValue: {
     type: Boolean,
-    required: true,
+    default: false,
+  },
+  value: {
+    type: [Boolean, Object],
+    default: false,
+  },
+  label: {
+    type: String,
+    default: '',
   },
   id: {
     type: String,
-    required: true,
+    default: '',
   },
 })
 
-const emit = defineEmits(['updateModelValue'])
-const updateModelValue = (event: Event) => {
-  const target = event.target as HTMLInputElement
-  return emit('updateModelValue', target?.checked)
-}
+const emit = defineEmits(['update:modelValue'])
+const model = computed({
+  get() {
+    return props.modelValue
+  },
+  set(value) {
+    emit('update:modelValue', value)
+  },
+})
 </script>
 
 <style lang="scss">
-// https://uiverse.io/ClawHack1/itchy-bobcat-18
+// https://uiverse.io/ClawHack1/itchy-bobcat-18 edited to be fully HTM compliant
 
 .toggle-switch {
   position: relative;

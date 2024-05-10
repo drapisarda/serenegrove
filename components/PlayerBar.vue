@@ -21,7 +21,8 @@
         <Switch
           :id="'extend'"
           v-model="isExtendedDuration"
-          @update-model-value="updateRoutineVariation"
+          :value="isExtendedDuration"
+          @update:model-value="updateRoutineVariation"
         />
       </div>
     </div>
@@ -29,18 +30,16 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref, computed } from 'vue'
+import { computed, ref } from 'vue'
 import { type Step } from '@/store/types'
 import Play from '@/src/assets/img/icons/play-button.svg'
 import Clock from '@/src/assets/img/icons/clock.svg'
 import { formattedTime } from '@/composables/formattedTime'
 import { useRoutineStore } from '@/store/routine'
-const { routineVariation } = useRoutineStore()
+const { routineVariation, setRoutineVariation, getRoutineVariation } =
+  useRoutineStore()
 
-const isExtendedDuration = ref(false)
-onMounted(() => {
-  isExtendedDuration.value = routineVariation.id === 1
-})
+const isExtendedDuration = ref(getRoutineVariation().id === 1)
 
 const props = defineProps({
   playerSteps: {
@@ -59,8 +58,9 @@ const props = defineProps({
 
 const displayDuration = computed(() => formattedTime(props.duration))
 
-const emit = defineEmits(['updateModelValue'])
-const updateRoutineVariation = (e: Event) => emit('updateModelValue', e)
+const updateRoutineVariation = () => {
+  setRoutineVariation(isExtendedDuration.value ? 1 : 0)
+}
 </script>
 
 <style lang="scss">
