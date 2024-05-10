@@ -14,6 +14,7 @@ export const routineTimeVariations: RoutineTimeVariationType[] = [
   },
 ]
 
+// TODO: integrate routineTimeVariations in the state and then use just the ID
 export const originalState = {
   steps: [] as number[],
   lastEdit: 0 as number,
