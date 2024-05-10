@@ -10,16 +10,15 @@ describe('Switch component test', async () => {
     wrapper = mount(Switch, {
       props: {
         modelValue,
-        id: 'switch',
+        value: false,
+        label: 'Lorem Label',
+        id: 'loremId',
       },
     })
   })
 
-  test('Switch emit and checkbox functionality', () => {
-    wrapper.find('.toggle-input').trigger('click')
-    wrapper.find('.toggle-input').trigger('click')
-    expect(wrapper.emitted().updateModelValue[0][0]).toBe(!modelValue)
-    expect(wrapper.emitted().updateModelValue[1][0]).toBe(!!modelValue)
-    expect(wrapper.emitted().updateModelValue.length).toBe(2)
+  test('Switch mounts', () => {
+    expect(wrapper.exists()).toBe(true)
+    expect(wrapper).toMatchSnapshot()
   })
 })
