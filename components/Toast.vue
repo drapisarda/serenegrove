@@ -31,7 +31,7 @@ const displayMessage = (newMessage: ToastMessage, duration: number = 3000) => {
   }
 
   message.value = newMessage.message
-  messageClass.value = `is-${newMessage.style ? newMessage.style : 'is-primary'}`
+  messageClass.value = `is-${newMessage.style}`
   isVisible.value = true
   if (window)
     displayInterval = window.setTimeout(function () {

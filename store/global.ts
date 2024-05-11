@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { type ToastMessage } from './types'
+import { type ToastMessage, ToastStyles } from './types'
 
 export const useGlobalStore = defineStore('global', {
   state: () => ({
@@ -13,7 +13,7 @@ export const useGlobalStore = defineStore('global', {
     getToastMessage(): ToastMessage {
       return this.$state.toastMessage
     },
-    setToastMessage(message: string, style = 'success'): void {
+    setToastMessage(message: string, style = ToastStyles.Success): void {
       this.$state.toastMessage.message = message
       this.$state.toastMessage.id = new Date().getTime()
       this.$state.toastMessage.style = style
