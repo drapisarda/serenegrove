@@ -14,7 +14,9 @@
 </template>
 
 <script lang="ts" setup>
+import { computed } from 'vue'
 import { type Step } from '@/store/types'
+
 const props = defineProps({
   currentStepIndex: {
     type: Number,
