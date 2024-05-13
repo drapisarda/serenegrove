@@ -1,7 +1,7 @@
 import Player from '@/components/Player.vue'
 import RoutineTimer from '@/components/RoutineTimer.vue'
 import { mount, type VueWrapper } from '@vue/test-utils'
-import { originalState, routineTimeVariations } from '@/store/vars'
+import { originalState } from '@/store/vars'
 import { expect } from 'vitest'
 
 describe('Player component test', async () => {
@@ -22,10 +22,10 @@ describe('Player component test', async () => {
         },
       },
       props: {
-        routineVariation: routineTimeVariations[0],
         duration: 90,
         playerSteps: originalState.stepsOptions.slice(3),
         pauseAfter: 0,
+        routineModifier: originalState.routineVariations[0].modifier,
       },
     })
   })

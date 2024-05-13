@@ -7,7 +7,7 @@
       <div class="col col-xs-3 player-bar__button">
         <Player
           :player-steps="playerSteps"
-          :routine-variation="routineVariation"
+          :routine-modifier="routineVariationModifier"
           :duration="duration"
           :disabled="disabled"
         >
@@ -36,10 +36,17 @@ import Play from '@/src/assets/img/icons/play-button.svg'
 import Clock from '@/src/assets/img/icons/clock.svg'
 import { formattedTime } from '@/composables/formattedTime'
 import { useRoutineStore } from '@/store/routine'
-const { routineVariation, setRoutineVariation, getRoutineVariation } =
-  useRoutineStore()
+import { originalState } from '@/store/vars'
+const { $state, getRoutineVariation, setRoutineVariation } = useRoutineStore()
 
-const isExtendedDuration = ref(getRoutineVariation().id === 1)
+const extendedVariation = originalState.routineVariations.find(
+  (v) => v.label === 'extended',
+)
+const extendedVariationId = extendedVariation ? extendedVariation.id : 1
+const isExtendedDuration = ref(
+  $state.routineVariationId === extendedVariationId,
+)
+const routineVariationModifier = computed(() => getRoutineVariation().modifier)
 
 const props = defineProps({
   playerSteps: {

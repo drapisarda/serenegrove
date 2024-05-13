@@ -1,24 +1,11 @@
 import { type Step, type RoutineTimeVariationType } from './types'
 const baseURL = '/'
 
-export const routineTimeVariations: RoutineTimeVariationType[] = [
-  {
-    id: 0,
-    label: 'standard',
-    modifier: 1,
-  },
-  {
-    id: 1,
-    label: 'extended',
-    modifier: 2,
-  },
-]
-
-// TODO: integrate routineTimeVariations in the state and then use just the ID
 export const originalState = {
   steps: [] as number[],
+  routineVariationId: 0 as number,
   lastEdit: 0 as number,
-  version: '0' as string,
+  version: '0.1' as string,
   intro: {
     name: 'Intro',
     duration: 68,
@@ -35,6 +22,18 @@ export const originalState = {
     icon: `logoOnly`,
     pauseAfter: 0,
   } as Step,
+  routineVariations: [
+    {
+      id: 0,
+      label: 'standard',
+      modifier: 1,
+    },
+    {
+      id: 1,
+      label: 'extended',
+      modifier: 2,
+    },
+  ] as RoutineTimeVariationType[],
   stepsOptions: [
     {
       id: 0,
@@ -87,5 +86,4 @@ export const originalState = {
       pauseAfter: 5,
     },
   ] as Step[],
-  routineVariation: routineTimeVariations[0] as RoutineTimeVariationType,
 }

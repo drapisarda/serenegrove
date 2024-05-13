@@ -482,11 +482,7 @@ VueWrapper {
                 "pauseAfter": 5,
               },
             ],
-            "routineVariation": {
-              "id": 0,
-              "label": "standard",
-              "modifier": 1,
-            },
+            "routineModifier": 1,
           },
           "da": null,
           "data": {},
@@ -1043,11 +1039,7 @@ VueWrapper {
                   "pauseAfter": 5,
                 },
               ],
-              "routineVariation": {
-                "id": 0,
-                "label": "standard",
-                "modifier": 1,
-              },
+              "routineModifier": 1,
             },
             "stop": [Function],
             "stopAndClose": [Function],
@@ -1419,11 +1411,7 @@ VueWrapper {
                 "pauseAfter": 5,
               },
             ],
-            "routineVariation": {
-              "id": 0,
-              "label": "standard",
-              "modifier": 1,
-            },
+            "routineModifier": 1,
           },
           "propsDefaults": {},
           "propsOptions": [
@@ -1446,15 +1434,16 @@ VueWrapper {
                 "required": true,
                 "type": [Function],
               },
-              "routineVariation": {
+              "routineModifier": {
                 "0": false,
                 "1": true,
-                "required": true,
+                "default": 1,
                 "type": [Function],
               },
             },
             [
               "disabled",
+              "routineModifier",
               "duration",
             ],
           ],
@@ -1482,11 +1471,7 @@ VueWrapper {
                 "pauseAfter": 5,
               },
             ],
-            "routineVariation": {
-              "id": 0,
-              "label": "standard",
-              "modifier": 1,
-            },
+            "routineModifier": 1,
           },
           "refs": {
             "audio": <audio
@@ -1902,11 +1887,7 @@ VueWrapper {
                   "pauseAfter": 5,
                 },
               ],
-              "routineVariation": {
-                "id": 0,
-                "label": "standard",
-                "modifier": 1,
-              },
+              "routineModifier": 1,
             },
             "stop": [Function],
             "stopAndClose": [Function],
@@ -12115,8 +12096,8 @@ VueWrapper {
                 "required": true,
                 "type": [Function],
               },
-              "routineVariation": {
-                "required": true,
+              "routineModifier": {
+                "default": 1,
                 "type": [Function],
               },
             },
@@ -12301,11 +12282,7 @@ VueWrapper {
             },
           ],
           "ref": "VTU_COMPONENT",
-          "routineVariation": {
-            "id": 0,
-            "label": "standard",
-            "modifier": 1,
-          },
+          "routineModifier": 1,
         },
         "ref": {
           "f": false,
@@ -12340,8 +12317,8 @@ VueWrapper {
               "required": true,
               "type": [Function],
             },
-            "routineVariation": {
-              "required": true,
+            "routineModifier": {
+              "default": 1,
               "type": [Function],
             },
           },

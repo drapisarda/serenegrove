@@ -122,7 +122,7 @@
 </template>
 
 <script lang="ts" setup>
-import { type Step, type RoutineTimeVariationType } from '@/store/types'
+import { type Step } from '@/store/types'
 import { ref, computed, watch } from 'vue'
 import Play from '@/src/assets/img/icons/play-button.svg'
 import Pause from '@/src/assets/img/icons/pause-button.svg'
@@ -138,9 +138,9 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  routineVariation: {
-    type: Object as PropType<RoutineTimeVariationType>,
-    required: true,
+  routineModifier: {
+    type: Number,
+    default: 1,
   },
   duration: {
     type: Number,
@@ -197,7 +197,7 @@ const playNext = async () => {
 
       playAudioFile(currentStep.value.file)
     },
-    currentStep.value.pauseAfter * props.routineVariation.modifier * 1000,
+    currentStep.value.pauseAfter * props.routineModifier * 1000,
   )
 }
 
