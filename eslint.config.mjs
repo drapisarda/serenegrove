@@ -30,6 +30,7 @@ export default withNuxt([
     rules: {
       'vue/multi-word-component-names': 0,
       'vue/no-multiple-template-root': 0,
+      '@typescript-eslint/no-explicit-any': 0,
     },
   },
 ])

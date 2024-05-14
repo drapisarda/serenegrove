@@ -37,9 +37,9 @@ describe('Player component test', async () => {
 
   test('UI changes when "play" button is clicked', async () => {
     await wrapper.vm.$nextTick()
-    expect(wrapper.vm.visibleStatus).toBe(false)
-    expect(wrapper.vm.pauseStatus).toBe(true)
-    expect(wrapper.vm.currentStep).toBe(undefined)
+    expect((wrapper.vm as any).visibleStatus).toBe(false)
+    expect((wrapper.vm as any).pauseStatus).toBe(true)
+    expect((wrapper.vm as any).currentStep).toBe(undefined)
 
     wrapper.find('.player__start button').trigger('click')
     await wrapper.vm.$nextTick()
@@ -50,58 +50,58 @@ describe('Player component test', async () => {
      * expect(wrapper.vm.audio.src.indexOf('blob')).toBe(0)
      */
 
-    expect(wrapper.vm.visibleStatus).toBe(true)
-    expect(wrapper.vm.pauseStatus).toBe(false)
+    expect((wrapper.vm as any).visibleStatus).toBe(true)
+    expect((wrapper.vm as any).pauseStatus).toBe(false)
     await wrapper.vm.$nextTick()
   })
 
   test('Player stops when "Escape" key is pressed. It closes when it is pressed again', async () => {
     wrapper.find('.player__start button').trigger('click')
     await wrapper.vm.$nextTick()
-    expect(wrapper.vm.pauseStatus).toBe(false)
-    expect(wrapper.vm.visibleStatus).toBe(true)
+    expect((wrapper.vm as any).pauseStatus).toBe(false)
+    expect((wrapper.vm as any).visibleStatus).toBe(true)
 
     await wrapper.trigger('keyup', { key: 'Escape' })
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.vm.pauseStatus).toBe(true)
+    expect((wrapper.vm as any).pauseStatus).toBe(true)
 
     await wrapper.trigger('keyup', { key: 'Escape' })
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.vm.visibleStatus).toBe(false)
+    expect((wrapper.vm as any).visibleStatus).toBe(false)
   })
 
   test('Player stops when the close button is pressed. It closes when it is clicked again', async () => {
     wrapper.find('.player__start button').trigger('click')
     await wrapper.vm.$nextTick()
-    expect(wrapper.vm.pauseStatus).toBe(false)
-    expect(wrapper.vm.visibleStatus).toBe(true)
+    expect((wrapper.vm as any).pauseStatus).toBe(false)
+    expect((wrapper.vm as any).visibleStatus).toBe(true)
 
     wrapper.find('.button--close').trigger('click')
     await wrapper.vm.$nextTick()
-    expect(wrapper.vm.pauseStatus).toBe(true)
+    expect((wrapper.vm as any).pauseStatus).toBe(true)
 
     wrapper.find('.button--close').trigger('click')
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.vm.visibleStatus).toBe(false)
+    expect((wrapper.vm as any).visibleStatus).toBe(false)
   })
 
   test('Player pauses when the the play/pause button is pressed during play. It plays when it is clicked again', async () => {
     wrapper.find('.player__start button').trigger('click')
     await wrapper.vm.$nextTick()
-    expect(wrapper.vm.pauseStatus).toBe(false)
-    expect(wrapper.vm.visibleStatus).toBe(true)
+    expect((wrapper.vm as any).pauseStatus).toBe(false)
+    expect((wrapper.vm as any).visibleStatus).toBe(true)
 
     wrapper.find('.player__action__button--pause').trigger('click')
     await wrapper.vm.$nextTick()
-    expect(wrapper.vm.visibleStatus).toBe(true)
-    expect(wrapper.vm.pauseStatus).toBe(true)
+    expect((wrapper.vm as any).visibleStatus).toBe(true)
+    expect((wrapper.vm as any).pauseStatus).toBe(true)
 
     wrapper.find('.player__action__button--play').trigger('click')
     await wrapper.vm.$nextTick()
-    expect(wrapper.vm.pauseStatus).toBe(false)
-    expect(wrapper.vm.visibleStatus).toBe(true)
+    expect((wrapper.vm as any).pauseStatus).toBe(false)
+    expect((wrapper.vm as any).visibleStatus).toBe(true)
   })
 })

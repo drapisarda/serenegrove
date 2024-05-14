@@ -25,7 +25,7 @@ describe('Playlist component test', async () => {
   })
 
   test('Playlist UI toggle with touch', async () => {
-    const scrollDownLimit = wrapper.vm.scrollDownLimit
+    const scrollDownLimit = (wrapper.vm as any).scrollDownLimit
 
     const manageTouchStartSpy = vi.spyOn(wrapper.vm, 'manageTouchStart')
     const manageTouchEndSpy = vi.spyOn(wrapper.vm, 'manageTouchEnd')

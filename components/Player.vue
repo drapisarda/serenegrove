@@ -176,13 +176,13 @@ const handleKeys = (event: KeyboardEvent) => {
 watch(stopStatus, (newValue) => {
   if (!timer.value) return
   if (!newValue) return
-  timer.value.stopTimer()
+  ;(timer.value as any).stopTimer()
 })
 
 watch(pauseStatus, (newValue) => {
   if (!timer.value) return
-  if (newValue) timer.value.pauseTimer()
-  else timer.value.startTimer()
+  if (newValue) (timer.value as any).pauseTimer()
+  else (timer.value as any).startTimer()
 })
 
 const playNext = async () => {

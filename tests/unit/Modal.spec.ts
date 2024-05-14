@@ -26,19 +26,19 @@ describe('Modal component test', async () => {
 
   test('modal opens and closes', async () => {
     await wrapperWithContent.find('.modal__button button').trigger('click')
-    expect(wrapperWithContent.vm.modalStatus).toBe(true)
+    expect((wrapperWithContent.vm as any).modalStatus).toBe(true)
 
     await wrapperWithContent.find('.modal__close').trigger('click')
-    expect(wrapperWithContent.vm.modalStatus).toBe(false)
+    expect((wrapperWithContent.vm as any).modalStatus).toBe(false)
   })
 
   test('modal interacts with keyboard ', async () => {
     await wrapperWithContent.find('.modal__button button').trigger('click')
     await wrapperWithContent.vm.$nextTick()
-    expect(wrapperWithContent.vm.modalStatus).toBe(true)
+    expect((wrapperWithContent.vm as any).modalStatus).toBe(true)
 
     await wrapperWithContent.trigger('keyup', { key: 'Escape' })
     await wrapperWithContent.vm.$nextTick()
-    expect(wrapperWithContent.vm.modalStatus).toBe(false)
+    expect((wrapperWithContent.vm as any).modalStatus).toBe(false)
   })
 })

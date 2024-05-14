@@ -58,18 +58,18 @@ export const useRoutineStore = defineStore('mainRoutine', {
     getRoutineVariationId(): number {
       return this.$state.routineVariationId
     },
-    getRoutineVariation(): RoutineTimeVariationType | undefined {
+    getRoutineVariation(): RoutineTimeVariationType {
       const routineVariation = this.$state.routineVariations.find(
         (variation) => variation.id === this.$state.routineVariationId,
       )
 
-      return routineVariation
+      return routineVariation || this.$state.routineVariations[0]
     },
     setRoutineVariation(routineVariationId: number) {
       this.$state.routineVariationId = routineVariationId
     },
   },
   persist: {
-    storage: import.meta.client ? persistedState.localStorage : {},
+    storage: import.meta.client ? persistedState.localStorage : undefined,
   },
 })
