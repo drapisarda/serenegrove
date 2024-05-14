@@ -28,7 +28,9 @@ describe('Switch component test', async () => {
     await wrapper.get('input').setValue(firstValue)
     await wrapper.get('input').setValue(secondValue)
 
-    expect(wrapper.emitted()['update:modelValue'][0][0]).toBe(firstValue)
-    expect(wrapper.emitted()['update:modelValue'][0][1]).toBe(secondValue)
+    const emittedUpdates = wrapper.emitted('update:modelValue')
+    if (!emittedUpdates) throw new Error('Switch fails on emitting updates')
+    expect(emittedUpdates[0][0]).toEqual(firstValue)
+    expect(emittedUpdates[0][1]).toBe(secondValue)
   })
 })
