@@ -101,6 +101,17 @@ describe('Player usages', () => {
     getListItem(1).find('.card-header__title').contains(elementsNames[0])
   })
 
+  it('User can extend the routine duration', () => {
+    const routineDuration = () => cy.get('.player-bar__duration span')
+    const routineDurationSwitch = () => cy.get('.toggle-switch label')
+
+    routineDuration().contains('04:26')
+    routineDurationSwitch().click()
+    routineDuration().contains('05:06')
+    routineDurationSwitch().click()
+    routineDuration().contains('04:26')
+  })
+
   it('User plays a playlist', () => {
     cy.get('.player__start button').should('have.not.class', 'inactive')
 
