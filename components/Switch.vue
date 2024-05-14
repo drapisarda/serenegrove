@@ -2,13 +2,7 @@
   <div class="toggle-switch">
     <label class="toggle-label" :for="id">
       {{ label }}
-      <input
-        :id="id"
-        v-model="model"
-        type="checkbox"
-        class="toggle-input"
-        :value="value"
-      />
+      <input :id="id" v-model="model" type="checkbox" class="toggle-input" />
     </label>
   </div>
 </template>
@@ -18,10 +12,6 @@ import { computed, defineEmits } from 'vue'
 const props = defineProps({
   modelValue: {
     type: Boolean,
-    default: false,
-  },
-  value: {
-    type: [Boolean, Object],
     default: false,
   },
   label: {
@@ -40,7 +30,7 @@ const model = computed({
     return props.modelValue
   },
   set(value) {
-    emit('update:modelValue', value)
+    emit('update:modelValue', value, props.modelValue)
   },
 })
 </script>
