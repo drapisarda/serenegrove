@@ -21,7 +21,6 @@
         <Switch
           :id="'extend'"
           v-model="isExtendedDuration"
-          :value="isExtendedDuration"
           @update:model-value="updateRoutineVariation"
         />
       </div>
@@ -31,7 +30,7 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { type Step } from '@/store/types'
+import { type Step, type RoutineTimeVariationType } from '@/store/types'
 import Play from '@/src/assets/img/icons/play-button.svg'
 import Clock from '@/src/assets/img/icons/clock.svg'
 import { formattedTime } from '@/composables/formattedTime'
@@ -39,10 +38,9 @@ import { useRoutineStore } from '@/store/routine'
 import { originalState } from '@/store/vars'
 const { $state, getRoutineVariation, setRoutineVariation } = useRoutineStore()
 
-const extendedVariation = originalState.routineVariations.find(
-  (v) => v.label === 'extended',
-)
-const extendedVariationId = extendedVariation ? extendedVariation.id : 1
+const extendedVariation: RoutineTimeVariationType | undefined =
+  originalState.routineVariations.find((v) => v.label === 'extended')
+const extendedVariationId = extendedVariation?.id
 const isExtendedDuration = ref(
   $state.routineVariationId === extendedVariationId,
 )
