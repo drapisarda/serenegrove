@@ -64,5 +64,6 @@
   "main": "index.js",
   "keywords": [],
   "author": "Daniele Rapisarda",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": "https://github.com/drapisarda/serenegrove/"
 }
