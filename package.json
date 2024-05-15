@@ -47,7 +47,8 @@
     "typescript": "^5.3.3",
     "typescript-eslint": "^7.8.0",
     "unplugin-auto-import": "^0.17.2",
-    "vitest": "^1.0.4"
+    "vitest": "^1.0.4",
+    "vue-tsc": "^2.0.18"
   },
   "overrides": {
     "vue": "latest"
@@ -55,8 +56,7 @@
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
     "pinia": "^2.0.33",
-    "vite-svg-loader": "^4.0.0",
-    "vue-tsc": "^2.0.17"
+    "vite-svg-loader": "^4.0.0"
   },
   "name": "serenegrove",
   "description": "https://www.serenegrove.com/",
