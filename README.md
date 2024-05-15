@@ -18,7 +18,8 @@ This project runs on NodeJs and it has been developed on top of NodeJs v20.10.0,
 To run it locally you want to:
 * Install [NodeJs v20.10.0](https://nodejs.org/en/download). It includes `npm`.
 * Use your terminal to navigate into the project folder
-* run `npm install -g npm`
+* (optionaly) [install nvm](https://github.com/nvm-sh/nvm) and run `nvm use`
+* run `npm install`
 * run `npm run dev` so see the project running live on your machine.
 * visit [http://localhost:3000](http://localhost:3000) on your browser
 
