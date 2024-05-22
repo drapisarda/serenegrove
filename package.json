@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
+    "@vercel/speed-insights": "^1.0.10",
     "pinia": "^2.0.33",
     "vite-svg-loader": "^4.0.0"
   },
