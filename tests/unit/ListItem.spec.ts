@@ -52,32 +52,4 @@ describe('ListItem component test', async () => {
     wrapper.find('.card-actions--remove').trigger('click')
     expect(wrapper.emitted().remove.length).toBe(1)
   })
-
-  test('first List Item does not emit click for moving up', () => {
-    const wrapperFirst = mount(ListItem, {
-      props: {
-        index: 0,
-        isFirst: true,
-        isLast: false,
-        step,
-      },
-    })
-
-    wrapperFirst.find('.card-actions--move-up').trigger('click')
-    expect(wrapperFirst.emitted().moveUp).toBe(undefined)
-  })
-
-  test('first List Item does not emit click for moving up', () => {
-    const wrapperLast = mount(ListItem, {
-      props: {
-        index: 0,
-        isFirst: false,
-        isLast: true,
-        step,
-      },
-    })
-
-    wrapperLast.find('.card-actions--move-down').trigger('click')
-    expect(wrapperLast.emitted().moveDown).toBe(undefined)
-  })
 })

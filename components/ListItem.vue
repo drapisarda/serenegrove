@@ -17,7 +17,7 @@
           class="card-header-icon card-actions--move-up"
           :class="{ inactive: isFirst }"
           aria-label="move up"
-          @click="moveUp"
+          @click="emit('moveUp', index)"
         >
           <UpShevron />
         </button>
@@ -25,14 +25,14 @@
           class="card-header-icon card-actions--move-down"
           :class="{ inactive: isLast }"
           aria-label="move down"
-          @click="moveDown"
+          @click="emit('moveDown', index)"
         >
           <DownShevron />
         </button>
         <button
           class="card-header-icon card-actions--remove"
           aria-label="remove element"
-          @click="remove"
+          @click="emit('remove', { index, name: step.name })"
         >
           <Bin />
         </button>
@@ -49,7 +49,7 @@ import Clock from '@/src/assets/img/icons/clock.svg'
 import { formattedTime } from '@/composables/formattedTime'
 import { type Step } from '@/store/types'
 
-const props = defineProps({
+defineProps({
   step: {
     type: Object as PropType<Step>,
     required: true,
@@ -73,20 +73,6 @@ const emit = defineEmits({
   moveDown: null,
   remove: null,
 })
-
-const moveUp = () => {
-  if (props.isFirst) return
-  emit('moveUp', props.index)
-}
-
-const moveDown = () => {
-  if (props.isLast) return
-  emit('moveDown', props.index)
-}
-
-const remove = () => {
-  emit('remove', { index: props.index, name: props.step.name })
-}
 </script>
 
 <style lang="scss">
