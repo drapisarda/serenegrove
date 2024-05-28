@@ -23,20 +23,19 @@ const { toastMessage } = useGlobalStore()
 watch(toastMessage, (newMessage: ToastMessage) => displayMessage(newMessage))
 let displayInterval: number | undefined
 
-const displayMessage = (newMessage: ToastMessage, duration: number = 3000) => {
-  if (displayInterval) {
-    isVisible.value = false
-    clearInterval(displayInterval)
-    displayInterval = undefined
-  }
+const displayMessage = (newMessage: ToastMessage, duration: number = 2000) => {
+  if (!window) return
+  isVisible.value = false
+
+  if (displayInterval) clearInterval(displayInterval)
 
   message.value = newMessage.message
   messageClass.value = `is-${newMessage.style}`
   isVisible.value = true
-  if (window)
-    displayInterval = window.setTimeout(function () {
-      isVisible.value = false
-    }, duration)
+
+  displayInterval = window.setTimeout(function () {
+    isVisible.value = false
+  }, duration)
 }
 </script>
 
@@ -61,9 +60,11 @@ const displayMessage = (newMessage: ToastMessage, duration: number = 3000) => {
     display: inline-flex;
     margin-top: $size-7;
     border-radius: $size-8;
+
     .is-success & {
       background-color: $success;
     }
+
     .is-warning & {
       background-color: $clear-3;
       color: $dark-5;
@@ -72,9 +73,32 @@ const displayMessage = (newMessage: ToastMessage, duration: number = 3000) => {
 
   &.toast--visible {
     z-index: $toastZIndex;
+    pointer-events: all;
+    animation: fadeInOut 3s;
     opacity: 1;
     transform: translate(0, 0);
-    pointer-events: all;
+  }
+
+  @keyframes fadeInOut {
+    from {
+      opacity: 0;
+      transform: translate(0, -120%);
+    }
+
+    20% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    80% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translate(0, -120%);
+    }
   }
 }
 </style>
