@@ -182,7 +182,7 @@ watch(stopStatus, (newValue) => {
 watch(pauseStatus, (newValue) => {
   if (!timer.value) return
   if (newValue) (timer.value as any).pauseTimer()
-  else (timer.value as any).startTimer()
+  else if (!stopStatus.value) (timer.value as any).startTimer()
 })
 
 const playNext = async () => {
