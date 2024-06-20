@@ -53,6 +53,7 @@ $contentBg: $dark-2;
 
   &__subtitle {
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   ul {

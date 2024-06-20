@@ -23,7 +23,7 @@ VueWrapper {
               class="card row"
             >
               <div
-                class="col-sm-4"
+                class="col-xs-12 col-sm-3"
               >
                 <div
                   class="card-image"
@@ -34,7 +34,7 @@ VueWrapper {
                 </div>
               </div>
               <div
-                class="col-sm-8 card-content"
+                class="col-sm-9 col-sm-8 card-content"
               >
                 <header
                   class="card-header"
@@ -80,7 +80,7 @@ VueWrapper {
               class="card row"
             >
               <div
-                class="col-sm-4"
+                class="col-xs-12 col-sm-3"
               >
                 <div
                   class="card-image"
@@ -91,7 +91,7 @@ VueWrapper {
                 </div>
               </div>
               <div
-                class="col-sm-8 card-content"
+                class="col-sm-9 col-sm-8 card-content"
               >
                 <header
                   class="card-header"
@@ -137,7 +137,7 @@ VueWrapper {
               class="card row"
             >
               <div
-                class="col-sm-4"
+                class="col-xs-12 col-sm-3"
               >
                 <div
                   class="card-image"
@@ -148,7 +148,7 @@ VueWrapper {
                 </div>
               </div>
               <div
-                class="col-sm-8 card-content"
+                class="col-sm-9 col-sm-8 card-content"
               >
                 <header
                   class="card-header"
@@ -194,7 +194,7 @@ VueWrapper {
               class="card row"
             >
               <div
-                class="col-sm-4"
+                class="col-xs-12 col-sm-3"
               >
                 <div
                   class="card-image"
@@ -205,7 +205,7 @@ VueWrapper {
                 </div>
               </div>
               <div
-                class="col-sm-8 card-content"
+                class="col-sm-9 col-sm-8 card-content"
               >
                 <header
                   class="card-header"
@@ -251,7 +251,7 @@ VueWrapper {
               class="card row"
             >
               <div
-                class="col-sm-4"
+                class="col-xs-12 col-sm-3"
               >
                 <div
                   class="card-image"
@@ -262,7 +262,7 @@ VueWrapper {
                 </div>
               </div>
               <div
-                class="col-sm-8 card-content"
+                class="col-sm-9 col-sm-8 card-content"
               >
                 <header
                   class="card-header"
@@ -5890,7 +5890,7 @@ VueWrapper {
                                     "dynamicChildren": null,
                                     "dynamicProps": null,
                                     "el": <div
-                                      class="col-sm-4"
+                                      class="col-xs-12 col-sm-3"
                                     >
                                       <div
                                         class="card-image"
@@ -5903,7 +5903,7 @@ VueWrapper {
                                     "key": null,
                                     "patchFlag": 0,
                                     "props": {
-                                      "class": "col-sm-4",
+                                      "class": "col-xs-12 col-sm-3",
                                     },
                                     "ref": null,
                                     "scopeId": null,
@@ -6163,7 +6163,7 @@ VueWrapper {
                                     "dynamicChildren": null,
                                     "dynamicProps": null,
                                     "el": <div
-                                      class="col-sm-8 card-content"
+                                      class="col-sm-9 col-sm-8 card-content"
                                     >
                                       <header
                                         class="card-header"
@@ -6192,7 +6192,7 @@ VueWrapper {
                                     "key": null,
                                     "patchFlag": 0,
                                     "props": {
-                                      "class": "col-sm-8 card-content",
+                                      "class": "col-sm-9 col-sm-8 card-content",
                                     },
                                     "ref": null,
                                     "scopeId": null,
@@ -6353,7 +6353,7 @@ VueWrapper {
                                   class="card row"
                                 >
                                   <div
-                                    class="col-sm-4"
+                                    class="col-xs-12 col-sm-3"
                                   >
                                     <div
                                       class="card-image"
@@ -6364,7 +6364,7 @@ VueWrapper {
                                     </div>
                                   </div>
                                   <div
-                                    class="col-sm-8 card-content"
+                                    class="col-sm-9 col-sm-8 card-content"
                                   >
                                     <header
                                       class="card-header"
@@ -6566,7 +6566,7 @@ VueWrapper {
                                 class="card row"
                               >
                                 <div
-                                  class="col-sm-4"
+                                  class="col-xs-12 col-sm-3"
                                 >
                                   <div
                                     class="card-image"
@@ -6577,7 +6577,7 @@ VueWrapper {
                                   </div>
                                 </div>
                                 <div
-                                  class="col-sm-8 card-content"
+                                  class="col-sm-9 col-sm-8 card-content"
                                 >
                                   <header
                                     class="card-header"
@@ -6672,7 +6672,7 @@ VueWrapper {
                             class="card row"
                           >
                             <div
-                              class="col-sm-4"
+                              class="col-xs-12 col-sm-3"
                             >
                               <div
                                 class="card-image"
@@ -6683,7 +6683,7 @@ VueWrapper {
                               </div>
                             </div>
                             <div
-                              class="col-sm-8 card-content"
+                              class="col-sm-9 col-sm-8 card-content"
                             >
                               <header
                                 class="card-header"
@@ -7861,7 +7861,7 @@ VueWrapper {
                                     "dynamicChildren": null,
                                     "dynamicProps": null,
                                     "el": <div
-                                      class="col-sm-4"
+                                      class="col-xs-12 col-sm-3"
                                     >
                                       <div
                                         class="card-image"
@@ -7874,7 +7874,7 @@ VueWrapper {
                                     "key": null,
                                     "patchFlag": 0,
                                     "props": {
-                                      "class": "col-sm-4",
+                                      "class": "col-xs-12 col-sm-3",
                                     },
                                     "ref": null,
                                     "scopeId": null,
@@ -8134,7 +8134,7 @@ VueWrapper {
                                     "dynamicChildren": null,
                                     "dynamicProps": null,
                                     "el": <div
-                                      class="col-sm-8 card-content"
+                                      class="col-sm-9 col-sm-8 card-content"
                                     >
                                       <header
                                         class="card-header"
@@ -8163,7 +8163,7 @@ VueWrapper {
                                     "key": null,
                                     "patchFlag": 0,
                                     "props": {
-                                      "class": "col-sm-8 card-content",
+                                      "class": "col-sm-9 col-sm-8 card-content",
                                     },
                                     "ref": null,
                                     "scopeId": null,
@@ -8324,7 +8324,7 @@ VueWrapper {
                                   class="card row"
                                 >
                                   <div
-                                    class="col-sm-4"
+                                    class="col-xs-12 col-sm-3"
                                   >
                                     <div
                                       class="card-image"
@@ -8335,7 +8335,7 @@ VueWrapper {
                                     </div>
                                   </div>
                                   <div
-                                    class="col-sm-8 card-content"
+                                    class="col-sm-9 col-sm-8 card-content"
                                   >
                                     <header
                                       class="card-header"
@@ -8537,7 +8537,7 @@ VueWrapper {
                                 class="card row"
                               >
                                 <div
-                                  class="col-sm-4"
+                                  class="col-xs-12 col-sm-3"
                                 >
                                   <div
                                     class="card-image"
@@ -8548,7 +8548,7 @@ VueWrapper {
                                   </div>
                                 </div>
                                 <div
-                                  class="col-sm-8 card-content"
+                                  class="col-sm-9 col-sm-8 card-content"
                                 >
                                   <header
                                     class="card-header"
@@ -8643,7 +8643,7 @@ VueWrapper {
                             class="card row"
                           >
                             <div
-                              class="col-sm-4"
+                              class="col-xs-12 col-sm-3"
                             >
                               <div
                                 class="card-image"
@@ -8654,7 +8654,7 @@ VueWrapper {
                               </div>
                             </div>
                             <div
-                              class="col-sm-8 card-content"
+                              class="col-sm-9 col-sm-8 card-content"
                             >
                               <header
                                 class="card-header"
@@ -9832,7 +9832,7 @@ VueWrapper {
                                     "dynamicChildren": null,
                                     "dynamicProps": null,
                                     "el": <div
-                                      class="col-sm-4"
+                                      class="col-xs-12 col-sm-3"
                                     >
                                       <div
                                         class="card-image"
@@ -9845,7 +9845,7 @@ VueWrapper {
                                     "key": null,
                                     "patchFlag": 0,
                                     "props": {
-                                      "class": "col-sm-4",
+                                      "class": "col-xs-12 col-sm-3",
                                     },
                                     "ref": null,
                                     "scopeId": null,
@@ -10105,7 +10105,7 @@ VueWrapper {
                                     "dynamicChildren": null,
                                     "dynamicProps": null,
                                     "el": <div
-                                      class="col-sm-8 card-content"
+                                      class="col-sm-9 col-sm-8 card-content"
                                     >
                                       <header
                                         class="card-header"
@@ -10134,7 +10134,7 @@ VueWrapper {
                                     "key": null,
                                     "patchFlag": 0,
                                     "props": {
-                                      "class": "col-sm-8 card-content",
+                                      "class": "col-sm-9 col-sm-8 card-content",
                                     },
                                     "ref": null,
                                     "scopeId": null,
@@ -10295,7 +10295,7 @@ VueWrapper {
                                   class="card row"
                                 >
                                   <div
-                                    class="col-sm-4"
+                                    class="col-xs-12 col-sm-3"
                                   >
                                     <div
                                       class="card-image"
@@ -10306,7 +10306,7 @@ VueWrapper {
                                     </div>
                                   </div>
                                   <div
-                                    class="col-sm-8 card-content"
+                                    class="col-sm-9 col-sm-8 card-content"
                                   >
                                     <header
                                       class="card-header"
@@ -10508,7 +10508,7 @@ VueWrapper {
                                 class="card row"
                               >
                                 <div
-                                  class="col-sm-4"
+                                  class="col-xs-12 col-sm-3"
                                 >
                                   <div
                                     class="card-image"
@@ -10519,7 +10519,7 @@ VueWrapper {
                                   </div>
                                 </div>
                                 <div
-                                  class="col-sm-8 card-content"
+                                  class="col-sm-9 col-sm-8 card-content"
                                 >
                                   <header
                                     class="card-header"
@@ -10614,7 +10614,7 @@ VueWrapper {
                             class="card row"
                           >
                             <div
-                              class="col-sm-4"
+                              class="col-xs-12 col-sm-3"
                             >
                               <div
                                 class="card-image"
@@ -10625,7 +10625,7 @@ VueWrapper {
                               </div>
                             </div>
                             <div
-                              class="col-sm-8 card-content"
+                              class="col-sm-9 col-sm-8 card-content"
                             >
                               <header
                                 class="card-header"
@@ -11803,7 +11803,7 @@ VueWrapper {
                                     "dynamicChildren": null,
                                     "dynamicProps": null,
                                     "el": <div
-                                      class="col-sm-4"
+                                      class="col-xs-12 col-sm-3"
                                     >
                                       <div
                                         class="card-image"
@@ -11816,7 +11816,7 @@ VueWrapper {
                                     "key": null,
                                     "patchFlag": 0,
                                     "props": {
-                                      "class": "col-sm-4",
+                                      "class": "col-xs-12 col-sm-3",
                                     },
                                     "ref": null,
                                     "scopeId": null,
@@ -12076,7 +12076,7 @@ VueWrapper {
                                     "dynamicChildren": null,
                                     "dynamicProps": null,
                                     "el": <div
-                                      class="col-sm-8 card-content"
+                                      class="col-sm-9 col-sm-8 card-content"
                                     >
                                       <header
                                         class="card-header"
@@ -12105,7 +12105,7 @@ VueWrapper {
                                     "key": null,
                                     "patchFlag": 0,
                                     "props": {
-                                      "class": "col-sm-8 card-content",
+                                      "class": "col-sm-9 col-sm-8 card-content",
                                     },
                                     "ref": null,
                                     "scopeId": null,
@@ -12266,7 +12266,7 @@ VueWrapper {
                                   class="card row"
                                 >
                                   <div
-                                    class="col-sm-4"
+                                    class="col-xs-12 col-sm-3"
                                   >
                                     <div
                                       class="card-image"
@@ -12277,7 +12277,7 @@ VueWrapper {
                                     </div>
                                   </div>
                                   <div
-                                    class="col-sm-8 card-content"
+                                    class="col-sm-9 col-sm-8 card-content"
                                   >
                                     <header
                                       class="card-header"
@@ -12479,7 +12479,7 @@ VueWrapper {
                                 class="card row"
                               >
                                 <div
-                                  class="col-sm-4"
+                                  class="col-xs-12 col-sm-3"
                                 >
                                   <div
                                     class="card-image"
@@ -12490,7 +12490,7 @@ VueWrapper {
                                   </div>
                                 </div>
                                 <div
-                                  class="col-sm-8 card-content"
+                                  class="col-sm-9 col-sm-8 card-content"
                                 >
                                   <header
                                     class="card-header"
@@ -12585,7 +12585,7 @@ VueWrapper {
                             class="card row"
                           >
                             <div
-                              class="col-sm-4"
+                              class="col-xs-12 col-sm-3"
                             >
                               <div
                                 class="card-image"
@@ -12596,7 +12596,7 @@ VueWrapper {
                               </div>
                             </div>
                             <div
-                              class="col-sm-8 card-content"
+                              class="col-sm-9 col-sm-8 card-content"
                             >
                               <header
                                 class="card-header"
@@ -13774,7 +13774,7 @@ VueWrapper {
                                     "dynamicChildren": null,
                                     "dynamicProps": null,
                                     "el": <div
-                                      class="col-sm-4"
+                                      class="col-xs-12 col-sm-3"
                                     >
                                       <div
                                         class="card-image"
@@ -13787,7 +13787,7 @@ VueWrapper {
                                     "key": null,
                                     "patchFlag": 0,
                                     "props": {
-                                      "class": "col-sm-4",
+                                      "class": "col-xs-12 col-sm-3",
                                     },
                                     "ref": null,
                                     "scopeId": null,
@@ -14047,7 +14047,7 @@ VueWrapper {
                                     "dynamicChildren": null,
                                     "dynamicProps": null,
                                     "el": <div
-                                      class="col-sm-8 card-content"
+                                      class="col-sm-9 col-sm-8 card-content"
                                     >
                                       <header
                                         class="card-header"
@@ -14076,7 +14076,7 @@ VueWrapper {
                                     "key": null,
                                     "patchFlag": 0,
                                     "props": {
-                                      "class": "col-sm-8 card-content",
+                                      "class": "col-sm-9 col-sm-8 card-content",
                                     },
                                     "ref": null,
                                     "scopeId": null,
@@ -14237,7 +14237,7 @@ VueWrapper {
                                   class="card row"
                                 >
                                   <div
-                                    class="col-sm-4"
+                                    class="col-xs-12 col-sm-3"
                                   >
                                     <div
                                       class="card-image"
@@ -14248,7 +14248,7 @@ VueWrapper {
                                     </div>
                                   </div>
                                   <div
-                                    class="col-sm-8 card-content"
+                                    class="col-sm-9 col-sm-8 card-content"
                                   >
                                     <header
                                       class="card-header"
@@ -14450,7 +14450,7 @@ VueWrapper {
                                 class="card row"
                               >
                                 <div
-                                  class="col-sm-4"
+                                  class="col-xs-12 col-sm-3"
                                 >
                                   <div
                                     class="card-image"
@@ -14461,7 +14461,7 @@ VueWrapper {
                                   </div>
                                 </div>
                                 <div
-                                  class="col-sm-8 card-content"
+                                  class="col-sm-9 col-sm-8 card-content"
                                 >
                                   <header
                                     class="card-header"
@@ -14556,7 +14556,7 @@ VueWrapper {
                             class="card row"
                           >
                             <div
-                              class="col-sm-4"
+                              class="col-xs-12 col-sm-3"
                             >
                               <div
                                 class="card-image"
@@ -14567,7 +14567,7 @@ VueWrapper {
                               </div>
                             </div>
                             <div
-                              class="col-sm-8 card-content"
+                              class="col-sm-9 col-sm-8 card-content"
                             >
                               <header
                                 class="card-header"
@@ -14686,7 +14686,7 @@ VueWrapper {
                       class="card row"
                     >
                       <div
-                        class="col-sm-4"
+                        class="col-xs-12 col-sm-3"
                       >
                         <div
                           class="card-image"
@@ -14697,7 +14697,7 @@ VueWrapper {
                         </div>
                       </div>
                       <div
-                        class="col-sm-8 card-content"
+                        class="col-sm-9 col-sm-8 card-content"
                       >
                         <header
                           class="card-header"
@@ -14743,7 +14743,7 @@ VueWrapper {
                       class="card row"
                     >
                       <div
-                        class="col-sm-4"
+                        class="col-xs-12 col-sm-3"
                       >
                         <div
                           class="card-image"
@@ -14754,7 +14754,7 @@ VueWrapper {
                         </div>
                       </div>
                       <div
-                        class="col-sm-8 card-content"
+                        class="col-sm-9 col-sm-8 card-content"
                       >
                         <header
                           class="card-header"
@@ -14800,7 +14800,7 @@ VueWrapper {
                       class="card row"
                     >
                       <div
-                        class="col-sm-4"
+                        class="col-xs-12 col-sm-3"
                       >
                         <div
                           class="card-image"
@@ -14811,7 +14811,7 @@ VueWrapper {
                         </div>
                       </div>
                       <div
-                        class="col-sm-8 card-content"
+                        class="col-sm-9 col-sm-8 card-content"
                       >
                         <header
                           class="card-header"
@@ -14857,7 +14857,7 @@ VueWrapper {
                       class="card row"
                     >
                       <div
-                        class="col-sm-4"
+                        class="col-xs-12 col-sm-3"
                       >
                         <div
                           class="card-image"
@@ -14868,7 +14868,7 @@ VueWrapper {
                         </div>
                       </div>
                       <div
-                        class="col-sm-8 card-content"
+                        class="col-sm-9 col-sm-8 card-content"
                       >
                         <header
                           class="card-header"
@@ -14914,7 +14914,7 @@ VueWrapper {
                       class="card row"
                     >
                       <div
-                        class="col-sm-4"
+                        class="col-xs-12 col-sm-3"
                       >
                         <div
                           class="card-image"
@@ -14925,7 +14925,7 @@ VueWrapper {
                         </div>
                       </div>
                       <div
-                        class="col-sm-8 card-content"
+                        class="col-sm-9 col-sm-8 card-content"
                       >
                         <header
                           class="card-header"
@@ -16100,7 +16100,7 @@ VueWrapper {
                                 "dynamicChildren": null,
                                 "dynamicProps": null,
                                 "el": <div
-                                  class="col-sm-4"
+                                  class="col-xs-12 col-sm-3"
                                 >
                                   <div
                                     class="card-image"
@@ -16113,7 +16113,7 @@ VueWrapper {
                                 "key": null,
                                 "patchFlag": 0,
                                 "props": {
-                                  "class": "col-sm-4",
+                                  "class": "col-xs-12 col-sm-3",
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -16373,7 +16373,7 @@ VueWrapper {
                                 "dynamicChildren": null,
                                 "dynamicProps": null,
                                 "el": <div
-                                  class="col-sm-8 card-content"
+                                  class="col-sm-9 col-sm-8 card-content"
                                 >
                                   <header
                                     class="card-header"
@@ -16402,7 +16402,7 @@ VueWrapper {
                                 "key": null,
                                 "patchFlag": 0,
                                 "props": {
-                                  "class": "col-sm-8 card-content",
+                                  "class": "col-sm-9 col-sm-8 card-content",
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -16563,7 +16563,7 @@ VueWrapper {
                               class="card row"
                             >
                               <div
-                                class="col-sm-4"
+                                class="col-xs-12 col-sm-3"
                               >
                                 <div
                                   class="card-image"
@@ -16574,7 +16574,7 @@ VueWrapper {
                                 </div>
                               </div>
                               <div
-                                class="col-sm-8 card-content"
+                                class="col-sm-9 col-sm-8 card-content"
                               >
                                 <header
                                   class="card-header"
@@ -16776,7 +16776,7 @@ VueWrapper {
                             class="card row"
                           >
                             <div
-                              class="col-sm-4"
+                              class="col-xs-12 col-sm-3"
                             >
                               <div
                                 class="card-image"
@@ -16787,7 +16787,7 @@ VueWrapper {
                               </div>
                             </div>
                             <div
-                              class="col-sm-8 card-content"
+                              class="col-sm-9 col-sm-8 card-content"
                             >
                               <header
                                 class="card-header"
@@ -16882,7 +16882,7 @@ VueWrapper {
                         class="card row"
                       >
                         <div
-                          class="col-sm-4"
+                          class="col-xs-12 col-sm-3"
                         >
                           <div
                             class="card-image"
@@ -16893,7 +16893,7 @@ VueWrapper {
                           </div>
                         </div>
                         <div
-                          class="col-sm-8 card-content"
+                          class="col-sm-9 col-sm-8 card-content"
                         >
                           <header
                             class="card-header"
@@ -18081,7 +18081,7 @@ VueWrapper {
                                 "dynamicChildren": null,
                                 "dynamicProps": null,
                                 "el": <div
-                                  class="col-sm-4"
+                                  class="col-xs-12 col-sm-3"
                                 >
                                   <div
                                     class="card-image"
@@ -18094,7 +18094,7 @@ VueWrapper {
                                 "key": null,
                                 "patchFlag": 0,
                                 "props": {
-                                  "class": "col-sm-4",
+                                  "class": "col-xs-12 col-sm-3",
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -18354,7 +18354,7 @@ VueWrapper {
                                 "dynamicChildren": null,
                                 "dynamicProps": null,
                                 "el": <div
-                                  class="col-sm-8 card-content"
+                                  class="col-sm-9 col-sm-8 card-content"
                                 >
                                   <header
                                     class="card-header"
@@ -18383,7 +18383,7 @@ VueWrapper {
                                 "key": null,
                                 "patchFlag": 0,
                                 "props": {
-                                  "class": "col-sm-8 card-content",
+                                  "class": "col-sm-9 col-sm-8 card-content",
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -18544,7 +18544,7 @@ VueWrapper {
                               class="card row"
                             >
                               <div
-                                class="col-sm-4"
+                                class="col-xs-12 col-sm-3"
                               >
                                 <div
                                   class="card-image"
@@ -18555,7 +18555,7 @@ VueWrapper {
                                 </div>
                               </div>
                               <div
-                                class="col-sm-8 card-content"
+                                class="col-sm-9 col-sm-8 card-content"
                               >
                                 <header
                                   class="card-header"
@@ -18757,7 +18757,7 @@ VueWrapper {
                             class="card row"
                           >
                             <div
-                              class="col-sm-4"
+                              class="col-xs-12 col-sm-3"
                             >
                               <div
                                 class="card-image"
@@ -18768,7 +18768,7 @@ VueWrapper {
                               </div>
                             </div>
                             <div
-                              class="col-sm-8 card-content"
+                              class="col-sm-9 col-sm-8 card-content"
                             >
                               <header
                                 class="card-header"
@@ -18863,7 +18863,7 @@ VueWrapper {
                         class="card row"
                       >
                         <div
-                          class="col-sm-4"
+                          class="col-xs-12 col-sm-3"
                         >
                           <div
                             class="card-image"
@@ -18874,7 +18874,7 @@ VueWrapper {
                           </div>
                         </div>
                         <div
-                          class="col-sm-8 card-content"
+                          class="col-sm-9 col-sm-8 card-content"
                         >
                           <header
                             class="card-header"
@@ -20062,7 +20062,7 @@ VueWrapper {
                                 "dynamicChildren": null,
                                 "dynamicProps": null,
                                 "el": <div
-                                  class="col-sm-4"
+                                  class="col-xs-12 col-sm-3"
                                 >
                                   <div
                                     class="card-image"
@@ -20075,7 +20075,7 @@ VueWrapper {
                                 "key": null,
                                 "patchFlag": 0,
                                 "props": {
-                                  "class": "col-sm-4",
+                                  "class": "col-xs-12 col-sm-3",
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -20335,7 +20335,7 @@ VueWrapper {
                                 "dynamicChildren": null,
                                 "dynamicProps": null,
                                 "el": <div
-                                  class="col-sm-8 card-content"
+                                  class="col-sm-9 col-sm-8 card-content"
                                 >
                                   <header
                                     class="card-header"
@@ -20364,7 +20364,7 @@ VueWrapper {
                                 "key": null,
                                 "patchFlag": 0,
                                 "props": {
-                                  "class": "col-sm-8 card-content",
+                                  "class": "col-sm-9 col-sm-8 card-content",
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -20525,7 +20525,7 @@ VueWrapper {
                               class="card row"
                             >
                               <div
-                                class="col-sm-4"
+                                class="col-xs-12 col-sm-3"
                               >
                                 <div
                                   class="card-image"
@@ -20536,7 +20536,7 @@ VueWrapper {
                                 </div>
                               </div>
                               <div
-                                class="col-sm-8 card-content"
+                                class="col-sm-9 col-sm-8 card-content"
                               >
                                 <header
                                   class="card-header"
@@ -20738,7 +20738,7 @@ VueWrapper {
                             class="card row"
                           >
                             <div
-                              class="col-sm-4"
+                              class="col-xs-12 col-sm-3"
                             >
                               <div
                                 class="card-image"
@@ -20749,7 +20749,7 @@ VueWrapper {
                               </div>
                             </div>
                             <div
-                              class="col-sm-8 card-content"
+                              class="col-sm-9 col-sm-8 card-content"
                             >
                               <header
                                 class="card-header"
@@ -20844,7 +20844,7 @@ VueWrapper {
                         class="card row"
                       >
                         <div
-                          class="col-sm-4"
+                          class="col-xs-12 col-sm-3"
                         >
                           <div
                             class="card-image"
@@ -20855,7 +20855,7 @@ VueWrapper {
                           </div>
                         </div>
                         <div
-                          class="col-sm-8 card-content"
+                          class="col-sm-9 col-sm-8 card-content"
                         >
                           <header
                             class="card-header"
@@ -22043,7 +22043,7 @@ VueWrapper {
                                 "dynamicChildren": null,
                                 "dynamicProps": null,
                                 "el": <div
-                                  class="col-sm-4"
+                                  class="col-xs-12 col-sm-3"
                                 >
                                   <div
                                     class="card-image"
@@ -22056,7 +22056,7 @@ VueWrapper {
                                 "key": null,
                                 "patchFlag": 0,
                                 "props": {
-                                  "class": "col-sm-4",
+                                  "class": "col-xs-12 col-sm-3",
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -22316,7 +22316,7 @@ VueWrapper {
                                 "dynamicChildren": null,
                                 "dynamicProps": null,
                                 "el": <div
-                                  class="col-sm-8 card-content"
+                                  class="col-sm-9 col-sm-8 card-content"
                                 >
                                   <header
                                     class="card-header"
@@ -22345,7 +22345,7 @@ VueWrapper {
                                 "key": null,
                                 "patchFlag": 0,
                                 "props": {
-                                  "class": "col-sm-8 card-content",
+                                  "class": "col-sm-9 col-sm-8 card-content",
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -22506,7 +22506,7 @@ VueWrapper {
                               class="card row"
                             >
                               <div
-                                class="col-sm-4"
+                                class="col-xs-12 col-sm-3"
                               >
                                 <div
                                   class="card-image"
@@ -22517,7 +22517,7 @@ VueWrapper {
                                 </div>
                               </div>
                               <div
-                                class="col-sm-8 card-content"
+                                class="col-sm-9 col-sm-8 card-content"
                               >
                                 <header
                                   class="card-header"
@@ -22719,7 +22719,7 @@ VueWrapper {
                             class="card row"
                           >
                             <div
-                              class="col-sm-4"
+                              class="col-xs-12 col-sm-3"
                             >
                               <div
                                 class="card-image"
@@ -22730,7 +22730,7 @@ VueWrapper {
                               </div>
                             </div>
                             <div
-                              class="col-sm-8 card-content"
+                              class="col-sm-9 col-sm-8 card-content"
                             >
                               <header
                                 class="card-header"
@@ -22825,7 +22825,7 @@ VueWrapper {
                         class="card row"
                       >
                         <div
-                          class="col-sm-4"
+                          class="col-xs-12 col-sm-3"
                         >
                           <div
                             class="card-image"
@@ -22836,7 +22836,7 @@ VueWrapper {
                           </div>
                         </div>
                         <div
-                          class="col-sm-8 card-content"
+                          class="col-sm-9 col-sm-8 card-content"
                         >
                           <header
                             class="card-header"
@@ -24024,7 +24024,7 @@ VueWrapper {
                                 "dynamicChildren": null,
                                 "dynamicProps": null,
                                 "el": <div
-                                  class="col-sm-4"
+                                  class="col-xs-12 col-sm-3"
                                 >
                                   <div
                                     class="card-image"
@@ -24037,7 +24037,7 @@ VueWrapper {
                                 "key": null,
                                 "patchFlag": 0,
                                 "props": {
-                                  "class": "col-sm-4",
+                                  "class": "col-xs-12 col-sm-3",
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -24297,7 +24297,7 @@ VueWrapper {
                                 "dynamicChildren": null,
                                 "dynamicProps": null,
                                 "el": <div
-                                  class="col-sm-8 card-content"
+                                  class="col-sm-9 col-sm-8 card-content"
                                 >
                                   <header
                                     class="card-header"
@@ -24326,7 +24326,7 @@ VueWrapper {
                                 "key": null,
                                 "patchFlag": 0,
                                 "props": {
-                                  "class": "col-sm-8 card-content",
+                                  "class": "col-sm-9 col-sm-8 card-content",
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -24487,7 +24487,7 @@ VueWrapper {
                               class="card row"
                             >
                               <div
-                                class="col-sm-4"
+                                class="col-xs-12 col-sm-3"
                               >
                                 <div
                                   class="card-image"
@@ -24498,7 +24498,7 @@ VueWrapper {
                                 </div>
                               </div>
                               <div
-                                class="col-sm-8 card-content"
+                                class="col-sm-9 col-sm-8 card-content"
                               >
                                 <header
                                   class="card-header"
@@ -24700,7 +24700,7 @@ VueWrapper {
                             class="card row"
                           >
                             <div
-                              class="col-sm-4"
+                              class="col-xs-12 col-sm-3"
                             >
                               <div
                                 class="card-image"
@@ -24711,7 +24711,7 @@ VueWrapper {
                               </div>
                             </div>
                             <div
-                              class="col-sm-8 card-content"
+                              class="col-sm-9 col-sm-8 card-content"
                             >
                               <header
                                 class="card-header"
@@ -24806,7 +24806,7 @@ VueWrapper {
                         class="card row"
                       >
                         <div
-                          class="col-sm-4"
+                          class="col-xs-12 col-sm-3"
                         >
                           <div
                             class="card-image"
@@ -24817,7 +24817,7 @@ VueWrapper {
                           </div>
                         </div>
                         <div
-                          class="col-sm-8 card-content"
+                          class="col-sm-9 col-sm-8 card-content"
                         >
                           <header
                             class="card-header"
@@ -24935,7 +24935,7 @@ VueWrapper {
                     class="card row"
                   >
                     <div
-                      class="col-sm-4"
+                      class="col-xs-12 col-sm-3"
                     >
                       <div
                         class="card-image"
@@ -24946,7 +24946,7 @@ VueWrapper {
                       </div>
                     </div>
                     <div
-                      class="col-sm-8 card-content"
+                      class="col-sm-9 col-sm-8 card-content"
                     >
                       <header
                         class="card-header"
@@ -24992,7 +24992,7 @@ VueWrapper {
                     class="card row"
                   >
                     <div
-                      class="col-sm-4"
+                      class="col-xs-12 col-sm-3"
                     >
                       <div
                         class="card-image"
@@ -25003,7 +25003,7 @@ VueWrapper {
                       </div>
                     </div>
                     <div
-                      class="col-sm-8 card-content"
+                      class="col-sm-9 col-sm-8 card-content"
                     >
                       <header
                         class="card-header"
@@ -25049,7 +25049,7 @@ VueWrapper {
                     class="card row"
                   >
                     <div
-                      class="col-sm-4"
+                      class="col-xs-12 col-sm-3"
                     >
                       <div
                         class="card-image"
@@ -25060,7 +25060,7 @@ VueWrapper {
                       </div>
                     </div>
                     <div
-                      class="col-sm-8 card-content"
+                      class="col-sm-9 col-sm-8 card-content"
                     >
                       <header
                         class="card-header"
@@ -25106,7 +25106,7 @@ VueWrapper {
                     class="card row"
                   >
                     <div
-                      class="col-sm-4"
+                      class="col-xs-12 col-sm-3"
                     >
                       <div
                         class="card-image"
@@ -25117,7 +25117,7 @@ VueWrapper {
                       </div>
                     </div>
                     <div
-                      class="col-sm-8 card-content"
+                      class="col-sm-9 col-sm-8 card-content"
                     >
                       <header
                         class="card-header"
@@ -25163,7 +25163,7 @@ VueWrapper {
                     class="card row"
                   >
                     <div
-                      class="col-sm-4"
+                      class="col-xs-12 col-sm-3"
                     >
                       <div
                         class="card-image"
@@ -25174,7 +25174,7 @@ VueWrapper {
                       </div>
                     </div>
                     <div
-                      class="col-sm-8 card-content"
+                      class="col-sm-9 col-sm-8 card-content"
                     >
                       <header
                         class="card-header"
@@ -25266,7 +25266,7 @@ VueWrapper {
                 class="card row"
               >
                 <div
-                  class="col-sm-4"
+                  class="col-xs-12 col-sm-3"
                 >
                   <div
                     class="card-image"
@@ -25277,7 +25277,7 @@ VueWrapper {
                   </div>
                 </div>
                 <div
-                  class="col-sm-8 card-content"
+                  class="col-sm-9 col-sm-8 card-content"
                 >
                   <header
                     class="card-header"
@@ -25323,7 +25323,7 @@ VueWrapper {
                 class="card row"
               >
                 <div
-                  class="col-sm-4"
+                  class="col-xs-12 col-sm-3"
                 >
                   <div
                     class="card-image"
@@ -25334,7 +25334,7 @@ VueWrapper {
                   </div>
                 </div>
                 <div
-                  class="col-sm-8 card-content"
+                  class="col-sm-9 col-sm-8 card-content"
                 >
                   <header
                     class="card-header"
@@ -25380,7 +25380,7 @@ VueWrapper {
                 class="card row"
               >
                 <div
-                  class="col-sm-4"
+                  class="col-xs-12 col-sm-3"
                 >
                   <div
                     class="card-image"
@@ -25391,7 +25391,7 @@ VueWrapper {
                   </div>
                 </div>
                 <div
-                  class="col-sm-8 card-content"
+                  class="col-sm-9 col-sm-8 card-content"
                 >
                   <header
                     class="card-header"
@@ -25437,7 +25437,7 @@ VueWrapper {
                 class="card row"
               >
                 <div
-                  class="col-sm-4"
+                  class="col-xs-12 col-sm-3"
                 >
                   <div
                     class="card-image"
@@ -25448,7 +25448,7 @@ VueWrapper {
                   </div>
                 </div>
                 <div
-                  class="col-sm-8 card-content"
+                  class="col-sm-9 col-sm-8 card-content"
                 >
                   <header
                     class="card-header"
@@ -25494,7 +25494,7 @@ VueWrapper {
                 class="card row"
               >
                 <div
-                  class="col-sm-4"
+                  class="col-xs-12 col-sm-3"
                 >
                   <div
                     class="card-image"
@@ -25505,7 +25505,7 @@ VueWrapper {
                   </div>
                 </div>
                 <div
-                  class="col-sm-8 card-content"
+                  class="col-sm-9 col-sm-8 card-content"
                 >
                   <header
                     class="card-header"
@@ -26440,7 +26440,7 @@ VueWrapper {
                 class="card row"
               >
                 <div
-                  class="col-sm-4"
+                  class="col-xs-12 col-sm-3"
                 >
                   <div
                     class="card-image"
@@ -26451,7 +26451,7 @@ VueWrapper {
                   </div>
                 </div>
                 <div
-                  class="col-sm-8 card-content"
+                  class="col-sm-9 col-sm-8 card-content"
                 >
                   <header
                     class="card-header"
@@ -26497,7 +26497,7 @@ VueWrapper {
                 class="card row"
               >
                 <div
-                  class="col-sm-4"
+                  class="col-xs-12 col-sm-3"
                 >
                   <div
                     class="card-image"
@@ -26508,7 +26508,7 @@ VueWrapper {
                   </div>
                 </div>
                 <div
-                  class="col-sm-8 card-content"
+                  class="col-sm-9 col-sm-8 card-content"
                 >
                   <header
                     class="card-header"
@@ -26554,7 +26554,7 @@ VueWrapper {
                 class="card row"
               >
                 <div
-                  class="col-sm-4"
+                  class="col-xs-12 col-sm-3"
                 >
                   <div
                     class="card-image"
@@ -26565,7 +26565,7 @@ VueWrapper {
                   </div>
                 </div>
                 <div
-                  class="col-sm-8 card-content"
+                  class="col-sm-9 col-sm-8 card-content"
                 >
                   <header
                     class="card-header"
@@ -26611,7 +26611,7 @@ VueWrapper {
                 class="card row"
               >
                 <div
-                  class="col-sm-4"
+                  class="col-xs-12 col-sm-3"
                 >
                   <div
                     class="card-image"
@@ -26622,7 +26622,7 @@ VueWrapper {
                   </div>
                 </div>
                 <div
-                  class="col-sm-8 card-content"
+                  class="col-sm-9 col-sm-8 card-content"
                 >
                   <header
                     class="card-header"
@@ -26668,7 +26668,7 @@ VueWrapper {
                 class="card row"
               >
                 <div
-                  class="col-sm-4"
+                  class="col-xs-12 col-sm-3"
                 >
                   <div
                     class="card-image"
@@ -26679,7 +26679,7 @@ VueWrapper {
                   </div>
                 </div>
                 <div
-                  class="col-sm-8 card-content"
+                  class="col-sm-9 col-sm-8 card-content"
                 >
                   <header
                     class="card-header"
@@ -27356,7 +27356,7 @@ VueWrapper {
           class="card row"
         >
           <div
-            class="col-sm-4"
+            class="col-xs-12 col-sm-3"
           >
             <div
               class="card-image"
@@ -27367,7 +27367,7 @@ VueWrapper {
             </div>
           </div>
           <div
-            class="col-sm-8 card-content"
+            class="col-sm-9 col-sm-8 card-content"
           >
             <header
               class="card-header"
@@ -27413,7 +27413,7 @@ VueWrapper {
           class="card row"
         >
           <div
-            class="col-sm-4"
+            class="col-xs-12 col-sm-3"
           >
             <div
               class="card-image"
@@ -27424,7 +27424,7 @@ VueWrapper {
             </div>
           </div>
           <div
-            class="col-sm-8 card-content"
+            class="col-sm-9 col-sm-8 card-content"
           >
             <header
               class="card-header"
@@ -27470,7 +27470,7 @@ VueWrapper {
           class="card row"
         >
           <div
-            class="col-sm-4"
+            class="col-xs-12 col-sm-3"
           >
             <div
               class="card-image"
@@ -27481,7 +27481,7 @@ VueWrapper {
             </div>
           </div>
           <div
-            class="col-sm-8 card-content"
+            class="col-sm-9 col-sm-8 card-content"
           >
             <header
               class="card-header"
@@ -27527,7 +27527,7 @@ VueWrapper {
           class="card row"
         >
           <div
-            class="col-sm-4"
+            class="col-xs-12 col-sm-3"
           >
             <div
               class="card-image"
@@ -27538,7 +27538,7 @@ VueWrapper {
             </div>
           </div>
           <div
-            class="col-sm-8 card-content"
+            class="col-sm-9 col-sm-8 card-content"
           >
             <header
               class="card-header"
@@ -27584,7 +27584,7 @@ VueWrapper {
           class="card row"
         >
           <div
-            class="col-sm-4"
+            class="col-xs-12 col-sm-3"
           >
             <div
               class="card-image"
@@ -27595,7 +27595,7 @@ VueWrapper {
             </div>
           </div>
           <div
-            class="col-sm-8 card-content"
+            class="col-sm-9 col-sm-8 card-content"
           >
             <header
               class="card-header"

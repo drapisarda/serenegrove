@@ -39,13 +39,14 @@ const add = (step: Step) => {
 
   ul {
     list-style: none;
-
     display: grid;
     padding: $size-7;
     column-gap: $size-6;
-    row-gap: $size-3;
+    row-gap: $size-6;
     grid-template-columns: repeat(auto-fit, 1fr);
-    @media (min-width: $tablet) {
+
+    @media (min-width: $desktop) {
+      row-gap: $size-3;
       grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
     }
   }

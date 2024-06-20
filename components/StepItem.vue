@@ -1,12 +1,12 @@
 <template>
   <li class="step-item">
     <div class="card row">
-      <div class="col-sm-4">
+      <div class="col-xs-12 col-sm-3">
         <div class="card-image">
           <Icon :name="step.icon" />
         </div>
       </div>
-      <div class="col-sm-8 card-content">
+      <div class="col-sm-9 col-sm-8 card-content">
         <header class="card-header">
           <p class="card-header-title">
             {{ step.name }}
@@ -72,7 +72,7 @@ defineProps({
     padding: 0;
 
     > div {
-      padding: $size-8 0;
+      padding: $size-8;
 
       @media (min-width: $miniMobile) {
         padding: $size-8 * 2;
@@ -93,13 +93,10 @@ defineProps({
       width: 100%;
       height: 100%;
       padding-bottom: 100%;
-      padding: $size-6;
+      padding: $size-7;
 
-      @media (min-width: $tablet) {
-        padding: $size-8;
-      }
       @media (min-width: $desktop) {
-        padding: $size-6;
+        padding: $size-7;
       }
     }
   }
