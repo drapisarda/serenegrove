@@ -54,6 +54,9 @@ $contentBg: $dark-2;
   &__subtitle {
     margin-top: 0;
     margin-bottom: 0;
+    @media (min-width: $tablet) {
+      margin-bottom: $size-7;
+    }
   }
 
   ul {
