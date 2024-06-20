@@ -38,11 +38,16 @@
           >
             <CloseIcon />
           </button>
-          <NuxtLink class="button navbar-cta" href="/create"
+          <NuxtLink
+            class="button navbar-cta"
+            href="/create"
+            @click="closeMenu()"
             >Start now!</NuxtLink
           >
-          <NuxtLink href="/about">About us</NuxtLink>
-          <NuxtLink href="/why-meditation">Why Meditation?</NuxtLink>
+          <NuxtLink href="/about" @click="closeMenu()">About us</NuxtLink>
+          <NuxtLink href="/why-meditation" @click="closeMenu()"
+            >Why Meditation?</NuxtLink
+          >
         </div>
       </Transition>
     </div>
@@ -56,6 +61,10 @@ const menuIsOpen = ref(false)
 
 const toggleMenu = () => {
   menuIsOpen.value = !menuIsOpen.value
+}
+
+const closeMenu = () => {
+  menuIsOpen.value = false
 }
 </script>
 

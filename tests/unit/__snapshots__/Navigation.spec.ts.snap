@@ -316,6 +316,7 @@ VueWrapper {
           "data": {},
           "devtoolsRawSetupState": {
             "CloseIcon": "/src/assets/img/icons/close.svg",
+            "closeMenu": [Function],
             "menuIsOpen": RefImpl {
               "__v_isRef": true,
               "__v_isShallow": false,
@@ -467,6 +468,9 @@ VueWrapper {
             [Function],
             [Function],
             [Function],
+            [Function],
+            [Function],
+            [Function],
           ],
           "root": [Circular],
           "rtc": null,
@@ -497,6 +501,7 @@ VueWrapper {
           },
           "setupState": {
             "CloseIcon": "/src/assets/img/icons/close.svg",
+            "closeMenu": [Function],
             "menuIsOpen": false,
             "toggleMenu": [Function],
           },
@@ -1499,6 +1504,7 @@ VueWrapper {
                                 "props": {
                                   "class": "button navbar-cta",
                                   "href": "/create",
+                                  "onClick": [Function],
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -1562,6 +1568,7 @@ VueWrapper {
                                 "patchFlag": 0,
                                 "props": {
                                   "href": "/about",
+                                  "onClick": [Function],
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -1625,6 +1632,7 @@ VueWrapper {
                                 "patchFlag": 0,
                                 "props": {
                                   "href": "/why-meditation",
+                                  "onClick": [Function],
                                 },
                                 "ref": null,
                                 "scopeId": null,
@@ -2843,6 +2851,7 @@ VueWrapper {
                             "props": {
                               "class": "button navbar-cta",
                               "href": "/create",
+                              "onClick": [Function],
                             },
                             "ref": null,
                             "scopeId": null,
@@ -2906,6 +2915,7 @@ VueWrapper {
                             "patchFlag": 0,
                             "props": {
                               "href": "/about",
+                              "onClick": [Function],
                             },
                             "ref": null,
                             "scopeId": null,
@@ -2969,6 +2979,7 @@ VueWrapper {
                             "patchFlag": 0,
                             "props": {
                               "href": "/why-meditation",
+                              "onClick": [Function],
                             },
                             "ref": null,
                             "scopeId": null,
