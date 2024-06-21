@@ -60,7 +60,6 @@ defineProps({
   height: 100%;
   display: flex;
   font-size: $size-6;
-  box-shadow: none;
   @media (min-width: $tablet) {
     font-size: $size-7;
   }
