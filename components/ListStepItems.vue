@@ -36,11 +36,13 @@ const add = (step: Step) => {
 .steps-list {
   $root: &;
   position: relative;
+  padding-top: $size-7;
+  padding-bottom: $size-7;
 
   ul {
     list-style: none;
     display: grid;
-    padding: $size-7;
+    padding: $size-8;
     column-gap: $size-6;
     row-gap: $size-6;
     grid-template-columns: repeat(auto-fit, 1fr);
