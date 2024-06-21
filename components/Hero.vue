@@ -7,10 +7,10 @@
         </div>
         <section class="col-md-6 hero__claim section">
           <h1 class="is-spaced">Your custom guided meditation routine.</h1>
-          <h3>
+          <h2>
             Ready when you are. <br />
             Everywhere you are.
-          </h3>
+          </h2>
         </section>
       </div>
     </div>

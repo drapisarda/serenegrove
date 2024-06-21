@@ -10050,11 +10050,11 @@ VueWrapper {
             >
               Your custom guided meditation routine.
             </h1>
-            <h3>
+            <h2>
                Ready when you are. 
               <br />
                Everywhere you are. 
-            </h3>
+            </h2>
           </section>
         </div>
       </div>
@@ -10593,11 +10593,11 @@ VueWrapper {
                             "dirs": null,
                             "dynamicChildren": null,
                             "dynamicProps": null,
-                            "el": <h3>
+                            "el": <h2>
                                Ready when you are. 
                               <br />
                                Everywhere you are. 
-                            </h3>,
+                            </h2>,
                             "key": null,
                             "patchFlag": 0,
                             "props": null,
@@ -10612,7 +10612,7 @@ VueWrapper {
                             "target": null,
                             "targetAnchor": null,
                             "transition": null,
-                            "type": "h3",
+                            "type": "h2",
                           },
                         ],
                         "component": null,
@@ -10628,11 +10628,11 @@ VueWrapper {
                           >
                             Your custom guided meditation routine.
                           </h1>
-                          <h3>
+                          <h2>
                              Ready when you are. 
                             <br />
                              Everywhere you are. 
-                          </h3>
+                          </h2>
                         </section>,
                         "key": null,
                         "patchFlag": -1,
@@ -10674,11 +10674,11 @@ VueWrapper {
                         >
                           Your custom guided meditation routine.
                         </h1>
-                        <h3>
+                        <h2>
                            Ready when you are. 
                           <br />
                            Everywhere you are. 
-                        </h3>
+                        </h2>
                       </section>
                     </div>,
                     "key": null,
@@ -10724,11 +10724,11 @@ VueWrapper {
                       >
                         Your custom guided meditation routine.
                       </h1>
-                      <h3>
+                      <h2>
                          Ready when you are. 
                         <br />
                          Everywhere you are. 
-                      </h3>
+                      </h2>
                     </section>
                   </div>
                 </div>,
