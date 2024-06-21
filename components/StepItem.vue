@@ -122,6 +122,7 @@ defineProps({
       display: flex;
       align-items: center;
       padding: 0.5em;
+      margin-bottom: $size-8;
       border-radius: $size-8;
       box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
 
