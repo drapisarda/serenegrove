@@ -33,8 +33,11 @@ $highlightsFontFamily: 'Lora', 'Times new roman', 'Arial', 'Helvetica', serif;
 
 html {
   scroll-behavior: smooth;
-  font-size: 18px;
-  /*16px*/
+  font-size: 16px;
+  
+  @media (min-width: $tablet) {
+    font-size: 18px;
+  }
   box-sizing: border-box;
 
   &.is-clipped {
@@ -84,11 +87,18 @@ h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 2.552rem;
+  font-size: 2.252rem;
+  @media (min-width: $tablet) {
+    font-size: 2.552rem;
+  }
 }
 
 h2 {
-  font-size: clamp(1.7rem, -0.875rem + 8.333vw, 2rem);
+  font-size: clamp(1.4rem, -0.875rem + 8.333vw, 1.8rem);
+
+  @media (min-width: $tablet) {
+    font-size: clamp(1.7rem, -0.875rem + 8.333vw, 2rem);
+  }
 }
 
 h3 {
