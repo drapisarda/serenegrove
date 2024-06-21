@@ -1,6 +1,5 @@
 <template>
   <slot>
-    <link rel="preload" href="/assets/img/forest_bg.webp" as="style" />
     <div class="hero hero--home">
       <div class="row is-variable">
         <div class="col-md-6 hero__bg">

@@ -46,7 +46,10 @@ export default defineNuxtConfig({
         { name: 'twitter:card', content: 'summary' },
       ],
       title: process.env.TITLE,
-      link: [{ rel: 'canonical', href: 'https://www.serenegrove.com/' }],
+      link: [
+        { rel: 'canonical', href: 'https://www.serenegrove.com/' },
+        { rel: 'preload', href: '/assets/img/forest_bg.webp', as: 'image' },
+      ],
       script: [
         {
           type: 'application/ld+json',
