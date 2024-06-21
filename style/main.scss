@@ -16,19 +16,19 @@ $highlightsFontFamily: 'Lora', 'Times new roman', 'Arial', 'Helvetica', serif;
 
 @font-face {
   font-family: 'Quattrocento';
-  src: url('/fonts/Quattrocento/Quattrocento-Regular.ttf') format('truetype');
+  src: url('../fonts/Quattrocento/Quattrocento-Regular.ttf') format('truetype');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Quattrocento';
-  src: url('/fonts/Quattrocento/Quattrocento-Bold.ttf') format('truetype');
+  src: url('../fonts/Quattrocento/Quattrocento-Bold.ttf') format('truetype');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'Lora';
-  src: url('/fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype'),
+  src: url('../fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype'),
 }
 
 html {
