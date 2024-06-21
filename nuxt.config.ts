@@ -3,7 +3,12 @@ import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
   ssr: false,
-  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@nuxt/eslint'],
+  modules: [
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
+    '@nuxt/eslint',
+    '@nuxtjs/robots',
+  ],
   piniaPersistedstate: {
     cookieOptions: {
       sameSite: 'strict',
