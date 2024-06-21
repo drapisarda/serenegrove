@@ -29,8 +29,8 @@
   background-color: $dark-5;
 
   @media (min-width: $tablet) {
-    padding: $size-4;
-    min-height: 70svh;
+    padding: 0 $size-4 0 0;
+    min-height: 90svh;
   }
 
   .subtitle {
@@ -56,6 +56,10 @@
   }
 
   &__claim {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
     @media (min-width: $tablet) {
       padding: 0 $size-5;
     }
@@ -65,7 +69,7 @@
     height: 25vh;
 
     @media (min-width: $tablet) {
-      height: 300px;
+      height: 55vh;
     }
   }
 }
