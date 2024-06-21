@@ -44,7 +44,9 @@
         life's ups and downs with ease.
       </p>
 
-      <p><NuxtLink href="/why-meditation">Learn more</NuxtLink>.</p>
+      <p>
+        <NuxtLink href="/why-meditation">Learn more about meditation</NuxtLink>
+      </p>
     </div>
   </section>
 
