@@ -118,7 +118,7 @@ describe('Player usages', () => {
     // play / pause
     cy.get('.player__playing').should('not.be.visible')
     cy.get('.player__start button').click()
-    cy.wait(500)
+    cy.wait(1000)
     cy.get('.player__playing').should('be.visible')
     cy.get('audio').then(($p) => mediaPlays($p, true))
     cy.wait(500)

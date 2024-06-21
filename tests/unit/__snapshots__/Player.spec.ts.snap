@@ -56,7 +56,6 @@ VueWrapper {
                     class="player__page player__page--carousel"
                     style="display: none;"
                   >
-                    <!-- TODO FIX UI -->
                     <!--v-if-->
                     <routine-carousel-stub
                       class=""
@@ -1817,6 +1816,187 @@ VueWrapper {
               },
               ReactiveEffect {
                 "active": true,
+                "deps": [
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                    ReactiveEffect {
+                      "active": true,
+                      "allowRecurse": true,
+                      "deps": [
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        [Circular],
+                        Set {
+                          [Circular],
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                      ],
+                      "fn": [Function],
+                      "onTrack": undefined,
+                      "onTrigger": undefined,
+                      "parent": undefined,
+                      "scheduler": [Function],
+                    },
+                  },
+                  Set {
+                    [Circular],
+                    ReactiveEffect {
+                      "active": true,
+                      "allowRecurse": true,
+                      "deps": [
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                          [Circular],
+                        },
+                        [Circular],
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                      ],
+                      "fn": [Function],
+                      "onTrack": undefined,
+                      "onTrigger": undefined,
+                      "parent": undefined,
+                      "scheduler": [Function],
+                    },
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                    ReactiveEffect {
+                      "active": true,
+                      "allowRecurse": true,
+                      "deps": [
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                          [Circular],
+                        },
+                        Set {
+                          [Circular],
+                        },
+                        [Circular],
+                        Set {
+                          [Circular],
+                        },
+                      ],
+                      "fn": [Function],
+                      "onTrack": undefined,
+                      "onTrigger": undefined,
+                      "parent": undefined,
+                      "scheduler": [Function],
+                    },
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                ],
+                "fn": [Function],
+                "onTrack": undefined,
+                "onTrigger": undefined,
+                "parent": undefined,
+                "scheduler": [Function],
+              },
+              ReactiveEffect {
+                "active": true,
                 "allowRecurse": true,
                 "deps": [
                   Set {
@@ -3206,34 +3386,6 @@ VueWrapper {
                                             "__v_skip": true,
                                             "anchor": null,
                                             "appContext": null,
-                                            "children": " TODO FIX UI ",
-                                            "component": null,
-                                            "ctx": [Circular],
-                                            "dirs": null,
-                                            "dynamicChildren": null,
-                                            "dynamicProps": null,
-                                            "el": <!-- TODO FIX UI -->,
-                                            "key": null,
-                                            "patchFlag": 0,
-                                            "props": null,
-                                            "ref": null,
-                                            "scopeId": null,
-                                            "shapeFlag": 8,
-                                            "slotScopeIds": null,
-                                            "ssContent": null,
-                                            "ssFallback": null,
-                                            "staticCount": 0,
-                                            "suspense": null,
-                                            "target": null,
-                                            "targetAnchor": null,
-                                            "transition": null,
-                                            "type": Symbol(v-cmt),
-                                          },
-                                          {
-                                            "__v_isVNode": true,
-                                            "__v_skip": true,
-                                            "anchor": null,
-                                            "appContext": null,
                                             "children": "v-if",
                                             "component": null,
                                             "ctx": [Circular],
@@ -3367,15 +3519,243 @@ VueWrapper {
                                                     [Circular],
                                                   },
                                                   Set {
+                                                    ReactiveEffect {
+                                                      "active": true,
+                                                      "deps": [
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        [Circular],
+                                                        Set {
+                                                          [Circular],
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                      ],
+                                                      "fn": [Function],
+                                                      "onTrack": undefined,
+                                                      "onTrigger": undefined,
+                                                      "parent": undefined,
+                                                      "scheduler": [Function],
+                                                    },
+                                                    [Circular],
+                                                  },
+                                                  Set {
+                                                    ReactiveEffect {
+                                                      "active": true,
+                                                      "deps": [
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                          [Circular],
+                                                        },
+                                                        [Circular],
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                      ],
+                                                      "fn": [Function],
+                                                      "onTrack": undefined,
+                                                      "onTrigger": undefined,
+                                                      "parent": undefined,
+                                                      "scheduler": [Function],
+                                                    },
                                                     [Circular],
                                                   },
                                                   Set {
                                                     [Circular],
                                                   },
                                                   Set {
-                                                    [Circular],
-                                                  },
-                                                  Set {
+                                                    ReactiveEffect {
+                                                      "active": true,
+                                                      "deps": [
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        [Circular],
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                      ],
+                                                      "fn": [Function],
+                                                      "onTrack": undefined,
+                                                      "onTrigger": undefined,
+                                                      "parent": undefined,
+                                                      "scheduler": [Function],
+                                                    },
                                                     [Circular],
                                                   },
                                                   Set {
@@ -3433,15 +3813,243 @@ VueWrapper {
                                                         [Circular],
                                                       },
                                                       Set {
+                                                        ReactiveEffect {
+                                                          "active": true,
+                                                          "deps": [
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            [Circular],
+                                                            Set {
+                                                              [Circular],
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                          ],
+                                                          "fn": [Function],
+                                                          "onTrack": undefined,
+                                                          "onTrigger": undefined,
+                                                          "parent": undefined,
+                                                          "scheduler": [Function],
+                                                        },
+                                                        [Circular],
+                                                      },
+                                                      Set {
+                                                        ReactiveEffect {
+                                                          "active": true,
+                                                          "deps": [
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                              [Circular],
+                                                            },
+                                                            [Circular],
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                          ],
+                                                          "fn": [Function],
+                                                          "onTrack": undefined,
+                                                          "onTrigger": undefined,
+                                                          "parent": undefined,
+                                                          "scheduler": [Function],
+                                                        },
                                                         [Circular],
                                                       },
                                                       Set {
                                                         [Circular],
                                                       },
                                                       Set {
-                                                        [Circular],
-                                                      },
-                                                      Set {
+                                                        ReactiveEffect {
+                                                          "active": true,
+                                                          "deps": [
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            [Circular],
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                          ],
+                                                          "fn": [Function],
+                                                          "onTrack": undefined,
+                                                          "onTrigger": undefined,
+                                                          "parent": undefined,
+                                                          "scheduler": [Function],
+                                                        },
                                                         [Circular],
                                                       },
                                                       Set {
@@ -3643,7 +4251,6 @@ VueWrapper {
                                           class="player__page player__page--carousel"
                                           style="display: none;"
                                         >
-                                          <!-- TODO FIX UI -->
                                           <!--v-if-->
                                           <routine-carousel-stub
                                             class=""
@@ -3691,7 +4298,6 @@ VueWrapper {
                                         class="player__page player__page--carousel"
                                         style="display: none;"
                                       >
-                                        <!-- TODO FIX UI -->
                                         <!--v-if-->
                                         <routine-carousel-stub
                                           class=""
@@ -3743,7 +4349,6 @@ VueWrapper {
                                       class="player__page player__page--carousel"
                                       style="display: none;"
                                     >
-                                      <!-- TODO FIX UI -->
                                       <!--v-if-->
                                       <routine-carousel-stub
                                         class=""
@@ -3846,8 +4451,6 @@ VueWrapper {
                                       "c": null,
                                       "components": null,
                                       "ctx": {
-                                        "start": false,
-                                        "stop": false,
                                         "time": 90,
                                       },
                                       "da": null,
@@ -3931,8 +4534,6 @@ VueWrapper {
                                         "pauseTimer": [Function],
                                         "play": false,
                                         "props": {
-                                          "start": false,
-                                          "stop": false,
                                           "time": 90,
                                         },
                                         "startTimer": [Function],
@@ -3975,25 +4576,11 @@ VueWrapper {
                                       "next": null,
                                       "parent": [Circular],
                                       "props": {
-                                        "start": false,
-                                        "stop": false,
                                         "time": 90,
                                       },
                                       "propsDefaults": {},
                                       "propsOptions": [
                                         {
-                                          "start": {
-                                            "0": true,
-                                            "1": true,
-                                            "default": false,
-                                            "type": [Function],
-                                          },
-                                          "stop": {
-                                            "0": true,
-                                            "1": true,
-                                            "default": false,
-                                            "type": [Function],
-                                          },
                                           "time": {
                                             "0": false,
                                             "1": true,
@@ -4003,14 +4590,10 @@ VueWrapper {
                                         },
                                         [
                                           "time",
-                                          "start",
-                                          "stop",
                                         ],
                                       ],
                                       "provides": {},
                                       "proxy": {
-                                        "start": false,
-                                        "stop": false,
                                         "time": 90,
                                       },
                                       "refs": {},
@@ -4060,6 +4643,19 @@ VueWrapper {
                                           },
                                           ReactiveEffect {
                                             "active": true,
+                                            "deps": [
+                                              Set {
+                                                [Circular],
+                                              },
+                                            ],
+                                            "fn": [Function],
+                                            "onTrack": undefined,
+                                            "onTrigger": undefined,
+                                            "parent": undefined,
+                                            "scheduler": [Function],
+                                          },
+                                          ReactiveEffect {
+                                            "active": true,
                                             "allowRecurse": true,
                                             "deps": [
                                               Set {
@@ -4088,8 +4684,6 @@ VueWrapper {
                                         "pauseTimer": [Function],
                                         "play": false,
                                         "props": {
-                                          "start": false,
-                                          "stop": false,
                                           "time": 90,
                                         },
                                         "startTimer": [Function],
@@ -4212,14 +4806,6 @@ VueWrapper {
                                         "__file": "/Users/danielerapisarda/projects/serenegrove/components/RoutineTimer.vue",
                                         "__name": "RoutineTimer",
                                         "props": {
-                                          "start": {
-                                            "default": false,
-                                            "type": [Function],
-                                          },
-                                          "stop": {
-                                            "default": false,
-                                            "type": [Function],
-                                          },
                                           "time": {
                                             "default": 0,
                                             "type": [Function],
@@ -4278,14 +4864,6 @@ VueWrapper {
                                       "__file": "/Users/danielerapisarda/projects/serenegrove/components/RoutineTimer.vue",
                                       "__name": "RoutineTimer",
                                       "props": {
-                                        "start": {
-                                          "default": false,
-                                          "type": [Function],
-                                        },
-                                        "stop": {
-                                          "default": false,
-                                          "type": [Function],
-                                        },
                                         "time": {
                                           "default": 0,
                                           "type": [Function],
@@ -4419,7 +4997,6 @@ VueWrapper {
                                     class="player__page player__page--carousel"
                                     style="display: none;"
                                   >
-                                    <!-- TODO FIX UI -->
                                     <!--v-if-->
                                     <routine-carousel-stub
                                       class=""
@@ -5014,7 +5591,6 @@ VueWrapper {
                                   class="player__page player__page--carousel"
                                   style="display: none;"
                                 >
-                                  <!-- TODO FIX UI -->
                                   <!--v-if-->
                                   <routine-carousel-stub
                                     class=""
@@ -5143,7 +5719,6 @@ VueWrapper {
                                 class="player__page player__page--carousel"
                                 style="display: none;"
                               >
-                                <!-- TODO FIX UI -->
                                 <!--v-if-->
                                 <routine-carousel-stub
                                   class=""
@@ -5385,7 +5960,6 @@ VueWrapper {
                             class="player__page player__page--carousel"
                             style="display: none;"
                           >
-                            <!-- TODO FIX UI -->
                             <!--v-if-->
                             <routine-carousel-stub
                               class=""
@@ -8235,34 +8809,6 @@ VueWrapper {
                                             "__v_skip": true,
                                             "anchor": null,
                                             "appContext": null,
-                                            "children": " TODO FIX UI ",
-                                            "component": null,
-                                            "ctx": [Circular],
-                                            "dirs": null,
-                                            "dynamicChildren": null,
-                                            "dynamicProps": null,
-                                            "el": <!-- TODO FIX UI -->,
-                                            "key": null,
-                                            "patchFlag": 0,
-                                            "props": null,
-                                            "ref": null,
-                                            "scopeId": null,
-                                            "shapeFlag": 8,
-                                            "slotScopeIds": null,
-                                            "ssContent": null,
-                                            "ssFallback": null,
-                                            "staticCount": 0,
-                                            "suspense": null,
-                                            "target": null,
-                                            "targetAnchor": null,
-                                            "transition": null,
-                                            "type": Symbol(v-cmt),
-                                          },
-                                          {
-                                            "__v_isVNode": true,
-                                            "__v_skip": true,
-                                            "anchor": null,
-                                            "appContext": null,
                                             "children": "v-if",
                                             "component": null,
                                             "ctx": [Circular],
@@ -8426,15 +8972,243 @@ VueWrapper {
                                                     [Circular],
                                                   },
                                                   Set {
+                                                    ReactiveEffect {
+                                                      "active": true,
+                                                      "deps": [
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        [Circular],
+                                                        Set {
+                                                          [Circular],
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                      ],
+                                                      "fn": [Function],
+                                                      "onTrack": undefined,
+                                                      "onTrigger": undefined,
+                                                      "parent": undefined,
+                                                      "scheduler": [Function],
+                                                    },
+                                                    [Circular],
+                                                  },
+                                                  Set {
+                                                    ReactiveEffect {
+                                                      "active": true,
+                                                      "deps": [
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                          [Circular],
+                                                        },
+                                                        [Circular],
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                      ],
+                                                      "fn": [Function],
+                                                      "onTrack": undefined,
+                                                      "onTrigger": undefined,
+                                                      "parent": undefined,
+                                                      "scheduler": [Function],
+                                                    },
                                                     [Circular],
                                                   },
                                                   Set {
                                                     [Circular],
                                                   },
                                                   Set {
-                                                    [Circular],
-                                                  },
-                                                  Set {
+                                                    ReactiveEffect {
+                                                      "active": true,
+                                                      "deps": [
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        [Circular],
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                        Set {
+                                                          [Circular],
+                                                        },
+                                                      ],
+                                                      "fn": [Function],
+                                                      "onTrack": undefined,
+                                                      "onTrigger": undefined,
+                                                      "parent": undefined,
+                                                      "scheduler": [Function],
+                                                    },
                                                     [Circular],
                                                   },
                                                   Set {
@@ -8492,15 +9266,243 @@ VueWrapper {
                                                         [Circular],
                                                       },
                                                       Set {
+                                                        ReactiveEffect {
+                                                          "active": true,
+                                                          "deps": [
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            [Circular],
+                                                            Set {
+                                                              [Circular],
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                          ],
+                                                          "fn": [Function],
+                                                          "onTrack": undefined,
+                                                          "onTrigger": undefined,
+                                                          "parent": undefined,
+                                                          "scheduler": [Function],
+                                                        },
+                                                        [Circular],
+                                                      },
+                                                      Set {
+                                                        ReactiveEffect {
+                                                          "active": true,
+                                                          "deps": [
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                              [Circular],
+                                                            },
+                                                            [Circular],
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                          ],
+                                                          "fn": [Function],
+                                                          "onTrack": undefined,
+                                                          "onTrigger": undefined,
+                                                          "parent": undefined,
+                                                          "scheduler": [Function],
+                                                        },
                                                         [Circular],
                                                       },
                                                       Set {
                                                         [Circular],
                                                       },
                                                       Set {
-                                                        [Circular],
-                                                      },
-                                                      Set {
+                                                        ReactiveEffect {
+                                                          "active": true,
+                                                          "deps": [
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            [Circular],
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                            Set {
+                                                              [Circular],
+                                                            },
+                                                          ],
+                                                          "fn": [Function],
+                                                          "onTrack": undefined,
+                                                          "onTrigger": undefined,
+                                                          "parent": undefined,
+                                                          "scheduler": [Function],
+                                                        },
                                                         [Circular],
                                                       },
                                                       Set {
@@ -8702,7 +9704,6 @@ VueWrapper {
                                           class="player__page player__page--carousel"
                                           style="display: none;"
                                         >
-                                          <!-- TODO FIX UI -->
                                           <!--v-if-->
                                           <routine-carousel-stub
                                             class=""
@@ -8750,7 +9751,6 @@ VueWrapper {
                                         class="player__page player__page--carousel"
                                         style="display: none;"
                                       >
-                                        <!-- TODO FIX UI -->
                                         <!--v-if-->
                                         <routine-carousel-stub
                                           class=""
@@ -8802,7 +9802,6 @@ VueWrapper {
                                       class="player__page player__page--carousel"
                                       style="display: none;"
                                     >
-                                      <!-- TODO FIX UI -->
                                       <!--v-if-->
                                       <routine-carousel-stub
                                         class=""
@@ -8850,8 +9849,6 @@ VueWrapper {
                                         "_isMockFunction": 0,
                                         "hasAttribute": 0,
                                         "nodeType": 0,
-                                        "start": 3,
-                                        "stop": 3,
                                         "tagName": 0,
                                         "time": 3,
                                         "toJSON": 0,
@@ -8917,8 +9914,6 @@ VueWrapper {
                                       "c": null,
                                       "components": null,
                                       "ctx": {
-                                        "start": false,
-                                        "stop": false,
                                         "time": 90,
                                       },
                                       "da": null,
@@ -9002,8 +9997,6 @@ VueWrapper {
                                         "pauseTimer": [Function],
                                         "play": false,
                                         "props": {
-                                          "start": false,
-                                          "stop": false,
                                           "time": 90,
                                         },
                                         "startTimer": [Function],
@@ -9046,25 +10039,11 @@ VueWrapper {
                                       "next": null,
                                       "parent": [Circular],
                                       "props": {
-                                        "start": false,
-                                        "stop": false,
                                         "time": 90,
                                       },
                                       "propsDefaults": {},
                                       "propsOptions": [
                                         {
-                                          "start": {
-                                            "0": true,
-                                            "1": true,
-                                            "default": false,
-                                            "type": [Function],
-                                          },
-                                          "stop": {
-                                            "0": true,
-                                            "1": true,
-                                            "default": false,
-                                            "type": [Function],
-                                          },
                                           "time": {
                                             "0": false,
                                             "1": true,
@@ -9074,14 +10053,10 @@ VueWrapper {
                                         },
                                         [
                                           "time",
-                                          "start",
-                                          "stop",
                                         ],
                                       ],
                                       "provides": {},
                                       "proxy": {
-                                        "start": false,
-                                        "stop": false,
                                         "time": 90,
                                       },
                                       "refs": {},
@@ -9131,6 +10106,19 @@ VueWrapper {
                                           },
                                           ReactiveEffect {
                                             "active": true,
+                                            "deps": [
+                                              Set {
+                                                [Circular],
+                                              },
+                                            ],
+                                            "fn": [Function],
+                                            "onTrack": undefined,
+                                            "onTrigger": undefined,
+                                            "parent": undefined,
+                                            "scheduler": [Function],
+                                          },
+                                          ReactiveEffect {
+                                            "active": true,
                                             "allowRecurse": true,
                                             "deps": [
                                               Set {
@@ -9159,8 +10147,6 @@ VueWrapper {
                                         "pauseTimer": [Function],
                                         "play": false,
                                         "props": {
-                                          "start": false,
-                                          "stop": false,
                                           "time": 90,
                                         },
                                         "startTimer": [Function],
@@ -9283,14 +10269,6 @@ VueWrapper {
                                         "__file": "/Users/danielerapisarda/projects/serenegrove/components/RoutineTimer.vue",
                                         "__name": "RoutineTimer",
                                         "props": {
-                                          "start": {
-                                            "default": false,
-                                            "type": [Function],
-                                          },
-                                          "stop": {
-                                            "default": false,
-                                            "type": [Function],
-                                          },
                                           "time": {
                                             "default": 0,
                                             "type": [Function],
@@ -9349,14 +10327,6 @@ VueWrapper {
                                       "__file": "/Users/danielerapisarda/projects/serenegrove/components/RoutineTimer.vue",
                                       "__name": "RoutineTimer",
                                       "props": {
-                                        "start": {
-                                          "default": false,
-                                          "type": [Function],
-                                        },
-                                        "stop": {
-                                          "default": false,
-                                          "type": [Function],
-                                        },
                                         "time": {
                                           "default": 0,
                                           "type": [Function],
@@ -9490,7 +10460,6 @@ VueWrapper {
                                     class="player__page player__page--carousel"
                                     style="display: none;"
                                   >
-                                    <!-- TODO FIX UI -->
                                     <!--v-if-->
                                     <routine-carousel-stub
                                       class=""
@@ -10085,7 +11054,6 @@ VueWrapper {
                                   class="player__page player__page--carousel"
                                   style="display: none;"
                                 >
-                                  <!-- TODO FIX UI -->
                                   <!--v-if-->
                                   <routine-carousel-stub
                                     class=""
@@ -10214,7 +11182,6 @@ VueWrapper {
                                 class="player__page player__page--carousel"
                                 style="display: none;"
                               >
-                                <!-- TODO FIX UI -->
                                 <!--v-if-->
                                 <routine-carousel-stub
                                   class=""
@@ -10456,7 +11423,6 @@ VueWrapper {
                             class="player__page player__page--carousel"
                             style="display: none;"
                           >
-                            <!-- TODO FIX UI -->
                             <!--v-if-->
                             <routine-carousel-stub
                               class=""
@@ -11959,7 +12925,6 @@ VueWrapper {
                           class="player__page player__page--carousel"
                           style="display: none;"
                         >
-                          <!-- TODO FIX UI -->
                           <!--v-if-->
                           <routine-carousel-stub
                             class=""
@@ -12160,7 +13125,6 @@ VueWrapper {
                       class="player__page player__page--carousel"
                       style="display: none;"
                     >
-                      <!-- TODO FIX UI -->
                       <!--v-if-->
                       <routine-carousel-stub
                         class=""
@@ -12441,7 +13405,6 @@ VueWrapper {
                       class="player__page player__page--carousel"
                       style="display: none;"
                     >
-                      <!-- TODO FIX UI -->
                       <!--v-if-->
                       <routine-carousel-stub
                         class=""
@@ -12805,7 +13768,6 @@ VueWrapper {
                 class="player__page player__page--carousel"
                 style="display: none;"
               >
-                <!-- TODO FIX UI -->
                 <!--v-if-->
                 <routine-carousel-stub
                   class=""

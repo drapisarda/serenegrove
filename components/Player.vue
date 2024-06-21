@@ -33,7 +33,6 @@
                 v-show="!stopStatus"
                 class="player__page player__page--carousel"
               >
-                <!-- TODO FIX UI -->
                 <Loader
                   v-if="!stopStatus"
                   message="Your meditation is loading..."
@@ -47,7 +46,10 @@
             </div>
           </div>
 
-          <div v-show="!stopStatus" class="player__time section">
+          <div
+            v-show="!stopStatus && loadedStatus"
+            class="player__time section"
+          >
             <RoutineTimer ref="timer" :time="duration" />
           </div>
 
@@ -128,6 +130,7 @@ import Play from '@/src/assets/img/icons/play-button.svg'
 import Pause from '@/src/assets/img/icons/pause-button.svg'
 import CloseIcon from '@/src/assets/img/icons/close.svg'
 import { clipHtml } from '@/composables/clipHtml'
+import type RoutineTimer from './RoutineTimer.vue'
 
 const props = defineProps({
   playerSteps: {
@@ -161,7 +164,7 @@ const activeStatus = computed(
 )
 
 const audio = ref<HTMLAudioElement>()
-const timer = ref(null)
+const timer = ref<InstanceType<typeof RoutineTimer>>()
 const audioCache = new Map<string, string>()
 
 const currentStep = computed((): Step => {
@@ -176,13 +179,18 @@ const handleKeys = (event: KeyboardEvent) => {
 watch(stopStatus, (newValue) => {
   if (!timer.value) return
   if (!newValue) return
-  ;(timer.value as any).stopTimer()
+  timer.value.stopTimer()
 })
 
 watch(pauseStatus, (newValue) => {
   if (!timer.value) return
-  if (newValue) (timer.value as any).pauseTimer()
-  else if (!stopStatus.value) (timer.value as any).startTimer()
+  if (newValue) timer.value.pauseTimer()
+  else if (!stopStatus.value && loadedStatus.value) timer.value.startTimer()
+})
+
+watch(props.playerSteps, () => {
+  if (!timer.value) return
+  timer.value.stopTimer()
 })
 
 const playNext = async () => {
@@ -240,7 +248,6 @@ const getAudioFileUrl = async (file: string): Promise<string> => {
   return 'error'
 }
 
-// TODO: Load also the icons and the full carousel
 const loadAllSteps = async () => {
   return Promise.all(
     props.playerSteps.map(async (step: Step) => {
@@ -268,6 +275,7 @@ const play = async () => {
   pauseStatus.value = false
   await loadAllSteps()
   loadedStatus.value = true
+  if (timer.value) timer.value.startTimer()
 
   // pause/play behavior
   if (currentStep.value) {
@@ -282,12 +290,14 @@ const play = async () => {
 const pause = () => {
   pauseStatus.value = true
   audio.value?.pause()
+  if (timer.value) timer.value.pauseTimer()
 }
 
 const stopAndClose = () => {
   stop()
   visibleStatus.value = false
   askFeedback.value = false
+  if (timer.value) timer.value.stopTimer()
 }
 
 const stopOrClose = () => {
@@ -303,6 +313,7 @@ const stop = () => {
   audio.value?.pause()
   currentIndex.value = -1
   audio.value ? (audio.value.currentTime = 0) : null
+  if (timer.value) timer.value.stopTimer()
 }
 </script>
 

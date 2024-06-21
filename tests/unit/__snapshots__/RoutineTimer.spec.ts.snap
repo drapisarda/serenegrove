@@ -13,6 +13,7 @@ VueWrapper {
     >
       <div
         class="routine-timer"
+        start="false"
       >
         <div
           class="container is-max-desktop"
@@ -275,7 +276,9 @@ VueWrapper {
           },
           "asyncDep": null,
           "asyncResolved": false,
-          "attrs": {},
+          "attrs": {
+            "start": false,
+          },
           "attrsProxy": null,
           "bc": null,
           "bm": null,
@@ -284,8 +287,6 @@ VueWrapper {
           "c": null,
           "components": {},
           "ctx": {
-            "start": false,
-            "stop": false,
             "time": 400,
           },
           "da": null,
@@ -369,8 +370,6 @@ VueWrapper {
             "pauseTimer": [Function],
             "play": false,
             "props": {
-              "start": false,
-              "stop": false,
               "time": 400,
             },
             "startTimer": [Function],
@@ -413,25 +412,11 @@ VueWrapper {
           "next": null,
           "parent": [Circular],
           "props": {
-            "start": false,
-            "stop": false,
             "time": 400,
           },
           "propsDefaults": {},
           "propsOptions": [
             {
-              "start": {
-                "0": true,
-                "1": true,
-                "default": false,
-                "type": [Function],
-              },
-              "stop": {
-                "0": true,
-                "1": true,
-                "default": false,
-                "type": [Function],
-              },
               "time": {
                 "0": false,
                 "1": true,
@@ -441,14 +426,10 @@ VueWrapper {
             },
             [
               "time",
-              "start",
-              "stop",
             ],
           ],
           "provides": {},
           "proxy": {
-            "start": false,
-            "stop": false,
             "time": 400,
           },
           "refs": {},
@@ -498,6 +479,19 @@ VueWrapper {
               },
               ReactiveEffect {
                 "active": true,
+                "deps": [
+                  Set {
+                    [Circular],
+                  },
+                ],
+                "fn": [Function],
+                "onTrack": undefined,
+                "onTrigger": undefined,
+                "parent": undefined,
+                "scheduler": [Function],
+              },
+              ReactiveEffect {
+                "active": true,
                 "allowRecurse": true,
                 "deps": [
                   Set {
@@ -514,7 +508,9 @@ VueWrapper {
             "parent": undefined,
           },
           "setupContext": {
-            "attrs": {},
+            "attrs": {
+              "start": false,
+            },
             "emit": [Function],
             "expose": [Function],
             "slots": {},
@@ -526,8 +522,6 @@ VueWrapper {
             "pauseTimer": [Function],
             "play": false,
             "props": {
-              "start": false,
-              "stop": false,
               "time": 400,
             },
             "startTimer": [Function],
@@ -541,6 +535,7 @@ VueWrapper {
             "__v_skip": true,
             "anchor": null,
             "appContext": null,
+            "ce": undefined,
             "children": [
               {
                 "__v_isVNode": true,
@@ -619,6 +614,7 @@ VueWrapper {
             "dynamicProps": null,
             "el": <div
               class="routine-timer"
+              start="false"
             >
               <div
                 class="container is-max-desktop"
@@ -627,9 +623,10 @@ VueWrapper {
               </div>
             </div>,
             "key": null,
-            "patchFlag": 0,
+            "patchFlag": 16,
             "props": {
               "class": "routine-timer",
+              "start": false,
             },
             "ref": null,
             "scopeId": null,
@@ -651,14 +648,6 @@ VueWrapper {
             "__name": "RoutineTimer",
             "components": {},
             "props": {
-              "start": {
-                "default": false,
-                "type": [Function],
-              },
-              "stop": {
-                "default": false,
-                "type": [Function],
-              },
               "time": {
                 "default": 0,
                 "type": [Function],
@@ -682,6 +671,7 @@ VueWrapper {
         "dynamicProps": null,
         "el": <div
           class="routine-timer"
+          start="false"
         >
           <div
             class="container is-max-desktop"
@@ -717,14 +707,6 @@ VueWrapper {
           "__name": "RoutineTimer",
           "components": {},
           "props": {
-            "start": {
-              "default": false,
-              "type": [Function],
-            },
-            "stop": {
-              "default": false,
-              "type": [Function],
-            },
             "time": {
               "default": 0,
               "type": [Function],
@@ -788,6 +770,7 @@ VueWrapper {
         "dynamicProps": null,
         "el": <div
           class="routine-timer"
+          start="false"
         >
           <div
             class="container is-max-desktop"
@@ -1028,6 +1011,7 @@ VueWrapper {
   },
   "wrapperElement": <div
     class="routine-timer"
+    start="false"
   >
     <div
       class="container is-max-desktop"

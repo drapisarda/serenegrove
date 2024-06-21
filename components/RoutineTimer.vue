@@ -7,21 +7,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onUnmounted, computed } from 'vue'
+import { ref, onUnmounted, computed, watch } from 'vue'
 import { formattedTime } from '@/composables/formattedTime'
 
 const props = defineProps({
   time: {
     type: Number,
     default: 0,
-  },
-  start: {
-    type: Boolean,
-    default: false,
-  },
-  stop: {
-    type: Boolean,
-    default: false,
   },
 })
 
@@ -30,13 +22,19 @@ let play: boolean = false
 const currentTime = ref(props.time)
 const displayTime = computed(() => formattedTime(currentTime.value))
 
+watch(
+  () => props.time,
+  () => {
+    stopTimer()
+  },
+)
+
 const startTimer = () => {
   if (!window) return
 
   play = true
   if (intervalId) return
 
-  currentTime.value = props.time
   intervalId = window.setInterval(() => {
     if (currentTime.value == 0) {
       play = false
@@ -51,6 +49,8 @@ const pauseTimer = () => {
 }
 
 const stopTimer = () => {
+  currentTime.value = props.time
+
   if (!intervalId) return
 
   clearInterval(intervalId)
