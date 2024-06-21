@@ -54,6 +54,22 @@ export default defineNuxtConfig({
       link: [
         { rel: 'canonical', href: 'https://www.serenegrove.com/' },
         { rel: 'preload', href: '/assets/img/forest_bg.webp', as: 'image' },
+        { rel: 'preload', href: '/assets/img/forest_bg.webp', as: 'image' },
+        {
+          rel: 'preload',
+          href: '/fonts/Quattrocento/Quattrocento-Regular.ttf',
+          as: 'font',
+        },
+        {
+          rel: 'preload',
+          href: '/fonts/Quattrocento/Quattrocento-Bold.ttf',
+          as: 'font',
+        },
+        {
+          rel: 'preload',
+          href: '/fonts/Lora/Lora-VariableFont_wght.ttf',
+          as: 'font',
+        },
       ],
       script: [
         {
