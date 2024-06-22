@@ -103,6 +103,7 @@
           <div class="player__action">
             <button
               class="button is-primary"
+              aria-label="start your routine"
               :class="{ inactive: disabled }"
               @click="display"
             >

@@ -9,8 +9,8 @@
         <Playlist class="col col-md-5 col-lg-4 col-" />
 
         <div class="col col-md-7 col-lg-8 start-wide__steps-choice">
-          <h2 class="start-wide__title">Welcome to your meditation routine</h2>
-          <h5 class="start-wide__subtitle">Pick your exercises</h5>
+          <h3 class="start-wide__title">Welcome to your meditation routine</h3>
+          <h4 class="start-wide__subtitle">Pick your exercises</h4>
           <div class="start-wide__content card">
             <ListStepItems />
           </div>

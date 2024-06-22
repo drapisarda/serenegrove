@@ -80,7 +80,7 @@ $secondaryColor: $dark-1;
   width: 100%;
   font-size: 0.8em;
   background-color: var(--primary-color);
-  color: var(--secondary-color);
+  color: $dark-5;
   display: flex;
   align-items: center;
   z-index: $toastZIndex - 1;
@@ -113,7 +113,7 @@ $secondaryColor: $dark-1;
       width: 1.1em;
       margin-right: 0.5em;
       path {
-        fill: var(--secondary-color);
+        fill: $dark-5;
       }
     }
   }

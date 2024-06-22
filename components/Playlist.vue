@@ -10,6 +10,7 @@
   >
     <div
       class="playlist__toggle"
+      aria-label="open or close playlist"
       role="button"
       tabindex="0"
       @keydown="routineToggle"

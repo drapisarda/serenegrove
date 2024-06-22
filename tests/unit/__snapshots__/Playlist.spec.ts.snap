@@ -17,6 +17,7 @@ VueWrapper {
         tabindex="0"
       >
         <div
+          aria-label="open or close playlist"
           class="playlist__toggle"
           role="button"
           tabindex="0"
@@ -470,6 +471,7 @@ VueWrapper {
                 "dynamicChildren": null,
                 "dynamicProps": null,
                 "el": <div
+                  aria-label="open or close playlist"
                   class="playlist__toggle"
                   role="button"
                   tabindex="0"
@@ -479,6 +481,7 @@ VueWrapper {
                 "key": null,
                 "patchFlag": 32,
                 "props": {
+                  "aria-label": "open or close playlist",
                   "class": "playlist__toggle",
                   "onClick": [Function],
                   "onKeydown": [Function],
@@ -683,6 +686,7 @@ VueWrapper {
               tabindex="0"
             >
               <div
+                aria-label="open or close playlist"
                 class="playlist__toggle"
                 role="button"
                 tabindex="0"
@@ -753,6 +757,7 @@ VueWrapper {
           tabindex="0"
         >
           <div
+            aria-label="open or close playlist"
             class="playlist__toggle"
             role="button"
             tabindex="0"
@@ -861,6 +866,7 @@ VueWrapper {
           tabindex="0"
         >
           <div
+            aria-label="open or close playlist"
             class="playlist__toggle"
             role="button"
             tabindex="0"
@@ -1111,6 +1117,7 @@ VueWrapper {
     tabindex="0"
   >
     <div
+      aria-label="open or close playlist"
       class="playlist__toggle"
       role="button"
       tabindex="0"

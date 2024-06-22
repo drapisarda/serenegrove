@@ -134,6 +134,7 @@ VueWrapper {
                 class="player__action"
               >
                 <button
+                  aria-label="start your routine"
                   class="button is-primary"
                 >
                   
@@ -6875,6 +6876,7 @@ VueWrapper {
                                         "dynamicChildren": null,
                                         "dynamicProps": null,
                                         "el": <button
+                                          aria-label="start your routine"
                                           class="button is-primary"
                                         >
                                           
@@ -6889,6 +6891,7 @@ VueWrapper {
                                         "key": null,
                                         "patchFlag": 2,
                                         "props": {
+                                          "aria-label": "start your routine",
                                           "class": "button is-primary",
                                           "onClick": [Function],
                                         },
@@ -6915,6 +6918,7 @@ VueWrapper {
                                       class="player__action"
                                     >
                                       <button
+                                        aria-label="start your routine"
                                         class="button is-primary"
                                       >
                                         
@@ -6958,6 +6962,7 @@ VueWrapper {
                                     class="player__action"
                                   >
                                     <button
+                                      aria-label="start your routine"
                                       class="button is-primary"
                                     >
                                       
@@ -7171,6 +7176,7 @@ VueWrapper {
                                         "dynamicChildren": null,
                                         "dynamicProps": null,
                                         "el": <button
+                                          aria-label="start your routine"
                                           class="button is-primary"
                                         >
                                           
@@ -7185,6 +7191,7 @@ VueWrapper {
                                         "key": null,
                                         "patchFlag": 2,
                                         "props": {
+                                          "aria-label": "start your routine",
                                           "class": "button is-primary",
                                           "onClick": [Function],
                                         },
@@ -7211,6 +7218,7 @@ VueWrapper {
                                       class="player__action"
                                     >
                                       <button
+                                        aria-label="start your routine"
                                         class="button is-primary"
                                       >
                                         
@@ -7254,6 +7262,7 @@ VueWrapper {
                                     class="player__action"
                                   >
                                     <button
+                                      aria-label="start your routine"
                                       class="button is-primary"
                                     >
                                       
@@ -7321,6 +7330,7 @@ VueWrapper {
                               class="player__action"
                             >
                               <button
+                                aria-label="start your routine"
                                 class="button is-primary"
                               >
                                 
@@ -7379,6 +7389,7 @@ VueWrapper {
                           class="player__action"
                         >
                           <button
+                            aria-label="start your routine"
                             class="button is-primary"
                           >
                             
@@ -7432,6 +7443,7 @@ VueWrapper {
                         class="player__action"
                       >
                         <button
+                          aria-label="start your routine"
                           class="button is-primary"
                         >
                           
@@ -12339,6 +12351,7 @@ VueWrapper {
                                     "dynamicChildren": null,
                                     "dynamicProps": null,
                                     "el": <button
+                                      aria-label="start your routine"
                                       class="button is-primary"
                                     >
                                       
@@ -12353,6 +12366,7 @@ VueWrapper {
                                     "key": null,
                                     "patchFlag": 2,
                                     "props": {
+                                      "aria-label": "start your routine",
                                       "class": "button is-primary",
                                       "onClick": [Function],
                                     },
@@ -12379,6 +12393,7 @@ VueWrapper {
                                   class="player__action"
                                 >
                                   <button
+                                    aria-label="start your routine"
                                     class="button is-primary"
                                   >
                                     
@@ -12422,6 +12437,7 @@ VueWrapper {
                                 class="player__action"
                               >
                                 <button
+                                  aria-label="start your routine"
                                   class="button is-primary"
                                 >
                                   
@@ -12635,6 +12651,7 @@ VueWrapper {
                                     "dynamicChildren": null,
                                     "dynamicProps": null,
                                     "el": <button
+                                      aria-label="start your routine"
                                       class="button is-primary"
                                     >
                                       
@@ -12649,6 +12666,7 @@ VueWrapper {
                                     "key": null,
                                     "patchFlag": 2,
                                     "props": {
+                                      "aria-label": "start your routine",
                                       "class": "button is-primary",
                                       "onClick": [Function],
                                     },
@@ -12675,6 +12693,7 @@ VueWrapper {
                                   class="player__action"
                                 >
                                   <button
+                                    aria-label="start your routine"
                                     class="button is-primary"
                                   >
                                     
@@ -12718,6 +12737,7 @@ VueWrapper {
                                 class="player__action"
                               >
                                 <button
+                                  aria-label="start your routine"
                                   class="button is-primary"
                                 >
                                   
@@ -12785,6 +12805,7 @@ VueWrapper {
                           class="player__action"
                         >
                           <button
+                            aria-label="start your routine"
                             class="button is-primary"
                           >
                             
@@ -12843,6 +12864,7 @@ VueWrapper {
                       class="player__action"
                     >
                       <button
+                        aria-label="start your routine"
                         class="button is-primary"
                       >
                         
@@ -13003,6 +13025,7 @@ VueWrapper {
                       class="player__action"
                     >
                       <button
+                        aria-label="start your routine"
                         class="button is-primary"
                       >
                         
@@ -13203,6 +13226,7 @@ VueWrapper {
                   class="player__action"
                 >
                   <button
+                    aria-label="start your routine"
                     class="button is-primary"
                   >
                     
@@ -13483,6 +13507,7 @@ VueWrapper {
                   class="player__action"
                 >
                   <button
+                    aria-label="start your routine"
                     class="button is-primary"
                   >
                     
@@ -13846,6 +13871,7 @@ VueWrapper {
             class="player__action"
           >
             <button
+              aria-label="start your routine"
               class="button is-primary"
             >
               
