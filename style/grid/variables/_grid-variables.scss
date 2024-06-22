@@ -8,7 +8,7 @@ $grid-columns: 12 !default; // Set number of columns in the grid
 // $md-max: 90rem !default; // Set md breakpoint's max width
 // $lg-max: 120rem !default; // Set lg breakpoint's max width
 
-$xs-max: $mobile; // Set xs breakpoint's max width
+$xs-max: $miniMobile; // Set xs breakpoint's max width
 $sm-max: $tablet; // Set sm breakpoint's max width
 $md-max: $desktop; // Set md breakpoint's max width
 $lg-max: $widescreen; // Set lg breakpoint's max width
