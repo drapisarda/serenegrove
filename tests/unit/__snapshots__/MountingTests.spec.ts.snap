@@ -10038,12 +10038,12 @@ VueWrapper {
           class="row is-variable"
         >
           <div
-            class="col-md-6 hero__bg"
+            class="col-xs-12 col-sm-6 hero__bg"
           >
             <logo />
           </div>
           <section
-            class="col-md-6 hero__claim section"
+            class="col-xs-12 col-sm-6 hero__claim section"
           >
             <h1
               class="is-spaced"
@@ -10429,14 +10429,14 @@ VueWrapper {
                         "dynamicChildren": null,
                         "dynamicProps": null,
                         "el": <div
-                          class="col-md-6 hero__bg"
+                          class="col-xs-12 col-sm-6 hero__bg"
                         >
                           <logo />
                         </div>,
                         "key": null,
                         "patchFlag": 0,
                         "props": {
-                          "class": "col-md-6 hero__bg",
+                          "class": "col-xs-12 col-sm-6 hero__bg",
                         },
                         "ref": null,
                         "scopeId": null,
@@ -10621,7 +10621,7 @@ VueWrapper {
                         "dynamicChildren": null,
                         "dynamicProps": null,
                         "el": <section
-                          class="col-md-6 hero__claim section"
+                          class="col-xs-12 col-sm-6 hero__claim section"
                         >
                           <h1
                             class="is-spaced"
@@ -10637,7 +10637,7 @@ VueWrapper {
                         "key": null,
                         "patchFlag": -1,
                         "props": {
-                          "class": "col-md-6 hero__claim section",
+                          "class": "col-xs-12 col-sm-6 hero__claim section",
                         },
                         "ref": null,
                         "scopeId": null,
@@ -10662,12 +10662,12 @@ VueWrapper {
                       class="row is-variable"
                     >
                       <div
-                        class="col-md-6 hero__bg"
+                        class="col-xs-12 col-sm-6 hero__bg"
                       >
                         <logo />
                       </div>
                       <section
-                        class="col-md-6 hero__claim section"
+                        class="col-xs-12 col-sm-6 hero__claim section"
                       >
                         <h1
                           class="is-spaced"
@@ -10712,12 +10712,12 @@ VueWrapper {
                     class="row is-variable"
                   >
                     <div
-                      class="col-md-6 hero__bg"
+                      class="col-xs-12 col-sm-6 hero__bg"
                     >
                       <logo />
                     </div>
                     <section
-                      class="col-md-6 hero__claim section"
+                      class="col-xs-12 col-sm-6 hero__claim section"
                     >
                       <h1
                         class="is-spaced"

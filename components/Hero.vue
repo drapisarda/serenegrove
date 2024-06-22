@@ -2,10 +2,10 @@
   <slot>
     <div class="hero hero--home">
       <div class="row is-variable">
-        <div class="col-md-6 hero__bg">
+        <div class="col-xs-12 col-sm-6 hero__bg">
           <Logo />
         </div>
-        <section class="col-md-6 hero__claim section">
+        <section class="col-xs-12 col-sm-6 hero__claim section">
           <h1 class="is-spaced">Your custom guided meditation routine.</h1>
           <h2>
             Ready when you are. <br />
