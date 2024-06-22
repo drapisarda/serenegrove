@@ -1191,15 +1191,15 @@ VueWrapper {
         <div
           class="navbar-brand"
         >
-          <a
+          <nuxtlink
             aria-label="SereneGrove"
             class="navbar-item navbar-item--logo"
-            href="/"
+            to="/"
           >
             <logo
               horizontal="true"
             />
-          </a>
+          </nuxtlink>
         </div>
         <div
           class="navbar-menu"
@@ -1736,21 +1736,21 @@ VueWrapper {
                     "dirs": null,
                     "dynamicChildren": null,
                     "dynamicProps": null,
-                    "el": <a
+                    "el": <nuxtlink
                       aria-label="SereneGrove"
                       class="navbar-item navbar-item--logo"
-                      href="/"
+                      to="/"
                     >
                       <logo
                         horizontal="true"
                       />
-                    </a>,
+                    </nuxtlink>,
                     "key": null,
                     "patchFlag": 0,
                     "props": {
                       "aria-label": "SereneGrove",
                       "class": "navbar-item navbar-item--logo",
-                      "href": "/",
+                      "to": "/",
                     },
                     "ref": null,
                     "scopeId": null,
@@ -1763,7 +1763,7 @@ VueWrapper {
                     "target": null,
                     "targetAnchor": null,
                     "transition": null,
-                    "type": "a",
+                    "type": "NuxtLink",
                   },
                 ],
                 "component": null,
@@ -1774,15 +1774,15 @@ VueWrapper {
                 "el": <div
                   class="navbar-brand"
                 >
-                  <a
+                  <nuxtlink
                     aria-label="SereneGrove"
                     class="navbar-item navbar-item--logo"
-                    href="/"
+                    to="/"
                   >
                     <logo
                       horizontal="true"
                     />
-                  </a>
+                  </nuxtlink>
                 </div>,
                 "key": null,
                 "patchFlag": 0,
@@ -4546,15 +4546,15 @@ VueWrapper {
               <div
                 class="navbar-brand"
               >
-                <a
+                <nuxtlink
                   aria-label="SereneGrove"
                   class="navbar-item navbar-item--logo"
-                  href="/"
+                  to="/"
                 >
                   <logo
                     horizontal="true"
                   />
-                </a>
+                </nuxtlink>
               </div>
               <div
                 class="navbar-menu"
@@ -4659,15 +4659,15 @@ VueWrapper {
           <div
             class="navbar-brand"
           >
-            <a
+            <nuxtlink
               aria-label="SereneGrove"
               class="navbar-item navbar-item--logo"
-              href="/"
+              to="/"
             >
               <logo
                 horizontal="true"
               />
-            </a>
+            </nuxtlink>
           </div>
           <div
             class="navbar-menu"
@@ -4813,15 +4813,15 @@ VueWrapper {
           <div
             class="navbar-brand"
           >
-            <a
+            <nuxtlink
               aria-label="SereneGrove"
               class="navbar-item navbar-item--logo"
-              href="/"
+              to="/"
             >
               <logo
                 horizontal="true"
               />
-            </a>
+            </nuxtlink>
           </div>
           <div
             class="navbar-menu"
@@ -5109,15 +5109,15 @@ VueWrapper {
     <div
       class="navbar-brand"
     >
-      <a
+      <nuxtlink
         aria-label="SereneGrove"
         class="navbar-item navbar-item--logo"
-        href="/"
+        to="/"
       >
         <logo
           horizontal="true"
         />
-      </a>
+      </nuxtlink>
     </div>
     <div
       class="navbar-menu"

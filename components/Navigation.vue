@@ -1,13 +1,13 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a
+      <NuxtLink
         class="navbar-item navbar-item--logo"
-        href="/"
+        to="/"
         aria-label="SereneGrove"
       >
         <Logo :horizontal="true" />
-      </a>
+      </NuxtLink>
     </div>
 
     <div class="navbar-menu">
