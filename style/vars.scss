@@ -24,12 +24,12 @@ $size-7: 0.75rem;
 $size-8: 0.25rem;
 
 // TODO What about using rems like in sassflexboxgrid ? Or also using sassflexboxgrid mixins?
-$gap: 12px;
-$miniMobile: 400px;
-$tablet: 769px;
-$desktop: 960px + (2 * $gap);
-$widescreen: 1152px + (2 * $gap);
-$fullhd: 1344px + (2 * $gap);
+$gap: 0.8rem;
+$miniMobile: 40rem;
+$tablet: 64rem;
+$desktop: 90rem + (2 * $gap);
+$widescreen: 120rem + (2 * $gap);
+$fullhd: 150rem + (2 * $gap);
 
 $bg: $dark-5;
 $label-color: $clear-1;

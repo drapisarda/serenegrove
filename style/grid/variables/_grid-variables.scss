@@ -1,10 +1,17 @@
+@import '../../vars.scss';
+
 // Grid
 $grid-columns: 12 !default; // Set number of columns in the grid
 
-$xs-max: 40rem !default; // Set xs breakpoint's max width
-$sm-max: 64rem !default; // Set sm breakpoint's max width
-$md-max: 90rem !default; // Set md breakpoint's max width
-$lg-max: 120rem !default; // Set lg breakpoint's max width
+// $xs-max: 40rem !default; // Set xs breakpoint's max width
+// $sm-max: 64rem !default; // Set sm breakpoint's max width
+// $md-max: 90rem !default; // Set md breakpoint's max width
+// $lg-max: 120rem !default; // Set lg breakpoint's max width
+
+$xs-max: $miniMobile;
+$sm-max: $tablet;
+$md-max: $desktop;
+$lg-max: $widescreen;
 
 $gutter: 1rem !default; // Set gutter size
 

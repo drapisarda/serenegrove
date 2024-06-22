@@ -87,7 +87,7 @@ $contentBg: $dark-2;
     overflow: hidden;
     position: relative;
 
-    @media (max-width: #{$tablet - 1px}) {
+    @media (max-width: #{$tablet}) {
       background: none;
       box-shadow: none;
     }
