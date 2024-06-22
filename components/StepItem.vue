@@ -73,7 +73,7 @@ defineProps({
     > div {
       padding: $size-7;
 
-      @media (min-width: $miniMobile) {
+      @media (min-width: $mobile) {
         padding: $size-8;
       }
     }

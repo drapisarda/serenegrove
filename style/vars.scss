@@ -26,6 +26,7 @@ $size-8: 0.25rem;
 // TODO What about using rems like in sassflexboxgrid ? Or also using sassflexboxgrid mixins?
 $gap: 12px;
 $miniMobile: 400px;
+$mobile: 640px;
 $tablet: 769px;
 $desktop: 960px + (2 * $gap);
 $widescreen: 1152px + (2 * $gap);

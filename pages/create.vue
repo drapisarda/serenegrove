@@ -68,7 +68,7 @@ $contentBg: $dark-2;
     flex-direction: column;
     position: relative;
 
-    @media (min-width: $miniMobile) {
+    @media (min-width: $mobile) {
       flex-direction: row;
       height: 100%;
     }

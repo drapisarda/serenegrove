@@ -86,7 +86,7 @@ const emit = defineEmits({
     flex-shrink: 0;
     display: none;
 
-    @media (min-width: $miniMobile) {
+    @media (min-width: $mobile) {
       display: flex;
       align-items: center;
     }

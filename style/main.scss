@@ -3,10 +3,10 @@
 //sass-flexbox-grid
 
 $gutter: $gap;
-$xs-max: $miniMobile - 1; // Set xs breakpoint's max width
-$sm-max: $tablet - 1; // Set sm breakpoint's max width
-$md-max: $desktop - 1; // Set md breakpoint's max width
-$lg-max: $widescreen - 1; // Set lg breakpoint's max width
+$xs-max: $mobile; // Set xs breakpoint's max width
+$sm-max: $tablet; // Set sm breakpoint's max width
+$md-max: $desktop; // Set md breakpoint's max width
+$lg-max: $widescreen; // Set lg breakpoint's max width
 
 $bodyFontFamily: 'Quattrocento', 'Times new roman', 'Arial', 'Helvetica', serif;
 $highlightsFontFamily: 'Lora', 'Times new roman', 'Arial', 'Helvetica', serif;

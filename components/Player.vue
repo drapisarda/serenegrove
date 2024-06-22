@@ -477,7 +477,7 @@ const stop = () => {
       padding-left: $size-6;
       padding-right: $size-6;
 
-      @media (min-width: $miniMobile) {
+      @media (min-width: $mobile) {
         padding-left: $size-5;
         padding-right: $size-5;
         font-size: $size-3;
