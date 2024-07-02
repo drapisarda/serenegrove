@@ -510,3 +510,27 @@ label {
     }
   }
 }
+
+.breath-svg__breath {
+  animation: breathAnim 1s forwards;
+  transition: transform 1s ease-in-out;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+@keyframes breathAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  30% {
+    opacity: 0.1;
+    transform: translateX(10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
