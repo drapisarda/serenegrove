@@ -466,6 +466,13 @@ label {
   background-color: $dark-2;
   border-radius: $size-8;
   fill: $black;
+
+  svg {
+    width: auto;
+    height: $size-2;
+    max-width: 100%;
+    padding: $size-7;
+  }
 }
 
 .card {

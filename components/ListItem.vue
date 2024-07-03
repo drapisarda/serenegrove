@@ -77,12 +77,11 @@ const emit = defineEmits({
 
 <style lang="scss">
 @import '@/style/vars.scss';
-
-.card {
+.list-item {
   color: $black;
 
   .card-image {
-    padding: $size-7;
+    margin: $size-7;
     flex-shrink: 0;
     display: none;
 
@@ -92,13 +91,11 @@ const emit = defineEmits({
     }
 
     @media (min-width: $tablet) {
-      padding: $size-8 $size-8 $size-8 $size-7;
+      margin: 0;
+      margin-left: $size-8;
     }
 
     svg {
-      width: auto;
-      height: $size-2;
-      max-width: 100%;
       padding: $size-8;
     }
   }

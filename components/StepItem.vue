@@ -86,17 +86,10 @@ defineProps({
     overflow: hidden;
     line-height: 0;
     aspect-ratio: 1;
-    padding: 0;
 
     svg {
       width: 100%;
       height: 100%;
-      padding-bottom: 100%;
-      padding: $size-7;
-
-      @media (min-width: $desktop) {
-        padding: $size-7;
-      }
     }
   }
 
