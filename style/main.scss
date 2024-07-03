@@ -462,7 +462,7 @@ label {
   font-family: $highlightsFontFamily;
 }
 
-.card-image svg {
+.card-image {
   background-color: $dark-2;
   border-radius: $size-8;
   fill: $black;
@@ -532,5 +532,26 @@ label {
   100% {
     opacity: 1;
     transform: translateX(0%);
+  }
+}
+
+.shree-svg {
+  transition: transform 1s ease-in-out;
+  animation: vibeAnim 1s forwards;
+}
+
+@keyframes vibeAnim {
+  0% {
+    transform: scale(1);
+  }
+
+  90% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
