@@ -16,8 +16,7 @@
       @keydown="routineToggle"
       @click="routineToggle"
     >
-      <DownShevron v-if="routineOpen" />
-      <UpShevron v-else />
+      <UpShevron />
     </div>
     <div class="card">
       <h5 class="playlist__title">Your meditation routine</h5>
@@ -31,7 +30,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import UpShevron from '@/src/assets/img/icons/up-chevron.svg'
-import DownShevron from '@/src/assets/img/icons/down-chevron.svg'
 
 const routineOpen = ref(false)
 let touchStart = 0
@@ -66,9 +64,10 @@ const manageTouchMove = (event: TouchEvent) => {
 <style lang="scss">
 @import '@/style/vars.scss';
 $routineChevronHeight: 3rem;
+$transitionDuration: 1s;
 
 .playlist {
-  transition: all 1s ease-in-out;
+  transition: all $transitionDuration ease-in-out;
   transform: translate(0, 0);
   z-index: 2;
   user-select: none;
@@ -93,7 +92,7 @@ $routineChevronHeight: 3rem;
 
   &__toggle {
     transform: translate(0, -$routineChevronHeight - $size-8 - $size-8);
-    transition: all 1s ease-in-out;
+    transition: all $transitionDuration ease-in-out;
     overflow: visible;
     height: $routineChevronHeight;
     width: $routineChevronHeight;
@@ -109,7 +108,7 @@ $routineChevronHeight: 3rem;
       border-radius: 100%;
       border: 1px solid $black;
       opacity: 1;
-      transition: opacity 0.4s linear 0.6s;
+      transition: opacity 0.4s linear 0.2s;
       z-index: -1;
 
       .open & {
@@ -136,9 +135,14 @@ $routineChevronHeight: 3rem;
       width: 100%;
       z-index: 2;
       padding: $size-8;
+      transition: transform $transitionDuration ease-in-out;
 
       path {
         stroke: $black;
+      }
+
+      .open & {
+        transform: rotate(-180deg);
       }
     }
   }
