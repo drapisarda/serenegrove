@@ -44,22 +44,22 @@ defineProps({
       fill: white;
     }
 
-    + svg {
+    +svg {
       scale: 1.02;
       opacity: 1;
       filter: blur(5px);
       stroke: $dark-5;
+      z-index: 1;
 
       path {
         fill: $dark-5;
       }
 
-      z-index: 1;
     }
   }
 
   &--h {
-    svg + svg {
+    svg+svg {
       scale: 1.05;
       opacity: 1;
       filter: blur(2px);
