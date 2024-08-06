@@ -101,7 +101,6 @@ VueWrapper {
       "asyncDep": null,
       "asyncResolved": false,
       "attrs": {},
-      "attrsProxy": null,
       "bc": null,
       "bm": null,
       "bu": null,
@@ -125,24 +124,29 @@ VueWrapper {
       "directives": null,
       "ec": null,
       "effect": ReactiveEffect {
+        "_depsLength": 3,
+        "_dirtyLevel": 0,
+        "_runnings": 0,
+        "_shouldSchedule": false,
+        "_trackId": 1,
         "active": true,
         "allowRecurse": true,
         "deps": [
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
         ],
         "fn": [Function],
         "onTrack": undefined,
         "onTrigger": undefined,
-        "parent": undefined,
         "scheduler": [Function],
+        "trigger": [Function],
       },
       "emit": [Function],
       "emitsOptions": null,
@@ -180,24 +184,29 @@ VueWrapper {
         "detached": true,
         "effects": [
           ReactiveEffect {
+            "_depsLength": 3,
+            "_dirtyLevel": 0,
+            "_runnings": 0,
+            "_shouldSchedule": false,
+            "_trackId": 1,
             "active": true,
             "allowRecurse": true,
             "deps": [
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
             ],
             "fn": [Function],
             "onTrack": undefined,
             "onTrigger": undefined,
-            "parent": undefined,
             "scheduler": [Function],
+            "trigger": [Function],
           },
         ],
         "parent": undefined,
@@ -207,7 +216,6 @@ VueWrapper {
         "VTU_COMPONENT": {},
       },
       "slots": {},
-      "slotsProxy": null,
       "sp": null,
       "subTree": {
         "__v_isVNode": true,
@@ -252,7 +260,6 @@ VueWrapper {
           "asyncDep": null,
           "asyncResolved": false,
           "attrs": {},
-          "attrsProxy": null,
           "bc": null,
           "bm": null,
           "bu": null,
@@ -268,18 +275,23 @@ VueWrapper {
           "directives": null,
           "ec": null,
           "effect": ReactiveEffect {
+            "_depsLength": 1,
+            "_dirtyLevel": 0,
+            "_runnings": 0,
+            "_shouldSchedule": false,
+            "_trackId": 1,
             "active": true,
             "allowRecurse": true,
             "deps": [
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
             ],
             "fn": [Function],
             "onTrack": undefined,
             "onTrigger": undefined,
-            "parent": undefined,
             "scheduler": [Function],
+            "trigger": [Function],
           },
           "emit": [Function],
           "emitsOptions": null,
@@ -326,18 +338,23 @@ VueWrapper {
             "detached": true,
             "effects": [
               ReactiveEffect {
+                "_depsLength": 1,
+                "_dirtyLevel": 0,
+                "_runnings": 0,
+                "_shouldSchedule": false,
+                "_trackId": 1,
                 "active": true,
                 "allowRecurse": true,
                 "deps": [
-                  Set {
-                    [Circular],
+                  Map {
+                    [Circular] => 1,
                   },
                 ],
                 "fn": [Function],
                 "onTrack": undefined,
                 "onTrigger": undefined,
-                "parent": undefined,
                 "scheduler": [Function],
+                "trigger": [Function],
               },
             ],
             "parent": undefined,
@@ -350,7 +367,6 @@ VueWrapper {
           },
           "setupState": {},
           "slots": {},
-          "slotsProxy": {},
           "sp": null,
           "subTree": {
             "__v_isVNode": true,
@@ -391,6 +407,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "div",
                   },
@@ -420,6 +437,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "div",
                   },
@@ -449,6 +467,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "div",
                   },
@@ -478,6 +497,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "div",
                   },
@@ -507,6 +527,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "div",
                   },
@@ -536,6 +557,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "div",
                   },
@@ -565,6 +587,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "div",
                   },
@@ -594,6 +617,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "div",
                   },
@@ -630,6 +654,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": "div",
               },
@@ -664,6 +689,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "p",
                   },
@@ -693,6 +719,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": "div",
               },
@@ -726,6 +753,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": "p",
               },
@@ -767,6 +795,7 @@ VueWrapper {
             "suspense": null,
             "target": null,
             "targetAnchor": null,
+            "targetStart": null,
             "transition": null,
             "type": "div",
           },
@@ -837,6 +866,7 @@ VueWrapper {
         "suspense": null,
         "target": null,
         "targetAnchor": null,
+        "targetStart": null,
         "transition": null,
         "type": {
           "__file": "/Users/danielerapisarda/projects/serenegrove/components/Loader.vue",
@@ -938,6 +968,7 @@ VueWrapper {
         "suspense": null,
         "target": null,
         "targetAnchor": null,
+        "targetStart": null,
         "transition": null,
         "type": {
           "name": "VTU_ROOT",
@@ -966,7 +997,7 @@ VueWrapper {
     "runWithContext": [Function],
     "unmount": [Function],
     "use": [Function],
-    "version": "3.3.11",
+    "version": "3.4.36",
   },
   "__setProps": [Function],
   "cleanUpCallbacks": [
@@ -1325,7 +1356,6 @@ VueWrapper {
       "asyncDep": null,
       "asyncResolved": false,
       "attrs": {},
-      "attrsProxy": null,
       "bc": null,
       "bm": null,
       "bu": null,
@@ -1349,24 +1379,29 @@ VueWrapper {
       "directives": null,
       "ec": null,
       "effect": ReactiveEffect {
+        "_depsLength": 3,
+        "_dirtyLevel": 0,
+        "_runnings": 0,
+        "_shouldSchedule": false,
+        "_trackId": 1,
         "active": true,
         "allowRecurse": true,
         "deps": [
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
         ],
         "fn": [Function],
         "onTrack": undefined,
         "onTrigger": undefined,
-        "parent": undefined,
         "scheduler": [Function],
+        "trigger": [Function],
       },
       "emit": [Function],
       "emitsOptions": null,
@@ -1404,24 +1439,29 @@ VueWrapper {
         "detached": true,
         "effects": [
           ReactiveEffect {
+            "_depsLength": 3,
+            "_dirtyLevel": 0,
+            "_runnings": 0,
+            "_shouldSchedule": false,
+            "_trackId": 1,
             "active": true,
             "allowRecurse": true,
             "deps": [
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
             ],
             "fn": [Function],
             "onTrack": undefined,
             "onTrigger": undefined,
-            "parent": undefined,
             "scheduler": [Function],
+            "trigger": [Function],
           },
         ],
         "parent": undefined,
@@ -1431,7 +1471,6 @@ VueWrapper {
         "VTU_COMPONENT": {},
       },
       "slots": {},
-      "slotsProxy": null,
       "sp": null,
       "subTree": {
         "__v_isVNode": true,
@@ -1476,7 +1515,6 @@ VueWrapper {
           "asyncDep": null,
           "asyncResolved": false,
           "attrs": {},
-          "attrsProxy": null,
           "bc": null,
           "bm": null,
           "bu": null,
@@ -1494,109 +1532,114 @@ VueWrapper {
               "__v_isShallow": false,
               "_rawValue": false,
               "_value": false,
-              "dep": Set {
+              "dep": Map {
                 ReactiveEffect {
+                  "_depsLength": 31,
+                  "_dirtyLevel": 0,
+                  "_runnings": 0,
+                  "_shouldSchedule": false,
+                  "_trackId": 1,
                   "active": true,
                   "allowRecurse": true,
                   "deps": [
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
                     [Circular],
                   ],
                   "fn": [Function],
                   "onTrack": undefined,
                   "onTrigger": undefined,
-                  "parent": undefined,
                   "scheduler": [Function],
-                },
+                  "trigger": [Function],
+                } => 1,
               },
             },
             "toggleMenu": [Function],
@@ -1604,14 +1647,19 @@ VueWrapper {
           "directives": null,
           "ec": null,
           "effect": ReactiveEffect {
+            "_depsLength": 0,
+            "_dirtyLevel": 0,
+            "_runnings": 0,
+            "_shouldSchedule": false,
+            "_trackId": 1,
             "active": true,
             "allowRecurse": true,
             "deps": [],
             "fn": [Function],
             "onTrack": undefined,
             "onTrigger": undefined,
-            "parent": undefined,
             "scheduler": [Function],
+            "trigger": [Function],
           },
           "emit": [Function],
           "emitsOptions": null,
@@ -1653,14 +1701,19 @@ VueWrapper {
             "detached": true,
             "effects": [
               ReactiveEffect {
+                "_depsLength": 0,
+                "_dirtyLevel": 0,
+                "_runnings": 0,
+                "_shouldSchedule": false,
+                "_trackId": 1,
                 "active": true,
                 "allowRecurse": true,
                 "deps": [],
                 "fn": [Function],
                 "onTrack": undefined,
                 "onTrigger": undefined,
-                "parent": undefined,
                 "scheduler": [Function],
+                "trigger": [Function],
               },
             ],
             "parent": undefined,
@@ -1678,7 +1731,6 @@ VueWrapper {
             "toggleMenu": [Function],
           },
           "slots": {},
-          "slotsProxy": {},
           "sp": null,
           "subTree": {
             "__v_isVNode": true,
@@ -1727,6 +1779,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "Logo",
                       },
@@ -1762,6 +1815,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "NuxtLink",
                   },
@@ -1799,6 +1853,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": "div",
               },
@@ -1844,6 +1899,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "span",
                       },
@@ -1877,6 +1933,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "span",
                       },
@@ -1910,6 +1967,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "span",
                       },
@@ -1957,6 +2015,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "a",
                   },
@@ -1966,6 +2025,7 @@ VueWrapper {
                     "anchor": null,
                     "appContext": null,
                     "children": {
+                      "_": 1,
                       "default": [Function],
                     },
                     "component": {
@@ -2005,7 +2065,6 @@ VueWrapper {
                       "asyncDep": null,
                       "asyncResolved": false,
                       "attrs": {},
-                      "attrsProxy": null,
                       "bc": null,
                       "bm": null,
                       "bu": null,
@@ -2047,108 +2106,113 @@ VueWrapper {
                       "directives": null,
                       "ec": null,
                       "effect": ReactiveEffect {
+                        "_depsLength": 31,
+                        "_dirtyLevel": 0,
+                        "_runnings": 0,
+                        "_shouldSchedule": false,
+                        "_trackId": 1,
                         "active": true,
                         "allowRecurse": true,
                         "deps": [
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
                         ],
                         "fn": [Function],
                         "onTrack": undefined,
                         "onTrigger": undefined,
-                        "parent": undefined,
                         "scheduler": [Function],
+                        "trigger": [Function],
                       },
                       "emit": [Function],
                       "emitsOptions": null,
@@ -2223,7 +2287,7 @@ VueWrapper {
                           },
                           "duration": {
                             "0": false,
-                            "1": true,
+                            "1": false,
                             "type": [
                               [Function],
                               [Function],
@@ -2426,108 +2490,113 @@ VueWrapper {
                         "detached": true,
                         "effects": [
                           ReactiveEffect {
+                            "_depsLength": 31,
+                            "_dirtyLevel": 0,
+                            "_runnings": 0,
+                            "_shouldSchedule": false,
+                            "_trackId": 1,
                             "active": true,
                             "allowRecurse": true,
                             "deps": [
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
                             ],
                             "fn": [Function],
                             "onTrack": undefined,
                             "onTrigger": undefined,
-                            "parent": undefined,
                             "scheduler": [Function],
+                            "trigger": [Function],
                           },
                         ],
                         "parent": undefined,
@@ -2542,9 +2611,6 @@ VueWrapper {
                       },
                       "setupState": {},
                       "slots": {
-                        "default": [Function],
-                      },
-                      "slotsProxy": {
                         "default": [Function],
                       },
                       "sp": null,
@@ -2591,6 +2657,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": "/src/assets/img/icons/close.svg",
                                   },
@@ -2622,6 +2689,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "button",
                               },
@@ -2656,6 +2724,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": Symbol(v-txt),
                                   },
@@ -2688,6 +2757,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "NuxtLink",
                               },
@@ -2722,6 +2792,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": Symbol(v-txt),
                                   },
@@ -2752,6 +2823,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "NuxtLink",
                               },
@@ -2786,6 +2858,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": Symbol(v-txt),
                                   },
@@ -2816,6 +2889,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "NuxtLink",
                               },
@@ -2830,6 +2904,7 @@ VueWrapper {
                                   "beforeUnmount": [Function],
                                   "getSSRProps": [Function],
                                   "mounted": [Function],
+                                  "name": "show",
                                   "updated": [Function],
                                 },
                                 "instance": {},
@@ -2883,6 +2958,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "div",
                           },
@@ -2967,6 +3043,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "transition-stub",
                       },
@@ -3109,6 +3186,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": {
                       "model": undefined,
@@ -3264,6 +3342,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": "div",
               },
@@ -3278,6 +3357,7 @@ VueWrapper {
                 "anchor": null,
                 "appContext": null,
                 "children": {
+                  "_": 1,
                   "default": [Function],
                 },
                 "component": {
@@ -3352,7 +3432,6 @@ VueWrapper {
                   "asyncDep": null,
                   "asyncResolved": false,
                   "attrs": {},
-                  "attrsProxy": {},
                   "bc": null,
                   "bm": null,
                   "bu": null,
@@ -3394,108 +3473,113 @@ VueWrapper {
                   "directives": null,
                   "ec": null,
                   "effect": ReactiveEffect {
+                    "_depsLength": 31,
+                    "_dirtyLevel": 0,
+                    "_runnings": 0,
+                    "_shouldSchedule": false,
+                    "_trackId": 1,
                     "active": true,
                     "allowRecurse": true,
                     "deps": [
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
                     ],
                     "fn": [Function],
                     "onTrack": undefined,
                     "onTrigger": undefined,
-                    "parent": undefined,
                     "scheduler": [Function],
+                    "trigger": [Function],
                   },
                   "emit": [Function],
                   "emitsOptions": null,
@@ -3570,7 +3654,7 @@ VueWrapper {
                       },
                       "duration": {
                         "0": false,
-                        "1": true,
+                        "1": false,
                         "type": [
                           [Function],
                           [Function],
@@ -3773,108 +3857,113 @@ VueWrapper {
                     "detached": true,
                     "effects": [
                       ReactiveEffect {
+                        "_depsLength": 31,
+                        "_dirtyLevel": 0,
+                        "_runnings": 0,
+                        "_shouldSchedule": false,
+                        "_trackId": 1,
                         "active": true,
                         "allowRecurse": true,
                         "deps": [
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
                         ],
                         "fn": [Function],
                         "onTrack": undefined,
                         "onTrigger": undefined,
-                        "parent": undefined,
                         "scheduler": [Function],
+                        "trigger": [Function],
                       },
                     ],
                     "parent": undefined,
@@ -3889,9 +3978,6 @@ VueWrapper {
                   },
                   "setupState": {},
                   "slots": {
-                    "default": [Function],
-                  },
-                  "slotsProxy": {
                     "default": [Function],
                   },
                   "sp": null,
@@ -3938,6 +4024,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "/src/assets/img/icons/close.svg",
                               },
@@ -3969,6 +4056,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "button",
                           },
@@ -4003,6 +4091,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": Symbol(v-txt),
                               },
@@ -4035,6 +4124,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "NuxtLink",
                           },
@@ -4069,6 +4159,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": Symbol(v-txt),
                               },
@@ -4099,6 +4190,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "NuxtLink",
                           },
@@ -4133,6 +4225,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": Symbol(v-txt),
                               },
@@ -4163,6 +4256,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "NuxtLink",
                           },
@@ -4177,6 +4271,7 @@ VueWrapper {
                               "beforeUnmount": [Function],
                               "getSSRProps": [Function],
                               "mounted": [Function],
+                              "name": "show",
                               "updated": [Function],
                             },
                             "instance": {},
@@ -4230,6 +4325,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "div",
                       },
@@ -4314,6 +4410,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "transition-stub",
                   },
@@ -4456,6 +4553,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": {
                   "model": undefined,
@@ -4628,6 +4726,7 @@ VueWrapper {
             "suspense": null,
             "target": null,
             "targetAnchor": null,
+            "targetStart": null,
             "transition": null,
             "type": "nav",
           },
@@ -4744,6 +4843,7 @@ VueWrapper {
         "suspense": null,
         "target": null,
         "targetAnchor": null,
+        "targetStart": null,
         "transition": null,
         "type": {
           "__file": "/Users/danielerapisarda/projects/serenegrove/components/Navigation.vue",
@@ -4891,6 +4991,7 @@ VueWrapper {
         "suspense": null,
         "target": null,
         "targetAnchor": null,
+        "targetStart": null,
         "transition": null,
         "type": {
           "name": "VTU_ROOT",
@@ -4919,7 +5020,7 @@ VueWrapper {
     "runWithContext": [Function],
     "unmount": [Function],
     "use": [Function],
-    "version": "3.3.11",
+    "version": "3.4.36",
   },
   "__setProps": [Function],
   "cleanUpCallbacks": [
@@ -5224,6 +5325,7 @@ VueWrapper {
                     name="EMAIL"
                     required=""
                     type="email"
+                    value=""
                   />
                 </label>
               </p>
@@ -5260,6 +5362,7 @@ VueWrapper {
                 name="b_f668e4d9b5cfc362bf643a0f5_a2510cc4f9"
                 tabindex="-1"
                 type="text"
+                value=""
               />
             </div>
             <div
@@ -5367,7 +5470,6 @@ VueWrapper {
       "asyncDep": null,
       "asyncResolved": false,
       "attrs": {},
-      "attrsProxy": null,
       "bc": null,
       "bm": null,
       "bu": null,
@@ -5391,24 +5493,29 @@ VueWrapper {
       "directives": null,
       "ec": null,
       "effect": ReactiveEffect {
+        "_depsLength": 3,
+        "_dirtyLevel": 0,
+        "_runnings": 0,
+        "_shouldSchedule": false,
+        "_trackId": 1,
         "active": true,
         "allowRecurse": true,
         "deps": [
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
         ],
         "fn": [Function],
         "onTrack": undefined,
         "onTrigger": undefined,
-        "parent": undefined,
         "scheduler": [Function],
+        "trigger": [Function],
       },
       "emit": [Function],
       "emitsOptions": null,
@@ -5446,24 +5553,29 @@ VueWrapper {
         "detached": true,
         "effects": [
           ReactiveEffect {
+            "_depsLength": 3,
+            "_dirtyLevel": 0,
+            "_runnings": 0,
+            "_shouldSchedule": false,
+            "_trackId": 1,
             "active": true,
             "allowRecurse": true,
             "deps": [
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
             ],
             "fn": [Function],
             "onTrack": undefined,
             "onTrigger": undefined,
-            "parent": undefined,
             "scheduler": [Function],
+            "trigger": [Function],
           },
         ],
         "parent": undefined,
@@ -5473,7 +5585,6 @@ VueWrapper {
         "VTU_COMPONENT": {},
       },
       "slots": {},
-      "slotsProxy": null,
       "sp": null,
       "subTree": {
         "__v_isVNode": true,
@@ -5518,7 +5629,6 @@ VueWrapper {
           "asyncDep": null,
           "asyncResolved": false,
           "attrs": {},
-          "attrsProxy": null,
           "bc": null,
           "bm": null,
           "bu": null,
@@ -5532,14 +5642,19 @@ VueWrapper {
           "directives": null,
           "ec": null,
           "effect": ReactiveEffect {
+            "_depsLength": 0,
+            "_dirtyLevel": 0,
+            "_runnings": 0,
+            "_shouldSchedule": false,
+            "_trackId": 1,
             "active": true,
             "allowRecurse": true,
             "deps": [],
             "fn": [Function],
             "onTrack": undefined,
             "onTrigger": undefined,
-            "parent": undefined,
             "scheduler": [Function],
+            "trigger": [Function],
           },
           "emit": [Function],
           "emitsOptions": null,
@@ -5573,14 +5688,19 @@ VueWrapper {
             "detached": true,
             "effects": [
               ReactiveEffect {
+                "_depsLength": 0,
+                "_dirtyLevel": 0,
+                "_runnings": 0,
+                "_shouldSchedule": false,
+                "_trackId": 1,
                 "active": true,
                 "allowRecurse": true,
                 "deps": [],
                 "fn": [Function],
                 "onTrack": undefined,
                 "onTrigger": undefined,
-                "parent": undefined,
                 "scheduler": [Function],
+                "trigger": [Function],
               },
             ],
             "parent": undefined,
@@ -5593,7 +5713,6 @@ VueWrapper {
           },
           "setupState": {},
           "slots": {},
-          "slotsProxy": {},
           "sp": null,
           "subTree": {
             "__v_isVNode": true,
@@ -5662,6 +5781,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": Symbol(v-txt),
                                   },
@@ -5697,6 +5817,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": "span",
                                   },
@@ -5726,6 +5847,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": Symbol(v-txt),
                                   },
@@ -5755,6 +5877,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": "br",
                                   },
@@ -5776,6 +5899,7 @@ VueWrapper {
                                       name="EMAIL"
                                       required=""
                                       type="email"
+                                      value=""
                                     />,
                                     "key": null,
                                     "patchFlag": 0,
@@ -5797,6 +5921,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": "input",
                                   },
@@ -5824,6 +5949,7 @@ VueWrapper {
                                     name="EMAIL"
                                     required=""
                                     type="email"
+                                    value=""
                                   />
                                 </label>,
                                 "key": null,
@@ -5842,6 +5968,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "label",
                               },
@@ -5870,6 +5997,7 @@ VueWrapper {
                                   name="EMAIL"
                                   required=""
                                   type="email"
+                                  value=""
                                 />
                               </label>
                             </p>,
@@ -5886,6 +6014,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "p",
                           },
@@ -5917,6 +6046,7 @@ VueWrapper {
                                 name="EMAIL"
                                 required=""
                                 type="email"
+                                value=""
                               />
                             </label>
                           </p>
@@ -5936,6 +6066,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "div",
                       },
@@ -5978,6 +6109,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "div",
                           },
@@ -6013,6 +6145,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "div",
                           },
@@ -6052,6 +6185,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "div",
                           },
@@ -6091,6 +6225,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "div",
                           },
@@ -6139,6 +6274,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "div",
                       },
@@ -6168,6 +6304,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": Symbol(v-cmt),
                       },
@@ -6194,6 +6331,7 @@ VueWrapper {
                               name="b_f668e4d9b5cfc362bf643a0f5_a2510cc4f9"
                               tabindex="-1"
                               type="text"
+                              value=""
                             />,
                             "key": null,
                             "patchFlag": 0,
@@ -6213,6 +6351,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "input",
                           },
@@ -6230,6 +6369,7 @@ VueWrapper {
                             name="b_f668e4d9b5cfc362bf643a0f5_a2510cc4f9"
                             tabindex="-1"
                             type="text"
+                            value=""
                           />
                         </div>,
                         "key": null,
@@ -6251,6 +6391,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "div",
                       },
@@ -6306,6 +6447,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "input",
                               },
@@ -6352,6 +6494,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": "a",
                                   },
@@ -6381,6 +6524,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": Symbol(v-txt),
                                   },
@@ -6418,6 +6562,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": "a",
                                   },
@@ -6460,6 +6605,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "p",
                               },
@@ -6513,6 +6659,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "div",
                           },
@@ -6570,6 +6717,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "div",
                       },
@@ -6604,6 +6752,7 @@ VueWrapper {
                               name="EMAIL"
                               required=""
                               type="email"
+                              value=""
                             />
                           </label>
                         </p>
@@ -6640,6 +6789,7 @@ VueWrapper {
                           name="b_f668e4d9b5cfc362bf643a0f5_a2510cc4f9"
                           tabindex="-1"
                           type="text"
+                          value=""
                         />
                       </div>
                       <div
@@ -6691,6 +6841,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "div",
                   },
@@ -6733,6 +6884,7 @@ VueWrapper {
                             name="EMAIL"
                             required=""
                             type="email"
+                            value=""
                           />
                         </label>
                       </p>
@@ -6769,6 +6921,7 @@ VueWrapper {
                         name="b_f668e4d9b5cfc362bf643a0f5_a2510cc4f9"
                         tabindex="-1"
                         type="text"
+                        value=""
                       />
                     </div>
                     <div
@@ -6826,6 +6979,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": "form",
               },
@@ -6871,6 +7025,7 @@ VueWrapper {
                           name="EMAIL"
                           required=""
                           type="email"
+                          value=""
                         />
                       </label>
                     </p>
@@ -6907,6 +7062,7 @@ VueWrapper {
                       name="b_f668e4d9b5cfc362bf643a0f5_a2510cc4f9"
                       tabindex="-1"
                       type="text"
+                      value=""
                     />
                   </div>
                   <div
@@ -6960,6 +7116,7 @@ VueWrapper {
             "suspense": null,
             "target": null,
             "targetAnchor": null,
+            "targetStart": null,
             "transition": null,
             "type": "div",
           },
@@ -7019,6 +7176,7 @@ VueWrapper {
                       name="EMAIL"
                       required=""
                       type="email"
+                      value=""
                     />
                   </label>
                 </p>
@@ -7055,6 +7213,7 @@ VueWrapper {
                   name="b_f668e4d9b5cfc362bf643a0f5_a2510cc4f9"
                   tabindex="-1"
                   type="text"
+                  value=""
                 />
               </div>
               <div
@@ -7113,6 +7272,7 @@ VueWrapper {
         "suspense": null,
         "target": null,
         "targetAnchor": null,
+        "targetStart": null,
         "transition": null,
         "type": {
           "__file": "/Users/danielerapisarda/projects/serenegrove/components/Newsletter.vue",
@@ -7210,6 +7370,7 @@ VueWrapper {
                       name="EMAIL"
                       required=""
                       type="email"
+                      value=""
                     />
                   </label>
                 </p>
@@ -7246,6 +7407,7 @@ VueWrapper {
                   name="b_f668e4d9b5cfc362bf643a0f5_a2510cc4f9"
                   tabindex="-1"
                   type="text"
+                  value=""
                 />
               </div>
               <div
@@ -7297,6 +7459,7 @@ VueWrapper {
         "suspense": null,
         "target": null,
         "targetAnchor": null,
+        "targetStart": null,
         "transition": null,
         "type": {
           "name": "VTU_ROOT",
@@ -7325,7 +7488,7 @@ VueWrapper {
     "runWithContext": [Function],
     "unmount": [Function],
     "use": [Function],
-    "version": "3.3.11",
+    "version": "3.4.36",
   },
   "__setProps": [Function],
   "cleanUpCallbacks": [
@@ -7543,6 +7706,7 @@ VueWrapper {
                 name="EMAIL"
                 required=""
                 type="email"
+                value=""
               />
             </label>
           </p>
@@ -7579,6 +7743,7 @@ VueWrapper {
             name="b_f668e4d9b5cfc362bf643a0f5_a2510cc4f9"
             tabindex="-1"
             type="text"
+            value=""
           />
         </div>
         <div
@@ -7786,7 +7951,6 @@ VueWrapper {
       "asyncDep": null,
       "asyncResolved": false,
       "attrs": {},
-      "attrsProxy": null,
       "bc": null,
       "bm": null,
       "bu": null,
@@ -7810,24 +7974,29 @@ VueWrapper {
       "directives": null,
       "ec": null,
       "effect": ReactiveEffect {
+        "_depsLength": 3,
+        "_dirtyLevel": 0,
+        "_runnings": 0,
+        "_shouldSchedule": false,
+        "_trackId": 1,
         "active": true,
         "allowRecurse": true,
         "deps": [
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
         ],
         "fn": [Function],
         "onTrack": undefined,
         "onTrigger": undefined,
-        "parent": undefined,
         "scheduler": [Function],
+        "trigger": [Function],
       },
       "emit": [Function],
       "emitsOptions": null,
@@ -7865,24 +8034,29 @@ VueWrapper {
         "detached": true,
         "effects": [
           ReactiveEffect {
+            "_depsLength": 3,
+            "_dirtyLevel": 0,
+            "_runnings": 0,
+            "_shouldSchedule": false,
+            "_trackId": 1,
             "active": true,
             "allowRecurse": true,
             "deps": [
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
             ],
             "fn": [Function],
             "onTrack": undefined,
             "onTrigger": undefined,
-            "parent": undefined,
             "scheduler": [Function],
+            "trigger": [Function],
           },
         ],
         "parent": undefined,
@@ -7892,7 +8066,6 @@ VueWrapper {
         "VTU_COMPONENT": {},
       },
       "slots": {},
-      "slotsProxy": null,
       "sp": null,
       "subTree": {
         "__v_isVNode": true,
@@ -7909,7 +8082,6 @@ VueWrapper {
             "__v_isRef": 0,
             "__v_isShallow": 0,
             "__v_raw": 0,
-            "__v_skip": 4,
             "_isMockFunction": 0,
             "constructor": 0,
             "toJSON": 0,
@@ -7949,7 +8121,6 @@ VueWrapper {
           "asyncDep": null,
           "asyncResolved": false,
           "attrs": {},
-          "attrsProxy": null,
           "bc": null,
           "bm": null,
           "bu": null,
@@ -7962,14 +8133,23 @@ VueWrapper {
           "directives": null,
           "ec": null,
           "effect": ReactiveEffect {
+            "_depsLength": 1,
+            "_dirtyLevel": 0,
+            "_runnings": 0,
+            "_shouldSchedule": false,
+            "_trackId": 1,
             "active": true,
             "allowRecurse": true,
-            "deps": [],
+            "deps": [
+              Map {
+                [Circular] => 1,
+              },
+            ],
             "fn": [Function],
             "onTrack": undefined,
             "onTrigger": undefined,
-            "parent": undefined,
             "scheduler": [Function],
+            "trigger": [Function],
           },
           "emit": [Function],
           "emitsOptions": null,
@@ -8003,14 +8183,23 @@ VueWrapper {
             "detached": true,
             "effects": [
               ReactiveEffect {
+                "_depsLength": 1,
+                "_dirtyLevel": 0,
+                "_runnings": 0,
+                "_shouldSchedule": false,
+                "_trackId": 1,
                 "active": true,
                 "allowRecurse": true,
-                "deps": [],
+                "deps": [
+                  Map {
+                    [Circular] => 1,
+                  },
+                ],
                 "fn": [Function],
                 "onTrack": undefined,
                 "onTrigger": undefined,
-                "parent": undefined,
                 "scheduler": [Function],
+                "trigger": [Function],
               },
             ],
             "parent": undefined,
@@ -8018,7 +8207,6 @@ VueWrapper {
           "setupContext": null,
           "setupState": {},
           "slots": {},
-          "slotsProxy": null,
           "sp": null,
           "subTree": {
             "__v_isVNode": true,
@@ -8079,6 +8267,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "h3",
                               },
@@ -8110,6 +8299,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "p",
                               },
@@ -8144,6 +8334,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "div",
                           },
@@ -8196,6 +8387,7 @@ VueWrapper {
                                             "suspense": null,
                                             "target": null,
                                             "targetAnchor": null,
+                                            "targetStart": null,
                                             "transition": null,
                                             "type": Symbol(v-txt),
                                           },
@@ -8225,6 +8417,7 @@ VueWrapper {
                                         "suspense": null,
                                         "target": null,
                                         "targetAnchor": null,
+                                        "targetStart": null,
                                         "transition": null,
                                         "type": "NuxtLink",
                                       },
@@ -8254,6 +8447,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": "li",
                                   },
@@ -8294,6 +8488,7 @@ VueWrapper {
                                             "suspense": null,
                                             "target": null,
                                             "targetAnchor": null,
+                                            "targetStart": null,
                                             "transition": null,
                                             "type": Symbol(v-txt),
                                           },
@@ -8323,6 +8518,7 @@ VueWrapper {
                                         "suspense": null,
                                         "target": null,
                                         "targetAnchor": null,
+                                        "targetStart": null,
                                         "transition": null,
                                         "type": "NuxtLink",
                                       },
@@ -8352,6 +8548,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": "li",
                                   },
@@ -8392,6 +8589,7 @@ VueWrapper {
                                             "suspense": null,
                                             "target": null,
                                             "targetAnchor": null,
+                                            "targetStart": null,
                                             "transition": null,
                                             "type": Symbol(v-txt),
                                           },
@@ -8421,6 +8619,7 @@ VueWrapper {
                                         "suspense": null,
                                         "target": null,
                                         "targetAnchor": null,
+                                        "targetStart": null,
                                         "transition": null,
                                         "type": "NuxtLink",
                                       },
@@ -8450,6 +8649,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": "li",
                                   },
@@ -8490,6 +8690,7 @@ VueWrapper {
                                             "suspense": null,
                                             "target": null,
                                             "targetAnchor": null,
+                                            "targetStart": null,
                                             "transition": null,
                                             "type": Symbol(v-txt),
                                           },
@@ -8519,6 +8720,7 @@ VueWrapper {
                                         "suspense": null,
                                         "target": null,
                                         "targetAnchor": null,
+                                        "targetStart": null,
                                         "transition": null,
                                         "type": "NuxtLink",
                                       },
@@ -8548,6 +8750,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": "li",
                                   },
@@ -8588,6 +8791,7 @@ VueWrapper {
                                             "suspense": null,
                                             "target": null,
                                             "targetAnchor": null,
+                                            "targetStart": null,
                                             "transition": null,
                                             "type": Symbol(v-txt),
                                           },
@@ -8617,6 +8821,7 @@ VueWrapper {
                                         "suspense": null,
                                         "target": null,
                                         "targetAnchor": null,
+                                        "targetStart": null,
                                         "transition": null,
                                         "type": "NuxtLink",
                                       },
@@ -8646,6 +8851,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": "li",
                                   },
@@ -8686,6 +8892,7 @@ VueWrapper {
                                             "suspense": null,
                                             "target": null,
                                             "targetAnchor": null,
+                                            "targetStart": null,
                                             "transition": null,
                                             "type": Symbol(v-txt),
                                           },
@@ -8715,6 +8922,7 @@ VueWrapper {
                                         "suspense": null,
                                         "target": null,
                                         "targetAnchor": null,
+                                        "targetStart": null,
                                         "transition": null,
                                         "type": "NuxtLink",
                                       },
@@ -8744,6 +8952,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": "li",
                                   },
@@ -8784,6 +8993,7 @@ VueWrapper {
                                             "suspense": null,
                                             "target": null,
                                             "targetAnchor": null,
+                                            "targetStart": null,
                                             "transition": null,
                                             "type": Symbol(v-txt),
                                           },
@@ -8813,6 +9023,7 @@ VueWrapper {
                                         "suspense": null,
                                         "target": null,
                                         "targetAnchor": null,
+                                        "targetStart": null,
                                         "transition": null,
                                         "type": "NuxtLink",
                                       },
@@ -8842,6 +9053,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": "li",
                                   },
@@ -8915,6 +9127,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "ul",
                               },
@@ -8994,6 +9207,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "div",
                           },
@@ -9087,6 +9301,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "div",
                       },
@@ -9184,6 +9399,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "div",
                   },
@@ -9219,6 +9435,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "div",
                   },
@@ -9325,6 +9542,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": "div",
               },
@@ -9435,6 +9653,7 @@ VueWrapper {
             "suspense": null,
             "target": null,
             "targetAnchor": null,
+            "targetStart": null,
             "transition": null,
             "type": "footer",
           },
@@ -9562,6 +9781,7 @@ VueWrapper {
         "suspense": null,
         "target": null,
         "targetAnchor": null,
+        "targetStart": null,
         "transition": null,
         "type": {
           "__file": "/Users/danielerapisarda/projects/serenegrove/components/Footer.vue",
@@ -9720,6 +9940,7 @@ VueWrapper {
         "suspense": null,
         "target": null,
         "targetAnchor": null,
+        "targetStart": null,
         "transition": null,
         "type": {
           "name": "VTU_ROOT",
@@ -9748,7 +9969,7 @@ VueWrapper {
     "runWithContext": [Function],
     "unmount": [Function],
     "use": [Function],
-    "version": "3.3.11",
+    "version": "3.4.36",
   },
   "__setProps": [Function],
   "cleanUpCallbacks": [
@@ -10128,7 +10349,6 @@ VueWrapper {
       "asyncDep": null,
       "asyncResolved": false,
       "attrs": {},
-      "attrsProxy": null,
       "bc": null,
       "bm": null,
       "bu": null,
@@ -10152,24 +10372,29 @@ VueWrapper {
       "directives": null,
       "ec": null,
       "effect": ReactiveEffect {
+        "_depsLength": 3,
+        "_dirtyLevel": 0,
+        "_runnings": 0,
+        "_shouldSchedule": false,
+        "_trackId": 1,
         "active": true,
         "allowRecurse": true,
         "deps": [
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
         ],
         "fn": [Function],
         "onTrack": undefined,
         "onTrigger": undefined,
-        "parent": undefined,
         "scheduler": [Function],
+        "trigger": [Function],
       },
       "emit": [Function],
       "emitsOptions": null,
@@ -10207,24 +10432,29 @@ VueWrapper {
         "detached": true,
         "effects": [
           ReactiveEffect {
+            "_depsLength": 3,
+            "_dirtyLevel": 0,
+            "_runnings": 0,
+            "_shouldSchedule": false,
+            "_trackId": 1,
             "active": true,
             "allowRecurse": true,
             "deps": [
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
             ],
             "fn": [Function],
             "onTrack": undefined,
             "onTrigger": undefined,
-            "parent": undefined,
             "scheduler": [Function],
+            "trigger": [Function],
           },
         ],
         "parent": undefined,
@@ -10234,7 +10464,6 @@ VueWrapper {
         "VTU_COMPONENT": {},
       },
       "slots": {},
-      "slotsProxy": null,
       "sp": null,
       "subTree": {
         "__v_isVNode": true,
@@ -10251,7 +10480,6 @@ VueWrapper {
             "__v_isRef": 0,
             "__v_isShallow": 0,
             "__v_raw": 0,
-            "__v_skip": 4,
             "_isMockFunction": 0,
             "constructor": 0,
             "toJSON": 0,
@@ -10291,7 +10519,6 @@ VueWrapper {
           "asyncDep": null,
           "asyncResolved": false,
           "attrs": {},
-          "attrsProxy": null,
           "bc": null,
           "bm": null,
           "bu": null,
@@ -10304,18 +10531,26 @@ VueWrapper {
           "directives": null,
           "ec": null,
           "effect": ReactiveEffect {
+            "_depsLength": 2,
+            "_dirtyLevel": 0,
+            "_runnings": 0,
+            "_shouldSchedule": false,
+            "_trackId": 1,
             "active": true,
             "allowRecurse": true,
             "deps": [
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
+              },
+              Map {
+                [Circular] => 1,
               },
             ],
             "fn": [Function],
             "onTrack": undefined,
             "onTrigger": undefined,
-            "parent": undefined,
             "scheduler": [Function],
+            "trigger": [Function],
           },
           "emit": [Function],
           "emitsOptions": null,
@@ -10349,18 +10584,26 @@ VueWrapper {
             "detached": true,
             "effects": [
               ReactiveEffect {
+                "_depsLength": 2,
+                "_dirtyLevel": 0,
+                "_runnings": 0,
+                "_shouldSchedule": false,
+                "_trackId": 1,
                 "active": true,
                 "allowRecurse": true,
                 "deps": [
-                  Set {
-                    [Circular],
+                  Map {
+                    [Circular] => 1,
+                  },
+                  Map {
+                    [Circular] => 1,
                   },
                 ],
                 "fn": [Function],
                 "onTrack": undefined,
                 "onTrigger": undefined,
-                "parent": undefined,
                 "scheduler": [Function],
+                "trigger": [Function],
               },
             ],
             "parent": undefined,
@@ -10368,7 +10611,6 @@ VueWrapper {
           "setupContext": null,
           "setupState": {},
           "slots": {},
-          "slotsProxy": null,
           "sp": null,
           "subTree": {
             "__v_isVNode": true,
@@ -10419,6 +10661,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "Logo",
                           },
@@ -10448,6 +10691,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "div",
                       },
@@ -10490,6 +10734,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "h1",
                           },
@@ -10526,6 +10771,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": Symbol(v-txt),
                               },
@@ -10555,6 +10801,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "br",
                               },
@@ -10584,6 +10831,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": Symbol(v-txt),
                               },
@@ -10611,6 +10859,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "h2",
                           },
@@ -10649,6 +10898,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "section",
                       },
@@ -10696,6 +10946,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "div",
                   },
@@ -10747,6 +10998,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": "div",
               },
@@ -10757,10 +11009,10 @@ VueWrapper {
             "dynamicChildren": null,
             "dynamicProps": null,
             "el": ,
-            "key": "_default",
+            "key": "_default_fb",
             "patchFlag": -2,
             "props": {
-              "key": "_default",
+              "key": "_default_fb",
             },
             "ref": null,
             "scopeId": null,
@@ -10772,6 +11024,7 @@ VueWrapper {
             "suspense": null,
             "target": null,
             "targetAnchor": null,
+            "targetStart": null,
             "transition": null,
             "type": Symbol(v-fgt),
           },
@@ -10814,6 +11067,7 @@ VueWrapper {
         "suspense": null,
         "target": null,
         "targetAnchor": null,
+        "targetStart": null,
         "transition": null,
         "type": {
           "__file": "/Users/danielerapisarda/projects/serenegrove/components/Hero.vue",
@@ -10887,6 +11141,7 @@ VueWrapper {
         "suspense": null,
         "target": null,
         "targetAnchor": null,
+        "targetStart": null,
         "transition": null,
         "type": {
           "name": "VTU_ROOT",
@@ -10915,7 +11170,7 @@ VueWrapper {
     "runWithContext": [Function],
     "unmount": [Function],
     "use": [Function],
-    "version": "3.3.11",
+    "version": "3.4.36",
   },
   "__setProps": [Function],
   "cleanUpCallbacks": [

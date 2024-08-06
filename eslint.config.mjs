@@ -16,12 +16,7 @@ export default withNuxt([
   pluginJest.configs.recommended['flat/recommended'],
   ...pluginVueA11y.configs['flat/recommended'],
   ...compat.config({
-    extends: [
-      'plugin:vue/vue3-essential',
-      'plugin:cypress/recommended',
-      'plugin:prettier/recommended',
-      'prettier',
-    ],
+    extends: ['plugin:vue/vue3-essential', 'plugin:cypress/recommended'],
   }),
   {
     languageOptions: {

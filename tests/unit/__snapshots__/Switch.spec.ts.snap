@@ -95,7 +95,6 @@ VueWrapper {
       "asyncDep": null,
       "asyncResolved": false,
       "attrs": {},
-      "attrsProxy": null,
       "bc": null,
       "bm": null,
       "bu": null,
@@ -119,33 +118,38 @@ VueWrapper {
       "directives": null,
       "ec": null,
       "effect": ReactiveEffect {
+        "_depsLength": 6,
+        "_dirtyLevel": 0,
+        "_runnings": 0,
+        "_shouldSchedule": false,
+        "_trackId": 1,
         "active": true,
         "allowRecurse": true,
         "deps": [
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
         ],
         "fn": [Function],
         "onTrack": undefined,
         "onTrigger": undefined,
-        "parent": undefined,
         "scheduler": [Function],
+        "trigger": [Function],
       },
       "emit": [Function],
       "emitsOptions": null,
@@ -183,33 +187,38 @@ VueWrapper {
         "detached": true,
         "effects": [
           ReactiveEffect {
+            "_depsLength": 6,
+            "_dirtyLevel": 0,
+            "_runnings": 0,
+            "_shouldSchedule": false,
+            "_trackId": 1,
             "active": true,
             "allowRecurse": true,
             "deps": [
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
             ],
             "fn": [Function],
             "onTrack": undefined,
             "onTrigger": undefined,
-            "parent": undefined,
             "scheduler": [Function],
+            "trigger": [Function],
           },
         ],
         "parent": undefined,
@@ -219,7 +228,6 @@ VueWrapper {
         "VTU_COMPONENT": {},
       },
       "slots": {},
-      "slotsProxy": null,
       "sp": null,
       "subTree": {
         "__v_isVNode": true,
@@ -264,7 +272,6 @@ VueWrapper {
           "asyncDep": null,
           "asyncResolved": false,
           "attrs": {},
-          "attrsProxy": null,
           "bc": null,
           "bm": null,
           "bu": null,
@@ -284,41 +291,51 @@ VueWrapper {
               "__v_isReadonly": false,
               "__v_isRef": true,
               "_cacheable": true,
-              "_dirty": false,
               "_setter": [Function],
               "_value": false,
-              "dep": Set {
+              "dep": Map {
                 ReactiveEffect {
+                  "_depsLength": 3,
+                  "_dirtyLevel": 0,
+                  "_runnings": 0,
+                  "_shouldSchedule": false,
+                  "_trackId": 1,
                   "active": true,
                   "allowRecurse": true,
                   "deps": [
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
                     [Circular],
                   ],
                   "fn": [Function],
                   "onTrack": undefined,
                   "onTrigger": undefined,
-                  "parent": undefined,
                   "scheduler": [Function],
-                },
+                  "trigger": [Function],
+                } => 1,
               },
               "effect": ReactiveEffect {
+                "_depsLength": 1,
+                "_dirtyLevel": 0,
+                "_runnings": 0,
+                "_shouldSchedule": false,
+                "_trackId": 1,
                 "active": true,
                 "computed": [Circular],
                 "deps": [
-                  Set {
-                    [Circular],
+                  Map {
+                    [Circular] => 1,
                   },
                 ],
                 "fn": [Function],
-                "parent": undefined,
-                "scheduler": [Function],
+                "scheduler": undefined,
+                "trigger": [Function],
               },
+              "getter": [Function],
             },
             "props": {
               "id": "loremId",
@@ -329,24 +346,29 @@ VueWrapper {
           "directives": null,
           "ec": null,
           "effect": ReactiveEffect {
+            "_depsLength": 3,
+            "_dirtyLevel": 0,
+            "_runnings": 0,
+            "_shouldSchedule": false,
+            "_trackId": 1,
             "active": true,
             "allowRecurse": true,
             "deps": [
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
             ],
             "fn": [Function],
             "onTrack": undefined,
             "onTrigger": undefined,
-            "parent": undefined,
             "scheduler": [Function],
+            "trigger": [Function],
           },
           "emit": [Function],
           "emitsOptions": {
@@ -415,64 +437,79 @@ VueWrapper {
             "detached": true,
             "effects": [
               ReactiveEffect {
+                "_depsLength": 1,
+                "_dirtyLevel": 0,
+                "_runnings": 0,
+                "_shouldSchedule": false,
+                "_trackId": 1,
                 "active": true,
                 "computed": ComputedRefImpl {
                   "__v_isReadonly": false,
                   "__v_isRef": true,
                   "_cacheable": true,
-                  "_dirty": false,
                   "_setter": [Function],
                   "_value": false,
-                  "dep": Set {
+                  "dep": Map {
                     ReactiveEffect {
+                      "_depsLength": 3,
+                      "_dirtyLevel": 0,
+                      "_runnings": 0,
+                      "_shouldSchedule": false,
+                      "_trackId": 1,
                       "active": true,
                       "allowRecurse": true,
                       "deps": [
-                        Set {
-                          [Circular],
+                        Map {
+                          [Circular] => 1,
                         },
-                        Set {
-                          [Circular],
+                        Map {
+                          [Circular] => 1,
                         },
                         [Circular],
                       ],
                       "fn": [Function],
                       "onTrack": undefined,
                       "onTrigger": undefined,
-                      "parent": undefined,
                       "scheduler": [Function],
-                    },
+                      "trigger": [Function],
+                    } => 1,
                   },
                   "effect": [Circular],
+                  "getter": [Function],
                 },
                 "deps": [
-                  Set {
-                    [Circular],
+                  Map {
+                    [Circular] => 1,
                   },
                 ],
                 "fn": [Function],
-                "parent": undefined,
-                "scheduler": [Function],
+                "scheduler": undefined,
+                "trigger": [Function],
               },
               ReactiveEffect {
+                "_depsLength": 3,
+                "_dirtyLevel": 0,
+                "_runnings": 0,
+                "_shouldSchedule": false,
+                "_trackId": 1,
                 "active": true,
                 "allowRecurse": true,
                 "deps": [
-                  Set {
-                    [Circular],
+                  Map {
+                    [Circular] => 1,
                   },
-                  Set {
-                    [Circular],
+                  Map {
+                    [Circular] => 1,
                   },
-                  Set {
-                    [Circular],
+                  Map {
+                    [Circular] => 1,
                   },
                 ],
                 "fn": [Function],
                 "onTrack": undefined,
                 "onTrigger": undefined,
-                "parent": undefined,
                 "scheduler": [Function],
+                "trigger": [Function],
               },
             ],
             "parent": undefined,
@@ -493,7 +530,6 @@ VueWrapper {
             },
           },
           "slots": {},
-          "slotsProxy": {},
           "sp": null,
           "subTree": {
             "__v_isVNode": true,
@@ -532,6 +568,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": Symbol(v-txt),
                   },
@@ -586,6 +623,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "input",
                   },
@@ -624,6 +662,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": "label",
               },
@@ -657,6 +696,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": Symbol(v-txt),
               },
@@ -711,6 +751,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": "input",
               },
@@ -745,6 +786,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": Symbol(v-txt),
                   },
@@ -799,6 +841,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "input",
                   },
@@ -837,6 +880,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": "label",
               },
@@ -872,6 +916,7 @@ VueWrapper {
             "suspense": null,
             "target": null,
             "targetAnchor": null,
+            "targetStart": null,
             "transition": null,
             "type": "div",
           },
@@ -950,6 +995,7 @@ VueWrapper {
         "suspense": null,
         "target": null,
         "targetAnchor": null,
+        "targetStart": null,
         "transition": null,
         "type": {
           "__file": "/Users/danielerapisarda/projects/serenegrove/components/Switch.vue",
@@ -1056,6 +1102,7 @@ VueWrapper {
         "suspense": null,
         "target": null,
         "targetAnchor": null,
+        "targetStart": null,
         "transition": null,
         "type": {
           "name": "VTU_ROOT",
@@ -1084,7 +1131,7 @@ VueWrapper {
     "runWithContext": [Function],
     "unmount": [Function],
     "use": [Function],
-    "version": "3.3.11",
+    "version": "3.4.36",
   },
   "__setProps": [Function],
   "cleanUpCallbacks": [

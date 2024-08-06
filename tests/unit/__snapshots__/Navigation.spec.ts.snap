@@ -153,7 +153,6 @@ VueWrapper {
       "asyncDep": null,
       "asyncResolved": false,
       "attrs": {},
-      "attrsProxy": null,
       "bc": null,
       "bm": null,
       "bu": null,
@@ -177,24 +176,29 @@ VueWrapper {
       "directives": null,
       "ec": null,
       "effect": ReactiveEffect {
+        "_depsLength": 3,
+        "_dirtyLevel": 0,
+        "_runnings": 0,
+        "_shouldSchedule": false,
+        "_trackId": 1,
         "active": true,
         "allowRecurse": true,
         "deps": [
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
-          Set {
-            [Circular],
+          Map {
+            [Circular] => 1,
           },
         ],
         "fn": [Function],
         "onTrack": undefined,
         "onTrigger": undefined,
-        "parent": undefined,
         "scheduler": [Function],
+        "trigger": [Function],
       },
       "emit": [Function],
       "emitsOptions": null,
@@ -232,24 +236,29 @@ VueWrapper {
         "detached": true,
         "effects": [
           ReactiveEffect {
+            "_depsLength": 3,
+            "_dirtyLevel": 0,
+            "_runnings": 0,
+            "_shouldSchedule": false,
+            "_trackId": 1,
             "active": true,
             "allowRecurse": true,
             "deps": [
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
-              Set {
-                [Circular],
+              Map {
+                [Circular] => 1,
               },
             ],
             "fn": [Function],
             "onTrack": undefined,
             "onTrigger": undefined,
-            "parent": undefined,
             "scheduler": [Function],
+            "trigger": [Function],
           },
         ],
         "parent": undefined,
@@ -259,7 +268,6 @@ VueWrapper {
         "VTU_COMPONENT": {},
       },
       "slots": {},
-      "slotsProxy": null,
       "sp": null,
       "subTree": {
         "__v_isVNode": true,
@@ -304,7 +312,6 @@ VueWrapper {
           "asyncDep": null,
           "asyncResolved": false,
           "attrs": {},
-          "attrsProxy": null,
           "bc": null,
           "bm": null,
           "bu": null,
@@ -322,109 +329,114 @@ VueWrapper {
               "__v_isShallow": false,
               "_rawValue": false,
               "_value": false,
-              "dep": Set {
+              "dep": Map {
                 ReactiveEffect {
+                  "_depsLength": 31,
+                  "_dirtyLevel": 0,
+                  "_runnings": 0,
+                  "_shouldSchedule": false,
+                  "_trackId": 1,
                   "active": true,
                   "allowRecurse": true,
                   "deps": [
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
-                    Set {
-                      [Circular],
+                    Map {
+                      [Circular] => 1,
                     },
                     [Circular],
                   ],
                   "fn": [Function],
                   "onTrack": undefined,
                   "onTrigger": undefined,
-                  "parent": undefined,
                   "scheduler": [Function],
-                },
+                  "trigger": [Function],
+                } => 1,
               },
             },
             "toggleMenu": [Function],
@@ -432,14 +444,19 @@ VueWrapper {
           "directives": null,
           "ec": null,
           "effect": ReactiveEffect {
+            "_depsLength": 0,
+            "_dirtyLevel": 0,
+            "_runnings": 0,
+            "_shouldSchedule": false,
+            "_trackId": 1,
             "active": true,
             "allowRecurse": true,
             "deps": [],
             "fn": [Function],
             "onTrack": undefined,
             "onTrigger": undefined,
-            "parent": undefined,
             "scheduler": [Function],
+            "trigger": [Function],
           },
           "emit": [Function],
           "emitsOptions": null,
@@ -481,14 +498,19 @@ VueWrapper {
             "detached": true,
             "effects": [
               ReactiveEffect {
+                "_depsLength": 0,
+                "_dirtyLevel": 0,
+                "_runnings": 0,
+                "_shouldSchedule": false,
+                "_trackId": 1,
                 "active": true,
                 "allowRecurse": true,
                 "deps": [],
                 "fn": [Function],
                 "onTrack": undefined,
                 "onTrigger": undefined,
-                "parent": undefined,
                 "scheduler": [Function],
+                "trigger": [Function],
               },
             ],
             "parent": undefined,
@@ -506,7 +528,6 @@ VueWrapper {
             "toggleMenu": [Function],
           },
           "slots": {},
-          "slotsProxy": {},
           "sp": null,
           "subTree": {
             "__v_isVNode": true,
@@ -555,6 +576,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "Logo",
                       },
@@ -590,6 +612,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "NuxtLink",
                   },
@@ -627,6 +650,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": "div",
               },
@@ -672,6 +696,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "span",
                       },
@@ -705,6 +730,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "span",
                       },
@@ -738,6 +764,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "span",
                       },
@@ -785,6 +812,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "a",
                   },
@@ -794,6 +822,7 @@ VueWrapper {
                     "anchor": null,
                     "appContext": null,
                     "children": {
+                      "_": 1,
                       "default": [Function],
                     },
                     "component": {
@@ -833,7 +862,6 @@ VueWrapper {
                       "asyncDep": null,
                       "asyncResolved": false,
                       "attrs": {},
-                      "attrsProxy": null,
                       "bc": null,
                       "bm": null,
                       "bu": null,
@@ -875,108 +903,113 @@ VueWrapper {
                       "directives": null,
                       "ec": null,
                       "effect": ReactiveEffect {
+                        "_depsLength": 31,
+                        "_dirtyLevel": 0,
+                        "_runnings": 0,
+                        "_shouldSchedule": false,
+                        "_trackId": 1,
                         "active": true,
                         "allowRecurse": true,
                         "deps": [
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
                         ],
                         "fn": [Function],
                         "onTrack": undefined,
                         "onTrigger": undefined,
-                        "parent": undefined,
                         "scheduler": [Function],
+                        "trigger": [Function],
                       },
                       "emit": [Function],
                       "emitsOptions": null,
@@ -1051,7 +1084,7 @@ VueWrapper {
                           },
                           "duration": {
                             "0": false,
-                            "1": true,
+                            "1": false,
                             "type": [
                               [Function],
                               [Function],
@@ -1254,108 +1287,113 @@ VueWrapper {
                         "detached": true,
                         "effects": [
                           ReactiveEffect {
+                            "_depsLength": 31,
+                            "_dirtyLevel": 0,
+                            "_runnings": 0,
+                            "_shouldSchedule": false,
+                            "_trackId": 1,
                             "active": true,
                             "allowRecurse": true,
                             "deps": [
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
-                              Set {
-                                [Circular],
+                              Map {
+                                [Circular] => 1,
                               },
                             ],
                             "fn": [Function],
                             "onTrack": undefined,
                             "onTrigger": undefined,
-                            "parent": undefined,
                             "scheduler": [Function],
+                            "trigger": [Function],
                           },
                         ],
                         "parent": undefined,
@@ -1370,9 +1408,6 @@ VueWrapper {
                       },
                       "setupState": {},
                       "slots": {
-                        "default": [Function],
-                      },
-                      "slotsProxy": {
                         "default": [Function],
                       },
                       "sp": null,
@@ -1419,6 +1454,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": "/src/assets/img/icons/close.svg",
                                   },
@@ -1450,6 +1486,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "button",
                               },
@@ -1484,6 +1521,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": Symbol(v-txt),
                                   },
@@ -1516,6 +1554,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "NuxtLink",
                               },
@@ -1550,6 +1589,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": Symbol(v-txt),
                                   },
@@ -1580,6 +1620,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "NuxtLink",
                               },
@@ -1614,6 +1655,7 @@ VueWrapper {
                                     "suspense": null,
                                     "target": null,
                                     "targetAnchor": null,
+                                    "targetStart": null,
                                     "transition": null,
                                     "type": Symbol(v-txt),
                                   },
@@ -1644,6 +1686,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "NuxtLink",
                               },
@@ -1658,6 +1701,7 @@ VueWrapper {
                                   "beforeUnmount": [Function],
                                   "getSSRProps": [Function],
                                   "mounted": [Function],
+                                  "name": "show",
                                   "updated": [Function],
                                 },
                                 "instance": {},
@@ -1711,6 +1755,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "div",
                           },
@@ -1795,6 +1840,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "transition-stub",
                       },
@@ -1937,6 +1983,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": {
                       "model": undefined,
@@ -2092,6 +2139,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": "div",
               },
@@ -2106,6 +2154,7 @@ VueWrapper {
                 "anchor": null,
                 "appContext": null,
                 "children": {
+                  "_": 1,
                   "default": [Function],
                 },
                 "component": {
@@ -2180,7 +2229,6 @@ VueWrapper {
                   "asyncDep": null,
                   "asyncResolved": false,
                   "attrs": {},
-                  "attrsProxy": {},
                   "bc": null,
                   "bm": null,
                   "bu": null,
@@ -2222,108 +2270,113 @@ VueWrapper {
                   "directives": null,
                   "ec": null,
                   "effect": ReactiveEffect {
+                    "_depsLength": 31,
+                    "_dirtyLevel": 0,
+                    "_runnings": 0,
+                    "_shouldSchedule": false,
+                    "_trackId": 1,
                     "active": true,
                     "allowRecurse": true,
                     "deps": [
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
-                      Set {
-                        [Circular],
+                      Map {
+                        [Circular] => 1,
                       },
                     ],
                     "fn": [Function],
                     "onTrack": undefined,
                     "onTrigger": undefined,
-                    "parent": undefined,
                     "scheduler": [Function],
+                    "trigger": [Function],
                   },
                   "emit": [Function],
                   "emitsOptions": null,
@@ -2398,7 +2451,7 @@ VueWrapper {
                       },
                       "duration": {
                         "0": false,
-                        "1": true,
+                        "1": false,
                         "type": [
                           [Function],
                           [Function],
@@ -2601,108 +2654,113 @@ VueWrapper {
                     "detached": true,
                     "effects": [
                       ReactiveEffect {
+                        "_depsLength": 31,
+                        "_dirtyLevel": 0,
+                        "_runnings": 0,
+                        "_shouldSchedule": false,
+                        "_trackId": 1,
                         "active": true,
                         "allowRecurse": true,
                         "deps": [
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
-                          Set {
-                            [Circular],
+                          Map {
+                            [Circular] => 1,
                           },
                         ],
                         "fn": [Function],
                         "onTrack": undefined,
                         "onTrigger": undefined,
-                        "parent": undefined,
                         "scheduler": [Function],
+                        "trigger": [Function],
                       },
                     ],
                     "parent": undefined,
@@ -2717,9 +2775,6 @@ VueWrapper {
                   },
                   "setupState": {},
                   "slots": {
-                    "default": [Function],
-                  },
-                  "slotsProxy": {
                     "default": [Function],
                   },
                   "sp": null,
@@ -2766,6 +2821,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": "/src/assets/img/icons/close.svg",
                               },
@@ -2797,6 +2853,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "button",
                           },
@@ -2831,6 +2888,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": Symbol(v-txt),
                               },
@@ -2863,6 +2921,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "NuxtLink",
                           },
@@ -2897,6 +2956,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": Symbol(v-txt),
                               },
@@ -2927,6 +2987,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "NuxtLink",
                           },
@@ -2961,6 +3022,7 @@ VueWrapper {
                                 "suspense": null,
                                 "target": null,
                                 "targetAnchor": null,
+                                "targetStart": null,
                                 "transition": null,
                                 "type": Symbol(v-txt),
                               },
@@ -2991,6 +3053,7 @@ VueWrapper {
                             "suspense": null,
                             "target": null,
                             "targetAnchor": null,
+                            "targetStart": null,
                             "transition": null,
                             "type": "NuxtLink",
                           },
@@ -3005,6 +3068,7 @@ VueWrapper {
                               "beforeUnmount": [Function],
                               "getSSRProps": [Function],
                               "mounted": [Function],
+                              "name": "show",
                               "updated": [Function],
                             },
                             "instance": {},
@@ -3058,6 +3122,7 @@ VueWrapper {
                         "suspense": null,
                         "target": null,
                         "targetAnchor": null,
+                        "targetStart": null,
                         "transition": null,
                         "type": "div",
                       },
@@ -3142,6 +3207,7 @@ VueWrapper {
                     "suspense": null,
                     "target": null,
                     "targetAnchor": null,
+                    "targetStart": null,
                     "transition": null,
                     "type": "transition-stub",
                   },
@@ -3284,6 +3350,7 @@ VueWrapper {
                 "suspense": null,
                 "target": null,
                 "targetAnchor": null,
+                "targetStart": null,
                 "transition": null,
                 "type": {
                   "model": undefined,
@@ -3456,6 +3523,7 @@ VueWrapper {
             "suspense": null,
             "target": null,
             "targetAnchor": null,
+            "targetStart": null,
             "transition": null,
             "type": "nav",
           },
@@ -3572,6 +3640,7 @@ VueWrapper {
         "suspense": null,
         "target": null,
         "targetAnchor": null,
+        "targetStart": null,
         "transition": null,
         "type": {
           "__file": "/Users/danielerapisarda/projects/serenegrove/components/Navigation.vue",
@@ -3719,6 +3788,7 @@ VueWrapper {
         "suspense": null,
         "target": null,
         "targetAnchor": null,
+        "targetStart": null,
         "transition": null,
         "type": {
           "name": "VTU_ROOT",
@@ -3747,7 +3817,7 @@ VueWrapper {
     "runWithContext": [Function],
     "unmount": [Function],
     "use": [Function],
-    "version": "3.3.11",
+    "version": "3.4.36",
   },
   "__setProps": [Function],
   "cleanUpCallbacks": [

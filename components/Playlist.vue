@@ -1,21 +1,8 @@
 <template>
-  <div
-    class="playlist"
-    :class="{ open: routineOpen, 'scrolling-down': scrollingDown }"
-    role="button"
-    tabindex="0"
-    @touchstart="manageTouchStart($event)"
-    @touchend="manageTouchEnd($event)"
-    @touchmove="manageTouchMove($event)"
-  >
-    <div
-      class="playlist__toggle"
-      aria-label="open or close playlist"
-      role="button"
-      tabindex="0"
-      @keydown="routineToggle"
-      @click="routineToggle"
-    >
+  <div class="playlist" :class="{ open: routineOpen, 'scrolling-down': scrollingDown }" role="button" tabindex="0"
+    @touchstart="manageTouchStart($event)" @touchend="manageTouchEnd($event)" @touchmove="manageTouchMove($event)">
+    <div class="playlist__toggle" aria-label="open or close playlist" role="button" tabindex="0"
+      @keydown="routineToggle" @click="routineToggle">
       <UpShevron />
     </div>
     <div class="card">
@@ -170,11 +157,9 @@ $transitionDuration: 1s;
       left: 0;
       width: 100%;
       height: $size-5;
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(0, 0, 0, 0) 100%
-      );
+      background: linear-gradient(180deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(0, 0, 0, 0) 100%);
       z-index: 1;
     }
 
@@ -190,7 +175,7 @@ $transitionDuration: 1s;
     }
   }
 
-  .list-items > p,
+  .list-items>p,
   &__title {
     padding-top: $size-7;
     padding-left: $size-7;
