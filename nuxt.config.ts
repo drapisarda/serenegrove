@@ -3,19 +3,23 @@ import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
   ssr: false,
+
   modules: [
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     '@nuxt/eslint',
     '@nuxtjs/robots',
   ],
+
   piniaPersistedstate: {
     cookieOptions: {
       sameSite: 'strict',
     },
     storage: 'localStorage',
   },
+
   css: [],
+
   vite: {
     resolve: {
       alias: [
@@ -27,6 +31,7 @@ export default defineNuxtConfig({
     },
     plugins: [svgLoader()],
   },
+
   app: {
     head: {
       htmlAttrs: {
@@ -67,6 +72,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   runtimeConfig: {
     public: {
       test1: process.env.TEST_1,
@@ -74,4 +80,6 @@ export default defineNuxtConfig({
       title: process.env.TITLE,
     },
   },
+
+  compatibilityDate: '2024-08-06',
 })
