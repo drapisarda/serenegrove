@@ -37,11 +37,11 @@ $highlightsFontFamily: 'Lora', 'Times new roman', 'Arial', 'Helvetica', serif;
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  
+  box-sizing: border-box;
+
   @media (min-width: $tablet) {
     font-size: 18px;
   }
-  box-sizing: border-box;
 
   &.is-clipped {
     overflow: hidden;
@@ -108,7 +108,8 @@ h3 {
   font-size: clamp(1.2rem, -1rem + 8.333vw, 2rem);
 }
 
-h4, h5 {
+h4,
+h5 {
   font-size: 1.25rem;
 }
 
@@ -120,7 +121,7 @@ small,
 strong {
   color: inherit;
   font-weight: bold;
-  font-family: $highlightsFontFamily
+  font-family: $highlightsFontFamily;
 }
 
 em {
@@ -185,7 +186,7 @@ ul {
     color: $bg;
     background-color: $dark-2;
 
-    .page-content>& {
+    .page-content > & {
       background-color: $dark-2;
     }
   }
@@ -228,7 +229,7 @@ $buttonSecondaryColor: $white;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  padding: calc(.5em - 1px) 1em;
+  padding: calc(0.5em - 1px) 1em;
   transition: all 0.2s ease 0s;
 
   svg path {
@@ -299,7 +300,6 @@ $buttonSecondaryColor: $white;
           fill: $primaryButtonTextHover;
         }
       }
-
     }
 
     .section--clear &,
@@ -393,15 +393,14 @@ button.inactive {
 }
 
 .page-content {
-  >section {
+  > section {
     background-color: $dark-3;
   }
 
-  >section:nth-child(odd) {
+  > section:nth-child(odd) {
     background-color: $dark-4;
   }
 }
-
 
 .hide,
 .show,
@@ -416,7 +415,6 @@ button.inactive {
 }
 
 .hide {
-
   &,
   &.show-default {
     opacity: 0;
@@ -425,7 +423,6 @@ button.inactive {
 }
 
 .show {
-
   &,
   &.hide-default {
     opacity: 1;
@@ -504,7 +501,7 @@ label {
 }
 
 .row.row--wide {
-  >div {
+  > div {
     margin-top: $size-5;
 
     @media (min-width: $tablet) {
@@ -512,8 +509,8 @@ label {
     }
 
     @media (min-width: $tablet) {
-      padding-right: $gap*3;
-      padding-left: $gap*3;
+      padding-right: $gap * 3;
+      padding-left: $gap * 3;
     }
   }
 }
